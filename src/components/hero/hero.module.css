@@ -1,0 +1,134 @@
+.hero {
+  color: #fff;
+  padding: 32px 0;
+  height: 460px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1a1e20 url("./images/hero-bg-mobile.png") no-repeat;
+  background-position: 20px 90px;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.button {
+  text-decoration: none;
+  height: 55px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #fa9744;
+  border: 1px solid #fa9744;
+  color: #fff;
+  padding: 18px 33px;
+  margin: 3px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-block;
+  outline: none;
+  box-shadow: none;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+.button:focus,
+.button:hover,
+.button:active,
+.button.active {
+  opacity: 0.8;
+}
+
+.img {
+  float: right;
+  width: 100%;
+  max-width: 320px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@media all and (min-width: 415px) {
+  .hero {
+    background-size: cover;
+  }
+
+  .container {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .title {
+    flex-grow: unset;
+  }
+
+  .buttons {
+    margin-top: 15px;
+  }
+
+  .img {
+    max-width: 400px;
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .title {
+    text-align: left;
+    font-size: 60px;
+    max-width: 55%;
+    margin-top: 96px;
+  }
+
+  .hero {
+    height: 630px;
+    background: #1a1e20 url("./images/hero-bg-desktop.png") center no-repeat;
+    background-position: cover;
+  }
+
+  .buttons {
+    margin-top: 115px;
+    max-width: 55%;
+  }
+
+  .img {
+    max-width: 720px;
+    position: absolute;
+    bottom: auto;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+
+  .container {
+    align-items: flex-start;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .img {
+    margin-left: -120px;
+  }
+}
