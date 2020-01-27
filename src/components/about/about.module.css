@@ -1,0 +1,72 @@
+.about {
+  background-color: var(--color-green);
+  background-image: url("../../images/food-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 35px solid #fff;
+  border-right: 98.8vw solid transparent;
+}
+
+.title {
+  text-align: left;
+  padding-left: 23px;
+}
+
+.aboutList {
+  margin: 0;
+  padding: 0;
+}
+
+.aboutList li {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: initial;
+  color: #e5e5e5;
+}
+
+.aboutList li:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 13px;
+  height: 12px;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: url("./icons/icon-check.svg") center no-repeat;
+  background-size: cover;
+}
+
+@media all and (min-width: 768px) {
+  .about {
+    background-image: url("../../images/food-bg-desktop.png");
+    padding: 60px 0;
+  }
+
+  .about:after {
+    display: none;
+  }
+
+  .title {
+    font-size: 36px;
+    padding-left: 0;
+    text-align: center;
+  }
+}
