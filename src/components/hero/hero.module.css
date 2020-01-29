@@ -68,29 +68,11 @@
 
 @media all and (min-width: 415px) {
   .hero {
-    background-size: cover;
-  }
-
-  .container {
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .title {
-    flex-grow: unset;
+    background-position: center;
   }
 
   .buttons {
     margin-top: 15px;
-  }
-
-  .img {
-    max-width: 400px;
-    position: absolute;
-    top: auto;
-    bottom: 40px;
-    left: 50%;
-    transform: translate(-50%, 0);
   }
 }
 

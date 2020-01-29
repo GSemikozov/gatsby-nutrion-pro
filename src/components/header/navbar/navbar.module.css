@@ -121,11 +121,13 @@
 }
 
 @media all and (min-width: 1024px) {
-  .navbarItem {
-    margin-left: 64px;
-  }
-
   .desktopText {
     display: inline-block;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .navbarItem {
+    margin-left: 64px;
   }
 }
