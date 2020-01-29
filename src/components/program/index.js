@@ -2,6 +2,7 @@ import cx from 'classnames';
 import React from 'react';
 import { useState } from 'react';
 
+import { Button } from '../button';
 import IconCook from './icons/icon-ui-cook.svg';
 import IconHealthForce from './icons/icon-ui-health-force.svg';
 import IconMeasurement from './icons/icon-ui-measurement.svg';
@@ -98,9 +99,9 @@ export const Program = () => {
               <span>redukci tělesného tuku</span>
               zdravou cestou a s udržitelnými výsledky.
             </p>
-            <button type="button" className={styles.button}>
+            <Button type="outline" className={styles.button}>
               Více o programu
-            </button>
+            </Button>
           </div>
           <div
             key={`panel-2`}

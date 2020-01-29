@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Button } from '../button';
 import { Container } from '../container';
 import { HeroDesktopImg } from './hero-content-img-desktop';
 import { HeroMobileImg } from './hero-content-img-mobile';
@@ -20,7 +21,9 @@ export const Hero = () => (
         </div>
       </div>
       <div className={styles.buttons}>
-        <button className={styles.button}>Nezávazná objednávka </button>
+        <Button type="primary" className={styles.button}>
+          Nezávazná objednávka
+        </Button>
       </div>
     </Container>
   </section>
