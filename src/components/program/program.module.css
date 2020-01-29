@@ -27,6 +27,7 @@
   box-shadow: none;
   transition: 0.3s all;
   vertical-align: top;
+  cursor: pointer;
 }
 
 .tab:first-child {
@@ -97,6 +98,14 @@
   outline: none;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.3s all;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active {
+  opacity: 0.8;
 }
 
 @media all and (min-width: 1024px) {
