@@ -83,7 +83,7 @@ body main {
 }
 
 @media all and (min-width: 1024px) {
-  .title {
+  .sectionTitle {
     font-size: 36px;
   }
 }

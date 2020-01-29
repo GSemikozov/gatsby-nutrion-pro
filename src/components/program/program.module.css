@@ -99,9 +99,61 @@
   text-decoration: none;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
+  .tabsContentTitle {
+    color: var(--color-green);
+  }
+
+  .tabImg {
+    max-height: 120px;
+    max-width: 120px;
+  }
+
+  .tabsContentText {
+    max-width: 30%;
+    height: 57px;
+  }
+
   .tabsContentText > span {
     font-weight: 500;
     color: var(--color-green);
+  }
+
+  .button {
+    height: 55px;
+    padding: 14px 73px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .program {
+    padding: 100px 0 44px;
+  }
+
+  .tab {
+    width: 260px;
+    height: 260px;
+    margin-left: 48px;
+    border-width: 2px;
+  }
+
+  .tab:first-child {
+    margin-left: 0;
+  }
+
+  .tabSelected {
+    transform: scale(1.125);
+    border-width: 3px;
+  }
+
+  .tabSelected .tabsContentTitle {
+    transform: none;
+  }
+
+  .tabsNav {
+    text-align: center;
+    padding: 50px;
   }
 }
