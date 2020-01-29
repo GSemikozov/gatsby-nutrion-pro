@@ -98,3 +98,10 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+@media all and (min-width: 768px) {
+  .tabsContentText > span {
+    font-weight: 500;
+    color: var(--color-green);
+  }
+}

@@ -92,10 +92,11 @@ export const Program = () => {
               hide: activeTab !== 1,
             })}
           >
-            <h4 className={styles.tabsContentTitle}>Hubnucí program</h4>
+            <h4 className={styles.tabsContentTitle}>Hubnoucí program</h4>
             <p className={styles.tabsContentText}>
-              Individuální stravovací plán zaměřený na redukci tělesného tuku
-              zdravou cestou a s udržitelnými výsledky
+              Individuální stravovací plán zaměřený na{" "}
+              <span>redukci tělesného tuku</span>
+              zdravou cestou a s udržitelnými výsledky.
             </p>
             <button type="button" className={styles.button}>
               Více o programu
@@ -113,8 +114,8 @@ export const Program = () => {
           >
             <h4 className={styles.tabsContentTitle}>Nabírací program</h4>
             <p className={styles.tabsContentText}>
-              Individuální stravovací plán zaměřený na redukci tělesného tuku
-              zdravou cestou a s udržitelnými výsledky
+              Individuální stravovací plán zaměřený zejména pro muže, kteří
+              usilují o <span>nárůst svalové hmoty</span>.
             </p>
             <button type="button" className={styles.button}>
               Více o programu
@@ -132,8 +133,9 @@ export const Program = () => {
           >
             <h4 className={styles.tabsContentTitle}>Udržovací program</h4>
             <p className={styles.tabsContentText}>
-              Individuální stravovací plán zaměřený na redukci tělesného tuku
-              zdravou cestou a s udržitelnými výsledky
+              Individuální stravovací plán zaměřený na{" "}
+              <span>udržení současné tělesné hmotnosti</span> díky vyváženému,
+              pestrému a chutnému jídlu.
             </p>
             <button type="button" className={styles.button}>
               Více o programu
@@ -151,8 +153,8 @@ export const Program = () => {
           >
             <h4 className={styles.tabsContentTitle}>Uvaříme na míru</h4>
             <p className={styles.tabsContentText}>
-              Individuální stravovací plán zaměřený na redukci tělesného tuku
-              zdravou cestou a s udržitelnými výsledky
+              Individuální program přesně{" "}
+              <span>podle tebou zadaných makronutrientů</span>.
             </p>
             <button type="button" className={styles.button}>
               Více o programu
