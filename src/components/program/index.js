@@ -18,7 +18,6 @@ export const Program = () => {
       const idSelected = isAlreadyActive && !isTabs ? 0 : id
       setActiveItem(idSelected)
     }
-    console.log("clicked")
     return [activeItem, changeActiveItem]
   }
   const [activeTab, setActiveTab] = useSwitchUtil("tabs", 1)
