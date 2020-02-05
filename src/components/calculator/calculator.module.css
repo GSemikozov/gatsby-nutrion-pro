@@ -148,8 +148,8 @@
     border-right: 98.8vw solid transparent;
   }
 
-  .sectionTitle.title {
-    margin-bottom: 80px;
+  .title {
+    margin-bottom: 80px !important;
   }
 
   .calculator {
