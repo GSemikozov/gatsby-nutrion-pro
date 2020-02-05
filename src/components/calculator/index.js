@@ -8,7 +8,7 @@ import styles from './calculator.module.css';
 export const Calculator = () => (
   <section className={styles.calculatorSection}>
     <Container className={styles.container}>
-      <h3 className={cx(styles.title, "sectionTitle")}>
+      <h3 className={cx("sectionTitle", styles.title)}>
         Spočítej si cenu svého programu
       </h3>
       <div className={styles.calculator}>
