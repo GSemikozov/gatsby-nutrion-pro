@@ -30,6 +30,11 @@
   text-align: center;
   text-transform: uppercase;
   display: block;
+  width: 100%;
+}
+
+.closeBtn {
+  padding: 10px 0;
 }
 
 .formHeader {

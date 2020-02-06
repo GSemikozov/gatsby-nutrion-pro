@@ -21,7 +21,7 @@ const MobileMenu = props => {
         <div className={styles.topBar}>
           <button
             type="button"
-            className={styles.menuItem}
+            className={styles.closeBtn}
             onClick={onItemClick()}
           >
             <img src={IconClose} alt="icon" />
