@@ -28,6 +28,8 @@
   color: #ffffff;
   letter-spacing: 0;
   text-align: center;
+  text-transform: uppercase;
+  display: block;
 }
 
 .formHeader {
