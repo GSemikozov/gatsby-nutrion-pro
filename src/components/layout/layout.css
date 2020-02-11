@@ -4,6 +4,7 @@
   --color-orange: #fa9744;
   --color-green: #2fa037;
   --color-grey: #faf7f4;
+  --color-grey-middle: #f9f9f9;
   --color-grey-light: #eaeff1;
   --color-body: var(--color-black);
 }
@@ -56,6 +57,10 @@ body main {
 
 .sectionTitle.-light {
   color: var(--color-white);
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media only screen and (max-width: 480px) {

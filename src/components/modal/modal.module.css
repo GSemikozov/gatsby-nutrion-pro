@@ -1,0 +1,68 @@
+.modal {
+  max-width: 375px;
+  width: 100%;
+  background-color: var(--color-grey-middle);
+  border-radius: 1px;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  transform: translate(-50%, 0);
+  margin-bottom: 40px;
+}
+
+.modal.dark {
+  background-color: #373c3f;
+  color: var(--color-white);
+}
+
+@media all and (min-width: 768px) {
+  .modal {
+    max-width: 700px;
+    top: 100px;
+    height: auto;
+  }
+}
+.modalContainer {
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.modalOverlay {
+  background-color: rgba(196, 196, 196, 0.76);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  transition: background-color 0.2s ease;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  position: relative;
+}
+
+.modalClose {
+  position: absolute;
+  right: 22px;
+  top: 14px;
+  cursor: pointer;
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.modalBody {
+  padding: 30px;
+  overflow-y: auto;
+  max-height: 100%;
+}

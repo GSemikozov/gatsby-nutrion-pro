@@ -2,27 +2,59 @@ import cx from 'classnames';
 import { Link } from 'gatsby';
 import React from 'react';
 
+import { useSmoothScroll } from '../../../hooks/useSmoothScroll';
+import { Button } from '../../button';
+import { useModal } from '../../modal';
 import IconAngleDown from '../icons/icon-angle-down.svg';
 import IconMenu from '../icons/icon-hamburger.svg';
 import IconMap from '../icons/icon-map.svg';
+import LocationMarkIcon from '../icons/icon-map.svg';
 import IconPhone from '../icons/icon-phone.svg';
 import IconProfile from '../icons/icon-user.svg';
 import styles from './navbar.module.css';
 
+const ModalLocation = () => (
+  <>
+    <div
+      className="text-center"
+      style={{ marginBottom: "16px", marginTop: "-16px" }}
+    >
+      <img src={LocationMarkIcon} alt="icon" />
+    </div>
+    <h3 className="text-center">Bydlíš v Praze a okolí?</h3>
+    <div className={styles.locationModalButtons}>
+      <Button type="tertiary" className={styles.locationModalButton}>
+        Ano
+      </Button>
+      <Button type="outline" className={styles.locationModalButton}>
+        Ne, jsem z jiného města
+      </Button>
+    </div>
+  </>
+)
+
 export const Navbar = props => {
+  const scroll = useSmoothScroll()
+
+  const onNavbarItemClick = selector => () => {
+    scroll.animateScroll(document.getElementById(selector))
+  }
+
   const openMobileMenu = () => () => {
     props.onCloseMobileMenu()
   }
 
-  const navbarItemClick = () => {
-    props.onNavbarItemClick()
-  }
+  const { show, RenderModal } = useModal()
 
   return (
     <div className={styles.navbar}>
-      <Link
+      <RenderModal darkMode>
+        <ModalLocation />
+      </RenderModal>
+      <Button
+        type="unstyled"
         className={cx(styles.navbarItem, styles.location)}
-        onClick={navbarItemClick()}
+        handleClick={show}
       >
         <img src={IconMap} className={styles.mapMark} alt="icon" />
         <span className="visible-desktop">Praha</span>
@@ -31,15 +63,13 @@ export const Navbar = props => {
           className={cx(styles.angleDown, "visible-desktop")}
           alt="icon"
         />
-      </Link>
-      <Link className={cx(styles.navbarItem, "visible-desktop")}>
-        Jídelníček
-      </Link>
-      <Link className={cx(styles.navbarItem, "visible-desktop")}>
+      </Button>
+      <div className={cx(styles.navbarItem, "visible-desktop")}>Jídelníček</div>
+      <div className={cx(styles.navbarItem, "visible-desktop")}>
         Nejčastější otázky
-      </Link>
-      <Link className={cx(styles.navbarItem, "visible-desktop")}>Kariéra</Link>
-      <Link className={cx(styles.navbarItem, styles.contacts)}>
+      </div>
+      <div className={cx(styles.navbarItem, "visible-desktop")}>Kariéra</div>
+      <div className={cx(styles.navbarItem, styles.contacts)}>
         <img src={IconPhone} className={styles.iconPhone} alt="icon" />
         <span className="visible-desktop">
           <span className={styles.phoneNumber}>+420 774 137 352</span>
@@ -48,17 +78,17 @@ export const Navbar = props => {
             <span className={styles.days}>Po - Pá</span> 10:00-18:00
           </span>
         </span>
-      </Link>
-      <Link className={cx(styles.navbarItem, styles.profile)}>
+      </div>
+      <div className={cx(styles.navbarItem, styles.profile)}>
         <img src={IconProfile} className={styles.iconProfile} alt="icon" />
-      </Link>
-      <Link
+      </div>
+      <div
         className={cx(styles.navbarItem, styles.mobileMenuLink)}
         onClick={openMobileMenu()}
         id="mobile-menu-link"
       >
         <img src={IconMenu} alt="icon" />
-      </Link>
+      </div>
     </div>
   )
 }

@@ -10,6 +10,8 @@
   box-shadow: none;
   transition: 0.2s all;
   cursor: pointer;
+  padding: 18px 33px;
+  height: 55px;
 }
 
 .button:focus,
@@ -20,17 +22,13 @@
 }
 
 .button.primary {
-  height: 55px;
   background-color: var(--color-orange);
   border: 1px solid var(--color-orange);
   color: var(--color-white);
-  padding: 18px 33px;
 }
 
 .button.outline {
-  height: 50px;
-  padding: 14px 53px 17px;
-  background-color: var(--color-white);
+  background-color: transparent;
   color: var(--color-green);
   border: 1px solid var(--color-green);
 }
@@ -45,18 +43,30 @@
 }
 
 .button.secondary {
-  height: 55px;
   background-color: var(--color-grey);
   border: 1px solid var(--color-grey);
   color: var(--color-body);
-  padding: 18px 33px;
+}
+
+.button.tertiary {
+  background-color: var(--color-green);
+  border: 1px solid var(--color-green);
+  color: var(--color-white);
+}
+
+.unstyled {
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
 }
 
 @media all and (min-width: 1024px) {
-  .button.outline {
-    height: 55px;
-    padding: 14px 73px;
+  .button.outline,
+  .button.tertiary {
     font-size: 20px;
     line-height: 24px;
+    padding: 14px 20px;
   }
 }

@@ -14,6 +14,7 @@
   line-height: 1.2;
   font-weight: 500;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navbarItem > * {
@@ -31,6 +32,8 @@
 
 .location {
   order: 2;
+  overflow: initial;
+  background-color: inherit;
 }
 
 .profile {
@@ -43,6 +46,19 @@
 
 .mobileMenuLink > * {
   vertical-align: middle;
+}
+
+.locationModalButtons {
+  margin: 30px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.locationModalButton {
+  width: 100%;
+  margin: 20px 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media all and (min-width: 768px) {
@@ -123,6 +139,16 @@
 @media all and (min-width: 1024px) {
   .desktopText {
     display: inline-block;
+  }
+
+  .locationModalButtons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .locationModalButton {
+    width: calc(50% - 40px);
+    margin: 24px 20px;
   }
 }
 
