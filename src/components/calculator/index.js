@@ -37,13 +37,9 @@ export const Calculator = ({ id }) => {
             <h4 className={styles.columnTitle}>
               Neznáš svůj potřebný denní kalorický příjem?
             </h4>
-            <Button type="outline" className={styles.button} handleClick={show}>
+            <Button type="outline" className={styles.button}>
               Vypočitat příjem
             </Button>
-            <RenderModal>
-              <ModalForm />
-            </RenderModal>
-            <div id="root" />
           </div>
           <div className={styles.column}>
             <div className={styles.priceBox}>
@@ -54,9 +50,17 @@ export const Calculator = ({ id }) => {
                 </h3>
                 <p className={cx(styles.priceTextLight)}>81 Kč / porce</p>
               </div>
-              <Button type="primary" className={styles.button}>
+              <Button
+                type="primary"
+                className={styles.button}
+                handleClick={show}
+              >
                 Nezávazně objednat
               </Button>
+              <RenderModal>
+                <ModalForm />
+              </RenderModal>
+              <div id="root" />
             </div>
           </div>
         </div>
