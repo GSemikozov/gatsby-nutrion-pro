@@ -5,6 +5,7 @@ import { Button } from '../button';
 import { Container } from '../container';
 import { MainForm } from '../forms/main-form';
 import { useModal } from '../modal';
+import { Price } from '../price';
 import styles from './calculator.module.css';
 
 const ModalForm = () => (
@@ -43,13 +44,7 @@ export const Calculator = ({ id }) => {
           </div>
           <div className={styles.column}>
             <div className={styles.priceBox}>
-              <div className={styles.price}>
-                <p>Cena za den</p>
-                <h3 className={styles.priceValue}>
-                  <span>567</span> Kč
-                </h3>
-                <p className={cx(styles.priceTextLight)}>81 Kč / porce</p>
-              </div>
+              <Price />
               <Button
                 type="primary"
                 className={styles.button}

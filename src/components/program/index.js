@@ -99,9 +99,9 @@ export const Program = () => {
               <span>redukci tělesného tuku</span>
               zdravou cestou a s udržitelnými výsledky.
             </p>
-            <Button type="outline" className={styles.button}>
+            <button type="button" className={styles.button}>
               Více o programu
-            </Button>
+            </button>
           </div>
           <div
             key={`panel-2`}

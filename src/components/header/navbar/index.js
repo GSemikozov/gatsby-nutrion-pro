@@ -1,5 +1,4 @@
 import cx from 'classnames';
-import { Link } from 'gatsby';
 import React from 'react';
 
 import { useSmoothScroll } from '../../../hooks/useSmoothScroll';
@@ -8,30 +7,10 @@ import { useModal } from '../../modal';
 import IconAngleDown from '../icons/icon-angle-down.svg';
 import IconMenu from '../icons/icon-hamburger.svg';
 import IconMap from '../icons/icon-map.svg';
-import LocationMarkIcon from '../icons/icon-map.svg';
 import IconPhone from '../icons/icon-phone.svg';
 import IconProfile from '../icons/icon-user.svg';
+import { ModalLocation } from './modal';
 import styles from './navbar.module.css';
-
-const ModalLocation = () => (
-  <>
-    <div
-      className="text-center"
-      style={{ marginBottom: "16px", marginTop: "-16px" }}
-    >
-      <img src={LocationMarkIcon} alt="icon" />
-    </div>
-    <h3 className="text-center">Bydlíš v Praze a okolí?</h3>
-    <div className={styles.locationModalButtons}>
-      <Button type="tertiary" className={styles.locationModalButton}>
-        Ano
-      </Button>
-      <Button type="outline" className={styles.locationModalButton}>
-        Ne, jsem z jiného města
-      </Button>
-    </div>
-  </>
-)
 
 export const Navbar = props => {
   const scroll = useSmoothScroll()
@@ -44,12 +23,12 @@ export const Navbar = props => {
     props.onCloseMobileMenu()
   }
 
-  const { show, RenderModal } = useModal()
+  const { show, hide, RenderModal } = useModal()
 
   return (
     <div className={styles.navbar}>
       <RenderModal darkMode>
-        <ModalLocation />
+        <ModalLocation close={hide} />
       </RenderModal>
       <Button
         type="unstyled"

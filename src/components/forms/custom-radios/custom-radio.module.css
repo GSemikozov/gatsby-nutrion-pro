@@ -1,0 +1,57 @@
+.customRadio {
+  display: inline-block;
+  margin: 0 0 0 18px;
+}
+
+.customRadio:first-child {
+  margin-left: 0;
+}
+
+.customRadio > input {
+  display: none;
+}
+
+.customRadio > label {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 0;
+  background-color: var(--color-white);
+  font-weight: 600;
+  outline: none;
+  box-shadow: none;
+  transition: 0.3s all;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.customRadio input:checked ~ label {
+  border: 2px solid #36ac65;
+}
+
+.optionTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-green);
+  margin: 10px 0 0;
+  white-space: initial;
+}
+
+.optionImg {
+  max-height: 67px;
+}
+
+.chooseOptions {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 20px 0 30px;
+  position: relative;
+}

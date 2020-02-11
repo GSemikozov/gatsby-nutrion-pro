@@ -6,10 +6,13 @@ import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
 import { Button } from '../button';
+import { Price } from '../price';
+import { RadioButton, RadioButtonGroup } from './custom-radios';
+import styles from './form.module.css';
 import option3Img from './icons/icon-2months.svg';
 import option1Img from './icons/icon-demo.svg';
 import option2Img from './icons/icon-month.svg';
-import styles from './main-form.module.css';
+import mainFormStyles from './main-form.module.css';
 
 const DisplayFormikState = ({ isSubmitting, values, errors, touched }) => (
   <div style={{ margin: "1rem 0", background: "#f6f8fa", padding: ".5rem" }}>
@@ -29,71 +32,12 @@ const DisplayFormikState = ({ isSubmitting, values, errors, touched }) => (
   </div>
 )
 
-// Input feedback
-const InputFeedback = ({ error }) =>
-  error ? <div className={cx("input-feedback")}>{error}</div> : null
-
-// Radio input
-const RadioButton = ({
-  field: { name, value, onChange, onBlur },
-  id,
-  label,
-  img,
-  className,
-  ...props
-}) => {
-  return (
-    <div className={styles.customRadio}>
-      <input
-        name={name}
-        id={id}
-        type="radio"
-        value={id}
-        checked={id === value}
-        onChange={onChange}
-        onBlur={onBlur}
-        {...props}
-      />
-      <label htmlFor={id}>
-        <img src={img} className={styles.optionImg} alt="icon" />
-        <h5 className={styles.optionTitle}>{label}</h5>
-      </label>
-    </div>
-  )
-}
-
-// Radio group
-const RadioButtonGroup = ({
-  value,
-  error,
-  touched,
-  id,
-  className,
-  children,
-}) => {
-  const classes = cx(
-    styles.chooseOptions,
-    {
-      success: value || (!error && touched),
-      error: !!error && touched,
-    },
-    className
-  )
-
-  return (
-    <div className={classes}>
-      {children}
-      {touched && <InputFeedback error={error} />}
-    </div>
-  )
-}
-
 export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
   return (
-    <div className={styles.mainFormBox}>
-      <h4 className={styles.mainFormTitle}>Vyber si program</h4>
+    <div className={mainFormStyles.mainFormBox}>
+      <h4 className={mainFormStyles.mainFormTitle}>Vyber si program</h4>
       <Form
-        className={styles.mainForm}
+        className={mainFormStyles.mainForm}
         name="main-contact"
         method="post"
         data-netlify="true"
@@ -172,7 +116,6 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
                   /\d/,
                   /\d/,
                 ]}
-                // validate={validatePhone(values, errors)}
                 id="phone"
                 placeholder="Enter your phone number"
                 type="text"
@@ -198,25 +141,19 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
             <span className={styles.error}>{errors.promo}</span>
           )}
         </div>
-        <div className={styles.price}>
-          <p>Cena za den</p>
-          <h3 className={styles.priceValue}>
-            <span>567</span> Kč
-          </h3>
-          <p className={cx(styles.priceTextLight)}>81 Kč / porce</p>
-        </div>
+        <Price />
         {values.success && (
           <div className={styles.success}>
             <h4>Successfully sent!</h4>
           </div>
         )}
-        <div className={styles.buttons}>
+        <div className={mainFormStyles.buttons}>
           <Button
             name="submit"
             type="primary"
             buttonType="submit"
             disabled={isSubmitting}
-            className={styles.submitButton}
+            className={mainFormStyles.submitButton}
           >
             Nezávazně objednat
           </Button>
@@ -246,7 +183,7 @@ export const MainForm = withFormik({
       phone: Yup.string()
         .min(8)
         .required("Phone field is required"),
-      promo: Yup.string().required("Promo field is required"),
+      promo: Yup.string(),
       program: Yup.string().required("Program field is required"),
       days: Yup.string().required("You need to choose days"),
     }),
