@@ -63,6 +63,12 @@ body main {
   text-align: center;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
