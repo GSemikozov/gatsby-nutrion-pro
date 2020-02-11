@@ -69,6 +69,11 @@ select {
   appearance: none;
 }
 
+.input-feedback {
+  font-size: 13px;
+  color: #c00;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
