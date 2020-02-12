@@ -147,6 +147,7 @@
 
   .column {
     flex: 1 0 50%;
+    padding: 0 10px;
   }
 
   .column:last-child {

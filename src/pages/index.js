@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { About } from '../components/about';
 import { Calculator } from '../components/calculator';
+import { FoodCarouselSection } from '../components/food';
 import { Hero } from '../components/hero';
 import { Layout } from '../components/layout';
 import { Program } from '../components/program';
@@ -31,6 +32,7 @@ const IndexPage = () => (
     <About />
     <Program />
     <Calculator id="calculator" />
+    <FoodCarouselSection />
   </Layout>
 )
 

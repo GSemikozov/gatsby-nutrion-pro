@@ -1,0 +1,68 @@
+.foodCard {
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.foodCardTop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 6px 0 0;
+}
+
+.foodCardImg {
+  max-width: 267px;
+}
+
+.foodCardBody {
+  padding: 24px 0 10px;
+  flex-grow: 1;
+  border-radius: 0 0 6px 6px;
+}
+
+.foodCardTitle {
+  margin-bottom: 40px;
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media all and (min-width: 768px) {
+  .foodCard {
+    height: calc(276px + 180px);
+  }
+
+  .foodCardTitle {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .foodCardTop {
+    background: url("./card-bg.jpg") center no-repeat;
+    background-size: cover;
+    padding: 40px;
+    height: 276px;
+  }
+
+  .foodCardImg {
+    max-width: 237px;
+  }
+
+  .foodCardBody {
+    border: 1px solid #d3d3d3;
+    border-top: none;
+    padding: 24px 4px 10px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .foodCardBody {
+    padding: 24px 30px 10px;
+  }
+}
