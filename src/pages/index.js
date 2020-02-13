@@ -5,6 +5,7 @@ import { About } from '../components/about';
 import { Calculator } from '../components/calculator';
 import { FoodCarouselSection } from '../components/food';
 import { Hero } from '../components/hero';
+import { HowItWork } from '../components/howitwork';
 import { Layout } from '../components/layout';
 import { Program } from '../components/program';
 import SEO from '../components/seo';
@@ -33,6 +34,7 @@ const IndexPage = () => (
     <Program />
     <Calculator id="calculator" />
     <FoodCarouselSection />
+    <HowItWork />
   </Layout>
 )
 
