@@ -1,11 +1,9 @@
-.inputWrapper {
+.contactFormButton {
+  width: 100%;
 }
 
-.inputLabel {
-}
-
-.doneWrapper {
-}
-
-.doneImg {
+@media all and (min-width: 768px) {
+  .contactFormButton {
+    width: calc(100% - 32px);
+  }
 }

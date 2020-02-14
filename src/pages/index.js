@@ -9,6 +9,7 @@ import { HowItWork } from '../components/howitwork';
 import { Layout } from '../components/layout';
 import { Program } from '../components/program';
 import SEO from '../components/seo';
+import { TryFood } from '../components/tryfood';
 import icon1 from '../images/icons/cas.svg';
 import icon2 from '../images/icons/check-mark.svg';
 import icon3 from '../images/icons/Doprava.svg';
@@ -35,6 +36,7 @@ const IndexPage = () => (
     <Calculator id="calculator" />
     <FoodCarouselSection />
     <HowItWork />
+    <TryFood />
   </Layout>
 )
 
