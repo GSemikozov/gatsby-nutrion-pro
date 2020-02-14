@@ -2,6 +2,27 @@
   padding: 40px 0;
   background-color: var(--color-grey-middle);
   text-align: center;
+  position: relative;
+}
+
+.section:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 40px solid var(--color-grey-light);
+  border-right: 98.8vw solid transparent;
+}
+
+.section:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 40px solid var(--color-grey-light);
+  border-left: 98.8vw solid transparent;
 }
 
 .container {
@@ -42,7 +63,16 @@
 
 @media all and (min-width: 1024px) {
   .section {
-    padding: 80px 0;
+    padding: 80px 0 140px;
+  }
+
+  .section:after {
+    display: none;
+  }
+
+  .section:before {
+    border-bottom: 80px solid var(--color-grey-light);
+    border-right: 98.8vw solid transparent;
   }
 
   .contactFormTitle {
