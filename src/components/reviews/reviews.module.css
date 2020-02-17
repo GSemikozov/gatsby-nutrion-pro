@@ -1,13 +1,22 @@
 .reviewsSection {
   overflow: hidden;
   background-color: var(--color-grey-light);
+  display: none;
+  padding: 34px 0;
 }
 
 .container {
-  /* max-width: 1000px; */
+  /* max-width: 780px; */
 }
 
 .carouselItem,
 .carouselItemImg {
   /* max-width: 300px; */
+}
+
+@media all and (min-width: 1024px) {
+  .reviewsSection {
+    display: block;
+    padding: 60px 0 80px;
+  }
 }

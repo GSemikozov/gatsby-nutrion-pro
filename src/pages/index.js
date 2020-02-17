@@ -22,7 +22,7 @@ const IndexPage = () => (
     <FoodCarouselSection />
     <HowItWork />
     <TryFood />
-    {/* <Reviews /> */}
+    <Reviews />
     <FAQ />
   </Layout>
 )
