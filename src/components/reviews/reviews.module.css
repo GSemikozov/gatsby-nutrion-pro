@@ -1,0 +1,13 @@
+.reviewsSection {
+  overflow: hidden;
+  background-color: var(--color-grey-light);
+}
+
+.container {
+  /* max-width: 1000px; */
+}
+
+.carouselItem,
+.carouselItemImg {
+  /* max-width: 300px; */
+}

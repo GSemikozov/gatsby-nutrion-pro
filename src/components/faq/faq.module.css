@@ -1,0 +1,147 @@
+.section {
+  padding: 34px 0;
+}
+
+.container {
+  padding: 0;
+}
+
+.tabsTop {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.tab {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 22px;
+}
+
+.tab.active .tabTitle {
+  color: var(--color-green);
+}
+
+.tabTitle {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #959595;
+}
+
+.tabImgWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 92px;
+  flex-grow: 1;
+  margin-bottom: 4px;
+}
+
+.tabImg {
+}
+
+.tabsContent {
+  margin-top: 80px;
+  border-top: 1px solid #ccc;
+  counter-reset: item;
+}
+
+.listItem {
+  padding: 17px 24px 0;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.listTitle {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.listTitle:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: var(--color-green);
+}
+
+.listTitle:hover {
+  opacity: 0.8;
+}
+
+.listTitle > img {
+  display: none;
+}
+
+.listText {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 17px;
+  color: #636465;
+}
+
+@media all and (min-width: 1024px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: initial;
+  }
+
+  .tabsTop {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .tab {
+    flex: 1 0 25%;
+    height: 164px;
+    margin-bottom: 0;
+  }
+
+  .tabTitle {
+    font-size: 20px;
+  }
+
+  .tabImgWrap {
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    margin-bottom: 0;
+  }
+
+  .listItem {
+    padding: 17px 0 0;
+  }
+
+  .listTitle > img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .listTitle {
+    font-size: 20px;
+    padding-right: 60px;
+  }
+
+  .listText {
+    font-size: 16px;
+    padding-right: 60px;
+  }
+}

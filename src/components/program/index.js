@@ -2,7 +2,6 @@ import cx from 'classnames';
 import React from 'react';
 import { useState } from 'react';
 
-import { Button } from '../button';
 import IconCook from './icons/icon-ui-cook.svg';
 import IconHealthForce from './icons/icon-ui-health-force.svg';
 import IconMeasurement from './icons/icon-ui-measurement.svg';

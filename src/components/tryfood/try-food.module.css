@@ -3,6 +3,7 @@
   background-color: var(--color-grey-middle);
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 .section:after {

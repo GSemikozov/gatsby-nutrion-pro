@@ -45,6 +45,20 @@
   overflow: hidden;
 }
 
+.slick-slider .slick-slide,
+.slick-slide * {
+  outline: none;
+}
+
+.slick-center {
+  transform: scale(1.25);
+}
+
+.reviews-carousel .slick-list {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+
 @media all and (max-width: 767px) {
   .slick-arrow.slick-prev,
   .slick-arrow.slick-next {

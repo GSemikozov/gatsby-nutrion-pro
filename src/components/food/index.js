@@ -1,4 +1,4 @@
-import './food-carousel.css';
+import './carousel.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
