@@ -2,16 +2,6 @@
   padding: 34px 0;
 }
 
-.section:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-bottom: 80px solid var(--color-grey-light);
-  border-left: 98.8vw solid transparent;
-}
-
 .container {
   padding: 0;
 }
@@ -107,12 +97,8 @@
     padding: 80px 0;
   }
 
-  .section:after {
-    display: none;
-  }
-
   .container {
-    padding: initial;
+    padding: 0 16px;
   }
 
   .tabsTop {
