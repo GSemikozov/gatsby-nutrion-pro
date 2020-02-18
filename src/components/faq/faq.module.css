@@ -133,6 +133,7 @@
   }
 
   .listTitle > img {
+    display: inline-block;
     position: absolute;
     right: 0;
     top: 50%;
