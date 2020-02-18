@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import { Container } from '../container';
 import styles from './faq.module.css';
 import AngleDownIcon from './icons/angle-down.svg';
-import Img3 from './icons/catering.svg';
+import Img4 from './icons/catering.svg';
 import Img1 from './icons/chef.svg';
-import Img4 from './icons/dining.svg';
-import Img2 from './icons/healthy-food.svg';
+import Img2 from './icons/dining.svg';
+import Img3 from './icons/healthy-food.svg';
 import PlusIcon from './icons/plus.svg';
 
 const section0Texts = [
