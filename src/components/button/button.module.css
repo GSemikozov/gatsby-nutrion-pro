@@ -54,6 +54,12 @@
   color: var(--color-white);
 }
 
+.button.white {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+  color: var(--color-black);
+}
+
 .unstyled {
   box-shadow: none;
   border: none;

@@ -7,6 +7,7 @@ import { FoodCarouselSection } from '../components/food';
 import { Hero } from '../components/hero';
 import { HowItWork } from '../components/howitwork';
 import { Layout } from '../components/layout';
+import { PreFooter } from '../components/prefooter';
 import { Program } from '../components/program';
 import { Reviews } from '../components/reviews';
 import SEO from '../components/seo';
@@ -24,6 +25,7 @@ const IndexPage = () => (
     <TryFood />
     <Reviews />
     <FAQ />
+    <PreFooter />
   </Layout>
 )
 

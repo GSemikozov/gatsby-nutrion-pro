@@ -1,7 +1,7 @@
 .reviewsSection {
   overflow: hidden;
   background-color: var(--color-grey-light);
-  padding: 34px 0 168px;
+  padding: 34px 0 98px;
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  border-bottom: 80px solid var(--color-white);
+  border-bottom: 40px solid var(--color-white);
   border-left: 98.8vw solid transparent;
 }
 

@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import React from 'react';
 import MaskedInput from 'react-text-mask';
@@ -12,6 +13,11 @@ export const ContactFormLayout = ({
   values,
   errors,
   touched,
+  themeLight,
+  btnType = "primary",
+  btnText = "Mám zájem",
+  label = false,
+  horizontal = false,
 }) => {
   return (
     <Form
@@ -19,9 +25,13 @@ export const ContactFormLayout = ({
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      className={contactFormStyles.contactForm}
+      className={cx(contactFormStyles.contactForm, {
+        [contactFormStyles.horizontal]: horizontal,
+        [contactFormStyles.themeLight]: themeLight,
+      })}
     >
-      <div className={styles.inputField}>
+      <div className={cx(styles.inputField, contactFormStyles.inputField)}>
+        {label && <label className={contactFormStyles.label}>Telefon</label>}
         <FastField name="phone">
           {({ field }) => (
             <MaskedInput
@@ -47,12 +57,14 @@ export const ContactFormLayout = ({
               id="phone"
               placeholder="Enter your phone number"
               type="text"
-              className={styles.input}
+              className={cx(styles.input, contactFormStyles.input)}
             />
           )}
         </FastField>
         {touched.phone && errors.phone && (
-          <span className={styles.error}>{errors.phone}</span>
+          <span className={cx(styles.error, contactFormStyles.error)}>
+            {errors.phone}
+          </span>
         )}
       </div>
       {values.success && (
@@ -62,12 +74,12 @@ export const ContactFormLayout = ({
       )}
       <Button
         name="submit"
-        type="primary"
+        type={btnType}
         buttonType="submit"
         disabled={isSubmitting}
         className={contactFormStyles.contactFormButton}
       >
-        Mám zájem
+        {btnText}
       </Button>
     </Form>
   )
