@@ -30,6 +30,7 @@ export const Button = ({
           [styles.outline]: type === "outline",
           [styles.secondary]: type === "secondary",
           [styles.tertiary]: type === "tertiary",
+          [styles.white]: type === "white",
         },
         className
       )}
