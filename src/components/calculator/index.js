@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Button } from '../button';
 import { Container } from '../container';
@@ -17,6 +17,53 @@ const ModalForm = () => (
 
 export const Calculator = ({ id }) => {
   const { show, RenderModal } = useModal()
+  const [price, setPrice] = useState(0)
+  const [amount, setAmount] = useState(0)
+  const [amountTo, setAmountTo] = useState(0)
+
+  const handleAmountChange = ({ target }) => {
+    setAmount(target.value)
+  }
+
+  const handlePriceCalc = () => {
+    const price = getPrice(amount)
+    setAmountTo(amount)
+    setPrice(price)
+  }
+
+  function getPrice(amount) {
+    let priceValue = 0
+    switch (true) {
+      case amount < 1195:
+        priceValue = 420
+        break
+      case amount < 1434:
+        priceValue = 440
+        break
+      case amount < 1673:
+        priceValue = 460
+        break
+      case amount < 1912:
+        priceValue = 480
+        break
+      case amount < 2151:
+        priceValue = 500
+        break
+      case amount < 2390:
+        priceValue = 520
+        break
+      case amount < 2629:
+        priceValue = 540
+        break
+      case amount < 2868:
+        priceValue = 560
+        break
+      case amount >= 2868:
+        priceValue = 580
+        break
+    }
+    return priceValue
+  }
 
   return (
     <section className={styles.calculatorSection} id={id && id}>
@@ -31,20 +78,30 @@ export const Calculator = ({ id }) => {
                 Vím svůj denní kalorický příjem
               </label>
               <div className={styles.inputGroup}>
-                <input type="text" className={styles.input} />
+                <input
+                  type="number"
+                  name="kal-amount"
+                  className={styles.input}
+                  value={amount}
+                  onChange={handleAmountChange}
+                />
                 <span className={styles.inputGroupBtn}>kcal</span>
               </div>
             </div>
             <h4 className={styles.columnTitle}>
               Neznáš svůj potřebný denní kalorický příjem?
             </h4>
-            <Button type="outline" className={styles.button}>
+            <Button
+              type="outline"
+              className={styles.button}
+              handleClick={handlePriceCalc}
+            >
               Vypočitat příjem
             </Button>
           </div>
           <div className={styles.column}>
             <div className={styles.priceBox}>
-              <Price />
+              <Price amount={amountTo} price={price} />
               <Button
                 type="primary"
                 className={styles.button}

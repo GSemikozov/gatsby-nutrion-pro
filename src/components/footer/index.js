@@ -19,13 +19,13 @@ export const Footer = () => (
             <Logo />
           </Link>
           <div className={styles.socials}>
-            <a href="#">
+            <a href="https://www.facebook.com/nutritionprocz" target="_blank">
               <img src={fb} alt="icon" />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/nutritionprocz/" target="_blank">
               <img src={instagram} alt="icon" />
             </a>
-            <a href="#">
+            <a href="https://vk.com/nutritionprocz" target="_blank">
               <img src={vk} alt="icon" />
             </a>
           </div>
@@ -33,8 +33,8 @@ export const Footer = () => (
         <div className={styles.footerCol}>
           <div className={cx(styles.footerMenu, styles.hideXS)}>
             <a href="#">Jídelníček</a>
-            <a href="#">Nejčastější otázky</a>
-            <a href="#">3Kariéra</a>
+            <a href="https://nutritionpro.cz/#faq">Nejčastější otázky</a>
+            <a href="https://nutritionpro.cz/jobs/">3Kariéra</a>
           </div>
           <p>
             OBCHODNÍ PODMÍNKY{" "}
