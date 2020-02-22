@@ -8,10 +8,10 @@ import { useModal } from '../modal';
 import { Price } from '../price';
 import styles from './calculator.module.css';
 
-const ModalForm = () => (
+const ModalForm = ({ amount, price }) => (
   <>
     <h3 className={styles.formHeading}>Nezavazna objednavka</h3>
-    <MainForm />
+    <MainForm amount={amount} price={price} />
   </>
 )
 
@@ -110,7 +110,7 @@ export const Calculator = ({ id }) => {
                 Nezávazně objednat
               </Button>
               <RenderModal>
-                <ModalForm />
+                <ModalForm amount={amountTo} price={price} />
               </RenderModal>
               <div id="root" />
             </div>

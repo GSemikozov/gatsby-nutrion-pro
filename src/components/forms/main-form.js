@@ -32,7 +32,14 @@ const DisplayFormikState = ({ isSubmitting, values, errors, touched }) => (
   </div>
 )
 
-export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
+export const MainFormLayout = ({
+  isSubmitting,
+  values,
+  errors,
+  touched,
+  price,
+  amount,
+}) => {
   return (
     <div className={mainFormStyles.mainFormBox}>
       <h4 className={mainFormStyles.mainFormTitle}>Vyber si program</h4>
@@ -141,7 +148,7 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
             <span className={styles.error}>{errors.promo}</span>
           )}
         </div>
-        <Price />
+        <Price price={price} amount={amount} />
         {values.success && (
           <div className={styles.success}>
             <h4>Successfully sent!</h4>
