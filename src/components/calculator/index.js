@@ -18,7 +18,7 @@ const ModalForm = ({ amount, price }) => (
 export const Calculator = ({ id }) => {
   const { show, RenderModal } = useModal()
   const [price, setPrice] = useState(0)
-  const [amount, setAmount] = useState(0)
+  const [amount, setAmount] = useState()
   // const [amountTo, setAmountTo] = useState(0)
 
   const handleAmountChange = ({ target }) => {
@@ -27,7 +27,7 @@ export const Calculator = ({ id }) => {
     setPrice(price)
   }
 
-  // state = { form: { message: "" } };
+  // state = { form: { message: "" } }; example
 
   // handleChangeInput = event => {
   //   const { value, maxLength } = event.target;
@@ -49,6 +49,9 @@ export const Calculator = ({ id }) => {
   function getPrice(amount) {
     let priceValue = 0
     switch (true) {
+      case amount < 1:
+        priceValue = 0
+        break
       case amount < 1195:
         priceValue = 420
         break
@@ -99,6 +102,7 @@ export const Calculator = ({ id }) => {
                   className={styles.input}
                   value={amount}
                   onChange={handleAmountChange}
+                  placeholder="0"
                 />
                 <span className={styles.inputGroupBtn}>kcal</span>
               </div>
