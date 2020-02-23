@@ -33,4 +33,9 @@
   .reviewsSection:after {
     display: none;
   }
+
+  .carouselItem,
+  .carouselItemImg {
+    max-width: none;
+  }
 }

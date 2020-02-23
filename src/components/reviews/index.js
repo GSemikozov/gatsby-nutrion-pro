@@ -30,16 +30,13 @@ const ReviewsCarousel = () => {
         <img src={imgD} className={styles.carouselItemImg} alt="img" />
       </div>
       <div className={styles.carouselItem}>
-        <img src={imgD} className={styles.carouselItemImg} alt="img" />
+        <img src={img1} className={styles.carouselItemImg} alt="img" />
       </div>
       <div className={styles.carouselItem}>
-        <img src={imgD} className={styles.carouselItemImg} alt="img" />
+        <img src={img2} className={styles.carouselItemImg} alt="img" />
       </div>
       <div className={styles.carouselItem}>
-        <img src={imgD} className={styles.carouselItemImg} alt="img" />
-      </div>
-      <div className={styles.carouselItem}>
-        <img src={imgD} className={styles.carouselItemImg} alt="img" />
+        <img src={img3} className={styles.carouselItemImg} alt="img" />
       </div>
     </Slider>
   )
