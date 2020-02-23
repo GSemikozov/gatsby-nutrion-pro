@@ -55,7 +55,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
   return (
     <Layout>
       <section className={styles.productHero}>
-        <img src={img(productId)} alt="bg" />
+        <img src={img(productId)} className={styles.productHeroImg} alt="bg" />
         <div className={styles.productHeroCaption}>
           <Container className={styles.heroContainer}>
             <h1 className={styles.productHeroTitle}>{title}</h1>
