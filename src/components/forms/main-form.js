@@ -103,7 +103,7 @@ export const MainFormLayout = ({
         </div>
         <div className={styles.inputField}>
           <label className={styles.label}>Telefon</label>
-          <FastField name="phone">
+          {/* <FastField name="phone">
             {({ field }) => (
               <MaskedInput
                 {...field}
@@ -131,7 +131,13 @@ export const MainFormLayout = ({
                 className={styles.input}
               />
             )}
-          </FastField>
+          </FastField> */}
+          <FastField
+            component="input"
+            type="tel"
+            name="phone"
+            className={styles.input}
+          />
           {touched.phone && errors.phone && (
             <span className={styles.error}>{errors.phone}</span>
           )}

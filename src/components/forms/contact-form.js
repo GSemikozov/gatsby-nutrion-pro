@@ -32,7 +32,7 @@ export const ContactFormLayout = ({
     >
       <div className={cx(styles.inputField, contactFormStyles.inputField)}>
         {label && <label className={contactFormStyles.label}>Telefon</label>}
-        <FastField name="phone">
+        {/* <FastField name="phone">
           {({ field }) => (
             <MaskedInput
               {...field}
@@ -59,7 +59,13 @@ export const ContactFormLayout = ({
               className={cx(styles.input, contactFormStyles.input)}
             />
           )}
-        </FastField>
+        </FastField> */}
+        <FastField
+          component="input"
+          type="tel"
+          name="phone"
+          className={cx(styles.input, contactFormStyles.input)}
+        />
         {touched.phone && errors.phone && (
           <span className={cx(styles.error, contactFormStyles.error)}>
             {errors.phone}
