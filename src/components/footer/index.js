@@ -19,13 +19,25 @@ export const Footer = () => (
             <Logo />
           </Link>
           <div className={styles.socials}>
-            <a href="https://www.facebook.com/nutritionprocz" target="_blank">
+            <a
+              href="https://www.facebook.com/nutritionprocz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={fb} alt="icon" />
             </a>
-            <a href="https://www.instagram.com/nutritionprocz/" target="_blank">
+            <a
+              href="https://www.instagram.com/nutritionprocz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={instagram} alt="icon" />
             </a>
-            <a href="https://vk.com/nutritionprocz" target="_blank">
+            <a
+              href="https://vk.com/nutritionprocz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={vk} alt="icon" />
             </a>
           </div>
@@ -34,7 +46,7 @@ export const Footer = () => (
           <div className={cx(styles.footerMenu, styles.hideXS)}>
             <a href="#">Jídelníček</a>
             <a href="https://nutritionpro.cz/#faq">Nejčastější otázky</a>
-            <a href="https://nutritionpro.cz/jobs/">3Kariéra</a>
+            <a href="https://nutritionpro.cz/jobs/">Kariéra</a>
           </div>
           <p>
             OBCHODNÍ PODMÍNKY{" "}

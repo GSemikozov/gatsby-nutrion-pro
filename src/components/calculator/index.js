@@ -19,17 +19,32 @@ export const Calculator = ({ id }) => {
   const { show, RenderModal } = useModal()
   const [price, setPrice] = useState(0)
   const [amount, setAmount] = useState(0)
-  const [amountTo, setAmountTo] = useState(0)
+  // const [amountTo, setAmountTo] = useState(0)
 
   const handleAmountChange = ({ target }) => {
+    const price = getPrice(target.value)
     setAmount(target.value)
-  }
-
-  const handlePriceCalc = () => {
-    const price = getPrice(amount)
-    setAmountTo(amount)
     setPrice(price)
   }
+
+  // state = { form: { message: "" } };
+
+  // handleChangeInput = event => {
+  //   const { value, maxLength } = event.target;
+  //   const message = value.slice(0, maxLength);
+
+  //   this.setState({
+  //     form: {
+  //       message
+  //     }
+  //   });
+  // };
+
+  // const handlePriceCalc = () => {
+  //   const price = getPrice(amount)
+  //   setAmountTo(amount)
+  //   setPrice(price)
+  // }
 
   function getPrice(amount) {
     let priceValue = 0
@@ -88,20 +103,16 @@ export const Calculator = ({ id }) => {
                 <span className={styles.inputGroupBtn}>kcal</span>
               </div>
             </div>
-            <h4 className={styles.columnTitle}>
+            {/* <h4 className={styles.columnTitle}>
               Neznáš svůj potřebný denní kalorický příjem?
-            </h4>
-            <Button
-              type="outline"
-              className={styles.button}
-              handleClick={handlePriceCalc}
-            >
+            </h4> */}
+            {/* <Button type="outline" className={styles.button} handleClick={handlePriceCalc}>
               Vypočitat příjem
-            </Button>
+            </Button> */}
           </div>
           <div className={styles.column}>
             <div className={styles.priceBox}>
-              <Price amount={amountTo} price={price} />
+              <Price amount={amount} price={price} />
               <Button
                 type="primary"
                 className={styles.button}
@@ -110,7 +121,7 @@ export const Calculator = ({ id }) => {
                 Nezávazně objednat
               </Button>
               <RenderModal>
-                <ModalForm amount={amountTo} price={price} />
+                <ModalForm amount={amount} price={price} />
               </RenderModal>
               <div id="root" />
             </div>

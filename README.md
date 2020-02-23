@@ -1,5 +1,5 @@
 <h1 align="center">
-  Nutrion Pro Landing
+  Nutrition Pro Landing
 </h1>
 
 1.  **Start developing.**

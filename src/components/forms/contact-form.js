@@ -54,7 +54,6 @@ export const ContactFormLayout = ({
                 /\d/,
                 /\d/,
               ]}
-              id="phone"
               placeholder="Enter your phone number"
               type="text"
               className={cx(styles.input, contactFormStyles.input)}
@@ -108,7 +107,7 @@ export const ContactForm = withFormik({
           )
           .join("&")
       }
-      await fetch("/?no-cache=1", {
+      await fetch("/api/application/?no-cache=1", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({

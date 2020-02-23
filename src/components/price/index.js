@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import React, { memo } from 'react';
+import React from 'react';
 
 import styles from './price.module.css';
 

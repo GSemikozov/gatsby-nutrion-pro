@@ -75,7 +75,7 @@ export const SubscribeForm = withFormik({
           )
           .join("&")
       }
-      await fetch("/?no-cache=1", {
+      await fetch("/api/application/?no-cache=1", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({

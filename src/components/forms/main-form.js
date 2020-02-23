@@ -1,7 +1,6 @@
-import cx from 'classnames';
+// import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import React from 'react';
-import Select from 'react-select';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
@@ -14,6 +13,7 @@ import option1Img from './icons/icon-demo.svg';
 import option2Img from './icons/icon-month.svg';
 import mainFormStyles from './main-form.module.css';
 
+// import Select from 'react-select';
 const DisplayFormikState = ({ isSubmitting, values, errors, touched }) => (
   <div style={{ margin: "1rem 0", background: "#f6f8fa", padding: ".5rem" }}>
     <strong>Injected Formik props (the form's state)</strong>
@@ -47,8 +47,6 @@ export const MainFormLayout = ({
         className={mainFormStyles.mainForm}
         name="main-contact"
         method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
       >
         <div className={styles.inputField}>
           <RadioButtonGroup
@@ -94,6 +92,10 @@ export const MainFormLayout = ({
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
+            <option value="1">4</option>
+            <option value="2">5</option>
+            <option value="3">6</option>
+            <option value="1">7</option>
           </FastField>
           {touched.days && errors.days && (
             <span className={styles.error}>{errors.days}</span>
@@ -206,7 +208,7 @@ export const MainForm = withFormik({
           )
           .join("&")
       }
-      await fetch("/?no-cache=1", {
+      await fetch("/api/application/?no-cache=1", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({

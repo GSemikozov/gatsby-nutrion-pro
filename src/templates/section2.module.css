@@ -1,0 +1,41 @@
+.section {
+  background: var(--color-green) url("../images/product-section-bg-mob.png")
+    center no-repeat;
+  background-size: cover;
+  color: var(--color-white);
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.text + .text {
+  margin-top: 16px;
+}
+
+@media all and (min-width: 1024px) {
+  .section {
+    background: var(--color-green)
+      url("../images/product-section-bg-desktop.png") center no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    width: 45%;
+  }
+
+  .title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 18px;
+    text-align: center;
+  }
+}

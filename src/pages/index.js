@@ -4,7 +4,6 @@ import { About } from '../components/about';
 import { Calculator } from '../components/calculator';
 import { FAQ } from '../components/faq';
 import { FoodCarouselSection } from '../components/food';
-import { Footer } from '../components/footer';
 import { Hero } from '../components/hero';
 import { HowItWork } from '../components/howitwork';
 import { Layout } from '../components/layout';
@@ -27,7 +26,6 @@ const IndexPage = () => (
     <Reviews />
     <FAQ />
     <PreFooter />
-    <Footer />
   </Layout>
 )
 

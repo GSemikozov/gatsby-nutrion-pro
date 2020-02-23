@@ -196,7 +196,7 @@ export const FAQ = () => {
               className={styles.listItem}
               key={index}
               onClick={() => setOpenedQuestion(index)}
-              opened={openedQuestion === index}
+              opened={(openedQuestion === index).toString()}
             >
               <h4 className={styles.listTitle}>
                 {question}{" "}
