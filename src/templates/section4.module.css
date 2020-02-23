@@ -85,6 +85,7 @@
   .cardIcon {
     max-width: 100px;
     margin: 34px auto 0;
+    display: block;
   }
 
   .cardBody {
