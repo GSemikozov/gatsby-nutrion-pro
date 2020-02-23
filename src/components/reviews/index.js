@@ -19,7 +19,6 @@ const ReviewsCarousel = () => {
       {
         breakpoint: 480,
         settings: {
-          arrows: true,
           slidesToShow: 1,
         },
       },

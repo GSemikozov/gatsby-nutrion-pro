@@ -118,13 +118,3 @@
     right: -40px;
   }
 }
-
-.reviews-carousel {
-  display: none !important;
-}
-
-@media all and (min-width: 1024px) {
-  .reviews-carousel {
-    display: block !important;
-  }
-}

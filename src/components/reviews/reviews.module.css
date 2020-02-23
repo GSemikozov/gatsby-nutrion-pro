@@ -21,7 +21,8 @@
 
 .carouselItem,
 .carouselItemImg {
-  /* max-width: 300px; */
+  max-width: 300px;
+  width: 100%;
 }
 
 @media all and (min-width: 1024px) {
