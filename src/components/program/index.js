@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { Link } from 'gatsby';
 import React from 'react';
 import { useState } from 'react';
 
@@ -98,9 +99,9 @@ export const Program = () => {
               <span>redukci tělesného tuku</span>
               zdravou cestou a s udržitelnými výsledky.
             </p>
-            <button type="button" className={styles.button}>
+            <Link to="/products/product-1" className={styles.button}>
               Více o programu
-            </button>
+            </Link>
           </div>
           <div
             key={`panel-2`}
@@ -117,9 +118,9 @@ export const Program = () => {
               Individuální stravovací plán zaměřený zejména pro muže, kteří
               usilují o <span>nárůst svalové hmoty</span>.
             </p>
-            <button type="button" className={styles.button}>
+            <Link to="/products/product-2" className={styles.button}>
               Více o programu
-            </button>
+            </Link>
           </div>
           <div
             key={`panel-3`}
@@ -137,9 +138,9 @@ export const Program = () => {
               <span>udržení současné tělesné hmotnosti</span> díky vyváženému,
               pestrému a chutnému jídlu.
             </p>
-            <button type="button" className={styles.button}>
+            <Link to="/products/product-3" className={styles.button}>
               Více o programu
-            </button>
+            </Link>
           </div>
           <div
             key={`panel-4`}
@@ -156,9 +157,9 @@ export const Program = () => {
               Individuální program přesně{" "}
               <span>podle tebou zadaných makronutrientů</span>.
             </p>
-            <button type="button" className={styles.button}>
+            <Link to="/products/product-4" className={styles.button}>
               Více o programu
-            </button>
+            </Link>
           </div>
         </div>
       </div>
