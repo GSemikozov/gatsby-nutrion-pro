@@ -2,10 +2,11 @@ import React from 'react';
 import Slider from 'react-slick';
 
 import { Container } from '../container';
-import imgD from './images/3.png';
 import img1 from './images/review1.png';
 import img2 from './images/review2.png';
 import img3 from './images/review3.png';
+import img4 from './images/review4.jpg';
+import img5 from './images/review5.jpg';
 import styles from './reviews.module.css';
 
 const ReviewsCarousel = () => {
@@ -27,7 +28,7 @@ const ReviewsCarousel = () => {
   return (
     <Slider {...settings} className="reviews-carousel">
       <div className={styles.carouselItem}>
-        <img src={imgD} className={styles.carouselItemImg} alt="img" />
+        <img src={img4} className={styles.carouselItemImg} alt="img" />
       </div>
       <div className={styles.carouselItem}>
         <img src={img1} className={styles.carouselItemImg} alt="img" />
@@ -37,6 +38,9 @@ const ReviewsCarousel = () => {
       </div>
       <div className={styles.carouselItem}>
         <img src={img3} className={styles.carouselItemImg} alt="img" />
+      </div>
+      <div className={styles.carouselItem}>
+        <img src={img5} className={styles.carouselItemImg} alt="img" />
       </div>
     </Slider>
   )
