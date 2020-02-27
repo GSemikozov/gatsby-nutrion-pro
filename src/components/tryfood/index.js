@@ -5,8 +5,8 @@ import { Container } from '../container';
 import { ContactForm } from '../forms/contact-form.js';
 import styles from './try-food.module.css';
 
-export const TryFood = () => (
-  <div className={styles.section}>
+export const TryFood = ({ id = "" }) => (
+  <div className={styles.section} id={id}>
     <Container className={styles.container}>
       <h3 className={cx("sectionTitle text-center", styles.sectionTitle)}>
         Chceš jídlo nejdříve vyzkoušet?

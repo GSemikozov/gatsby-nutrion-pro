@@ -16,8 +16,6 @@ export const SubscribeFormLayout = ({
     <Form
       name="subscribe"
       method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
       className={subscribeFormStyles.subscribeForm}
     >
       <div className={styles.inputField}>

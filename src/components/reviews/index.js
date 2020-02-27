@@ -46,8 +46,8 @@ const ReviewsCarousel = () => {
   )
 }
 
-export const Reviews = () => (
-  <section className={styles.reviewsSection}>
+export const Reviews = ({ id = "" }) => (
+  <section className={styles.reviewsSection} id={id}>
     <Container className={styles.container}>
       <h3 className="sectionTitle text-center">Jaká jídla tě s námi čekají?</h3>
       <ReviewsCarousel />

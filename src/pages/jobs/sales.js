@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Layout } from '../../components/layout';
 import SEO from '../../components/seo';
-import styles from './sales.module.css';
+import styles from './job.module.css';
 
 // import jobBgSrc from "../../images/job-bg.png"
 

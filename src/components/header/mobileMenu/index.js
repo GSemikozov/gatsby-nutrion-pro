@@ -1,7 +1,12 @@
+import { Link } from 'gatsby';
 import React from 'react';
 
 import { useSmoothScroll } from '../../../hooks/useSmoothScroll';
+import IconCalculator from '../icons/icon-calculator.svg';
+import IconClipboard from '../icons/icon-clipboard.svg';
 import IconClose from '../icons/icon-close.svg';
+import IconConsultation from '../icons/icon-consultation.svg';
+import IconMenu from '../icons/icon-menu.svg';
 import IconPhone from '../icons/icon-phone.svg';
 import styles from './mobile-menu.module.css';
 
@@ -18,7 +23,7 @@ const MobileMenu = props => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <div className={styles.topBar}>
+        {/* <div className={styles.topBar}>
           <button
             type="button"
             className={styles.closeBtn}
@@ -26,51 +31,53 @@ const MobileMenu = props => {
           >
             <img src={IconClose} alt="icon" />
           </button>
-        </div>
+        </div> */}
 
         <div className={styles.menuItems}>
           <button
             type="button"
             className={styles.menuItem}
-            onClick={onItemClick("whoWeAre")}
+            onClick={onItemClick("programs")}
           >
-            Kdo jsme a jak to funguje
+            <img src={IconClipboard} alt="icon" />
+            Programy
           </button>
           <button
             type="button"
             className={styles.menuItem}
-            onClick={onItemClick("menu")}
+            onClick={onItemClick("calculator")}
           >
+            <img src={IconCalculator} alt="icon" />
+            Cena
+          </button>
+          <button
+            type="button"
+            className={styles.menuItem}
+            onClick={onItemClick("try-food")}
+          >
+            <img src={IconMenu} alt="icon" />
             Jídelníček
           </button>
-          <button
-            type="button"
-            className={styles.menuItem}
-            onClick={onItemClick("reviews")}
-          >
-            Recenze zákazníků
-          </button>
-          <button
-            type="button"
-            className={styles.menuItem}
-            onClick={onItemClick("faq")}
-          >
-            FAQ
-          </button>
+          <div className={styles.menuItem}>
+            <Link to="/jobs">
+              <img src={IconConsultation} alt="icon" />
+              Kariera
+            </Link>
+          </div>
         </div>
 
-        <div className={styles.formHeader}>
+        {/* <div className={styles.formHeader}>
           Objednejte si 5 denní demo program
           <br />
           za 480Kč na den včetně dopravy
-        </div>
+        </div> */}
 
         <div style={{ padding: "0 25px" }}>
-          form will be here
+          {/* form will be here */}
           {/* <ContactForm mobileMenu /> */}
         </div>
 
-        <div className={styles.phoneBlock}>
+        {/* <div className={styles.phoneBlock}>
           <img className={styles.telIcon} src={IconPhone} alt="icon" />
           <div>
             <a className={styles.tel} href="tel:+420774137352">
@@ -80,7 +87,7 @@ const MobileMenu = props => {
           </div>
         </div>
 
-        <div className={styles.footer}>© NUTRITIONPRO 2019</div>
+        <div className={styles.footer}>© NUTRITIONPRO 2019</div> */}
       </div>
     </div>
   )

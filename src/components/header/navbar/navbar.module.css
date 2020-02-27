@@ -20,6 +20,8 @@
 .navbarItem > * {
   text-decoration: none;
   white-space: nowrap;
+  color: inherit;
+  font-size: inherit;
 }
 
 .navbarItem:hover {
@@ -42,6 +44,8 @@
 
 .mobileMenuLink {
   order: 4;
+  width: 28px;
+  text-align: right;
 }
 
 .mobileMenuLink > * {

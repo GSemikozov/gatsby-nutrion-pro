@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Layout } from '../../components/layout';
 import SEO from '../../components/seo';
-import styles from './nutritionist.module.css';
+import styles from './job.module.css';
 
 // import jobBgSrc from "../../images/job-bg.png"
 
@@ -39,7 +39,7 @@ const JobPage = () => {
             <li className={styles.newList}>
               Těsně spolupracovat s našim developerem na zlepšení a zpřesnění
               výsledků algoritmu
-              <ul>
+              <ul className={styles.textUl}>
                 <li className={styles.NewSubList}>
                   Sběr, analýza a hodnocení vstupních a výstupních informací o
                   klientech (složení těla, cíle, PAL atd.)

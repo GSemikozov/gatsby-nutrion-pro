@@ -35,7 +35,7 @@ export const Header = () => {
         >
           <Logo />
         </Link>
-        <Navbar onCloseMobileMenu={toggleMenu} menuVisible />
+        <Navbar onCloseMobileMenu={toggleMenu} menuVisible={menuVisible} />
         {menuVisible && <MobileMenu onCloseMobileMenu={toggleMenu} />}
       </Container>
     </header>

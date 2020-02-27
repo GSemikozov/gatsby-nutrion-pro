@@ -18,13 +18,13 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
     <About />
-    <Program />
+    <Program id="programs" />
     <Calculator id="calculator" />
     <FoodCarouselSection />
     <HowItWork />
-    <TryFood />
-    <Reviews />
-    <FAQ />
+    <TryFood id="try-food" />
+    <Reviews id="reviews" />
+    <FAQ id="faq" />
     <PreFooter />
   </Layout>
 )

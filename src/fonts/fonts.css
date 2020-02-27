@@ -1,15 +1,2 @@
-@font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy"), url("Gilroy-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Gilroy-Bold";
-  src: local("Gilroy-Bold"), url("Gilroy-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+@import "./Gilroy/stylesheet.css";
+@import "./old-fonts/stylesheet.css";

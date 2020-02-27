@@ -9,7 +9,7 @@ import IconMeasurement from './icons/icon-ui-measurement.svg';
 import IconProgram from './icons/icon-ui-program.svg';
 import styles from './program.module.css';
 
-export const Program = () => {
+export const Program = ({ id = "" }) => {
   const useSwitchUtil = (type, selectedItem) => {
     const [activeItem, setActiveItem] = useState(selectedItem)
 
@@ -23,7 +23,7 @@ export const Program = () => {
   }
   const [activeTab, setActiveTab] = useSwitchUtil("tabs", 1)
   return (
-    <section className={styles.program}>
+    <section className={styles.program} id={id}>
       <h3 className={cx("sectionTitle", styles.title)}>
         Vyber si svůj program
       </h3>

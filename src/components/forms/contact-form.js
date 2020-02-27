@@ -23,8 +23,6 @@ export const ContactFormLayout = ({
     <Form
       name="contact"
       method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
       className={cx(contactFormStyles.contactForm, {
         [contactFormStyles.horizontal]: horizontal,
         [contactFormStyles.themeLight]: themeLight,

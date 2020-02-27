@@ -1,10 +1,10 @@
 .wrapper {
   position: fixed;
-  height: 100vh;
+  height: calc(100vh - 82px);
   width: 100vw;
-  top: 0;
+  top: 82px;
   left: 0;
-  background: var(--color-black);
+  background: #373c3f;
   z-index: 3;
   padding: 0 20px;
 }
@@ -17,20 +17,62 @@
 .menuItems {
   list-style: none;
   text-align: center;
-  margin-top: 44px;
+  margin-top: 30px;
   margin-bottom: 37px;
   padding: 0;
+  position: relative;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, calc(50% - 24px));
+  justify-content: center;
+}
+
+.menuItems:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: calc(56% + 3px);
+  height: calc(56% + 3px);
+  border: 6px solid green;
+  background-color: transparent;
 }
 
 .menuItem {
-  padding: 13px 0;
-  font-size: 20px;
+  padding: 19px 16px 16px;
+  font-size: 16px;
+  font-weight: 400;
   color: #ffffff;
   letter-spacing: 0;
   text-align: center;
-  text-transform: uppercase;
-  display: block;
-  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  background-color: #2b2f32;
+  position: relative;
+  z-index: 1;
+}
+
+.menuItem > img,
+.menuItem > a > img {
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.menuItem > a {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  flex-grow: 1;
 }
 
 .closeBtn {

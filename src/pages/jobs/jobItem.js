@@ -1,7 +1,6 @@
 import CarouselBase from 'nuka-carousel';
 import React from 'react';
 
-import useSmoothScroll from '../../hooks/useSmoothScroll';
 import styles from './jobs-item.module.css';
 
 export const Job = props => {
@@ -20,6 +19,7 @@ export const Job = props => {
 
 const renderJobs = () => [
   <Job
+    key="1"
     title="NUTRIČNÍ SPECIALISTA"
     description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Nutriční specialista."
     date="12.12.2019"
@@ -27,6 +27,7 @@ const renderJobs = () => [
     link="/jobs/nutritionist"
   />,
   <Job
+    key="2"
     title="Specialista pro příchozí poptávky"
     description="Do našeho mladého týmu hledáme šikovného/ou kolegu/yni na pozici Telesales specialist(k)y."
     date="12.12.2019"
@@ -34,6 +35,7 @@ const renderJobs = () => [
     link="/jobs/sales"
   />,
   <Job
+    key="3"
     title="Marketing &nbsp; manager"
     description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Marketing manager."
     date="15.12.2019"
@@ -58,6 +60,7 @@ const Jobs = () => {
 
       <div className={styles.meals}>{renderJobs()}</div>
       <CarouselBase
+        className={styles.carousel}
         renderBottomCenterControls={() => null}
         renderCenterLeftControls={({ previousSlide }) => (
           <button type="button" onClick={previousSlide}>

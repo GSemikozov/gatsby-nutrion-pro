@@ -1,15 +1,16 @@
 .terms {
   position: relative;
   width: 100%;
-  padding: 0px 120px 0px 120px;
+  /* padding: 0px 120px 0px 120px; */
   display: block;
-  margin: 200px auto 70px auto;
+  margin: 100px auto 70px auto;
+  font-size: 20px;
 }
 
 @media (max-width: 520px) {
   .terms {
     width: 100%;
-    padding: 0px 15px 0px 15px;
+    /* padding: 0px 15px 0px 15px; */
   }
 }
 
@@ -19,6 +20,7 @@
   line-height: 65px;
   font-size: 73px;
   color: #363c43;
+  margin-bottom: 20px;
 }
 
 .textSubHeader {
@@ -41,6 +43,10 @@
 }
 
 @media (max-width: 520px) {
+  .textHeader {
+    font-size: 38px;
+  }
+
   .text {
     font-size: 16px;
     width: 100%;

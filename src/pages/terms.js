@@ -56,7 +56,7 @@ const TermsPage = () => {
               Objednávku Programu NutritionPro lze provést následujícím
               způsobem:
             </li>
-            <ul>
+            <ol>
               <li>
                 na telefonním čísle +420 777 510 839, když k uzavření kupní
                 smlouvy dojde potvrzením objednávky ze strany Provozovatele při
@@ -83,7 +83,7 @@ const TermsPage = () => {
                 www.nutritionpro.cz, když tato možnost objednání je přístupná
                 pouze Klientovi s přiděleným přihlašovacím jménem a heslem.
               </li>
-            </ul>
+            </ol>
             <li>
               Objednávku Programu NutritionPro je třeba uskutečnit nejméně 3
               pracovní dny přede dnem, na který má být Program NutritionPro
