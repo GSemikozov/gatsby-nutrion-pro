@@ -68,20 +68,21 @@ export const SubscribeForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
-      const encode = data => {
-        return Object.keys(data)
-          .map(
-            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-          )
-          .join("&")
+      // const encode = data => {
+      //   return Object.keys(data)
+      //     .map(
+      //       key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+      //     )
+      //     .join("&")
+      // }
+      const data = {
+        "form-name": "subscribe",
+        email,
       }
-      await fetch("/api/application/?no-cache=1", {
+      await fetch("/api/application", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "subscribe",
-          email,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       })
       await setSubmitting(false)
       await setFieldValue("success", true)

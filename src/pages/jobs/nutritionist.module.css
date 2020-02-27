@@ -1,0 +1,125 @@
+.job {
+  position: relative;
+  width: 70%;
+  padding: 120px 0px 50px 120px;
+  display: block;
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .job {
+    width: 100%;
+    padding: 80px 15px 20px 15px;
+  }
+}
+
+.textHeader {
+  text-transform: uppercase;
+  font-family: bebas-neue-by-fontfabric;
+  font-size: 54px;
+  color: #21262d;
+  letter-spacing: 0;
+  line-height: 65px;
+}
+
+.textSubHeader {
+  font-family: Circe;
+  font-size: 24px;
+  color: #363c43;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+.text {
+  font-family: Circe;
+  font-size: 18px;
+  color: #180000;
+  letter-spacing: 0;
+  line-height: 25px;
+  text-align: justify;
+  z-index: 2;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 520px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+.textUl {
+  font-size: 18px;
+  text-align: justify;
+  z-index: 2;
+  line-height: normal;
+  padding-left: 0px;
+}
+
+@media (max-width: 520px) {
+  .textUl {
+    font-size: 16px;
+  }
+}
+
+.bgJob {
+  background: url(${jobBgSrc}) no-repeat right top;
+  background-size: 60%;
+  background-position: right -48% top;
+}
+
+@media (max-width: 2048px) {
+  .bgJob {
+    background-size: 55%;
+    background-position: right -38% top;
+  }
+}
+@media (max-width: 520px) {
+  .bgJob {
+    background: none;
+  }
+}
+.backButton {
+  height: 40px;
+  width: auto;
+  background: #808a9d;
+  border-radius: 4px;
+  border: 0px;
+  font-size: 13px;
+  color: #ffffff;
+  letter-spacing: 0;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.jobsEmail {
+  display: block;
+  font-family: Circe;
+  text-transform: uppercase;
+  font-family: bebas-neue-by-fontfabric;
+  font-size: 28px;
+  color: #09c404;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.newList {
+  list-style-type: none;
+}
+
+.newList:before {
+  color: #09c404;
+  content: "●";
+  padding-right: 10px;
+}
+
+.newSubList {
+  list-style-type: none;
+}
+
+.newSubList:before {
+  color: #b8c0ce;
+  content: "●";
+  padding-right: 10px;
+}

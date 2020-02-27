@@ -57,21 +57,21 @@ export const MainFormLayout = ({
           >
             <FastField
               component={RadioButton}
-              name="program"
+              name="plan"
               id="radioOption1"
               label="Demo"
               img={option1Img}
             />
             <FastField
               component={RadioButton}
-              name="program"
+              name="plan"
               id="radioOption2"
               label="1 měsic"
               img={option2Img}
             />
             <FastField
               component={RadioButton}
-              name="program"
+              name="plan"
               id="radioOption3"
               label="2 měsice"
               img={option3Img}
@@ -89,13 +89,8 @@ export const MainFormLayout = ({
             className={styles.select}
           >
             <option value="">Vyber si počet dní</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="1">4</option>
-            <option value="2">5</option>
-            <option value="3">6</option>
-            <option value="1">7</option>
+            <option value="5">5 dní (Po - Pá)</option>
+            <option value="6">6 dní (Po - So)</option>
           </FastField>
           {touched.days && errors.days && (
             <span className={styles.error}>{errors.days}</span>
@@ -189,7 +184,7 @@ export const MainForm = withFormik({
   mapPropsToValues: () => ({
     phone: "+420",
     promo: "",
-    program: "",
+    plan: "",
     days: "",
     success: false,
   }),
@@ -199,37 +194,57 @@ export const MainForm = withFormik({
         .min(8)
         .required("Phone field is required"),
       promo: Yup.string(),
-      program: Yup.string().required("Program field is required"),
+      plan: Yup.string().required("Program field is required"),
       days: Yup.string().required("You need to choose days"),
     }),
   handleSubmit: async (
-    { phone, promo, program, days },
+    { phone, promo, plan, days },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
+    let urlString = document.location.href
+    let url = new URL(urlString)
+    let UTM_SOURCE = url.searchParams.get("utm_source")
+    let UTM_MEDIUM = url.searchParams.get("utm_medium")
+    let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
+    let UTM_TERM = url.searchParams.get("utm_term")
+    let UTM_CONTENT = url.searchParams.get("utm_content")
+
     try {
-      const encode = data => {
-        return Object.keys(data)
-          .map(
-            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-          )
-          .join("&")
+      // const encode = data => {
+      //   return Object.keys(data)
+      //     .map(
+      //       key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+      //     )
+      //     .join("&")
+      // }
+      const data = {
+        "form-name": "main-contact",
+        phone,
+        promo,
+        plan,
+        days,
+        utm_source: UTM_SOURCE,
+        utm_medium: UTM_MEDIUM,
+        utm_campaign: UTM_CAMPAIGN,
+        utm_term: UTM_TERM,
+        utm_content: UTM_CONTENT,
       }
-      await fetch("/api/application/?no-cache=1", {
+
+      await fetch("/api/application", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "main-contact",
-          phone,
-          promo,
-          program,
-          days,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       })
       await setSubmitting(false)
       await setFieldValue("success", true)
       setTimeout(() => {
         resetForm()
         window.location.href = "/thank-you"
+        window.dataLayer.push({
+          event: "ga.pageview",
+          pageURL: "/thank-you",
+          pageType: "Purchase",
+        })
       }, 2000)
     } catch (err) {
       setSubmitting(false)

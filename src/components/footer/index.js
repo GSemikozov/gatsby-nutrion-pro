@@ -49,10 +49,11 @@ export const Footer = () => (
             <a href="https://nutritionpro.cz/jobs/">Kariéra</a>
           </div>
           <p>
-            OBCHODNÍ PODMÍNKY{" "}
+            <a href="/terms" target="_blank" rel="noopener norefferer">
+              OBCHODNÍ PODMÍNKY
+            </a>{" "}
             <span className={styles.hideXS}>
-              OBCHODNÍ PODMÍNKY ZADÁNÍM TELEFONÍHO ČÍSLA SOUHLASÍTE SE
-              ZPRACOVÁNÍM OSOBNÍCH ÚDAJŮ
+              ZADÁNÍM TELEFONÍHO ČÍSLA SOUHLASÍTE SE ZPRACOVÁNÍM OSOBNÍCH ÚDAJŮ
             </span>
           </p>
           <p>© 2020 NUTRITIONPRO</p>

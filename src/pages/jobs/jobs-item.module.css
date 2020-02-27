@@ -1,0 +1,87 @@
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 85px;
+}
+
+.title {
+  font-size: 24px;
+  color: #ffffff;
+  letter-spacing: 0;
+  text-align: center;
+  padding-top: 61px;
+  padding-bottom: 66px;
+  margin: 0;
+}
+
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+@media (max-width: 768px) {
+  .meals {
+    display: none;
+  }
+}
+
+.itemWrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-basis: calc(33% - 20px);
+  background: #fdf9f4;
+  padding: 30px 45px;
+  border-radius: 2px;
+  border-radius: 2px;
+  height: 370px;
+  min-width: 270px;
+  text-decoration: none;
+}
+
+.jobDate {
+  font-size: 13px;
+  color: #363c43;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin: 0px;
+}
+
+.mealDescription {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #363c43;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.jobTitle {
+  text-transform: uppercase;
+  font-family: bebas-neue-by-fontfabric;
+  font-size: 43px;
+  color: #21262d;
+  letter-spacing: 0;
+  line-height: 42px;
+  margin-top: 110px;
+}
+
+.mealAdditionalInfo {
+  font-size: 10px;
+  color: #09c404;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.carousel {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    display: block !important;
+  }
+}
