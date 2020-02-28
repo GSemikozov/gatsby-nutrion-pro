@@ -9,7 +9,9 @@ import styles from './hero.module.css';
 export const Hero = () => (
   <section className={styles.hero}>
     <Container className={styles.container}>
-      <h1 className={styles.title}>Výživový poradce a šéfkuchař v jednom</h1>
+      <h1 className={styles.title}>
+        Výživový poradce <br /> a šéfkuchař v jednom
+      </h1>
       <div className="visible-desktop">
         <div className={styles.img}>
           <HeroDesktopImg />

@@ -151,7 +151,10 @@ export const MainFormLayout = ({
             <span className={styles.error}>{errors.promo}</span>
           )}
         </div>
-        <Price price={price} amount={amount} />
+        <div>
+          <FastField component="input" type="hidden" name="amount_kal" />
+          <Price price={price} amount={amount} />
+        </div>
         {values.success && (
           <div className={styles.success}>
             <h4>Successfully sent!</h4>
@@ -169,23 +172,24 @@ export const MainFormLayout = ({
           </Button>
         </div>
 
-        {/* <DisplayFormikState
+        <DisplayFormikState
           isSubmitting={isSubmitting}
           values={values}
           errors={errors}
           touched={touched}
-        /> */}
+        />
       </Form>
     </div>
   )
 }
 
 export const MainForm = withFormik({
-  mapPropsToValues: () => ({
+  mapPropsToValues: amount => ({
     phone: "+420",
     promo: "",
     plan: "",
     days: "",
+    amount_kal: `${amount.amount}` || "0",
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
@@ -203,7 +207,7 @@ export const MainForm = withFormik({
       days: Yup.string().required("You need to choose days"),
     }),
   handleSubmit: async (
-    { phone, promo, plan, days },
+    { phone, promo, plan, days, amount_kal },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
@@ -222,17 +226,23 @@ export const MainForm = withFormik({
       let UTM_TERM = url.searchParams.get("utm_term")
       let UTM_CONTENT = url.searchParams.get("utm_content")
 
-      const data = {
-        form_name: "main-contact",
-        phone,
-        promo,
-        plan,
-        days,
-        utm_source: UTM_SOURCE,
-        utm_medium: UTM_MEDIUM,
-        utm_campaign: UTM_CAMPAIGN,
-        utm_term: UTM_TERM,
-        utm_content: UTM_CONTENT,
+      // let amount = setFieldValue("amount", "111")
+      // console.log("amount", amount)
+
+      let data = await function() {
+        return {
+          form_name: "main-contact",
+          phone,
+          promo,
+          plan,
+          days,
+          amount_kal,
+          utm_source: UTM_SOURCE,
+          utm_medium: UTM_MEDIUM,
+          utm_campaign: UTM_CAMPAIGN,
+          utm_term: UTM_TERM,
+          utm_content: UTM_CONTENT,
+        }
       }
 
       // await console.log(JSON.stringify(data))
@@ -241,6 +251,7 @@ export const MainForm = withFormik({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
+      // await console.log(JSON.stringify(data))
       await setSubmitting(false)
       await setFieldValue("success", true)
       setTimeout(() => {

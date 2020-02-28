@@ -32,11 +32,11 @@ export const SubscribeFormLayout = ({
           <span className={styles.error}>{errors.email}</span>
         )}
       </div>
-      {values.success && (
+      {/* {values.success && (
         <div className={styles.success}>
           <h4 className="text-center">Successfully sent!</h4>
         </div>
-      )}
+      )} */}
       <Button
         name="submit"
         type="tertiary"
@@ -86,6 +86,12 @@ export const SubscribeForm = withFormik({
       await setFieldValue("success", true)
       setTimeout(() => {
         resetForm()
+        window.location.href = "/thank-you"
+        window.dataLayer.push({
+          event: "ga.pageview",
+          pageURL: "/thank-you-subscribe",
+          pageType: "Purchase",
+        })
       }, 2000)
     } catch (err) {
       setSubmitting(false)

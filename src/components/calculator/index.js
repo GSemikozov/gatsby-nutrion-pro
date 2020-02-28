@@ -18,7 +18,7 @@ const ModalForm = ({ amount, price }) => (
 export const Calculator = ({ id, className }) => {
   const { show, RenderModal } = useModal()
   const [price, setPrice] = useState()
-  const [amount, setAmount] = useState()
+  const [amount, setAmount] = useState(1400)
   // const [amountTo, setAmountTo] = useState(0)
 
   const handleAmountChange = ({ target }) => {
@@ -28,8 +28,9 @@ export const Calculator = ({ id, className }) => {
   }
 
   useEffect(() => {
+    const price = getPrice(amount)
     setAmount(amount)
-    setPrice(440)
+    setPrice(price)
   }, [])
 
   // state = { form: { message: "" } }; example
