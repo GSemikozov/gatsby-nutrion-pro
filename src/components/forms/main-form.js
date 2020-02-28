@@ -172,12 +172,12 @@ export const MainFormLayout = ({
           </Button>
         </div>
 
-        <DisplayFormikState
+        {/* <DisplayFormikState
           isSubmitting={isSubmitting}
           values={values}
           errors={errors}
           touched={touched}
-        />
+        /> */}
       </Form>
     </div>
   )
