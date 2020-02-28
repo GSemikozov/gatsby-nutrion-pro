@@ -1,5 +1,5 @@
 .section {
-  background-color: var(--color-white);
+  background-color: var(--color-grey);
 }
 
 .title {
@@ -66,10 +66,6 @@
 }
 
 @media all and (min-width: 768px) {
-  .section {
-    background-color: var(--color-grey);
-  }
-
   .title {
     margin-bottom: 20px;
     text-align: center;
@@ -80,6 +76,17 @@
     margin: 0 auto 40px;
     font-size: 18px;
     text-align: center;
+  }
+
+  .buttons {
+    margin-top: 40px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .card {
+    padding: 0;
+    display: block;
   }
 
   .cardIcon {
@@ -108,17 +115,12 @@
     display: grid;
     justify-content: center;
     grid-gap: 30px;
-    grid-template-columns: repeat(4, calc(25% - 30px));
-  }
-
-  .buttons {
-    margin-top: 40px;
+    grid-template-columns: repeat(2, calc(50% - 30px));
   }
 }
 
-@media all and (min-width: 1024px) {
-  .card {
-    padding: 0;
-    display: block;
+@media all and (min-width: 1200px) {
+  .cardGrid {
+    grid-template-columns: repeat(4, calc(25% - 30px));
   }
 }

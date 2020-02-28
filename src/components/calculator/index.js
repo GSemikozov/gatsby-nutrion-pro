@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Button } from '../button';
 import { Container } from '../container';
@@ -15,10 +15,10 @@ const ModalForm = ({ amount, price }) => (
   </>
 )
 
-export const Calculator = ({ id }) => {
+export const Calculator = ({ id, className }) => {
   const { show, RenderModal } = useModal()
   const [price, setPrice] = useState(0)
-  const [amount, setAmount] = useState()
+  const [amount = 1400, setAmount] = useState()
   // const [amountTo, setAmountTo] = useState(0)
 
   const handleAmountChange = ({ target }) => {
@@ -26,6 +26,12 @@ export const Calculator = ({ id }) => {
     setAmount(target.value)
     setPrice(price)
   }
+
+  useEffect(() => {
+    const price = getPrice(amount)
+    setAmount(amount)
+    setPrice(price)
+  }, [])
 
   // state = { form: { message: "" } }; example
 
@@ -79,12 +85,14 @@ export const Calculator = ({ id }) => {
       case amount >= 2868:
         priceValue = 580
         break
+      default:
+        priceValue = 400
     }
     return priceValue
   }
 
   return (
-    <section className={styles.calculatorSection} id={id && id}>
+    <section className={cx(styles.calculatorSection, className)} id={id && id}>
       <Container className={styles.container}>
         <h3 className={cx("sectionTitle", styles.title)}>
           Spočítej si cenu svého programu

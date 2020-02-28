@@ -119,13 +119,6 @@
     font-size: 18px;
   }
 
-  .cardGrid {
-    display: grid;
-    justify-content: center;
-    grid-gap: 62px;
-    grid-template-columns: repeat(3, calc(33.3333% - 62px));
-  }
-
   .link {
     font-size: 18px;
     margin-top: 56px;
@@ -133,5 +126,14 @@
 
   .link > img {
     width: 13px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .cardGrid {
+    display: grid;
+    justify-content: center;
+    grid-gap: 62px;
+    grid-template-columns: repeat(3, calc(33.3333% - 62px));
   }
 }

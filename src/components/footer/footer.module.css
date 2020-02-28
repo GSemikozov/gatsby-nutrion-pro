@@ -7,6 +7,7 @@
 .footerCols {
   display: flex;
   flex-direction: row;
+  max-width: 100%;
 }
 
 .footerCol:nth-child(2) {
@@ -47,6 +48,7 @@
 .footerMenu {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 16px;
   margin-bottom: 50px;
@@ -55,14 +57,14 @@
 .footerMenu a {
   display: inline-block;
   font-weight: 500;
-  margin-left: 70px;
+  margin: 0 35px 10px;
   color: var(--color-white);
   text-decoration: none;
 }
 
-.footerMenu a:first-child {
+/* .footerMenu a:first-child {
   margin-left: 0;
-}
+} */
 
 .footerMenu a:hover {
   text-decoration: underline;
@@ -99,6 +101,14 @@
 
   .footerCol:last-child > a {
     margin-top: 0;
+  }
+
+  .footerMenu a {
+    display: inline-block;
+    font-weight: 500;
+    margin: 0 20px 10px;
+    color: var(--color-white);
+    text-decoration: none;
   }
 }
 

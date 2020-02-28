@@ -1,0 +1,13 @@
+.calculator {
+  padding-bottom: 40px;
+}
+
+.calculator:after {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  .calculator {
+    padding-bottom: 80px;
+  }
+}

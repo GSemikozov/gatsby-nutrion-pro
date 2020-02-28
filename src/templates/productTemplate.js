@@ -5,13 +5,12 @@ import { Button } from '../components/button';
 import { Calculator } from '../components/calculator';
 import { Container } from '../components/container';
 import { Layout } from '../components/layout';
-import { useSmoothScroll } from '../hooks/useSmoothScroll';
 import productImg1 from '../images/product-1-bg.jpg';
 import productImg2 from '../images/product-2-bg.jpg';
 import productImg3 from '../images/product-3-bg.jpg';
 import productImg4 from '../images/product-4-bg.jpg';
+import commonStyles from './common.module.css';
 import styles from './hero.module.css';
-import angleDownIcon from './icons/angle-down-icon.svg';
 import s1icon1 from './icons/s1-icon1.svg';
 import s1icon2 from './icons/s1-icon2.svg';
 import s1icon3 from './icons/s1-icon3.svg';
@@ -24,12 +23,14 @@ import section2 from './section2.module.css';
 import section3 from './section3.module.css';
 import section4 from './section4.module.css';
 
+// import { useSmoothScroll } from '../hooks/useSmoothScroll';
+// import angleDownIcon from './icons/angle-down-icon.svg';
 const ProductTemplate = ({ productId, title, productList }) => {
-  const scroll = useSmoothScroll()
+  // const scroll = useSmoothScroll()
 
-  const scrollTo = selector => () => {
-    selector && scroll.animateScroll(document.getElementById(selector))
-  }
+  // const scrollTo = selector => () => {
+  //   selector && scroll.animateScroll(document.getElementById(selector))
+  // }
 
   const img = productId => {
     let img = null
@@ -122,7 +123,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
               </div>
             </div>
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             <button
               type="button"
               className={section1.link}
@@ -131,7 +132,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
               Vzorový jídelníček
               <img src={angleDownIcon} alt="icon" />
             </button>
-          </div>
+          </div> */}
         </Container>
       </section>
       <section className={cx("section", section2.section)} id="section-2">
@@ -165,7 +166,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
             zpětné vazby, upravuje jídelníček. Každý měsíc ti od něj přijde
             vyhodnocení, kde se přesně dozvíš, jak si vedeš.
           </p>
-          <div className="text-center">
+          {/* <div className="text-center">
             <button
               type="button"
               className={section3.link}
@@ -174,7 +175,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
               Více info o našem výživovém poradci
               <img src={angleDownIcon} alt="icon" />
             </button>
-          </div>
+          </div> */}
         </Container>
       </section>
       <section className={cx("section", section4.section)} id="section-4">
@@ -239,15 +240,15 @@ const ProductTemplate = ({ productId, title, productList }) => {
               </div>
             </div>
           </div>
-          <div className={cx("text-center", section4.buttons)}>
+          {/* <div className={cx("text-center", section4.buttons)}>
             <div className={section4.buttonsTitle}>Vozíme i k Vám?</div>
             <Button type="outline" className={section4.button}>
               Zkontrolovat adresu
             </Button>
-          </div>
+          </div> */}
         </Container>
       </section>
-      <Calculator id="calculator" />
+      <Calculator className={commonStyles.calculator} id="calculator" />
     </Layout>
   )
 }

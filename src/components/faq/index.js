@@ -14,110 +14,112 @@ const section0Texts = [
   {
     question: "Proč potřebuji znát složení svého těla?",
     answer:
-      "Měřením získáš přehled o tom, jaký máš poměr mezi svalovou a tukovou hmotou, množství útrobního tuku a vody v těle. To jsou důležité indikátory zdraví a je třeba na ně brát ohled při sestavování jídelníčku.",
+      "Měřením získáš přehled o tom, jaký máš poměr mezi svalovou a tukovou hmotou a jaké je množství útrobního tuku a vody v těle. Jedná se o důležité indikátory zdraví, a proto je potřeba na ně brát ohled už při sestavování jídelníčku.",
   },
   {
     question: "Jak probíhá měření?",
     answer:
-      "Měření trvá několik minut. Zdarma se můžeš změřit na pobočce světa zdraví na adrese: Praha 1, Dlážděná 5. Nebo na jakékoliv váze, která toto měření umožňuje.",
+      "Pro měření používáme přístroj Tanita. Náš zaškolený pracovník za tebou přijede na místo, které sám určíš, a změří tě. Měření trvá jen několik minut. Můžeš se ale také nechat změřit na jakékoli váze, která toto měření umožňuje, a výsledky nám poté zaslat.",
   },
   {
     question: "Jak často bych se měl nechat změřit?",
     answer:
-      "Díky častějšímu měření jsme schopni přesněji sledovat tvoje výsledky a dynamicky upravovat jídelníček. Doporučujeme se pravidelně měřit každé 2-3 týdny.",
+      "Díky častějšímu měření jsme schopni přesněji sledovat tvoje výsledky a dynamicky upravovat jídelníček. Měření tedy doporučujeme realizovat pravidelně každé 2–3 týdny.",
   },
   {
     question: "Kdo sestavuje jídelníček?",
     answer:
-      "Jídelníček je sestavován námi vyvinutým algoritmem na základě potřeb tvého těla a tvých cílů. Za složení samotných jídel je zodpovědný Jiří Kaloč, certifikovaný poradce pro výživu.",
+      "Jídelníček je sestavován naším speciálním algoritmem na základě potřeb tvého těla a tvých cílů. Náš certifikovaný poradce pro výživu Jiří Kaloč pak zodpovídá za složení samotných jídel i za tvé výsledky.",
   },
   {
-    question: "Jak pestrý je jídelníček?",
+    question: "Jak vypadá jídelníček?",
     answer:
-      "Jídelníček sestavuje náš algoritmus z 300 jídel, které se pravidelně střídají. Stále pracujeme na zařazení nových jídel, takže se můžeš těšit na stále nová a zajímavá jídla.",
+      "Jsme zastánci vyvážené stravy. Jídla jsou tak velmi pestrá a chutná. Jídelníček je sestavován z 300 různých jídel, která se pravidelně střídají. Zároveň naši databázi neustále aktualizujeme a zařazujeme nová a zajímavá jídla. Prostě se ti u nás žádné jídlo nepřejí.",
   },
   {
     question:
       "Nejím některé potraviny, dokážete mi upravit jídelníček dle mých požadavků?",
-    answer: "Ano, jídelníček ti upravíme na základě tvých preferencí. ",
-  },
-  {
-    question: "Jak dlouho dopředu musím nahlásit vynechání dovozu?",
     answer:
-      "Vynechání dovozu je možné pouze v pracovní době zákaznické podpory, tj. Po–Pá od 10:00 do 18:00, nejpozději však 3 celé pracovní dny přede dnem doručení (nepočítá se však samotný den doručení, tj. den doručení minus 3 celé pracovní dny). Děje se tak z důvodu, že pro každé vaření nakupujeme čerstvé suroviny pro přesný počet zákazníků.",
-  },
-  {
-    question: "Můžu zrušit pouze jeden den?",
-    answer:
-      "V případě, že se Vaše objednávka vztahuje na dva dny, tak můžete zrušit pouze celou dvoudenní objednávku. Zrušit pouze jeden den v tomto případě tedy není možné.",
+      "Ano, můžeš si u nás z jídelníčku vyloučit až 3 druhy potravin a upravit ho tak podle svých preferencí. V tuto chvíli však nenabízíme možnost low-carb, low-fat, vegetarián, vegan či speciálních zdravotních diet.",
   },
 ]
 
 const section1Texts = [
   {
+    question: "Jaké používáte suroviny?",
+    answer:
+      "Kvalitní a čerstvé suroviny jsou pro zdravé stravování základem, proto používáme výhradně prémiové suroviny od českých dodavatelů.",
+  },
+  {
     question: "Jsou vaše jídla čerstvá?",
     answer:
-      "Ano, suroviny kupujeme v den přípravy. Jídlo se následně šokově zchladí (z 90°C na 2°C za méně než hodinu) a hermeticky balí. To zajišťuje maximální čerstvost.",
+      "Ano, suroviny kupujeme v den přípravy. Jídlo se následně šokově zchladí (z 90 °C na 2 °C za méně než hodinu) a hermeticky balí. To zajišťuje maximální čerstvost.",
   },
   {
-    question: "Používáte kvalitní suroviny?",
+    question: "Kdy jídlo připravujete?",
     answer:
-      "Ano, zeleninu, maso a vejce nakupujeme pouze u českých dodavatelů.",
-  },
-  {
-    question: "Jak připravujete jídlo?",
-    answer:
-      "Příprava jídel probíhá den dopředu (tzn. v neděli na pondělí a úterý, v úterý na středu a čtvrtek atd.)",
+      "Příprava jídel probíhá v den rozvozu. To znamená, že v neděli připravujeme na pondělí a úterý, v úterý na středu a čtvrtek, ve čtvrtek na pátek a sobotu.",
   },
   {
     question: "Máte dezerty?",
     answer:
-      "Ano, jsou výborné, zdravé a na gram přesně spočítané, tak aby zapadly do tvého osobního jídelníčku.",
+      "Ano, jsou výborné. A navíc přesně na gram spočítané tak, aby zapadly do tvého osobního jídelníčku.",
   },
 ]
 
 const section2Texts = [
   {
-    question: "Doručujete i do okrajových částí Prahy?",
+    question: "Rozvážíte i do okrajových částí Prahy?",
     answer:
       "Ano, pro upřesnění a bližší info nás neváhej kontaktovat na klientské lince.",
   },
   {
-    question: "Kdy doručujete?",
+    question: "Kdy jídlo doručujete?",
     answer:
-      "Jídlo rozvážíme obden a to v neděli, úterý a čtvrtek, mezi 17. a 22. hodinou, čas si můžeš dále upřesnit na dvě hodiny. Jsme flexibilní, nemusíš se tedy bát změn v tvých plánech, čas doručení si můžete změnit i v ten samý den.",
+      "Jídlo rozvážíme obden, a to v úterý, čtvrtek a neděli. Vždy mezi 17. a 22. hodinou. Čas můžeš upřesnit v rámci dvouhodinových oken.",
   },
   {
-    question:
-      "Co když potřebuji změnit doručovací údaje, nebo odjíždím mimo Prahu?",
+    question: "Co když potřebuji změnit doručovací údaje?",
     answer:
-      "Změnit doručovací údaje můžete do 15. hodiny dne doručení. Pokud odjíždíš mimo Prahu, stačí nás o tom informovat dva dny předem.",
+      "Jsme flexibilní, nemusíš se tedy bát změn v tvých plánech. Čas či místo doručení můžeš změnit i v ten samý den do 15. hodiny.",
+  },
+  {
+    question: "Jak dlouho dopředu musím nahlásit vynechání dovozu?",
+    answer:
+      "Vynechání dovozu je možné nahlásit pouze v pracovní době zákaznické podpory, tj. Pondělí–Pátek od 10:00 do 18:00, nejpozději však 3 celé pracovní dny přede dnem doručení. Nepočítá se však samotný den doručení, tj. den doručení minus 3 celé pracovní dny. Děje se tak z důvodu, že pro každé vaření nakupujeme čerstvé suroviny pro přesný počet zákazníků.",
+  },
+  {
+    question: "Můžu zrušit pouze jeden den?",
+    answer:
+      "V případě, že se tvoje objednávka vztahuje na dva dny, můžeš zrušit pouze celou dvoudenní objednávku. Zrušit pouze jeden den v tomto případě není možné.",
   },
   {
     question: "Jak stanovujete cenu?",
-    answer: "Současná průměrná cena je 480 Kč za pětichodové denní menu.",
+    answer:
+      "Cena je stanovena individuálně podle stravovacího plánu na míru a je odvozena podle potřeby denního kalorického příjmu pro daného člověka a podle jeho cíle. Cena pak bude odlišná v případě ženy, která chce zhubnout, a muže, který chce nabrat svalovou hmotu. Současná průměrná cena se však pohybuje kolem 480,- Kč za pětichodové denní menu.",
   },
   {
     question: "Jak probíhá platba?",
-    answer: "Po objednání dostanete na email fakturu.",
+    answer:
+      "Po realizaci objednávky ti bude vystavena faktura a odeslána k proplacení na tvůj e-mail.",
   },
 ]
 
 const section3Texts = [
   {
-    question: "Jak ohřívat jídlo?",
-    answer:
-      "Do fólie propíchni dírky a ohřej v mikrovlnné troubě. Potřebný čas se liší podle druhu jídla a velikosti porce. Pro rovnoměrné prohřátí jídla doporučujeme použít střední výkon (600-700 W) a delší čas.",
-  },
-  {
     question: "Musí se jídlo ohřívat?",
     answer:
-      "Některé jídla jsou určeny ke konzumaci za pokojové teploty. Jídla určená k ohřevu se dají konzumovat i neohřáté, ale pro lepší chuť je doporučujeme ohřát.",
+      "Některá jídla jsou určena ke konzumaci za studena, jiná jsou zase určena k ohřevu. Můžeš je konzumovat i neohřáté, ale pro lepší chuť doporučujeme jejich ohřátí.",
+  },
+  {
+    question: "Jak ohřívat jídlo?",
+    answer:
+      "Pokud použiješ poro ohřev v mikrovlnné troubě, doporučujeme do folie propíchnout dírky. Potřebný čas ohřevu se liší podle druhu jídla a velikosti porce. Pro rovnoměrné prohřátí jídla doporučujeme použít střední výkon (6000–7000 W) a delší čas.",
   },
   {
     question: "Jak skladovat jídlo?",
     answer:
-      "Jídlo doporučujeme skladovat v lednici, ale není problém si ho vzít do práce, nebo na cesty. Jídlo vydrží několik hodin mimo lednici a to bez jakékoliv změny chuti, či kvality.",
+      "Jídlo doporučujeme skladovat v lednici, ale není problém si ho vzít i do práce nebo na cesty. Jídlo vydrží několik hodin mimo lednici, a to bez jakékoliv změny chuti či kvality.",
   },
 ]
 
@@ -150,7 +152,7 @@ export const FAQ = () => {
               <img src={Img1} className={styles.tabImg} alt="icon" />
             </div>
 
-            <div className={styles.tabTitle}>Jídlo na míru</div>
+            <div className={styles.tabTitle}>Jídelníček na míru</div>
           </button>
 
           <button
