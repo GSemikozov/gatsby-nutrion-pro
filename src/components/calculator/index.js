@@ -17,8 +17,8 @@ const ModalForm = ({ amount, price }) => (
 
 export const Calculator = ({ id, className }) => {
   const { show, RenderModal } = useModal()
-  const [price, setPrice] = useState(0)
-  const [amount = 1400, setAmount] = useState()
+  const [price, setPrice] = useState()
+  const [amount, setAmount] = useState()
   // const [amountTo, setAmountTo] = useState(0)
 
   const handleAmountChange = ({ target }) => {
@@ -28,9 +28,8 @@ export const Calculator = ({ id, className }) => {
   }
 
   useEffect(() => {
-    const price = getPrice(amount)
     setAmount(amount)
-    setPrice(price)
+    setPrice(440)
   }, [])
 
   // state = { form: { message: "" } }; example
@@ -110,7 +109,7 @@ export const Calculator = ({ id, className }) => {
                   className={styles.input}
                   value={amount}
                   onChange={handleAmountChange}
-                  placeholder="0"
+                  placeholder="1400"
                 />
                 <span className={styles.inputGroupBtn}>kcal</span>
               </div>
