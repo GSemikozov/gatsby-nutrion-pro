@@ -5,6 +5,7 @@ import { Button } from '../components/button';
 import { Calculator } from '../components/calculator';
 import { Container } from '../components/container';
 import { Layout } from '../components/layout';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 import productImg1 from '../images/product-1-bg.jpg';
 import productImg2 from '../images/product-2-bg.jpg';
 import productImg3 from '../images/product-3-bg.jpg';
@@ -23,14 +24,13 @@ import section2 from './section2.module.css';
 import section3 from './section3.module.css';
 import section4 from './section4.module.css';
 
-// import { useSmoothScroll } from '../hooks/useSmoothScroll';
 // import angleDownIcon from './icons/angle-down-icon.svg';
 const ProductTemplate = ({ productId, title, productList }) => {
-  // const scroll = useSmoothScroll()
+  const scroll = useSmoothScroll()
 
-  // const scrollTo = selector => () => {
-  //   selector && scroll.animateScroll(document.getElementById(selector))
-  // }
+  const scrollTo = selector => () => {
+    selector && scroll.animateScroll(document.getElementById(selector))
+  }
 
   const img = productId => {
     let img = null
@@ -61,7 +61,11 @@ const ProductTemplate = ({ productId, title, productList }) => {
           <Container className={styles.heroContainer}>
             <h1 className={styles.productHeroTitle}>{title}</h1>
             <ul className={styles.productHeroList}>{productList()}</ul>
-            <Button type="primary" className={styles.productHeroBtn}>
+            <Button
+              type="primary"
+              className={styles.productHeroBtn}
+              handleClick={scrollTo("calculator")}
+            >
               Spočítat cenu
             </Button>
           </Container>
