@@ -51,9 +51,9 @@ export const MainFormLayout = ({
         <div className={styles.inputField}>
           <RadioButtonGroup
             id="radioGroup"
-            value={values.program}
-            error={errors.program}
-            touched={touched.program}
+            value={values.plan}
+            error={errors.plan}
+            touched={touched.plan}
           >
             <FastField
               component={RadioButton}
@@ -186,6 +186,11 @@ export const MainForm = withFormik({
     promo: "",
     plan: "",
     days: "",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
     success: false,
   }),
   validationSchema: () =>
@@ -201,14 +206,6 @@ export const MainForm = withFormik({
     { phone, promo, plan, days },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
-    let urlString = document.location.href
-    let url = new URL(urlString)
-    let UTM_SOURCE = url.searchParams.get("utm_source")
-    let UTM_MEDIUM = url.searchParams.get("utm_medium")
-    let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
-    let UTM_TERM = url.searchParams.get("utm_term")
-    let UTM_CONTENT = url.searchParams.get("utm_content")
-
     try {
       // const encode = data => {
       //   return Object.keys(data)
@@ -217,8 +214,16 @@ export const MainForm = withFormik({
       //     )
       //     .join("&")
       // }
+      let urlString = document.location.href
+      let url = new URL(urlString)
+      let UTM_SOURCE = url.searchParams.get("utm_source")
+      let UTM_MEDIUM = url.searchParams.get("utm_medium")
+      let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
+      let UTM_TERM = url.searchParams.get("utm_term")
+      let UTM_CONTENT = url.searchParams.get("utm_content")
+
       const data = {
-        "form-name": "main-contact",
+        form_name: "main-contact",
         phone,
         promo,
         plan,
@@ -230,6 +235,7 @@ export const MainForm = withFormik({
         utm_content: UTM_CONTENT,
       }
 
+      // await console.log(JSON.stringify(data))
       await fetch("/api/application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

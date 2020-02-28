@@ -22,8 +22,8 @@ export const RadioButton = ({
         name={name}
         id={id}
         type="radio"
-        value={id}
-        checked={id === value}
+        value={label}
+        checked={label === value}
         onChange={onChange}
         onBlur={onBlur}
         {...props}

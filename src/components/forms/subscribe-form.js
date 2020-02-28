@@ -74,7 +74,7 @@ export const SubscribeForm = withFormik({
       //     .join("&")
       // }
       const data = {
-        "form-name": "subscribe",
+        form_name: "subscribe",
         email,
       }
       await fetch("/api/application", {

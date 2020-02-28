@@ -112,7 +112,7 @@ export const ContactForm = withFormik({
       //     .join("&")
       // }
       const data = {
-        "form-name": "contact",
+        form_name: "contact",
         phone,
       }
       await fetch("/api/application", {
