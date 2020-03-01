@@ -207,7 +207,9 @@ export const MainForm = withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      phone: Yup.string().phone(),
+      phone: Yup.string()
+        .min(9)
+        .phone(),
       promo: Yup.string(),
       plan: Yup.string().required("Vyberte si program"),
       days: Yup.string().required("Vyberte si počet dní"),

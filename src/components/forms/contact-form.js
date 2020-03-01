@@ -103,7 +103,9 @@ export const ContactForm = withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      phone: Yup.string().phone(),
+      phone: Yup.string()
+        .min(9)
+        .phone(),
     }),
   handleSubmit: async (
     { phone },
