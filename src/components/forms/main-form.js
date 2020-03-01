@@ -16,7 +16,7 @@ import mainFormStyles from './main-form.module.css';
 const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 
 Yup.addMethod(Yup.string, "phone", function() {
-  return this.test("phone", "Phone number is not valid HH", value =>
+  return this.test("phone", "Telefonní číslo musí obsahovat 9 znaků", value =>
     rePhoneNumber.test(value)
   )
 })
