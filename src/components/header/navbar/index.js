@@ -1,8 +1,7 @@
 import cx from 'classnames';
-import { Link } from 'gatsby';
 import React from 'react';
 
-import { useSmoothScroll } from '../../../hooks/useSmoothScroll';
+import { handleMenuLinkClick } from '../../../helpers';
 import { Button } from '../../button';
 import { useModal } from '../../modal';
 import IconAngleDown from '../icons/icon-angle-down.svg';
@@ -14,13 +13,8 @@ import IconProfile from '../icons/icon-user.svg';
 import { ModalLocation } from './modal';
 import styles from './navbar.module.css';
 
-export const Navbar = ({ menuVisible, ...props }) => {
-  const scroll = useSmoothScroll()
-
-  const onNavbarItemClick = selector => () => {
-    scroll.animateScroll(document.getElementById(selector))
-  }
-
+// import { Link } from 'gatsby';
+export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
   const openMobileMenu = () => () => {
     props.onCloseMobileMenu()
   }
@@ -45,27 +39,16 @@ export const Navbar = ({ menuVisible, ...props }) => {
           alt="icon"
         />
       </Button>
-      <div
-        className={cx(styles.navbarItem, "visible-desktop")}
-        onClick={onNavbarItemClick("programs")}
-      >
-        Programy
-      </div>
-      <div
-        className={cx(styles.navbarItem, "visible-desktop")}
-        onClick={onNavbarItemClick("try-food")}
-      >
-        Jídelníček
-      </div>
-      <div
-        className={cx(styles.navbarItem, "visible-desktop")}
-        onClick={onNavbarItemClick("calculator")}
-      >
-        Cena
-      </div>
-      <div className={cx(styles.navbarItem, "visible-desktop")}>
-        <Link to="/jobs">Kariéra</Link>
-      </div>
+      {menuLinks.map(link => (
+        <a
+          key={link.name}
+          href={link.link}
+          className={cx(styles.navbarItem, "visible-desktop")}
+          onClick={e => handleMenuLinkClick(link, e)}
+        >
+          {link.name}
+        </a>
+      ))}
       <a
         href="tel:+420774137352"
         className={cx(styles.navbarItem, styles.contacts)}

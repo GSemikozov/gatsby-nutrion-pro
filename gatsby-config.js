@@ -3,6 +3,28 @@ module.exports = {
     title: `Krabičková dieta Praha - zhubněte zdravě bez hladovění`,
     description: `Krabičková dieta. Rozvoz po celé Praze a okolí zdarma. Konzultace s výživovým poradcem. Diagnostika složení těla inbody.`,
     author: `@nutritionprocz`,
+    menuLinks: [
+      {
+        name: "Programy",
+        link: "/#programs",
+        section: "#programs",
+      },
+      {
+        name: "Jídelníček",
+        link: "/#food",
+        section: "#food",
+      },
+      {
+        name: "Cena",
+        link: "/#calculator",
+        section: "#calculator",
+      },
+      {
+        name: "Kariéra",
+        link: "/jobs",
+        section: null,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

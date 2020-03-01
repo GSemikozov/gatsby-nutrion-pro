@@ -155,11 +155,11 @@ export const MainFormLayout = ({
           <FastField component="input" type="hidden" name="amount_kal" />
           <Price price={price} amount={amount} />
         </div>
-        {values.success && (
+        {/* {values.success && (
           <div className={styles.success}>
             <h4>Successfully sent!</h4>
           </div>
-        )}
+        )} */}
         <div className={mainFormStyles.buttons}>
           <Button
             name="submit"
@@ -201,10 +201,10 @@ export const MainForm = withFormik({
     Yup.object().shape({
       phone: Yup.string()
         .min(8)
-        .required("Phone field is required"),
+        .required("Telefonní číslo musí obsahovat 8 znaků"),
       promo: Yup.string(),
-      plan: Yup.string().required("Program field is required"),
-      days: Yup.string().required("You need to choose days"),
+      plan: Yup.string().required("Vyberte si program"),
+      days: Yup.string().required("Vyberte si počet dní"),
     }),
   handleSubmit: async (
     { phone, promo, plan, days, amount_kal },

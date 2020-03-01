@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 import { Container } from '../container';
-import { ContactForm } from '../forms/contact-form';
+import { ContactForm2 } from '../forms/contact-form2';
 import styles from './pre-footer.module.css';
 
 export const PreFooter = () => (
@@ -22,7 +22,7 @@ export const PreFooter = () => (
             Napiš nám svůj kontakt, rádi se ti ozveme!
           </p>
           <div className={styles.formWrap}>
-            <ContactForm
+            <ContactForm2
               horizontal
               themeLight
               label
@@ -49,7 +49,7 @@ export const PreFooter = () => (
         </Container>
       </div>
       <Container className={styles.formWrapXS}>
-        <ContactForm label btnType="primary" btnText="Zavolejte mi" />
+        <ContactForm2 label btnType="primary" btnText="Zavolejte mi" />
       </Container>
     </MobileView>
   </>

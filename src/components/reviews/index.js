@@ -11,13 +11,14 @@ import styles from './reviews.module.css';
 
 const ReviewsCarousel = () => {
   const settings = {
-    arrows: false,
+    arrows: true,
     centerMode: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
       {
+        arrows: false,
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
@@ -49,7 +50,9 @@ const ReviewsCarousel = () => {
 export const Reviews = ({ id = "" }) => (
   <section className={styles.reviewsSection} id={id}>
     <Container className={styles.container}>
-      <h3 className="sectionTitle text-center">Jaká jídla tě s námi čekají?</h3>
+      <h3 className="sectionTitle text-center">
+        Co o nás říkají naši zákazníci?
+      </h3>
       <ReviewsCarousel />
     </Container>
   </section>

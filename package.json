@@ -27,6 +27,7 @@
     "react-slick": "^0.25.2",
     "react-spring-3d-carousel": "^1.1.5",
     "react-text-mask": "^5.4.3",
+    "scroll-to-element": "^2.0.3",
     "slick-carousel": "^1.8.1",
     "smooth-scroll": "^16.1.2",
     "yup": "^0.28.1"

@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import React from 'react';
 
 import { Button } from '../components/button';
@@ -14,7 +14,7 @@ const ThankYou = () => (
         <span style={{ color: `var(--color-green)` }}>úspěšně přijata</span>
       </h1>
       <Button type="primary">
-        <Link to="/">Zpět na hlavní stránku</Link>
+        <a href="/">Zpět na hlavní stránku</a>
       </Button>
     </Container>
   </Layout>

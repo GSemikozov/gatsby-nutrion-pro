@@ -96,8 +96,8 @@ export const Program = ({ id = "" }) => {
             <h4 className={styles.tabsContentTitle}>Hubnoucí program</h4>
             <p className={styles.tabsContentText}>
               Individuální stravovací plán zaměřený na{" "}
-              <span>redukci tělesného tuku</span>
-              zdravou cestou a s udržitelnými výsledky.
+              <span>redukci tělesného tuku</span> zdravou cestou a s
+              udržitelnými výsledky.
             </p>
             <Link to="/products/product-1" className={styles.button}>
               Více o programu

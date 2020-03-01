@@ -116,7 +116,7 @@ const FoodCarousel = () => {
 }
 
 export const FoodCarouselSection = () => (
-  <section className={styles.foodCarouselSection}>
+  <section className={styles.foodCarouselSection} id="food">
     <Container>
       <h3 className="sectionTitle text-center">Jaká jídla tě s námi čekají?</h3>
       <FoodCarousel />

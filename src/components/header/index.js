@@ -8,7 +8,7 @@ import { Logo } from './logo';
 import MobileMenu from './mobileMenu';
 import { Navbar } from './navbar';
 
-export const Header = () => {
+export const Header = ({ menuLinks }) => {
   const [menuVisible, setMenuVisible] = useState(false)
 
   const toggleMenu = () => {
@@ -26,16 +26,20 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <Container className={styles.headerInner}>
-        <Link
-          to="/"
+        <a
+          href="/"
           style={{
             color: `white`,
             textDecoration: `none`,
           }}
         >
           <Logo />
-        </Link>
-        <Navbar onCloseMobileMenu={toggleMenu} menuVisible={menuVisible} />
+        </a>
+        <Navbar
+          onCloseMobileMenu={toggleMenu}
+          menuVisible={menuVisible}
+          menuLinks={menuLinks}
+        />
         {menuVisible && <MobileMenu onCloseMobileMenu={toggleMenu} />}
       </Container>
     </header>

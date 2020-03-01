@@ -1,13 +1,13 @@
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import React from 'react';
-import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
 import { Button } from '../button';
 import contactFormStyles from './contact-form.module.css';
 import styles from './form.module.css';
 
+// import MaskedInput from 'react-text-mask';
 export const ContactFormLayout = ({
   isSubmitting,
   values,
@@ -88,7 +88,7 @@ export const ContactFormLayout = ({
   )
 }
 
-export const ContactForm = withFormik({
+export const ContactForm2 = withFormik({
   mapPropsToValues: () => ({
     phone: "+420",
     success: false,
@@ -112,7 +112,7 @@ export const ContactForm = withFormik({
       //     .join("&")
       // }
       const data = {
-        form_name: "contact",
+        form_name: "contact2",
         phone,
       }
       await fetch("/api/application", {
@@ -127,7 +127,7 @@ export const ContactForm = withFormik({
         window.location.href = "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
-          pageURL: "/thank-you-contact",
+          pageURL: "/thank-you-contact2",
           pageType: "Purchase",
         })
       }, 2000)
