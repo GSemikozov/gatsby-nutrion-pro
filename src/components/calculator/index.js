@@ -135,7 +135,6 @@ export const Calculator = ({ id, className }) => {
               <RenderModal>
                 <ModalForm amount={amount} price={price} />
               </RenderModal>
-              <div id="root" />
             </div>
           </div>
         </div>

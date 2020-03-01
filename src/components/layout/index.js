@@ -32,7 +32,7 @@ export const Layout = ({ children }) => (
             { name: "keywords", content: "sample, something" },
           ]}
         ></Helmet> */}
-        <div className="wrapper">
+        <div className="wrapper" id="root">
           <Header menuLinks={data.site.siteMetadata.menuLinks} />
           <>
             <main>{children}</main>
