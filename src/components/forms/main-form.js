@@ -13,6 +13,14 @@ import option1Img from './icons/icon-demo.svg';
 import option2Img from './icons/icon-month.svg';
 import mainFormStyles from './main-form.module.css';
 
+const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
+
+Yup.addMethod(Yup.string, "phone", function() {
+  return this.test("phone", "Phone number is not valid HH", value =>
+    rePhoneNumber.test(value)
+  )
+})
+
 // import Select from 'react-select';
 const DisplayFormikState = ({ isSubmitting, values, errors, touched }) => (
   <div style={{ margin: "1rem 0", background: "#f6f8fa", padding: ".5rem" }}>
@@ -129,7 +137,7 @@ export const MainFormLayout = ({
           </FastField> */}
           <FastField
             component="input"
-            type="tel"
+            type="text"
             name="phone"
             className={styles.input}
           />
@@ -199,10 +207,7 @@ export const MainForm = withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      phone: Yup.string().matches(
-        /^\d{8}$/,
-        "Telefonní číslo musí obsahovat 8 znaků"
-      ),
+      phone: Yup.string().phone(),
       promo: Yup.string(),
       plan: Yup.string().required("Vyberte si program"),
       days: Yup.string().required("Vyberte si počet dní"),

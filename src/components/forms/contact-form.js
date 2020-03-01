@@ -8,6 +8,14 @@ import { Button } from '../button';
 import contactFormStyles from './contact-form.module.css';
 import styles from './form.module.css';
 
+const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
+
+Yup.addMethod(Yup.string, "phone", function() {
+  return this.test("phone", "Phone number is not valid HH", value =>
+    rePhoneNumber.test(value)
+  )
+})
+
 export const ContactFormLayout = ({
   isSubmitting,
   values,
@@ -60,7 +68,7 @@ export const ContactFormLayout = ({
         </FastField> */}
         <FastField
           component="input"
-          type="tel"
+          type="text"
           name="phone"
           className={cx(styles.input, contactFormStyles.input)}
         />
@@ -95,10 +103,7 @@ export const ContactForm = withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      phone: Yup.string().matches(
-        /^\d{8}$/,
-        "Telefonní číslo musí obsahovat 8 znaků"
-      ),
+      phone: Yup.string().phone(),
     }),
   handleSubmit: async (
     { phone },

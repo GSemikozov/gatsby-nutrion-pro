@@ -7,6 +7,14 @@ import { Button } from '../button';
 import contactFormStyles from './contact-form.module.css';
 import styles from './form.module.css';
 
+const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
+
+Yup.addMethod(Yup.string, "phone", function() {
+  return this.test("phone", "Phone number is not valid HH", value =>
+    rePhoneNumber.test(value)
+  )
+})
+
 // import MaskedInput from 'react-text-mask';
 export const ContactFormLayout = ({
   isSubmitting,
@@ -95,10 +103,7 @@ export const ContactForm2 = withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      phone: Yup.string().matches(
-        /^\d{8}$/,
-        "Telefonní číslo musí obsahovat 8 znaků"
-      ),
+      phone: Yup.string().phone(),
     }),
   handleSubmit: async (
     { phone },
