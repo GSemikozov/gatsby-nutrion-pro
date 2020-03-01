@@ -95,9 +95,10 @@ export const ContactForm2 = withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      phone: Yup.string()
-        .min(8)
-        .required("Telefonní číslo musí obsahovat 8 znaků"),
+      phone: Yup.string().matches(
+        /^\d{8}$/,
+        "Telefonní číslo musí obsahovat 8 znaků"
+      ),
     }),
   handleSubmit: async (
     { phone },
