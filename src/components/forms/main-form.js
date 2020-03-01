@@ -199,9 +199,10 @@ export const MainForm = withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      phone: Yup.string()
-        .min(8)
-        .required("Telefonní číslo musí obsahovat 8 znaků"),
+      phone: Yup.string().matches(
+        /^\d{8}$/,
+        "Telefonní číslo musí obsahovat 8 znaků"
+      ),
       promo: Yup.string(),
       plan: Yup.string().required("Vyberte si program"),
       days: Yup.string().required("Vyberte si počet dní"),
