@@ -211,13 +211,6 @@ export const MainForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
-      // const encode = data => {
-      //   return Object.keys(data)
-      //     .map(
-      //       key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-      //     )
-      //     .join("&")
-      // }
       let urlString = document.location.href
       let url = new URL(urlString)
       let UTM_SOURCE = url.searchParams.get("utm_source")
@@ -225,9 +218,6 @@ export const MainForm = withFormik({
       let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
       let UTM_TERM = url.searchParams.get("utm_term")
       let UTM_CONTENT = url.searchParams.get("utm_content")
-
-      // let amount = setFieldValue("amount", "111")
-      // console.log("amount", amount)
 
       let data = await function() {
         return {
@@ -245,13 +235,11 @@ export const MainForm = withFormik({
         }
       }
 
-      // await console.log(JSON.stringify(data))
       await fetch("/api/application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
-      // await console.log(JSON.stringify(data))
       await setSubmitting(false)
       await setFieldValue("success", true)
       setTimeout(() => {
