@@ -18,9 +18,9 @@ const ReviewsCarousel = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        arrows: false,
         breakpoint: 480,
         settings: {
+          arrows: false,
           slidesToShow: 1,
         },
       },
