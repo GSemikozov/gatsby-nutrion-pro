@@ -137,7 +137,7 @@ export const MainFormLayout = ({
           </FastField> */}
           <FastField
             component="input"
-            type="tel"
+            type="text"
             name="phone"
             className={styles.input}
           />
@@ -207,9 +207,9 @@ export const MainForm = withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      // phone: Yup.string()
-      //   .min(9)
-      //   .phone(),
+      phone: Yup.string()
+        .min(9)
+        .phone(),
       promo: Yup.string(),
       plan: Yup.string().required("Vyberte si program"),
       days: Yup.string().required("Vyberte si počet dní"),
