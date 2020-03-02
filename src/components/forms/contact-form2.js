@@ -131,14 +131,14 @@ export const ContactForm2 = withFormik({
       await setSubmitting(false)
       await setFieldValue("success", true)
       setTimeout(() => {
-        resetForm()
         window.location.href = "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
           pageURL: "/thank-you-contact2",
           pageType: "Purchase",
         })
-      }, 2000)
+        resetForm()
+      }, 1000)
     } catch (err) {
       setSubmitting(false)
       setFieldValue("success", false)

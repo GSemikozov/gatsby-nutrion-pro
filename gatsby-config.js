@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Krabičková dieta Praha - zhubněte zdravě bez hladovění`,
+    title: `Výživový poradce a šéfkuchař v jednom`,
     description: `Krabičková dieta. Rozvoz po celé Praze a okolí zdarma. Konzultace s výživovým poradcem. Diagnostika složení těla inbody.`,
     author: `@nutritionprocz`,
     menuLinks: [
