@@ -241,7 +241,7 @@ export const MainForm = withFormik({
         utm_content: UTM_CONTENT,
       }
 
-      // await console.log(JSON.stringify(data))
+      await console.log(JSON.stringify(data))
 
       await fetch("/api/application", {
         method: "POST",
