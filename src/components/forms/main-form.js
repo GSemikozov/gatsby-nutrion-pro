@@ -137,7 +137,7 @@ export const MainFormLayout = ({
           </FastField> */}
           <FastField
             component="input"
-            type="text"
+            type="tel"
             name="phone"
             className={styles.input}
           />
