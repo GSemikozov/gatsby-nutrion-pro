@@ -7,6 +7,11 @@
   background: #373c3f;
   z-index: 3;
   padding: 0 20px;
+  display: none;
+}
+
+.wrapper.visible {
+  display: block;
 }
 
 .topBar {
@@ -59,6 +64,7 @@
   background-color: #2b2f32;
   position: relative;
   z-index: 1;
+  text-decoration: none;
 }
 
 .menuItem > img,

@@ -1,11 +1,10 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import { Container } from '../container';
 import styles from './header.module.css';
 import { Logo } from './logo';
-import MobileMenu from './mobileMenu';
+import { MobileMenu } from './mobileMenu';
 import { Navbar } from './navbar';
 
 export const Header = ({ menuLinks }) => {
@@ -40,7 +39,11 @@ export const Header = ({ menuLinks }) => {
           menuVisible={menuVisible}
           menuLinks={menuLinks}
         />
-        {menuVisible && <MobileMenu onCloseMobileMenu={toggleMenu} />}
+        <MobileMenu
+          menuVisible={menuVisible}
+          menuLinks={menuLinks}
+          onCloseMobileMenu={toggleMenu}
+        />
       </Container>
     </header>
   )

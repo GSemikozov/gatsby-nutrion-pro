@@ -1,29 +1,21 @@
-import { Link } from 'gatsby';
+import cx from 'classnames';
 import React from 'react';
 
-import { useSmoothScroll } from '../../../hooks/useSmoothScroll';
+import { handleMenuLinkClick } from '../../../helpers';
 import IconCalculator from '../icons/icon-calculator.svg';
 import IconClipboard from '../icons/icon-clipboard.svg';
-import IconClose from '../icons/icon-close.svg';
 import IconConsultation from '../icons/icon-consultation.svg';
 import IconMenu from '../icons/icon-menu.svg';
-import IconPhone from '../icons/icon-phone.svg';
 import styles from './mobile-menu.module.css';
 
+// import IconClose from '../icons/icon-close.svg';
+// import IconPhone from '../icons/icon-phone.svg';
 // import { ContactForm } from "./contactForm"
 
-const MobileMenu = props => {
-  const scroll = useSmoothScroll()
-
-  const onItemClick = selector => () => {
-    props.onCloseMobileMenu()
-    selector && scroll.animateScroll(document.getElementById(selector))
-  }
-
-  return (
-    <div className={styles.wrapper}>
-      <div className={styles.content}>
-        {/* <div className={styles.topBar}>
+export const MobileMenu = ({ menuVisible, menuLinks, onCloseMobileMenu }) => (
+  <div className={cx(styles.wrapper, { [styles.visible]: menuVisible })}>
+    <div className={styles.content}>
+      {/* <div className={styles.topBar}>
           <button
             type="button"
             className={styles.closeBtn}
@@ -33,51 +25,48 @@ const MobileMenu = props => {
           </button>
         </div> */}
 
-        <div className={styles.menuItems}>
-          <button
-            type="button"
+      <div className={styles.menuItems}>
+        {menuLinks.map((link, i) => (
+          <a
+            key={link.name}
+            href={link.link}
             className={styles.menuItem}
-            onClick={onItemClick("programs")}
+            onClick={e => {
+              onCloseMobileMenu()
+              handleMenuLinkClick(link, e)
+            }}
           >
-            <img src={IconClipboard} alt="icon" />
-            Programy
-          </button>
-          <button
-            type="button"
-            className={styles.menuItem}
-            onClick={onItemClick("calculator")}
-          >
-            <img src={IconCalculator} alt="icon" />
-            Cena
-          </button>
-          <button
-            type="button"
-            className={styles.menuItem}
-            onClick={onItemClick("try-food")}
-          >
-            <img src={IconMenu} alt="icon" />
-            Jídelníček
-          </button>
-          <div className={styles.menuItem}>
-            <Link to="/jobs">
-              <img src={IconConsultation} alt="icon" />
-              Kariera
-            </Link>
-          </div>
-        </div>
+            <img
+              src={
+                i === 0
+                  ? IconClipboard
+                  : i === 1
+                  ? IconCalculator
+                  : i === 2
+                  ? IconMenu
+                  : i === 3
+                  ? IconConsultation
+                  : null
+              }
+              alt="icon"
+            />
+            {link.name}
+          </a>
+        ))}
+      </div>
 
-        {/* <div className={styles.formHeader}>
+      {/* <div className={styles.formHeader}>
           Objednejte si 5 denní demo program
           <br />
           za 480Kč na den včetně dopravy
         </div> */}
 
-        <div style={{ padding: "0 25px" }}>
-          {/* form will be here */}
-          {/* <ContactForm mobileMenu /> */}
-        </div>
+      <div style={{ padding: "0 25px" }}>
+        {/* form will be here */}
+        {/* <ContactForm mobileMenu /> */}
+      </div>
 
-        {/* <div className={styles.phoneBlock}>
+      {/* <div className={styles.phoneBlock}>
           <img className={styles.telIcon} src={IconPhone} alt="icon" />
           <div>
             <a className={styles.tel} href="tel:+420774137352">
@@ -88,9 +77,6 @@ const MobileMenu = props => {
         </div>
 
         <div className={styles.footer}>© NUTRITIONPRO 2019</div> */}
-      </div>
     </div>
-  )
-}
-
-export default MobileMenu
+  </div>
+)
