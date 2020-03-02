@@ -227,21 +227,21 @@ export const MainForm = withFormik({
       let UTM_TERM = url.searchParams.get("utm_term")
       let UTM_CONTENT = url.searchParams.get("utm_content")
 
-      let data = await function() {
-        return {
-          form_name: "main-contact",
-          phone,
-          promo,
-          plan,
-          days,
-          amount_kal,
-          utm_source: UTM_SOURCE,
-          utm_medium: UTM_MEDIUM,
-          utm_campaign: UTM_CAMPAIGN,
-          utm_term: UTM_TERM,
-          utm_content: UTM_CONTENT,
-        }
+      let data = {
+        form_name: "main-contact",
+        phone,
+        promo,
+        plan,
+        days,
+        amount_kal,
+        utm_source: UTM_SOURCE,
+        utm_medium: UTM_MEDIUM,
+        utm_campaign: UTM_CAMPAIGN,
+        utm_term: UTM_TERM,
+        utm_content: UTM_CONTENT,
       }
+
+      // await console.log(JSON.stringify(data))
 
       await fetch("/api/application", {
         method: "POST",
