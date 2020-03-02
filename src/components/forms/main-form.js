@@ -251,13 +251,13 @@ export const MainForm = withFormik({
       await setSubmitting(false)
       await setFieldValue("success", true)
       setTimeout(() => {
+        resetForm()
         window.location.href = "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
           pageURL: "/thank-you",
           pageType: "Purchase",
         })
-        resetForm()
       }, 2000)
     } catch (err) {
       setSubmitting(false)
