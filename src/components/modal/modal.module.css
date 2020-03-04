@@ -23,6 +23,10 @@
     top: 10px;
     height: auto;
   }
+
+  .modal.modalForm {
+    max-width: 550px;
+  }
 }
 .modalContainer {
   overflow-y: auto;

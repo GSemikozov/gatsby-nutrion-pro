@@ -132,7 +132,7 @@ export const Calculator = ({ id, className }) => {
               >
                 Nezávazně objednat
               </Button>
-              <RenderModal>
+              <RenderModal className="modalForm">
                 <ModalForm amount={amount} price={price} />
               </RenderModal>
             </div>

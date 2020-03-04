@@ -27,15 +27,22 @@
   box-shadow: none;
   transition: 0.3s all;
   vertical-align: top;
-  cursor: pointer;
+  cursor: default;
 }
 
 .tab:first-child {
   margin-left: 30px;
 }
 
+.tab:hover,
 .tabSelected {
   border: 3px solid var(--color-green);
+}
+
+.tabLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .tabTitle {
@@ -108,6 +115,13 @@
   opacity: 0.8;
 }
 
+.afterButtonText {
+  line-height: 1.3;
+  max-width: 320px;
+  text-align: center;
+  margin-top: 8px;
+}
+
 @media all and (min-width: 1024px) {
   .tabsContentTitle {
     color: var(--color-green);
@@ -152,11 +166,15 @@
     margin-left: 0;
   }
 
+  .tab:hover,
   .tabSelected {
     transform: scale(1.125);
     border-width: 3px;
   }
 
+  .tab:hover .tabsContentTitle,
+  .tab:focus .tabsContentTitle,
+  .tab:active .tabsContentTitle,
   .tabSelected .tabsContentTitle {
     transform: none;
   }

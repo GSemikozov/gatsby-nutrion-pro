@@ -86,7 +86,7 @@ export const MainFormLayout = ({
             />
           </RadioButtonGroup>
         </div>
-        <div className={styles.inputField}>
+        {/* <div className={styles.inputField}>
           <label htmlFor="days" className={styles.label}>
             Počet dní v týdnu
           </label>
@@ -103,7 +103,7 @@ export const MainFormLayout = ({
           {touched.days && errors.days && (
             <span className={styles.error}>{errors.days}</span>
           )}
-        </div>
+        </div> */}
         <div className={styles.inputField}>
           <label className={styles.label}>Telefon</label>
           {/* <FastField name="phone">
@@ -196,7 +196,7 @@ export const MainForm = withFormik({
     phone: "+420",
     promo: "",
     plan: "",
-    days: "",
+    // days: "",
     amount_kal: `${amount.amount}` || "0",
     utm_source: "",
     utm_medium: "",
@@ -212,10 +212,10 @@ export const MainForm = withFormik({
         .phone(),
       promo: Yup.string(),
       plan: Yup.string().required("Vyberte si program"),
-      days: Yup.string().required("Vyberte si počet dní"),
+      // days: Yup.string().required("Vyberte si počet dní"),
     }),
   handleSubmit: async (
-    { phone, promo, plan, days, amount_kal },
+    { phone, promo, plan, amount_kal },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
@@ -232,7 +232,7 @@ export const MainForm = withFormik({
         phone,
         promo,
         plan,
-        days,
+        // days,
         amount_kal,
         utm_source: UTM_SOURCE,
         utm_medium: UTM_MEDIUM,

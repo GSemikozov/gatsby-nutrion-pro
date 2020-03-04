@@ -5,14 +5,16 @@ import ReactDOM from 'react-dom';
 import styles from './modal.module.css';
 
 export const Modal = React.memo(
-  ({ children, closeModal, darkMode = false }) => {
+  ({ children, closeModal, darkMode = false, className }) => {
     const domEl = document.getElementById("root")
 
     if (!domEl) return null
 
     return ReactDOM.createPortal(
       <div className={styles.modalOverlay}>
-        <div className={cx(styles.modal, { [styles.dark]: darkMode })}>
+        <div
+          className={cx(styles.modal, { [styles.dark]: darkMode }, className)}
+        >
           <div className={styles.modalHeader}>
             <button
               type="button"
@@ -55,10 +57,10 @@ export const useModal = () => {
     setIsVisible(false)
   }
 
-  const RenderModal = ({ children, darkMode }) => (
+  const RenderModal = ({ children, darkMode, className }) => (
     <>
       {isVisible && (
-        <Modal closeModal={hide} darkMode={darkMode}>
+        <Modal closeModal={hide} darkMode={darkMode} className={className}>
           {children}
         </Modal>
       )}

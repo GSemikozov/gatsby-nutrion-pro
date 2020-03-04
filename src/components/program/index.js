@@ -35,11 +35,14 @@ export const Program = ({ id = "" }) => {
             aria-selected={1 === activeTab}
             id={`panel-1`}
             onClick={() => setActiveTab(1, "tabs")}
+            onPointerOver={() => setActiveTab(1, "tabs")}
             className={cx(styles.tab, {
               [styles.tabSelected]: activeTab === 1,
             })}
           >
-            <img src={IconCook} className={styles.tabImg} alt="icon" />
+            <a href="/products/product-1" className={styles.tabLink}>
+              <img src={IconCook} className={styles.tabImg} alt="icon" />
+            </a>
             <h5 className={styles.tabTitle}>Hubnoucí program</h5>
           </button>
           <button
@@ -48,11 +51,14 @@ export const Program = ({ id = "" }) => {
             aria-selected={2 === activeTab}
             id={`panel-2`}
             onClick={() => setActiveTab(2, "tabs")}
+            onPointerOver={() => setActiveTab(2, "tabs")}
             className={cx(styles.tab, {
               [styles.tabSelected]: activeTab === 2,
             })}
           >
-            <img src={IconHealthForce} className={styles.tabImg} alt="icon" />
+            <a href="/products/product-2" className={styles.tabLink}>
+              <img src={IconHealthForce} className={styles.tabImg} alt="icon" />
+            </a>
             <h5 className={styles.tabTitle}>Nabírací program</h5>
           </button>
           <button
@@ -61,11 +67,14 @@ export const Program = ({ id = "" }) => {
             aria-selected={3 === activeTab}
             id={`panel-3`}
             onClick={() => setActiveTab(3, "tabs")}
+            onPointerOver={() => setActiveTab(3, "tabs")}
             className={cx(styles.tab, {
               [styles.tabSelected]: activeTab === 3,
             })}
           >
-            <img src={IconMeasurement} className={styles.tabImg} alt="icon" />
+            <a href="/products/product-3" className={styles.tabLink}>
+              <img src={IconMeasurement} className={styles.tabImg} alt="icon" />
+            </a>
             <h5 className={styles.tabTitle}>Udržovací program</h5>
           </button>
           <button
@@ -74,11 +83,14 @@ export const Program = ({ id = "" }) => {
             aria-selected={4 === activeTab}
             id={`panel-4`}
             onClick={() => setActiveTab(4, "tabs")}
+            onPointerOver={() => setActiveTab(4, "tabs")}
             className={cx(styles.tab, {
               [styles.tabSelected]: activeTab === 4,
             })}
           >
-            <img src={IconProgram} className={styles.tabImg} alt="icon" />
+            <a href="/products/product-4" className={styles.tabLink}>
+              <img src={IconProgram} className={styles.tabImg} alt="icon" />
+            </a>
             <h5 className={styles.tabTitle}>Uvaříme na míru</h5>
           </button>
         </nav>
@@ -102,6 +114,10 @@ export const Program = ({ id = "" }) => {
             <Link to="/products/product-1" className={styles.button}>
               Více o programu
             </Link>
+            <p className={styles.afterButtonText}>
+              V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat,
+              vegetarián, vegan či speciálních zdravotních diet.
+            </p>
           </div>
           <div
             key={`panel-2`}
@@ -121,6 +137,10 @@ export const Program = ({ id = "" }) => {
             <Link to="/products/product-2" className={styles.button}>
               Více o programu
             </Link>
+            <p className={styles.afterButtonText}>
+              V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat,
+              vegetarián, vegan či speciálních zdravotních diet.
+            </p>
           </div>
           <div
             key={`panel-3`}
@@ -141,6 +161,10 @@ export const Program = ({ id = "" }) => {
             <Link to="/products/product-3" className={styles.button}>
               Více o programu
             </Link>
+            <p className={styles.afterButtonText}>
+              V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat,
+              vegetarián, vegan či speciálních zdravotních diet.
+            </p>
           </div>
           <div
             key={`panel-4`}
@@ -160,6 +184,10 @@ export const Program = ({ id = "" }) => {
             <Link to="/products/product-4" className={styles.button}>
               Více o programu
             </Link>
+            <p className={styles.afterButtonText}>
+              V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat,
+              vegetarián, vegan či speciálních zdravotních diet.
+            </p>
           </div>
         </div>
       </div>
