@@ -9,6 +9,7 @@ import { Price } from '../price';
 import { RadioButton, RadioButtonGroup } from './custom-radios';
 import styles from './form.module.css';
 import option3Img from './icons/icon-2months.svg';
+import option4Img from './icons/icon-3months.svg';
 import option1Img from './icons/icon-demo.svg';
 import option2Img from './icons/icon-month.svg';
 import mainFormStyles from './main-form.module.css';
@@ -87,6 +88,13 @@ export const MainFormLayout = ({
               id="radioOption3"
               label="2 měsice"
               img={option3Img}
+            />
+            <FastField
+              component={RadioButton}
+              name="plan"
+              id="radioOption4"
+              label="3 měsice"
+              img={option4Img}
             />
           </RadioButtonGroup>
         </div>
