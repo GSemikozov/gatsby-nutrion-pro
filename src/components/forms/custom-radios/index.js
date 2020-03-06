@@ -43,6 +43,7 @@ export const RadioButtonGroup = ({
   touched,
   id,
   className,
+  onChange,
   children,
 }) => {
   const classes = cx(
@@ -55,7 +56,7 @@ export const RadioButtonGroup = ({
   )
 
   return (
-    <div className={classes}>
+    <div className={classes} onChange={onChange}>
       {children}
       {touched && <InputFeedback error={error} />}
     </div>

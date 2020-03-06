@@ -1,6 +1,6 @@
 // import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
@@ -48,6 +48,7 @@ export const MainFormLayout = ({
   price,
   amount,
 }) => {
+  const [plan, setPlan] = useState(null)
   return (
     <div className={mainFormStyles.mainFormBox}>
       <h4 className={mainFormStyles.mainFormTitle}>Vyber si program</h4>
@@ -62,6 +63,9 @@ export const MainFormLayout = ({
             value={values.plan}
             error={errors.plan}
             touched={touched.plan}
+            onChange={e => {
+              setPlan(e.target.value)
+            }}
           >
             <FastField
               component={RadioButton}
@@ -161,7 +165,7 @@ export const MainFormLayout = ({
         </div>
         <div>
           <FastField component="input" type="hidden" name="amount_kal" />
-          <Price price={price} amount={amount} />
+          <Price price={price} amount={amount} plan={plan} />
         </div>
         {/* {values.success && (
           <div className={styles.success}>
