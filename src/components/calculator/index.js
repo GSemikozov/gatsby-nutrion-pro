@@ -10,7 +10,7 @@ import styles from './calculator.module.css';
 
 const ModalForm = ({ amount, price }) => (
   <>
-    <h3 className={styles.formHeading}>Nezavazna objednavka</h3>
+    <h3 className={styles.formHeading}>Nezávazná objednávka</h3>
     <MainForm amount={amount} price={price} />
   </>
 )
