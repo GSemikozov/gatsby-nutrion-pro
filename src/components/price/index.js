@@ -23,14 +23,14 @@ export const Price = ({ price = 0, plan = null }) => {
       <h3
         className={styles.priceValue}
         style={
-          plan && plan !== "Demo" && plan !== "1 měsic"
+          plan && plan !== "1 měsic"
             ? { textDecoration: "line-through", color: "red", fontSize: "20px" }
             : null
         }
       >
         <span>{price}</span> Kč
       </h3>
-      {plan && plan !== "Demo" && plan !== "1 měsic" && (
+      {plan && plan !== "1 měsic" && (
         <h3 className={styles.priceValue}>
           <span>{discountPrice}</span> Kč
         </h3>
