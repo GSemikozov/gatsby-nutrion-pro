@@ -18,6 +18,7 @@ Yup.addMethod(Yup.string, "phone", function() {
 
 export const OrderConsultationFormLayout = ({
   isSubmitting,
+  values,
   errors,
   touched,
   className,
@@ -75,11 +76,6 @@ export const OrderConsultationForm = withFormik({
   mapPropsToValues: () => ({
     phone: "+420",
     promo: "",
-    utm_source: "",
-    utm_medium: "",
-    utm_campaign: "",
-    utm_term: "",
-    utm_content: "",
     success: false,
   }),
   validationSchema: () =>
@@ -94,23 +90,10 @@ export const OrderConsultationForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
-      let urlString = document.location.href
-      let url = new URL(urlString)
-      let UTM_SOURCE = url.searchParams.get("utm_source")
-      let UTM_MEDIUM = url.searchParams.get("utm_medium")
-      let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
-      let UTM_TERM = url.searchParams.get("utm_term")
-      let UTM_CONTENT = url.searchParams.get("utm_content")
-
       let data = {
         form_name: "order-consultation-contact",
         phone,
         promo,
-        utm_source: UTM_SOURCE,
-        utm_medium: UTM_MEDIUM,
-        utm_campaign: UTM_CAMPAIGN,
-        utm_term: UTM_TERM,
-        utm_content: UTM_CONTENT,
       }
 
       await fetch("/api/application", {
