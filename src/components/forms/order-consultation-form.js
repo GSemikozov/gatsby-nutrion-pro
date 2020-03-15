@@ -27,7 +27,7 @@ export const OrderConsultationFormLayout = ({
     <div className={cx(mainFormStyles.mainFormBox, className)}>
       <Form
         className={mainFormStyles.mainForm}
-        name="order-consultation-contact"
+        name="order-consultation"
         method="post"
       >
         <div className={styles.inputField}>
@@ -91,7 +91,7 @@ export const OrderConsultationForm = withFormik({
   ) => {
     try {
       let data = {
-        form_name: "order-consultation-contact",
+        form_name: "order-consultation",
         phone,
         promo,
       }
