@@ -111,7 +111,7 @@ export const OrderConsultationForm = withFormik({
           pageURL: "/thank-you",
           pageType: "Purchase",
         })
-      }, 2000)
+      }, 300)
     } catch (err) {
       setSubmitting(false)
       setFieldValue("success", false)
