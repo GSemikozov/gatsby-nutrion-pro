@@ -130,7 +130,7 @@ export const Calculator = ({ id, className }) => {
                 className={styles.button}
                 handleClick={show}
               >
-                Nezávazně objednat
+                Mám zájem
               </Button>
               <RenderModal className="modalForm">
                 <ModalForm amount={amount} price={price} />
