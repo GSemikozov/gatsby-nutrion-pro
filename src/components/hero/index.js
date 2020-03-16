@@ -45,7 +45,7 @@ export const Hero = () => {
         </div>
         <div className={styles.buttons}>
           <Button type="primary" className={styles.button} handleClick={show}>
-            Objednat konzultaci
+            Mám zájem
           </Button>
           <Button
             type="unstyled"
