@@ -9,12 +9,21 @@ function getDiscountPrice(price, plan) {
   return (price - price * (discount / 100)).toFixed()
 }
 
+function getDiscountPricePerPortion(price, plan) {
+  const discountPortion =
+    plan && plan === "2 měsice" ? 5 : plan && plan === "3 měsice" ? 8 : null
+  return ((price - price * (discountPortion / 100)).toFixed() / 5).toFixed()
+}
+
 export const Price = ({ price = 0, plan = null }) => {
   const [discountPrice, setDiscountPrice] = useState(null)
+  const [discountPortionPrice, setDiscountPortionPrice] = useState(null)
 
   useEffect(() => {
     const discountPriceValue = getDiscountPrice(price, plan)
     setDiscountPrice(discountPriceValue)
+    const discountPortionPriceValue = getDiscountPricePerPortion(price, plan)
+    setDiscountPortionPrice(discountPortionPriceValue)
   }, [price, plan])
 
   return (
@@ -35,7 +44,9 @@ export const Price = ({ price = 0, plan = null }) => {
           <span>{discountPrice}</span> Kč
         </h3>
       )}
-      <p className={cx(styles.priceTextLight)}>{price / 5} Kč / porce</p>
+      <p className={cx(styles.priceTextLight)}>
+        {discountPortionPrice} Kč / porce
+      </p>
     </div>
   )
 }
