@@ -12,9 +12,7 @@ import styles from './hero.module.css';
 
 const ModalForm = () => (
   <>
-    <h3 className={cx("text-center", styles.heroModalTitle)}>
-      Objednat konzultaci
-    </h3>
+    <h3 className={cx("text-center", styles.heroModalTitle)}>Mám zájem</h3>
     <OrderConsultationForm className={styles.heroFormWrapper} />
   </>
 )
