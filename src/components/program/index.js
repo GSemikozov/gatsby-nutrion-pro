@@ -107,9 +107,8 @@ export const Program = ({ id = "" }) => {
           >
             <h4 className={styles.tabsContentTitle}>Hubnoucí program</h4>
             <p className={styles.tabsContentText}>
-              Individuální stravovací plán zaměřený na{" "}
-              <span>redukci tělesného tuku</span> zdravou cestou a s
-              udržitelnými výsledky.
+              Speciální krabičková dieta zaměřená na redukci tělesného tuku
+              zdravou cestou a s udržitelnými výsledky.
             </p>
             <Link to="/products/product-1" className={styles.button}>
               Více o programu
@@ -131,8 +130,8 @@ export const Program = ({ id = "" }) => {
           >
             <h4 className={styles.tabsContentTitle}>Nabírací program</h4>
             <p className={styles.tabsContentText}>
-              Individuální stravovací plán zaměřený zejména pro muže, kteří
-              usilují o <span>nárůst svalové hmoty</span>.
+              Speciální krabičková dieta zaměřená zejména pro muže, kteří
+              usilují o nárůst svalové hmoty.
             </p>
             <Link to="/products/product-2" className={styles.button}>
               Více o programu
@@ -154,9 +153,8 @@ export const Program = ({ id = "" }) => {
           >
             <h4 className={styles.tabsContentTitle}>Udržovací program</h4>
             <p className={styles.tabsContentText}>
-              Individuální stravovací plán zaměřený na{" "}
-              <span>udržení současné tělesné hmotnosti</span> díky vyváženému,
-              pestrému a chutnému jídlu.
+              Speciální krabičková dieta zaměřená na udržení současné tělesné
+              hmotnosti díky vyváženému, pestrému a chutnému jídlu.
             </p>
             <Link to="/products/product-3" className={styles.button}>
               Více o programu
