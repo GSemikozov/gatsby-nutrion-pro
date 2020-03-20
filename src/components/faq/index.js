@@ -12,6 +12,11 @@ import PlusIcon from './icons/plus.svg';
 
 const section0Texts = [
   {
+    question: "V čem jste jiní než ostatní krabičkové diety?",
+    answer:
+      "Věříme v individuální přístup. Každý z nás je originál a každý z nás potřebuje jiný kalorický příjem, pokud chce dosáhnout svého cíle zdravou cestou. Jinak bude vypadat menu pro 50kg ženu, která chce zhubnout a jinak pro 90kg muže, který chce nabrat svalovou hmotu. Jídelníček je proto přizpůsoben na míru tělu a cílům, což obyčejná krabičková dieta nebere v potaz.",
+  },
+  {
     question: "Proč potřebuji znát složení svého těla?",
     answer:
       "Měřením získáš přehled o tom, jaký máš poměr mezi svalovou a tukovou hmotou a jaké je množství útrobního tuku a vody v těle. Jedná se o důležité indikátory zdraví, a proto je potřeba na ně brát ohled už při sestavování jídelníčku.",
