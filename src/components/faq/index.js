@@ -119,7 +119,7 @@ const section3Texts = [
   {
     question: "Jak ohřívat jídlo?",
     answer:
-      "Pokud použiješ poro ohřev v mikrovlnné troubě, doporučujeme do folie propíchnout dírky. Potřebný čas ohřevu se liší podle druhu jídla a velikosti porce. Pro rovnoměrné prohřátí jídla doporučujeme použít střední výkon (6000–7000 W) a delší čas.",
+      "Pokud použiješ ohřev v mikrovlnné troubě, doporučujeme do folie propíchnout dírky. Potřebný čas ohřevu se liší podle druhu jídla a velikosti porce. Pro rovnoměrné prohřátí jídla doporučujeme použít střední výkon (6000–7000 W) a delší čas.",
   },
   {
     question: "Jak skladovat jídlo?",

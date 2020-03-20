@@ -49,7 +49,7 @@ const FoodCarousel = () => {
       <div className={styles.carouselItem}>
         <FoodCard
           img={img1}
-          title="Celozrná palačinka s jahodovou omáčkou a tvarohem"
+          title="Celozrnná palačinka s jahodovou omáčkou a tvarohemObjednej si náš pětidenní testovací program"
         >
           <FoodCardList>
             <FoodCardListItem text="375" title="kcal" />

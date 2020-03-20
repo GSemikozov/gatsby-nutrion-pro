@@ -12,8 +12,8 @@ export const TryFood = ({ id = "" }) => (
         Chceš jídlo nejdříve vyzkoušet?
       </h3>
       <p className={styles.formHeading}>
-        Objednej si náš pětidenní testovací program za <b>480,- Kč/den</b>{" "}
-        včetně dopravy*.
+        Objednej si náš pětidenní testovací program
+        <br /> za <b>480,- Kč/den</b> včetně dopravy*.
       </p>
       <div className={styles.contactFormWrapper}>
         <div className={styles.contactFormTitle}>

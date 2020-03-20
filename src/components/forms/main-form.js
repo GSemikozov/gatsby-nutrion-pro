@@ -71,21 +71,21 @@ export const MainFormLayout = ({
               component={RadioButton}
               name="plan"
               id="radioOption2"
-              label="1 měsic"
+              label="1 měsíc"
               img={option2Img}
             />
             <FastField
               component={RadioButton}
               name="plan"
               id="radioOption3"
-              label="2 měsice"
+              label="2 měsíce"
               img={option3Img}
             />
             <FastField
               component={RadioButton}
               name="plan"
               id="radioOption4"
-              label="3 měsice"
+              label="3 měsíce"
               img={option4Img}
             />
           </RadioButtonGroup>
