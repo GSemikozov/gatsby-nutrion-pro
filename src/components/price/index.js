@@ -5,13 +5,13 @@ import styles from './price.module.css';
 
 function getDiscountPrice(price, plan) {
   const discount =
-    plan && plan === "2 měsice" ? 5 : plan && plan === "3 měsice" ? 8 : null
+    plan && plan === "2 měsíce" ? 5 : plan && plan === "3 měsíce" ? 8 : null
   return (price - price * (discount / 100)).toFixed()
 }
 
 function getDiscountPricePerPortion(price, plan) {
   const discountPortion =
-    plan && plan === "2 měsice" ? 5 : plan && plan === "3 měsice" ? 8 : null
+    plan && plan === "2 měsíce" ? 5 : plan && plan === "3 měsíce" ? 8 : null
   return ((price - price * (discountPortion / 100)).toFixed() / 5).toFixed()
 }
 
