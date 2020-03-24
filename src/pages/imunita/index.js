@@ -43,10 +43,18 @@ const ImunitaPage = () => {
             </a>
             <div className={styles.counterWrap}>
               <div className={styles.counter}>
-                <div className={styles.counterItem}>0</div>
-                <div className={styles.counterItem}>0</div>
-                <div className={styles.counterItem}>5</div>
-                <div className={styles.counterItem}>1</div>
+                <div className={styles.counterItem}>
+                  0 <span className={styles.counterItemDivider}></span>
+                </div>
+                <div className={styles.counterItem}>
+                  0 <span className={styles.counterItemDivider}></span>
+                </div>
+                <div className={styles.counterItem}>
+                  5 <span className={styles.counterItemDivider}></span>
+                </div>
+                <div className={styles.counterItem}>
+                  1 <span className={styles.counterItemDivider}></span>
+                </div>
               </div>
               <div className={styles.counterText}>
                 Rozdacich jidel <br /> zdravotnikum
