@@ -261,7 +261,7 @@ const ImunitaPage = () => {
           <div className={section3.share}>
             Pomůžeš i sdílením. Děkujeme!{" "}
             <a
-              href="https://www.facebook.com/nutritionprocz"
+              href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
               target="_blank"
               className={section3.shareLink}
               rel="noopener noreferrer"
