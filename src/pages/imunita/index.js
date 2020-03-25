@@ -98,7 +98,7 @@ const ImunitaPage = () => {
             />
           </div>
           <h1 className={styles.heroTitle}>
-            Imunita pro tebe <br /> Imunita pro ně
+            Imunita pro tebe, <br /> imunita pro ně
           </h1>
           <div>
             <div className={styles.heroTextHash}>
@@ -106,11 +106,8 @@ const ImunitaPage = () => {
               imunitu
             </div>
             <p className={styles.heroText}>
-              Vaše podpora nám pomáhá věnovat jídlo těm, kteří potřebují posílit
-              imunitu nejvíce - <b>našim zdravotníkům.</b>
-            </p>
-            <p className={styles.heroText}>
-              <b>Děkujeme.</b>
+              Tvoje podpora nám umožňuje věnovat jídlo těm, kteří potřebují
+              posílit imunitu nejvíce - <b>našim zdravotníkům</b>.
             </p>
           </div>
           <div className={styles.buttons}>
@@ -143,7 +140,7 @@ const ImunitaPage = () => {
           <p className={section2.section2Text}>
             Rozhodli jsme se pro to, že za každou objednávku dovezeme jídla
             různým zdravotnickým zařízením v Praze. Můžeme tak dodat energii
-            prostřednictvím zdravého{" "}
+            prostřednictvím zdravého
             <strong>
               jídla doktorům, sestřičkám i zdravotnickým pracovníkům
             </strong>
@@ -184,7 +181,7 @@ const ImunitaPage = () => {
                   <img src={img2} className={section3.programImg} alt="icon" />
                 </div>
                 <p className={section3.programText}>
-                  Daruješ 10 jídel zdravotníkům
+                  Daruješ <b>10 jídel</b> zdravotníkům
                 </p>
                 <button
                   type="button"
@@ -212,7 +209,7 @@ const ImunitaPage = () => {
                     />
                   </div>
                   <h5 className={section3.programTitle}>
-                    Homeoffice balíček pro jednoho
+                    Homeoffice pack pro jednoho
                   </h5>
                 </Link>
                 <div className={section3.programImgWrap}>
@@ -243,7 +240,7 @@ const ImunitaPage = () => {
                     />
                   </div>
                   <h5 className={section3.programTitle}>
-                    Homeoffice balíček pro pár
+                    Homeoffice pack pro páry
                   </h5>
                 </Link>
                 <div className={section3.programImgWrap}>
@@ -261,7 +258,7 @@ const ImunitaPage = () => {
           <div className={section3.share}>
             Pomůžeš i sdílením. Děkujeme!{" "}
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+              href={`https://www.facebook.com/nutritionprocz`}
               target="_blank"
               className={section3.shareLink}
               rel="noopener noreferrer"
@@ -277,7 +274,7 @@ const ImunitaPage = () => {
             <h3
               className={cx("sectionTitle -light text-center", section4.title)}
             >
-              Znáte o nějaké nemocnici, ktera potřebuje pomoc?
+              Znáš nějakou nemocnici z Prahy a okolí, které můžeme pomoci?
             </h3>
             <Button type="secondary">
               <a href="mailto:info@nutritionpro.cz" className={section4.link}>

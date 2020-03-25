@@ -142,10 +142,10 @@
 }
 
 .button {
-  height: 50px;
+  height: 55px;
   padding: 14px 53px 17px;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 22px;
+  line-height: 26px;
   font-weight: 600;
   background-color: transparent;
   color: var(--color-green);
