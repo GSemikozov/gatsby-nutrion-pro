@@ -14,6 +14,7 @@ import img4 from './images/4.svg';
 import fb from './images/facebook.svg';
 import insta from './images/instagram.svg';
 import logo from './images/logo.svg';
+import section2 from './section2.module.css';
 
 // import imgChef from './images/chef.svg';
 // import img2 from './images/2.svg';
@@ -105,13 +106,13 @@ const ImunitaPage = () => {
           </div>
         </Container>
       </section>
-      <section className={styles.section2}>
+      <section className={section2.section2}>
         <Container className="text-center">
           <div>
             <img src={img1} alt="icon" />
           </div>
-          <h3 className={styles.section2Title}>Chceme pomáhat</h3>
-          <p className={styles.section2Text}>
+          <h3 className={section2.section2Title}>Chceme pomáhat</h3>
+          <p className={section2.section2Text}>
             Věříme, že{" "}
             <strong>
               zdravá a pestrá strava je základem pro silnou imunitu
@@ -121,7 +122,7 @@ const ImunitaPage = () => {
             a statečně bojují proti pandemii koronaviru. Oni jsou ti, kterým je
             teď potřeba podat pomocnou ruku.
           </p>
-          <p className={styles.section2Text}>
+          <p className={section2.section2Text}>
             Rozhodli jsme se pro to, že za každou objednávku dovezeme jídla
             různým zdravotnickým zařízením v Praze. Můžeme tak dodat energii
             prostřednictvím zdravého{" "}
