@@ -43,20 +43,10 @@ const ImunitaPage = () => {
   const { show, RenderModal } = useModal()
 
   return (
-    <main>
+    <main id="root">
       <SEO title="Program" />
       <section className={styles.hero}>
         <Container className={styles.topContainer}>
-          {/* <button
-            type="button"
-            onClick={() => show}
-            className={section3.button}
-          >
-            Objednat
-          </button>
-          <RenderModal className="modalForm">
-            <ModalForm />
-          </RenderModal> */}
           <div className={styles.header}>
             <a href="/" className={styles.logo}>
               <img src={logo} alt="logo" />
@@ -195,14 +185,14 @@ const ImunitaPage = () => {
                 </p>
                 <button
                   type="button"
-                  onClick={() => show}
+                  onClick={show}
                   className={section3.button}
                 >
                   Objednat
                 </button>
-                {/* <RenderModal className="modalForm">
+                <RenderModal className="modalForm">
                   <ModalForm />
-                </RenderModal> */}
+                </RenderModal>
               </a>
               <div className={cx(section3.program)}>
                 <Link to="/" className={section3.programTop}>
