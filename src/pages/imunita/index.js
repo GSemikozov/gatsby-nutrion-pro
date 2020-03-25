@@ -29,7 +29,12 @@ import section4 from './section4.module.css';
 
 const ModalForm = () => (
   <>
-    <h3 className={cx(styles.formHeading, "text-center")}>Mám zájem</h3>
+    <h3
+      className={cx(styles.formHeading, "text-center")}
+      style={{ marginBottom: "20px" }}
+    >
+      Mám zájem
+    </h3>
     <LandingForm />
   </>
 )
