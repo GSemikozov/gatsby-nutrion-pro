@@ -5,7 +5,7 @@ import React from 'react';
 import { Button } from '../../components/button';
 import { Container } from '../../components/container';
 import { Footer } from '../../components/footer';
-import { MainForm } from '../../components/forms/main-form';
+import { LandingForm } from '../../components/forms/landing-form';
 import { HowItWork } from '../../components/howitwork';
 import { useModal } from '../../components/modal';
 import { Reviews } from '../../components/reviews';
@@ -28,8 +28,8 @@ import section2 from './section2.module.css';
 
 const ModalForm = () => (
   <>
-    <h3 className={styles.formHeading}>Nezávazná objednávka</h3>
-    <MainForm />
+    <h3 className={cx(styles.formHeading, "text-center")}>Mám zájem</h3>
+    <LandingForm />
   </>
 )
 
@@ -156,12 +156,9 @@ const ImunitaPage = () => {
             jídlo pro naše zdravotníky.
           </p>
           <div className={section3.programs}>
-            <RenderModal className="modalForm">
-              <ModalForm />
-            </RenderModal>
             <div className={section3.programsNav}>
-              <a className={cx(section3.program)}>
-                <div className={section3.programTop}>
+              <div className={cx(section3.program)}>
+                <div onClick={show} className={section3.programTop}>
                   <div className={section3.programTopRibbon}>
                     5chodové <br />
                     menu
@@ -193,7 +190,7 @@ const ImunitaPage = () => {
                 <RenderModal className="modalForm">
                   <ModalForm />
                 </RenderModal>
-              </a>
+              </div>
               <div className={cx(section3.program)}>
                 <Link to="/" className={section3.programTop}>
                   <div className={section3.programTopRibbon}>
