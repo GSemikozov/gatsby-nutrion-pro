@@ -25,6 +25,7 @@ import insta from './images/instagram.svg';
 import logo from './images/logo.svg';
 import section3 from './pockets.module.css';
 import section2 from './section2.module.css';
+import section4 from './section4.module.css';
 
 const ModalForm = () => (
   <>
@@ -265,7 +266,22 @@ const ImunitaPage = () => {
           </div>
         </Container>
       </section>
-      <HowItWork />
+      <section className={section4.section}>
+        <Container>
+          <div className={section4.blockWrap}>
+            <h3
+              className={cx("sectionTitle -light text-center", section4.title)}
+            >
+              Znáte o nějaké nemocnici, ktera potřebuje pomoc?
+            </h3>
+            <Button type="secondary">
+              <a href="mailto:info@nutritionpro.cz" className={section4.link}>
+                Napište nam
+              </a>
+            </Button>
+          </div>
+        </Container>
+      </section>
       {/* <Reviews id="reviews" /> */}
       <Footer />
     </main>

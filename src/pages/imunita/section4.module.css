@@ -1,0 +1,44 @@
+.section {
+  padding: 34px 0;
+  background: var(--color-orange) url("./images/prefooter-bg.png") center
+    no-repeat;
+  background-size: cover;
+  color: var(--ccolor-white);
+}
+
+.blockWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.link {
+  white-space: nowrap;
+}
+
+@media all and (min-width: 768px) {
+  .section {
+    padding: 70px;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .title {
+    margin-bottom: 0;
+    margin-right: 16px;
+    font-size: 30px;
+  }
+
+  .blockWrap {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
