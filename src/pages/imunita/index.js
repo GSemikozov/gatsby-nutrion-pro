@@ -8,13 +8,13 @@ import { Program } from '../../components/program';
 import { Reviews } from '../../components/reviews';
 import SEO from '../../components/seo';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
+import styles from './hero.module.css';
 import img1 from './images/1.svg';
+import img4 from './images/4.svg';
 import fb from './images/facebook.svg';
 import insta from './images/instagram.svg';
 import logo from './images/logo.svg';
-import styles from './styles.module.css';
 
-// import img4 from './images/4.svg';
 // import imgChef from './images/chef.svg';
 // import img2 from './images/2.svg';
 // import img3 from './images/3.svg';
@@ -57,7 +57,7 @@ const ImunitaPage = () => {
                 </div>
               </div>
               <div className={styles.counterText}>
-                Rozdacich jidel <br /> zdravotnikum
+                Rozdaných jídel zdravotníkům
               </div>
             </div>
             <div className={styles.headerSocials}>
@@ -71,26 +71,19 @@ const ImunitaPage = () => {
           </div>
         </Container>
         <Container className={styles.heroContainer}>
-          <h1 className={styles.heroTitle}>
-            Imunita pro tebe <br />
-            Imunita pro ně
-          </h1>
-          <div className="visible-desktop">
-            <div className={styles.heroImg}>{/* <HeroDesktopImg /> */}</div>
-          </div>
-          <div className="visible-mobile">
-            <div className={styles.heroImg}>{/* <HeroMobileImg /> */}</div>
-          </div>
           <div>
-            <div
-              className={styles.heroText}
-              style={{
-                textTransform: "uppercase",
-                fontWeight: "900",
-                color: `var(--color-green)`,
-              }}
-            >
-              #nutrition<span style={{ color: `var(--color-body)` }}>pro</span>
+            <img
+              src={img4}
+              className={styles.heroMobileImg}
+              alt="content-img"
+            />
+          </div>
+          <h1 className={styles.heroTitle}>
+            Imunita pro tebe <br /> Imunita pro ně
+          </h1>
+          <div>
+            <div className={styles.heroTextHash}>
+              #nutrition<span>pro</span>
               imunitu
             </div>
             <p className={styles.heroText}>
