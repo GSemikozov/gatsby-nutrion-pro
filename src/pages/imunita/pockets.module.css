@@ -1,0 +1,222 @@
+.title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.description {
+  font-size: 22px;
+  padding: 0 100px;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.programsSection {
+  padding: 64px 0;
+  background: #f8f5f0;
+}
+
+.program {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.program:hover .programTop,
+.programTop:hover {
+  border: 3px solid var(--color-green);
+}
+
+.program:hover .programTitle,
+.programTop:hover .programTitle {
+  color: var(--color-green);
+}
+
+.programTop {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 26px;
+  border-radius: 10px;
+  margin: 0 0 0 18px;
+  padding: 16px;
+  background-color: var(--color-white);
+  font-weight: 600;
+  outline: none;
+  box-shadow: none;
+  transition: 0.3s all;
+  vertical-align: top;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+.programTopRibbon {
+  position: absolute;
+  transform: rotate(-45deg);
+  left: -75px;
+  top: 10px;
+  width: 220px;
+  height: 56px;
+  background-color: var(--color-green);
+  padding: 3px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 0.8;
+}
+
+.programTopRibbonOrange {
+  background-color: var(--color-orange);
+}
+
+.programTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  color: initial;
+  text-align: center;
+  margin: 0;
+  white-space: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+  transform: none;
+  transition: 0.2s all;
+}
+
+.programTopImgWrap {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.programTopImg {
+  max-height: 90px;
+  max-width: 90px;
+}
+
+.programImgWrap {
+  margin: 40px auto 16px;
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.programImg {
+  display: block;
+  max-width: 100%;
+}
+
+.programText {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-decoration: none;
+  color: initial;
+}
+
+.programsNav {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 0 0 30px;
+  padding: 0 30px;
+}
+
+.button {
+  height: 50px;
+  padding: 14px 53px 17px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+  background-color: var(--color-white);
+  color: var(--color-green);
+  border: 1px solid var(--color-green);
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active {
+  opacity: 0.8;
+}
+
+.share {
+  margin: 0 auto;
+  height: 65px;
+  width: 444px;
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-right: 50px;
+  position: relative;
+}
+
+.shareLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+}
+
+@media all and (min-width: 1024px) {
+  .program {
+    width: 288px;
+  }
+
+  .programTitle {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .programsNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: visible;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .programTop {
+    width: 260px;
+    height: 260px;
+    border-width: 2px;
+  }
+  .program:hover .programTop,
+  .programTop:hover {
+    transform: scale(1.1);
+    border-width: 3px;
+  }
+
+  .programTop:hover .programTitle,
+  .programTop:focus .programTitle,
+  .programTop:active .programTitle {
+    transform: none;
+  }
+
+  .programsNav {
+    text-align: center;
+    padding: 24px;
+  }
+}
