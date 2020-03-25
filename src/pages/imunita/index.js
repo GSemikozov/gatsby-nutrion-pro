@@ -140,7 +140,7 @@ const ImunitaPage = () => {
           <p className={section2.section2Text}>
             Rozhodli jsme se pro to, že za každou objednávku dovezeme jídla
             různým zdravotnickým zařízením v Praze. Můžeme tak dodat energii
-            prostřednictvím zdravého
+            prostřednictvím zdravého{" "}
             <strong>
               jídla doktorům, sestřičkám i zdravotnickým pracovníkům
             </strong>
