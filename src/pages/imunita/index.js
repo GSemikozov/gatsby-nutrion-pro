@@ -10,6 +10,7 @@ import { HowItWork } from '../../components/howitwork';
 import { useModal } from '../../components/modal';
 import { Reviews } from '../../components/reviews';
 import SEO from '../../components/seo';
+import useSiteMetadata from '../../hooks/useSiteMetadata';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import styles from './hero.module.css';
 import img1 from './images/1.svg';
@@ -39,7 +40,7 @@ const ModalForm = () => (
   </>
 )
 
-const ImunitaPage = () => {
+const ImunitaPage = ({ location }) => {
   const scroll = useSmoothScroll()
 
   const onLinkClick = selector => () => {
@@ -47,6 +48,8 @@ const ImunitaPage = () => {
   }
 
   const { show, RenderModal } = useModal()
+
+  const { siteURL } = useSiteMetadata()
 
   return (
     <main id="root">
@@ -258,8 +261,8 @@ const ImunitaPage = () => {
           <div className={section3.share}>
             Pomůžeš i sdílením. Děkujeme!{" "}
             <a
-              href={`https://www.facebook.com/nutritionprocz`}
-              target="_blank"
+              href={`https://www.facebook.com/sharer/sharer.php?u=${siteURL}${location.pathname}`}
+              // target="_blank"
               className={section3.shareLink}
               rel="noopener noreferrer"
             >
