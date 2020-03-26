@@ -58,13 +58,12 @@ const ImunitaPage = ({ location }) => {
       <SEOLanding />
       <Helmet>
         <div id="fb-root"></div>
-        <script>{`(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));`}</script>
+        <script
+          async
+          defer
+          crossorigin="anonymous"
+          src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v6.0"
+        ></script>
       </Helmet>
       <section className={styles.hero}>
         <Container className={styles.topContainer}>
@@ -256,13 +255,26 @@ const ImunitaPage = ({ location }) => {
             Pomůžeš i sdílením. Děkujeme!{" "}
             <a
               href={`https://www.facebook.com/sharer/sharer.php?u=${siteURL}${location.pathname}`}
-              // target="_blank"
-              data-href={`${siteURL}${location.pathname}`}
-              data-layout="button_count"
+              target="_blank"
               className={section3.shareLink}
             >
               <img src={img8} alt="icon" />
             </a>
+            <div
+              class="fb-share-button"
+              data-href="https://nutritionpro.cz/imunita/"
+              data-layout="button_count"
+              data-size="large"
+              style={{ opacity: 0, width: 0, height: 0 }}
+            >
+              <a
+                target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnutritionpro.cz%2Fimunita%2F&amp;src=sdkpreparse"
+                class="fb-xfbml-parse-ignore"
+              >
+                Поделиться
+              </a>
+            </div>
           </div>
         </Container>
       </section>
