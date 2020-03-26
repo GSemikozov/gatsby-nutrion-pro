@@ -7,7 +7,7 @@ import { Counter } from '../counter';
 import styles from './action-panel.module.css';
 
 export const ProgramPanel = () => (
-  <Link to="/imunita" className={styles.programPanel}>
+  <a href="/imunita" className={styles.programPanel}>
     <div className={styles.programPanelCol}>
       <div className={cx(styles.programPanelColMob)}>Pomáháme</div>
       <Counter horizontal />
@@ -18,5 +18,5 @@ export const ProgramPanel = () => (
         <img src={img} className={styles.icon} alt="icon" />
       </div>
     </div>
-  </Link>
+  </a>
 )

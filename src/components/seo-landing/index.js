@@ -47,7 +47,7 @@ function SEOLanding({ lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: "Daruj jídlo zdravotníkům i ty!",
         },
         {
           property: `og:description`,
