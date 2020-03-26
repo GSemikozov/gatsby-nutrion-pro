@@ -1,0 +1,157 @@
+.counterWrap {
+  margin: 0 auto 30px;
+  padding-top: 64px;
+  width: 220px;
+}
+
+.counterWrap.counterWrapHorizontal {
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.counterWrap.counterWrapHorizontal .counter {
+  white-space: nowrap;
+}
+
+.counterWrap.counterWrapHorizontal .counterText {
+  padding-left: 16px;
+  padding-right: 0;
+  margin-top: 0;
+  text-align: left;
+  font-size: 14px;
+  color: initial;
+  font-weight: 400;
+}
+
+.counterText {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+  line-height: 1.2;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.counterWrap.counterWrapHorizontal .counter {
+  min-width: 106px;
+}
+
+.counterItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 78px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 800;
+  box-shadow: 0 4px 0 var(--color-green);
+  background: linear-gradient(
+    to bottom,
+    #2fa037 0%,
+    #2fa037 50%,
+    #75bb65 50%,
+    #75bb65 100%
+  );
+}
+
+.counterWrap.counterWrapHorizontal .counterItem {
+  width: 24px;
+  height: 36px;
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: -2px;
+  box-shadow: none;
+}
+
+.counterItemDivider {
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ccc;
+  display: inline-block;
+}
+
+.counterItemDivider:before,
+.counterItemDivider:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 3px;
+  height: 6px;
+  background-color: #ccc;
+  display: inline-block;
+}
+
+.counterItemDivider:before {
+  left: 0;
+}
+.counterItemDivider:after {
+  right: 0;
+}
+
+.counterWrap.counterWrapHorizontal .counterItemDivider {
+  height: 1px;
+}
+
+.counterWrap.counterWrapHorizontal .counterItemDivider:before,
+.counterWrap.counterWrapHorizontal .counterItemDivider:after {
+  height: 3px;
+  width: 2px;
+  top: -1px;
+}
+
+@media all and (min-width: 1024px) {
+  .counterWrap.counterWrapHorizontal {
+    width: 320px;
+  }
+  .counterWrap.counterWrapHorizontal .counter {
+    min-width: 134px;
+  }
+
+  .counterWrap.counterWrapHorizontal .counterText {
+    font-size: 18px;
+  }
+
+  .counterWrap.counterWrapHorizontal .counterItem {
+    width: 30px;
+    height: 44px;
+    font-size: 34px;
+  }
+
+  .counterWrap.counterWrapHorizontal .counterText {
+    padding-left: 48px;
+  }
+
+  .counterWrap {
+    position: absolute;
+    left: 50%;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .counterWrap.counterWrapHorizontal {
+    position: relative;
+    left: 0;
+  }
+
+  .counterText {
+    padding: 0 40px;
+  }
+}

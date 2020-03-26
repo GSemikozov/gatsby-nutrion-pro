@@ -1,6 +1,7 @@
 .hero {
   color: var(--color-white);
-  padding: 32px 0;
+  /* padding: 32px 0; */
+  padding: 64px 0 32px;
   height: 460px;
   position: relative;
   display: flex;
@@ -90,10 +91,12 @@
     height: 630px;
     background: #1a1e20 url("./images/hero-bg-desktop.png") center no-repeat;
     background-position: cover;
+    padding: 0;
   }
 
   .buttons {
-    margin-top: 115px;
+    /* margin-top: 115px; */
+    margin-top: 55px;
     max-width: 55%;
   }
 
@@ -117,6 +120,10 @@
 }
 
 @media all and (min-width: 1200px) {
+  .buttons {
+    margin-top: 115px;
+  }
+
   .img {
     margin-left: -120px;
   }

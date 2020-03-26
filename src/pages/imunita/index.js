@@ -4,6 +4,7 @@ import React from 'react';
 
 import { Button } from '../../components/button';
 import { Container } from '../../components/container';
+import { Counter } from '../../components/counter';
 import { Footer } from '../../components/footer';
 import { LandingForm } from '../../components/forms/landing-form';
 import { HowItWork } from '../../components/howitwork';
@@ -60,25 +61,7 @@ const ImunitaPage = ({ location }) => {
             <a href="/" className={styles.logo}>
               <img src={logo} alt="logo" />
             </a>
-            <div className={styles.counterWrap}>
-              <div className={styles.counter}>
-                <div className={styles.counterItem}>
-                  0 <span className={styles.counterItemDivider}></span>
-                </div>
-                <div className={styles.counterItem}>
-                  0 <span className={styles.counterItemDivider}></span>
-                </div>
-                <div className={styles.counterItem}>
-                  5 <span className={styles.counterItemDivider}></span>
-                </div>
-                <div className={styles.counterItem}>
-                  1 <span className={styles.counterItemDivider}></span>
-                </div>
-              </div>
-              <div className={styles.counterText}>
-                Rozdaných jídel zdravotníkům
-              </div>
-            </div>
+            <Counter />
             <div className={styles.headerSocials}>
               <a href="https://www.facebook.com/nutritionprocz" target="_blank">
                 <img src={fb} alt="fb" />

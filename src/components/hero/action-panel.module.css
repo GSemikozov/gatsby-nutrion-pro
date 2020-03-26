@@ -1,0 +1,92 @@
+.programPanel {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 44px;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+.programPanelCol {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.programPanelColMob {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: initial;
+  padding-right: 16px;
+}
+
+.programPanelColDesktop {
+  display: none;
+}
+
+.programPanelCol:first-child {
+  justify-content: center;
+  background-color: var(--color-white);
+}
+
+.programPanelCol:last-child {
+  justify-content: flex-start;
+  background-color: var(--color-orange);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.programPanelCol:last-child .text {
+  margin-right: 48px;
+}
+
+.programPanelCol:last-child .icon {
+  margin-right: 48px;
+  width: 44px;
+  display: none;
+}
+
+.programPanelInner {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media all and (min-width: 1024px) {
+  .programPanel {
+    height: 70px;
+    position: relative;
+  }
+
+  .programPanelCol {
+    width: 50%;
+  }
+
+  .programPanelCol {
+    padding: 7px 64px;
+  }
+
+  .programPanelCol:first-child {
+    justify-content: flex-end;
+  }
+
+  .programPanelColMob {
+    display: none;
+  }
+
+  .programPanelColDesktop {
+    display: flex;
+  }
+
+  .programPanelCol:last-child .icon {
+    display: block;
+  }
+}

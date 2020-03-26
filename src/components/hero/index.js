@@ -8,6 +8,7 @@ import { OrderConsultationForm } from '../forms/order-consultation-form';
 import { OrderSpecialOfferForm } from '../forms/order-special-offer-form';
 import { useModal } from '../modal';
 import { useModal as useModalSpecial } from '../modal-special';
+import { ProgramPanel } from './action-panel';
 import { HeroDesktopImg } from './hero-content-img-desktop';
 import { HeroMobileImg } from './hero-content-img-mobile';
 import styles from './hero.module.css';
@@ -35,7 +36,8 @@ export const Hero = () => {
   }
 
   return (
-    <section className={styles.hero}> 
+    <section className={styles.hero}>
+      <ProgramPanel />
       <Container className={styles.container}>
         <h1 className={styles.title}>
           Výživový poradce <br /> a šéfkuchař v jednom
