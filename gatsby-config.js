@@ -57,6 +57,15 @@ module.exports = {
         path: `${__dirname}/src/fonts/`,
       },
     },
+    // { // we can use it instead of gatsby-source-filesystem
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     custom: {
+    //       families: ["Gilroy", "Sketch-Block"],
+    //       urls: [`${__dirname}/src/fonts/fonts.css`],
+    //     },
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
