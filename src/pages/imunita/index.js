@@ -138,7 +138,7 @@ const ImunitaPage = () => {
             teď potřeba podat pomocnou ruku.
           </p>
           <p className={section2.section2Text}>
-            Rozhodli jsme se pro to, že za každou objednávku dovezeme jídla
+            Rozhodli jsme se proto, že za každou objednávku dovezeme jídla
             různým zdravotnickým zařízením v Praze. Můžeme tak dodat energii
             prostřednictvím zdravého{" "}
             <strong>
@@ -278,7 +278,7 @@ const ImunitaPage = () => {
             </h3>
             <Button type="secondary">
               <a href="mailto:info@nutritionpro.cz" className={section4.link}>
-                Napište nam
+                Napiš nam
               </a>
             </Button>
           </div>
