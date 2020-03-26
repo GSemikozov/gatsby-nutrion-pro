@@ -10,7 +10,7 @@ import { LandingForm } from '../../components/forms/landing-form';
 import { HowItWork } from '../../components/howitwork';
 import { useModal } from '../../components/modal';
 import { Reviews } from '../../components/reviews';
-import SEO from '../../components/seo';
+import SEOLanding from '../../components/seo-landing';
 import useSiteMetadata from '../../hooks/useSiteMetadata';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import styles from './hero.module.css';
@@ -54,7 +54,7 @@ const ImunitaPage = ({ location }) => {
 
   return (
     <main id="root">
-      <SEO title="Program" />
+      <SEOLanding />
       <section className={styles.hero}>
         <Container className={styles.topContainer}>
           <div className={styles.header}>
