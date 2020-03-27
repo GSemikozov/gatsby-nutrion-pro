@@ -303,7 +303,7 @@ const ImunitaPage = ({ location }) => {
             >
               <a
                 target="_blank"
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnutritionpro.cz%2Fimunita%2F&amp;src=sdkpreparse"
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardcore-almeida-34ea38.netlify.com%2Fimunita%2F&amp;src=sdkpreparse"
                 class="fb-xfbml-parse-ignore"
               >
                 Поделиться
