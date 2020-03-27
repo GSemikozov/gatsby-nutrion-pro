@@ -4,30 +4,16 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
 import useSiteMetadata from '../../hooks/useSiteMetadata';
 
-function SEOLanding({ lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
+function SEOLanding({ lang, meta }) {
   const metaDescription =
     "Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
+  const metaTitle = "Daruj jídlo zdravotníkům i ty!"
 
   const { siteURL } = useSiteMetadata()
 
@@ -36,8 +22,8 @@ function SEOLanding({ lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title="Daruj jídlo zdravotníkům i ty!"
-      titleTemplate={`Daruj jídlo zdravotníkům i ty!`}
+      title={metaTitle}
+      titleTemplate={metaTitle}
       image={`${siteURL}/images/fb-cover.png`}
       meta={[
         {
@@ -46,7 +32,7 @@ function SEOLanding({ lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: "Daruj jídlo zdravotníkům i ty!",
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -70,11 +56,11 @@ function SEOLanding({ lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: "@nutritionprocz",
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
