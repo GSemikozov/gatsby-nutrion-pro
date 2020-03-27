@@ -24,6 +24,7 @@ function SEOLanding({ lang, meta }) {
       }}
       title={metaTitle}
       titleTemplate={metaTitle}
+      description={metaDescription}
       image={`${siteURL}/images/fb-cover.png`}
       meta={[
         {
