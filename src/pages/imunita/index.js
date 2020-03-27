@@ -287,7 +287,7 @@ const ImunitaPage = ({ location }) => {
           <div className={section3.share}>
             Pomůžeš i sdílením. Děkujeme!{" "}
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${siteURL}${location.pathname}`}
+              href={`https://www.facebook.com/sharer.php?u=${siteURL}${location.pathname}`}
               // href="https://www.facebook.com/nutritionprocz"
               target="_blank"
               className={section3.shareLink}
@@ -296,7 +296,7 @@ const ImunitaPage = ({ location }) => {
             </a>
             <div
               class="fb-share-button"
-              data-href="https://nutritionpro.cz/imunita/"
+              data-href="https://hardcore-almeida-34ea38.netlify.com"
               data-layout="button_count"
               data-size="large"
               style={{ opacity: 0, width: 0, height: 0, visibility: "hidden" }}
