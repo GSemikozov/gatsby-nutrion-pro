@@ -55,7 +55,7 @@ const ImunitaPage = ({ location }) => {
 
   return (
     <main id="root">
-      {/* <SEOLanding /> */}
+      <SEOLanding />
       {/* <Helmet> */}
       {/*<!-- Primary Meta Tags -->*/}
       {/* <title>Daruj jídlo zdravotníkům i ty!</title>
