@@ -56,41 +56,6 @@ const ImunitaPage = ({ location }) => {
   return (
     <main id="root">
       <SEOLanding />
-      {/* <Helmet> */}
-      {/*<!-- Primary Meta Tags -->*/}
-      {/* <title>Daruj jídlo zdravotníkům i ty!</title>
-        <meta name="title" content="Daruj jídlo zdravotníkům i ty!" />
-        <meta
-          name="description"
-          content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
-        /> */}
-
-      {/*<!-- Open Graph / Facebook -->*/}
-      {/* <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${siteURL}/imunita`} />
-        <meta property="og:title" content="Daruj jídlo zdravotníkům i ty!" />
-        <meta
-          property="og:description"
-          content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
-        />
-        <meta property="og:image" content={`${siteURL}/images/fb-cover.png`} /> */}
-
-      {/*<!-- Twitter -->*/}
-      {/* <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`${siteURL}/imunita`} />
-        <meta
-          property="twitter:title"
-          content="Daruj jídlo zdravotníkům i ty!"
-        />
-        <meta
-          property="twitter:description"
-          content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
-        />
-        <meta
-          property="twitter:image"
-          content={`${siteURL}/images/fb-cover.png`}
-        /> */}
-      {/* </Helmet> */}
       <section className={styles.hero}>
         <Container className={styles.topContainer}>
           <div className={styles.header}>
