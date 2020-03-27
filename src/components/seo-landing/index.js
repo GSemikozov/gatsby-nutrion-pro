@@ -27,8 +27,7 @@ function SEOLanding({ lang, meta, title }) {
   )
 
   const metaDescription =
-    "Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi." ||
-    site.siteMetadata.description
+    "Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
 
   const { siteURL } = useSiteMetadata()
 
@@ -38,7 +37,7 @@ function SEOLanding({ lang, meta, title }) {
         lang,
       }}
       title="Daruj jídlo zdravotníkům i ty!"
-      titleTemplate={`NutritionPro - ${site.siteMetadata.title}`}
+      titleTemplate={`Daruj jídlo zdravotníkům i ty!`}
       image={`${siteURL}/images/fb-cover.png`}
       meta={[
         {
@@ -63,7 +62,7 @@ function SEOLanding({ lang, meta, title }) {
         },
         {
           property: `og:url`,
-          content: `${siteURL}/munita`,
+          content: `${siteURL}/imunita`,
         },
         {
           name: `twitter:card`,

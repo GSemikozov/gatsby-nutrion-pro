@@ -56,34 +56,27 @@ const ImunitaPage = ({ location }) => {
   return (
     <main id="root">
       {/* <SEOLanding /> */}
-      <Helmet>
-        <div id="fb-root"></div>
-        <script
-          async
-          defer
-          crossorigin="anonymous"
-          src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"
-        ></script>
-        {/*<!-- Primary Meta Tags -->*/}
-        <title>Daruj jídlo zdravotníkům i ty!</title>
+      {/* <Helmet> */}
+      {/*<!-- Primary Meta Tags -->*/}
+      {/* <title>Daruj jídlo zdravotníkům i ty!</title>
         <meta name="title" content="Daruj jídlo zdravotníkům i ty!" />
         <meta
           name="description"
           content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
-        />
+        /> */}
 
-        {/*<!-- Open Graph / Facebook -->*/}
-        <meta property="og:type" content="website" />
+      {/*<!-- Open Graph / Facebook -->*/}
+      {/* <meta property="og:type" content="website" />
         <meta property="og:url" content={`${siteURL}/imunita`} />
         <meta property="og:title" content="Daruj jídlo zdravotníkům i ty!" />
         <meta
           property="og:description"
           content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
         />
-        <meta property="og:image" content={`${siteURL}/images/fb-cover.png`} />
+        <meta property="og:image" content={`${siteURL}/images/fb-cover.png`} /> */}
 
-        {/*<!-- Twitter -->*/}
-        <meta property="twitter:card" content="summary_large_image" />
+      {/*<!-- Twitter -->*/}
+      {/* <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${siteURL}/imunita`} />
         <meta
           property="twitter:title"
@@ -96,8 +89,8 @@ const ImunitaPage = ({ location }) => {
         <meta
           property="twitter:image"
           content={`${siteURL}/images/fb-cover.png`}
-        />
-      </Helmet>
+        /> */}
+      {/* </Helmet> */}
       <section className={styles.hero}>
         <Container className={styles.topContainer}>
           <div className={styles.header}>
@@ -294,21 +287,6 @@ const ImunitaPage = ({ location }) => {
             >
               <img src={img8} alt="icon" />
             </a>
-            <div
-              class="fb-share-button"
-              data-href="https://hardcore-almeida-34ea38.netlify.com"
-              data-layout="button_count"
-              data-size="large"
-              style={{ opacity: 0, width: 0, height: 0, visibility: "hidden" }}
-            >
-              <a
-                target="_blank"
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhardcore-almeida-34ea38.netlify.com%2Fimunita%2F&amp;src=sdkpreparse"
-                class="fb-xfbml-parse-ignore"
-              >
-                Поделиться
-              </a>
-            </div>
           </div>
         </Container>
       </section>
@@ -330,14 +308,6 @@ const ImunitaPage = ({ location }) => {
       </section>
       {/* <Reviews id="reviews" /> */}
       <Footer />
-      {/* <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-    js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script> */}
     </main>
   )
 }
