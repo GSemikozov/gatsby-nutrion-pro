@@ -74,16 +74,13 @@ const ImunitaPage = ({ location }) => {
 
         {/*<!-- Open Graph / Facebook -->*/}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nutritionpro.cz/imunita/" />
+        <meta property="og:url" content={`${siteURL}/imunita`} />
         <meta property="og:title" content="Daruj jídlo zdravotníkům i ty!" />
         <meta
           property="og:description"
           content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
         />
-        <meta
-          property="og:image"
-          content="https://nutritionpro.cz/images/fb-cover.png"
-        />
+        <meta property="og:image" content={`${siteURL}/images/fb-cover.png`} />
 
         {/*<!-- Twitter -->*/}
         <meta property="twitter:card" content="summary_large_image" />
