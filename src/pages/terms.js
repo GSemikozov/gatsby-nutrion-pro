@@ -75,13 +75,7 @@ const TermsPage = () => {
                 prostřednictvím on-line formuláře umístěného na internetových
                 stránkách www.nutritionpro.cz, kdy k uzavření kupní smlouvy
                 dojde telefonickým potvrzením objednávky ze strany
-                Provozovatele,
-              </li>
-              <li>
-                prostřednictvím interaktivního objednávkového systému (dále jen
-                „IOS“) umístěného na internetových stránkách
-                www.nutritionpro.cz, když tato možnost objednání je přístupná
-                pouze Klientovi s přiděleným přihlašovacím jménem a heslem.
+                Provozovatele.
               </li>
             </ol>
             <li>
@@ -91,33 +85,9 @@ const TermsPage = () => {
               kupní smlouvy.
             </li>
             <li>
-              Po uzavření první kupní smlouvy mezi Klientem a Provozovatelem je
-              Klientovi přiděleno přihlašovací jméno a heslo ke vstupu do IOS.
-            </li>
-            <li>
-              Každý Klient, kterému je přiděleno přihlašovací jméno a heslo, si
-              může nadále spravovat své stávající objednávky či provést novou
-              objednávku prostřednictvím systému IOS uvedeného v odst. 1 písm.
-              d) tohoto článku. Provedení jakékoliv nové objednávky Programu
-              NutritionPro v systému IOS je podmíněno vyslovením souhlasu s
-              těmito všeobecnými obchodním podmínkami. Po provedení objednávky
-              je systémem IOS automaticky vygenerováno potvrzení o tom, že
-              objednávka byla provedena a že byla akceptována Provozovatelem, a
-              toto potvrzení je Klientovi zasláno na e-mail určený Klientem.
-              Tímto okamžikem je uzavřena kupní smlouva.
-            </li>
-            <li>
-              Klient má možnost při volbě a objednávání programu NutritionPro
-              uvést v příslušném formuláři potraviny, na které má alergii, anebo
-              potraviny které není ochoten konzumovat. Tyto uvedené potraviny
-              nebudou klientovy dodávány a budou řešeny náhradní formou. V
-              denních setech jídel není možné provést jinou změnu, než takto
-              předem hlášenou.
-            </li>
-            <li>
-              Pokud klient trpí alergií na některou z výše uvedených potravin,
-              je povinen neprodleně telefonicky informovat provozovatele,
-              přičemž bude současně dohodnut postup řešení takové situace.
+              Pokud klient trpí alergií na některou z potravin, je povinen
+              neprodleně telefonicky informovat provozovatele, přičemž bude
+              současně dohodnut postup řešení takové situace.
             </li>
           </ol>
         </section>
@@ -143,6 +113,11 @@ const TermsPage = () => {
               (nepočítá se však samotný den doručení, tj. den doručení minus 3
               celé pracovní dny), Provozovatel provede změnu/odhlášku takto
               změněné/zrušené objednávky.
+            </li>
+            <li>
+              Při změně, tedy zkrácení objednávky, či celkovému zrušení
+              objednávky bude klientovi vrácena částka za nevyčerpané dny
+              objednávky, ponížena o administrativní poplatek 1000 Kč.
             </li>
           </ol>
         </section>
