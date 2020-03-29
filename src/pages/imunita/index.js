@@ -252,14 +252,6 @@ const ImunitaPage = ({ location }) => {
             >
               <img src={img8} alt="icon" />
             </a>
-            <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=https://nutritionpro.cz/imunita/`}
-              // href="https://www.facebook.com/nutritionprocz"
-              target="_blank"
-              className={section3.shareLink}
-            >
-              Share on Facebook
-            </a>
           </div>
         </Container>
       </section>
