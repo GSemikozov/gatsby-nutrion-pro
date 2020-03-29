@@ -244,15 +244,6 @@ const ImunitaPage = ({ location }) => {
           </div>
           <div className={section3.share}>
             Pomůžeš i sdílením. Děkujeme!{" "}
-            <iframe
-              src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fnutritionpro.cz%2Fimunita%2F&layout=button_count&size=large&width=130&height=28&appId"
-              width="130"
-              height="28"
-              scrolling="no"
-              frameBorder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-            ></iframe>
             <a
               href={`https://www.facebook.com/sharer/sharer.php?u=${siteURL}${location.pathname}`}
               // href="https://www.facebook.com/nutritionprocz"
