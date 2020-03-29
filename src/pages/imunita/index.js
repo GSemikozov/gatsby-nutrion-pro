@@ -57,13 +57,13 @@ const ImunitaPage = ({ location }) => {
     <main id="root">
       {/* <SEOLanding /> */}
       <Helmet>
-        <div id="fb-root"></div>
+        {/* <div id="fb-root"></div>
         <script
           async
           defer
           crossorigin="anonymous"
           src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"
-        ></script>
+        ></script> */}
         {/*<!-- Primary Meta Tags -->*/}
         <title>Daruj jídlo zdravotníkům i ty!</title>
         <meta name="title" content="Daruj jídlo zdravotníkům i ty!" />
@@ -309,7 +309,7 @@ const ImunitaPage = ({ location }) => {
               Share on Facebook
             </a>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=https://nutritionpro.cz/imunita/`}
               // href="https://www.facebook.com/nutritionprocz"
               target="_blank"
               className={section3.shareLink}
