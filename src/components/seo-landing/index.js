@@ -32,6 +32,10 @@ function SEOLanding({ lang, meta }) {
           content: metaDescription,
         },
         {
+          property: `og:app_id`,
+          content: `814291069059301`,
+        },
+        {
           property: `og:title`,
           content: metaTitle,
         },
@@ -41,7 +45,7 @@ function SEOLanding({ lang, meta }) {
         },
         {
           property: `og:image`,
-          content: `${siteURL}/images/fb-cover.png`,
+          content: `${siteURL}/images/nutritionpro_fb_banner.png`,
         },
         {
           property: `og:type`,
