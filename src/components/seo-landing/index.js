@@ -49,7 +49,7 @@ function SEOLanding({ lang, meta }) {
         },
         {
           property: `og:url`,
-          content: `${siteURL}/imunita`,
+          content: `${siteURL}/imunita/`,
         },
         {
           name: `twitter:card`,

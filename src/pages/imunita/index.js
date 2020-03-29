@@ -55,7 +55,49 @@ const ImunitaPage = ({ location }) => {
 
   return (
     <main id="root">
-      <SEOLanding />
+      {/* <SEOLanding /> */}
+      <Helmet>
+        <div id="fb-root"></div>
+        <script
+          async
+          defer
+          crossorigin="anonymous"
+          src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v6.0"
+        ></script>
+        {/*<!-- Primary Meta Tags -->*/}
+        <title>Daruj jídlo zdravotníkům i ty!</title>
+        <meta name="title" content="Daruj jídlo zdravotníkům i ty!" />
+        <meta
+          name="description"
+          content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
+        />
+
+        {/*<!-- Open Graph / Facebook -->*/}
+        <meta property="og:type" content="website" />
+        {/* <meta property="og:url" content="https://nutritionpro.cz/imunita/" /> */}
+        <meta property="og:title" content="Daruj jídlo zdravotníkům i ty!" />
+        <meta
+          property="og:description"
+          content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
+        />
+        {/* <meta property="og:image" content="/images/fb-cover.png" /> */}
+
+        {/*<!-- Twitter -->*/}
+        <meta property="twitter:card" content="summary_large_image" />
+        {/* <meta
+          property="twitter:url"
+          content="https://nutritionpro.cz/imunita/"
+        /> */}
+        <meta
+          property="twitter:title"
+          content="Daruj jídlo zdravotníkům i ty!"
+        />
+        <meta
+          property="twitter:description"
+          content="Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
+        />
+        {/* <meta property="twitter:image" content="/images/fb-cover.png" /> */}
+      </Helmet>
       <section className={styles.hero}>
         <Container className={styles.topContainer}>
           <div className={styles.header}>
@@ -244,14 +286,50 @@ const ImunitaPage = ({ location }) => {
           </div>
           <div className={section3.share}>
             Pomůžeš i sdílením. Děkujeme!{" "}
+            <iframe
+              src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fnutritionpro.cz%2Fimunita%2F&layout=button_count&size=large&width=130&height=28&appId"
+              width="130"
+              height="28"
+              scrolling="no"
+              frameBorder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
             <a
-              href={`https://www.facebook.com/sharer.php?u=${siteURL}${location.pathname}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${siteURL}${location.pathname}`}
               // href="https://www.facebook.com/nutritionprocz"
               target="_blank"
               className={section3.shareLink}
             >
               <img src={img8} alt="icon" />
             </a>
+            <a
+              href={`https://www.facebook.com/dialog/feed?app_id=268544530611578&redirect_uri=https://nutritionpro.cz&link=https://nutritionpro.cz`}
+            >
+              Share on Facebook
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php`}
+              // href="https://www.facebook.com/nutritionprocz"
+              target="_blank"
+              className={section3.shareLink}
+            >
+              Share on Facebook 2
+            </a>
+            <div
+              className="fb-share-button"
+              data-href="https://nutritionpro.cz/imunita/"
+              data-layout="button_count"
+              data-size="large"
+            >
+              <a
+                target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnutritionpro.cz%2Fimunita%2F&amp;src=sdkpreparse"
+                className="fb-xfbml-parse-ignore"
+              >
+                Поделиться
+              </a>
+            </div>
           </div>
         </Container>
       </section>
