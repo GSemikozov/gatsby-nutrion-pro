@@ -48,6 +48,14 @@ function SEOLanding({ lang, meta }) {
           content: `${siteURL}/images/nutritionpro_fb_banner.png`,
         },
         {
+          property: `og:image:width`,
+          content: `600`,
+        },
+        {
+          property: `og:image:height`,
+          content: `314`,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
