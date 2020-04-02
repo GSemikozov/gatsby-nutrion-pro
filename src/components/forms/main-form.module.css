@@ -1,3 +1,49 @@
+.mainForm {
+  border-radius: 10px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.mainForm > * {
+  padding: 34px;
+}
+
+.mainForm > *:last-child {
+  background-color: #f8f8f2;
+}
+
+.inputFieldTitle {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+@media all and (min-width: 992px) {
+  .mainForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .mainForm > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 34px;
+  }
+  .mainForm > *:first-child {
+    flex-grow: 1;
+  }
+  .mainForm > *:last-child {
+    flex: 1 0 324px;
+    max-width: 324px;
+    width: 100%;
+    display: block;
+  }
+}
+
 .mainFormTitle {
   font-size: 22px;
   line-height: 1.2;
@@ -6,16 +52,7 @@
 }
 
 .mainFormBox {
-  padding: 16px 30px 22px;
-  border-radius: 10px;
-  background-color: var(--color-white);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.04);
-}
-
-.priceBox {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  /**/
 }
 
 .buttons {
@@ -29,7 +66,8 @@
 }
 
 @media all and (min-width: 768px) {
-  .submitButton {
-    width: auto;
+  .mainFormBox {
+    max-width: 760px;
+    margin: 0 auto;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { About } from '../components/about';
-import { Calculator } from '../components/calculator';
+import { Calculator2 } from '../components/calculator2';
 import { FAQ } from '../components/faq';
 import { FoodCarouselSection } from '../components/food';
 import { Hero } from '../components/hero';
@@ -19,7 +19,7 @@ const IndexPage = () => (
     <Hero />
     <About />
     <Program id="programs" />
-    <Calculator id="calculator" />
+    <Calculator2 id="calculator" />
     <FoodCarouselSection />
     <HowItWork />
     <TryFood id="try-food" />

@@ -28,25 +28,15 @@ export const Price = ({ price = 0, plan = null }) => {
 
   return (
     <div className={styles.price}>
-      <p>Cena za den</p>
-      <h3
-        className={styles.priceValue}
-        style={
-          plan && plan !== "1 měsíc"
-            ? { textDecoration: "line-through", color: "red", fontSize: "20px" }
-            : null
-        }
-      >
-        <span>{price}</span> Kč
-      </h3>
-      {plan && plan !== "1 měsíc" && (
-        <h3 className={styles.priceValue}>
-          <span>{discountPrice}</span> Kč
-        </h3>
-      )}
-      <p className={cx(styles.priceTextLight)}>
-        {discountPortionPrice} Kč / porce
-      </p>
+      <div className={styles.priceCol}>
+        <h5 className={styles.priceTitle}>Jaké je tvojé pohlaví?</h5>
+        <p className={styles.priceText}>včetně dovozu</p>
+      </div>
+      <div className={styles.priceCol}>
+        <div className={styles.priceValue}>
+          od <span>{price}</span> Kč
+        </div>
+      </div>
     </div>
   )
 }
