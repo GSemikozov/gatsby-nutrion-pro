@@ -53,16 +53,22 @@ export const Hero = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <Button type="primary" className={styles.button} handleClick={show}>
-            Mám zájem
-          </Button>
           <Button
+            type="primary"
+            className={styles.button}
+            // handleClick={show}
+            handleClick={onLinkClick("calculator")}
+          >
+            {/* Mám zájem */}
+            Spočítat cenu
+          </Button>
+          {/* <Button
             type="unstyled"
             className={styles.link}
             handleClick={onLinkClick("calculator")}
           >
             Spočítat cenu
-          </Button>
+          </Button> */}
           <RenderModal className="modalForm">
             <ModalForm />
           </RenderModal>

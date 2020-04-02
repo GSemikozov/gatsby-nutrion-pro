@@ -1,4 +1,5 @@
 // import cx from 'classnames';
+import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import React, { useEffect, useState } from 'react';
 import MaskedInput from 'react-text-mask';
@@ -40,26 +41,26 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
     if (gender === "male") {
       switch (plan) {
         case "Zhubnout":
-          price = 480
+          price = 460
           break
         case "Udržovat":
-          price = 500
+          price = 480
           break
         case "Nabírat":
-          price = 540
+          price = 500
           break
       }
     }
     if (gender === "female") {
       switch (plan) {
         case "Zhubnout":
-          price = 440
+          price = 420
           break
         case "Udržovat":
-          price = 460
+          price = 440
           break
         case "Nabírat":
-          price = 500
+          price = 480
           break
       }
     }
@@ -74,7 +75,7 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
         method="post"
       >
         <div>
-          <div className={styles.inputField}>
+          <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>Tvůj cíl</h5>
             <div className={stylesRadio.radio}>
               <input
@@ -110,7 +111,7 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
               <label htmlFor="Nabírat">Nabírat</label>
             </div>
           </div>
-          <div className={styles.inputField}>
+          <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>
               Jaké je tvojé pohlaví?
             </h5>
@@ -141,7 +142,9 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
         </div>
         <div>
           <div className={styles.inputField}>
-            <label className={styles.label}>Telefon*</label>
+            <label className={cx(styles.label, mainFormStyles.inputFieldLabel)}>
+              Telefon*
+            </label>
             <FastField
               component="input"
               type="text"
@@ -153,7 +156,10 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
             )}
           </div>
           <div className={styles.inputField}>
-            <label htmlFor="promo" className={styles.label}>
+            <label
+              htmlFor="promo"
+              className={cx(styles.label, mainFormStyles.inputFieldLabel)}
+            >
               Promo kód
             </label>
             <FastField

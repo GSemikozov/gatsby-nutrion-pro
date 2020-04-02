@@ -2,7 +2,7 @@ import cx from 'classnames';
 import React from 'react';
 
 import { Button } from '../components/button';
-import { Calculator } from '../components/calculator';
+import { Calculator2 } from '../components/calculator2';
 import { Container } from '../components/container';
 import { Layout } from '../components/layout';
 import { useSmoothScroll } from '../hooks/useSmoothScroll';
@@ -252,7 +252,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
           </div> */}
         </Container>
       </section>
-      <Calculator className={commonStyles.calculator} id="calculator" />
+      <Calculator2 className={commonStyles.calculator} id="calculator" />
     </Layout>
   )
 }
