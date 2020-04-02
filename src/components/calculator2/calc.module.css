@@ -23,10 +23,6 @@
 }
 
 .radio {
-  display: inline-block;
-}
-
-.radio {
   margin: 8px 0;
 }
 
@@ -79,4 +75,9 @@
   height: calc(var(--md-radio-checked-size) * 1px);
   transform: scale(0);
   background: var(--md-radio-checked-color);
+}
+@media all and (min-width: 768px) {
+  .radio {
+    display: inline-block;
+  }
 }

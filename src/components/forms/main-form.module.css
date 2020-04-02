@@ -42,6 +42,9 @@
     width: 100%;
     display: block;
   }
+  .inputFieldTitle {
+    margin: 0 0 16px;
+  }
 }
 
 .mainFormTitle {

@@ -2,8 +2,8 @@
   background-color: #f1f2d3;
   border-radius: 5px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
 .priceCol {
@@ -13,11 +13,7 @@
 }
 
 .priceCol:first-child {
-  padding-right: 6px;
-}
-
-.priceCol:last-child {
-  padding-left: 0;
+  padding-bottom: 0;
 }
 
 .priceTitle,
@@ -25,6 +21,7 @@
   font-size: 14px;
   line-height: 16px;
   margin: 0;
+  text-align: center;
 }
 
 .priceTitle {
@@ -36,7 +33,7 @@
 }
 
 .priceValue {
-  text-align: right;
+  text-align: center;
   font-size: 18px;
   font-weight: 700;
   line-height: 25px;
@@ -46,6 +43,26 @@
 
 @media all and (min-width: 768px) {
   .price {
-    margin: 0 0 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .priceCol:first-child {
+    padding-right: 6px;
+    padding-bottom: 16px;
+  }
+
+  .priceCol:last-child {
+    padding-left: 0;
+  }
+
+  .priceValue {
+    text-align: right;
+  }
+
+  .priceTitle,
+  .priceText {
+    text-align: initial;
   }
 }

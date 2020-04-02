@@ -70,6 +70,10 @@ export const Calculator2 = ({ id, className }) => {
           Spočítej si orientační cenu svého programu
         </h3>
         <MainForm amount={amount} price={price} />
+        <p className={cx(styles.calculatorTextMuted, "text-center")}>
+          Cena měsíčního programu je individuální a bude upřesněna dle
+          stanoveného příjmu na míru.
+        </p>
       </Container>
     </section>
   )
