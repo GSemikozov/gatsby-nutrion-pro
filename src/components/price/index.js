@@ -29,7 +29,7 @@ export const Price = ({ price = 0, plan = null }) => {
   return (
     <div className={styles.price}>
       <div className={styles.priceCol}>
-        <h5 className={styles.priceTitle}>Jaké je tvojé pohlaví?</h5>
+        <h5 className={styles.priceTitle}>Průměrná cena za den</h5>
         <p className={styles.priceText}>včetně dovozu</p>
       </div>
       <div className={styles.priceCol}>
