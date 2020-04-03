@@ -5,11 +5,15 @@
   overflow: hidden;
 }
 
-.mainForm > * {
+.mainForm.heroForm {
+  padding: 24px;
+}
+
+.mainForm:not(.heroForm) > * {
   padding: 34px;
 }
 
-.mainForm > *:last-child {
+.mainForm:not(.heroForm) > *:last-child {
   background-color: #f8f8f2;
 }
 
@@ -22,21 +26,25 @@
 }
 
 @media all and (min-width: 992px) {
-  .mainForm {
+  .mainForm.heroForm {
+    padding: 40px 36px;
+  }
+
+  .mainForm:not(.heroForm) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .mainForm > * {
+  .mainForm:not(.heroForm) > * {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 34px;
   }
-  .mainForm > *:first-child {
+  .mainForm:not(.heroForm) > *:first-child {
     flex-grow: 1;
   }
-  .mainForm > *:last-child {
+  .mainForm:not(.heroForm) > *:last-child {
     flex: 1 0 324px;
     max-width: 324px;
     width: 100%;

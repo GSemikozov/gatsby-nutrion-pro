@@ -24,51 +24,49 @@ export const OrderConsultationFormLayout = ({
   className,
 }) => {
   return (
-    <div className={cx(mainFormStyles.mainFormBox, className)}>
-      <Form
-        className={mainFormStyles.mainForm}
-        name="order-consultation"
-        method="post"
-      >
-        <div className={styles.inputField}>
-          <label className={styles.label}>Telefon *</label>
-          <FastField
-            component="input"
-            type="text"
-            name="phone"
-            className={styles.input}
-          />
-          {touched.phone && errors.phone && (
-            <span className={styles.error}>{errors.phone}</span>
-          )}
-        </div>
-        <div className={styles.inputField}>
-          <label htmlFor="promo" className={styles.label}>
-            Promo kód
-          </label>
-          <FastField
-            component="input"
-            type="text"
-            name="promo"
-            className={styles.input}
-          />
-          {touched.promo && errors.promo && (
-            <span className={styles.error}>{errors.promo}</span>
-          )}
-        </div>
-        <div className={mainFormStyles.buttons}>
-          <Button
-            name="submit"
-            type="primary"
-            buttonType="submit"
-            disabled={isSubmitting}
-            className={mainFormStyles.submitButton}
-          >
-            Zavolejte mi
-          </Button>
-        </div>
-      </Form>
-    </div>
+    <Form
+      className={cx(mainFormStyles.mainForm, mainFormStyles.heroForm)}
+      name="order-consultation"
+      method="post"
+    >
+      <div className={styles.inputField}>
+        <label className={styles.label}>Telefon *</label>
+        <FastField
+          component="input"
+          type="text"
+          name="phone"
+          className={styles.input}
+        />
+        {touched.phone && errors.phone && (
+          <span className={styles.error}>{errors.phone}</span>
+        )}
+      </div>
+      <div className={styles.inputField}>
+        <label htmlFor="promo" className={styles.label}>
+          Promo kód
+        </label>
+        <FastField
+          component="input"
+          type="text"
+          name="promo"
+          className={styles.input}
+        />
+        {touched.promo && errors.promo && (
+          <span className={styles.error}>{errors.promo}</span>
+        )}
+      </div>
+      <div className={mainFormStyles.buttons}>
+        <Button
+          name="submit"
+          type="primary"
+          buttonType="submit"
+          disabled={isSubmitting}
+          className={mainFormStyles.submitButton}
+        >
+          Zavolejte mi
+        </Button>
+      </div>
+    </Form>
   )
 }
 

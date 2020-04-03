@@ -16,7 +16,7 @@ import styles from './hero.module.css';
 const ModalForm = () => (
   <>
     <h3 className={cx("text-center", styles.heroModalTitle)}>Mám zájem</h3>
-    <OrderConsultationForm className={styles.heroFormWrapper} />
+    <OrderConsultationForm />
   </>
 )
 
@@ -53,22 +53,16 @@ export const Hero = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <Button
-            type="primary"
-            className={styles.button}
-            // handleClick={show}
-            handleClick={onLinkClick("calculator")}
-          >
-            {/* Mám zájem */}
-            Spočítat cenu
+          <Button type="primary" className={styles.button} handleClick={show}>
+            Mám zájem
           </Button>
-          {/* <Button
+          <Button
             type="unstyled"
             className={styles.link}
             handleClick={onLinkClick("calculator")}
           >
             Spočítat cenu
-          </Button> */}
+          </Button>
           <RenderModal className="modalForm">
             <ModalForm />
           </RenderModal>
