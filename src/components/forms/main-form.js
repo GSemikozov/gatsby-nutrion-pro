@@ -21,15 +21,15 @@ Yup.addMethod(Yup.string, "phone", function() {
 })
 
 export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
-  const [plan, setPlan] = useState("Zhubnout")
+  const [plan, setPlan] = useState(null)
   const radioChangeHandler = e => {
     setPlan(e.target.value)
   }
-  const [gender, setGender] = useState("male")
+  const [gender, setGender] = useState(null)
   const genderChangeHandler = e => {
     setGender(e.target.value)
   }
-  const [price, setPrice] = useState(420)
+  const [price, setPrice] = useState(null)
 
   useEffect(() => {
     const priceValue = getPrice(gender, plan)
@@ -77,65 +77,69 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
         <div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>Tvůj cíl</h5>
-            <div className={stylesRadio.radio}>
-              <input
-                id="Zhubnout"
-                onChange={e => radioChangeHandler(e)}
-                checked={plan === "Zhubnout"}
-                value="Zhubnout"
-                type="radio"
-                name="program"
-              />
-              <label htmlFor="Zhubnout">Zhubnout</label>
-            </div>
-            <div className={stylesRadio.radio}>
-              <input
-                id="Udržovat"
-                onChange={e => radioChangeHandler(e)}
-                checked={plan === "Udržovat"}
-                value="Udržovat"
-                type="radio"
-                name="program"
-              />
-              <label htmlFor="Udržovat">Udržovat</label>
-            </div>
-            <div className={stylesRadio.radio}>
-              <input
-                id="Nabírat"
-                onChange={e => radioChangeHandler(e)}
-                checked={plan === "Nabírat"}
-                value="Nabírat"
-                type="radio"
-                name="program"
-              />
-              <label htmlFor="Nabírat">Nabírat</label>
+            <div className={stylesRadio.radioBtns3}>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <input
+                  id="Zhubnout"
+                  onChange={e => radioChangeHandler(e)}
+                  checked={plan === "Zhubnout"}
+                  value="Zhubnout"
+                  type="radio"
+                  name="program"
+                />
+                <label htmlFor="Zhubnout">Zhubnout</label>
+              </div>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <input
+                  id="Udržovat"
+                  onChange={e => radioChangeHandler(e)}
+                  checked={plan === "Udržovat"}
+                  value="Udržovat"
+                  type="radio"
+                  name="program"
+                />
+                <label htmlFor="Udržovat">Udržovat</label>
+              </div>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <input
+                  id="Nabírat"
+                  onChange={e => radioChangeHandler(e)}
+                  checked={plan === "Nabírat"}
+                  value="Nabírat"
+                  type="radio"
+                  name="program"
+                />
+                <label htmlFor="Nabírat">Nabírat</label>
+              </div>
             </div>
           </div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>
               Jaké je tvojé pohlaví?
             </h5>
-            <div className={stylesRadio.radio}>
-              <input
-                id="male"
-                onChange={e => genderChangeHandler(e)}
-                checked={gender === "male"}
-                value="male"
-                type="radio"
-                name="gender"
-              />
-              <label htmlFor="male">Muž</label>
-            </div>
-            <div className={stylesRadio.radio}>
-              <input
-                id="female"
-                onChange={e => genderChangeHandler(e)}
-                checked={gender === "female"}
-                value="female"
-                type="radio"
-                name="gender"
-              />
-              <label htmlFor="female">Žena</label>
+            <div className={stylesRadio.radioBtns2}>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <input
+                  id="female"
+                  onChange={e => genderChangeHandler(e)}
+                  checked={gender === "female"}
+                  value="female"
+                  type="radio"
+                  name="gender"
+                />
+                <label htmlFor="female">Žena</label>
+              </div>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <input
+                  id="male"
+                  onChange={e => genderChangeHandler(e)}
+                  checked={gender === "male"}
+                  value="male"
+                  type="radio"
+                  name="gender"
+                />
+                <label htmlFor="male">Muž</label>
+              </div>
             </div>
           </div>
           <Price price={price} />

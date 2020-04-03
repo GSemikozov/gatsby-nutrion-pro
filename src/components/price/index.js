@@ -34,7 +34,7 @@ export const Price = ({ price = 0, plan = null }) => {
       </div>
       <div className={styles.priceCol}>
         <div className={styles.priceValue}>
-          od <span>{price}</span> Kč
+          <span>{price ? price : "420"}</span> Kč
         </div>
       </div>
     </div>
