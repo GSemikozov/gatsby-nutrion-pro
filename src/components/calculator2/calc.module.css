@@ -62,8 +62,9 @@
   display: none;
 }
 
-.radio input[type="radio"]:checked + label {
+.radio.radioBtn input[type="radio"]:checked + label {
   border-color: var(--color-green);
+  color: var(--color-green);
 }
 
 .radio input[type="radio"] {
