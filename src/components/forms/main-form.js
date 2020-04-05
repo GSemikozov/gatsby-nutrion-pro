@@ -7,7 +7,6 @@ import * as Yup from 'yup';
 
 import { Button } from '../button';
 import stylesRadio from '../calculator2/calc.module.css';
-import { RadioButton } from '../calculator2/radio';
 import { Price } from '../price';
 import styles from './form.module.css';
 import mainFormStyles from './main-form.module.css';
@@ -20,16 +19,65 @@ Yup.addMethod(Yup.string, "phone", function() {
   )
 })
 
-export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
-  const [plan, setPlan] = useState(null)
-  const radioChangeHandler = e => {
-    setPlan(e.target.value)
-  }
-  const [gender, setGender] = useState(null)
-  const genderChangeHandler = e => {
-    setGender(e.target.value)
-  }
-  const [price, setPrice] = useState(null)
+// Input feedback
+const InputFeedback = ({ error }) =>
+  error ? <div className={cx("input-feedback")}>{error}</div> : null
+
+// Radio input
+const RadioButton = ({
+  field: { name, value, onChange },
+  id,
+  label,
+  className,
+  ...props
+}) => {
+  return (
+    <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+      {console.log("radio", "name:", name, "label:", label, "value:", value)}
+      <input
+        name={name}
+        id={id}
+        type="radio"
+        value={label}
+        checked={label === value}
+        onChange={onChange}
+        {...props}
+      />
+      <label htmlFor={id}>{label}</label>
+    </div>
+  )
+}
+
+// Radio group
+const RadioButtonGroup = ({
+  value,
+  error,
+  touched,
+  id,
+  className,
+  onChange,
+  children,
+}) => {
+  const classes = cx(
+    {
+      success: value || (!error && touched),
+      error: !!error && touched,
+    },
+    className
+  )
+
+  return (
+    <div className={classes} onChange={onChange}>
+      {children}
+      {touched && <InputFeedback error={error} />}
+    </div>
+  )
+}
+
+const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
+  const [plan, setPlan] = useState("Zhubnout")
+  const [gender, setGender] = useState("Žena")
+  const [price, setPrice] = useState()
 
   useEffect(() => {
     const priceValue = getPrice(gender, plan)
@@ -38,7 +86,7 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
 
   const getPrice = (gender, plan) => {
     let price = null
-    if (gender === "male") {
+    if (gender === "Muž") {
       switch (plan) {
         case "Zhubnout":
           price = 460
@@ -51,7 +99,7 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
           break
       }
     }
-    if (gender === "female") {
+    if (gender === "Žena") {
       switch (plan) {
         case "Zhubnout":
           price = 420
@@ -77,70 +125,64 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
         <div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>Tvůj cíl</h5>
-            <div className={stylesRadio.radioBtns3}>
-              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
-                <input
-                  id="Zhubnout"
-                  onChange={e => radioChangeHandler(e)}
-                  checked={plan === "Zhubnout"}
-                  value="Zhubnout"
-                  type="radio"
-                  name="program"
-                />
-                <label htmlFor="Zhubnout">Zhubnout</label>
-              </div>
-              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
-                <input
-                  id="Udržovat"
-                  onChange={e => radioChangeHandler(e)}
-                  checked={plan === "Udržovat"}
-                  value="Udržovat"
-                  type="radio"
-                  name="program"
-                />
-                <label htmlFor="Udržovat">Udržovat</label>
-              </div>
-              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
-                <input
-                  id="Nabírat"
-                  onChange={e => radioChangeHandler(e)}
-                  checked={plan === "Nabírat"}
-                  value="Nabírat"
-                  type="radio"
-                  name="program"
-                />
-                <label htmlFor="Nabírat">Nabírat</label>
-              </div>
-            </div>
+            <RadioButtonGroup
+              id="radioGroup2"
+              value={values.plan}
+              error={errors.plan}
+              touched={touched.plan}
+              className={stylesRadio.radioBtns3}
+              onChange={e => {
+                console.log("set new plan", e.target.value)
+                setPlan(e.target.value)
+              }}
+            >
+              <FastField
+                component={RadioButton}
+                name="plan"
+                id="plan1"
+                label="Zhubnout"
+              />
+              <FastField
+                component={RadioButton}
+                name="plan"
+                id="plan2"
+                label="Udržovat"
+              />
+              <FastField
+                component={RadioButton}
+                name="plan"
+                id="plan3"
+                label="Nabírat"
+              />
+            </RadioButtonGroup>
           </div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>
               Jaké je tvojé pohlaví?
             </h5>
-            <div className={stylesRadio.radioBtns2}>
-              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
-                <input
-                  id="female"
-                  onChange={e => genderChangeHandler(e)}
-                  checked={gender === "female"}
-                  value="female"
-                  type="radio"
-                  name="gender"
-                />
-                <label htmlFor="female">Žena</label>
-              </div>
-              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
-                <input
-                  id="male"
-                  onChange={e => genderChangeHandler(e)}
-                  checked={gender === "male"}
-                  value="male"
-                  type="radio"
-                  name="gender"
-                />
-                <label htmlFor="male">Muž</label>
-              </div>
-            </div>
+            <RadioButtonGroup
+              id="radioGroup3"
+              value={values.gender}
+              error={errors.gender}
+              touched={touched.gender}
+              className={stylesRadio.radioBtns2}
+              onChange={e => {
+                setGender(e.target.value)
+              }}
+            >
+              <FastField
+                component={RadioButton}
+                name="gender"
+                id="female"
+                label="Žena"
+              />
+              <FastField
+                component={RadioButton}
+                name="gender"
+                id="male"
+                label="Muž"
+              />
+            </RadioButtonGroup>
           </div>
           <Price price={price} />
         </div>
@@ -176,9 +218,6 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
               <span className={styles.error}>{errors.promo}</span>
             )}
           </div>
-          <div>
-            <FastField component="input" type="hidden" name="amount_kal" />
-          </div>
           <div className={mainFormStyles.buttons}>
             <Button
               name="submit"
@@ -197,12 +236,12 @@ export const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
 }
 
 export const MainForm = withFormik({
-  mapPropsToValues: (plan, gender, price) => ({
+  mapPropsToValues: () => ({
     phone: "+420",
     promo: "",
-    plan: `${plan}` || "",
-    gender: `${gender}` || "",
-    price: `${price}` || "0",
+    plan: "Zhubnout",
+    gender: "Žena",
+    price: "0",
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
