@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '../button';
 import styles from '../calculator/calculator.module.css';
 import { Container } from '../container';
-import { MainForm } from '../forms/main-form';
+import { MainForm, WrappedForm } from '../forms/main-form';
 import { Price } from '../price';
 import styles2 from './calc.module.css';
 

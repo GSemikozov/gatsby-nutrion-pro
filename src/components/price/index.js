@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { FastField } from 'formik';
 import React, { useEffect, useState } from 'react';
 
 import styles from './price.module.css';
@@ -34,7 +35,7 @@ export const Price = ({ price = 0, plan = null }) => {
       </div>
       <div className={styles.priceCol}>
         <div className={styles.priceValue}>
-          <span>{price ? price : "420"}</span> Kč
+          <span id="price">{price ? price : "420"}</span> Kč
         </div>
       </div>
     </div>

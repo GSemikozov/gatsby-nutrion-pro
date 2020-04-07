@@ -1,7 +1,7 @@
 // import cx from 'classnames';
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
@@ -74,14 +74,19 @@ const RadioButtonGroup = ({
   )
 }
 
+export const WrappedForm = ({ isSubmitting, values, errors, touched }) => {
+  return <MainForm />
+}
+
 const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
   const [plan, setPlan] = useState("Zhubnout")
   const [gender, setGender] = useState("Žena")
-  const [price, setPrice] = useState()
+  const [price, setPrice] = useState("420")
 
   useEffect(() => {
     const priceValue = getPrice(gender, plan)
     setPrice(priceValue)
+    console.log("from effect", price)
   }, [gender, plan])
 
   const getPrice = (gender, plan) => {
@@ -132,7 +137,6 @@ const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
               touched={touched.plan}
               className={stylesRadio.radioBtns3}
               onChange={e => {
-                console.log("set new plan", e.target.value)
                 setPlan(e.target.value)
               }}
             >
@@ -228,6 +232,7 @@ const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
             >
               Nezávazně objednat
             </Button>
+            <input type="hidden" name="price" value={price} />
           </div>
         </div>
       </Form>
@@ -241,7 +246,6 @@ export const MainForm = withFormik({
     promo: "",
     plan: "Zhubnout",
     gender: "Žena",
-    price: "0",
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
@@ -259,7 +263,7 @@ export const MainForm = withFormik({
       gender: Yup.string(),
     }),
   handleSubmit: async (
-    { phone, promo, plan, gender, price },
+    { phone, promo, plan, gender },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
@@ -270,6 +274,7 @@ export const MainForm = withFormik({
       let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
       let UTM_TERM = url.searchParams.get("utm_term")
       let UTM_CONTENT = url.searchParams.get("utm_content")
+      let getPrice = document.querySelector('[name="price"]').value
 
       let data = {
         form_name: "main-contact",
@@ -277,7 +282,7 @@ export const MainForm = withFormik({
         promo,
         plan,
         gender,
-        price,
+        price: getPrice,
         utm_source: UTM_SOURCE,
         utm_medium: UTM_MEDIUM,
         utm_campaign: UTM_CAMPAIGN,
@@ -285,17 +290,20 @@ export const MainForm = withFormik({
         utm_content: UTM_CONTENT,
       }
 
-      // await console.log(JSON.stringify(data))
+      await console.log(JSON.stringify(data))
 
       await fetch("/api/application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
+      // await setPrice("420")
       await setSubmitting(false)
       await setFieldValue("success", true)
       setTimeout(() => {
         resetForm()
+        document.querySelector('[name="price"]').value = 420
+        document.querySelector("#price").textContent = 420
         window.location.href = "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
