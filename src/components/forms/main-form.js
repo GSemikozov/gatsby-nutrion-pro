@@ -251,6 +251,7 @@ export const MainForm = withFormik({
     utm_campaign: "",
     utm_term: "",
     utm_content: "",
+    referrer: "",
     success: false,
   }),
   validationSchema: () =>
@@ -274,6 +275,10 @@ export const MainForm = withFormik({
       let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
       let UTM_TERM = url.searchParams.get("utm_term")
       let UTM_CONTENT = url.searchParams.get("utm_content")
+      let referrer = ""
+      if (document.referrer !== "") {
+        referrer = new URL(document.referrer).hostname
+      }
       let getPrice = document.querySelector('[name="price"]').value
 
       let data = {
@@ -288,6 +293,7 @@ export const MainForm = withFormik({
         utm_campaign: UTM_CAMPAIGN,
         utm_term: UTM_TERM,
         utm_content: UTM_CONTENT,
+        referrer: referrer,
       }
 
       await console.log(JSON.stringify(data))
