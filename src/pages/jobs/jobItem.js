@@ -28,7 +28,7 @@ const renderJobs = () => [
   />,
   <Job
     key="2"
-    title="Specialista pro příchozí poptávky"
+    title="Obchodní zástupce"
     description="Do našeho mladého týmu hledáme šikovného/ou kolegu/yni na pozici Telesales specialist(k)y."
     date="12.12.2019"
     color="#EAEFF7"

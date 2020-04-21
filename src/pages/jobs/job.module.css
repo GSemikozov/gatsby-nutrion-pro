@@ -6,6 +6,7 @@
   margin: 0;
 }
 
+.job h1,
 .job h3 {
   margin-bottom: 20px;
 }
@@ -18,17 +19,10 @@
 }
 
 .textHeader {
-  text-transform: uppercase;
-  font-family: bebas-neue-by-fontfabric;
-  font-size: 54px;
-  color: #21262d;
-  letter-spacing: 0;
-  line-height: 65px;
   margin-bottom: 20px;
 }
 
 .textSubHeader {
-  font-family: Circe;
   font-size: 24px;
   color: #363c43;
   letter-spacing: 0;
@@ -37,9 +31,7 @@
 }
 
 .text {
-  font-family: Circe;
   font-size: 18px;
-  color: #180000;
   letter-spacing: 0;
   line-height: 25px;
   text-align: justify;
@@ -106,19 +98,9 @@
   text-decoration: none;
 }
 
-.jobsEmail {
-  display: block;
-  font-family: Circe;
-  text-transform: uppercase;
-  font-family: bebas-neue-by-fontfabric;
-  font-size: 28px;
-  color: #09c404;
-  letter-spacing: 0;
-  text-decoration: none;
-}
-
 .newList {
   list-style-type: none;
+  line-height: 1.6;
 }
 
 .newList:before {

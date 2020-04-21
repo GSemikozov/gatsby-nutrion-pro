@@ -105,7 +105,7 @@ const JobPage = () => {
           <br />
           <br />
           <a className={styles.backButton} href="/jobs">
-            BACK TO VACANSIES
+            Zpět
           </a>
         </div>
       </div>

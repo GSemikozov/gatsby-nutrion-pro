@@ -2,7 +2,7 @@
   /* max-width: 1200px; */
   margin: 0 auto;
   padding-bottom: 85px;
-  font-family: "Circle", "Gilroy", sans-serif;
+  font-family: "Gilroy", sans-serif;
 }
 
 .title {
@@ -62,13 +62,10 @@
 
 .jobTitle {
   text-transform: uppercase;
-  /* font-family: bebas-neue-by-fontfabric; */
-  /* font-size: 43px; */
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.2;
   color: #21262d;
   letter-spacing: 0;
-  /* line-height: 42px; */
   margin-top: 110px;
 }
 

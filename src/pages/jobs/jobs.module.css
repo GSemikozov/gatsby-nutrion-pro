@@ -17,9 +17,8 @@
 .textHeader {
   text-transform: uppercase;
   letter-spacing: 0;
-  line-height: 65px;
-  font-size: 73px;
-  color: #363c43;
+  line-height: 1.2;
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
