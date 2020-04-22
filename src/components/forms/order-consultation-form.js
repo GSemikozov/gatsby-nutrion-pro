@@ -88,10 +88,16 @@ export const OrderConsultationForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
+      let referrer = ""
+      if (document.referrer !== "") {
+        referrer = new URL(document.referrer).hostname
+      }
+
       let data = {
         form_name: "order-consultation",
         phone,
         promo,
+        referrer: referrer,
       }
 
       await fetch("/api/application", {

@@ -11,8 +11,10 @@ import mainFormStyles from './special-form.module.css';
 const rePhoneNumber = /^(\+)?(\(\d{2,3}\) ?\d|\d)(([ \-]?\d)|( ?\(\d{2,3}\) ?)){5,12}\d$/
 
 Yup.addMethod(Yup.string, "phone", function() {
-  return this.test("phone", "Telefonní číslo musí obsahovat 12 až 13 znaků", value =>
-    rePhoneNumber.test(value)
+  return this.test(
+    "phone",
+    "Telefonní číslo musí obsahovat 12 až 13 znaků",
+    value => rePhoneNumber.test(value)
   )
 })
 
@@ -81,8 +83,8 @@ export const OrderSpecialOfferForm = withFormik({
   validationSchema: () =>
     Yup.object().shape({
       phone: Yup.string()
-        .max(13, 'Telefonní číslo musí obsahovat 12 až 13 znaků')
-        .min(12, 'Telefonní číslo musí obsahovat 12 až 13 znaků')
+        .max(13, "Telefonní číslo musí obsahovat 12 až 13 znaků")
+        .min(12, "Telefonní číslo musí obsahovat 12 až 13 znaků")
         .phone(),
       promo: Yup.string(),
     }),
@@ -91,10 +93,16 @@ export const OrderSpecialOfferForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
+      let referrer = ""
+      if (document.referrer !== "") {
+        referrer = new URL(document.referrer).hostname
+      }
+
       let data = {
         form_name: "order-special",
         phone,
         promo,
+        referrer: referrer,
       }
 
       await fetch("/api/application", {

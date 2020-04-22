@@ -85,11 +85,17 @@ export const LandingForm = withFormik({
     { phone, promo },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
+    let referrer = ""
+    if (document.referrer !== "") {
+      referrer = new URL(document.referrer).hostname
+    }
+
     try {
       let data = {
         form_name: "landing",
         phone,
         promo,
+        referrer: referrer,
       }
 
       await fetch("/api/application", {

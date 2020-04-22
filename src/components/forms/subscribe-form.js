@@ -66,16 +66,15 @@ export const SubscribeForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
-      // const encode = data => {
-      //   return Object.keys(data)
-      //     .map(
-      //       key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-      //     )
-      //     .join("&")
-      // }
+      let referrer = ""
+      if (document.referrer !== "") {
+        referrer = new URL(document.referrer).hostname
+      }
+
       const data = {
         form_name: "subscribe",
         email,
+        referrer: referrer,
       }
       await fetch("/api/application", {
         method: "POST",
