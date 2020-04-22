@@ -280,6 +280,11 @@ export const MainForm = withFormik({
         referrer = new URL(document.referrer).hostname
       }
       let getPrice = document.querySelector('[name="price"]').value
+      let roistat_visit =
+        document.cookie.replace(
+          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
+          "$1"
+        ) || ""
 
       let data = {
         form_name: "main-contact",
@@ -294,6 +299,7 @@ export const MainForm = withFormik({
         utm_term: UTM_TERM,
         utm_content: UTM_CONTENT,
         referrer: referrer,
+        roistat: roistat_visit,
       }
 
       await console.log(JSON.stringify(data))
