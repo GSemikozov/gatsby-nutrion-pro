@@ -16,9 +16,9 @@ const JobPage = () => {
           <h1 className={styles.textHeader}>Obchodní zástupce</h1>
           <p className={styles.text}>
             Do našeho mladého týmu hledáme šikovného/ou kolegu/yni na pozici
-            Obchodní zástupce. Máš rád/a lidí, telefonická komunikace pro tebe
-            není stressful a chceš se podílet na rozvoji nového progresivního
-            řešení v oblasti zdravé výživy? Tak jsi tady správně!
+            Obchodní zástupce. Rád/a komunikuješ s lidmi a chceš se podílet na
+            rozvoji nového progresivního řešení v oblasti zdravé výživy? Tak jsi
+            tady správně!
           </p>
           <p className={styles.text}>
             NutritionPro je nový, rychle rostoucí startup z oblasti FoodTech.
@@ -28,21 +28,28 @@ const JobPage = () => {
           </p>
 
           <h3 className={styles.textSubHeader}>Co u nás budeš dělat?</h3>
-          <p className={styles.text}>
-            Telefonická komunikace s klienty, kteří již sami projevili zájem o
-            naše produkty. Veškerý prodej je zaměřen pouze na příchozí poptávky.
-            To znamená, že nebudeš dělat cold calls :)
-          </p>
+          <ul className={styles.textUl}>
+            <li className={styles.newList}>
+              Převezmeš na sebe telefonickou komunikaci s potenciálními klienty,
+              kteří již sami projevili zájem o naše produkty.{" "}
+            </li>
+            <li className={styles.newList}>
+              Veškerý prodej je zaměřen pouze na příchozí poptávky z našeho
+              webu, cold calls u nás dělat nebudeš :){" "}
+            </li>
+            <li className={styles.newList}>
+              Všemu Tě naučíme, takže nevadí, pokud nemáš mnoholeté zkušenosti,
+              stačí chuť do práce!
+            </li>
+          </ul>
           <h3 className={styles.textSubHeader}>Jak bychom tě představovali?</h3>
           <ul className={styles.textUl}>
             <li className={styles.newList}>
-              Energická, komunikativní a pozitivní osobnost
+              Máš výborné komunikační schopnosti
             </li>
-            <li className={styles.newList}>Orientace na výsledek</li>
-            <li className={styles.newList}>Flexibilita</li>
-            <li className={styles.newList}>
-              Praxe v oblasti telesales (alespoň 1 rok) nutností
-            </li>
+            <li className={styles.newList}>Nebojíš se telefonovat</li>
+            <li className={styles.newList}>Baví Tě zdravý životní styl</li>
+            <li className={styles.newList}>Jsi otevřený/á novým věcem</li>
           </ul>
 
           <h3 className={styles.textSubHeader}>Co získáš od nás?</h3>
@@ -73,10 +80,11 @@ const JobPage = () => {
           <h3 className={styles.textSubHeader}>
             Těšíme se na tvoje CV a rádi Tě uvítáme v našem týmu NutritionPro!
           </h3>
-          <h3 className={styles.textSubHeader}>Kontakty:</h3>
+          <p className={styles.text}>Kontakty:</p>
           <a className={styles.text} href="mailto:marie@nutritionpro.cz">
             marie@nutritionpro.cz
           </a>
+          <br />
           <a className={styles.text} href="tel:+420775514775">
             +420 775 514 775
           </a>
