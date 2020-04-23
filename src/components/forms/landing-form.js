@@ -72,6 +72,7 @@ export const LandingForm = withFormik({
   mapPropsToValues: () => ({
     phone: "+420",
     promo: "",
+    referrer: "",
     success: false,
   }),
   validationSchema: () =>

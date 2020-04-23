@@ -74,6 +74,7 @@ export const OrderConsultationForm = withFormik({
   mapPropsToValues: () => ({
     phone: "+420",
     promo: "",
+    referrer: "",
     success: false,
   }),
   validationSchema: () =>

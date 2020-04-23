@@ -53,6 +53,7 @@ export const SubscribeFormLayout = ({
 export const SubscribeForm = withFormik({
   mapPropsToValues: () => ({
     email: "",
+    referrer: "",
     success: false,
   }),
   validationSchema: () =>

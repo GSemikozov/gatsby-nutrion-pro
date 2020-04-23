@@ -99,6 +99,7 @@ export const ContactFormLayout = ({
 export const ContactForm2 = withFormik({
   mapPropsToValues: () => ({
     phone: "+420",
+    referrer: "",
     success: false,
   }),
   validationSchema: () =>
