@@ -57,6 +57,30 @@ module.exports = {
         path: `${__dirname}/src/fonts/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: `${__dirname}/src/components/layout/index.js`,
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/locale`,
+    //     name: `locale`,
+    //   },
+    // },
+    // {
+    //   resolve: "@wapps/gatsby-plugin-i18next",
+    //   options: {
+    //     langKeyDefault: "en",
+    //     availableLngs: ["en", "cz"],
+    //     fallbackLng: "en",
+    //     i18nextOptions: {
+    //       debug: false,
+    //     },
+    //   },
+    // },
     // { // we can use it instead of gatsby-source-filesystem
     //   resolve: "gatsby-plugin-web-font-loader",
     //   options: {

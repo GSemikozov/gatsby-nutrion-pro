@@ -4,7 +4,6 @@ import React from 'react';
 import { Button } from '../components/button';
 import { Calculator2 } from '../components/calculator2';
 import { Container } from '../components/container';
-import { Layout } from '../components/layout';
 import { useSmoothScroll } from '../hooks/useSmoothScroll';
 import productImg1 from '../images/product-1-bg.jpg';
 import productImg2 from '../images/product-2-bg.jpg';
@@ -54,7 +53,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
     return img
   }
   return (
-    <Layout>
+    <>
       <section className={styles.productHero}>
         <img src={img(productId)} className={styles.productHeroImg} alt="bg" />
         <div className={styles.productHeroCaption}>
@@ -253,7 +252,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
         </Container>
       </section>
       <Calculator2 className={commonStyles.calculator} id="calculator" />
-    </Layout>
+    </>
   )
 }
 

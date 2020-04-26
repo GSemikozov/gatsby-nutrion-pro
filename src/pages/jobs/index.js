@@ -1,13 +1,12 @@
 import React from 'react';
 
 import { Container } from '../../components/container';
-import { Layout } from '../../components/layout';
 import SEO from '../../components/seo';
 import Jobs from './jobItem';
 import styles from './jobs.module.css';
 
 const JobsPage = () => (
-  <Layout>
+  <>
     <SEO title="Dělej, co tě baví!" />
     <Container>
       <div className={styles.terms}>
@@ -24,7 +23,7 @@ const JobsPage = () => (
       <div className={styles.textSubHeader}>Právě hledáme:</div>
       <Jobs />
     </Container>
-  </Layout>
+  </>
 )
 
 export default JobsPage

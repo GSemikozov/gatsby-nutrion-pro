@@ -6,15 +6,15 @@ import { FAQ } from '../components/faq';
 import { FoodCarouselSection } from '../components/food';
 import { Hero } from '../components/hero';
 import { HowItWork } from '../components/howitwork';
-import { Layout } from '../components/layout';
 import { PreFooter } from '../components/prefooter';
 import { Program } from '../components/program';
 import { Reviews } from '../components/reviews';
 import SEO from '../components/seo';
 import { TryFood } from '../components/tryfood';
 
+// import Layout from '../components/layout';
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
     <Hero />
     <About />
@@ -26,7 +26,7 @@ const IndexPage = () => (
     <Reviews id="reviews" />
     <FAQ id="faq" />
     <PreFooter />
-  </Layout>
+  </>
 )
 
 // ReactDOM.render(<App />, document.getElementById("root"))

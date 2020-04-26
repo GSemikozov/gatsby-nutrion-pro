@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Layout } from '../../components/layout';
 import SEO from '../../components/seo';
 import styles from './job.module.css';
 
@@ -8,7 +7,7 @@ import styles from './job.module.css';
 
 const JobPage = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Nutriční specialista" />
 
       <div className={styles.bgJob}>
@@ -95,7 +94,7 @@ const JobPage = () => {
           </a>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 

@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { handleMenuLinkClick } from '../../../helpers';
 import { Button } from '../../button';
@@ -10,6 +11,7 @@ import IconMenu from '../icons/icon-hamburger.svg';
 import IconMap from '../icons/icon-map.svg';
 import IconPhone from '../icons/icon-phone.svg';
 import IconProfile from '../icons/icon-user.svg';
+import LanguageMenu from './lang-menu';
 import { ModalLocation } from './modal';
 import styles from './navbar.module.css';
 
@@ -20,6 +22,8 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
   }
 
   const { show, hide, RenderModal } = useModal()
+
+  const { t } = useTranslation()
 
   return (
     <div className={styles.navbar}>
@@ -32,7 +36,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
         handleClick={show}
       >
         <img src={IconMap} className={styles.mapMark} alt="icon" />
-        <span className="visible-desktop">Praha</span>
+        <span className="visible-desktop">Praha {t("home.title")}</span>
         <img
           src={IconAngleDown}
           className={cx(styles.angleDown, "visible-desktop")}
@@ -65,6 +69,9 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       <a href="/app/login" className={cx(styles.navbarItem, styles.profile)}>
         <img src={IconProfile} className={styles.iconProfile} alt="icon" />
       </a>
+      <div className={cx(styles.navbarItem, styles.langSwitcher)}>
+        <LanguageMenu />
+      </div>
       <div
         className={cx(styles.navbarItem, styles.mobileMenuLink)}
         onClick={openMobileMenu()}

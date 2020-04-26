@@ -6,7 +6,6 @@ import Helmet from 'react-helmet';
 import { Button } from '../../components/button';
 import { Container } from '../../components/container';
 import { Counter } from '../../components/counter';
-import { Footer } from '../../components/footer';
 import { LandingForm } from '../../components/forms/landing-form';
 import { HowItWork } from '../../components/howitwork';
 import { useModal } from '../../components/modal';
@@ -57,6 +56,7 @@ const ImunitaPage = ({ location }) => {
     <main id="root">
       <Helmet>
         <script src="//code.jivosite.com/widget.js" jv-id="TLJ5HRqinQ" async />
+        <style>{`.wrapper > header { display: none; }`}</style>
       </Helmet>
       <SEOLanding />
       <section className={styles.hero}>
@@ -275,7 +275,6 @@ const ImunitaPage = ({ location }) => {
         </Container>
       </section>
       {/* <Reviews id="reviews" /> */}
-      <Footer />
     </main>
   )
 }

@@ -28,6 +28,12 @@
   color: var(--color-green);
 }
 
+.navbarItem.langSwitcher {
+  color: initial;
+  margin-left: 24px;
+  cursor: pointer;
+}
+
 .contacts {
   order: 1;
 }

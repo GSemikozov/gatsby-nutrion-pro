@@ -1,10 +1,10 @@
-// import { Link } from 'gatsby';
 import React from 'react';
 
 import { Button } from '../components/button';
 import { Container } from '../components/container';
-import { Layout } from '../components/layout';
+import Layout from '../components/layout';
 
+// import { Link } from 'gatsby';
 const ThankYou = () => (
   <Layout>
     <Container className="text-center">

@@ -5,10 +5,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import { withTrans } from '../../i18n/withTrans';
+import { LangProvider } from '../../utils/lang';
 import { Footer } from '../footer';
 import { Header } from '../header';
 
-export const Layout = ({ children }) => (
+const Layout = ({ children, t, i18n }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -25,7 +27,7 @@ export const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <LangProvider>
         <Helmet>
           <script
             src="//code.jivosite.com/widget.js"
@@ -40,7 +42,7 @@ export const Layout = ({ children }) => (
             <Footer />
           </>
         </div>
-      </>
+      </LangProvider>
     )}
   />
 )
@@ -48,3 +50,5 @@ export const Layout = ({ children }) => (
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
+export default withTrans(Layout)

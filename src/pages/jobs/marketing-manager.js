@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { Layout } from '../../components/layout';
 import SEO from '../../components/seo';
 import styles from './job.module.css';
 
 // import jobBgSrc from "../../images/job-bg.png"
 const JobPage = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Marketing manager" />
 
       <div className={styles.bgJob}>
@@ -121,7 +120,7 @@ const JobPage = () => {
           </a>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 
