@@ -23,7 +23,9 @@ const reducer = (state, action) => {
 
 export function LangProvider({ children }) {
   const langActive =
-    JSON.parse(localStorage.getItem("langActive")) || `{ id: "en", text: "EN" }`
+    (window !== "undefined" &&
+      JSON.parse(localStorage.getItem("langActive"))) ||
+    `{ id: "en", text: "EN" }`
 
   const initialState = {
     lang: lang,
