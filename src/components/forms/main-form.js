@@ -33,7 +33,6 @@ const RadioButton = ({
 }) => {
   return (
     <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
-      {console.log("radio", "name:", name, "label:", label, "value:", value)}
       <input
         name={name}
         id={id}
@@ -86,7 +85,6 @@ const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
   useEffect(() => {
     const priceValue = getPrice(gender, plan)
     setPrice(priceValue)
-    console.log("from effect", price)
   }, [gender, plan])
 
   const getPrice = (gender, plan) => {
@@ -302,7 +300,7 @@ export const MainForm = withFormik({
         roistat: roistat_visit,
       }
 
-      await console.log(JSON.stringify(data))
+      // await console.log(JSON.stringify(data))
 
       await fetch("/api/application", {
         method: "POST",
