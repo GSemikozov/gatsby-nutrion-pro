@@ -53,7 +53,7 @@ const FoodCarousel = () => {
   }
   return (
     <Slider {...settings}>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="1">
         <FoodCard img={img1} title="Kureci nudlicky s fazolovymi lusky">
           <FoodCardList>
             <FoodCardListItem text="268" title="kcal" />
@@ -63,7 +63,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="2">
         <FoodCard img={img2} title="Wrap s lososem">
           <FoodCardList>
             <FoodCardListItem text="333" title="kcal" />
@@ -73,7 +73,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="3">
         <FoodCard img={img3} title="Meal">
           <FoodCardList>
             <FoodCardListItem text="514" title="kcal" />
@@ -83,7 +83,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="4">
         <FoodCard
           img={img4}
           title="Salat s roastbeefem
@@ -97,7 +97,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="5">
         <FoodCard img={img5} title="Sendvic s krutim a kimchi omackou">
           <FoodCardList>
             <FoodCardListItem text="157" title="kcal" />
@@ -107,7 +107,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="6">
         <FoodCard
           img={img6}
           title="Sklenene nudle 
@@ -121,7 +121,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="7">
         <FoodCard img={img7} title="Nakyp bramborovy s masem">
           <FoodCardList>
             <FoodCardListItem text="468" title="kcal" />
@@ -131,7 +131,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="8">
         <FoodCard img={img8} title="Okoun s Kari omackou se zelim">
           <FoodCardList>
             <FoodCardListItem text="305" title="kcal" />
@@ -141,7 +141,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="9">
         <FoodCard img={img9} title="Pohankove karbanatky s cockou">
           <FoodCardList>
             <FoodCardListItem text="298" title="kcal" />
@@ -151,7 +151,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="10">
         <FoodCard img={img10} title="Bonbon s orechem">
           <FoodCardList>
             <FoodCardListItem text="509" title="kcal" />
@@ -161,7 +161,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="11">
         <FoodCard img={img11} title="Jablecne-mrkvove vafle">
           <FoodCardList>
             <FoodCardListItem text="217" title="kcal" />
@@ -171,7 +171,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem}>
+      <div className={styles.carouselItem} key="12">
         <FoodCard img={img12} title="Tykvovy nakyp">
           <FoodCardList>
             <FoodCardListItem text="256" title="kcal" />
