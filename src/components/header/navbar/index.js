@@ -36,7 +36,10 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
         handleClick={show}
       >
         <img src={IconMap} className={styles.mapMark} alt="icon" />
-        <span className="visible-desktop">Praha {t("home.title")}</span>
+        <span className="visible-desktop">
+          Praha
+          {/* {t("home.title")} */}
+        </span>
         <img
           src={IconAngleDown}
           className={cx(styles.angleDown, "visible-desktop")}

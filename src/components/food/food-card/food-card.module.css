@@ -13,14 +13,15 @@
   align-items: center;
   justify-content: center;
   border-radius: 6px 6px 0 0;
+  margin-bottom: -6px;
 }
 
 .foodCardImg {
-  max-width: 267px;
+  max-width: 100%;
 }
 
 .foodCardBody {
-  padding: 24px 0 10px;
+  padding: 30px 0 10px;
   flex-grow: 1;
   border-radius: 0 0 6px 6px;
 }
@@ -43,26 +44,15 @@
     margin-bottom: 24px;
   }
 
-  .foodCardTop {
-    background: url("./card-bg.jpg") center no-repeat;
-    background-size: cover;
-    padding: 40px;
-    height: 276px;
-  }
-
-  .foodCardImg {
-    max-width: 237px;
-  }
-
   .foodCardBody {
     border: 1px solid #d3d3d3;
     border-top: none;
-    padding: 24px 4px 10px;
+    padding: 30px 4px 10px;
   }
 }
 
 @media all and (min-width: 1200px) {
   .foodCardBody {
-    padding: 24px 30px 10px;
+    padding: 30px 30px 10px;
   }
 }
