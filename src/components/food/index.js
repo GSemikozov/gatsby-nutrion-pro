@@ -133,9 +133,27 @@ const slidesData = [
 ]
 
 const FoodCarousel = ({ slidesData }) => {
-  const slides = slidesData.map((item, i) => (
+  const slides = slidesData.map(item => (
     <img src={item.img} styles={{ height: "270px" }} key={item.title} />
   ))
+
+  const settings = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+  }
+  return (
+    slidesData !== null &&
+    slidesData.length > 0 && <Slider {...settings}>{slides}</Slider>
+  )
+}
+
+const FoodCarouselMobile = ({ slidesData }) => {
+  const slides = slidesData
+    .slice(0, 4)
+    .map(item => (
+      <img src={item.img} styles={{ height: "270px" }} key={item.title} />
+    ))
 
   const settings = {
     slidesToShow: 1,
