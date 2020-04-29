@@ -37,6 +37,7 @@
 @media all and (min-width: 768px) {
   .foodCard {
     height: calc(276px + 180px);
+    padding: 0 12px;
   }
 
   .foodCardTitle {
