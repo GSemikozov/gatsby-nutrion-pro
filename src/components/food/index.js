@@ -134,14 +134,16 @@ const slidesData = [
 
 const FoodCarousel = ({ slidesData }) => {
   const slides = slidesData.map(item => (
-    <FoodCard img={item.img} title={item.title}>
-      <FoodCardList>
-        <FoodCardListItem text={item.param1} title="kcal" />
-        <FoodCardListItem text={item.param2} title="sacharidy" />
-        <FoodCardListItem text={item.param3} title="bílkoviny" />
-        <FoodCardListItem text={item.param4} title="tuky" />
-      </FoodCardList>
-    </FoodCard>
+    <div className={styles.carouselItem} key={item.title}>
+      <FoodCard img={item.img} title={item.title}>
+        <FoodCardList>
+          <FoodCardListItem text={item.param1} title="kcal" />
+          <FoodCardListItem text={item.param2} title="sacharidy" />
+          <FoodCardListItem text={item.param3} title="bílkoviny" />
+          <FoodCardListItem text={item.param4} title="tuky" />
+        </FoodCardList>
+      </FoodCard>
+    </div>
   ))
 
   const settings = {
@@ -172,15 +174,17 @@ const FoodCarousel = ({ slidesData }) => {
 const FoodCarouselMobile = ({ slidesData }) => {
   console.log("slides", slidesData)
   const slides = slidesData.map(item => (
-    <FoodCard img={item.img} title={item.title}>
-      {console.log("item", item)}
-      <FoodCardList>
-        <FoodCardListItem text={item.param1} title="kcal" />
-        <FoodCardListItem text={item.param2} title="sacharidy" />
-        <FoodCardListItem text={item.param3} title="bílkoviny" />
-        <FoodCardListItem text={item.param4} title="tuky" />
-      </FoodCardList>
-    </FoodCard>
+    <div className={styles.carouselItem} key={item.title}>
+      <FoodCard img={item.img} title={item.title}>
+        {console.log("item", item)}
+        <FoodCardList>
+          <FoodCardListItem text={item.param1} title="kcal" />
+          <FoodCardListItem text={item.param2} title="sacharidy" />
+          <FoodCardListItem text={item.param3} title="bílkoviny" />
+          <FoodCardListItem text={item.param4} title="tuky" />
+        </FoodCardList>
+      </FoodCard>
+    </div>
   ))
 
   const settings = {
