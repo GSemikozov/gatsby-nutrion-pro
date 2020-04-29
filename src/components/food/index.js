@@ -163,8 +163,10 @@ const FoodCarousel = ({ slidesData }) => {
 }
 
 const FoodCarouselMobile = ({ slidesData }) => {
+  console.log("slides", slidesData)
   const slides = slidesData.slice(0, 5).map(item => (
     <>
+      {console.log("item", item)}
       <img src={item.img} styles={{ height: "270px" }} key={item.title} />
       <h3>{item.title}</h3>
     </>
