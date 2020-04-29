@@ -163,11 +163,12 @@ const FoodCarousel = ({ slidesData }) => {
 }
 
 const FoodCarouselMobile = ({ slidesData }) => {
-  const slides = slidesData
-    .slice(0, 5)
-    .map(item => (
+  const slides = slidesData.slice(0, 5).map(item => (
+    <>
       <img src={item.img} styles={{ height: "270px" }} key={item.title} />
-    ))
+      <h3>{item.title}</h3>
+    </>
+  ))
 
   const settings = {
     slidesToShow: 1,
