@@ -134,19 +134,11 @@ select {
   }
 }
 
-.hidden-mobile {
-  display: none;
-}
-
 @media all and (min-width: 1024px) {
   .sectionTitle {
     font-size: 36px;
     line-height: 1.4;
     margin-bottom: 80px;
-  }
-
-  .hidden-mobile {
-    display: initial;
   }
 }
 
