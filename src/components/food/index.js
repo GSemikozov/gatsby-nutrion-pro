@@ -35,7 +35,7 @@ const FoodCardList = ({ children }) => (
 
 const slidesData = [
   {
-    img: "/static/food01.jpg",
+    img: "/images/food01.jpg",
     title: "Kuřecí nudličky v zeleninové omáčce s fazolovými lusky",
     param1: "228",
     param2: "17g",
@@ -43,7 +43,7 @@ const slidesData = [
     param4: "4g",
   },
   {
-    img: "/static/food02.jpg",
+    img: "/images/food02.jpg",
     title: "Lososový wrap",
     param1: "316",
     param2: "33g",
@@ -51,7 +51,7 @@ const slidesData = [
     param4: "13g",
   },
   {
-    img: "/static/food03.jpg",
+    img: "/images/food03.jpg",
     title: "Salát s hovězím masem po korejsku",
     param1: "264",
     param2: "11g",
@@ -59,7 +59,7 @@ const slidesData = [
     param4: "20g",
   },
   {
-    img: "/static/food04.jpg",
+    img: "/images/food04.jpg",
     title: "Salát s pečeným roastbeefem, medovou zálivkou a tapenádou z oliv",
     param1: "165",
     param2: "13g",
@@ -67,7 +67,7 @@ const slidesData = [
     param4: "11g",
   },
   {
-    img: "/static/food05.jpg",
+    img: "/images/food05.jpg",
     title: "Sendvič s krůtím masem, zeleninou a kimchi omáčkou",
     param1: "147",
     param2: "16g",
@@ -75,7 +75,7 @@ const slidesData = [
     param4: "5g",
   },
   {
-    img: "/static/food06.jpg",
+    img: "/images/food06.jpg",
     title: "Hovězí maso s rýžovými nudlemi, zeleninou a thajskou zálivkou",
     param1: "234",
     param2: "23g",
@@ -83,7 +83,7 @@ const slidesData = [
     param4: "6g",
   },
   {
-    img: "/static/food07.jpg",
+    img: "/images/food07.jpg",
     title: "Bramborový nákyp s mletým hovězím masem",
     param1: "324",
     param2: "21g",
@@ -91,7 +91,7 @@ const slidesData = [
     param4: "12g",
   },
   {
-    img: "/static/food08.jpg",
+    img: "/images/food08.jpg",
     title: "Okoun se smaženým zelím a kari omáčkou",
     param1: "338",
     param2: "25g",
@@ -99,7 +99,7 @@ const slidesData = [
     param4: "18g",
   },
   {
-    img: "/static/food08.jpg",
+    img: "/images/food08.jpg",
     title: "Pohankové karbanátky s čočkou",
     param1: "244",
     param2: "20g",
@@ -107,7 +107,7 @@ const slidesData = [
     param4: "12g",
   },
   {
-    img: "/static/food10.jpg",
+    img: "/images/food10.jpg",
     title: "Bonbón s ořechem",
     param1: "127",
     param2: "6g",
@@ -115,7 +115,7 @@ const slidesData = [
     param4: "12g",
   },
   {
-    img: "/static/food11.jpg",
+    img: "/images/food11.jpg",
     title: "Jablečně-mrkvové vafle s krémem",
     param1: "205",
     param2: "26g",
@@ -123,7 +123,7 @@ const slidesData = [
     param4: "11g",
   },
   {
-    img: "/static/food12.jpg",
+    img: "/images/food12.jpg",
     title: "Tykvový nákyp se smetanou",
     param1: "231",
     param2: "12g",
