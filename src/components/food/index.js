@@ -9,18 +9,18 @@ import Slider from 'react-slick';
 import { Container } from '../container';
 import { FoodCard } from './food-card';
 import styles from './food-carousel.module.css';
-import img10 from './images/food1.jpg';
+import img10 from './images/food01.jpg';
+import img11 from './images/food02.jpg';
+import img1 from './images/food03.jpg';
+import img3 from './images/food04.jpg';
+import img7 from './images/food05.jpg';
+import img8 from './images/food06.jpg';
+import img9 from './images/food07.jpg';
+import img4 from './images/food08.jpg';
+import img5 from './images/food09.jpg';
 import img6 from './images/food10.jpg';
 import img12 from './images/food11.jpg';
 import img2 from './images/food12.jpg';
-import img11 from './images/food2.jpg';
-import img1 from './images/food3.jpg';
-import img3 from './images/food4.jpg';
-import img7 from './images/food5.jpg';
-import img8 from './images/food6.jpg';
-import img9 from './images/food7.jpg';
-import img4 from './images/food8.jpg';
-import img5 from './images/food9.jpg';
 
 const FoodCardListItem = ({ text, title }) => (
   <li>
@@ -32,6 +32,17 @@ const FoodCardListItem = ({ text, title }) => (
 const FoodCardList = ({ children }) => (
   <ul className={styles.foodCardList}>{children}</ul>
 )
+
+const slides = [
+  {
+    img: "",
+    title: "",
+    param1: "",
+    param2: "",
+    param3: "",
+    param4: "",
+  },
+]
 
 const FoodCarousel = () => {
   const settings = {
