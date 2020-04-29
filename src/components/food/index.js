@@ -135,14 +135,16 @@ const slidesData = [
 const FoodCarousel = () => {
   const slides = slidesData.map((item, i) => (
     <div className={styles.carouselItem} key={i}>
-      <FoodCard img={item.img} title={item.title}>
+      <img src={item.img} styles={{ height: "270px" }} />
+      <h3>{item.title}</h3>
+      {/* <FoodCard img={item.img} title={item.title}>
         <FoodCardList>
           <FoodCardListItem text={item.param1} title="kcal" />
           <FoodCardListItem text={item.param2} title="sacharidy" />
           <FoodCardListItem text={item.param3} title="bílkoviny" />
           <FoodCardListItem text={item.param4} title="tuky" />
         </FoodCardList>
-      </FoodCard>
+      </FoodCard> */}
     </div>
   ))
 
