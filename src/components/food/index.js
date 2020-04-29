@@ -55,9 +55,12 @@ const FoodCarousel = () => {
   return (
     <Slider {...settings}>
       <div className={styles.carouselItem} key="1">
-        <FoodCard img={img1} title="Kureci nudlicky s fazolovymi lusky">
+        <FoodCard
+          img={img1}
+          title="Kuřecí nudličky v zeleninové omáčce s fazolovými lusky"
+        >
           <FoodCardList>
-            <FoodCardListItem text="268" title="kcal" />
+            <FoodCardListItem text="228" title="kcal" />
             <FoodCardListItem text="17g" title="sacharidy" />
             <FoodCardListItem text="33g" title="bílkoviny" />
             <FoodCardListItem text="4g" title="tuky" />
@@ -65,9 +68,9 @@ const FoodCarousel = () => {
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="2">
-        <FoodCard img={img2} title="Wrap s lososem">
+        <FoodCard img={img2} title="Lososový wrap">
           <FoodCardList>
-            <FoodCardListItem text="333" title="kcal" />
+            <FoodCardListItem text="316" title="kcal" />
             <FoodCardListItem text="33g" title="sacharidy" />
             <FoodCardListItem text="21g" title="bílkoviny" />
             <FoodCardListItem text="13g" title="tuky" />
@@ -75,23 +78,22 @@ const FoodCarousel = () => {
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="3">
-        <FoodCard img={img3} title="Meal">
+        <FoodCard img={img3} title="Salát s hovězím masem po korejsku">
           <FoodCardList>
-            <FoodCardListItem text="514" title="kcal" />
-            <FoodCardListItem text="43g" title="sacharidy" />
-            <FoodCardListItem text="32g" title="bílkoviny" />
-            <FoodCardListItem text="22g" title="tuky" />
+            <FoodCardListItem text="264" title="kcal" />
+            <FoodCardListItem text="11g" title="sacharidy" />
+            <FoodCardListItem text="21g" title="bílkoviny" />
+            <FoodCardListItem text="20g" title="tuky" />
           </FoodCardList>
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="4">
         <FoodCard
           img={img4}
-          title="Salat s roastbeefem
-          a medovou zalivkou"
+          title="Salát s pečeným roastbeefem, medovou zálivkou a tapenádou z oliv"
         >
           <FoodCardList>
-            <FoodCardListItem text="186" title="kcal" />
+            <FoodCardListItem text="165" title="kcal" />
             <FoodCardListItem text="13g" title="sacharidy" />
             <FoodCardListItem text="9g" title="bílkoviny" />
             <FoodCardListItem text="11g" title="tuky" />
@@ -99,9 +101,12 @@ const FoodCarousel = () => {
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="5">
-        <FoodCard img={img5} title="Sendvic s krutim a kimchi omackou">
+        <FoodCard
+          img={img5}
+          title="Sendvič s krůtím masem, zeleninou a kimchi omáčkou"
+        >
           <FoodCardList>
-            <FoodCardListItem text="157" title="kcal" />
+            <FoodCardListItem text="147" title="kcal" />
             <FoodCardListItem text="16g" title="sacharidy" />
             <FoodCardListItem text="12g" title="bílkoviny" />
             <FoodCardListItem text="5g" title="tuky" />
@@ -111,11 +116,10 @@ const FoodCarousel = () => {
       <div className={styles.carouselItem} key="6">
         <FoodCard
           img={img6}
-          title="Sklenene nudle 
-          s hovezim a zeleninou "
+          title="Hovězí maso s rýžovými nudlemi, zeleninou a thajskou zálivkou"
         >
           <FoodCardList>
-            <FoodCardListItem text="244" title="kcal" />
+            <FoodCardListItem text="234" title="kcal" />
             <FoodCardListItem text="23g" title="sacharidy" />
             <FoodCardListItem text="25g" title="bílkoviny" />
             <FoodCardListItem text="6g" title="tuky" />
@@ -123,29 +127,29 @@ const FoodCarousel = () => {
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="7">
-        <FoodCard img={img7} title="Nakyp bramborovy s masem">
+        <FoodCard img={img7} title="Bramborový nákyp s mletým hovězím masem">
           <FoodCardList>
-            <FoodCardListItem text="468" title="kcal" />
-            <FoodCardListItem text="59g" title="sacharidy" />
-            <FoodCardListItem text="31g" title="bílkoviny" />
+            <FoodCardListItem text="324" title="kcal" />
+            <FoodCardListItem text="21g" title="sacharidy" />
+            <FoodCardListItem text="39g" title="bílkoviny" />
             <FoodCardListItem text="12g" title="tuky" />
           </FoodCardList>
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="8">
-        <FoodCard img={img8} title="Okoun s Kari omackou se zelim">
+        <FoodCard img={img8} title="Okoun se smaženým zelím a kari omáčkou">
           <FoodCardList>
-            <FoodCardListItem text="305" title="kcal" />
-            <FoodCardListItem text="18g" title="sacharidy" />
+            <FoodCardListItem text="338" title="kcal" />
+            <FoodCardListItem text="25g" title="sacharidy" />
             <FoodCardListItem text="28g" title="bílkoviny" />
-            <FoodCardListItem text="42g" title="tuky" />
+            <FoodCardListItem text="18g" title="tuky" />
           </FoodCardList>
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="9">
-        <FoodCard img={img9} title="Pohankove karbanatky s cockou">
+        <FoodCard img={img9} title="Pohankové karbanátky s čočkou">
           <FoodCardList>
-            <FoodCardListItem text="298" title="kcal" />
+            <FoodCardListItem text="244" title="kcal" />
             <FoodCardListItem text="20g" title="sacharidy" />
             <FoodCardListItem text="20g" title="bílkoviny" />
             <FoodCardListItem text="12g" title="tuky" />
@@ -153,19 +157,19 @@ const FoodCarousel = () => {
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="10">
-        <FoodCard img={img10} title="Bonbon s orechem">
+        <FoodCard img={img10} title="Bonbón s ořechem">
           <FoodCardList>
-            <FoodCardListItem text="509" title="kcal" />
-            <FoodCardListItem text="25g" title="sacharidy" />
-            <FoodCardListItem text="20g" title="bílkoviny" />
-            <FoodCardListItem text="48g" title="tuky" />
+            <FoodCardListItem text="127" title="kcal" />
+            <FoodCardListItem text="6g" title="sacharidy" />
+            <FoodCardListItem text="5g" title="bílkoviny" />
+            <FoodCardListItem text="12g" title="tuky" />
           </FoodCardList>
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="11">
-        <FoodCard img={img11} title="Jablecne-mrkvove vafle">
+        <FoodCard img={img11} title="Jablečně-mrkvové vafle s krémem">
           <FoodCardList>
-            <FoodCardListItem text="217" title="kcal" />
+            <FoodCardListItem text="205" title="kcal" />
             <FoodCardListItem text="26g" title="sacharidy" />
             <FoodCardListItem text="6g" title="bílkoviny" />
             <FoodCardListItem text="11g" title="tuky" />
@@ -173,9 +177,9 @@ const FoodCarousel = () => {
         </FoodCard>
       </div>
       <div className={styles.carouselItem} key="12">
-        <FoodCard img={img12} title="Tykvovy nakyp">
+        <FoodCard img={img12} title="Tykvový nákyp se smetanou">
           <FoodCardList>
-            <FoodCardListItem text="256" title="kcal" />
+            <FoodCardListItem text="231" title="kcal" />
             <FoodCardListItem text="12g" title="sacharidy" />
             <FoodCardListItem text="23g" title="bílkoviny" />
             <FoodCardListItem text="13g" title="tuky" />
@@ -477,12 +481,11 @@ export const FoodCarouselSection = () => (
   <section className={styles.foodCarouselSection} id="food">
     <Container>
       <h3 className="sectionTitle text-center">Jaká jídla tě s námi čekají?</h3>
-      <BrowserView>
-        <FoodCarousel />
-      </BrowserView>
-      <MobileView>
+      <FoodCarousel />
+      <BrowserView>{/* <FoodCarousel /> */}</BrowserView>
+      {/* <MobileView>
         <FoodCarouselMobile />
-      </MobileView>
+      </MobileView> */}
     </Container>
   </section>
 )
