@@ -171,7 +171,7 @@ const FoodCarousel = ({ slidesData }) => {
 
 const FoodCarouselMobile = ({ slidesData }) => {
   console.log("slides", slidesData)
-  const slides = slidesData.slice(0, 5).map(item => (
+  const slides = slidesData.map(item => (
     <FoodCard img={item.img} title={item.title}>
       {console.log("item", item)}
       <FoodCardList>
