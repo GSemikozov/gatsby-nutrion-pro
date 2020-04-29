@@ -164,7 +164,7 @@ const FoodCarousel = ({ slidesData }) => {
 
 const FoodCarouselMobile = ({ slidesData }) => {
   const slides = slidesData
-    .slice(0, 4)
+    .slice(0, 5)
     .map(item => (
       <img src={item.img} styles={{ height: "270px" }} key={item.title} />
     ))
@@ -184,11 +184,13 @@ export const FoodCarouselSection = () => (
   <section className={styles.foodCarouselSection} id="food">
     <Container>
       <h3 className="sectionTitle text-center">Jaká jídla tě s námi čekají?</h3>
-      <FoodCarousel slidesData={slidesData} />
-      <BrowserView>{/* <FoodCarousel /> */}</BrowserView>
-      {/* <MobileView>
-        <FoodCarouselMobile />
-      </MobileView> */}
+      {/* <FoodCarousel slidesData={slidesData} /> */}
+      <BrowserView>
+        <FoodCarousel slidesData={slidesData} />
+      </BrowserView>
+      <MobileView>
+        <FoodCarouselMobile slidesData={slidesData} />
+      </MobileView>
     </Container>
   </section>
 )
