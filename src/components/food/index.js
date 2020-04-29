@@ -2,6 +2,7 @@ import './carousel.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
+import cx from 'classnames';
 import React from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import Slider from 'react-slick';
@@ -113,7 +114,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem} key="6">
+      <div className={cx(styles.carouselItem, "hidden-mobile")} key="6">
         <FoodCard
           img={img6}
           title="Hovězí maso s rýžovými nudlemi, zeleninou a thajskou zálivkou"
@@ -126,7 +127,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem} key="7">
+      <div className={cx(styles.carouselItem, "hidden-mobile")} key="7">
         <FoodCard img={img7} title="Bramborový nákyp s mletým hovězím masem">
           <FoodCardList>
             <FoodCardListItem text="324" title="kcal" />
@@ -136,7 +137,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem} key="8">
+      <div className={cx(styles.carouselItem, "hidden-mobile")} key="8">
         <FoodCard img={img8} title="Okoun se smaženým zelím a kari omáčkou">
           <FoodCardList>
             <FoodCardListItem text="338" title="kcal" />
@@ -146,7 +147,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem} key="9">
+      <div className={cx(styles.carouselItem, "hidden-mobile")} key="9">
         <FoodCard img={img9} title="Pohankové karbanátky s čočkou">
           <FoodCardList>
             <FoodCardListItem text="244" title="kcal" />
@@ -156,7 +157,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem} key="10">
+      <div className={cx(styles.carouselItem, "hidden-mobile")} key="10">
         <FoodCard img={img10} title="Bonbón s ořechem">
           <FoodCardList>
             <FoodCardListItem text="127" title="kcal" />
@@ -166,7 +167,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem} key="11">
+      <div className={cx(styles.carouselItem, "hidden-mobile")} key="11">
         <FoodCard img={img11} title="Jablečně-mrkvové vafle s krémem">
           <FoodCardList>
             <FoodCardListItem text="205" title="kcal" />
@@ -176,7 +177,7 @@ const FoodCarousel = () => {
           </FoodCardList>
         </FoodCard>
       </div>
-      <div className={styles.carouselItem} key="12">
+      <div className={cx(styles.carouselItem, "hidden-mobile")} key="12">
         <FoodCard img={img12} title="Tykvový nákyp se smetanou">
           <FoodCardList>
             <FoodCardListItem text="231" title="kcal" />
