@@ -178,7 +178,7 @@ export default class FoodCarousel extends React.Component {
             </FoodCardList>
           </FoodCard>
         </div>
-        <div className={styles.carouselItem} key="12">
+        {/* <div className={styles.carouselItem} key="12">
           <FoodCard img={img12} title="Tykvový nákyp se smetanou">
             <FoodCardList>
               <FoodCardListItem text="231" title="kcal" />
@@ -187,7 +187,7 @@ export default class FoodCarousel extends React.Component {
               <FoodCardListItem text="13g" title="tuky" />
             </FoodCardList>
           </FoodCard>
-        </div>
+        </div> */}
       </Slider>
     )
   }
