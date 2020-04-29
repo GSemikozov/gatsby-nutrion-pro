@@ -55,245 +55,137 @@ const FoodCarousel = () => {
   }
   return (
     <Slider {...settings}>
-      <div className={styles.carouselItem} key="1">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img1} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 1
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img1}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 1
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="2">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img2} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 2
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img2}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 2
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="3">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img3} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 3
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img3}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 3
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="4">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img4} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 4
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img4}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 4
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="5">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img5} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 5
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img5}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 5
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="6">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img6} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 6
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img6}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 6
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="7">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img7} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 7
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img7}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 7
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="8">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img8} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 8
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img8}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 8
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="9">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img9} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 9
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img9}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 9
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="10">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img10} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 10
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img10}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 10
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="11">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img11} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 11
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img11}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 11
+        </h5>
       </div>
-      <div className={styles.carouselItem} key="12">
-        <div className={styles.foodCard}>
-          <div className={styles.foodCardTop}>
-            <img src={img12} className={styles.foodCardImg} alt="img" />
-          </div>
-          <div className={styles.foodCardBody}>
-            <h5 className={styles.foodCardTitle}>
-              Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 12
-            </h5>
-            <div>
-              <FoodCardList>
-                <FoodCardListItem text="228" title="kcal" />
-                <FoodCardListItem text="17g" title="sacharidy" />
-                <FoodCardListItem text="33g" title="bílkoviny" />
-                <FoodCardListItem text="4g" title="tuky" />
-              </FoodCardList>
-            </div>
-          </div>
-        </div>
+      <div className={styles.carouselItem} style={{ height: "400px" }}>
+        <img
+          src={img12}
+          className={styles.foodCardImg}
+          style={{ maxHeight: "270px" }}
+          alt="img"
+        />
+        <h5 className={styles.foodCardTitle}>
+          Kuřecí nudličky v zeleninové omáčce s fazolovými lusky 12
+        </h5>
       </div>
     </Slider>
   )
