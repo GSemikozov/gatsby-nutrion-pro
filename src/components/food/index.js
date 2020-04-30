@@ -161,7 +161,7 @@ const slidesData = [
 
 const FoodCarouselMobile = ({ slidesData }) => {
   console.log("slides", slidesData)
-  const slides = slidesData.slice(0, 5).map(item => (
+  const slides = slidesData.map(item => (
     <div className={styles.carouselItem} key={item.title}>
       <FoodCard img={item.img} title={item.title}>
         {console.log("item", item)}
@@ -191,6 +191,7 @@ const FoodCarouselMobile = ({ slidesData }) => {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
+          infinite: true,
         },
       },
       {
