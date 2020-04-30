@@ -213,12 +213,13 @@ export const FoodCarouselSection = () => (
     <Container>
       <h3 className="sectionTitle text-center">Jaká jídla tě s námi čekají?</h3>
       {/* <FoodCarousel slidesData={slidesData} /> */}
-      <BrowserView>
+      {/* <BrowserView>
         <FoodCarousel slidesData={slidesData} />
-      </BrowserView>
-      <MobileView>
+      </BrowserView> */}
+      {/* <MobileView>
         <FoodCarouselMobile slidesData={slidesData} />
-      </MobileView>
+      </MobileView> */}
+      <FoodCarouselMobile slidesData={slidesData} />
     </Container>
   </section>
 )
