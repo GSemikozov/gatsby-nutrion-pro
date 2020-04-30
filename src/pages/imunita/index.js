@@ -279,4 +279,4 @@ const ImunitaPage = ({ location }) => {
   )
 }
 
-// export default ImunitaPage
+export default ImunitaPage
