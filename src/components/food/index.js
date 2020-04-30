@@ -173,7 +173,7 @@ const FoodCarousel = ({ slidesData }) => {
 
 const FoodCarouselMobile = ({ slidesData }) => {
   console.log("slides", slidesData)
-  const slides = slidesData.map(item => (
+  const slides = slidesData.slice(0, 5).map(item => (
     <div className={styles.carouselItem} key={item.title}>
       <FoodCard img={item.img} title={item.title}>
         {console.log("item", item)}
