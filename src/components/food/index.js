@@ -120,44 +120,44 @@ const slidesData = [
   },
 ]
 
-// const FoodCarousel = ({ slidesData }) => {
-//   const slides = slidesData.map(item => (
-//     <div className={styles.carouselItem} key={item.title}>
-//       <FoodCard img={item.img} title={item.title}>
-//         <FoodCardList>
-//           <FoodCardListItem text={item.param1} title="kcal" />
-//           <FoodCardListItem text={item.param2} title="sacharidy" />
-//           <FoodCardListItem text={item.param3} title="bílkoviny" />
-//           <FoodCardListItem text={item.param4} title="tuky" />
-//         </FoodCardList>
-//       </FoodCard>
-//     </div>
-//   ))
+const FoodCarousel = ({ slidesData }) => {
+  const slides = slidesData.map(item => (
+    <div className={styles.carouselItem} key={item.title}>
+      <FoodCard img={item.img} title={item.title}>
+        <FoodCardList>
+          <FoodCardListItem text={item.param1} title="kcal" />
+          <FoodCardListItem text={item.param2} title="sacharidy" />
+          <FoodCardListItem text={item.param3} title="bílkoviny" />
+          <FoodCardListItem text={item.param4} title="tuky" />
+        </FoodCardList>
+      </FoodCard>
+    </div>
+  ))
 
-//   const settings = {
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     infinite: true,
-//     responsive: [
-//       {
-//         breakpoint: 992,
-//         settings: {
-//           slidesToShow: 2,
-//         },
-//       },
-//       {
-//         breakpoint: 480,
-//         settings: {
-//           slidesToShow: 1,
-//         },
-//       },
-//     ],
-//   }
-//   return (
-//     slidesData !== null &&
-//     slidesData.length > 0 && <Slider {...settings}>{slides}</Slider>
-//   )
-// }
+  const settings = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  }
+  return (
+    slidesData !== null &&
+    slidesData.length > 0 && <Slider {...settings}>{slides}</Slider>
+  )
+}
 
 const FoodCarouselMobile = ({ slidesData }) => {
   console.log("slides", slidesData)
