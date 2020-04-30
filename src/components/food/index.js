@@ -145,13 +145,13 @@ const FoodCarousel = ({ slidesData }) => {
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
         },

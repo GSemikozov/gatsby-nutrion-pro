@@ -34,9 +34,15 @@
   text-align: center;
 }
 
+@media all and (min-width: 600px) and (max-width: 767px) {
+  .foodCard {
+    margin: 0 8px;
+  }
+}
+
 @media all and (min-width: 768px) {
   .foodCard {
-    height: calc(276px + 180px);
+    height: calc(276px + 160px);
   }
 
   .foodCardTitle {
@@ -51,7 +57,23 @@
   }
 }
 
+@media all and (min-width: 768px) {
+  .foodCard {
+    height: calc(276px + 220px);
+  }
+}
+
+@media all and (min-width: 992px) {
+  .foodCard {
+    height: calc(276px + 190px);
+  }
+}
+
 @media all and (min-width: 1200px) {
+  .foodCard {
+    height: calc(276px + 180px);
+  }
+
   .foodCardBody {
     padding: 30px 30px 10px;
   }
