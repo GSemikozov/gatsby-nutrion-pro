@@ -47,7 +47,7 @@ const slidesData = [
   },
   {
     img: "/images/food08.jpg",
-    title: "Salát s pečeným roastbeefem, medovou zálivkou a tapenádou z oliv",
+    title: "Salát s pečeným roastbeefem a medovou zálivkou",
     param1: "165",
     param2: "13g",
     param3: "9g",
