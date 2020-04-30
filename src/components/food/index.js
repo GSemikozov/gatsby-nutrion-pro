@@ -184,21 +184,18 @@ const FoodCarouselMobile = ({ slidesData }) => {
         breakpoint: 10000,
         settings: {
           slidesToShow: 3,
-          infinite: true,
         },
       },
       {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          infinite: true,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          infinite: false,
         },
       },
     ],
