@@ -5,6 +5,7 @@ import { Calculator2 } from '../components/calculator2';
 import { FAQ } from '../components/faq';
 import { FoodCarouselSection } from '../components/food';
 import { Hero } from '../components/hero';
+import { HomeofficePackages } from '../components/homeoffice-packages';
 import { HowItWork } from '../components/howitwork';
 import { PreFooter } from '../components/prefooter';
 import { Program } from '../components/program';
@@ -19,6 +20,7 @@ const IndexPage = () => (
     <Hero />
     <Program id="programs" />
     {/* <About /> */}
+    <HomeofficePackages />
     <Calculator2 id="calculator" />
     <FoodCarouselSection />
     <HowItWork />

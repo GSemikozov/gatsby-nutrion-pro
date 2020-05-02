@@ -1,0 +1,144 @@
+.section {
+  background-color: #f1f2d3;
+}
+
+.title {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.subtitle {
+  text-align: center;
+  line-height: 19px;
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.homeofficePackages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.homeofficePackage {
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  width: 140px;
+  text-align: center;
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  border: 1px solid #dddbdc;
+  border-radius: 10px;
+  color: #909394;
+  padding: 20px 20px 10px;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.homeofficePackage + .homeofficePackage {
+  margin-left: 20px;
+}
+
+.homeofficePackageRibbon {
+  height: 30px;
+  width: 120px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 16px;
+  left: -40px;
+  top: 5px;
+  position: absolute;
+}
+
+.homeofficePackageTop {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 27px;
+  color: initial;
+}
+
+.homeofficePackageBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeofficePackageIcon {
+  max-width: 70px;
+}
+
+.button {
+  margin: 0 16px;
+  line-height: 1 !important;
+  text-decoration: none;
+}
+
+.hiddenXS {
+  display: none;
+}
+
+@media all and (min-width: 992px) {
+  .title {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .homeofficePackages {
+    margin-top: 48px;
+  }
+
+  .homeofficePackage {
+    height: 260px;
+    width: 260px;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 30px 22px;
+    border-width: 2px;
+  }
+
+  .homeofficePackageRibbon {
+    height: 50px;
+    width: 220px;
+    font-weight: 700;
+    font-size: 30px;
+    left: -70px;
+    top: 14px;
+  }
+
+  .homeofficePackageTop {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .homeofficePackageIcon {
+    max-width: 136px;
+  }
+
+  .homeofficePackageBottom {
+    height: 50px;
+  }
+
+  .hiddenXS {
+    display: flex;
+  }
+}
