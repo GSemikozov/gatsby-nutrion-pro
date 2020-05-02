@@ -17,8 +17,8 @@ const IndexPage = () => (
   <>
     <SEO title="Home" />
     <Hero />
-    <About />
     <Program id="programs" />
+    {/* <About /> */}
     <Calculator2 id="calculator" />
     <FoodCarouselSection />
     <HowItWork />
