@@ -86,7 +86,7 @@ export const OrderConsultationForm = withFormik({
     }),
   handleSubmit: async (
     { phone, promo },
-    { setSubmitting, resetForm, setFieldValue }
+    { props, setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
       let referrer = ""
@@ -100,6 +100,12 @@ export const OrderConsultationForm = withFormik({
         promo,
         referrer: referrer,
       }
+
+      if (props.leadName !== undefined) {
+        data = { ...data, [props.leadName]: props.leadValue }
+      }
+
+      // await console.log("data", data)
 
       await fetch("/api/application", {
         method: "POST",

@@ -1,25 +1,38 @@
 import cx from 'classnames';
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Button } from '../button';
 import { Container } from '../container';
 import { OrderConsultationForm } from '../forms/order-consultation-form';
 import { useModal } from '../modal';
-import { useModal as useModalSpecial } from '../modal-special';
 import styles from './homeoffice-packages.module.css';
 import icon1 from './icons/icon1.svg';
 import icon2 from './icons/icon2.svg';
 
-const ModalForm = () => (
+const ModalForm = ({ data }) => (
   <>
-    <h3 className={cx("text-center", styles.heroModalTitle)}>Mám zájem</h3>
-    <OrderConsultationForm />
+    <h3 className={cx("text-center", styles.modalTitle)}>{data.title}</h3>
+    <OrderConsultationForm
+      leadName={data.leadName}
+      leadValue={data.leadValue}
+    />
   </>
 )
 
 export const HomeofficePackages = () => {
   const { show, RenderModal } = useModal()
+  const initialModalData = {
+    title: "Mám zájem",
+    leadName: "homeoffice-package",
+    leadValue: "0",
+  }
+  const [modalData, setModalData] = useState(initialModalData)
+
+  const handleOpenModal = data => {
+    setModalData(data)
+    show()
+  }
 
   return (
     <section className={cx("section", styles.section)}>
@@ -39,6 +52,13 @@ export const HomeofficePackages = () => {
                 src={icon1}
                 className={styles.homeofficePackageIcon}
                 alt="icon"
+                onClick={() =>
+                  handleOpenModal({
+                    title: "Pro jednoho",
+                    leadName: "homeoffice_package",
+                    leadValue: "1",
+                  })
+                }
               />
             </div>
             <div className={styles.homeofficePackageBottom}> Pro jednoho</div>
@@ -50,6 +70,13 @@ export const HomeofficePackages = () => {
                 src={icon2}
                 className={styles.homeofficePackageIcon}
                 alt="icon"
+                onClick={() =>
+                  handleOpenModal({
+                    title: "Pro par",
+                    leadName: "homeoffice_package",
+                    leadValue: "2",
+                  })
+                }
               />
             </div>
             <div className={styles.homeofficePackageBottom}> Pro par</div>
@@ -59,15 +86,21 @@ export const HomeofficePackages = () => {
               Máte zájem o homeoffice balíček pro více lidi?
             </div>
             <div className={styles.homeofficePackageBottom}>
-              <Button
-                type="outline"
-                className={styles.button}
-                handleClick={show}
-              >
-                <Link to="/">Mám zájem</Link>
+              <Button type="outline" className={styles.button}>
+                <span
+                  onClick={() =>
+                    handleOpenModal({
+                      title: "Mám zájem",
+                      leadName: "homeoffice_package",
+                      leadValue: "0",
+                    })
+                  }
+                >
+                  Mám zájem
+                </span>
               </Button>
               <RenderModal className="modalForm">
-                <ModalForm />
+                <ModalForm data={modalData} />
               </RenderModal>
             </div>
           </div>

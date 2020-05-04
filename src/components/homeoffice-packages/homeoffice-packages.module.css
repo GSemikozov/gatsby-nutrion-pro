@@ -13,6 +13,11 @@
   line-height: 19px;
 }
 
+.modalTitle {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
 .green {
   color: var(--color-green);
 }
@@ -90,6 +95,11 @@
   margin: 0 16px;
   line-height: 1 !important;
   text-decoration: none;
+  padding: 0 !important;
+}
+
+.button > span {
+  padding: 14px 20px;
 }
 
 .hiddenXS {
@@ -132,6 +142,7 @@
 
   .homeofficePackageIcon {
     max-width: 136px;
+    cursor: pointer;
   }
 
   .homeofficePackageBottom {
