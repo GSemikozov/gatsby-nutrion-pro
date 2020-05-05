@@ -101,6 +101,10 @@
     font-size: 20px;
   }
 
+  .menuTable tr td:first-child {
+    width: 120px;
+  }
+
   .menuTable tr td img {
     top: 14px;
   }

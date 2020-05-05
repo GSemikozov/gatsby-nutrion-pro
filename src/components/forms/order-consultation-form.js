@@ -94,11 +94,18 @@ export const OrderConsultationForm = withFormik({
         referrer = new URL(document.referrer).hostname
       }
 
+      let roistat_visit =
+        document.cookie.replace(
+          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
+          "$1"
+        ) || ""
+
       let data = {
         form_name: "order-consultation",
         phone,
         promo,
         referrer: referrer,
+        roistat: roistat_visit,
       }
 
       if (props.leadName !== undefined) {
