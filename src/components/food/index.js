@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import React from 'react';
 import Slider from 'react-slick';
 
+import { Button } from '../button';
 import { Container } from '../container';
 import { FoodCard } from './food-card';
 import styles from './food-carousel.module.css';
@@ -169,6 +170,13 @@ export const FoodCarouselSection = () => (
     <Container>
       <h3 className="sectionTitle text-center">Jaká jídla tě s námi čekají?</h3>
       <FoodCarousel slidesData={slidesData} />
+      <div className="text-center">
+        <Button type="outline" size="lg" className={styles.outsideButton}>
+          <a href="/ukazka-menu" style={{ padding: "14px 20px" }}>
+            Vzorové menu
+          </a>
+        </Button>
+      </div>
     </Container>
   </section>
 )
