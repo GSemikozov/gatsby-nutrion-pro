@@ -20,7 +20,7 @@ const IndexPage = () => (
     <Hero />
     <Program id="programs" />
     {/* <About /> */}
-    <HomeofficePackages />
+    {/* <HomeofficePackages /> */}
     <Calculator2 id="calculator" />
     <FoodCarouselSection />
     <HowItWork />
