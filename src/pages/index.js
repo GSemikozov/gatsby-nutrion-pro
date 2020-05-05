@@ -19,13 +19,13 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
     <Program id="programs" />
-    {/* <About /> */}
     {/* <HomeofficePackages /> */}
     <Calculator2 id="calculator" />
     <FoodCarouselSection />
-    <HowItWork />
+    <About />
     <TryFood id="try-food" />
     <Reviews id="reviews" />
+    <HowItWork />
     <FAQ id="faq" />
     <PreFooter />
   </>
