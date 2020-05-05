@@ -1,12 +1,11 @@
 import React from 'react';
 
 import { Container } from '../components/container';
-import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const TermsPage = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Všeobecné obchodní podmínky" />
       <Container className="terms">
         <h1 className="text-center">Všeobecné obchodní podmínky</h1>
@@ -226,7 +225,7 @@ const TermsPage = () => {
           </ol>
         </section>
       </Container>
-    </Layout>
+    </>
   )
 }
 

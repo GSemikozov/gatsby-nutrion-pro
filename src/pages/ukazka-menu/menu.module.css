@@ -1,0 +1,111 @@
+.title {
+  margin: 32px 0;
+}
+
+.menuTitle {
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.menuTitle span {
+  font-size: 22px;
+  color: var(--color-green);
+  font-weight: 300;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+}
+
+.menuTitle span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-green);
+}
+
+.menuTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.menuTable tr td {
+  padding: 8px;
+  font-size: 16px;
+  line-height: 1.2;
+  vertical-align: top;
+  position: relative;
+}
+
+.menuTable tr td:first-child {
+  padding-left: 0;
+  font-weight: 300;
+  font-style: italic;
+  padding-right: 42px;
+}
+
+.menuTable tr td:last-child {
+  padding-left: 42px;
+}
+
+.menuTable tr td div {
+  position: relative;
+  padding-left: 42px;
+  margin-left: -42px;
+  margin-bottom: 16px;
+}
+
+.menuTable tr td div:last-child {
+  margin-bottom: 0;
+}
+
+.menuTable tr td div img {
+  top: -3px;
+}
+
+.menuTable tr td img {
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+@media all and (min-width: 768px) {
+  .menuGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+  }
+}
+
+@media all and (min-width: 992px) {
+  .title {
+    margin: 50px 0;
+  }
+
+  .menuTitle {
+    margin: 0 0 40px;
+  }
+
+  .menuTitle span {
+    font-size: 28px;
+  }
+
+  .menuTable {
+    margin-bottom: 40px;
+  }
+
+  .menuTable tr td {
+    padding: 16px 8px;
+    font-size: 20px;
+  }
+
+  .menuTable tr td img {
+    top: 14px;
+  }
+
+  .menuTable tr td div img {
+    top: -2px;
+  }
+}
