@@ -56,7 +56,7 @@ const MenuPage = () => {
                 <td>Večeře</td>
                 <td>
                   <img src={dishIcon} alt="dish-icon" />
-                  Frikasé z krůty a pohanková se zeleninou
+                  Frikasé z krůty a pohanka se zeleninou
                 </td>
               </tr>
             </table>
@@ -70,7 +70,7 @@ const MenuPage = () => {
                 <td>Snídaně</td>
                 <td>
                   <img src={dishIcon} alt="dish-icon" />
-                  Volské oko se směsí zeleniny
+                  Volské oko se zeleninovou směsí
                 </td>
               </tr>
               <tr>
@@ -85,7 +85,7 @@ const MenuPage = () => {
                 <td>
                   <div>
                     <img src={dishIcon} alt="dish-icon" />
-                    Salát ananasový s červenou řepou
+                    Ananasový salát s červenou řepou
                   </div>
                   <div>
                     <img src={dishIcon} alt="dish-icon" />
@@ -118,14 +118,14 @@ const MenuPage = () => {
                 <td>Snídaně</td>
                 <td>
                   <img src={dishIcon} alt="dish-icon" />
-                  Palačinky z sýrem a rajčaty
+                  Palačinky se sýrem a rajčaty
                 </td>
               </tr>
               <tr>
                 <td>Svačina</td>
                 <td>
                   <img src={dishIcon} alt="dish-icon" />
-                  Ananasy grilované s borůvkami
+                  Grilované ananasy s borůvkami
                 </td>
               </tr>
               <tr>
@@ -137,7 +137,7 @@ const MenuPage = () => {
                   </div>
                   <div>
                     <img src={dishIcon} alt="dish-icon" />
-                    Králičí stehno v houbové omáčce a Brambory pečené
+                    Králičí stehno v houbové omáčce a pečenými brambory
                   </div>
                 </td>
               </tr>
@@ -152,7 +152,7 @@ const MenuPage = () => {
                 <td>Večeře</td>
                 <td>
                   <img src={dishIcon} alt="dish-icon" />
-                  Losos gorbuša zapečený se zeleninou v páře
+                  Zapečený losos gorbuša se zeleninou v páře
                 </td>
               </tr>
             </table>
@@ -173,7 +173,7 @@ const MenuPage = () => {
                 <td>Svačina</td>
                 <td>
                   <img src={dishIcon} alt="dish-icon" />
-                  Univerzální salát z pasty
+                  Těstovinový salát
                 </td>
               </tr>
               <tr>
@@ -185,7 +185,7 @@ const MenuPage = () => {
                   </div>
                   <div>
                     <img src={dishIcon} alt="dish-icon" />
-                    Jehněčí karé dušené s kořením
+                    Jehněčí dušené karé s kořením
                   </div>
                 </td>
               </tr>
