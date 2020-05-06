@@ -117,11 +117,17 @@ export const ContactForm2 = withFormik({
       if (document.referrer !== "") {
         referrer = new URL(document.referrer).hostname
       }
+      let roistat_visit =
+        document.cookie.replace(
+          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
+          "$1"
+        ) || ""
 
       const data = {
         form_name: "contact2",
         phone,
         referrer: referrer,
+        roistat: roistat_visit,
       }
       await fetch("/api/application", {
         method: "POST",

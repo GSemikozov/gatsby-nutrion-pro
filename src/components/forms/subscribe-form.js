@@ -71,11 +71,17 @@ export const SubscribeForm = withFormik({
       if (document.referrer !== "") {
         referrer = new URL(document.referrer).hostname
       }
+      let roistat_visit =
+        document.cookie.replace(
+          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
+          "$1"
+        ) || ""
 
       const data = {
         form_name: "subscribe",
         email,
         referrer: referrer,
+        roistat: roistat_visit,
       }
       await fetch("/api/application", {
         method: "POST",

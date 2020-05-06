@@ -98,12 +98,18 @@ export const OrderSpecialOfferForm = withFormik({
       if (document.referrer !== "") {
         referrer = new URL(document.referrer).hostname
       }
+      let roistat_visit =
+        document.cookie.replace(
+          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
+          "$1"
+        ) || ""
 
       let data = {
         form_name: "order-special",
         phone,
         promo,
         referrer: referrer,
+        roistat: roistat_visit,
       }
 
       await fetch("/api/application", {
