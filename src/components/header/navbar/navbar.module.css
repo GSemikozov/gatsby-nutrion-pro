@@ -45,6 +45,28 @@
   background-color: inherit;
 }
 
+.location {
+  padding: 2px 21px 5px;
+  border-radius: 1px;
+  position: relative;
+  background-color: #373c3f;
+  border-top-left-radius: 8px;
+  margin-left: 20px;
+}
+
+.location .mapMark {
+  position: absolute;
+  left: 0;
+  top: -7px;
+  margin-left: -11px;
+}
+
+.location .angleDown {
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+}
+
 .profile {
   order: 3;
 }
@@ -60,7 +82,7 @@
 }
 
 @media all and (min-width: 768px) {
-  .navbarItem {
+  .navbarItem:not(.location) {
     padding: 2px 3px 5px;
   }
 
@@ -69,27 +91,6 @@
   .profile,
   .mobileMenuLink {
     order: unset;
-  }
-
-  .location {
-    padding: 2px 21px 5px;
-    border-radius: 1px;
-    position: relative;
-    background-color: #373c3f;
-    border-top-left-radius: 8px;
-  }
-
-  .location .mapMark {
-    position: absolute;
-    left: 0;
-    top: -7px;
-    margin-left: -11px;
-  }
-
-  .location .angleDown {
-    position: absolute;
-    right: 8px;
-    bottom: 6px;
   }
 
   .contacts {
