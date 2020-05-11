@@ -1,12 +1,24 @@
 import cx from 'classnames';
 import React from 'react';
 
+import { Button } from '../../components/button';
 import { Container } from '../../components/container';
+import { OrderConsultationForm } from '../../components/forms/order-consultation-form';
+import { useModal } from '../../components/modal';
 import SEO from '../../components/seo';
 import dishIcon from './dish-icon.svg';
 import styles from './menu.module.css';
 
+const ModalForm = () => (
+  <>
+    <h3 className={cx("text-center", styles.heroModalTitle)}>Mám zájem</h3>
+    <OrderConsultationForm />
+  </>
+)
+
 const MenuPage = () => {
+  const { show, RenderModal } = useModal()
+
   return (
     <>
       <SEO title="Vzorové menu" />
@@ -301,6 +313,14 @@ const MenuPage = () => {
               </tr>
             </table>
           </section>
+        </div>
+        <div className="text-center" style={{ marginBottom: "40px" }}>
+          <Button type="primary" size="lg" handleClick={show}>
+            Mám zájem
+          </Button>
+          <RenderModal className="modalForm">
+            <ModalForm />
+          </RenderModal>
         </div>
       </Container>
     </>
