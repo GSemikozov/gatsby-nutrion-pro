@@ -7,7 +7,6 @@ import { Container } from '../container';
 import { OrderConsultationForm } from '../forms/order-consultation-form';
 import { OrderSpecialOfferForm } from '../forms/order-special-offer-form';
 import { useModal } from '../modal';
-import { useModal as useModalSpecial } from '../modal-special';
 import { HeroDesktopImg } from './hero-content-img-desktop';
 import { HeroMobileImg } from './hero-content-img-mobile';
 import styles from './hero.module.css';
@@ -27,7 +26,6 @@ const ModalFormSpecialOffer = () => (
 
 export const Hero = () => {
   const { show, RenderModal } = useModal()
-  const { RenderModal: RenderModalOffer } = useModalSpecial(true)
   const scroll = useSmoothScroll()
 
   const onLinkClick = selector => () => {
@@ -64,12 +62,6 @@ export const Hero = () => {
           <RenderModal className="modalForm">
             <ModalForm />
           </RenderModal>
-
-          {typeof document !== `undefined` && (
-            <RenderModalOffer className="modalForm">
-              <ModalFormSpecialOffer />
-            </RenderModalOffer>
-          )}
         </div>
       </Container>
     </section>
