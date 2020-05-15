@@ -92,26 +92,26 @@ const MainFormLayout = ({ isSubmitting, values, errors, touched }) => {
     if (gender === "Muž") {
       switch (plan) {
         case "Zhubnout":
-          price = 460
-          break
-        case "Udržovat":
-          price = 480
-          break
-        case "Nabírat":
-          price = 500
-          break
-      }
-    }
-    if (gender === "Žena") {
-      switch (plan) {
-        case "Zhubnout":
           price = 420
           break
         case "Udržovat":
           price = 440
           break
         case "Nabírat":
-          price = 480
+          price = 460
+          break
+      }
+    }
+    if (gender === "Žena") {
+      switch (plan) {
+        case "Zhubnout":
+          price = 380
+          break
+        case "Udržovat":
+          price = 400
+          break
+        case "Nabírat":
+          price = 440
           break
       }
     }
