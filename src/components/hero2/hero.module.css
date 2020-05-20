@@ -1,0 +1,130 @@
+.hero {
+  padding: 8px 0;
+  height: 460px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-align: center;
+}
+
+.heroForm {
+  width: 500px;
+  background-color: var(--color-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.heroPrice {
+  background: var(--color-white);
+  border-radius: 2px;
+  border-bottom: 8px solid var(--color-green);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 36px;
+  color: var(--color-orange);
+  width: 200px;
+  text-align: center;
+  padding: 8px;
+  margin: 120px auto 40px;
+}
+
+.heroPrice > .oldPrice {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #5f5f5f;
+  position: relative;
+  display: inline-block;
+}
+
+.heroPrice > .oldPrice:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-green);
+}
+
+.heroPrice span {
+  font-weight: 300;
+}
+
+.offersContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 500px);
+  background-color: var(--color-grey);
+}
+
+.offersList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.offersListItem {
+  height: 134px;
+  width: 270px;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #1a1e20;
+  border-radius: 0 0 6px 6px;
+  background-color: var(--color-white);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.offersListItem:last-child {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.offersListItemBody {
+  padding: 4px 20px;
+}
+
+.offersListItemHeader {
+  height: 48px;
+  background-color: var(--color-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (min-width: 1024px) {
+  .hero {
+    height: 630px;
+    flex-direction: row;
+    background-position: cover;
+    padding: 0;
+  }
+
+  .heroForm {
+    width: 500px;
+  }
+
+  .title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 80px;
+  }
+}
