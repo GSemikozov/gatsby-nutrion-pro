@@ -5,3 +5,10 @@
 .button {
   width: 100%;
 }
+
+@media all and (max-width: 767px) {
+  .heroForm {
+    width: 100%;
+    max-width: 226px;
+  }
+}
