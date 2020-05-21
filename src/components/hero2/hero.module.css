@@ -44,8 +44,8 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: url("./images/mobile-bg.jpg") center no-repeat;
-  background-size: cover;
+  /* background: url("./images/mobile-bg.jpg") center no-repeat;
+  background-size: cover; */
 }
 
 .btnTop {
@@ -173,8 +173,8 @@
   align-items: center;
   width: calc(100% - 500px);
   background-color: var(--color-grey);
-  background: url("./images/food-bg.jpg") center no-repeat;
-  background-size: cover;
+  /* background: url("./images/food-bg.jpg") center no-repeat;
+  background-size: cover; */
 }
 
 .offersList {
@@ -260,9 +260,9 @@
     max-width: none;
     padding: 50px 20px 100px;
     margin: 0 auto;
-    background-color: var(--color-green);
-    background: url("./images/green-gradient-bg.png") center no-repeat;
-    background-size: cover;
+    /* background-color: var(--color-green); */
+    /* background: url("./images/green-gradient-bg.png") center no-repeat;
+    background-size: cover; */
   }
 
   .offersContent {

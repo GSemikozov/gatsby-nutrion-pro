@@ -8,7 +8,7 @@ import styles from './modal.module.css';
 
 export const Modal = React.memo(
   ({ children, closeModal, darkMode = false, className }) => {
-    const domEl = document.getElementById("nav")
+    const domEl = document.getElementById("root")
 
     if (!domEl) return null
 
@@ -69,9 +69,8 @@ export const Modal = React.memo(
   }
 )
 
-export const useModal = ch => {
-  const [isVisible, setIsVisible] = useState(ch)
-  console.log("isVisible", ch)
+export const useModal = () => {
+  const [isVisible, setIsVisible] = useState()
 
   const show = () => {
     document.body.style.height = "100vh"
