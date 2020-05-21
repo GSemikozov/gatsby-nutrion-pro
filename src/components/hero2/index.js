@@ -18,11 +18,6 @@ export const Hero = () => {
 
   return (
     <>
-      {typeof document !== `undefined` && (
-        <RenderModalOffer className="modalForm">
-          <ModalFormSpecialOffer />
-        </RenderModalOffer>
-      )}
       <BrowserView>
         <section className={styles.hero}>
           <div className={styles.heroForm}>
@@ -31,6 +26,11 @@ export const Hero = () => {
               <strong>super cenu</strong>
             </h1>
             <HeroForm />
+            {typeof document !== `undefined` && (
+              <RenderModalOffer className="modalForm">
+                <ModalFormSpecialOffer />
+              </RenderModalOffer>
+            )}
           </div>
           <div className={styles.offersContent}>
             <div className={styles.heroPrice}>
