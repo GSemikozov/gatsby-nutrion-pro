@@ -3,28 +3,13 @@ import React from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 import { HeroForm } from '../forms/hero-form';
-import { OrderSpecialOfferForm } from '../forms/order-special-offer-form';
-import { useModal as useModalSpecial } from '../modal-special';
 import styles from './hero.module.css';
 
-const ModalFormSpecialOffer = () => (
-  <>
-    <OrderSpecialOfferForm className={styles.heroFormWrapper} />
-  </>
-)
-
 export const Hero = () => {
-  const { RenderModal: RenderModalOffer } = useModalSpecial(true)
-
   return (
     <>
       <BrowserView>
         <section className={styles.hero}>
-          {typeof document !== `undefined` && (
-            <RenderModalOffer className="modalForm">
-              <ModalFormSpecialOffer />
-            </RenderModalOffer>
-          )}
           <div className={styles.heroForm}>
             <h1 className={styles.title}>
               Dvoudenní zkouška <strong>5chodového</strong> menu za{" "}
@@ -107,7 +92,7 @@ export const Hero = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0)">
+                    <g clipPath="url(#clip0)">
                       <path
                         d="M29.9062 28.8751H3.09377C1.38778 28.8751 0 27.4873 0 25.7813V20.625C0 20.055 0.461229 19.5938 1.03126 19.5938C2.73724 19.5938 4.12503 18.206 4.12503 16.5C4.12503 14.794 2.73724 13.4062 1.03126 13.4062C0.461229 13.4063 0 12.9451 0 12.3751V7.21877C0 5.51278 1.38778 4.125 3.09377 4.125H29.9063C31.6123 4.125 33.0001 5.51278 33.0001 7.21877V12.3751C33.0001 12.9451 32.5388 13.4063 31.9688 13.4063C30.2628 13.4063 28.875 14.7941 28.875 16.5001C28.875 18.2061 30.2628 19.5938 31.9688 19.5938C32.5388 19.5938 33.0001 20.0551 33.0001 20.6251V25.7814C33 27.4873 31.6123 28.8751 29.9062 28.8751V28.8751ZM2.06251 21.5526V25.7813C2.06251 26.3503 2.52478 26.8126 3.09377 26.8126H29.9063C30.4753 26.8126 30.9376 26.3503 30.9376 25.7813V21.5526C28.587 21.0732 26.8125 18.9906 26.8125 16.5C26.8125 14.0095 28.587 11.9269 30.9376 11.4475V7.21877C30.9376 6.64978 30.4753 6.18751 29.9063 6.18751H3.09377C2.52478 6.18751 2.06251 6.64978 2.06251 7.21877V11.4475C4.41302 11.9269 6.18754 14.0095 6.18754 16.5001C6.18754 18.9906 4.41302 21.0732 2.06251 21.5526V21.5526Z"
                         fill="white"
@@ -144,11 +129,6 @@ export const Hero = () => {
       </BrowserView>
       <MobileView>
         <section className={styles.heroMobile}>
-          {typeof document !== `undefined` && (
-            <RenderModalOffer className="modalForm">
-              <ModalFormSpecialOffer />
-            </RenderModalOffer>
-          )}
           <div className={styles.titleMobile}>
             Dvoudenní zkouška{" "}
             <strong className={styles.green}>5chodového</strong> menu za{" "}
@@ -216,7 +196,7 @@ export const Hero = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0)">
+                    <g clipPath="url(#clip0)">
                       <path
                         d="M29.9062 28.8751H3.09377C1.38778 28.8751 0 27.4873 0 25.7813V20.625C0 20.055 0.461229 19.5938 1.03126 19.5938C2.73724 19.5938 4.12503 18.206 4.12503 16.5C4.12503 14.794 2.73724 13.4062 1.03126 13.4062C0.461229 13.4063 0 12.9451 0 12.3751V7.21877C0 5.51278 1.38778 4.125 3.09377 4.125H29.9063C31.6123 4.125 33.0001 5.51278 33.0001 7.21877V12.3751C33.0001 12.9451 32.5388 13.4063 31.9688 13.4063C30.2628 13.4063 28.875 14.7941 28.875 16.5001C28.875 18.2061 30.2628 19.5938 31.9688 19.5938C32.5388 19.5938 33.0001 20.0551 33.0001 20.6251V25.7814C33 27.4873 31.6123 28.8751 29.9062 28.8751ZM2.06251 21.5526V25.7813C2.06251 26.3503 2.52478 26.8126 3.09377 26.8126H29.9063C30.4753 26.8126 30.9376 26.3503 30.9376 25.7813V21.5526C28.587 21.0732 26.8125 18.9906 26.8125 16.5C26.8125 14.0095 28.587 11.9269 30.9376 11.4475V7.21877C30.9376 6.64978 30.4753 6.18751 29.9063 6.18751H3.09377C2.52478 6.18751 2.06251 6.64978 2.06251 7.21877V11.4475C4.41302 11.9269 6.18754 14.0095 6.18754 16.5001C6.18754 18.9906 4.41302 21.0732 2.06251 21.5526Z"
                         fill="#2FA037"
