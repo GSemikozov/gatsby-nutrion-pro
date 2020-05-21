@@ -4,8 +4,6 @@ import React from 'react';
 import * as Yup from 'yup';
 
 import { Button } from '../button';
-import { OrderSpecialOfferForm } from '../forms/order-special-offer-form';
-import { useModal as useModalSpecial } from '../modal-special';
 import styles from './form.module.css';
 import heroFormStyles from './hero-form.module.css';
 
@@ -17,12 +15,6 @@ Yup.addMethod(Yup.string, "phone", function() {
   )
 })
 
-const ModalFormSpecialOffer = () => (
-  <>
-    <OrderSpecialOfferForm />
-  </>
-)
-
 export const HeroFormLayout = ({
   isSubmitting,
   values,
@@ -32,8 +24,6 @@ export const HeroFormLayout = ({
   btnType = "primary",
   btnText = "Objednat",
 }) => {
-  const { RenderModal: RenderModalOffer } = useModalSpecial(true)
-
   return (
     <Form name="hero-form" method="post" className={heroFormStyles.heroForm}>
       <div className={styles.inputField}>
@@ -68,11 +58,6 @@ export const HeroFormLayout = ({
       >
         {btnText}
       </Button>
-      {typeof document !== `undefined` && (
-        <RenderModalOffer className="modalForm">
-          <ModalFormSpecialOffer />
-        </RenderModalOffer>
-      )}
     </Form>
   )
 }

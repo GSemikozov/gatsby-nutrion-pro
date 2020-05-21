@@ -4,7 +4,7 @@ import { About } from '../components/about';
 import { Calculator2 } from '../components/calculator2';
 import { FAQ } from '../components/faq';
 import { FoodCarouselSection } from '../components/food';
-import { Hero } from '../components/hero2';
+import { Hero } from '../components/hero';
 import { HomeofficePackages } from '../components/homeoffice-packages';
 import { HowItWork } from '../components/howitwork';
 import { PreFooter } from '../components/prefooter';

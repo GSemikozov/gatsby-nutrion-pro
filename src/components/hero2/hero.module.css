@@ -243,6 +243,10 @@
 .offersListMobileItemIcon {
 }
 
+.heroFormWrapper {
+  padding: 40px 36px;
+}
+
 @media all and (min-width: 768px) {
   .hero {
     height: 770px;

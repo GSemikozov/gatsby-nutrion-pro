@@ -3,11 +3,26 @@ import React from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 import { HeroForm } from '../forms/hero-form';
+import { OrderSpecialOfferForm } from '../forms/order-special-offer-form';
+import { useModal as useModalSpecial } from '../modal-special';
 import styles from './hero.module.css';
 
+const ModalFormSpecialOffer = () => (
+  <>
+    <OrderSpecialOfferForm className={styles.heroFormWrapper} />
+  </>
+)
+
 export const Hero = () => {
+  const { RenderModal: RenderModalOffer } = useModalSpecial(true)
+
   return (
     <>
+      {typeof document !== `undefined` && (
+        <RenderModalOffer className="modalForm">
+          <ModalFormSpecialOffer />
+        </RenderModalOffer>
+      )}
       <BrowserView>
         <section className={styles.hero}>
           <div className={styles.heroForm}>
