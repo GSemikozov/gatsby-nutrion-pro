@@ -1,10 +1,40 @@
 .hero {
-  padding: 8px 0;
+  padding: 8px 0 100px;
   height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.wave {
+  height: 65px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: url("./images/wave-desktop.png") center no-repeat;
+  background-size: cover;
+}
+
+.waveMobile {
+  height: 65px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: url("./images/wave-mobile.png") center no-repeat;
+  background-size: cover;
+}
+
+.foodMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("./images/mobile-food.png") center no-repeat;
+  background-size: cover;
 }
 
 .heroMobile {
@@ -14,14 +44,15 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: grey;
+  background: url("./images/mobile-bg.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .btnTop {
   cursor: pointer;
   padding: 10px;
   position: absolute;
-  bottom: 16px;
+  bottom: 32px;
   right: 32px;
 }
 
@@ -71,7 +102,6 @@
   width: 200px;
   text-align: center;
   padding: 8px;
-  margin: 120px auto 40px;
 }
 
 .heroPrice > .oldPrice {
@@ -143,6 +173,8 @@
   align-items: center;
   width: calc(100% - 500px);
   background-color: var(--color-grey);
+  background: url("./images/food-bg.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .offersList {
@@ -165,11 +197,6 @@
   margin-right: 20px;
   margin-bottom: 20px;
   box-sizing: border-box;
-}
-
-.offersListItem:last-child {
-  margin-bottom: 0;
-  margin-right: 0;
 }
 
 .offersListItemBody {
@@ -209,25 +236,44 @@
   background-color: var(--color-white);
   box-sizing: border-box;
   border-radius: 10px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   padding: 10px;
 }
 
 .offersListMobileItemIcon {
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
   .hero {
-    height: 630px;
+    height: 770px;
     flex-direction: row;
     background-position: cover;
     padding: 0;
   }
 
   .heroForm {
-    width: 500px;
-    padding: 50px;
+    width: 350px;
+    max-width: none;
+    padding: 50px 20px 100px;
+    margin: 0 auto;
     background-color: var(--color-green);
+    background: url("./images/green-gradient-bg.png") center no-repeat;
+    background-size: cover;
+  }
+
+  .offersContent {
+    flex-grow: 1;
+  }
+
+  .heroPrice {
+    margin: 80px auto 40px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .heroForm {
+    width: 500px;
+    padding: 50px 50px 100px;
   }
 
   .title {
@@ -235,5 +281,24 @@
     font-size: 40px;
     line-height: 46px;
     margin-bottom: 80px;
+  }
+
+  .heroPrice {
+    margin: 120px auto 40px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .hero {
+    height: 670px;
+  }
+
+  .heroForm {
+    margin: 0 auto;
+  }
+
+  .offersListItem:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
   }
 }
