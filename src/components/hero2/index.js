@@ -2,8 +2,10 @@ import cx from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 
+import { Button } from '../button';
 import { HeroForm } from '../forms/hero-form';
 import { OrderSpecialOfferForm } from '../forms/order-special-offer-form';
 import { useModal as useModalSpecial } from '../modal-special';
@@ -67,9 +69,20 @@ const BackgroundSection = ({ children, className, image }) => {
 
 export const Hero = () => {
   const { show, RenderModal: RenderModalOffer } = useModalSpecial()
+
   useEffect(() => {
     show()
   }, [])
+
+  const [showForm, setShowForm] = useState(false)
+  const [openBtn, setOpenBtn] = useState(true)
+  const [hideBtn, setHideBtn] = useState(false)
+
+  const hadleShow = () => {
+    setShowForm(!showForm)
+    setOpenBtn(!openBtn)
+    setHideBtn(!hideBtn)
+  }
 
   return (
     <>
@@ -202,24 +215,46 @@ export const Hero = () => {
         </section>
       </BrowserView>
       <MobileView>
-        <BackgroundSection image="mobile-food">
+        <BackgroundSection image="mobile-food" className={styles.heroMobileImg}>
           <section className={styles.heroMobile}>
             <div className={styles.titleMobile}>
               Dvoudenní zkouška{" "}
               <strong className={styles.green}>5chodového</strong> menu za{" "}
               <b>super cenu</b>
             </div>
-            <div>
-              <div className={styles.oldPriceMobile}>
-                1000 <span className={styles.green}>Kč</span>
+            <div className={styles.oldPriceMobile}>
+              1000 <span className={styles.green}>Kč</span>
+            </div>
+            <div className={styles.heroPriceMobile}>
+              <div>
+                700 <span>Kč</span>
               </div>
-              <div className={styles.heroPriceMobile}>
-                <div>
-                  700 <span>Kč</span>
-                </div>
-              </div>
+            </div>
+            <div className="text-center">
+              <Button
+                type="primary"
+                className={!openBtn ? "hide" : ""}
+                handleClick={hadleShow}
+              >
+                <svg
+                  width="12"
+                  height="6"
+                  viewBox="0 0 12 6"
+                  fill="none"
+                  style={{ marginRight: "5px" }}
+                >
+                  <path
+                    d="M6.00254 3.98378L1.51317 0.163078C1.38985 0.0578741 1.22498 4.23292e-07 1.04917 4.30976e-07C0.873268 4.38665e-07 0.708487 0.0578742 0.584975 0.163078L0.191805 0.497869C0.0680973 0.602906 -2.29777e-07 0.743316 -2.23237e-07 0.892942C-2.16696e-07 1.04257 0.0680973 1.18281 0.191805 1.28793L5.53678 5.83709C5.66068 5.94262 5.82624 6.00041 6.00224 6C6.17902 6.00041 6.34439 5.9427 6.46839 5.83709L11.8082 1.29217C11.9319 1.18705 12 1.0468 12 0.897093C12 0.747467 11.9319 0.607223 11.8082 0.50202L11.415 0.167312C11.1591 -0.0504847 10.7425 -0.0504847 10.4867 0.167312L6.00254 3.98378Z"
+                    fill="white"
+                  />
+                </svg>
+                Zjistit více
+              </Button>
+            </div>
+            <div
+              className={cx(styles.desc, { [styles.descHidden]: !showForm })}
+            >
               <div className={styles.offersListMobile}>
-                <div className={styles.offersListMobileTitle}>Dostanete:</div>
                 <div className={styles.offersListMobileItem}>
                   <div className={styles.offersListMobileItemIcon}>
                     <svg
@@ -304,7 +339,10 @@ export const Hero = () => {
               <div className={styles.heroForm}>
                 <HeroForm />
               </div>
-              <div className={styles.btnTop}>
+              <div
+                className={cx(styles.btnTop, { ["hide"]: !hideBtn })}
+                onClick={() => hadleShow()}
+              >
                 <svg
                   width="25"
                   height="13"
@@ -320,7 +358,20 @@ export const Hero = () => {
               </div>
             </div>
             <div className={styles.waveMobile}></div>
-            <div className={styles.foodMask}></div>
+            <div className={styles.foodMaskLeft1}></div>
+            <div
+              className={cx(styles.foodMaskLeft2, {
+                [styles.descHidden]: !showForm,
+              })}
+            ></div>
+            <div className={styles.foodMaskLeft3}></div>
+            <div className={styles.foodMaskRight1}></div>
+            <div
+              className={cx(styles.foodMaskRight2, {
+                [styles.descHidden]: !showForm,
+              })}
+            ></div>
+            <div className={styles.foodMaskRight3}></div>
           </section>
         </BackgroundSection>
       </MobileView>

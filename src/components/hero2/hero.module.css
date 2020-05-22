@@ -27,13 +27,63 @@
   background-size: cover;
 }
 
-.foodMask {
+.foodMaskLeft1 {
   position: absolute;
-  top: 0;
+  top: 210px;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: url("./images/mobile-food.png") center no-repeat;
+  height: 180px;
+  width: 85px;
+  background: url("./images/food-2.png") center no-repeat;
+  background-size: contain;
+}
+
+.foodMaskLeft2 {
+  position: absolute;
+  top: 490px;
+  left: 0;
+  height: 180px;
+  width: 85px;
+  background: url("./images/food-4.png") center no-repeat;
+  background-size: contain;
+}
+
+.foodMaskLeft3 {
+  position: absolute;
+  top: 770px;
+  left: 0;
+  height: 180px;
+  width: 85px;
+  background: url("./images/food-6.png") center no-repeat;
+  background-size: contain;
+}
+
+.foodMaskRight1 {
+  position: absolute;
+  top: 130px;
+  right: 0;
+  height: 180px;
+  width: 85px;
+  background: url("./images/food-1.png") center no-repeat;
+  background-size: contain;
+}
+
+.foodMaskRight2 {
+  position: absolute;
+  top: 400px;
+  right: 0;
+  height: 180px;
+  width: 85px;
+  background: url("./images/food-3.png") center no-repeat;
+  background-size: contain;
+}
+
+.foodMaskRight3 {
+  position: absolute;
+  top: 630px;
+  right: 0;
+  height: 180px;
+  width: 85px;
+  background: url("./images/food-5.png") center no-repeat;
   background-size: contain;
 }
 
@@ -44,8 +94,19 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /* background: url("./images/mobile-bg.jpg") center no-repeat;
-  background-size: cover; */
+}
+
+.heroMobileImg {
+  overflow: hidden;
+}
+
+.heroMobileImg,
+.heroMobileImg:after {
+  background-size: 100% 1100px;
+}
+
+.heroMobileImg:after {
+  height: 1100px;
 }
 
 .btnTop {
@@ -54,6 +115,7 @@
   position: absolute;
   bottom: 32px;
   right: 32px;
+  z-index: 2;
 }
 
 .titleMobile {
@@ -136,7 +198,7 @@
   color: var(--color-orange);
   text-align: center;
   padding: 10px;
-  margin: 0 0 20px;
+  margin: 0 0 80px;
 }
 
 .oldPriceMobile {
@@ -216,14 +278,6 @@
   flex-direction: column;
   align-items: center;
 }
-.offersListMobileTitle {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  text-align: center;
-  margin: 0 0 32px;
-  color: var(--color-white);
-}
 
 .offersListMobileItem {
   height: 120px;
@@ -245,6 +299,16 @@
 
 .heroFormWrapper {
   padding: 40px 36px;
+}
+
+.desc {
+  height: 660px;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+
+.descHidden {
+  height: 0;
 }
 
 @media all and (min-width: 768px) {
