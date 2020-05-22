@@ -102,11 +102,12 @@
 
 .heroMobileImg,
 .heroMobileImg:after {
-  background-size: 100% 1100px;
+  background-size: 100% 1100px !important;
 }
 
+.heroMobileImg:before,
 .heroMobileImg:after {
-  height: 1100px;
+  height: 1100px !important;
 }
 
 .btnTop {
@@ -179,7 +180,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
+  top: calc(50% - 1px);
   height: 3px;
   width: 100%;
   background-color: var(--color-green);
@@ -211,11 +212,11 @@
   margin: 0 auto 32px;
 }
 
-.heroPriceMobile > .oldPriceMobile:after {
+.oldPriceMobile:after {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
+  top: calc(50% - 1px);
   height: 3px;
   width: 100%;
   background-color: var(--color-green);
