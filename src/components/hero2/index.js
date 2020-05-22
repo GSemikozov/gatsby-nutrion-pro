@@ -204,7 +204,7 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    Slevu <b>30 %</b>
+                    Sleva <b>30 %</b>
                     Jen <b>350 Kč</b> za den
                   </div>
                 </div>
@@ -332,7 +332,7 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    Slevu <b>30%</b> Jen <b>350 Kč</b> za den
+                    Sleva <b>30%</b> Jen <b>350 Kč</b> za den
                   </div>
                 </div>
               </div>

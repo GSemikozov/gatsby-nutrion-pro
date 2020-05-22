@@ -211,7 +211,7 @@
   margin: 0 auto 32px;
 }
 
-.heroPriceMobile > .oldPrice:after {
+.heroPriceMobile > .oldPriceMobile:after {
   content: "";
   position: absolute;
   left: 0;
