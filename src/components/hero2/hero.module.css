@@ -34,7 +34,7 @@
   height: 100%;
   width: 100%;
   background: url("./images/mobile-food.png") center no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .heroMobile {
