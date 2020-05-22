@@ -136,7 +136,7 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    <b>12</b> krabiček pro <b>10</b> chodů
+                    <b>12</b> krabiček pro <br /> <b>10</b> chodů
                   </div>
                 </div>
                 <div className={styles.offersListItem}>
@@ -272,7 +272,7 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    <b>12</b> krabiček pro <b>10</b> chodů
+                    <b>12</b> krabiček pro <br /> <b>10</b> chodů
                   </div>
                 </div>
                 <div className={styles.offersListMobileItem}>
