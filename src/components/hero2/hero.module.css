@@ -9,12 +9,13 @@
 
 .wave {
   height: 65px;
+  max-width: 100%;
   width: 100%;
   position: absolute;
   bottom: -1px;
   left: 0;
-  background: url("./images/wave-desktop.png") center no-repeat;
-  background-size: cover;
+  /* background: url("./images/wave-desktop.png") center no-repeat;
+  background-size: cover; */
 }
 
 .waveMobile {
