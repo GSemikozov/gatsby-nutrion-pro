@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+.inputField,
+.input {
+  border: none;
+}
+
 @media all and (max-width: 767px) {
   .heroForm {
     width: 100%;

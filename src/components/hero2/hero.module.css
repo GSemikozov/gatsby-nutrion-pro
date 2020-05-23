@@ -141,7 +141,7 @@
   font-size: 28px;
   line-height: 1.4;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
 }
 
 .heroForm {
@@ -236,8 +236,6 @@
   align-items: center;
   width: calc(100% - 500px);
   background-color: var(--color-grey);
-  /* background: url("./images/food-bg.jpg") center no-repeat;
-  background-size: cover; */
 }
 
 .offersList {
@@ -323,11 +321,12 @@
   .heroForm {
     width: 350px;
     max-width: none;
-    padding: 50px 20px 100px;
+    padding: 50px 10px 100px;
     margin: 0 auto;
-    /* background-color: var(--color-green); */
-    /* background: url("./images/green-gradient-bg.png") center no-repeat;
-    background-size: cover; */
+  }
+
+  .title {
+    margin-bottom: 40px;
   }
 
   .offersContent {
@@ -339,10 +338,20 @@
   }
 }
 
+@media all and (min-width: 992px) {
+  .hero {
+    height: 650px;
+  }
+}
+
 @media all and (min-width: 1025px) {
+  .hero {
+    height: 770px;
+  }
+
   .heroForm {
     width: 500px;
-    padding: 50px 50px 100px;
+    padding: 70px 40px 100px 65px;
   }
 
   .title {

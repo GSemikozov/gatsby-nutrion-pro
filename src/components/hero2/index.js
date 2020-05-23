@@ -1,15 +1,16 @@
-import cx from 'classnames';
-import { graphql, useStaticQuery } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
-import React, { useEffect } from 'react';
-import { useState } from 'react';
-import { BrowserView, MobileView } from 'react-device-detect';
+import cx from "classnames"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+import React, { useEffect } from "react"
+import { useState } from "react"
+import { BrowserView, MobileView } from "react-device-detect"
 
-import { Button } from '../button';
-import { HeroForm } from '../forms/hero-form';
-import { OrderSpecialOfferForm } from '../forms/order-special-offer-form';
-import { useModal as useModalSpecial } from '../modal-special';
-import styles from './hero.module.css';
+import { Button } from "../button"
+import { Container } from "../container"
+import { HeroForm } from "../forms/hero-form"
+import { OrderSpecialOfferForm } from "../forms/order-special-offer-form"
+import { useModal as useModalSpecial } from "../modal-special"
+import styles from "./hero.module.css"
 
 const ModalFormSpecialOffer = () => (
   <>
@@ -95,11 +96,13 @@ export const Hero = () => {
         <section className={styles.hero}>
           <BackgroundSection image="gradient">
             <div className={styles.heroForm}>
-              <h1 className={styles.title}>
-                Dvoudenní zkouška <strong>5chodového</strong> menu za{" "}
-                <strong>super cenu</strong>
-              </h1>
-              <HeroForm />
+              <Container>
+                <h1 className={styles.title}>
+                  Dvoudenní zkouška <strong>5chodového</strong> menu za{" "}
+                  <strong>super cenu</strong>
+                </h1>
+                <HeroForm />
+              </Container>
             </div>
           </BackgroundSection>
           <BackgroundSection image="food" className={styles.offersContent}>
