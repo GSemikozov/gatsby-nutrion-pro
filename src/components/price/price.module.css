@@ -3,13 +3,31 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 76px;
 }
 
 .priceCol {
-  padding: 16px 22px;
+  padding: 8px 22px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.priceColRight {
+  align-items: center;
+  flex-grow: 1;
+  /* padding-right: 8px; */
+}
+
+.discountCol {
+  flex: 1 0 40px;
+  max-width: 40px;
+  background-color: var(--color-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .priceCol:first-child {
@@ -34,27 +52,51 @@
 
 .priceValue {
   text-align: center;
-  font-size: 18px;
+  font-size: 26px;
+  line-height: 31px;
   font-weight: 700;
-  line-height: 25px;
   color: var(--color-orange);
   white-space: nowrap;
+}
+
+.priceDiscountValue {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  position: relative;
+  color: #707071;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+.priceDiscountValue:after {
+  content: "";
+  left: 0;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-green);
+  display: block;
+  position: absolute;
 }
 
 @media all and (min-width: 768px) {
   .price {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
   }
 
   .priceCol:first-child {
     padding-right: 6px;
-    padding-bottom: 16px;
+    padding-bottom: 6px;
   }
 
   .priceCol:last-child {
     padding-left: 0;
+  }
+
+  .priceColRight {
+    align-items: flex-end;
   }
 
   .priceValue {

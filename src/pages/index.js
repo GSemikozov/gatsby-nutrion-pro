@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react"
 
-import { About } from '../components/about';
-import { Calculator2 } from '../components/calculator2';
-import { FAQ } from '../components/faq';
-import { FoodCarouselSection } from '../components/food';
-import { Hero } from '../components/hero2';
-import { HomeofficePackages } from '../components/homeoffice-packages';
-import { HowItWork } from '../components/howitwork';
-import { PreFooter } from '../components/prefooter';
-import { Program } from '../components/program';
-import { Reviews } from '../components/reviews';
-import SEO from '../components/seo';
-import { TryFood } from '../components/tryfood';
+import { About } from "../components/about"
+import { Calculator2 } from "../components/calculator2"
+import { FAQ } from "../components/faq"
+import { FoodCarouselSection } from "../components/food"
+import { Hero } from "../components/hero2"
+import { HomeofficePackages } from "../components/homeoffice-packages"
+import { HowItWork } from "../components/howitwork"
+import { PreFooter } from "../components/prefooter"
+import { Program } from "../components/program"
+import { Reviews } from "../components/reviews"
+import SEO from "../components/seo"
+import { TryFood } from "../components/tryfood"
 
 // import Layout from '../components/layout';
 const IndexPage = () => (

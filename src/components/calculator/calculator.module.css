@@ -113,12 +113,6 @@
   border-color: rgba(95, 95, 95, 0.6);
 }
 
-.calculatorTextMuted {
-  color: #909394;
-  margin-top: 20px;
-  font-size: 14px;
-}
-
 @media all and (min-width: 768px) {
   .formHeading {
     font-size: 30px;

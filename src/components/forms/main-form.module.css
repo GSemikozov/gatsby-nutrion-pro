@@ -17,11 +17,29 @@
   background-color: #f8f8f2;
 }
 
-.inputFieldTitle {
+.mainFormWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainFormInfo {
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  font-weight: 600;
-  margin: 0 0 16px;
+  color: #909394;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.inputField {
+  padding: 0;
+}
+
+.inputFieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  margin: 0 0 24px;
   text-align: center;
 }
 
@@ -48,7 +66,14 @@
     flex: 1 0 324px;
     max-width: 324px;
     width: 100%;
-    display: block;
+    display: flex;
+  }
+  .inputField {
+    padding: 0 16px;
+  }
+  .mainFormInfo {
+    margin-bottom: 16px;
+    text-align: initial;
   }
 }
 
@@ -66,6 +91,7 @@
 .buttons {
   text-align: center;
   margin-top: 30px;
+  flex-grow: 1;
 }
 
 .submitButton {

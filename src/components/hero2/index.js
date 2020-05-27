@@ -1,16 +1,16 @@
-import cx from "classnames"
-import { graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import React, { useEffect } from "react"
-import { useState } from "react"
-import { BrowserView, MobileView } from "react-device-detect"
+import cx from 'classnames';
+import { graphql, useStaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import { BrowserView, MobileView } from 'react-device-detect';
 
-import { Button } from "../button"
-import { Container } from "../container"
-import { HeroForm } from "../forms/hero-form"
-import { OrderSpecialOfferForm } from "../forms/order-special-offer-form"
-import { useModal as useModalSpecial } from "../modal-special"
-import styles from "./hero.module.css"
+import { Button } from '../button';
+import { Container } from '../container';
+import { HeroForm } from '../forms/hero-form';
+import { OrderSpecialOfferForm } from '../forms/order-special-offer-form';
+import { useModal as useModalSpecial } from '../modal-special';
+import styles from './hero.module.css';
 
 const ModalFormSpecialOffer = () => (
   <>
@@ -21,7 +21,7 @@ const ModalFormSpecialOffer = () => (
 const BackgroundSection = ({ children, className, image }) => {
   const data = useStaticQuery(graphql`
     query {
-      food: file(relativePath: { eq: "food-bg.jpg" }) {
+      food: file(relativePath: { eq: "food-bg-desktop.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -191,7 +191,7 @@ export const Hero = () => {
                           fill="white"
                         />
                         <path
-                          d="M11.6211 16.8472C9.91513 16.8472 8.52734 15.4594 8.52734 13.7534C8.52734 12.0474 9.91513 10.6597 11.6211 10.6597C13.3271 10.6597 14.7149 12.0474 14.7149 13.7534C14.7149 15.4594 13.3271 16.8472 11.6211 16.8472ZM11.6211 12.7222C11.0521 12.7222 10.5899 13.1844 10.5899 13.7534C10.5899 14.3224 11.0521 14.7847 11.6211 14.7847C12.1901 14.7847 12.6524 14.3224 12.6524 13.7534C12.6524 13.1844 12.1901 12.7222 11.6211 12.7222Z"
+                          d="M11.6216 16.8472C9.91562 16.8472 8.52783 15.4594 8.52783 13.7534C8.52783 12.0474 9.91562 10.6597 11.6216 10.6597C13.3276 10.6597 14.7154 12.0474 14.7154 13.7534C14.7154 15.4594 13.3276 16.8472 11.6216 16.8472ZM11.6216 12.7222C11.0526 12.7222 10.5903 13.1844 10.5903 13.7534C10.5903 14.3224 11.0526 14.7847 11.6216 14.7847C12.1906 14.7847 12.6529 14.3224 12.6529 13.7534C12.6529 13.1844 12.1906 12.7222 11.6216 12.7222Z"
                           fill="white"
                         />
                         <path
@@ -215,7 +215,20 @@ export const Hero = () => {
               </div>
             </div>
           </BackgroundSection>
-          <div className={styles.wave}></div>
+          <div className={styles.wave}>
+            <svg
+              width="1920"
+              height="66"
+              viewBox="0 0 1920 66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M743.204 5.79774C331.094 -11.0589 76.0221 12.8213 0 26.8685V66H1920V23.3568C1713.68 54.6619 1223.2 28.8753 1223.2 28.8753C1223.2 28.8753 1155.31 22.6544 743.204 5.79774Z"
+                fill="white"
+              />
+            </svg>
+          </div>
         </section>
       </BrowserView>
       <MobileView>
