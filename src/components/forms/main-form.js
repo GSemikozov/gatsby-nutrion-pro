@@ -379,7 +379,7 @@ const MainFormLayout = ({
             <h5 className={mainFormStyles.inputFieldTitle}>
               Jaké je tvojé pohlaví?
             </h5>
-            <div className={stylesRadio.radioBtns3}>
+            <div className={cx(stylesRadio.radioBtns3, stylesRadio.MobileCol)}>
               <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
                 <input
                   id="menu1"

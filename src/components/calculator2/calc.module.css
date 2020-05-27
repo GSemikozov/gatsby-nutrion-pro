@@ -191,8 +191,32 @@
   transform: scale(0);
   background: var(--md-radio-checked-color);
 }
+
 @media all and (min-width: 768px) {
   .radio {
     display: inline-block;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .radioBtns3 {
+    flex-direction: column;
+  }
+  .radioBtns3 > .radioBtn {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+  .radioBtns3 > .radioBtn:last-child {
+    margin-bottom: 0;
+  }
+  .radio.radioBtn:not(.withImg) input[type="radio"]:checked + label {
+    padding-left: initial;
+  }
+  .radio.radioBtn input[type="radio"]:checked + label:before {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
   }
 }

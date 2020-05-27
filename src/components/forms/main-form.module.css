@@ -90,7 +90,6 @@
 
 .buttons {
   text-align: center;
-  margin-top: 30px;
   flex-grow: 1;
 }
 
@@ -103,5 +102,9 @@
   .mainFormBox {
     max-width: 760px;
     margin: 0 auto;
+  }
+
+  .buttons {
+    margin-top: 30px;
   }
 }
