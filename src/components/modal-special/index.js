@@ -51,12 +51,12 @@ export const Modal = React.memo(
             <div className={styles.offerPlank}>
               <div className={styles.offer1}>
                 <span>
-                  <b>Pack pro jednoho</b> za <b>125 Kč/porce</b> včetně dovozu.
+                  <b>Pack pro jednoho</b> za <b>135 Kč/porce</b> včetně dovozu.
                 </span>
               </div>
               <div className={styles.offer2}>
                 <span>
-                  <b>Pack pro páry</b> za <b>110 Kč/porce</b> včetně dovozu.
+                  <b>Pack pro páry</b> za <b>120 Kč/porce</b> včetně dovozu.
                 </span>
               </div>
             </div>
