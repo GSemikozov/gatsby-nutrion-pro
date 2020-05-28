@@ -172,7 +172,7 @@ const MainFormLayout = ({
             price = 380
           }
           if (menu === "2chodové menu") {
-            price = ""
+            price = 420
           }
           break
         case "Nabírat":
@@ -183,7 +183,7 @@ const MainFormLayout = ({
             price = 370
           }
           if (menu === "2chodové menu") {
-            price = ""
+            price = 420
           }
           break
       }
@@ -210,7 +210,7 @@ const MainFormLayout = ({
             price = 370
           }
           if (menu === "2chodové menu") {
-            price = ""
+            price = 420
           }
           break
         case "Nabírat":
@@ -221,7 +221,7 @@ const MainFormLayout = ({
             price = 360
           }
           if (menu === "2chodové menu") {
-            price = ""
+            price = 420
           }
           break
       }
