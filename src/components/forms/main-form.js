@@ -135,7 +135,7 @@ const MainFormLayout = ({
 
   const onSetMenu = value => {
     setMenu(value)
-    if (value === "2chodové menu" || value === "3chodové menu") {
+    if (value === "2chodové menu") {
       setPlan2Disabled(true)
       setPlan3Disabled(true)
     } else {
