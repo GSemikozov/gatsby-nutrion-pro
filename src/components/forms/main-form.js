@@ -440,6 +440,7 @@ const MainFormLayout = ({
               type="text"
               name="phone"
               className={styles.input}
+              placeholder="Telefon*"
             />
             {touched.phone && errors.phone && (
               <span className={styles.error}>{errors.phone}</span>
@@ -457,6 +458,7 @@ const MainFormLayout = ({
               type="text"
               name="promo"
               className={styles.input}
+              placeholder="Promo kód"
             />
             {touched.promo && errors.promo && (
               <span className={styles.error}>{errors.promo}</span>
