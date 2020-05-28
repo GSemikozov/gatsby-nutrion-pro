@@ -122,8 +122,7 @@ const MainFormLayout = ({
 
   const onSetPlan = value => {
     setPlan(value)
-    if (value === "Zhubnout") {
-      console.log("Zhubnout")
+    if (value === "Udržovat" || value === "Nabírat") {
       setMenu2xDisabled(true)
     } else {
       setMenu2xDisabled(false)
@@ -136,8 +135,7 @@ const MainFormLayout = ({
 
   const onSetMenu = value => {
     setMenu(value)
-    if (value === "2chodové menu" || menu === "3chodové menu") {
-      console.log("2chodové menu")
+    if (value === "2chodové menu" || value === "3chodové menu") {
       setPlan2Disabled(true)
       setPlan3Disabled(true)
     } else {
