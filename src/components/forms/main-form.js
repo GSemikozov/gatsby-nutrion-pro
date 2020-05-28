@@ -471,7 +471,7 @@ const MainFormLayout = ({
               disabled={isSubmitting}
               className={mainFormStyles.submitButton}
             >
-              Nezávazně objednat
+              Zavolejte mi
             </Button>
             <input type="hidden" name="price" value={price} />
           </div>
