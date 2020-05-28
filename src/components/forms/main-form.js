@@ -375,7 +375,7 @@ const MainFormLayout = ({
           </div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>
-              Jaké je tvojé pohlaví?
+              Vyberte si počet jídel
             </h5>
             <div className={cx(stylesRadio.radioBtns3, stylesRadio.MobileCol)}>
               <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>

@@ -35,6 +35,10 @@
   padding: 0;
 }
 
+.inputFieldLabel {
+  display: none;
+}
+
 .inputFieldTitle {
   font-weight: 300;
   font-size: 20px;
@@ -70,6 +74,9 @@
   }
   .inputField {
     padding: 0 16px;
+  }
+  .inputFieldLabel {
+    display: block;
   }
   .mainFormInfo {
     margin-bottom: 16px;
