@@ -6,7 +6,6 @@ const ProductList = () => (
   <>
     <li>3 nebo 5 chodové menu podle tebou určených makronutrientů</li>
     <li>5 až 6 dní v týdnu</li>
-    <li>Nutriční monitoring</li>
     <li>Rozvoz po Praze</li>
   </>
 )

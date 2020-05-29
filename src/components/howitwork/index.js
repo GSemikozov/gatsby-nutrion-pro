@@ -14,12 +14,12 @@ export const HowItWork = () => (
     <Container>
       <h3 className="sectionTitle -light text-center">Jak to funguje</h3>
       <div className={styles.sectionList}>
-        <div className={styles.sectionListItem}>
+        {/* <div className={styles.sectionListItem}>
           <div className={styles.sectionListImg}>
             <img src={icon1} className={styles.icon} alt="icon" />
           </div>
           <div className={styles.title}>Změříme kompozici tvého těla</div>
-        </div>
+        </div> */}
         <div className={styles.sectionListItem}>
           <div className={styles.sectionListImg}>
             <img src={icon2} className={styles.icon} alt="icon" />

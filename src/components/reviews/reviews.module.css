@@ -6,6 +6,7 @@
 }
 
 .reviewsSection:after {
+  display: none; /* temporary hide */
   content: "";
   position: absolute;
   bottom: 0;

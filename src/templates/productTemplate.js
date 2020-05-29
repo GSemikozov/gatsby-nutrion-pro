@@ -111,7 +111,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
                 </p>
               </div>
             </div>
-            <div className={section1.card}>
+            {/* <div className={section1.card}>
               <div className={section1.cardIcon}>
                 <img src={s1icon3} alt="icon" />
               </div>
@@ -124,7 +124,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
                   jídelníčku vyloučit až 3 druhy potravin.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* <div className="text-center">
             <button
@@ -138,7 +138,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
           </div> */}
         </Container>
       </section>
-      <section className={cx("section", section2.section)} id="section-2">
+      {/* <section className={cx("section", section2.section)} id="section-2">
         <Container className={section2.container}>
           <h3 className={cx("sectionTitle -light", section2.title)}>
             Diagnostika těla
@@ -157,8 +157,8 @@ const ProductTemplate = ({ productId, title, productList }) => {
             které si sám určíš.
           </p>
         </Container>
-      </section>
-      <section className={cx("section", section3.section)}>
+      </section> */}
+      {/* <section className={cx("section", section3.section)}>
         <Container className={section3.container}>
           <h3 className={cx("sectionTitle", section3.title)}>
             Dohled výživového poradce
@@ -179,8 +179,8 @@ const ProductTemplate = ({ productId, title, productList }) => {
               <img src={angleDownIcon} alt="icon" />
             </button>
           </div> */}
-        </Container>
-      </section>
+      {/* </Container>
+      </section> */}
       <section className={cx("section", section4.section)} id="section-4">
         <Container>
           <h3 className={cx("sectionTitle", section4.title)}>

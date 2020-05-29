@@ -16,21 +16,21 @@ const section0Texts = [
     answer:
       "Věříme v individuální přístup. Každý z nás je originál a každý z nás potřebuje jiný kalorický příjem, pokud chce dosáhnout svého cíle zdravou cestou. Jinak bude vypadat menu pro 50kg ženu, která chce zhubnout a jinak pro 90kg muže, který chce nabrat svalovou hmotu. Jídelníček je proto přizpůsoben na míru tělu a cílům, což obyčejná krabičková dieta nebere v potaz.",
   },
-  {
-    question: "Proč potřebuji znát složení svého těla?",
-    answer:
-      "Měřením získáš přehled o tom, jaký máš poměr mezi svalovou a tukovou hmotou a jaké je množství útrobního tuku a vody v těle. Jedná se o důležité indikátory zdraví, a proto je potřeba na ně brát ohled už při sestavování jídelníčku.",
-  },
-  {
-    question: "Jak probíhá měření?",
-    answer:
-      "Pro měření používáme přístroj Tanita. Náš zaškolený pracovník za tebou přijede na místo, které sám určíš, a změří tě. Měření trvá jen několik minut. Můžeš se ale také nechat změřit na jakékoli váze, která toto měření umožňuje, a výsledky nám poté zaslat.",
-  },
-  {
-    question: "Jak často bych se měl nechat změřit?",
-    answer:
-      "Díky častějšímu měření jsme schopni přesněji sledovat tvoje výsledky a dynamicky upravovat jídelníček. Měření tedy doporučujeme realizovat pravidelně každé 2–3 týdny.",
-  },
+  // {
+  //   question: "Proč potřebuji znát složení svého těla?",
+  //   answer:
+  //     "Měřením získáš přehled o tom, jaký máš poměr mezi svalovou a tukovou hmotou a jaké je množství útrobního tuku a vody v těle. Jedná se o důležité indikátory zdraví, a proto je potřeba na ně brát ohled už při sestavování jídelníčku.",
+  // },
+  // {
+  //   question: "Jak probíhá měření?",
+  //   answer:
+  //     "Pro měření používáme přístroj Tanita. Náš zaškolený pracovník za tebou přijede na místo, které sám určíš, a změří tě. Měření trvá jen několik minut. Můžeš se ale také nechat změřit na jakékoli váze, která toto měření umožňuje, a výsledky nám poté zaslat.",
+  // },
+  // {
+  //   question: "Jak často bych se měl nechat změřit?",
+  //   answer:
+  //     "Díky častějšímu měření jsme schopni přesněji sledovat tvoje výsledky a dynamicky upravovat jídelníček. Měření tedy doporučujeme realizovat pravidelně každé 2–3 týdny.",
+  // },
   {
     question: "Kdo sestavuje jídelníček?",
     answer:
@@ -41,12 +41,12 @@ const section0Texts = [
     answer:
       "Jsme zastánci vyvážené stravy. Jídla jsou tak velmi pestrá a chutná. Jídelníček je sestavován z 300 různých jídel, která se pravidelně střídají. Zároveň naši databázi neustále aktualizujeme a zařazujeme nová a zajímavá jídla. Prostě se ti u nás žádné jídlo nepřejí.",
   },
-  {
-    question:
-      "Nejím některé potraviny, dokážete mi upravit jídelníček dle mých požadavků?",
-    answer:
-      "Ano, můžeš si u nás z jídelníčku vyloučit až 3 druhy potravin a upravit ho tak podle svých preferencí. V tuto chvíli však nenabízíme možnost low-carb, low-fat, vegetarián, vegan či speciálních zdravotních diet.",
-  },
+  // {
+  //   question:
+  //     "Nejím některé potraviny, dokážete mi upravit jídelníček dle mých požadavků?",
+  //   answer:
+  //     "Ano, můžeš si u nás z jídelníčku vyloučit až 3 druhy potravin a upravit ho tak podle svých preferencí. V tuto chvíli však nenabízíme možnost low-carb, low-fat, vegetarián, vegan či speciálních zdravotních diet.",
+  // },
 ]
 
 const section1Texts = [
@@ -74,9 +74,8 @@ const section1Texts = [
 
 const section2Texts = [
   {
-    question: "Rozvážíte i do okrajových částí Prahy?",
-    answer:
-      "Ano, pro upřesnění a bližší info nás neváhej kontaktovat na klientské lince.",
+    question: "Kam ti jídlo dovezeme?",
+    answer: "Naše krabičky si vychutnáš kdekoliv po Praze.",
   },
   {
     question: "Kdy jídlo doručujete?",
