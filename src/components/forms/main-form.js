@@ -335,7 +335,7 @@ const MainFormLayout = ({
           </div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>
-              Vyberte si delku programu
+              Vyber si délku programu
             </h5>
             <RadioButtonGroup
               id="radioGroup"
@@ -375,7 +375,7 @@ const MainFormLayout = ({
           </div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>
-              Vyberte si počet jídel
+              Vyber si počet jídel
             </h5>
             <div className={cx(stylesRadio.radioBtns3, stylesRadio.MobileCol)}>
               <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
@@ -478,8 +478,8 @@ const MainFormLayout = ({
             <input type="hidden" name="price" value={price} />
           </div>
           <p className={mainFormStyles.mainFormInfo}>
-            Cena měsíčního programu je individuální a bude upřesněna dle
-            stanoveného příjmu na míru.
+            Cena měsíčního programu bude upřesněna dle stanoveného příjmu na
+            míru.
           </p>
         </div>
       </Form>
