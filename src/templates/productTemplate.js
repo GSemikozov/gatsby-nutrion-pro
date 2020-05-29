@@ -84,7 +84,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
           </p>
         </Container>
         <Container>
-          <div className={section1.cardGrid}>
+          <div className={section1.cardGrid} style={{ justifyContent }}>
             <div className={section1.card}>
               <div className={section1.cardIcon}>
                 <img src={s1icon1} alt="icon" />
@@ -201,7 +201,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
               <div className={section4.cardBody}>
                 <h5 className={section4.cardTitle}>Doprava je zdarma</h5>
                 <p className={section4.cardText}>
-                  Rozvážíme po celé Praze a okolí zcela zadarmo.
+                  Rozvážíme po celé Praze zcela zadarmo.
                 </p>
               </div>
             </div>

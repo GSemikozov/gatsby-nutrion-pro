@@ -21,9 +21,7 @@ export const ModalLocation = ({ close }) => {
       >
         <img src={LocationMarkIcon} alt="icon" />
       </div>
-      <h3 className={cx(styles.modalTitle, "text-center")}>
-        Bydlíš v Praze a okolí?
-      </h3>
+      <h3 className={cx(styles.modalTitle, "text-center")}>Bydlíš v Praze?</h3>
       <div
         className={cx(
           styles.locationModalButtons,
@@ -52,7 +50,7 @@ export const ModalLocation = ({ close }) => {
         <p>
           Tak to nás velmi mrzí.{" "}
           <b className={styles.colorSuccess}>
-            Bohužel, zatím rozvážíme jenom v Praze a okolí
+            Bohužel, zatím rozvážíme jenom v Praze
           </b>
           .
         </p>

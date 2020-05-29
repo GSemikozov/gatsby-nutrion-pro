@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Speciální krabičková dieta. Výživový poradce a šéfkuchař v jednom`,
-    description: `Krabičková dieta. Rozvoz po celé Praze a okolí zdarma. Konzultace s výživovým poradcem. Diagnostika složení těla inbody.`,
+    description: `Krabičková dieta. Rozvoz po celé Praze zdarma. Konzultace s výživovým poradcem. Diagnostika složení těla inbody.`,
     author: `@nutritionprocz`,
     siteURL: "https://nutritionpro.cz",
     menuLinks: [

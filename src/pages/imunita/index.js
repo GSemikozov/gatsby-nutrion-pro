@@ -264,7 +264,7 @@ const ImunitaPage = ({ location }) => {
             <h3
               className={cx("sectionTitle -light text-center", section4.title)}
             >
-              Znáš nějakou nemocnici z Prahy a okolí, které můžeme pomoci?
+              Znáš nějakou nemocnici z Prahy, které můžeme pomoci?
             </h3>
             <Button type="secondary">
               <a href="mailto:info@nutritionpro.cz" className={section4.link}>
