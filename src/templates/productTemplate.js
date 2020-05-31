@@ -84,7 +84,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
           </p>
         </Container>
         <Container>
-          <div className={section1.cardGrid} style={{ justifyContent }}>
+          <div className={section1.cardGrid}>
             <div className={section1.card}>
               <div className={section1.cardIcon}>
                 <img src={s1icon1} alt="icon" />
