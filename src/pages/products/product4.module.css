@@ -4,8 +4,8 @@
 
 .hero {
   height: 730px;
-  background: url("./images/hero-bg-desktop.jpg") center no-repeat;
-  background-size: cover;
+  /* background: url("./images/hero-bg-desktop.jpg") center no-repeat;
+  background-size: cover; */
   display: flex;
   flex-direction: column;
   justify-content: center;
