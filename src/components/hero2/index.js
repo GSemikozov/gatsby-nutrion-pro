@@ -139,7 +139,7 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    <b>12</b> krabiček pro <br /> <b>10</b> chodů
+                    <b>5</b> prémiových <br /> <b>jídel</b> denně
                   </div>
                 </div>
                 <div className={styles.offersListItem}>

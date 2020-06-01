@@ -1,0 +1,388 @@
+.wrapper {
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 730px;
+  background: url("./images/hero-bg-desktop.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
+  z-index: 1;
+}
+
+.heroContainer {
+  max-width: 1120px;
+  position: relative;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 70px;
+  color: #1a1e20;
+}
+
+.list {
+  margin: 0 0 48px;
+  padding: 0;
+}
+
+.list li {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  background: url("./images/check-icon.svg") center no-repeat;
+  background-size: cover;
+  width: 12px;
+  height: 9px;
+  display: inline-block;
+}
+
+.heroBtn {
+  max-width: 280px;
+  width: 100%;
+}
+
+.heroImg {
+  max-width: 375px;
+  width: 100%;
+}
+
+.postHero {
+  color: var(--color-white);
+  padding: 32px 0;
+}
+
+.postHeroContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 80px;
+}
+
+.postHeroItem {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 33.3333%;
+}
+
+.postHeroItemTitle {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 16px;
+}
+
+.menuSection {
+  padding: 70px 0;
+}
+
+.menuSectionTitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.menuSectionItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.menuSectionItem:last-child {
+  margin-bottom: 0;
+}
+
+.menuSectionItemHeading {
+  position: relative;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+  color: #2fa037;
+  margin-bottom: 30px;
+  padding-bottom: 6px;
+}
+
+.menuSectionItemHeading::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  background-color: var(--color-green);
+  background-image: linear-gradient(
+    left,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.75) 50%,
+    hsla(0, 0%, 0%, 0) 100%
+  );
+}
+
+.menuSectionItemContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menuSectionItemContainer > * {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 50%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.menuSectionItemContainer > * > * {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.menuSectionItemContainer > * i {
+  font-weight: 300;
+}
+
+.textIcon {
+  display: inline-block;
+  position: relative;
+  margin-left: 30px;
+  padding-left: 44px;
+}
+
+.textIcon > .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.menuSectionItemText {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.menuSectionItemValue {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #2fa037;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 0 15px;
+}
+
+.section4top {
+  padding: 80px 0 40px;
+  background-color: #eaeff1;
+}
+
+.section4bottom {
+  padding: 0 0 80px;
+}
+
+@media all and (max-width: 767px) {
+  .hero {
+    overflow: hidden;
+    height: 570px;
+  }
+
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroContainer .heroImg {
+    order: 2;
+    margin-top: -20px;
+  }
+
+  .heroContainer .title {
+    order: 1;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #1a1e20;
+    text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    margin: 0;
+  }
+
+  .heroContainer .list {
+    order: 3;
+    margin-bottom: 20px;
+  }
+
+  .heroContainer .list li {
+    font-weight: 600;
+  }
+
+  .heroContainer .heroBtn {
+    order: 4;
+    margin: 0 auto;
+  }
+
+  .postHeroContainer {
+    justify-content: center;
+    padding: 0 15px;
+  }
+
+  .postHeroContainer {
+    padding: 0;
+  }
+
+  .postHeroItemTitle {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    white-space: nowrap;
+  }
+
+  .menuSection {
+    padding: 54px 0 0;
+  }
+
+  .menuSectionTitle {
+    margin-bottom: 40px;
+  }
+
+  .menuSectionItemHeading {
+    max-width: calc(50% + 16px);
+    text-align: right;
+    font-size: 20px;
+    line-height: 23px;
+    margin-left: -16px;
+    margin-bottom: 20px;
+  }
+
+  .menuSectionItemContainer > * {
+    flex: 1 0 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .menuSectionItemContainer > * > * {
+    min-height: auto;
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding: 8px 16px;
+    margin: 0 -16px;
+  }
+
+  .menuSectionItemContainer > * > *:first-child {
+    background: linear-gradient(
+      89.29deg,
+      #ededed -2.21%,
+      rgba(255, 255, 255, 0) 137.2%
+    );
+  }
+
+  .menuSectionItemContainer > * > *:last-child {
+    padding: 20px 16px;
+  }
+
+  .menuSectionItemContainer {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .menuSectionItemText {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .menuSectionItemValue {
+    min-width: 24px;
+    max-width: 24px;
+    height: 24px;
+    margin: 0 13px;
+  }
+
+  .icon {
+    margin-top: -2px;
+  }
+
+  .section4top {
+    padding: 32px 0;
+    background-color: #eaeff1;
+  }
+
+  .section4topText {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+  }
+
+  .section4topTitle {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: 14px;
+  }
+
+  .section4bottom {
+    padding: 14px 0 36px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .list li {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-left: 32px;
+  }
+
+  .list li:before {
+    width: 14px;
+    height: 12px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .title,
+  .list {
+    max-width: 350px;
+  }
+
+  .title {
+    margin-bottom: 48px;
+  }
+
+  .heroImg {
+    position: absolute;
+    left: 560px;
+    top: 0;
+    max-width: 800px;
+    z-index: 1;
+  }
+}
