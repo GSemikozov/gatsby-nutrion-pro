@@ -122,7 +122,7 @@
   font-size: 36px;
   line-height: 41px;
   text-align: center;
-  color: #2fa037;
+  color: var(--color-green);
   margin-bottom: 30px;
   padding-bottom: 6px;
 }
@@ -134,13 +134,13 @@
   left: 0;
   bottom: -1px;
   height: 1px;
-  background-color: var(--color-green);
-  background-image: linear-gradient(
-    left,
-    hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.75) 50%,
-    hsla(0, 0%, 0%, 0) 100%
-  );
+  background: transparent
+    linear-gradient(
+      to right,
+      hsla(124, 55%, 41%, 0) 0%,
+      hsla(124, 55%, 41%, 0.75) 50%,
+      hsla(124, 55%, 41%, 0) 100%
+    );
 }
 
 .menuSectionItemContainer {
@@ -272,6 +272,10 @@
 
   .menuSectionTitle {
     margin-bottom: 40px;
+  }
+
+  .menuSectionItemHeading::after {
+    background: var(--color-green);
   }
 
   .menuSectionItemHeading {
