@@ -69,13 +69,13 @@ const Product4 = () => {
           </h1>
           <ul className={styles.list}>
             <li>
-              Horký oběd a večeře <b>5 dní</b> v týdnu
+              Teplý oběd a večeře <b>5 dní</b> v týdnu
             </li>
             <li>
-              Doprava je <b>zdarma</b>
+              Doprava <b>zdarma</b>
             </li>
             <li>
-              <b>3</b> týdny jídelniček se neopakuje
+              Jiné menu po celé <b>3 týdny</b>
             </li>
           </ul>
           <Button
@@ -121,7 +121,7 @@ const Product4 = () => {
                 </clipPath>
               </defs>
             </svg>
-            <h5 className={styles.postHeroItemTitle}>Žádné další vaření</h5>
+            <h5 className={styles.postHeroItemTitle}>Žádné vaření</h5>
           </div>
           <div className={styles.postHeroItem}>
             <svg
@@ -152,7 +152,7 @@ const Product4 = () => {
                 fill="white"
               />
             </svg>
-            <h5 className={styles.postHeroItemTitle}>Vždy zdravé jídlo</h5>
+            <h5 className={styles.postHeroItemTitle}>Vždy zdravě</h5>
           </div>
           <div className={styles.postHeroItem}>
             <svg
@@ -202,7 +202,9 @@ const Product4 = () => {
                         fill="#1A1E20"
                       />
                     </svg>
-                    <span>Zelené rizoto s krůtími karbanátky a bylinkami</span>
+                    <span>
+                      Zeleninové rizoto s krůtími karbanátky plné bylinek
+                    </span>
                   </span>
                 </div>
                 <div>
@@ -241,7 +243,7 @@ const Product4 = () => {
                         fill="#1A1E20"
                       />
                     </svg>
-                    <span>Quiche s lososem a zeleninou</span>
+                    <span>Zeleninový quiche s lososem</span>
                   </span>
                 </div>
                 <div>
@@ -285,7 +287,7 @@ const Product4 = () => {
                         fill="#1A1E20"
                       />
                     </svg>
-                    <span>Jehněčí karé dušené s kořením</span>
+                    <span>Dušené jehněčí karé s voňavým kořením</span>
                   </span>
                 </div>
                 <div>
@@ -325,7 +327,7 @@ const Product4 = () => {
                       />
                     </svg>
                     <span>
-                      Krůtí řízek s rajčaty a sýrem a peperonata se sýrem
+                      Krůtí řízek s rajčaty a sýrem a šťavnatá peperonata
                     </span>
                   </span>
                 </div>
@@ -409,7 +411,7 @@ const Product4 = () => {
                         fill="#1A1E20"
                       />
                     </svg>
-                    <span>Pstruh na kari / Grilované cukety</span>
+                    <span>Curry pstruh a grilované cuketky</span>
                   </span>
                 </div>
                 <div>
@@ -445,12 +447,14 @@ const Product4 = () => {
                 styles.section4topTitle
               )}
             >
-              Rozvoz až k tobě ke dvěřím
+              Rozvoz až ke tvým dveřím
             </h3>
             <p className={cx(stylesSection4.text, styles.section4topText)}>
               Jídlo ti dovezeme až ke dveřím tvého domova a v čas, který nám sám
               sdělíš. Rozvážíme ve večerních hodinách od 17 do 22 hodin, a to
-              každé úterý, čtvrtek a neděli.
+              každé úterý, čtvrtek a neděli. -> Jídlo dovezeme přímo k tobě
+              domů. Krabičky čekej každé úterý, čtvrtek a neděli od 17 do 22
+              hodin. Ty sám si určíš ideální čas.
             </p>
           </Container>
         </div>
@@ -462,11 +466,9 @@ const Product4 = () => {
                   <img src={s3icon1} alt="icon" />
                 </div>
                 <div className={stylesSection4.cardBody}>
-                  <h5 className={stylesSection4.cardTitle}>
-                    Doprava je zdarma
-                  </h5>
+                  <h5 className={stylesSection4.cardTitle}>Doprava zdarma</h5>
                   <p className={stylesSection4.cardText}>
-                    Rozvážíme po celé Praze zcela zadarmo.
+                    Rozvoz po celé Praze tě nic nestojí.
                   </p>
                 </div>
               </div>
@@ -476,10 +478,10 @@ const Product4 = () => {
                 </div>
                 <div className={stylesSection4.cardBody}>
                   <h5 className={stylesSection4.cardTitle}>
-                    Vyber si přesný čas doručení
+                    Výběr času doručení
                   </h5>
                   <p className={stylesSection4.cardText}>
-                    2hodinová časová okna
+                    2hodinová časová okna podle tebe
                   </p>
                 </div>
               </div>
@@ -489,11 +491,11 @@ const Product4 = () => {
                 </div>
                 <div className={stylesSection4.cardBody}>
                   <h5 className={stylesSection4.cardTitle}>
-                    Možnost změnit místo doručení
+                    Možnost měnit místa doručení
                   </h5>
                   <p className={stylesSection4.cardText}>
-                    Stačí nám napsat v den rozvozu do 15 hodin a my ti jídlo
-                    dovezeme na novou adresu.
+                    Změna plánu? Napiš do 15 hodin v den rozvozu a my ti jídlo
+                    dovezeme jinam.
                   </p>
                 </div>
               </div>
@@ -502,10 +504,10 @@ const Product4 = () => {
                   <img src={s3icon4} alt="icon" />
                 </div>
                 <div className={stylesSection4.cardBody}>
-                  <h5 className={stylesSection4.cardTitle}>Odběrné místo </h5>
+                  <h5 className={stylesSection4.cardTitle}>Odběrné místo</h5>
                   <p className={stylesSection4.cardText}>
-                    Jídlo si můžeš vyzvednout i na našem odběrném místě v centru
-                    Prahy.
+                    Naše krabičky si můžeš vyzvednout i osobně. Stav se na
+                    odběrném místě v centru Prahy.
                   </p>
                 </div>
               </div>

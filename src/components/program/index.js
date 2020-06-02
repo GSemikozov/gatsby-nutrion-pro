@@ -211,10 +211,9 @@ export const Program = ({ id = "" }) => {
               hide: activeTab !== 4,
             })}
           >
-            <h4 className={styles.tabsContentTitle}>Uvaříme na míru</h4>
+            <h4 className={styles.tabsContentTitle}>Office pack</h4>
             <p className={styles.tabsContentText}>
-              Individuální program přesně{" "}
-              <span>podle tebou zadaných makronutrientů</span>.
+              Vyvážené jídlo do kanceláře, po kterém ti práce půjde od ruky.
             </p>
             <Link to="/products/product-4" className={styles.button}>
               Více o programu
