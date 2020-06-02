@@ -30,7 +30,7 @@ export const HeroFormLayout = ({
         <FastField
           component="input"
           type="text"
-          name="name"
+          name="title"
           placeholder="Tvoje jméno"
           className={cx(styles.input, heroFormStyles.input)}
         />
@@ -64,14 +64,14 @@ export const HeroFormLayout = ({
 
 export const HeroForm = withFormik({
   mapPropsToValues: () => ({
-    name: "",
+    title: "",
     phone: "+420",
     referrer: "",
     success: false,
   }),
   validationSchema: () =>
     Yup.object().shape({
-      name: Yup.string()
+      title: Yup.string()
         .min(1)
         .required(),
       phone: Yup.string()
@@ -79,7 +79,7 @@ export const HeroForm = withFormik({
         .phone(),
     }),
   handleSubmit: async (
-    { name, phone },
+    { title, phone },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
@@ -95,7 +95,7 @@ export const HeroForm = withFormik({
 
       const data = {
         form_name: "2days-trial",
-        name,
+        title,
         phone,
         referrer: referrer,
         roistat: roistat_visit,
