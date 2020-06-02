@@ -6,6 +6,9 @@ import React from 'react';
 import { Button } from '../../components/button';
 import { Calculator2 } from '../../components/calculator2';
 import { Container } from '../../components/container';
+import { BackgroundMenuSection } from '../../components/test-pack-images/background-menu';
+import { BackgroundPostHeroSection } from '../../components/test-pack-images/background-post-hero';
+import { HeroImg } from '../../components/test-pack-images/hero-img';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import commonStyles from '../../templates/common.module.css';
 import s3icon1 from '../../templates/icons/s3-icon1.svg';
@@ -13,9 +16,6 @@ import s3icon2 from '../../templates/icons/s3-icon2.svg';
 import s3icon3 from '../../templates/icons/s3-icon3.svg';
 import s3icon4 from '../../templates/icons/s3-icon4.svg';
 import stylesSection4 from '../../templates/section4.module.css';
-import { BackgroundMenuSection } from './product-4/background-menu';
-import { BackgroundPostHeroSection } from './product-4/background-post-hero';
-import { HeroImg } from './product-4/hero-img';
 import styles from './product4.module.css';
 
 const BackgroundHeroSection = ({ children, className }) => {
