@@ -1,11 +1,11 @@
-import cx from "classnames"
-import { FastField, Form, withFormik } from "formik"
-import React from "react"
-import * as Yup from "yup"
+import cx from 'classnames';
+import { FastField, Form, withFormik } from 'formik';
+import React from 'react';
+import * as Yup from 'yup';
 
-import { Button } from "../button"
-import styles from "./form.module.css"
-import heroFormStyles from "./hero-form.module.css"
+import { Button } from '../button';
+import styles from './form.module.css';
+import heroFormStyles from './hero-form.module.css';
 
 const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 
@@ -25,7 +25,7 @@ export const HeroFormLayout = ({
   btnText = "Objednat",
 }) => {
   return (
-    <Form name="hero-form" method="post" className={heroFormStyles.heroForm}>
+    <Form name="2days-trial" method="post" className={heroFormStyles.heroForm}>
       <div className={styles.inputField}>
         <FastField
           component="input"
@@ -94,7 +94,7 @@ export const HeroForm = withFormik({
         ) || ""
 
       const data = {
-        form_name: "hero-form",
+        form_name: "2days-trial",
         name,
         phone,
         referrer: referrer,
