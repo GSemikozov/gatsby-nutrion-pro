@@ -450,11 +450,8 @@ const Product4 = () => {
               Rozvoz až ke tvým dveřím
             </h3>
             <p className={cx(stylesSection4.text, styles.section4topText)}>
-              Jídlo ti dovezeme až ke dveřím tvého domova a v čas, který nám sám
-              sdělíš. Rozvážíme ve večerních hodinách od 17 do 22 hodin, a to
-              každé úterý, čtvrtek a neděli. -> Jídlo dovezeme přímo k tobě
-              domů. Krabičky čekej každé úterý, čtvrtek a neděli od 17 do 22
-              hodin. Ty sám si určíš ideální čas.
+              Jídlo dovezeme přímo k tobě domů. Krabičky čekej každé úterý,
+              čtvrtek a neděli od 17 do 22 hodin. Ty sám si určíš ideální čas.
             </p>
           </Container>
         </div>
