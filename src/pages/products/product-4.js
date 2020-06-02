@@ -510,12 +510,12 @@ const Product4 = () => {
                 </div>
               </div>
             </div>
-            <div className={cx("text-center", stylesSection4.buttons)}>
+            {/* <div className={cx("text-center", stylesSection4.buttons)}>
               <div className={stylesSection4.buttonsTitle}>Vozíme i k Vám?</div>
               <Button type="outline" className={stylesSection4.button}>
                 Zkontrolovat adresu
               </Button>
-            </div>
+            </div> */}
           </Container>
         </div>
       </section>
