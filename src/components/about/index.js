@@ -33,13 +33,6 @@ export const About = () => (
           </h5>
         </div>
         <div className={styles.aboutOption}>
-          <img src={IconDNA} className={styles.aboutOptionImg} alt="icon" />
-          <h5 className={styles.aboutOptionTitle}>
-            Přesně stanovené
-            <br /> makronutrienty
-          </h5>
-        </div>
-        <div className={styles.aboutOption}>
           <img src={IconSalad} className={styles.aboutOptionImg} alt="icon" />
           <h5 className={styles.aboutOptionTitle}>
             Menu z
@@ -51,17 +44,6 @@ export const About = () => (
           <h5 className={styles.aboutOptionTitle}>
             Kvalitní
             <br /> prémiové suroviny
-          </h5>
-        </div>
-        <div className={styles.aboutOption}>
-          <img
-            src={IconResearcher}
-            className={styles.aboutOptionImg}
-            alt="icon"
-          />
-          <h5 className={styles.aboutOptionTitle}>
-            Stálý dohled
-            <br /> výživového poradce
           </h5>
         </div>
         <div className={styles.aboutOption}>
