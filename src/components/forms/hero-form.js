@@ -83,6 +83,14 @@ export const HeroForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
+      let urlString = document.location.href
+      let url = new URL(urlString)
+      let UTM_SOURCE = url.searchParams.get("utm_source")
+      let UTM_MEDIUM = url.searchParams.get("utm_medium")
+      let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
+      let UTM_TERM = url.searchParams.get("utm_term")
+      let UTM_CONTENT = url.searchParams.get("utm_content")
+
       let referrer = ""
       if (document.referrer !== "") {
         referrer = new URL(document.referrer).hostname
@@ -97,6 +105,11 @@ export const HeroForm = withFormik({
         form_name: "2days-trial",
         title,
         phone,
+        utm_source: UTM_SOURCE,
+        utm_medium: UTM_MEDIUM,
+        utm_campaign: UTM_CAMPAIGN,
+        utm_term: UTM_TERM,
+        utm_content: UTM_CONTENT,
         referrer: referrer,
         roistat: roistat_visit,
       }
