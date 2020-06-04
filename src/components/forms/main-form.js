@@ -561,7 +561,7 @@ export const MainForm = withFormik({
         roistat: roistat_visit,
       }
 
-      await console.log(JSON.stringify(data))
+      // await console.log(JSON.stringify(data))
 
       await fetch("/api/application", {
         method: "POST",
@@ -575,12 +575,12 @@ export const MainForm = withFormik({
         resetForm()
         document.querySelector('[name="price"]').value = 420
         document.querySelector("#price").textContent = 420
-        // window.location.href = "/thank-you"
-        // window.dataLayer.push({
-        //   event: "ga.pageview",
-        //   pageURL: "/thank-you",
-        //   pageType: "Purchase",
-        // })
+        window.location.href = "/thank-you"
+        window.dataLayer.push({
+          event: "ga.pageview",
+          pageURL: "/thank-you",
+          pageType: "Purchase",
+        })
       }, 2000)
     } catch (err) {
       setSubmitting(false)
