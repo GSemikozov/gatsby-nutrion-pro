@@ -511,7 +511,6 @@ export const MainForm = withFormik({
   ) => {
     try {
       let UTM_from_local_storage = JSON.parse(localStorage.getItem("UTM"))
-      console.log("UTM", UTM_from_local_storage.source)
       let UTM_SOURCE = ""
       let UTM_MEDIUM = ""
       let UTM_CAMPAIGN = ""
