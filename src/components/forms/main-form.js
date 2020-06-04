@@ -36,10 +36,6 @@ const RadioButton = ({
   disabled = false,
   ...props
 }) => {
-  useEffect(() => {
-    console.log("INPUT prop disabled", `is ${disabled} in ${value}`)
-  }, [value, disabled])
-
   return (
     <div
       className={cx(
@@ -88,10 +84,6 @@ const RadioButtonGroup = ({
     },
     className
   )
-
-  useEffect(() => {
-    console.log("children were changed")
-  }, [children])
 
   return (
     <div className={classes} onChange={onChange}>
@@ -518,13 +510,29 @@ export const MainForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
-      let urlString = document.location.href
-      let url = new URL(urlString)
-      let UTM_SOURCE = url.searchParams.get("utm_source")
-      let UTM_MEDIUM = url.searchParams.get("utm_medium")
-      let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
-      let UTM_TERM = url.searchParams.get("utm_term")
-      let UTM_CONTENT = url.searchParams.get("utm_content")
+      let UTM_from_local_storage = JSON.parse(localStorage.getItem("UTM"))
+      console.log("UTM", UTM_from_local_storage.source)
+      let UTM_SOURCE = ""
+      let UTM_MEDIUM = ""
+      let UTM_CAMPAIGN = ""
+      let UTM_TERM = ""
+      let UTM_CONTENT = ""
+      if (UTM_from_local_storage !== null) {
+        UTM_SOURCE = UTM_from_local_storage.source
+        UTM_MEDIUM = UTM_from_local_storage.medium
+        UTM_CAMPAIGN = UTM_from_local_storage.campaign
+        UTM_TERM = UTM_from_local_storage.term
+        UTM_CONTENT = UTM_from_local_storage.content
+      } else {
+        let urlString = document.location.href
+        let url = new URL(urlString)
+        UTM_SOURCE = url.searchParams.get("utm_source")
+        UTM_MEDIUM = url.searchParams.get("utm_medium")
+        UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
+        UTM_TERM = url.searchParams.get("utm_term")
+        UTM_CONTENT = url.searchParams.get("utm_content")
+      }
+
       let referrer = ""
       if (document.referrer !== "") {
         referrer = new URL(document.referrer).hostname
@@ -553,7 +561,7 @@ export const MainForm = withFormik({
         roistat: roistat_visit,
       }
 
-      // await console.log(JSON.stringify(data))
+      await console.log(JSON.stringify(data))
 
       await fetch("/api/application", {
         method: "POST",
@@ -567,12 +575,12 @@ export const MainForm = withFormik({
         resetForm()
         document.querySelector('[name="price"]').value = 420
         document.querySelector("#price").textContent = 420
-        window.location.href = "/thank-you"
-        window.dataLayer.push({
-          event: "ga.pageview",
-          pageURL: "/thank-you",
-          pageType: "Purchase",
-        })
+        // window.location.href = "/thank-you"
+        // window.dataLayer.push({
+        //   event: "ga.pageview",
+        //   pageURL: "/thank-you",
+        //   pageType: "Purchase",
+        // })
       }, 2000)
     } catch (err) {
       setSubmitting(false)

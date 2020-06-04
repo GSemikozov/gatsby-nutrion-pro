@@ -34,6 +34,29 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          let urlString = document.location.href
+          let url = new URL(urlString)
+          let UTM_SOURCE = url.searchParams.get("utm_source")
+          let UTM_MEDIUM = url.searchParams.get("utm_medium")
+          let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
+          let UTM_TERM = url.searchParams.get("utm_term")
+          let UTM_CONTENT = url.searchParams.get("utm_content")
+          let UTMS = {
+            source: UTM_SOURCE,
+            medium: UTM_MEDIUM,
+            campaign: UTM_CAMPAIGN,
+            term: UTM_TERM,
+            content: UTM_CONTENT
+          }
+          if (UTM_SOURCE !== null) {
+            localStorage.setItem('UTM', JSON.stringify(UTMS));
+          }
+          `,
+        }}
+      />
     </html>
   )
 }
