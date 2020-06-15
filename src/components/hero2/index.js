@@ -85,6 +85,32 @@ export const Hero = () => {
     setHideBtn(!hideBtn)
   }
 
+  const onMobileMenuOpen = () => {
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: "ga.pageview",
+        pageURL: "/",
+        pageType: "Purchase",
+        сategory: "banner",
+        action: "vice",
+        label: "HP",
+      })
+    hadleShow()
+  }
+
+  const onMobileMenuHide = () => {
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: "ga.pageview",
+        pageURL: "/",
+        pageType: "Purchase",
+        сategory: "banner",
+        action: "mene",
+        label: "HP",
+      })
+    hadleShow()
+  }
+
   return (
     <>
       {/* {typeof document !== `undefined` && (
@@ -244,7 +270,7 @@ export const Hero = () => {
               <Button
                 type="primary"
                 className={!openBtn ? "hide" : ""}
-                handleClick={hadleShow}
+                handleClick={onMobileMenuOpen}
               >
                 <svg
                   width="12"
@@ -351,7 +377,7 @@ export const Hero = () => {
               </div>
               <div
                 className={cx(styles.btnTop, { ["hide"]: !hideBtn })}
-                onClick={() => hadleShow()}
+                onClick={() => onMobileMenuHide()}
               >
                 <svg
                   width="25"
