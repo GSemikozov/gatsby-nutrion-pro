@@ -86,16 +86,24 @@ export const Hero = () => {
   }
 
   const onMobileMenuOpen = () => {
-    ga("send", "event", "banner", "vice", "HP", {
-      nonInteraction: 1,
-    })
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: "ga.event",
+        eCategory: "banner",
+        eAction: "vice",
+        eLabel: "HP",
+      })
     hadleShow()
   }
 
   const onMobileMenuHide = () => {
-    ga("send", "event", "banner", "mene", "HP", {
-      nonInteraction: 1,
-    })
+    window.dataLayer &&
+      window.dataLayer.push({
+        event: "ga.event",
+        eCategory: "banner",
+        eAction: "mene",
+        eLabel: "HP",
+      })
     hadleShow()
   }
 
