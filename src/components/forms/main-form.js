@@ -122,13 +122,12 @@ const MainFormLayout = ({
   }
 
   const onSetProgram = value => {
-    window.dataLayer &&
-      window.dataLayer.push({
-        event: "ga.event",
-        eCategory: "calc",
-        eAction: "action",
-        eLabel: "HP",
-      })
+    window.dataLayer.push({
+      event: "ga.event",
+      eCategory: "calc",
+      eAction: "action",
+      eLabel: "HP",
+    })
     setProgram(value)
   }
 
