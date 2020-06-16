@@ -86,28 +86,16 @@ export const Hero = () => {
   }
 
   const onMobileMenuOpen = () => {
-    window.dataLayer &&
-      window.dataLayer.push({
-        event: "ga.pageview",
-        pageURL: "/",
-        pageType: "Purchase",
-        сategory: "banner",
-        action: "vice",
-        label: "HP",
-      })
+    ga("btn open", "ga.pageview", "banner", "vice", "HP", false, {
+      nonInteraction: 1,
+    })
     hadleShow()
   }
 
   const onMobileMenuHide = () => {
-    window.dataLayer &&
-      window.dataLayer.push({
-        event: "ga.pageview",
-        pageURL: "/",
-        pageType: "Purchase",
-        сategory: "banner",
-        action: "mene",
-        label: "HP",
-      })
+    ga("btn close", "ga.pageview", "banner", "mene", "HP", false, {
+      nonInteraction: 1,
+    })
     hadleShow()
   }
 
