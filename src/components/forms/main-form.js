@@ -574,10 +574,10 @@ export const MainForm = withFormik({
         resetForm()
         document.querySelector('[name="price"]').value = 420
         document.querySelector("#price").textContent = 420
-        window.location.href = "/thank-you"
+        window.location.href = "/dekovacka-testdrive"
         window.dataLayer.push({
           event: "ga.pageview",
-          pageURL: "/thank-you",
+          pageURL: "/dekovacka-testdrive",
           pageType: "Purchase",
         })
       }, 2000)
