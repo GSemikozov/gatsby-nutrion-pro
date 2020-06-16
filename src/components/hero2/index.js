@@ -86,16 +86,12 @@ export const Hero = () => {
   }
 
   const onMobileMenuOpen = () => {
-    ga("send", "event", "banner", "vice", "HP", false, {
-      nonInteraction: 1,
-    })
+    ga("send", "event", "banner", "vice", "HP")
     hadleShow()
   }
 
   const onMobileMenuHide = () => {
-    ga("send", "event", "banner", "mene", "HP", false, {
-      nonInteraction: 1,
-    })
+    ga("send", "event", "banner", "mene", "HP")
     hadleShow()
   }
 
