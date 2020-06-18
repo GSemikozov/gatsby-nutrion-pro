@@ -28,9 +28,9 @@ const renderJobs = () => [
   // />,
   <Job
     key="2"
-    title="Obchodní zástupce"
+    title="Sales manager"
     description="Do našeho mladého týmu hledáme šikovného/ou kolegu/yni na pozici Obchodní zástupce."
-    date="12.12.2019"
+    date="18.06.2020"
     color="#EAEFF7"
     link="/jobs/sales"
   />,
