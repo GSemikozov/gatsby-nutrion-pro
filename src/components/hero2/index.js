@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
@@ -93,6 +94,12 @@ export const Hero = () => {
       eAction: "vice",
       eLabel: "HP",
     })
+    trackCustomEvent({
+      event: "ga.event",
+      eCategory: "banner",
+      eAction: "vice",
+      eLabel: "HP",
+    })
   }
 
   const onMobileMenuHide = () => {
@@ -102,6 +109,11 @@ export const Hero = () => {
       eCategory: "banner",
       eAction: "mene",
       eLabel: "HP",
+    })
+    trackCustomEvent({
+      category: "Special Button",
+      action: "Click",
+      label: "Gatsby Plugin Example Campaign",
     })
   }
 
