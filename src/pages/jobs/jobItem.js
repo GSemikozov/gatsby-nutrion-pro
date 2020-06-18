@@ -18,14 +18,14 @@ export const Job = props => {
 }
 
 const renderJobs = () => [
-  <Job
-    key="1"
-    title="NUTRIČNÍ SPECIALISTA"
-    description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Nutriční specialista."
-    date="12.12.2019"
-    color="#FDF9F4"
-    link="/jobs/nutritionist"
-  />,
+  // <Job
+  //   key="1"
+  //   title="NUTRIČNÍ SPECIALISTA"
+  //   description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Nutriční specialista."
+  //   date="12.12.2019"
+  //   color="#FDF9F4"
+  //   link="/jobs/nutritionist"
+  // />,
   <Job
     key="2"
     title="Obchodní zástupce"
@@ -34,14 +34,14 @@ const renderJobs = () => [
     color="#EAEFF7"
     link="/jobs/sales"
   />,
-  <Job
-    key="3"
-    title="Marketing &nbsp; manager"
-    description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Marketing manager."
-    date="15.12.2019"
-    color="#F7F4FD"
-    link="/jobs/marketing-manager"
-  />,
+  // <Job
+  //   key="3"
+  //   title="Marketing &nbsp; manager"
+  //   description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Marketing manager."
+  //   date="15.12.2019"
+  //   color="#F7F4FD"
+  //   link="/jobs/marketing-manager"
+  // />,
   // <Job
   //   title="NUTRIČNÍ SPECIALISTA"
   //   description="Burrito se salátem pico de gallo a zakysanou smetanou"
