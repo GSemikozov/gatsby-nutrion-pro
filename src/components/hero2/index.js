@@ -86,23 +86,23 @@ export const Hero = () => {
   }
 
   const onMobileMenuOpen = () => {
+    hadleShow()
     window.dataLayer.push({
       event: "ga.event",
       eCategory: "banner",
       eAction: "vice",
       eLabel: "HP",
     })
-    hadleShow()
   }
 
   const onMobileMenuHide = () => {
+    hadleShow()
     window.dataLayer.push({
       event: "ga.event",
       eCategory: "banner",
       eAction: "mene",
       eLabel: "HP",
     })
-    hadleShow()
   }
 
   return (
