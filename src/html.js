@@ -26,11 +26,6 @@ export default function HTML(props) {
                 `,
           }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];`,
-          }}
-        />
         {props.preBodyComponents}
         <div
           key={`body`}
