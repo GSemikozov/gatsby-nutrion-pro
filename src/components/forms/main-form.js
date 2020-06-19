@@ -1,6 +1,7 @@
 // import cx from 'classnames';
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
@@ -119,6 +120,11 @@ const MainFormLayout = ({
     } else {
       setMenu2xDisabled(false)
     }
+    trackCustomEvent({
+      category: "Special Button",
+      action: "Click",
+      label: "Gatsby Plugin Example Campaign",
+    })
   }
 
   const onSetProgram = value => {
@@ -140,6 +146,12 @@ const MainFormLayout = ({
       setPlan2Disabled(false)
       setPlan3Disabled(false)
     }
+    trackCustomEvent({
+      event: "ga.event",
+      eCategory: "banner",
+      eAction: "vice",
+      eLabel: "HP",
+    })
   }
 
   useEffect(() => {
