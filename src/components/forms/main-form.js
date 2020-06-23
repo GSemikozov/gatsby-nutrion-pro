@@ -120,20 +120,19 @@ const MainFormLayout = ({
     } else {
       setMenu2xDisabled(false)
     }
-    // trackCustomEvent({
-    //   category: "Special Button",
-    //   action: "Click",
-    //   label: "Gatsby Plugin Example Campaign",
-    // })
+    trackCustomEvent({
+      category: "calc",
+      action: "click set plan",
+      label: "HP",
+    })
   }
 
   const onSetProgram = value => {
     setProgram(value)
-    window.dataLayer.push({
-      event: "ga.event",
-      eCategory: "calc",
-      eAction: "action",
-      eLabel: "HP",
+    trackCustomEvent({
+      category: "calc",
+      action: "click set program",
+      label: "HP",
     })
   }
 
@@ -146,12 +145,11 @@ const MainFormLayout = ({
       setPlan2Disabled(false)
       setPlan3Disabled(false)
     }
-    // trackCustomEvent({
-    //   event: "ga.event",
-    //   eCategory: "banner",
-    //   eAction: "vice",
-    //   eLabel: "HP",
-    // })
+    trackCustomEvent({
+      category: "calc",
+      action: "click set menu",
+      label: "HP",
+    })
   }
 
   useEffect(() => {

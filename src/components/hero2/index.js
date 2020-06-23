@@ -93,6 +93,11 @@ export const Hero = () => {
       eAction: "vice",
       eLabel: "HP",
     })
+    trackCustomEvent({
+      category: "banner",
+      action: "vice",
+      label: "HP",
+    })
   }
 
   const onMobileMenuHide = () => {
@@ -102,6 +107,11 @@ export const Hero = () => {
       eCategory: "banner",
       eAction: "mene",
       eLabel: "HP",
+    })
+    trackCustomEvent({
+      category: "banner",
+      action: "mene",
+      label: "HP",
     })
   }
 
