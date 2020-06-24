@@ -122,7 +122,7 @@ const MainFormLayout = ({
     }
     trackCustomEvent({
       category: "calc",
-      action: "click set plan",
+      action: value,
       label: "HP",
     })
   }
@@ -131,7 +131,7 @@ const MainFormLayout = ({
     setProgram(value)
     trackCustomEvent({
       category: "calc",
-      action: "click set program",
+      action: value,
       label: "HP",
     })
   }
@@ -147,7 +147,7 @@ const MainFormLayout = ({
     }
     trackCustomEvent({
       category: "calc",
-      action: "click set menu",
+      action: value,
       label: "HP",
     })
   }
