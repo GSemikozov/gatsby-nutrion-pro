@@ -14,8 +14,9 @@
 }
 
 .heroContainer {
-  max-width: 1120px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .title {
@@ -23,6 +24,34 @@
   font-size: 60px;
   line-height: 70px;
   color: #1a1e20;
+}
+
+.title.XS {
+  display: block;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  height: 70px;
+  background: #fa9744;
+}
+
+.title.LG {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  .title.XS {
+    display: none;
+  }
+
+  .title.LG {
+    display: block;
+  }
 }
 
 .list {
@@ -37,7 +66,11 @@
   line-height: 1.2;
   padding-left: 28px;
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
 }
 
 .list li:before {
@@ -52,8 +85,32 @@
   display: inline-block;
 }
 
+.heroList.list {
+  position: relative;
+  padding: 20px 20px 20px 0;
+  margin-left: -30px;
+  border-top-right-radius: 34px;
+  background-color: #fcfcfc;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.heroList.list::after {
+  content: "";
+  width: 20vw;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #fcfcfc;
+}
+
 .heroBtn {
   max-width: 280px;
+  width: 100%;
+}
+
+.heroContent {
+  max-width: 460px;
   width: 100%;
 }
 
@@ -109,7 +166,14 @@
 .menuSectionItem {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 16px;
+}
+
+@media all and (min-width: 1024px) {
+  .menuSectionItem {
+    flex-direction: row;
+  }
 }
 
 .menuSectionItem:last-child {
@@ -119,15 +183,48 @@
 .menuSectionItemHeading {
   position: relative;
   font-weight: 300;
-  font-size: 36px;
-  line-height: 41px;
-  text-align: center;
-  color: var(--color-green);
-  margin-bottom: 30px;
-  padding-bottom: 6px;
+  font-size: 18px;
+  line-height: 21px;
+  margin-right: 40px;
+  width: 55%;
+  background-color: #eaeff1;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@media all and (min-width: 1024px) {
+  .menuSectionItemHeading {
+    height: 98px;
+    width: 80px;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .menuSectionItemHeading span {
+    transform: rotate(-90deg);
+    margin-right: -30px;
+  }
 }
 
 .menuSectionItemHeading::after {
+  content: "";
+  width: 20vw;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #eaeff1;
+}
+
+.menuSectionItemHeading.lightBg,
+.menuSectionItemHeading.lightBg::after {
+  background-color: #faf7f4;
+}
+
+/* .menuSectionItemHeading::after {
   content: "";
   width: 100%;
   position: absolute;
@@ -141,17 +238,20 @@
       hsla(124, 55%, 41%, 0.75) 50%,
       hsla(124, 55%, 41%, 0) 100%
     );
-}
+} */
 
 .menuSectionItemContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
 }
 
 .menuSectionItemContainer > * {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   flex: 1 0 50%;
   font-weight: 500;
   font-size: 20px;
@@ -189,15 +289,18 @@
 }
 
 .menuSectionItemValue {
-  width: 30px;
-  height: 30px;
-  border: 2px solid #2fa037;
+  width: 33px;
+  height: 18px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
   box-sizing: border-box;
   margin: 0 15px;
+  background-color: #eeeff0;
+}
+
+.menuSectionItemValue.lightBg {
+  background-color: #faf7f5;
 }
 
 .section4top {
@@ -212,17 +315,31 @@
 @media all and (max-width: 767px) {
   .hero {
     overflow: hidden;
-    height: 570px;
+    height: auto;
   }
 
   .heroContainer {
     display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .list.heroList {
+    padding: 10px 0;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .heroContent {
+    padding: 0 16px 30px;
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .heroContainer .heroImg {
     order: 2;
-    margin-top: -20px;
   }
 
   .heroContainer .title {
@@ -302,14 +419,6 @@
     margin: 0 -16px;
   }
 
-  .menuSectionItemContainer > * > *:first-child {
-    background: linear-gradient(
-      89.29deg,
-      #ededed -2.21%,
-      rgba(255, 255, 255, 0) 137.2%
-    );
-  }
-
   .menuSectionItemContainer > * > *:last-child {
     padding: 20px 16px;
   }
@@ -362,7 +471,7 @@
 @media all and (min-width: 768px) {
   .list li {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     padding-left: 32px;
   }
 
@@ -375,18 +484,31 @@
 @media all and (min-width: 1024px) {
   .title,
   .list {
-    max-width: 350px;
+    max-width: 420px;
+  }
+
+  .list {
+    margin-bottom: 60px;
   }
 
   .title {
     margin-bottom: 48px;
   }
 
+  .heroContainer {
+    justify-content: space-between;
+    padding: 0 80px;
+  }
+
   .heroImg {
-    position: absolute;
-    left: 560px;
-    top: 0;
-    max-width: 800px;
+    max-width: none;
     z-index: 1;
+    margin-right: -60px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .heroContainer {
+    padding: 0 16px;
   }
 }

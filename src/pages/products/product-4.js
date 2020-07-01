@@ -62,35 +62,36 @@ const Product4 = () => {
 
   return (
     <div className={styles.wrapper}>
-      <BackgroundHeroSection className={styles.hero}>
+      <section className={styles.hero}>
+        <h1 className={cx(styles.title, styles.XS)}>Oběd + Večeře</h1>
         <Container className={styles.heroContainer}>
-          <h1 className={styles.title}>
-            Ochutnejte <strong>Office Pack</strong>
-          </h1>
-          <ul className={styles.list}>
-            <li>
-              Teplý oběd a večeře <b>5 dní</b> v týdnu
-            </li>
-            <li>
-              Doprava <b>zdarma</b>
-            </li>
-            <li>
-              Jiné menu po celé <b>3 týdny</b>
-            </li>
-          </ul>
-          <Button
-            type="primary"
-            size="lg"
-            className={styles.heroBtn}
-            handleClick={scrollTo("calculator")}
-          >
-            Spočítat cenu
-          </Button>
+          <div className={styles.heroContent}>
+            <h1 className={cx(styles.title, styles.LG)}>Oběd + Večeře</h1>
+            <ul className={cx(styles.list, styles.heroList)}>
+              <li>
+                Teplý oběd a večeře <b>5 dní</b> v týdnu
+              </li>
+              <li>
+                Doprava <b>zdarma</b>
+              </li>
+              <li>
+                Jiné menu po celé <b>3 týdny</b>
+              </li>
+            </ul>
+            <Button
+              type="primary"
+              size="lg"
+              className={styles.heroBtn}
+              handleClick={scrollTo("calculator")}
+            >
+              Spočítat cenu
+            </Button>
+          </div>
           <div className={styles.heroImg}>
             <HeroImg />
           </div>
         </Container>
-      </BackgroundHeroSection>
+      </section>
       <BackgroundPostHeroSection className={styles.postHero}>
         <Container className={styles.postHeroContainer}>
           <div className={styles.postHeroItem}>
@@ -180,10 +181,12 @@ const Product4 = () => {
         </Container>
       </BackgroundPostHeroSection>
       <BackgroundMenuSection className={styles.menuSection}>
-        <Container>
+        <Container className={styles.containerMenu}>
           <h3 className={styles.menuSectionTitle}>Vzorové menu</h3>
           <div className={styles.menuSectionItem}>
-            <div className={styles.menuSectionItemHeading}>Den 1</div>
+            <div className={styles.menuSectionItemHeading}>
+              <span>Pondělí</span>
+            </div>
             <div className={styles.menuSectionItemContainer}>
               <div>
                 <div>
@@ -202,14 +205,14 @@ const Product4 = () => {
                         fill="#1A1E20"
                       />
                     </svg>
-                    <span>
-                      Zeleninové rizoto s krůtími karbanátky plné bylinek
-                    </span>
+                    <span>Jehněčí karé dušené s kořením</span>
                   </span>
                 </div>
                 <div>
                   <span className={styles.menuSectionItemText}>Kcal</span>
-                  <span className={styles.menuSectionItemValue}>
+                  <span
+                    className={cx(styles.menuSectionItemValue, styles.lightBg)}
+                  >
                     <span className={styles.menuSectionItemText}>346</span>
                   </span>
                   <span className={styles.menuSectionItemText}>Bílkoviny</span>
@@ -248,7 +251,9 @@ const Product4 = () => {
                 </div>
                 <div>
                   <span className={styles.menuSectionItemText}>Kcal</span>
-                  <span className={styles.menuSectionItemValue}>
+                  <span
+                    className={cx(styles.menuSectionItemValue, styles.lightBg)}
+                  >
                     <span className={styles.menuSectionItemText}>346</span>
                   </span>
                   <span className={styles.menuSectionItemText}>Bílkoviny</span>
@@ -268,7 +273,9 @@ const Product4 = () => {
             </div>
           </div>
           <div className={styles.menuSectionItem}>
-            <div className={styles.menuSectionItemHeading}>Den 2</div>
+            <div className={cx(styles.menuSectionItemHeading, styles.lightBg)}>
+              <span>Úterý</span>
+            </div>
             <div className={styles.menuSectionItemContainer}>
               <div>
                 <div>
@@ -292,7 +299,9 @@ const Product4 = () => {
                 </div>
                 <div>
                   <span className={styles.menuSectionItemText}>Kcal</span>
-                  <span className={styles.menuSectionItemValue}>
+                  <span
+                    className={cx(styles.menuSectionItemValue, styles.lightBg)}
+                  >
                     <span className={styles.menuSectionItemText}>346</span>
                   </span>
                   <span className={styles.menuSectionItemText}>Bílkoviny</span>
@@ -333,7 +342,9 @@ const Product4 = () => {
                 </div>
                 <div>
                   <span className={styles.menuSectionItemText}>Kcal</span>
-                  <span className={styles.menuSectionItemValue}>
+                  <span
+                    className={cx(styles.menuSectionItemValue, styles.lightBg)}
+                  >
                     <span className={styles.menuSectionItemText}>346</span>
                   </span>
                   <span className={styles.menuSectionItemText}>Bílkoviny</span>
@@ -353,7 +364,9 @@ const Product4 = () => {
             </div>
           </div>
           <div className={styles.menuSectionItem}>
-            <div className={styles.menuSectionItemHeading}>Den 3</div>
+            <div className={styles.menuSectionItemHeading}>
+              <span>Středa</span>
+            </div>
             <div className={styles.menuSectionItemContainer}>
               <div>
                 <div>
@@ -377,7 +390,9 @@ const Product4 = () => {
                 </div>
                 <div>
                   <span className={styles.menuSectionItemText}>Kcal</span>
-                  <span className={styles.menuSectionItemValue}>
+                  <span
+                    className={cx(styles.menuSectionItemValue, styles.lightBg)}
+                  >
                     <span className={styles.menuSectionItemText}>346</span>
                   </span>
                   <span className={styles.menuSectionItemText}>Bílkoviny</span>
@@ -416,7 +431,9 @@ const Product4 = () => {
                 </div>
                 <div>
                   <span className={styles.menuSectionItemText}>Kcal</span>
-                  <span className={styles.menuSectionItemValue}>
+                  <span
+                    className={cx(styles.menuSectionItemValue, styles.lightBg)}
+                  >
                     <span className={styles.menuSectionItemText}>346</span>
                   </span>
                   <span className={styles.menuSectionItemText}>Bílkoviny</span>

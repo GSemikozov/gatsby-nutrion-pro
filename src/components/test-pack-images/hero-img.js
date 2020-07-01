@@ -5,14 +5,14 @@ import React from 'react';
 export const HeroImg = () => {
   const { mobile, desktop } = useStaticQuery(graphql`
     query {
-      desktop: file(relativePath: { eq: "hero-content-test-pack-img-lg.png" }) {
+      desktop: file(relativePath: { eq: "vc-desktop.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      mobile: file(relativePath: { eq: "hero-content-test-pack-img-xs.png" }) {
+      mobile: file(relativePath: { eq: "vc-mobile.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
