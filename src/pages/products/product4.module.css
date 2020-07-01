@@ -1,3 +1,22 @@
+:root {
+  --gradient: linear-gradient(
+    90deg,
+    var(--color-orange) 0px,
+    #f1862e 40px,
+    var(--color-orange) 80px
+  );
+  --animation: shine 1.6s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -80px;
+  }
+  100% {
+    background-position: 200px;
+  }
+}
+
 .wrapper {
   overflow-x: hidden;
 }
@@ -106,7 +125,11 @@
 
 .heroBtn {
   max-width: 280px;
-  width: 100%;
+  width: 280px;
+  background-image: var(--gradient);
+  animation: var(--animation);
+  background-size: 280px;
+  box-shadow: 20px 20px 20px rgba(250, 151, 68, 0.2);
 }
 
 .heroContent {
