@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
