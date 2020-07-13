@@ -9,6 +9,7 @@ import { withTrans } from '../../i18n/withTrans';
 import { LangProvider } from '../../utils/lang';
 import { Footer } from '../footer';
 import { Header } from '../header';
+import { PreHeader } from '../preheader';
 
 const Layout = ({ children, t, i18n }) => (
   <StaticQuery
@@ -36,6 +37,7 @@ const Layout = ({ children, t, i18n }) => (
           />
         </Helmet>
         <div className="wrapper" id="root">
+          <PreHeader menuLinks={data.site.siteMetadata.menuLinks} />
           <Header menuLinks={data.site.siteMetadata.menuLinks} />
           <>
             <main>{children}</main>

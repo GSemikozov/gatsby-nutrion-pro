@@ -9,14 +9,14 @@ import styles from './pre-footer.module.css';
 export const PreFooter = () => (
   <>
     <BrowserView>
-      <section className={styles.section}>
+      <section className={styles.section} id="discount">
         <Container>
           <h3 className={cx("sectionTitle -light text-center", styles.title)}>
-            Chceš konečně dosáhnout výsledků?
+            Společná objednávka se slevou až 20%
           </h3>
           <p className={styles.text}>
-            Pod naším profesionálním dohledem to zvládneš, a navíc zdravě a
-            chutně!
+            Objednejte si svůj NutritionPro program společně s kamarády či rodinou a získejte ho za výhodnější cenu.<br />
+            Objednávku pro 2 máte se slevou 10%, objednávku pro 3+ máte se slevou 20%
           </p>
           <p className={styles.text}>
             Napiš nám svůj kontakt, rádi se ti ozveme!
@@ -34,14 +34,14 @@ export const PreFooter = () => (
       </section>
     </BrowserView>
     <MobileView>
-      <div className={styles.sectionXS}>
+      <div className={styles.sectionXS} id="discount">
         <Container>
           <h3 className={cx("sectionTitle -light text-center", styles.title)}>
-            Chceš konečně dosáhnout výsledků?
+            Společná objednávka se slevou až 20%
           </h3>
           <p className={styles.text}>
-            Pod naším profesionálním dohledem to zvládneš, a navíc zdravě a
-            chutně!
+            Objednejte si svůj NutritionPro program společně s kamarády či rodinou a získejte ho za výhodnější cenu.<br />
+            Objednávku pro 2 máte se slevou 10%, objednávku pro 3+ máte se slevou 20%
           </p>
           <p className={styles.text}>
             Napiš nám svůj kontakt, rádi se ti ozveme!
