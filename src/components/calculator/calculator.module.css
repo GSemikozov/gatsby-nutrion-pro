@@ -14,6 +14,44 @@
   margin-bottom: 24px;
 }
 
+.typeSelector {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.typeSelector > *:first-child {
+  margin-right: 24px;
+}
+
+.selectButton {
+  height: 40px;
+  padding: 8px 20px;
+  background-color: var(--color-green) !important;
+  border: 1px solid var(--color-green) !important;
+  opacity: 0.5;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.selectButton:hover {
+  opacity: 0.5;
+}
+
+
+.selectedButton {
+  background-color: var(--color-green) !important;
+  border: 1px solid var(--color-green) !important;
+  margin-top: 10px;
+  height: 40px;
+  padding: 8px 20px;
+  font-size: 15px;
+}
+
+.selectedButton:hover {
+  opacity: 1;
+}
+
 .formHeading {
   font-size: 28px;
   line-height: 1.1;
@@ -152,6 +190,18 @@
 
   .columnTitle {
     max-width: none;
+  }
+
+  .selectButton {
+    height: 50px;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+  .selectedButton {
+    height: 50px;
+    padding: 8px 20px;
+    font-size: 16px;
   }
 }
 

@@ -9,7 +9,7 @@ import styles from './form.module.css';
 
 const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 
-Yup.addMethod(Yup.string, "phone", function() {
+Yup.addMethod(Yup.string, "phone", function () {
   return this.test("phone", "Telefonní číslo musí obsahovat 9 znaků", value =>
     rePhoneNumber.test(value)
   )
@@ -28,17 +28,18 @@ export const ContactFormLayout = ({
   horizontal = false,
 }) => {
   return (
-    <Form
-      name="contact"
-      method="post"
-      className={cx(contactFormStyles.contactForm, {
-        [contactFormStyles.horizontal]: horizontal,
-        [contactFormStyles.themeLight]: themeLight,
-      })}
-    >
-      <div className={cx(styles.inputField, contactFormStyles.inputField)}>
-        {label && <label className={contactFormStyles.label}>Telefon</label>}
-        {/* <FastField name="phone">
+    <>
+      <Form
+        name="contact"
+        method="post"
+        className={cx(contactFormStyles.contactForm, {
+          [contactFormStyles.horizontal]: horizontal,
+          [contactFormStyles.themeLight]: themeLight,
+        })}
+      >
+        <div className={cx(styles.inputField, contactFormStyles.inputField)}>
+          {label && <label className={contactFormStyles.label}>Telefon</label>}
+          {/* <FastField name="phone">
           {({ field }) => (
             <MaskedInput
               {...field}
@@ -66,33 +67,37 @@ export const ContactFormLayout = ({
             />
           )}
         </FastField> */}
-        <FastField
-          component="input"
-          type="tel"
-          name="phone"
-          className={cx(styles.input, contactFormStyles.input)}
-        />
-        {touched.phone && errors.phone && (
-          <span className={cx(styles.error, contactFormStyles.error)}>
-            {errors.phone}
-          </span>
-        )}
-      </div>
-      {/* {values.success && (
+          <FastField
+            component="input"
+            type="tel"
+            name="phone"
+            className={cx(styles.input, contactFormStyles.input)}
+          />
+          {touched.phone && errors.phone && (
+            <span className={cx(styles.error, contactFormStyles.error)}>
+              {errors.phone}
+            </span>
+          )}
+        </div>
+        {/* {values.success && (
         <div className={styles.success}>
           <h4 className="text-center">Successfully sent!</h4>
         </div>
       )} */}
-      <Button
-        name="submit"
-        type={btnType}
-        buttonType="submit"
-        disabled={isSubmitting}
-        className={contactFormStyles.contactFormButton}
-      >
-        {btnText}
-      </Button>
-    </Form>
+          <Button
+            name="submit"
+            type={btnType}
+            buttonType="submit"
+            disabled={isSubmitting}
+            className={contactFormStyles.contactFormButton}
+          >
+            {btnText}
+          </Button>
+      </Form>
+      <div className={contactFormStyles.termsContainer}>
+        <span>Odesíláním telefonního čísla souhlasím se zpracováním osobních údajů</span>
+      </div>
+    </>
   )
 }
 

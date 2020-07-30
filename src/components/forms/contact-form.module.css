@@ -64,3 +64,16 @@
     margin-bottom: 0;
   }
 }
+
+.termsContainer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+  color: white;
+}
+
+@media all and (max-width: 768px) {
+  .termsContainer {
+    color: #909394;
+  }
+}

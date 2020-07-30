@@ -202,15 +202,7 @@
   .radioBtns3 {
     flex-direction: column;
   }
-  .radioBtns2 {
-    flex-direction: column;
-  }
   .radioBtns3 > .radioBtn {
-    flex: 1 0 100%;
-    max-width: 100%;
-    margin-bottom: 16px;
-  }
-  .radioBtns2 > .radioBtn {
     flex: 1 0 100%;
     max-width: 100%;
     margin-bottom: 16px;

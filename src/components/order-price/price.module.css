@@ -1,0 +1,166 @@
+.price {
+  background-color: #f1f2d3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 76px;
+}
+
+.priceCol {
+  padding: 8px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.priceColRight {
+  align-items: center;
+  flex-grow: 1;
+  /* padding-right: 8px; */
+}
+
+.discountCol {
+  flex: 1 0 40px;
+  max-width: 40px;
+  background-color: var(--color-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.priceCol:first-child {
+  padding-bottom: 0;
+}
+
+.priceTitle,
+.priceText {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+.priceTitle {
+  font-weight: 600;
+}
+
+.priceText {
+  color: #777;
+}
+
+.priceValue {
+  text-align: center;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  color: var(--color-orange);
+  white-space: nowrap;
+}
+
+.priceDiscountValue {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  position: relative;
+  color: #707071;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+.priceDiscountValue:after {
+  content: "";
+  left: 0;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-green);
+  display: block;
+  position: absolute;
+}
+
+@media all and (min-width: 768px) {
+  .price {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .priceCol:first-child {
+    padding-right: 6px;
+    padding-bottom: 6px;
+  }
+
+  .priceCol:last-child {
+    padding-left: 0;
+  }
+
+  .priceColRight {
+    align-items: flex-end;
+  }
+
+  .priceValue {
+    text-align: right;
+  }
+
+  .priceTitle,
+  .priceText {
+    text-align: initial;
+  }
+}
+
+.priceFrap {
+  background-color: #f1f2d3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  min-height: 76px;
+}
+
+.priceDayTitle {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.priceDayValue {
+  text-align: center;
+  font-size: 40px;
+  line-height: 54px;
+  color: var(--color-orange);
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.summary {
+  margin: 25px 0px;
+}
+
+.fillField {
+  background-color: #F8F8F2;
+  padding: 7px;
+}
+
+.blankField {
+  padding: 7px;
+}
+
+.summaryTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+
+  color: #909394;
+}
+
+.summaryPrice {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  float: right;
+
+  color: #1A1E20;
+}

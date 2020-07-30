@@ -2,7 +2,8 @@ import cx from 'classnames';
 import React from 'react';
 
 import { Button } from '../components/button';
-import { Calculator2 } from '../components/calculator2';
+// import { Calculator2 } from '../components/calculator2';
+import { Order } from '../components/order-form';
 import { Container } from '../components/container';
 import { useSmoothScroll } from '../hooks/useSmoothScroll';
 import productImg1 from '../images/product-1-bg.jpg';
@@ -251,7 +252,7 @@ const ProductTemplate = ({ productId, title, productList }) => {
           </div> */}
         </Container>
       </section>
-      <Calculator2 className={commonStyles.calculator} id="calculator" />
+      <Order className={commonStyles.calculator} id="calculator" />
     </>
   )
 }

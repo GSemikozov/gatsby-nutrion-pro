@@ -112,6 +112,8 @@ const MainFormLayout = ({
   const [plan2disabled, setPlan2Disabled] = useState(false)
   const [plan3disabled, setPlan3Disabled] = useState(false)
   const [menu2xDisabled, setMenu2xDisabled] = useState(false)
+  const [checkTerms, setCheckTerms] = useState(false)
+  const [checkTerms2, setCheckTerms2] = useState(false)
 
   const onSetPlan = value => {
     setPlan(value)
@@ -472,13 +474,39 @@ const MainFormLayout = ({
               <span className={styles.error}>{errors.promo}</span>
             )}
           </div>
+          <div className={mainFormStyles.checkTerms}>
+            <input
+              id="checkTerms"
+              type="checkbox"
+              name="checkTerms"
+              checked={checkTerms}
+              onChange={e => {
+                setCheckTerms(e.target.checked)
+                console.log(e.target.checked)
+              }}
+            />
+            <label htmlFor="checkTerms">Měl/a jsem možnost přečíst a souhlasím s <a href="/terms" target="_blank"><b>obchodními podmínkámi.</b></a></label>
+          </div>
+
+          <div className={mainFormStyles.checkTerms}>
+            <input
+              id="checkTerms2"
+              type="checkbox"
+              name="checkTerms2"
+              checked={checkTerms2}
+              onChange={e => {
+                setCheckTerms2(e.target.checked)
+              }}
+            />
+            <label htmlFor="checkTerms2">Souhlasím se zpracováním osobních údajů.</label>
+          </div>
           <div className={mainFormStyles.buttons}>
             <Button
               name="submit"
               type="primary"
               size="lg"
               buttonType="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !checkTerms || !checkTerms2}
               className={mainFormStyles.submitButton}
             >
               Zavolejte mi

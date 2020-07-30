@@ -97,16 +97,17 @@
 
 .heroMobileImg {
   overflow: hidden;
+  background-repeat: repeat-y;
 }
 
 .heroMobileImg,
 .heroMobileImg:after {
-  background-size: 100% 1100px !important;
+  /* background-size: 100% auto !important; */
 }
 
 .heroMobileImg:before,
 .heroMobileImg:after {
-  height: 1100px !important;
+  /* height: 1100px !important; */
 }
 
 .btnTop {
@@ -300,7 +301,7 @@
 }
 
 .desc {
-  height: 660px;
+  height: 760px;
   overflow: hidden;
   transition: 0.5s all;
 }

@@ -9,6 +9,7 @@ export const Button = ({
   className,
   handleClick,
   children,
+  disabled = false,
 }) =>
   type === "unstyled" ? (
     <button
@@ -17,6 +18,7 @@ export const Button = ({
         [styles.unstyled]: type === "unstyled",
       })}
       onClick={handleClick}
+      disabled={disabled}
     >
       {children}
     </button>
@@ -35,6 +37,7 @@ export const Button = ({
         className
       )}
       onClick={handleClick}
+      disabled={disabled}
     >
       {children}
     </button>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { About } from '../components/about';
 import { Calculator2 } from '../components/calculator2';
+import { Order } from '../components/order-form';
 import { FAQ } from '../components/faq';
 import { FoodCarouselSection } from '../components/food';
 import { Hero } from '../components/hero2';
@@ -20,7 +21,8 @@ const IndexPage = () => (
     <Hero />
     <Program id="programs" />
     {/* <HomeofficePackages /> */}
-    <Calculator2 id="calculator" />
+    {/* <Calculator2 id="calculator" /> */}
+    <Order id="calculator" />
     <FoodCarouselSection />
     <About />
     {/* <TryFood id="try-food" /> */}

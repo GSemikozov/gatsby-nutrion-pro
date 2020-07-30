@@ -58,6 +58,9 @@ export const HeroFormLayout = ({
       >
         {btnText}
       </Button>
+      <div className={heroFormStyles.termsContainer}>
+        <span>Odesíláním telefonního čísla souhlasím se zpracováním osobních údajů</span>
+      </div>
     </Form>
   )
 }
