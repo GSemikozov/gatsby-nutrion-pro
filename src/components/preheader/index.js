@@ -7,7 +7,7 @@ import styles from './preheader.module.css';
 
 export const PreHeader = () => {
   return (
-    <>
+    <div className={styles.preHeaderContainter}>
     <BrowserView>
       <header className={styles.preHeader}>
         <Container className={styles.preHeaderInner}>
@@ -49,6 +49,6 @@ export const PreHeader = () => {
         </Container>
       </div>
     </MobileView>
-    </>
+    </div>
   )
 }

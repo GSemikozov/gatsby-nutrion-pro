@@ -37,7 +37,7 @@ const Layout = ({ children, t, i18n }) => (
           />
         </Helmet>
         <div className="wrapper" id="root">
-          <PreHeader menuLinks={data.site.siteMetadata.menuLinks} />
+          <PreHeader />
           <Header menuLinks={data.site.siteMetadata.menuLinks} />
           <>
             <main>{children}</main>
