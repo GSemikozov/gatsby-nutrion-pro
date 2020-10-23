@@ -36,6 +36,16 @@ Yup.addMethod(Yup.string, "phone", function () {
   )
 })
 
+function dateToSystemFormat(date) {
+  return moment(date)
+    .utc()
+    .hours(0)
+    .minutes(0)
+    .seconds(0)
+    .milliseconds(0)
+    .toISOString()
+}
+
 function getStartDate() {
   let initial = moment.utc().add(3, 'days')
   if ([2, 5, 7].indexOf(moment.utc().isoWeekday()) !== -1) {
@@ -845,7 +855,7 @@ const OrderFormLayout = ({
                 <DayPickerInput
                   inputProps={{ style: dateStyle, readOnly: true }}
                   style={{ width: '100%' }}
-                  onDayChange={day => setFieldValue("date", day)}
+                  onDayChange={day => setFieldValue("date", moment(dateToSystemFormat(day)).toISOString())}
                   formatDate={e => formatDate(e, 'DD.MM.YYYY dddd', 'cs')}
                   parseDate={parseDate}
                   value={`${formatDate(values.date, 'DD.MM.YYYY dddd', 'cs')}`}
