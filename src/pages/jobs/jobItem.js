@@ -34,14 +34,22 @@ const renderJobs = () => [
     color="#EAEFF7"
     link="/jobs/sales"
   />,
-  // <Job
-  //   key="3"
-  //   title="Marketing &nbsp; manager"
-  //   description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Marketing manager."
-  //   date="15.12.2019"
-  //   color="#F7F4FD"
-  //   link="/jobs/marketing-manager"
-  // />,
+  <Job
+    key="3"
+    title="Vedoucí výroby"
+    description="Do našeho týmu hledáme šikovného/ou kolegu/yni na pozici Vedoucí výroby."
+    date="27.08.2020"
+    color="#F7F4FD"
+    link="/jobs/production-manager"
+  />,
+  <Job
+    key="1"
+    title="Marketing manager"
+    description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Marketing manager."
+    date="16.09.2020"
+    color="#FDF9F4"
+    link="/jobs/marketing-manager"
+  />,
   // <Job
   //   title="NUTRIČNÍ SPECIALISTA"
   //   description="Burrito se salátem pico de gallo a zakysanou smetanou"
@@ -49,6 +57,13 @@ const renderJobs = () => [
   //   color="#E3F0FA"
   //   link=""
   // />,
+  <Job
+    title=""
+    description=""
+    date=""
+    color="#FFF"
+    link=""
+  />,
 ]
 
 const Jobs = () => {
