@@ -80,7 +80,7 @@ export const Footer = () => (
             <img src={user} alt="icon" />
           </a>
           <p>+420 774 137 352</p>
-          <p>PO - PÁ 10:00 - 18:00</p>
+          <p>PO - PÁ 10:00 - 12:00 <br /> 13:00 - 18:00</p>
         </div>
       </div>
     </Container>

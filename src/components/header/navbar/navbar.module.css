@@ -105,6 +105,7 @@
   .contacts .additionalInfo {
     display: inline-block;
     position: absolute;
+    font-size: 13px;
     top: 100%;
     left: 0;
     right: 0;
