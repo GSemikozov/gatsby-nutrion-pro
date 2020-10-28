@@ -53,7 +53,7 @@ const JobPage = () => {
 
           <h3 className={styles.textSubHeader}>Co získáš od nás?</h3>
           <ul className={styles.textUl}>
-            <li className={styles.newList}>Full nebo part-time uplatnění</li>
+            <li className={styles.newList}>Full-time uplatnění</li>
             <li className={styles.newList}>Příspěvky na vzdělávací kurzy</li>
             <li className={styles.newList}>
               Motivující finanční ohodnocení, měsíční a kvartální bonusy
