@@ -20,7 +20,7 @@
 @media all and (min-width: 768px) {
   .modal {
     max-width: 700px;
-    top: 10px;
+    top: 60px;
     height: auto;
   }
 

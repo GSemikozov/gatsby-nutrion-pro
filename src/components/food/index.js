@@ -21,7 +21,7 @@ const FoodCardList = ({ children }) => (
   <ul className={styles.foodCardList}>{children}</ul>
 )
 
-const slidesData = [
+export const slidesData = [
   {
     img: "/images/food03.jpg",
     title: "Kuřecí nudličky v zeleninové omáčce s fazolovými lusky",
