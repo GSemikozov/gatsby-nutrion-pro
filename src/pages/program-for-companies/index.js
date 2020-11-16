@@ -159,6 +159,7 @@ const ProgramPage = () => {
                 "sectionTitle -light text-left",
                 section4Styles.title
               )}
+              style={{ flex: "1", textAlign: "left" }}
             >
               Chtěli byste dovažet jenom obědy, či máte nějaké jiné special
               požadavky? Není problém. Radí přípravíme Vám nabídku na míru
