@@ -79,17 +79,17 @@ module.exports = {
     //     name: `locale`,
     //   },
     // },
-    // {
-    //   resolve: "@wapps/gatsby-plugin-i18next",
-    //   options: {
-    //     langKeyDefault: "en",
-    //     availableLngs: ["en", "cz"],
-    //     fallbackLng: "en",
-    //     i18nextOptions: {
-    //       debug: false,
-    //     },
-    //   },
-    // },
+    {
+      resolve: "@wapps/gatsby-plugin-i18next",
+      options: {
+        langKeyDefault: "cz",
+        availableLngs: ["cz", "en"],
+        fallbackLng: "cz",
+        i18nextOptions: {
+          debug: false,
+        },
+      },
+    },
     // { // we can use it instead of gatsby-source-filesystem
     //   resolve: "gatsby-plugin-web-font-loader",
     //   options: {
