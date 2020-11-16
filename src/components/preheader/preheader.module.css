@@ -1,6 +1,6 @@
 .preHeaderContainter {
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 99;
 }
 
@@ -25,4 +25,10 @@
   justify-content: center;
   align-items: center;
   font-size: 14px;
+}
+
+@media all and (max-width: 767px) {
+  .preHeaderContainter {
+    display: none;
+  }
 }

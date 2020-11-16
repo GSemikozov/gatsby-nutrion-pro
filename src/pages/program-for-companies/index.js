@@ -120,7 +120,7 @@ const ProgramPage = () => {
               />
             </svg>
             <h5 className={styles.postHeroItemTitle}>
-              Jiné menu po celé 3 týdny
+              Kvalitní prémiové suroviny
             </h5>
           </div>
           <div className={styles.postHeroItem}>
@@ -145,7 +145,7 @@ const ProgramPage = () => {
               />
             </svg>
             <h5 className={styles.postHeroItemTitle}>
-              Kvalitní prémiové suroviny
+              Jiné menu po celé 3 týdny
             </h5>
           </div>
         </Container>
