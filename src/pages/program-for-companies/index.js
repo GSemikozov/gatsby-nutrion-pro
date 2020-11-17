@@ -32,7 +32,7 @@ const ProgramPage = () => {
 
   return (
     <>
-      <RenderModal className="modalForm">
+      <RenderModal className="modalForm modalContactForm">
         <ModalForm />
       </RenderModal>
       <section className={heroStyles.productHero}>
