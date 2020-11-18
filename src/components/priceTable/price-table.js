@@ -22,51 +22,106 @@ const Table = ({ type }) => {
           <tr>
             <td>Oběd a večeře</td>
             <td>
-              <span>280 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                280 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>224 Kč</span>
+              )}
             </td>
             <td>
               <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
                 270 Kč
               </span>{" "}
               {type === "promotion" && (
-                <span className={styles.newPrice}>250 Kč</span>
+                <span className={styles.newPrice}>224 Kč</span>
               )}
             </td>
             <td>
-              <span>260 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                260 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>224 Kč</span>
+              )}
             </td>
             <td>
-              <span>250 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                250 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>224 Kč</span>
+              )}
             </td>
           </tr>
           <tr>
             <td>3chodové menu</td>
             <td>
-              <span>360 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                360 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>288 Kč</span>
+              )}
             </td>
             <td>
-              <span>350 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                350 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>288 Kč</span>
+              )}
             </td>
             <td>
-              <span>330 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                330 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>288 Kč</span>
+              )}
             </td>
             <td>
-              <span>320 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                320 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>288 Kč</span>
+              )}
             </td>
           </tr>
           <tr>
             <td>5chodové menu</td>
             <td>
-              <span>440 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                440 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>352 Kč</span>
+              )}
             </td>
             <td>
-              <span>420 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                420 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>352 Kč</span>
+              )}
             </td>
             <td>
-              <span>395 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                395 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>352 Kč</span>
+              )}
             </td>
             <td>
-              <span>380 Kč</span>
+              <span className={cx({ [styles.oldPrice]: type === "promotion" })}>
+                380 Kč
+              </span>{" "}
+              {type === "promotion" && (
+                <span className={styles.newPrice}>352 Kč</span>
+              )}
             </td>
           </tr>
         </tbody>
