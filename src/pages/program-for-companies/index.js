@@ -1,20 +1,17 @@
 import cx from 'classnames';
-import { graphql, useStaticQuery } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
 import React from 'react';
 
 import { Button } from '../../components/button';
 import { Container } from '../../components/container';
 import { FoodCarouselSection } from '../../components/food';
-import foodCarouseltyles from '../../components/food/food-carousel.module.css';
 import { ContactForm } from '../../components/forms/contact-form';
 import { useModal } from '../../components/modal';
+import { TablePrice } from '../../components/priceTable/price-table';
 import { BackgroundPostHeroSection } from '../../components/test-pack-images/background-post-hero';
 import productImg3 from '../../images/product-3-bg.jpg';
 import section4Styles from '../../pages/imunita/section4.module.css';
 import heroStyles from '../../templates/hero.module.css';
 import styles from '../products/product4.module.css';
-import { TablePrice } from './price-table';
 
 const ModalForm = () => (
   <>
