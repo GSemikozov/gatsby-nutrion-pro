@@ -14,6 +14,7 @@ import productImg3 from '../../images/product-3-bg.jpg';
 import section4Styles from '../../pages/imunita/section4.module.css';
 import heroStyles from '../../templates/hero.module.css';
 import styles from '../products/product4.module.css';
+import { TablePrice } from './price-table';
 
 const ModalForm = () => (
   <>
@@ -151,6 +152,8 @@ const ProgramPage = () => {
         </Container>
       </BackgroundPostHeroSection>
 
+      <TablePrice />
+
       <section className={section4Styles.section}>
         <Container>
           <div className={section4Styles.blockWrap}>
@@ -175,9 +178,7 @@ const ProgramPage = () => {
         </Container>
       </section>
 
-      <section className={foodCarouseltyles.foodCarouselSection} id="food">
-        <FoodCarouselSection />
-      </section>
+      <FoodCarouselSection />
     </>
   )
 }
