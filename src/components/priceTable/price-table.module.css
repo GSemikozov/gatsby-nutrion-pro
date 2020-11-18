@@ -52,11 +52,12 @@
   padding-bottom: 35px;
 }
 
-::-webkit-scrollbar {
+.tableWrap::-webkit-scrollbar {
   height: 5px;
   background: var(--color-grey);
 }
-::-webkit-scrollbar-thumb:horizontal {
+
+.tableWrap::-webkit-scrollbar-thumb:horizontal {
   background: var(--color-green);
   border-radius: 10px;
 }
