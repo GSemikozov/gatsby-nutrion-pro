@@ -168,7 +168,9 @@ const FoodCarousel = ({ slidesData }) => {
 export const FoodCarouselSection = () => (
   <section className={styles.foodCarouselSection} id="food">
     <Container>
-      <h3 className="sectionTitle text-center">Jaká jídla tě s námi čekají?</h3>
+      <h3 className="sectionTitle text-center">
+        Jaká jídla vás s námi čekají?
+      </h3>
       <FoodCarousel slidesData={slidesData} />
       <div className="text-center">
         <Button type="outline" size="lg" className={styles.outsideButton}>
