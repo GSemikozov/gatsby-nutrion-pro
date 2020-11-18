@@ -33,7 +33,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       <Button
         type="unstyled"
         className={cx(styles.navbarItem, styles.location)}
-        handleClick={show}
+        // handleClick={show}
       >
         <img src={IconMap} className={styles.mapMark} alt="icon" />
         <span>
@@ -61,7 +61,11 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
           <span className={styles.phoneNumber}>+420 774 137 352</span>
           <br />
           <span className={styles.additionalInfo}>
-            <p style={{ textAlign: 'right' }}><span className={styles.days}>Po - Pá</span> 10:00 - 12:00<br/>13:00 - 18:00</p>
+            <p style={{ textAlign: "right" }}>
+              <span className={styles.days}>Po - Pá</span> 10:00 - 12:00
+              <br />
+              13:00 - 18:00
+            </p>
           </span>
         </span>
       </a>

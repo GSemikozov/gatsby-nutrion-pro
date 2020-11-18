@@ -1,8 +1,8 @@
 import cx from 'classnames';
 import React, { useState } from 'react';
 
-import { Button } from '../../components/button';
-import { Container } from '../../components/container';
+import { Button } from '../button';
+import { Container } from '../container';
 import styles from './price-table.module.css';
 
 const Table = ({ type }) => {
