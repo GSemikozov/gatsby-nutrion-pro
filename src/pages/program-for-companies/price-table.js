@@ -6,7 +6,6 @@ import { Container } from '../../components/container';
 import styles from './price-table.module.css';
 
 const Table = ({ type }) => {
-  console.log("type", type, typeof type)
   return (
     <div className={styles.tableWrap}>
       <table className={styles.priceTable}>
