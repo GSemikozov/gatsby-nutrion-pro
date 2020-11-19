@@ -161,8 +161,8 @@ const ProgramPage = () => {
               )}
               style={{ flex: "1", textAlign: "left" }}
             >
-              Chtěli byste dovažet jenom obědy, či máte nějaké jiné special
-              požadavky? Není problém. Radí přípravíme Vám nabídku na míru
+              Chtěli byste dovážet jenom obědy, či máte nějaké jiné speciální
+              požadavky? Není problém. Rádi Vám připravíme nabídku na míru!
             </h3>
             <Button
               type="secondary"

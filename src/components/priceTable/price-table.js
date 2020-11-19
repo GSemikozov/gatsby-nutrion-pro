@@ -162,7 +162,7 @@ export const TablePrice = () => {
             )}
             handleClick={() => setPriceTable("promotion")}
           >
-            Akce do 31.11
+            Akce do 30.11
           </Button>
         </div>
 
