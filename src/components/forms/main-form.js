@@ -1,8 +1,10 @@
 // import cx from 'classnames';
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
+import { useStaticQuery } from 'gatsby';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Select from 'react-select';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
@@ -14,6 +16,7 @@ import option3Img from './icons/icon-2months.svg';
 import option1Img from './icons/icon-demo.svg';
 import option2Img from './icons/icon-month.svg';
 import mainFormStyles from './main-form.module.css';
+import orderFormStyles from './order-form.module.css';
 
 const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 
@@ -114,6 +117,8 @@ const MainFormLayout = ({
   const [menu2xDisabled, setMenu2xDisabled] = useState(false)
   const [checkTerms, setCheckTerms] = useState(false)
   const [checkTerms2, setCheckTerms2] = useState(false)
+  const [osob, setOsob] = useState("1")
+  const [oldPrice, setOldPrice] = useState(null)
 
   const onSetPlan = value => {
     setPlan(value)
@@ -131,6 +136,15 @@ const MainFormLayout = ({
 
   const onSetProgram = value => {
     setProgram(value)
+    trackCustomEvent({
+      category: "calc",
+      action: value,
+      label: "HP",
+    })
+  }
+
+  const onSetOsob = value => {
+    setOsob(value)
     trackCustomEvent({
       category: "calc",
       action: value,
@@ -157,7 +171,7 @@ const MainFormLayout = ({
   useEffect(() => {
     const priceValue = getPrice(menu, program, plan)
     setPrice(priceValue)
-  }, [menu, plan, program])
+  }, [menu, plan, program, osob])
 
   const getPrice = (menu, program, plan) => {
     let price = null
@@ -274,6 +288,21 @@ const MainFormLayout = ({
           break
       }
     }
+
+    if (osob === "1") {
+      setOldPrice(null)
+    }
+
+    if (osob === "2") {
+      setOldPrice(price)
+      price = (price - price * (10 / 100)).toFixed()
+    }
+
+    if (osob === "3" || osob === "Více než 3") {
+      setOldPrice(price)
+      price = (price - price * (20 / 100)).toFixed()
+    }
+
     return price
   }
 
@@ -383,62 +412,55 @@ const MainFormLayout = ({
               />
             </RadioButtonGroup>
           </div>
-          <div className={cx(styles.inputField, mainFormStyles.inputField)}>
-            <h5 className={mainFormStyles.inputFieldTitle}>
-              Vyber si počet jídel
-            </h5>
-            <div className={cx(stylesRadio.radioBtns3, stylesRadio.MobileCol)}>
-              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
-                <input
-                  id="menu1"
-                  type="radio"
-                  name="menu"
-                  value="5chodové menu"
-                  checked={values.menu === "5chodové menu"}
-                  onChange={e => {
-                    onSetMenu(e.target.value)
-                    setFieldValue("menu", "5chodové menu")
-                  }}
-                />
-
-                <label htmlFor="menu1">5chodové menu</label>
-              </div>
-              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
-                <input
-                  id="menu2"
-                  type="radio"
-                  name="menu"
-                  value="3chodové menu"
-                  checked={values.menu === "3chodové menu"}
-                  onChange={e => {
-                    onSetMenu(e.target.value)
-                    setFieldValue("menu", "3chodové menu")
-                  }}
-                />
-                <label htmlFor="menu2">3chodové menu</label>
-              </div>
-              <div
-                className={cx(stylesRadio.radio, stylesRadio.radioBtn, {
-                  [stylesRadio.disabled]: menu2xDisabled,
-                })}
-              >
-                <input
-                  id="menu3"
-                  type="radio"
-                  name="menu"
-                  value="2chodové menu"
-                  checked={values.menu === "2chodové menu"}
-                  onChange={e => {
-                    onSetMenu(e.target.value)
-                    setFieldValue("menu", "2chodové menu")
-                  }}
-                  disabled={menu2xDisabled}
-                />
-                <label htmlFor="menu3">2chodové menu</label>
-              </div>
+          <div
+            className={cx(styles.inputField, mainFormStyles.inputField)}
+            style={{ flexDirection: "row" }}
+          >
+            <div
+              className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
+              style={{ flexBasis: "50%", width: "50%", paddingRight: "10px" }}
+            >
+              <h6 className={orderFormStyles.inputFieldTitleSmall}>
+                Počet jídel
+              </h6>
+              <Select
+                options={[
+                  { value: "5chodové menu", label: "5chodové menu" },
+                  { value: "3chodové menu", label: "3chodové menu" },
+                  { value: "2chodové menu", label: "2chodové menu" },
+                ]}
+                isSearchable={false}
+                value={{ value: values.menu, label: values.menu }}
+                onChange={e => {
+                  onSetMenu(e.value)
+                  setFieldValue("menu", e.value)
+                }}
+              />
+            </div>
+            <div
+              className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
+              style={{ flexBasis: "50%", width: "50%", paddingLeft: "10px" }}
+            >
+              <h6 className={orderFormStyles.inputFieldTitleSmall}>
+                Počet osob
+              </h6>
+              <Select
+                options={[
+                  { value: "1", label: "1" },
+                  { value: "2", label: "2" },
+                  { value: "3", label: "3" },
+                  { value: "Více než 3", label: "Více než 3" },
+                ]}
+                isSearchable={false}
+                value={{ value: values.osob, label: values.osob }}
+                onChange={e => {
+                  onSetOsob(e.value)
+                  setFieldValue("osob", e.value)
+                }}
+              />
             </div>
           </div>
-          <Price price={price} plan={plan} />
+          <Price price={price} oldPrice={oldPrice} plan={plan} />
         </div>
         <div className={mainFormStyles.mainFormWrap}>
           <div className={styles.inputField}>
@@ -485,7 +507,12 @@ const MainFormLayout = ({
                 console.log(e.target.checked)
               }}
             />
-            <label htmlFor="checkTerms">Měl/a jsem možnost přečíst a souhlasím s <a href="/terms" target="_blank"><b>obchodními podmínkámi.</b></a></label>
+            <label htmlFor="checkTerms">
+              Měl/a jsem možnost přečíst a souhlasím s{" "}
+              <a href="/terms" target="_blank">
+                <b>obchodními podmínkámi.</b>
+              </a>
+            </label>
           </div>
 
           <div className={mainFormStyles.checkTerms}>
@@ -498,7 +525,9 @@ const MainFormLayout = ({
                 setCheckTerms2(e.target.checked)
               }}
             />
-            <label htmlFor="checkTerms2">Souhlasím se zpracováním osobních údajů.</label>
+            <label htmlFor="checkTerms2">
+              Souhlasím se zpracováním osobních údajů.
+            </label>
           </div>
           <div className={mainFormStyles.buttons}>
             <Button
@@ -531,6 +560,7 @@ export const MainForm = withFormik({
     plan: "Zhubnout",
     program: "2 týdny",
     menu: "5chodové menu",
+    osob: "1",
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
@@ -548,9 +578,10 @@ export const MainForm = withFormik({
       plan: Yup.string(),
       program: Yup.string(),
       menu: Yup.string(),
+      osob: Yup.string(),
     }),
   handleSubmit: async (
-    { phone, promo, plan, program, menu },
+    { phone, promo, plan, program, menu, osob },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
@@ -594,6 +625,7 @@ export const MainForm = withFormik({
         plan,
         program,
         menu,
+        osob,
         price: getPrice,
         utm_source: UTM_SOURCE,
         utm_medium: UTM_MEDIUM,

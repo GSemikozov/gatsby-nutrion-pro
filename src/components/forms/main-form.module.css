@@ -2,7 +2,7 @@
   border-radius: 10px;
   background-color: var(--color-white);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.04);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .mainForm.heroForm {
@@ -107,7 +107,7 @@
 
 @media all and (min-width: 768px) {
   .mainFormBox {
-    max-width: 760px;
+    max-width: 900px;
     margin: 0 auto;
   }
 
