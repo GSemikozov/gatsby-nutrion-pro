@@ -150,7 +150,7 @@ export const TablePrice = () => {
             )}
             handleClick={() => setPriceTable("base")}
           >
-            Cenik
+            Ceník
           </Button>
           <Button
             type="primary"
