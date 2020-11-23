@@ -413,12 +413,18 @@ const MainFormLayout = ({
             </RadioButtonGroup>
           </div>
           <div
-            className={cx(styles.inputField, mainFormStyles.inputField)}
-            style={{ flexDirection: "row" }}
+            className={cx(
+              styles.inputField,
+              mainFormStyles.inputField,
+              mainFormStyles.inputFieldRow
+            )}
           >
             <div
-              className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
-              style={{ flexBasis: "50%", width: "50%", paddingRight: "10px" }}
+              className={cx(
+                stylesRadio.radio,
+                stylesRadio.radioBtn,
+                mainFormStyles.inputFieldColumn
+              )}
             >
               <h6 className={orderFormStyles.inputFieldTitleSmall}>
                 Počet jídel
@@ -438,8 +444,11 @@ const MainFormLayout = ({
               />
             </div>
             <div
-              className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
-              style={{ flexBasis: "50%", width: "50%", paddingLeft: "10px" }}
+              className={cx(
+                stylesRadio.radio,
+                stylesRadio.radioBtn,
+                mainFormStyles.inputFieldColumn
+              )}
             >
               <h6 className={orderFormStyles.inputFieldTitleSmall}>
                 Počet osob
