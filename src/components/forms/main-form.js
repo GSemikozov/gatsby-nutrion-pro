@@ -3,6 +3,7 @@ import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
@@ -32,6 +33,7 @@ const RadioButton = ({
   field: { name, value, onChange },
   id,
   label,
+  title,
   className,
   withImg = false,
   disabled = false,
@@ -62,7 +64,7 @@ const RadioButton = ({
         {withImg && (
           <img src={props.img} className={stylesRadio.radioImg} alt={label} />
         )}
-        {label}
+        {title}
       </label>
     </div>
   )
@@ -114,6 +116,7 @@ const MainFormLayout = ({
   const [menu2xDisabled, setMenu2xDisabled] = useState(false)
   const [checkTerms, setCheckTerms] = useState(false)
   const [checkTerms2, setCheckTerms2] = useState(false)
+  const { t } = useTranslation()
 
   const onSetPlan = value => {
     setPlan(value)
@@ -286,7 +289,9 @@ const MainFormLayout = ({
       >
         <div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
-            <h5 className={mainFormStyles.inputFieldTitle}>Tvůj cíl</h5>
+            <h5 className={mainFormStyles.inputFieldTitle}>
+              {t("forms.mainFormGoalLabel")}
+            </h5>
             <div className={stylesRadio.radioBtns3}>
               <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
                 <input
@@ -301,7 +306,7 @@ const MainFormLayout = ({
                   }}
                 />
 
-                <label htmlFor="plan1">Zhubnout</label>
+                <label htmlFor="plan1">{t("forms.mainFormGoalOption1")}</label>
               </div>
               <div
                 className={cx(stylesRadio.radio, stylesRadio.radioBtn, {
@@ -320,7 +325,7 @@ const MainFormLayout = ({
                     setFieldValue("plan", "Udržovat")
                   }}
                 />
-                <label htmlFor="plan2">Udržovat</label>
+                <label htmlFor="plan2">{t("forms.mainFormGoalOption2")}</label>
               </div>
               <div
                 className={cx(stylesRadio.radio, stylesRadio.radioBtn, {
@@ -339,13 +344,13 @@ const MainFormLayout = ({
                     setFieldValue("plan", "Nabírat")
                   }}
                 />
-                <label htmlFor="plan3">Nabírat</label>
+                <label htmlFor="plan3">{t("forms.mainFormGoalOption3")}</label>
               </div>
             </div>
           </div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>
-              Vyber si délku programu
+              {t("forms.mainFormProgramLabel")}
             </h5>
             <RadioButtonGroup
               id="radioGroup"
@@ -362,6 +367,7 @@ const MainFormLayout = ({
                 name="program"
                 id="option1"
                 label="2 týdny"
+                title={t("forms.mainFormProgramOption1")}
                 withImg={true}
                 img={option1Img}
               />
@@ -370,6 +376,7 @@ const MainFormLayout = ({
                 name="program"
                 id="option2"
                 label="Měsíc"
+                title={t("forms.mainFormProgramOption2")}
                 withImg={true}
                 img={option2Img}
               />
@@ -378,6 +385,7 @@ const MainFormLayout = ({
                 name="program"
                 id="option3"
                 label="Dva měsíce"
+                title={t("forms.mainFormProgramOption3")}
                 withImg={true}
                 img={option3Img}
               />
@@ -385,7 +393,7 @@ const MainFormLayout = ({
           </div>
           <div className={cx(styles.inputField, mainFormStyles.inputField)}>
             <h5 className={mainFormStyles.inputFieldTitle}>
-              Vyber si počet jídel
+              {t("forms.mainFormMenuLabel")}
             </h5>
             <div className={cx(stylesRadio.radioBtns3, stylesRadio.MobileCol)}>
               <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
@@ -401,7 +409,7 @@ const MainFormLayout = ({
                   }}
                 />
 
-                <label htmlFor="menu1">5chodové menu</label>
+                <label htmlFor="menu1">{t("forms.mainFormMenuOption1")}</label>
               </div>
               <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
                 <input
@@ -415,7 +423,7 @@ const MainFormLayout = ({
                     setFieldValue("menu", "3chodové menu")
                   }}
                 />
-                <label htmlFor="menu2">3chodové menu</label>
+                <label htmlFor="menu2">{t("forms.mainFormMenuOption2")}</label>
               </div>
               <div
                 className={cx(stylesRadio.radio, stylesRadio.radioBtn, {
@@ -434,7 +442,7 @@ const MainFormLayout = ({
                   }}
                   disabled={menu2xDisabled}
                 />
-                <label htmlFor="menu3">2chodové menu</label>
+                <label htmlFor="menu3">{t("forms.mainFormMenuOption3")}</label>
               </div>
             </div>
           </div>
@@ -443,7 +451,7 @@ const MainFormLayout = ({
         <div className={mainFormStyles.mainFormWrap}>
           <div className={styles.inputField}>
             <label className={cx(styles.label, mainFormStyles.inputFieldLabel)}>
-              Telefon*
+              {t("forms.mainFormTelLabel")}*
             </label>
             <FastField
               component="input"
@@ -461,7 +469,7 @@ const MainFormLayout = ({
               htmlFor="promo"
               className={cx(styles.label, mainFormStyles.inputFieldLabel)}
             >
-              Promo kód
+              {t("forms.mainFormPromoCodeLabel")}
             </label>
             <FastField
               component="input"
@@ -485,7 +493,12 @@ const MainFormLayout = ({
                 console.log(e.target.checked)
               }}
             />
-            <label htmlFor="checkTerms">Měl/a jsem možnost přečíst a souhlasím s <a href="/terms" target="_blank"><b>obchodními podmínkámi.</b></a></label>
+            <label htmlFor="checkTerms">
+              {t("forms.mainFormCheckTerms1Label")}{" "}
+              <a href="/terms" target="_blank">
+                {t("forms.mainFormCheckTerms2Label")}
+              </a>
+            </label>
           </div>
 
           <div className={mainFormStyles.checkTerms}>
@@ -498,7 +511,9 @@ const MainFormLayout = ({
                 setCheckTerms2(e.target.checked)
               }}
             />
-            <label htmlFor="checkTerms2">Souhlasím se zpracováním osobních údajů.</label>
+            <label htmlFor="checkTerms2">
+              {t("forms.mainFormCheckTerms3Label")}
+            </label>
           </div>
           <div className={mainFormStyles.buttons}>
             <Button
@@ -509,13 +524,12 @@ const MainFormLayout = ({
               disabled={isSubmitting || !checkTerms || !checkTerms2}
               className={mainFormStyles.submitButton}
             >
-              Zavolejte mi
+              {t("forms.mainFormCTA")}
             </Button>
             <input type="hidden" name="price" value={price} />
           </div>
           <p className={mainFormStyles.mainFormInfo}>
-            Cena měsíčního programu bude upřesněna dle stanoveného příjmu na
-            míru.
+            {t("forms.mainFormCTAdesc")}
           </p>
         </div>
       </Form>

@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import React from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 
 import { Button } from '../button';
@@ -9,7 +10,7 @@ import styles from './form.module.css';
 
 const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 
-Yup.addMethod(Yup.string, "phone", function () {
+Yup.addMethod(Yup.string, "phone", function() {
   return this.test("phone", "Telefonní číslo musí obsahovat 9 znaků", value =>
     rePhoneNumber.test(value)
   )
@@ -27,6 +28,7 @@ export const ContactFormLayout = ({
   label = false,
   horizontal = false,
 }) => {
+  const { t } = useTranslation()
   return (
     <>
       <Form
@@ -38,7 +40,11 @@ export const ContactFormLayout = ({
         })}
       >
         <div className={cx(styles.inputField, contactFormStyles.inputField)}>
-          {label && <label className={contactFormStyles.label}>Telefon</label>}
+          {label && (
+            <label className={contactFormStyles.label}>
+              {t("forms.contactForm2.telLabel")}
+            </label>
+          )}
           {/* <FastField name="phone">
           {({ field }) => (
             <MaskedInput
@@ -84,18 +90,18 @@ export const ContactFormLayout = ({
           <h4 className="text-center">Successfully sent!</h4>
         </div>
       )} */}
-          <Button
-            name="submit"
-            type={btnType}
-            buttonType="submit"
-            disabled={isSubmitting}
-            className={contactFormStyles.contactFormButton}
-          >
-            {btnText}
-          </Button>
+        <Button
+          name="submit"
+          type={btnType}
+          buttonType="submit"
+          disabled={isSubmitting}
+          className={contactFormStyles.contactFormButton}
+        >
+          {t("forms.contactForm2.CTA") || btnText}
+        </Button>
       </Form>
       <div className={contactFormStyles.termsContainer}>
-        <span>Odesíláním telefonního čísla souhlasím se zpracováním osobních údajů</span>
+        <span>{t("forms.contactForm2.info")}</span>
       </div>
     </>
   )

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
 import { Container } from '../container';
@@ -47,13 +48,16 @@ const ReviewsCarousel = () => {
   )
 }
 
-export const Reviews = ({ id = "" }) => (
-  <section className={styles.reviewsSection} id={id}>
-    <Container className={styles.container}>
-      <h3 className="sectionTitle text-center">
-        Co o nás říkají naši zákazníci?
-      </h3>
-      <ReviewsCarousel />
-    </Container>
-  </section>
-)
+export const Reviews = ({ id = "" }) => {
+  const { t } = useTranslation()
+  return (
+    <section className={styles.reviewsSection} id={id}>
+      <Container className={styles.container}>
+        <h3 className="sectionTitle text-center">
+          {t("general.reviews.title")}
+        </h3>
+        <ReviewsCarousel />
+      </Container>
+    </section>
+  )
+}

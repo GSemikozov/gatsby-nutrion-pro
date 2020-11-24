@@ -1,18 +1,20 @@
 import cx from 'classnames';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
+import { Button } from '../button';
 import styles from '../calculator/calculator.module.css';
 import { Container } from '../container';
-import { OrderForm } from '../forms/order-form';
 import { MainForm } from '../forms/main-form';
+import { OrderForm } from '../forms/order-form';
 import styles2 from './calc.module.css';
-import { Button } from '../button'
 
 export const Order = ({ id, className }) => {
   const [form, setForm] = useState("calc")
+  const { t } = useTranslation()
 
   return (
-    <section 
+    <section
       // style={{
       //   backgroundColor: 'var(--color-grey-light)',
       //   padding: '24px 0',
@@ -25,35 +27,35 @@ export const Order = ({ id, className }) => {
     >
       <Container>
         <h3 className={cx("sectionTitle", styles.title, styles2.title)}>
-          Objednat teď
+          {t("home.order.title")}
         </h3>
         <div className={cx(styles.typeSelector)}>
           <Button
             name="submit"
             type="primary"
             size="md"
-            className={cx(form === "calc" ? styles.selectedButton : styles.selectButton)}
+            className={cx(
+              form === "calc" ? styles.selectedButton : styles.selectButton
+            )}
             handleClick={() => setForm("calc")}
           >
-            Zavolejte mi 
+            {t("home.order.tab1Btn")}
           </Button>
           <Button
             name="submit"
             type="primary"
             size="md"
-            className={cx(form === "order" ? styles.selectedButton : styles.selectButton)}
+            className={cx(
+              form === "order" ? styles.selectedButton : styles.selectButton
+            )}
             handleClick={() => setForm("order")}
           >
-          Objednat online
+            {t("home.order.tab2Btn")}
           </Button>
         </div>
-        
-        {form === 'calc' && (
-          <MainForm />
-        )}
-        {form === 'order' && (
-          <OrderForm />
-        )}
+
+        {form === "calc" && <MainForm />}
+        {form === "order" && <OrderForm />}
       </Container>
     </section>
   )

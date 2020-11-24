@@ -25,6 +25,10 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
 
   const { t } = useTranslation()
 
+  const getLinkTranslation = name => {
+    return t(`menu.${name}`)
+  }
+
   return (
     <div className={styles.navbar}>
       <RenderModal darkMode>
@@ -36,10 +40,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
         handleClick={show}
       >
         <img src={IconMap} className={styles.mapMark} alt="icon" />
-        <span>
-          Praha
-          {/* {t("home.title")} */}
-        </span>
+        <span>{t("menu.location")}</span>
         <img src={IconAngleDown} className={styles.angleDown} alt="icon" />
       </Button>
       {menuLinks.map(link => (
@@ -49,7 +50,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
           className={cx(styles.navbarItem, "visible-desktop")}
           onClick={e => handleMenuLinkClick(link, e)}
         >
-          {link.name}
+          {getLinkTranslation(link.name)}
         </a>
       ))}
       <a
@@ -61,7 +62,11 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
           <span className={styles.phoneNumber}>+420 774 137 352</span>
           <br />
           <span className={styles.additionalInfo}>
-            <p style={{ textAlign: 'right' }}><span className={styles.days}>Po - Pá</span> 10:00 - 12:00<br/>13:00 - 18:00</p>
+            <p style={{ textAlign: "right" }}>
+              <span className={styles.days}>Po - Pá</span> 10:00 - 12:00
+              <br />
+              13:00 - 18:00
+            </p>
           </span>
         </span>
       </a>

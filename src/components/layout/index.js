@@ -1,6 +1,7 @@
 import './layout.css';
 
 import { StaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';

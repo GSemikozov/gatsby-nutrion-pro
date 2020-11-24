@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 
 import { Button } from '../button';
@@ -24,6 +25,8 @@ export const HeroFormLayout = ({
   btnType = "primary",
   btnText = "Objednat",
 }) => {
+  const { t } = useTranslation()
+
   return (
     <Form name="2days-trial" method="post" className={heroFormStyles.heroForm}>
       <div className={styles.inputField}>
@@ -56,10 +59,10 @@ export const HeroFormLayout = ({
         disabled={isSubmitting}
         className={heroFormStyles.button}
       >
-        {btnText}
+        {t("forms.hero2FormCTA") || btnText}
       </Button>
       <div className={heroFormStyles.termsContainer}>
-        <span>Odesíláním telefonního čísla souhlasím se zpracováním osobních údajů</span>
+        <span>{t("forms.hero2FormInfo")}</span>
       </div>
     </Form>
   )
