@@ -87,9 +87,9 @@ module.exports = {
     // {
     //   resolve: "@wapps/gatsby-plugin-i18next",
     //   options: {
-    //     langKeyDefault: "en",
-    //     availableLngs: ["en", "cz"],
-    //     fallbackLng: "en",
+    //     langKeyDefault: "cz",
+    //     availableLngs: ["cz", "en"],
+    //     fallbackLng: "cz",
     //     i18nextOptions: {
     //       debug: false,
     //     },

@@ -5,6 +5,7 @@ import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
+import { Trans, useTranslation } from 'react-i18next';
 
 import { Button } from '../button';
 import { Container } from '../container';
@@ -76,6 +77,8 @@ export const Hero = () => {
   //   show()
   // }, [])
 
+  const { t } = useTranslation()
+
   const [showForm, setShowForm] = useState(false)
   const [openBtn, setOpenBtn] = useState(true)
   const [hideBtn, setHideBtn] = useState(false)
@@ -129,8 +132,10 @@ export const Hero = () => {
             <div className={styles.heroForm}>
               <Container>
                 <h1 className={styles.title}>
-                  Dvoudenní zkouška <strong>5chodového</strong> menu za{" "}
-                  <strong>super cenu</strong>
+                  <Trans i18nKey="forms.hero2FormTitle">
+                    Dvoudenní zkouška <strong>5chodového</strong> menu za{" "}
+                    <strong>super cenu</strong>
+                  </Trans>
                 </h1>
                 <HeroForm />
               </Container>
@@ -170,7 +175,13 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    <b>5</b> prémiových <br /> <b>jídel</b> denně
+                    <Trans i18nKey="forms.hero2Option1part1">
+                      <b>5</b> prémiových
+                    </Trans>
+                    <br />
+                    <Trans i18nKey="forms.hero2Option1part2">
+                      <b>jídel</b> denně
+                    </Trans>
                   </div>
                 </div>
                 <div className={styles.offersListItem}>
@@ -200,7 +211,9 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    Dovoz až ke dveřím <b>zdarma</b>
+                    <Trans i18nKey="forms.hero2Option2part1">
+                      Dovoz až ke dveřím <b>zdarma</b>
+                    </Trans>
                   </div>
                 </div>
                 <div className={styles.offersListItem}>
@@ -231,9 +244,13 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    Sleva <b>30%</b>
+                    <Trans i18nKey="forms.hero2Option3part1">
+                      Sleva <b>30%</b>
+                    </Trans>
                     <br />
-                    Jen <b>350 Kč</b>/den
+                    <Trans i18nKey="forms.hero2Option3part2">
+                      Jen <b>350 Kč</b>/den
+                    </Trans>
                   </div>
                 </div>
               </div>
@@ -259,9 +276,10 @@ export const Hero = () => {
         <BackgroundSection image="mobile-food" className={styles.heroMobileImg}>
           <section className={styles.heroMobile}>
             <div className={styles.titleMobile}>
-              Dvoudenní zkouška{" "}
-              <strong className={styles.green}>5chodového</strong> menu za{" "}
-              <b>super cenu</b>
+              <Trans i18nKey="forms.hero2FormTitle">
+                Dvoudenní zkouška <strong>5chodového</strong> menu za{" "}
+                <strong>super cenu</strong>
+              </Trans>
             </div>
             <div className={styles.oldPriceMobile}>
               1000 <span className={styles.green}>Kč</span>

@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Container } from '../container';
 import styles from './faq.module.css';
@@ -142,10 +143,12 @@ export const FAQ = () => {
     texts = section3Texts
   }
 
+  const { t } = useTranslation()
+
   return (
     <section className={styles.section} id="faq">
       <Container className={styles.container}>
-        <h3 className="sectionTitle text-center">Často kladené otázky</h3>
+        <h3 className="sectionTitle text-center">{t("home.qa.title")}</h3>
         <div className={styles.tabsTop}>
           <button
             type="button"

@@ -32,7 +32,7 @@
   color: initial;
   margin-left: 24px;
   cursor: pointer;
-  display: none;
+  /* display: none; */
 }
 
 .contacts {

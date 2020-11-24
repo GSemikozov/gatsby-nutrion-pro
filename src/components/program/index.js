@@ -2,6 +2,7 @@ import cx from 'classnames';
 import { Link } from 'gatsby';
 import React from 'react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import IconCook from './icons/icon-ui-cook.svg';
 import IconHealthForce from './icons/icon-ui-health-force.svg';
@@ -10,6 +11,7 @@ import IconProgram from './icons/icon-ui-program.svg';
 import styles from './program.module.css';
 
 export const Program = ({ id = "" }) => {
+  const { t } = useTranslation()
   const useSwitchUtil = (type, selectedItem) => {
     const [activeItem, setActiveItem] = useState(selectedItem)
 
@@ -25,7 +27,7 @@ export const Program = ({ id = "" }) => {
   return (
     <section className={styles.program} id={id}>
       <h3 className={cx("sectionTitle", styles.title)}>
-        Vyber si svůj program
+        {t("home.program.title")}
       </h3>
       <div className={styles.tabs}>
         <nav className={styles.tabsNav}>
@@ -43,7 +45,9 @@ export const Program = ({ id = "" }) => {
             <a href="/products/product-1" className={styles.tabLink}>
               <img src={IconCook} className={styles.tabImg} alt="icon" />
             </a>
-            <h5 className={styles.tabTitle}>Hubnoucí program</h5>
+            <h5 className={styles.tabTitle}>
+              {t("home.program.program1title")}
+            </h5>
           </button>
           <button
             key={`tab-2`}
@@ -59,7 +63,9 @@ export const Program = ({ id = "" }) => {
             <a href="/products/product-2" className={styles.tabLink}>
               <img src={IconHealthForce} className={styles.tabImg} alt="icon" />
             </a>
-            <h5 className={styles.tabTitle}>Nabírací program</h5>
+            <h5 className={styles.tabTitle}>
+              {t("home.program.program2title")}
+            </h5>
           </button>
           <button
             key={`tab-3`}
@@ -75,7 +81,9 @@ export const Program = ({ id = "" }) => {
             <a href="/products/product-3" className={styles.tabLink}>
               <img src={IconMeasurement} className={styles.tabImg} alt="icon" />
             </a>
-            <h5 className={styles.tabTitle}>Udržovací program</h5>
+            <h5 className={styles.tabTitle}>
+              {t("home.program.program3title")}
+            </h5>
           </button>
           <button
             key={`tab-4`}
@@ -128,7 +136,9 @@ export const Program = ({ id = "" }) => {
                 />
               </svg>
             </a>
-            <h5 className={styles.tabTitle}>Office pack</h5>
+            <h5 className={styles.tabTitle}>
+              {t("home.program.program4title")}
+            </h5>
           </button>
         </nav>
         <div className={styles.tabsContent}>
@@ -142,17 +152,17 @@ export const Program = ({ id = "" }) => {
               hide: activeTab !== 1,
             })}
           >
-            <h4 className={styles.tabsContentTitle}>Hubnoucí program</h4>
+            <h4 className={styles.tabsContentTitle}>
+              {t("home.program.program1title")}
+            </h4>
             <p className={styles.tabsContentText}>
-              Speciální krabičková dieta zaměřená na redukci tělesného tuku
-              zdravou cestou a s udržitelnými výsledky.
+              {t("home.program.program1desc")}
             </p>
             <Link to="/products/product-1" className={styles.button}>
-              Více o programu
+              {t("home.program.programCTA")}
             </Link>
             <p className={styles.afterButtonText}>
-              V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat,
-              vegetarián, vegan či speciálních zdravotních diet.
+              {t("home.program.programCTAdesc")}
             </p>
           </div>
           <div
@@ -165,17 +175,17 @@ export const Program = ({ id = "" }) => {
               hide: activeTab !== 2,
             })}
           >
-            <h4 className={styles.tabsContentTitle}>Nabírací program</h4>
+            <h4 className={styles.tabsContentTitle}>
+              {t("home.program.program2title")}
+            </h4>
             <p className={styles.tabsContentText}>
-              Speciální krabičková dieta zaměřená zejména pro muže, kteří
-              usilují o nárůst svalové hmoty.
+              {t("home.program.program2desc")}
             </p>
             <Link to="/products/product-2" className={styles.button}>
-              Více o programu
+              {t("home.program.programCTA")}
             </Link>
             <p className={styles.afterButtonText}>
-              V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat,
-              vegetarián, vegan či speciálních zdravotních diet.
+              {t("home.program.programCTAdesc")}
             </p>
           </div>
           <div
@@ -188,17 +198,17 @@ export const Program = ({ id = "" }) => {
               hide: activeTab !== 3,
             })}
           >
-            <h4 className={styles.tabsContentTitle}>Udržovací program</h4>
+            <h4 className={styles.tabsContentTitle}>
+              {t("home.program.program3title")}
+            </h4>
             <p className={styles.tabsContentText}>
-              Speciální krabičková dieta zaměřená na udržení současné tělesné
-              hmotnosti díky vyváženému, pestrému a chutnému jídlu.
+              {t("home.program.program3desc")}
             </p>
             <Link to="/products/product-3" className={styles.button}>
-              Více o programu
+              {t("home.program.programCTA")}
             </Link>
             <p className={styles.afterButtonText}>
-              V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat,
-              vegetarián, vegan či speciálních zdravotních diet.
+              {t("home.program.programCTAdesc")}
             </p>
           </div>
           <div
@@ -211,16 +221,17 @@ export const Program = ({ id = "" }) => {
               hide: activeTab !== 4,
             })}
           >
-            <h4 className={styles.tabsContentTitle}>Office pack</h4>
+            <h4 className={styles.tabsContentTitle}>
+              {t("home.program.program4title")}
+            </h4>
             <p className={styles.tabsContentText}>
-              Vyvážené jídlo do kanceláře, po kterém ti práce půjde od ruky.
+              {t("home.program.program4desc")}
             </p>
             <Link to="/products/product-4" className={styles.button}>
-              Více o programu
+              {t("home.program.programCTA")}
             </Link>
             <p className={styles.afterButtonText}>
-              V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat,
-              vegetarián, vegan či speciálních zdravotních diet.
+              {t("home.program.programCTAdesc")}
             </p>
           </div>
         </div>

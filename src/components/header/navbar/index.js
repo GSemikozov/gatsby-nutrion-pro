@@ -25,6 +25,10 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
 
   const { t } = useTranslation()
 
+  const getLinkTranslation = name => {
+    return t(`menu.${name}`)
+  }
+
   return (
     <div className={styles.navbar}>
       <RenderModal darkMode>
@@ -36,10 +40,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
         // handleClick={show}
       >
         <img src={IconMap} className={styles.mapMark} alt="icon" />
-        <span>
-          Praha
-          {/* {t("home.title")} */}
-        </span>
+        <span>{t("menu.location")}</span>
         <img src={IconAngleDown} className={styles.angleDown} alt="icon" />
       </Button>
       {menuLinks.map(link => (
@@ -49,7 +50,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
           className={cx(styles.navbarItem, "visible-desktop")}
           onClick={e => handleMenuLinkClick(link, e)}
         >
-          {link.name}
+          {getLinkTranslation(link.name)}
         </a>
       ))}
       <a

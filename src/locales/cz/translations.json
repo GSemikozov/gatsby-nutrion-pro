@@ -1,5 +1,116 @@
 {
+  "general": {
+    "bannerTitle": "<0>Společná</0> objednávka se <4>slevou až 20%.</4>",
+    "food": {
+      "title": "Jaká jídla tě s námi čekají?",
+      "CTA": "Vzorové menu",
+      "cardInfoLabel1": "kcal",
+      "cardInfoLabel2": "sacharidy",
+      "cardInfoLabel3": "bílkoviny",
+      "cardInfoLabel4": "tuky",
+      "card1Title": "Kuřecí nudličky v zeleninové omáčce s fazolovými lusky",
+      "card2Title": "Lososový wrap",
+      "card3Title": "Salát s hovězím masem po korejsku",
+      "card4Title": "Salát s pečeným roastbeefem a medovou zálivkou",
+      "card5Title": "Sendvič s krůtím masem, zeleninou a kimchi omáčkou",
+      "card6Title": "Hovězí maso s rýžovými nudlemi, zeleninou a thajskou zálivkou",
+      "card7Title": "Bramborový nákyp s mletým hovězím masem",
+      "card8Title": "Okoun se smaženým zelím a kari omáčkou",
+      "card9Title": "Pohankové karbanátky s čočkou",
+      "card10Title": "Bonbón s ořechem",
+      "card11Title": "Jablečně-mrkvové vafle s krémem",
+      "card12Title": "Tykvový nákyp se smetanou"
+    },
+    "about": {
+      "title": "Proč NutritionPro?",
+      "point1": "Jídelníček na míru <1></1> tvému tělu a cílům",
+      "point2": "Menu z <1></1> 300 jídel",
+      "point3": "Kvalitní <1></1> prémiové suroviny",
+      "point4": "Dovoz po <1></1> Praze zdarma"
+    },
+    "reviews": {
+      "title": "Co o nás říkají naši zákazníci?"
+    },
+    "prefooter": {
+      "title": "Společná objednávka se slevou až 20%",
+      "desc1": "Objednejte si svůj NutritionPro program společně s kamarády či rodinou a získejte ho za výhodnější cenu.",
+      "desc2": "Objednávku pro 2 máte se slevou 10%, objednávku pro 3+ máte se slevou 20%",
+      "desc3": "Napiš nám svůj kontakt, rádi se ti ozveme!"
+    }
+  },
+  "menu": {
+    "location": "Praha",
+    "Programy": "Programy",
+    "Jídelníček": "Jídelníček",
+    "Cena": "Cena",
+    "Kariéra": "Kariéra"
+  },
+  "forms": {
+    "hero2FormTitle": "Dvoudenní zkouška <1>5chodového</1> menu za <4>super cenu</4>",
+    "hero2FormCTA": "Objednat",
+    "hero2FormInfo": "Odesíláním telefonního čísla souhlasím se zpracováním osobních údajů.",
+    "hero2Option1part1": "<0>5</0> prémiových",
+    "hero2Option1part2": "<1>jídel</1> denně",
+    "hero2Option2part1": "Dovoz až ke dveřím <1>zdarma</1>",
+    "hero2Option3part1": "Sleva <1>30%</1>",
+    "hero2Option3part2": "Jen <1>350 Kč</1>/den",
+    "mainFormGoalLabel": "Tvůj cíl",
+    "mainFormGoalOption1": "Zhubnout",
+    "mainFormGoalOption2": "Udržovat",
+    "mainFormGoalOption3": "Nabírat",
+    "mainFormProgramLabel": "Vyber si délku programu",
+    "mainFormProgramOption1": "2 týdny",
+    "mainFormProgramOption2": "Měsíc",
+    "mainFormProgramOption3": "Dva měsíce",
+    "mainFormMenuLabel": "Vyber si počet jídel",
+    "mainFormMenuOption1": "5chodové menu",
+    "mainFormMenuOption2": "3chodové menu",
+    "mainFormMenuOption3": "2chodové menu",
+    "mainFormTelLabel": "Kontaktní telefon",
+    "mainFormPromoCodeLabel": "Promo kód",
+    "mainFormCheckTerms1Label": "Měl/a jsem možnost přečíst a souhlasím s",
+    "mainFormCheckTerms2Label": "obchodními podmínkami.",
+    "mainFormCheckTerms3Label": "Souhlasím se zpracováním osobních údajů.",
+    "mainFormCTA": "Zavolejte mi",
+    "mainFormCTAdesc": "Cena měsíčního programu bude upřesněna dle stanoveného příjmu na míru.",
+    "priceTitlePart1": "Průměrná cena za den",
+    "priceTitlePart2": "včetně dovozu",
+    "contactForm2": {
+      "telLabel": "Telefon",
+      "CTA": "Zavolejte mi",
+      "info": "Odesláním telefonního čísla souhlasím se zpracováním osobních údajů."
+    }
+  },
   "home": {
-    "title": "CZ"
+    "title": "CZ",
+    "program": {
+      "title": "Vyber si svůj program",
+      "program1title": "Hubnoucí program",
+      "program1desc": "Speciální krabičková dieta zaměřená na redukci tělesného tuku zdravou cestou a s udržitelnými výsledky.",
+      "program2title": "Nabírací program",
+      "program2desc": "Speciální krabičková dieta zaměřená zejména pro muže, kteří usilují o nárůst svalové hmoty.",
+      "program3title": "Udržovací program",
+      "program3desc": "Speciální krabičková dieta zaměřená na udržení současné tělesné hmotnosti díky vyváženému, pestrému a chutnému jídlu.",
+      "program4title": "Office Pack",
+      "program4desc": "Vyvážené jídlo do kanceláře, po kterém ti práce půjde od ruky.",
+      "programCTA": "Více o programu",
+      "programCTAdesc": "V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat, vegetarián, vegan či speciálních zdravotních diet."
+    },
+    "order": {
+      "title": "Objednat teď",
+      "tab1Btn": "Zavolejte mi",
+      "tab2Btn": "Objednat online"
+    },
+    "howItWorks": {
+      "title": "Jak to funguje",
+      "option1": "Nastavíme tvůj denní příjem podle tvých cílů",
+      "option2": "Speciální algoritmus sestaví jídelníček na míru",
+      "option3": "Jídlo uvaříme",
+      "option4": "Dovezeme po celé Praze zdarma",
+      "option5": "Následně dohlédneme na to, abys svého cíle dosáhl"
+    },
+    "qa": {
+      "title": "Často kladené Otázky"
+    }
   }
 }

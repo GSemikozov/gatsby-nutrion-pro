@@ -1,5 +1,116 @@
 {
+  "general": {
+    "bannerTitle": "<0>Save up</0> with group order <5>to 20%OFF</5>!",
+    "food": {
+      "title": "The MEALS. What to expect?",
+      "CTA": "Sample menu",
+      "cardInfoLabel1": "kcal",
+      "cardInfoLabel2": "carbohydrates",
+      "cardInfoLabel3": "protein",
+      "cardInfoLabel4": "fat",
+      "card1Title": "Chicken fajitas with beans and curry sauce",
+      "card2Title": "Salmon wrap",
+      "card3Title": "Korean beef salad",
+      "card4Title": "Korean beef salad",
+      "card5Title": "Turkey-vegetable-kimchi sandwich",
+      "card6Title": "Thai style rice noodles with beef and vegetables",
+      "card7Title": "Potato souffle filled with minced beef",
+      "card8Title": "Perch in curry sauce with stir-fried cabbage",
+      "card9Title": "Buckwheat patties with lentils",
+      "card10Title": "Raw balls with nuts",
+      "card11Title": "Apple-carrot wafles with creamy sauce",
+      "card12Title": "Pumpkin pudding with cream"
+    },
+    "about": {
+      "title": "Why NutritionPro?",
+      "point1": "Tailored meal plan <1></1> just for your needs",
+      "point2": "Over <1></1> 300 meals",
+      "point3": "Only premium <1></1> ingrediences",
+      "point4": "FREE delivery <1></1> in Prague"
+    },
+    "reviews": {
+      "title": "What the clients say about us?"
+    },
+    "prefooter": {
+      "title": "Save up to 20%OFF with group order!",
+      "desc1": "Start your NutritionPro meal plan with a friend or family and enjoy our tasty meals at discounted price.",
+      "desc2": "2 person Discount Special Offer 10% off, 3+ person DiscountSpecial Offer 20%",
+      "desc3": "Leave your contact and we´ll get back!"
+    }
+  },
+  "menu": {
+    "location": "Prague",
+    "Programy": "Diet Plans",
+    "Jídelníček": "Meal Plan",
+    "Cena": "Price",
+    "Kariéra": "Careers"
+  },
+  "forms": {
+    "hero2FormTitle": "Special Offer! 2-Day trial: <1>5-meal menu</1> for <4>great price</4>",
+    "hero2FormCTA": "Order NOW",
+    "hero2FormInfo": "By providing my phone number I agree to the terms of Privacy Policy.",
+    "hero2Option1part1": "<0>5</0> premium",
+    "hero2Option1part2": "<1>MEALS</1> per day",
+    "hero2Option2part1": "FREE delivery",
+    "hero2Option3part1": "30% OFF",
+    "hero2Option3part2": "Just <1>350 Kč</1>/day",
+    "mainFormGoalLabel": "Your goal",
+    "mainFormGoalOption1": "Weight loss",
+    "mainFormGoalOption2": "Maintenance",
+    "mainFormGoalOption3": "Weight gain",
+    "mainFormProgramLabel": "Choose the length of your program",
+    "mainFormProgramOption1": "2 weeks",
+    "mainFormProgramOption2": "Month",
+    "mainFormProgramOption3": "2 months",
+    "mainFormMenuLabel": "How many meals?",
+    "mainFormMenuOption1": "5-meal menu",
+    "mainFormMenuOption2": "3-meal menu",
+    "mainFormMenuOption3": "2-meal menu",
+    "mainFormTelLabel": "Contact number",
+    "mainFormPromoCodeLabel": "Promotion CODE",
+    "mainFormCheckTerms1Label": "By ticking the box I´ve read and agree to NutritionPro",
+    "mainFormCheckTerms2Label": "terms of service.",
+    "mainFormCheckTerms3Label": "I agree with the terms of Privacy Policy.",
+    "mainFormCTA": "Call me back",
+    "mainFormCTAdesc": "The cost of your monhtly meal plan will be set accordingly to your daily intake.",
+    "priceTitlePart1": "Average price per day",
+    "priceTitlePart2": "inc. delivery",
+    "contactForm2": {
+      "telLabel": "Contact",
+      "CTA": "Call me back",
+      "info": "By filling this information I agree with the terms of Privacy Policy."
+    }
+  },
   "home": {
-    "title": "EN"
+    "title": "EN",
+    "program": {
+      "title": "Choose your diet plan",
+      "program1title": "Weight Loss Plan",
+      "program1desc": "Lose Weight for good! Special meal subscription boxes plan for healthy fat reduction and long term results.",
+      "program2title": "Gaining Plan",
+      "program2desc": "The muscle building meal subscription boxes plan designed to support the lean mass gain. Great for men.",
+      "program3title": "Stabiliser Plan",
+      "program3desc": "These tasty meal subscription boxes will keep your weight on track with well balanced food.",
+      "program4title": "Office Pack",
+      "program4desc": "Healthy & balanced office food that does not slow you down. ",
+      "programCTA": "Learn more",
+      "programCTAdesc": "We are sorry, currently no low-carb, low-fat, vegetarian, vegan or other special dietary requirements options. "
+    },
+    "order": {
+      "title": "Order NOW",
+      "tab1Btn": "Call me",
+      "tab2Btn": "Order ONLINE"
+    },
+    "howItWorks": {
+      "title": "HOW it works",
+      "option1": "We start with setting your individual daily intake.",
+      "option2": "Our special algorithm customizes your menu.",
+      "option3": "We cook the food.",
+      "option4": "Free deliveries within Prague.",
+      "option5": "We make sure you reach your goals in time."
+    },
+    "qa": {
+      "title": "QA´s"
+    }
   }
 }

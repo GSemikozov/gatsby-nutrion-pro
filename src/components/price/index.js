@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import { FastField } from 'formik';
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import styles from './price.module.css';
 
@@ -18,6 +19,7 @@ function getDiscountPricePerPortion(price, plan) {
 export const Price = ({ price = 0, oldPrice, plan = null }) => {
   const [discountPrice, setDiscountPrice] = useState(null)
   const [discountPortionPrice, setDiscountPortionPrice] = useState(null)
+  const { t } = useTranslation()
 
   useEffect(() => {
     const discountPriceValue = getDiscountPrice(price, plan)
@@ -29,8 +31,8 @@ export const Price = ({ price = 0, oldPrice, plan = null }) => {
   return (
     <div className={styles.price}>
       <div className={styles.priceCol}>
-        <h5 className={styles.priceTitle}>Průměrná cena za den</h5>
-        <p className={styles.priceText}>včetně dovozu</p>
+        <h5 className={styles.priceTitle}>{t("forms.priceTitlePart1")}</h5>
+        <p className={styles.priceText}>{t("forms.priceTitlePart2")}</p>
       </div>
       <div className={cx(styles.priceCol, styles.priceColRight)}>
         <div className={styles.priceValue}>
