@@ -6,7 +6,7 @@ import SEO from '../../components/seo';
 const OrderPage = () => (
   <>
     <SEO title="Dělej, co tě baví!" />
-      <Order />
+    <Order />
   </>
 )
 

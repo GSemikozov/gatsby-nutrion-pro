@@ -1,0 +1,157 @@
+.tableSection {
+  background-color: #e9eff1;
+  padding: 24px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.typeSelector {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.typeSelector > *:first-child {
+  margin-right: 24px;
+}
+
+.selectButton {
+  height: 40px;
+  padding: 8px 20px;
+  background-color: var(--color-green) !important;
+  border: 1px solid var(--color-green) !important;
+  opacity: 0.5;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.selectButton:hover {
+  opacity: 0.5;
+}
+
+.selectedButton {
+  background-color: var(--color-green) !important;
+  border: 1px solid var(--color-green) !important;
+  margin-top: 10px;
+  height: 40px;
+  padding: 8px 20px;
+  font-size: 15px;
+}
+
+.selectedButton:hover {
+  opacity: 1;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  padding-bottom: 35px;
+}
+
+.tableWrap::-webkit-scrollbar {
+  height: 5px;
+  background: var(--color-grey);
+}
+
+.tableWrap::-webkit-scrollbar-thumb:horizontal {
+  background: var(--color-green);
+  border-radius: 10px;
+}
+
+.priceTable {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+.priceTable thead tr th {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.priceTable tbody tr td {
+  background-color: var(--color-white);
+}
+
+.priceTable thead tr th,
+.priceTable tbody tr td {
+  font-size: 14px;
+  line-height: 20px;
+  border: 5px solid transparent;
+  padding: 8px 15px;
+  width: 100px;
+  min-width: 100px;
+  height: 48px;
+  text-align: center;
+}
+
+.priceTable thead tr th:first-child,
+.priceTable tbody tr td:first-child {
+  width: 150px;
+  min-width: 150px;
+  text-align: left;
+}
+
+.priceTable tbody tr td span {
+  white-space: nowrap;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+}
+
+.newPrice {
+  font-weight: 700;
+  color: var(--color-green);
+}
+
+@media all and (min-width: 768px) {
+  .tableSection {
+    padding: 80px 0 54px;
+  }
+
+  .priceTable {
+    border-spacing: 6x;
+  }
+
+  .priceTable thead tr th,
+  .priceTable tbody tr td {
+    font-size: 20px;
+    line-height: 1;
+    width: 180px;
+    min-width: 180px;
+    padding: 14px 15px;
+  }
+
+  .priceTable thead tr th:first-child,
+  .priceTable tbody tr td:first-child {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .title {
+    margin-bottom: 40;
+  }
+
+  .selectButton {
+    height: 50px;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+  .selectedButton {
+    height: 50px;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .tableWrap {
+    display: flex;
+    justify-content: center;
+  }
+}

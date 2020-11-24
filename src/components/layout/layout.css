@@ -132,6 +132,11 @@ select {
   #mobile-menu-link {
     display: block;
   }
+
+  .modalContactForm {
+    top: 25% !important;
+    height: auto !important;
+  }
 }
 
 @media all and (min-width: 1024px) {

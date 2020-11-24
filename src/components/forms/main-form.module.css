@@ -2,7 +2,7 @@
   border-radius: 10px;
   background-color: var(--color-white);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.04);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .mainForm.heroForm {
@@ -45,6 +45,14 @@
   line-height: 23px;
   margin: 0 0 24px;
   text-align: center;
+}
+
+.inputFieldRow {
+  flex-direction: column;
+}
+
+.inputFieldColumn {
+  margin-bottom: 16px !important;
 }
 
 @media all and (min-width: 992px) {
@@ -107,12 +115,22 @@
 
 @media all and (min-width: 768px) {
   .mainFormBox {
-    max-width: 760px;
+    max-width: 820px;
     margin: 0 auto;
   }
 
   .buttons {
     margin-top: 30px;
+  }
+
+  .inputFieldRow {
+    flex-direction: row;
+  }
+
+  .inputFieldColumn {
+    flex-basis: 50%;
+    width: 50%;
+    padding: 0 10px;
   }
 }
 

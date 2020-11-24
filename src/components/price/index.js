@@ -16,7 +16,7 @@ function getDiscountPricePerPortion(price, plan) {
   return ((price - price * (discountPortion / 100)).toFixed() / 5).toFixed()
 }
 
-export const Price = ({ price = 0, plan = null }) => {
+export const Price = ({ price = 0, oldPrice, plan = null }) => {
   const [discountPrice, setDiscountPrice] = useState(null)
   const [discountPortionPrice, setDiscountPortionPrice] = useState(null)
   const { t } = useTranslation()
@@ -26,7 +26,7 @@ export const Price = ({ price = 0, plan = null }) => {
     setDiscountPrice(discountPriceValue)
     const discountPortionPriceValue = getDiscountPricePerPortion(price, plan)
     setDiscountPortionPrice(discountPortionPriceValue)
-  }, [price, plan])
+  }, [price, oldPrice, plan])
 
   return (
     <div className={styles.price}>
@@ -37,6 +37,9 @@ export const Price = ({ price = 0, plan = null }) => {
       <div className={cx(styles.priceCol, styles.priceColRight)}>
         <div className={styles.priceValue}>
           <span id="price">{price ? price : "420"}</span> Kč
+        </div>
+        <div style={{ textDecoration: "line-through" }}>
+          {oldPrice && `${oldPrice} Kč`}
         </div>
         {/* {plan === "2 týdny" && (
           <div className={styles.priceDiscountValue}>

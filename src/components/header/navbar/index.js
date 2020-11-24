@@ -37,7 +37,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       <Button
         type="unstyled"
         className={cx(styles.navbarItem, styles.location)}
-        handleClick={show}
+        // handleClick={show}
       >
         <img src={IconMap} className={styles.mapMark} alt="icon" />
         <span>{t("menu.location")}</span>

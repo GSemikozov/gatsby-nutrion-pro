@@ -25,6 +25,11 @@ module.exports = {
         link: "/jobs",
         section: null,
       },
+      {
+        name: "Pro firmy",
+        link: "/program-for-companies",
+        section: null,
+      },
     ],
   },
   plugins: [
