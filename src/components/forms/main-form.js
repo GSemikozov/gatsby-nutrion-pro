@@ -308,6 +308,8 @@ const MainFormLayout = ({
     return price
   }
 
+  const { t } = useTranslation()
+
   return (
     <div className={mainFormStyles.mainFormBox}>
       <Form
