@@ -119,6 +119,8 @@ const MainFormLayout = ({
   const [menu2xDisabled, setMenu2xDisabled] = useState(false)
   const [checkTerms, setCheckTerms] = useState(false)
   const [checkTerms2, setCheckTerms2] = useState(false)
+  const [osob, setOsob] = useState("1")
+  const [oldPrice, setOldPrice] = useState(null)
 
   const onSetPlan = value => {
     setPlan(value)
@@ -169,7 +171,7 @@ const MainFormLayout = ({
   }
 
   useEffect(() => {
-    const priceValue = getPrice(menu, program, plan)
+    const priceValue = getPrice(menu, program, plan, osob)
     setPrice(priceValue)
   }, [menu, plan, program, osob])
 
