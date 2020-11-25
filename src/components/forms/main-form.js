@@ -308,6 +308,34 @@ const MainFormLayout = ({
     return price
   }
 
+  const getMenuSelectLabel = value => {
+    switch (value) {
+      case "5chodové menu":
+        return t("forms.mainFormMenuOption1")
+      case "3chodové menu":
+        return t("forms.mainFormMenuOption2")
+      case "2chodové menu":
+        return t("forms.mainFormMenuOption3")
+      default:
+        return
+    }
+  }
+
+  const getPersonSelectLabel = value => {
+    switch (value) {
+      case "1":
+        return t("forms.mainFormNumberOfPersonOption1")
+      case "2":
+        return t("forms.mainFormNumberOfPersonOption2")
+      case "3":
+        return t("forms.mainFormNumberOfPersonOption3")
+      case "Více než 3":
+        return t("forms.mainFormNumberOfPersonOption4")
+      default:
+        return
+    }
+  }
+
   const { t } = useTranslation()
 
   return (
@@ -436,16 +464,28 @@ const MainFormLayout = ({
               )}
             >
               <h6 className={orderFormStyles.inputFieldTitleSmall}>
-                Počet jídel
+                {t("forms.mainFormMenuLabel")}
               </h6>
               <Select
                 options={[
-                  { value: "5chodové menu", label: "5chodové menu" },
-                  { value: "3chodové menu", label: "3chodové menu" },
-                  { value: "2chodové menu", label: "2chodové menu" },
+                  {
+                    value: "5chodové menu",
+                    label: t("forms.mainFormMenuOption1"),
+                  },
+                  {
+                    value: "3chodové menu",
+                    label: t("forms.mainFormMenuOption2"),
+                  },
+                  {
+                    value: "2chodové menu",
+                    label: t("forms.mainFormMenuOption3"),
+                  },
                 ]}
                 isSearchable={false}
-                value={{ value: values.menu, label: values.menu }}
+                value={{
+                  value: values.menu,
+                  label: getMenuSelectLabel(values.menu),
+                }}
                 onChange={e => {
                   onSetMenu(e.value)
                   setFieldValue("menu", e.value)
@@ -460,17 +500,32 @@ const MainFormLayout = ({
               )}
             >
               <h6 className={orderFormStyles.inputFieldTitleSmall}>
-                Počet osob
+                {t("forms.mainFormNumberOfPersonLabel")}
               </h6>
               <Select
                 options={[
-                  { value: "1", label: "1" },
-                  { value: "2", label: "2" },
-                  { value: "3", label: "3" },
-                  { value: "Více než 3", label: "Více než 3" },
+                  {
+                    value: "1",
+                    label: t("forms.mainFormNumberOfPersonOption1"),
+                  },
+                  {
+                    value: "2",
+                    label: t("forms.mainFormNumberOfPersonOption2"),
+                  },
+                  {
+                    value: "3",
+                    label: t("forms.mainFormNumberOfPersonOption3"),
+                  },
+                  {
+                    value: "Více než 3",
+                    label: t("forms.mainFormNumberOfPersonOption4"),
+                  },
                 ]}
                 isSearchable={false}
-                value={{ value: values.osob, label: values.osob }}
+                value={{
+                  value: values.osob,
+                  label: getPersonSelectLabel(values.osob),
+                }}
                 onChange={e => {
                   onSetOsob(e.value)
                   setFieldValue("osob", e.value)
