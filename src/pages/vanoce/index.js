@@ -1,9 +1,13 @@
 import cx from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from '../../components/button';
+import stylesCalc from '../../components/calculator/calculator.module.css';
 import { Container } from '../../components/container';
 import { FoodCarouselSection } from '../../components/food';
+import { MainForm } from '../../components/forms/main-form';
+import { VoucherForm } from '../../components/forms/voucher-form';
 import { HeroNY } from '../../components/hero-ny';
 import { Hero } from '../../components/hero2';
 import productImg3 from '../../images/product-3-bg.jpg';
@@ -14,9 +18,54 @@ import { ContentDesktopImg } from './content-img-desktop';
 import pageStyles from './ny-program.module.css';
 
 const NYProgramPage = () => {
+  const { t } = useTranslation()
+  const [form, setForm] = useState("calc")
+
   return (
     <>
       <HeroNY />
+
+      <section
+        className={cx(stylesCalc.calculatorSection, pageStyles.calcSection)}
+        id="calculator"
+      >
+        <Container>
+          <h3 className={cx("sectionTitle", stylesCalc.title)}>
+            {t("home.order.title")}
+          </h3>
+          <div className={cx(stylesCalc.typeSelector)}>
+            <Button
+              name="submit"
+              type="primary"
+              size="md"
+              className={cx(
+                form === "calc"
+                  ? stylesCalc.selectedButton
+                  : stylesCalc.selectButton
+              )}
+              handleClick={() => setForm("calc")}
+            >
+              {t("home.order.tab1Btn")}
+            </Button>
+            <Button
+              name="submit"
+              type="primary"
+              size="md"
+              className={cx(
+                form === "voucher"
+                  ? stylesCalc.selectedButton
+                  : stylesCalc.selectButton
+              )}
+              handleClick={() => setForm("voucher")}
+            >
+              {t("home.order.tab2Btn")}
+            </Button>
+          </div>
+
+          {form === "calc" && <MainForm />}
+          {form === "voucher" && <VoucherForm />}
+        </Container>
+      </section>
 
       <section className={section4Styles.section}>
         <Container>

@@ -34,3 +34,8 @@
   margin-bottom: 30px;
   text-align: left;
 }
+
+.calcSection:before,
+.calcSection:after {
+  display: none;
+}
