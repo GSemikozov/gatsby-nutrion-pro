@@ -1,0 +1,37 @@
+.heroForm {
+  width: 396px;
+}
+
+.button {
+  width: 100%;
+  background-color: var(--color-green) !important;
+  border-color: var(--color-green) !important;
+  box-shadow: 10px 10px 20px rgba(39, 154, 48, 0.02) !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.inputField,
+.input {
+  border: none;
+}
+
+.input {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media all and (max-width: 767px) {
+  .heroForm {
+    width: 100%;
+    max-width: 226px;
+  }
+}
+
+.termsContainer {
+  font-size: 12px;
+  margin-top: 10px;
+  color: white;
+}

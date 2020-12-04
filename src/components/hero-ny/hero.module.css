@@ -1,0 +1,356 @@
+.hero {
+  padding: 8px 0 100px;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.heroMobile {
+  padding: 0 0 100px;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.heroMobileImg {
+  overflow: hidden;
+  background-repeat: repeat-y;
+}
+
+.heroMobileImg,
+.heroMobileImg:after {
+  /* background-size: 100% auto !important; */
+}
+
+.heroMobileImg:before,
+.heroMobileImg:after {
+  /* height: 1100px !important; */
+}
+
+.btnTop {
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  z-index: 2;
+}
+
+.titleMobile {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  color: #1a1e20;
+  padding: 10px;
+  border-bottom: 7px solid var(--color-green);
+  width: 290px;
+  margin: 0 auto 24px;
+  background-color: var(--color-white);
+}
+
+.titleMobile .green {
+  color: var(--color-green);
+}
+
+.title {
+  /* color: var(--color-white); */
+  display: flex;
+  flex-direction: column;
+}
+
+.titlePart1 {
+  font-weight: 700;
+  font-size: 80px;
+  color: var(--color-green);
+  line-height: 1;
+  margin-top: 8px;
+  white-space: nowrap;
+}
+
+.titlePart2 {
+  font-size: 56px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.titleIcon {
+  width: 130px;
+}
+
+.heroForm {
+  width: 100%;
+  max-width: 226px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.heroPrice {
+  background: var(--color-white);
+  border-radius: 2px;
+  border-bottom: 8px solid var(--color-green);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 36px;
+  color: var(--color-orange);
+  width: 200px;
+  text-align: center;
+  padding: 8px;
+}
+
+.heroPrice > .oldPrice {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #5f5f5f;
+  position: relative;
+  display: inline-block;
+}
+
+.heroPrice > .oldPrice:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1px);
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-green);
+}
+
+.heroPrice span {
+  font-weight: 300;
+}
+
+.heroPriceMobile {
+  background: var(--color-white);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 36px;
+  text-align: center;
+  color: var(--color-orange);
+  text-align: center;
+  padding: 10px;
+  margin: 0 0 80px;
+}
+
+.oldPriceMobile {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  margin: 0 auto 32px;
+}
+
+.oldPriceMobile:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1px);
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-green);
+}
+
+.oldPriceMobile .green {
+  color: var(--color-green);
+}
+
+.heroPriceMobile span {
+  font-weight: 300;
+}
+
+.offersContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 500px);
+  background-color: var(--color-grey);
+}
+
+.offersList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.offersListItem {
+  height: 116px;
+  width: 154px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  margin-bottom: 24px;
+}
+
+.offersListItem:last-child {
+  margin-right: 0;
+}
+
+.offersListItemBody {
+  padding: 4px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.offersListItemHeader {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./images/ny-decoration.svg") center no-repeat;
+  background-size: 100%;
+  /* border-bottom: 1px solid var(--color-white); */
+}
+
+.offersListMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offersListMobileItemWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 295px;
+}
+
+.offersListMobileItem {
+  height: 116px;
+  width: 154px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  margin-bottom: 24px;
+  padding: 10px;
+}
+
+.offersListMobileItemInfo {
+  font-size: 24px;
+  color: #424242;
+  font-weight: 700;
+}
+
+.offersListMobileItemPrice {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.red {
+  background-color: #c40000;
+}
+
+.green {
+  background-color: var(--color-green);
+}
+
+.offersListMobileItemIcon {
+}
+
+.heroFormWrapper {
+  padding: 40px 36px;
+}
+
+.desc {
+  height: 760px;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+
+.descHidden {
+  height: 0;
+}
+
+@media all and (min-width: 768px) {
+  .hero {
+    height: 770px;
+    flex-direction: row;
+    background-position: cover;
+    padding: 0;
+  }
+
+  .heroForm {
+    width: 350px;
+    max-width: none;
+    padding: 50px 10px 100px;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .offersContent {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .heroPrice {
+    margin: 80px auto 40px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .hero {
+    height: 650px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .hero {
+    height: 800px;
+  }
+
+  .heroForm {
+    width: 550px;
+    padding: 70px 40px 100px 65px;
+  }
+
+  .title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 80px;
+  }
+
+  .heroPrice {
+    margin: 120px auto 40px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .hero {
+    height: 670px;
+  }
+
+  .heroForm {
+    margin: 0 auto;
+  }
+
+  .offersListItem:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
