@@ -10,16 +10,23 @@ import { MainForm } from '../../components/forms/main-form';
 import { VoucherForm } from '../../components/forms/voucher-form';
 import { HeroNY } from '../../components/hero-ny';
 import { Hero } from '../../components/hero2';
+import { ContentDesktopImg } from '../../components/venoce-img/content-img-desktop.js';
+import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import productImg3 from '../../images/product-3-bg.jpg';
 import section4Styles from '../../pages/imunita/section4.module.css';
 import heroStyles from '../../templates/hero.module.css';
 import styles from '../products/product4.module.css';
-import { ContentDesktopImg } from './content-img-desktop';
 import pageStyles from './ny-program.module.css';
 
 const NYProgramPage = () => {
   const { t } = useTranslation()
   const [form, setForm] = useState("calc")
+
+  const scroll = useSmoothScroll()
+
+  const onLinkClick = selector => () => {
+    scroll.animateScroll(document.getElementById(selector))
+  }
 
   return (
     <>
@@ -78,7 +85,7 @@ const NYProgramPage = () => {
                 Vánoční voucher od NutritionPro je dárek, který ocení úplně
                 každý.
               </p>
-              <Button type="secondary">
+              <Button type="secondary" handleClick={onLinkClick("calculator")}>
                 <span style={{ width: "100px" }}>Mám zájem</span>
               </Button>
             </div>

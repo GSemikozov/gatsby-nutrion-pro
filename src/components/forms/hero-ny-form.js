@@ -134,7 +134,7 @@ export const HeroNYForm = withFormik({
         ) || ""
 
       const data = {
-        form_name: "NY",
+        form_name: "akce-form",
         title,
         phone,
         utm_source: UTM_SOURCE,
