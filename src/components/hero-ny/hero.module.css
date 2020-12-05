@@ -1,5 +1,5 @@
 .hero {
-  padding: 8px 0 100px;
+  padding: 40px 0;
   height: auto;
   position: relative;
   display: flex;
@@ -8,7 +8,7 @@
 }
 
 .heroMobile {
-  padding: 0 0 100px;
+  padding: 40px 0;
   height: auto;
   position: relative;
   display: flex;
@@ -18,17 +18,19 @@
 
 .heroMobileImg {
   overflow: hidden;
-  background-repeat: repeat-y;
+  width: 100%;
+  margin-bottom: 48px;
 }
 
-.heroMobileImg,
-.heroMobileImg:after {
-  /* background-size: 100% auto !important; */
-}
-
-.heroMobileImg:before,
-.heroMobileImg:after {
-  /* height: 1100px !important; */
+.btnShowMore {
+  background-color: var(--color-green) !important;
+  border-color: var(--color-green) !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: calc(100% - 60px);
 }
 
 .btnTop {
@@ -38,19 +40,13 @@
   bottom: 32px;
   right: 32px;
   z-index: 2;
+  background-color: grey;
 }
 
 .titleMobile {
-  font-weight: 300;
-  font-size: 28px;
-  line-height: 32px;
-  text-align: center;
-  color: #1a1e20;
-  padding: 10px;
-  border-bottom: 7px solid var(--color-green);
-  width: 290px;
-  margin: 0 auto 24px;
-  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titleMobile .green {
@@ -65,17 +61,20 @@
 
 .titlePart1 {
   font-weight: 700;
-  font-size: 80px;
+  font-size: 50px;
   color: var(--color-green);
   line-height: 1;
   margin-top: 8px;
   white-space: nowrap;
+  text-align: center;
 }
 
 .titlePart2 {
-  font-size: 56px;
+  font-size: 40px;
+  font-weight: 400;
   line-height: 1;
   white-space: nowrap;
+  text-align: center;
 }
 
 .titleIcon {
@@ -84,7 +83,7 @@
 
 .heroForm {
   width: 100%;
-  max-width: 226px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,16 +171,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 500px);
   background-color: var(--color-grey);
 }
 
 .offersList {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
+  align-items: center;
+  margin-top: 70px;
 }
 
 .offersListItem {
@@ -229,6 +228,7 @@
   flex-direction: column;
   align-items: center;
   width: 295px;
+  margin-bottom: 40px;
 }
 
 .offersListMobileItem {
@@ -274,7 +274,7 @@
 }
 
 .desc {
-  height: 760px;
+  height: 330px;
   overflow: hidden;
   transition: 0.5s all;
 }
@@ -283,12 +283,17 @@
   height: 0;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 992px) {
   .hero {
     height: 770px;
     flex-direction: row;
     background-position: cover;
     padding: 0;
+  }
+
+  .offersList {
+    flex-direction: row;
+    margin-top: 24px;
   }
 
   .heroForm {
@@ -305,6 +310,8 @@
   .offersContent {
     flex-grow: 1;
     flex-shrink: 0;
+    width: calc(100% - 500px);
+    height: auto;
   }
 
   .heroPrice {
@@ -315,6 +322,10 @@
 @media all and (min-width: 992px) {
   .hero {
     height: 650px;
+  }
+
+  .offersList {
+    align-items: flex-start;
   }
 }
 
@@ -328,15 +339,22 @@
     padding: 70px 40px 100px 65px;
   }
 
-  .title {
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 46px;
-    margin-bottom: 80px;
+  .titlePart1 {
+    font-size: 80px;
+    text-align: left;
+  }
+
+  .titlePart2 {
+    font-size: 56px;
+    text-align: left;
   }
 
   .heroPrice {
     margin: 120px auto 40px;
+  }
+
+  .offersListMobileItemWrapper {
+    margin-bottom: 0;
   }
 }
 

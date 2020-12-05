@@ -25,7 +25,7 @@ export function LangProvider({ children }) {
   const langActive =
     (typeof window !== `undefined` &&
       JSON.parse(localStorage.getItem("langActive"))) ||
-    `{ id: "en", text: "EN" }`
+    `{ id: "cz", text: "CZ" }`
 
   const initialState = {
     lang: lang,

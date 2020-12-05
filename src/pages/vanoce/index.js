@@ -86,11 +86,24 @@ const NYProgramPage = () => {
                 každý.
               </p>
               <Button type="secondary" handleClick={onLinkClick("calculator")}>
-                <span style={{ width: "100px" }}>Mám zájem</span>
+                <span style={{ width: "100px" }}>Objednat voucher</span>
               </Button>
             </div>
             <div className={pageStyles.col}>
-              <ContentDesktopImg />
+              <ContentDesktopImg className={pageStyles.img} />
+            </div>
+            <div className={pageStyles.mobContent}>
+              <h3 className={cx("section-title", pageStyles.title)}>
+                Udělejte radost svým nejbližším
+              </h3>
+              <ContentDesktopImg className={pageStyles.img} />
+              <p className={pageStyles.info}>
+                Vánoční voucher od NutritionPro je dárek, který ocení úplně
+                každý.
+              </p>
+              <Button type="secondary" handleClick={onLinkClick("calculator")}>
+                <span style={{ width: "100px" }}>Objednat voucher</span>
+              </Button>
             </div>
           </div>
         </Container>
