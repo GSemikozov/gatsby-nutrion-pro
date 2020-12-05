@@ -40,7 +40,7 @@ const NYProgramPage = () => {
           <h3 className={cx("sectionTitle", stylesCalc.title)}>
             {t("home.order.title")}
           </h3>
-          <div className={cx(stylesCalc.typeSelector)}>
+          {/* <div className={cx(stylesCalc.typeSelector)}>
             <Button
               name="submit"
               type="primary"
@@ -67,10 +67,10 @@ const NYProgramPage = () => {
             >
               {t("home.order.tab2Btn")}
             </Button>
-          </div>
-
-          {form === "calc" && <MainForm />}
-          {form === "voucher" && <VoucherForm />}
+          </div> */}
+          <VoucherForm />
+          {/* {form === "calc" && <MainForm />}
+          {form === "voucher" && <VoucherForm />} */}
         </Container>
       </section>
 
