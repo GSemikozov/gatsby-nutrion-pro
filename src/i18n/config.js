@@ -9,7 +9,7 @@ const LanguageDetectorOptions = {
 
 i18next.use(LanguageDetector).init({
   detection: LanguageDetectorOptions,
-  fallbackLng: "en",
+  fallbackLng: "cz",
   resources: {
     en: {
       translations: require("../locales/en/translations.json"),
