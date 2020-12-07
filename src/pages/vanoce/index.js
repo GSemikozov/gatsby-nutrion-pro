@@ -37,9 +37,7 @@ const NYProgramPage = () => {
         id="calculator"
       >
         <Container>
-          <h3 className={cx("sectionTitle", stylesCalc.title)}>
-            {t("home.order.title")}
-          </h3>
+          <h3 className={cx("sectionTitle", stylesCalc.title)}>Objednat teď</h3>
           {/* <div className={cx(stylesCalc.typeSelector)}>
             <Button
               name="submit"
