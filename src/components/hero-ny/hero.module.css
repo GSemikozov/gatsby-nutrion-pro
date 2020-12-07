@@ -172,6 +172,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--color-grey);
+  max-width: 1460px;
 }
 
 .offersList {
