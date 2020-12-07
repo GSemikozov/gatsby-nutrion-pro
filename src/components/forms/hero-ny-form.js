@@ -28,7 +28,7 @@ export const HeroNYFormLayout = ({
   const { t } = useTranslation()
 
   return (
-    <Form name="2days-trial" method="post" className={heroFormStyles.heroForm}>
+    <Form name="akce-form" method="post" className={heroFormStyles.heroForm}>
       <div className={styles.inputField}>
         <FastField
           component="input"
@@ -72,7 +72,7 @@ export const HeroNYFormLayout = ({
           </g>
         </svg>
         <span style={{ display: "inline-flex", margin: "0 8px" }}>
-          {t("forms.hero2FormCTA") || btnText}
+          Objednat
         </span>
         <svg
           fill="none"
@@ -87,9 +87,6 @@ export const HeroNYFormLayout = ({
           </g>
         </svg>
       </Button>
-      <div className={heroFormStyles.termsContainer}>
-        <span>{t("forms.hero2FormInfo")}</span>
-      </div>
     </Form>
   )
 }

@@ -18,6 +18,8 @@ const LanguageMenu = props => {
     })
   }
 
+  console.log("state", state)
+
   return (
     <select
       {...props}

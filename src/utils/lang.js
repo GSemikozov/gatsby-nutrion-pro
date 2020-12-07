@@ -29,7 +29,7 @@ export function LangProvider({ children }) {
 
   const initialState = {
     lang: lang,
-    active: langActive,
+    active: { id: "cz", text: "CZ" }, // TODO: use langActive
   }
 
   const [state, dispatch] = useReducer(reducer, initialState)
