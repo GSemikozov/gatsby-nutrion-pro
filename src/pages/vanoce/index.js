@@ -6,10 +6,9 @@ import { Button } from '../../components/button';
 import stylesCalc from '../../components/calculator/calculator.module.css';
 import { Container } from '../../components/container';
 import { FoodCarouselSection } from '../../components/food';
-import { MainForm } from '../../components/forms/main-form';
+import { MainFormNY } from '../../components/forms/main-ny-form';
 import { VoucherForm } from '../../components/forms/voucher-form';
 import { HeroNY } from '../../components/hero-ny';
-import { Hero } from '../../components/hero2';
 import { ContentDesktopImg } from '../../components/venoce-img/content-img-desktop.js';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import productImg3 from '../../images/product-3-bg.jpg';
@@ -38,7 +37,7 @@ const NYProgramPage = () => {
       >
         <Container>
           <h3 className={cx("sectionTitle", stylesCalc.title)}>Objednat teď</h3>
-          {/* <div className={cx(stylesCalc.typeSelector)}>
+          <div className={cx(stylesCalc.typeSelector)}>
             <Button
               name="submit"
               type="primary"
@@ -65,10 +64,9 @@ const NYProgramPage = () => {
             >
               {t("home.order.tab2Btn")}
             </Button>
-          </div> */}
-          <VoucherForm />
-          {/* {form === "calc" && <MainForm />}
-          {form === "voucher" && <VoucherForm />} */}
+          </div>
+          {form === "calc" && <MainFormNY />}
+          {form === "voucher" && <VoucherForm />}
         </Container>
       </section>
 
