@@ -50,6 +50,14 @@ const renderJobs = () => [
     color="#FDF9F4"
     link="/jobs/marketing-manager"
   />,
+  <Job
+    key="4"
+    title="Operations Manager"
+    description="В нашу команду ищем коллегу на позицию Operations Manager."
+    date="10.12.2020"
+    color="#E3F0FA"
+    link="/jobs/operations-manager"
+  />,
   // <Job
   //   title="NUTRIČNÍ SPECIALISTA"
   //   description="Burrito se salátem pico de gallo a zakysanou smetanou"
