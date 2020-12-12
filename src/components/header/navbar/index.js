@@ -72,8 +72,8 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       </a>
       {/* <a href="/app/login" className={cx(styles.navbarItem, styles.profile)}>
         <img src={IconProfile} className={styles.iconProfile} alt="icon" />
-      </a> */}
-      {/* <div className={cx(styles.navbarItem, styles.langSwitcher)}>
+      </a>
+      <div className={cx(styles.navbarItem, styles.langSwitcher)}>
         <LanguageMenu />
       </div> */}
       <div
