@@ -14,6 +14,7 @@
     "gatsby-plugin-google-tagmanager": "^2.1.27",
     "gatsby-plugin-layout": "^1.2.4",
     "gatsby-plugin-manifest": "^2.2.48",
+    "gatsby-plugin-netlify": "^2.7.0",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.1.24",
     "gatsby-plugin-sharp": "^2.4.13",
@@ -40,6 +41,7 @@
     "yup": "^0.28.1"
   },
   "devDependencies": {
+    "gatsby-plugin-anchor-links": "^1.2.0",
     "prettier": "^1.19.1"
   },
   "keywords": [

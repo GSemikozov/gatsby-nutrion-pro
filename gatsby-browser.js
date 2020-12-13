@@ -4,10 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+export { wrapPageElement, wrapRootElement } from "./gatsby-ssr"
+
 const scrollToElement = require("scroll-to-element")
 
-exports.onRouteUpdate = ({ location }) => {
+// temporary hide it
+export function onRouteUpdate({ location }) {
   checkHash(location)
 }
 

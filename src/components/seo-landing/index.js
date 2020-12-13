@@ -85,7 +85,7 @@ function SEOLanding({ lang, meta }) {
 }
 
 SEOLanding.defaultProps = {
-  lang: `en`,
+  lang: `cz`,
   meta: [],
   description: ``,
 }

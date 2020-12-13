@@ -1,14 +1,16 @@
 import i18next from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
-const LanguageDetectorOptions = {
-  order: ["localStorage"],
-  lookupLocalStorage: "i18nextLng",
-  caches: ["localStorage"],
-}
+// import LanguageDetector from 'i18next-browser-languagedetector';
 
-i18next.use(LanguageDetector).init({
-  detection: LanguageDetectorOptions,
+// const LanguageDetectorOptions = {
+//   order: ["localStorage"],
+//   lookupLocalStorage: "i18nextLng",
+//   caches: ["localStorage"],
+// }
+
+// i18next.use(LanguageDetector).init({
+i18next.init({
+  // detection: LanguageDetectorOptions,
   fallbackLng: "cz",
   resources: {
     en: {
@@ -28,10 +30,11 @@ i18next.use(LanguageDetector).init({
     escapeValue: false,
   },
   react: {
-    wait: true,
+    // wait: true,
+    useSuspense: false,
   },
 })
 
-i18next.languages = ["en", "cz"]
+i18next.languages = ["cz", "en"]
 
 export default i18next

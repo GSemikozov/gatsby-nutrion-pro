@@ -8,8 +8,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
-function SEO({ description, lang, meta, title }) {
+import { useLangContext } from '../utils/lang';
+
+function SEO({ description, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,12 +21,16 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            supportedLanguages
+            siteURL
           }
         }
       }
     `
   )
 
+  const { lang, originalPath } = useLangContext()
+  const host = site.siteMetadata.siteURL
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -67,12 +74,28 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[
+        {
+          rel: "canonical",
+          href: `${host}/${lang}${originalPath}`,
+        },
+        {
+          rel: "alternate",
+          hrefLang: "x-default",
+          href: `${host}${originalPath}`,
+        },
+        ...site.siteMetadata.supportedLanguages.map(supportedLang => ({
+          rel: "alternate",
+          hrefLang: supportedLang,
+          href: `${host}/${supportedLang}${originalPath}`,
+        })),
+      ]}
     />
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `cz`,
   meta: [],
   description: ``,
 }

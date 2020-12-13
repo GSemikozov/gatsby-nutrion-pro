@@ -1,37 +1,66 @@
+import { graphql, Link as GatsbyLink, useStaticQuery } from 'gatsby';
 import React, { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Select from 'react-select';
 
-import { LangContext } from '../../../../utils/lang';
+import { LangContext, useLangContext } from '../../../../utils/lang';
 
 const LanguageMenu = props => {
   const { t, i18n } = useTranslation()
-  const { state, dispatch } = useContext(LangContext)
-
-  const handleLanguageChange = event => {
-    const selectedLanguage = state.lang.find(
-      lang => lang.id === event.target.value
-    )
-    i18n.changeLanguage(event.target.value)
-    dispatch({
-      type: "SWITCH",
-      payload: selectedLanguage,
-    })
-  }
 
   return (
-    <select
-      {...props}
-      value={state.active.id}
-      onChange={handleLanguageChange}
-      style={{ padding: "8px", outline: "none", cursor: "pointer" }}
-    >
-      {state.lang.map(item => (
-        <option key={item.id} value={item.id}>
-          {item.text}
-        </option>
-      ))}
-    </select>
+    <Select
+      options={[
+        {
+          value: "5chodové menu",
+          label: t("forms.mainFormMenuOption1"),
+        },
+        {
+          value: "3chodové menu",
+          label: t("forms.mainFormMenuOption2"),
+        },
+        {
+          value: "2chodové menu",
+          label: t("forms.mainFormMenuOption3"),
+        },
+      ]}
+      isSearchable={false}
+      value={{
+        value: "cz",
+        label: "cz",
+      }}
+      onChange={e => {}}
+    />
   )
 }
 
 export default LanguageMenu
+
+export const LanguagePicker = () => {
+  const { originalPath } = useLangContext()
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            supportedLanguages
+          }
+        }
+      }
+    `
+  )
+
+  return (
+    <div className="language-selector-container">
+      {site.siteMetadata.supportedLanguages.map(supportedLang => (
+        <GatsbyLink
+          aria-label={`Change language to ${supportedLang}`}
+          to={`/${supportedLang}${originalPath}`}
+          key={supportedLang}
+        >
+          {supportedLang.toUpperCase()}
+        </GatsbyLink>
+      ))}
+    </div>
+  )
+}

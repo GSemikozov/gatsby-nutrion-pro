@@ -1,9 +1,11 @@
 import cx from 'classnames';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { handleMenuLinkClick } from '../../../helpers';
 import { Button } from '../../button';
+import { LocalizedLink } from '../../localized-link';
 import { useModal } from '../../modal';
 import IconAngleDown from '../icons/icon-angle-down.svg';
 import IconClose from '../icons/icon-close.svg';
@@ -11,7 +13,7 @@ import IconMenu from '../icons/icon-hamburger.svg';
 import IconMap from '../icons/icon-map.svg';
 import IconPhone from '../icons/icon-phone.svg';
 import IconProfile from '../icons/icon-user.svg';
-import LanguageMenu from './lang-menu';
+import LanguageMenu, { LanguagePicker } from './lang-menu';
 import { ModalLocation } from './modal';
 import styles from './navbar.module.css';
 
@@ -43,16 +45,26 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
         <span>{t("menu.location")}</span>
         <img src={IconAngleDown} className={styles.angleDown} alt="icon" />
       </Button>
-      {menuLinks.map(link => (
-        <a
-          key={link.name}
-          href={link.link}
-          className={cx(styles.navbarItem, "visible-desktop")}
-          onClick={e => handleMenuLinkClick(link, e)}
-        >
-          {getLinkTranslation(link.name)}
-        </a>
-      ))}
+      {menuLinks.map(link => {
+        return link.link.startsWith("/#") ? (
+          <AnchorLink
+            key={link.name}
+            to={link.link}
+            className={cx(styles.navbarItem, "visible-desktop")}
+            stripHash
+            title={getLinkTranslation(link.name)}
+          />
+        ) : (
+          <LocalizedLink
+            key={link.name}
+            to={link.link}
+            className={cx(styles.navbarItem, "visible-desktop")}
+            onClick={e => handleMenuLinkClick(link, e)}
+          >
+            {getLinkTranslation(link.name)}
+          </LocalizedLink>
+        )
+      })}
       <a
         href="tel:+420774137352"
         className={cx(styles.navbarItem, styles.contacts)}
@@ -72,10 +84,11 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       </a>
       {/* <a href="/app/login" className={cx(styles.navbarItem, styles.profile)}>
         <img src={IconProfile} className={styles.iconProfile} alt="icon" />
-      </a>
+      </a>*/}
       <div className={cx(styles.navbarItem, styles.langSwitcher)}>
-        <LanguageMenu />
-      </div> */}
+        {/* <LanguageMenu /> */}
+        {/* <LanguagePicker /> */}
+      </div>
       <div
         className={cx(styles.navbarItem, styles.mobileMenuLink)}
         onClick={openMobileMenu()}

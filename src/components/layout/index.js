@@ -12,6 +12,8 @@ import { Footer } from '../footer';
 import { Header } from '../header';
 import { PreHeader } from '../preheader';
 
+// import { I18nextProvider } from 'react-i18next';
+// import i18next from './i18next';
 const Layout = ({ children, t, i18n }) => (
   <StaticQuery
     query={graphql`
@@ -29,7 +31,7 @@ const Layout = ({ children, t, i18n }) => (
       }
     `}
     render={data => (
-      <LangProvider>
+      <>
         <Helmet>
           <script
             src="//code.jivosite.com/widget.js"
@@ -45,7 +47,7 @@ const Layout = ({ children, t, i18n }) => (
             <Footer />
           </>
         </div>
-      </LangProvider>
+      </>
     )}
   />
 )
@@ -54,4 +56,6 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default withTrans(Layout)
+export default Layout
+
+// export default withTrans(Layout)

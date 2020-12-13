@@ -4,6 +4,8 @@ module.exports = {
     description: `Krabičková dieta. Rozvoz po celé Praze zdarma. Konzultace s výživovým poradcem. Diagnostika složení těla inbody.`,
     author: `@nutritionprocz`,
     siteURL: "https://nutritionpro.cz",
+    supportedLanguages: ["cz", "en"],
+    defaultLanguage: "cz",
     menuLinks: [
       {
         name: "Programy",
@@ -52,6 +54,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-anchor-links`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
