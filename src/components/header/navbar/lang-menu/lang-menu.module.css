@@ -1,0 +1,14 @@
+.langMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.langMenuItem {
+  color: var(--color-white);
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.active {
+  opacity: 1;
+}

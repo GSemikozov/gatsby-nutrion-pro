@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { navigate } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -90,7 +91,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       </a>*/}
       <div className={cx(styles.navbarItem, styles.langSwitcher)}>
         {/* <LanguageMenu /> */}
-        {/* <LanguagePicker /> */}
+        <LanguagePicker />
       </div>
       <div
         className={cx(styles.navbarItem, styles.mobileMenuLink)}
