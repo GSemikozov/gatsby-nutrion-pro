@@ -4,6 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useLangContext } from '../../utils/lang';
 import IconCook from './icons/icon-ui-cook.svg';
 import IconHealthForce from './icons/icon-ui-health-force.svg';
 import IconMeasurement from './icons/icon-ui-measurement.svg';
@@ -11,6 +12,7 @@ import IconProgram from './icons/icon-ui-program.svg';
 import styles from './program.module.css';
 
 export const Program = ({ id = "" }) => {
+  const { lang } = useLangContext()
   const { t } = useTranslation()
   const useSwitchUtil = (type, selectedItem) => {
     const [activeItem, setActiveItem] = useState(selectedItem)

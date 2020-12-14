@@ -4,6 +4,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { handleMenuLinkClick } from '../../../helpers';
+import { useLangContext } from '../../../utils/lang';
 import { Button } from '../../button';
 import { LocalizedLink } from '../../localized-link';
 import { useModal } from '../../modal';
@@ -19,6 +20,8 @@ import styles from './navbar.module.css';
 
 // import { Link } from 'gatsby';
 export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
+  const { lang } = useLangContext()
+
   const openMobileMenu = () => () => {
     props.onCloseMobileMenu()
   }
@@ -47,19 +50,19 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       </Button>
       {menuLinks.map(link => {
         return link.link.startsWith("/#") ? (
-          <AnchorLink
+          <Button
             key={link.name}
-            to={link.link}
+            type="unstyled"
             className={cx(styles.navbarItem, "visible-desktop")}
-            stripHash
-            title={getLinkTranslation(link.name)}
-          />
+            handleClick={() => handleMenuLinkClick(link, undefined, lang)}
+          >
+            {getLinkTranslation(link.name)}
+          </Button>
         ) : (
           <LocalizedLink
             key={link.name}
             to={link.link}
             className={cx(styles.navbarItem, "visible-desktop")}
-            onClick={e => handleMenuLinkClick(link, e)}
           >
             {getLinkTranslation(link.name)}
           </LocalizedLink>

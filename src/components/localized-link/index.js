@@ -3,12 +3,23 @@ import React from 'react';
 
 import { useLangContext } from '../../utils/lang';
 
-export const LocalizedLink = ({ to, ref, children, onClick, ...rest }) => {
+export const LocalizedLink = ({
+  to,
+  ref,
+  children,
+  onClick,
+  className,
+  ...rest
+}) => {
   const { lang } = useLangContext()
 
-  // return <GatsbyLink {...rest} to={`/${lang}${to}`} />
+  // return (
+  //   <GatsbyLink {...rest} to={`/${lang}${to}`} className={className}>
+  //     {children}
+  //   </GatsbyLink>
+  // )
   return (
-    <a href={`/${lang}${to}`} {...rest} onClick={onClick}>
+    <a href={`/${lang}${to}`} onClick={onClick} className={className} {...rest}>
       {children}
     </a>
   )
