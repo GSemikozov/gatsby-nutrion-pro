@@ -20,12 +20,32 @@ export const About = () => {
           {t("general.about.title")}
         </h3>
         <ul className={cx(styles.aboutList, "visible-mobile")}>
-          <li>{t("general.about.point1")}</li>
+          <li>
+            <Trans i18nKey="general.about.point1">
+              Jídelníček na míru
+              <span /> tvému tělu a cílům
+            </Trans>
+          </li>
           <li>Přesně stanovené makronutrienty</li>
           <li>Stálý dohled výživového poradce</li>
-          <li>{t("general.about.point3")}</li>
-          <li>{t("general.about.point2")}</li>
-          <li>{t("general.about.point4")}</li>
+          <li>
+            <Trans i18nKey="general.about.point3">
+              Kvalitní
+              <span /> prémiové suroviny
+            </Trans>
+          </li>
+          <li>
+            <Trans i18nKey="general.about.point2">
+              Menu z
+              <span /> 300 jídel
+            </Trans>
+          </li>
+          <li>
+            <Trans i18nKey="general.about.point4">
+              Dovoz po
+              <span /> Praze zdarma
+            </Trans>
+          </li>
         </ul>
         <div className={cx(styles.aboutOptions, "visible-desktop")}>
           <div className={styles.aboutOption}>
