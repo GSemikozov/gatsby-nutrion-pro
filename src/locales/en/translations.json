@@ -11,7 +11,7 @@
       "card1Title": "Chicken fajitas with beans and curry sauce",
       "card2Title": "Salmon wrap",
       "card3Title": "Korean beef salad",
-      "card4Title": "Korean beef salad",
+      "card4Title": "Roastbeef salad",
       "card5Title": "Turkey-vegetable-kimchi sandwich",
       "card6Title": "Thai style rice noodles with beef and vegetables",
       "card7Title": "Potato souffle filled with minced beef",
@@ -29,13 +29,17 @@
       "point4": "FREE delivery <1></1> in Prague"
     },
     "reviews": {
-      "title": "What the clients say about us?"
+      "title": "What our clients say about us?"
     },
     "prefooter": {
-      "title": "Save up to 20%OFF with group order!",
+      "title": "Save up to 20% off with a group order!",
       "desc1": "Start your NutritionPro meal plan with a friend or family and enjoy our tasty meals at discounted price.",
-      "desc2": "2 person Discount Special Offer 10% off, 3+ person DiscountSpecial Offer 20%",
-      "desc3": "Leave your contact and we´ll get back!"
+      "desc2": "2 person Discount Special Offer 10% off,  3+ person DiscountSpecial Offer 20%",
+      "desc3": "Leave your contact and we´ll get back to you!"
+    },
+    "footer": {
+      "terms1": "TERMS AND CONDITIONS",
+      "terms2": " - BY ENTERING YOUR PHONE NUMBER YOU AGREE THE PROCESSING OF YOUR PERSONAL DATA"
     }
   },
   "menu": {
@@ -44,9 +48,15 @@
     "Jídelníček": "Meal Plan",
     "Cena": "Price",
     "Kariéra": "Careers",
-    "Pro firmy": "About"
+    "Pro firmy": "About",
+    "days": "Mon-Fri"
   },
   "forms": {
+    "pricePerDayLabelPart1": "Price per day",
+    "pricePerDayLabelPart2": "inc. delivery",
+    "priceLabel": "Order price",
+    "heroFormShowMoreMobileBtn": "Learn more",
+    "heroFormNamePlaceholder": "Your name",
     "hero2FormTitle": "Special Offer! 2-Day trial: <1>5-meal menu</1> for <4>great price</4>",
     "hero2FormCTA": "Order NOW",
     "hero2FormInfo": "By providing my phone number I agree to the terms of Privacy Policy.",
@@ -55,6 +65,42 @@
     "hero2Option2part1": "FREE delivery",
     "hero2Option3part1": "30% OFF",
     "hero2Option3part2": "Just <1>350 Kč</1>/day",
+    "onlineOrderFormTitle1": "Choose the program",
+    "onlineOrderFormTitle2": "Personal information",
+    "onlineOrderFormTitle3": "Delivery information",
+    "onlineOrderFormTitle4": "Order summary",
+    "onlineOrderFormGenderLabel": "Your gender",
+    "onlineOrderFormGenderMale": "Male",
+    "onlineOrderFormGenderFemale": "Female",
+    "onlineOrderFormGoalLabel": "Your goal",
+    "onlineOrderFormGoalLoss": "Weight loss",
+    "onlineOrderFormGoalMaintenance": "Maintenance",
+    "onlineOrderFormGoalGain": "Weight gain",
+    "onlineOrderFormProgramLengthLabel": "Your program lenght",
+    "onlineOrderFormSummaryProgramLabel": "Program",
+    "onlineOrderFormProgramLengthOption1": "2 weeks",
+    "onlineOrderFormProgramLengthOption2": "Month",
+    "onlineOrderFormProgramLengthOption3": "2 months",
+    "onlineOrderFormSummaryMealsLabel": "Meals per day",
+    "onlineOrderFormSummaryTotalLabel": "Total",
+    "onlineOrderFormSummaryWorkDaysLabel": "Mon-Fri",
+    "onlineOrderFormSummaryWeekendDaysLabel": "Mon-Sun",
+    "onlineOrderFormSummaryWeekLengthLabel": "Week length / kCal",
+    "onlineOrderFormMealsLabel": "Meals per day",
+    "onlineOrderFormMealsOption1": "5-meal menu",
+    "onlineOrderFormMealsOption2": "3-meal menu",
+    "onlineOrderFormMealsOption3": "2-meal menu",
+    "onlineOrderFormWeekLengthLabel": "The length of the week and kCal",
+    "onlineOrderFormWeekLengthOption1": "5 days per week",
+    "onlineOrderFormWeekLengthOption2": "6 days per week",
+    "onlineOrderFormOrderstartLabel": "Start of order",
+    "onlineOrderFormNamesLabel": "Name and Surname*",
+    "onlineOrderFormNumberLabel": "Contact number*",
+    "onlineOrderFormEmailLabel": "Email*",
+    "onlineOrderFormPromoCodeLabel": "Promo code",
+    "onlineOrderFormAddressLabel": "Address*",
+    "onlineOrderFormDeliveryTimeLabel": "Preferred delivery time",
+    "onlineOrderFormCTA": "Order",
     "mainFormGoalLabel": "Your goal",
     "mainFormGoalOption1": "Weight loss",
     "mainFormGoalOption2": "Maintenance",
@@ -110,14 +156,14 @@
     },
     "howItWorks": {
       "title": "HOW it works",
-      "option1": "We start with setting your individual daily intake.",
+      "option1": "We start by setting your individual daily intake.",
       "option2": "Our special algorithm customizes your menu.",
       "option3": "We cook the food.",
       "option4": "Free deliveries within Prague.",
-      "option5": "We make sure you reach your goals in time."
+      "option5": "We make sure you reach your goals on time."
     },
     "qa": {
-      "title": "QA´s"
+      "title": "FAQ´s"
     }
   }
 }

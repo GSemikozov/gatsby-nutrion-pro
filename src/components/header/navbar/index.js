@@ -79,7 +79,8 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
           <br />
           <span className={styles.additionalInfo}>
             <p style={{ textAlign: "right" }}>
-              <span className={styles.days}>Po - Pá</span> 10:00 - 12:00
+              <span className={styles.days}>{t("menu.days")}</span> 10:00 -
+              12:00
               <br />
               13:00 - 18:00
             </p>

@@ -1,10 +1,15 @@
 // import cx from 'classnames';
+import 'moment/locale/cs';
+import 'react-day-picker/lib/style.css';
+
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
-import moment from 'moment'
-import DayPickerInput from 'react-day-picker/DayPickerInput';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
+import moment from 'moment';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import MomentLocaleUtils, { formatDate, parseDate } from 'react-day-picker/moment';
+import { useTranslation } from 'react-i18next';
 import Select from 'react-select';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
@@ -18,19 +23,10 @@ import option3Img from './icons/icon-2months.svg';
 import option1Img from './icons/icon-demo.svg';
 import option2Img from './icons/icon-month.svg';
 import orderFormStyles from './order-form.module.css';
-import 'react-day-picker/lib/style.css';
-
-import MomentLocaleUtils, {
-  formatDate,
-  parseDate,
-} from 'react-day-picker/moment';
-
-import 'moment/locale/cs'
-
 
 const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 
-Yup.addMethod(Yup.string, "phone", function () {
+Yup.addMethod(Yup.string, "phone", function() {
   return this.test("phone", "Telefonní číslo musí obsahovat 9 znaků", value =>
     rePhoneNumber.test(value)
   )
@@ -47,47 +43,38 @@ function dateToSystemFormat(date) {
 }
 
 function getStartDate() {
-  let initial = moment.utc().add(3, 'days')
+  let initial = moment.utc().add(3, "days")
   if ([2, 5, 7].indexOf(moment.utc().isoWeekday()) !== -1) {
-    initial =
-      moment
-        .utc()
-        .add(3, 'days')
-        .hours(0)
-        .minutes(0)
-        .seconds(0)
-        .milliseconds(0)
-        .toISOString()
+    initial = moment
+      .utc()
+      .add(3, "days")
+      .hours(0)
+      .minutes(0)
+      .seconds(0)
+      .milliseconds(0)
+      .toISOString()
   } else if ([1, 4, 6].indexOf(moment.utc().isoWeekday()) !== -1) {
-    initial =
-      moment
-        .utc()
-        .add(4, 'days')
-        .hours(0)
-        .minutes(0)
-        .seconds(0)
-        .milliseconds(0)
-        .toISOString()
+    initial = moment
+      .utc()
+      .add(4, "days")
+      .hours(0)
+      .minutes(0)
+      .seconds(0)
+      .milliseconds(0)
+      .toISOString()
   } else if ([3].indexOf(moment.utc().isoWeekday()) !== -1) {
-    initial =
-      moment
-        .utc()
-        .add(5, 'days')
-        .hours(0)
-        .minutes(0)
-        .seconds(0)
-        .milliseconds(0)
-        .toISOString()
+    initial = moment
+      .utc()
+      .add(5, "days")
+      .hours(0)
+      .minutes(0)
+      .seconds(0)
+      .milliseconds(0)
+      .toISOString()
   }
 
   return initial
 }
-
-const options = [
-  { value: 5, label: '5 dní v týdnu' },
-  { value: 6, label: '6 dní v týdnu' },
-]
-
 
 const pricePreset = {
   "5 chodů": {
@@ -99,7 +86,7 @@ const pricePreset = {
       3000: 520,
       3400: 540,
     },
-    "Měsíc": {
+    Měsíc: {
       1400: 420,
       1600: 440,
       1800: 460,
@@ -125,7 +112,7 @@ const pricePreset = {
       3000: 400,
       3400: 410,
     },
-    "Měsíc": {
+    Měsíc: {
       1400: 350,
       1600: 360,
       1800: 370,
@@ -151,7 +138,7 @@ const pricePreset = {
       3000: 280,
       3400: 280,
     },
-    "Měsíc": {
+    Měsíc: {
       1400: 270,
       1600: 270,
       1800: 270,
@@ -190,86 +177,70 @@ function energyRange(energyPerDay) {
 }
 
 const kCalOptions = {
-  "Zhubnout": {
+  Zhubnout: {
     female: {
       "5 chodů": [
-        { value: 1600, label: '1600 kCal' },
-        { value: 1800, label: '1800 kCal' },
+        { value: 1600, label: "1600 kCal" },
+        { value: 1800, label: "1800 kCal" },
       ],
       "3 chody": [
-        { value: 1100, label: '1100 kCal' },
-        { value: 1300, label: '1300 kCal' },
+        { value: 1100, label: "1100 kCal" },
+        { value: 1300, label: "1300 kCal" },
       ],
-      "2 chody": [
-        { value: 1000, label: '1000 kCal' },
-      ],
+      "2 chody": [{ value: 1000, label: "1000 kCal" }],
     },
     male: {
       "5 chodů": [
-        { value: 1800, label: '1800 kCal' },
-        { value: 2000, label: '2000 kCal' },
+        { value: 1800, label: "1800 kCal" },
+        { value: 2000, label: "2000 kCal" },
       ],
       "3 chody": [
-        { value: 1600, label: '1600 kCal' },
-        { value: 1800, label: '1800 kCal' },
+        { value: 1600, label: "1600 kCal" },
+        { value: 1800, label: "1800 kCal" },
       ],
-      "2 chody": [
-        { value: 1000, label: '1000 kCal' },
-      ],
+      "2 chody": [{ value: 1000, label: "1000 kCal" }],
     },
   },
-  "Udržovat": {
+  Udržovat: {
     female: {
       "5 chodů": [
-        { value: 1900, label: '1900 kCal' },
-        { value: 2100, label: '2100 kCal' },
+        { value: 1900, label: "1900 kCal" },
+        { value: 2100, label: "2100 kCal" },
       ],
       "3 chody": [
-        { value: 1400, label: '1400 kCal' },
-        { value: 1600, label: '1600 kCal' },
+        { value: 1400, label: "1400 kCal" },
+        { value: 1600, label: "1600 kCal" },
       ],
-      "2 chody": [
-        { value: 1000, label: '1000 kCal' },
-      ],
+      "2 chody": [{ value: 1000, label: "1000 kCal" }],
     },
     male: {
       "5 chodů": [
-        { value: 2100, label: '2100 kCal' },
-        { value: 2300, label: '2300 kCal' },
+        { value: 2100, label: "2100 kCal" },
+        { value: 2300, label: "2300 kCal" },
       ],
-      "3 chody": [
-        { value: 1900, label: '1900 kCal' },
-      ],
-      "2 chody": [
-        { value: 1000, label: '1000 kCal' },
-      ],
+      "3 chody": [{ value: 1900, label: "1900 kCal" }],
+      "2 chody": [{ value: 1000, label: "1000 kCal" }],
     },
   },
-  "Nabírat": {
+  Nabírat: {
     female: {
       "5 chodů": [
-        { value: 2200, label: '2200 kCal' },
-        { value: 2600, label: '2600 kCal' },
+        { value: 2200, label: "2200 kCal" },
+        { value: 2600, label: "2600 kCal" },
       ],
       "3 chody": [
-        { value: 0, label: '0 kCal' },
-        { value: 0, label: '0 kCal' },
+        { value: 0, label: "0 kCal" },
+        { value: 0, label: "0 kCal" },
       ],
-      "2 chody": [
-        { value: 1000, label: '1000 kCal' },
-      ],
+      "2 chody": [{ value: 1000, label: "1000 kCal" }],
     },
     male: {
       "5 chodů": [
-        { value: 2400, label: '2400 kCal' },
-        { value: 2600, label: '2600 kCal' },
+        { value: 2400, label: "2400 kCal" },
+        { value: 2600, label: "2600 kCal" },
       ],
-      "3 chody": [
-        { value: 0, label: '0 kCal' },
-      ],
-      "2 chody": [
-        { value: 1000, label: '1000 kCal' },
-      ],
+      "3 chody": [{ value: 0, label: "0 kCal" }],
+      "2 chody": [{ value: 1000, label: "1000 kCal" }],
     },
   },
 }
@@ -372,10 +343,29 @@ const OrderFormLayout = ({
   const [checkTerms, setCheckTerms] = useState(false)
   const [checkTerms2, setCheckTerms2] = useState(false)
 
+  const { t } = useTranslation()
+
+  const options = [
+    { value: 5, label: t("forms.onlineOrderFormWeekLengthOption1") },
+    { value: 6, label: t("forms.onlineOrderFormWeekLengthOption2") },
+  ]
+
   const goal = [
-    { value: 'Zhubnout', label: 'Zhubnout', disabled: false },
-    { value: 'Udržovat', label: 'Udržovat', disabled: plan2disabled },
-    { value: 'Nabírat', label: 'Nabírat', disabled: plan3disabled },
+    {
+      value: "Zhubnout",
+      label: t("forms.onlineOrderFormGoalLoss"),
+      disabled: false,
+    },
+    {
+      value: "Udržovat",
+      label: t("forms.onlineOrderFormGoalMaintenance"),
+      disabled: plan2disabled,
+    },
+    {
+      value: "Nabírat",
+      label: t("forms.onlineOrderFormGoalGain"),
+      disabled: plan3disabled,
+    },
   ]
 
   // const mealsPerDay = menu === "2chodové menu" ? 2 : menu === "3chodové menu" ? 3 : 5
@@ -471,13 +461,13 @@ const OrderFormLayout = ({
   }
 
   const dateStyle = {
-    width: '100%',
-    height: '40px',
-    padding: '5px',
-    fontSize: '18px',
-    border: '1px solid rgb(204, 204, 204)',
+    width: "100%",
+    height: "40px",
+    padding: "5px",
+    fontSize: "18px",
+    border: "1px solid rgb(204, 204, 204)",
     borderRadius: 3,
-    textAlign: 'center',
+    textAlign: "center",
     readOnly: true,
   }
 
@@ -526,96 +516,149 @@ const OrderFormLayout = ({
 
             </div>
           </div> */}
-          
 
           <div className={orderFormStyles.sectionBox}>
-            <div className={orderFormStyles.sectionNumber}>
-              1
-            </div>
+            <div className={orderFormStyles.sectionNumber}>1</div>
             <span className={orderFormStyles.sectionTitle}>
-              Volba programu
+              {t("forms.onlineOrderFormTitle1")}
             </span>
           </div>
           <div className={cx(styles.inputField, orderFormStyles.inputField)}>
-          <div className={stylesRadio.radioBtns2}>
-            <div
-              className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
-            >
-              <h6 className={orderFormStyles.inputFieldTitleSmall}>Tvoje pohlaví</h6>
-              <Select
-                options={[
-                  { value: 'female', label: 'Žena' },
-                  { value: 'male', label: 'Muž' },
-                ]}
-                isSearchable={false}
-                value={{ value: values.gender, label: `${values.gender === 'female' ? 'Žena' : 'Muž'}` }}
-                onChange={e => {
-                  onSetGender(e.value)
-                  setFieldValue("gender", e.value)
-                }}
-              />
-            </div>
-            <div
-              className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
-            >
-              <h6 className={orderFormStyles.inputFieldTitleSmall}>Tvůj cíl</h6>
-              <Select
-                options={goal}
-                isSearchable={false}
-                value={{ value: plan, label: plan }}
-                isOptionDisabled={(option) => option.disabled}
-                onChange={e => {
-                  onSetPlan(e.value)
-                  setFieldValue("plan", e.value)
-                }}
-              />
-            </div>
+            <div className={stylesRadio.radioBtns2}>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <h6 className={orderFormStyles.inputFieldTitleSmall}>
+                  {t("forms.onlineOrderFormGenderLabel")}
+                </h6>
+                <Select
+                  options={[
+                    {
+                      value: "female",
+                      label: t("forms.onlineOrderFormGenderFemale"),
+                    },
+                    {
+                      value: "male",
+                      label: t("forms.onlineOrderFormGenderMale"),
+                    },
+                  ]}
+                  isSearchable={false}
+                  value={{
+                    value: values.gender,
+                    label: `${
+                      values.gender === "female"
+                        ? t("forms.onlineOrderFormGenderFemale")
+                        : t("forms.onlineOrderFormGenderMale")
+                    }`,
+                  }}
+                  onChange={e => {
+                    onSetGender(e.value)
+                    setFieldValue("gender", e.value)
+                  }}
+                />
+              </div>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <h6 className={orderFormStyles.inputFieldTitleSmall}>
+                  {t("forms.onlineOrderFormGoalLabel")}
+                </h6>
+                <Select
+                  options={goal}
+                  isSearchable={false}
+                  value={{
+                    value: plan,
+                    label:
+                      plan === "Zhubnout"
+                        ? t("forms.onlineOrderFormGoalLoss")
+                        : plan === "Udržovat"
+                        ? t("forms.onlineOrderFormGoalMaintenance")
+                        : t("forms.onlineOrderFormGoalGain"),
+                  }}
+                  isOptionDisabled={option => option.disabled}
+                  onChange={e => {
+                    onSetPlan(e.value)
+                    setFieldValue("plan", e.value)
+                  }}
+                />
+              </div>
             </div>
           </div>
 
           <div className={cx(styles.inputField, orderFormStyles.inputField)}>
-          <div className={stylesRadio.radioBtns2}>
-            <div
-              className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
-            >
-              <h6 className={orderFormStyles.inputFieldTitleSmall}>Délka programu</h6>
-              <Select
-                options={[
-                  { value: '2 týdny', label: '2 týdny' },
-                  { value: 'Měsíc', label: 'Měsíc' },
-                  { value: 'Dva měsíce', label: 'Dva měsíce' },
-                ]}
-                isSearchable={false}
-                value={{ value: values.program, label: values.program }}
-                onChange={e => {
-                  onSetProgram(e.value)
-                  setFieldValue("program", e.value)
-                }}
-              />
-            </div>
-            <div
-              className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
-            >
-              <h6 className={orderFormStyles.inputFieldTitleSmall}>Počet jídel </h6>
-              <Select
-                options={[
-                  { value: '5 chodů', label: '5 chodů', disabled: false },
-                  { value: '3 chody', label: '3 chody', disabled: menu3xDisabled },
-                  { value: '2 chody', label: '2 chody', disabled: menu2xDisabled },
-                ]}
-                isSearchable={false}
-                value={{ value: menu, label: menu }}
-                isOptionDisabled={(option) => option.disabled}
-                onChange={e => {
-                  onSetMenu(e.value)
-                  setFieldValue("menu", e.value)
-                }}
-              />
-            </div>
+            <div className={stylesRadio.radioBtns2}>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <h6 className={orderFormStyles.inputFieldTitleSmall}>
+                  {t("forms.onlineOrderFormProgramLengthLabel")}
+                </h6>
+                <Select
+                  options={[
+                    {
+                      value: "2 týdny",
+                      label: t("forms.onlineOrderFormProgramLengthOption1"),
+                    },
+                    {
+                      value: "Měsíc",
+                      label: t("forms.onlineOrderFormProgramLengthOption2"),
+                    },
+                    {
+                      value: "Dva měsíce",
+                      label: t("forms.onlineOrderFormProgramLengthOption3"),
+                    },
+                  ]}
+                  isSearchable={false}
+                  value={{
+                    value: values.program,
+                    label:
+                      values.program === "2 týdny"
+                        ? t("forms.onlineOrderFormProgramLengthOption1")
+                        : values.program === "Měsíc"
+                        ? t("forms.onlineOrderFormProgramLengthOption2")
+                        : t("forms.onlineOrderFormProgramLengthOption3"),
+                  }}
+                  onChange={e => {
+                    onSetProgram(e.value)
+                    setFieldValue("program", e.value)
+                  }}
+                />
+              </div>
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
+                <h6 className={orderFormStyles.inputFieldTitleSmall}>
+                  {t("forms.onlineOrderFormMealsLabel")}{" "}
+                </h6>
+                <Select
+                  options={[
+                    {
+                      value: "5 chodů",
+                      label: t("forms.onlineOrderFormMealsOption1"),
+                      disabled: false,
+                    },
+                    {
+                      value: "3 chody",
+                      label: t("forms.onlineOrderFormMealsOption2"),
+                      disabled: menu3xDisabled,
+                    },
+                    {
+                      value: "2 chody",
+                      label: t("forms.onlineOrderFormMealsOption3"),
+                      disabled: menu2xDisabled,
+                    },
+                  ]}
+                  isSearchable={false}
+                  value={{
+                    value: menu,
+                    label:
+                      menu === "5 chodů"
+                        ? t("forms.onlineOrderFormMealsOption1")
+                        : menu === "3 chody"
+                        ? t("forms.onlineOrderFormMealsOption2")
+                        : t("forms.onlineOrderFormMealsOption3"),
+                  }}
+                  isOptionDisabled={option => option.disabled}
+                  onChange={e => {
+                    onSetMenu(e.value)
+                    setFieldValue("menu", e.value)
+                  }}
+                />
+              </div>
             </div>
           </div>
-
-
 
           {/* <div className={cx(styles.inputField, orderFormStyles.inputField)}>
             <h5 className={orderFormStyles.inputFieldTitle}>Tvůj cíl</h5>
@@ -716,7 +759,6 @@ const OrderFormLayout = ({
             </RadioButtonGroup>
           </div> */}
 
-
           {/* <div className={cx(styles.inputField, orderFormStyles.inputField)}>
             <h5 className={orderFormStyles.inputFieldTitle}>
               Vyber si počet jídel
@@ -778,30 +820,30 @@ const OrderFormLayout = ({
 
           <div className={cx(styles.inputField, orderFormStyles.inputField)}>
             <h5 className={orderFormStyles.inputFieldTitleSmall}>
-              Délka týdne a kCal
+              {t("forms.onlineOrderFormWeekLengthLabel")}
             </h5>
             <div className={cx(stylesRadio.radioBtns2, stylesRadio.MobileCol)}>
-              <div
-                className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
-              >
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
                 <Select
                   options={options}
                   isSearchable={false}
-                  value={{ value: values.week, label: `${values.week} dní v týdnu` }}
+                  value={{
+                    value: values.week,
+                    label: (values.week = 5
+                      ? t("forms.onlineOrderFormWeekLengthOption1")
+                      : t("forms.onlineOrderFormWeekLengthOption2")),
+                  }}
                   onChange={e => {
                     onSetWeek(e.value)
                     setFieldValue("week", e.value)
                   }}
                 />
               </div>
-              <div
-                className={cx(stylesRadio.radio, stylesRadio.radioBtn)}
-              >
+              <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
                 <Select
                   options={kCalOptions[plan][gender][menu]}
                   isSearchable={false}
                   value={{ value: kcal, label: `${kcal} kCal` }}
-
                   isDisabled={kcalDisabled}
                   onChange={e => {
                     onSetKcal(e.value)
@@ -848,25 +890,36 @@ const OrderFormLayout = ({
 
           <div className={cx(styles.inputField, orderFormStyles.inputField)}>
             <h5 className={orderFormStyles.inputFieldTitleSmall}>
-              Začátek objednávky
+              {t("forms.onlineOrderFormOrderstartLabel")}
             </h5>
             <div className={cx(stylesRadio.radioBtns, stylesRadio.MobileCol)}>
               <div className={styles.inputField}>
                 <DayPickerInput
                   inputProps={{ style: dateStyle, readOnly: true }}
-                  style={{ width: '100%' }}
-                  onDayChange={day => setFieldValue("date", moment(dateToSystemFormat(day)).toISOString())}
-                  formatDate={e => formatDate(e, 'DD.MM.YYYY dddd', 'cs')}
+                  style={{ width: "100%" }}
+                  onDayChange={day =>
+                    setFieldValue(
+                      "date",
+                      moment(dateToSystemFormat(day)).toISOString()
+                    )
+                  }
+                  formatDate={e => formatDate(e, "DD.MM.YYYY dddd", "cs")}
                   parseDate={parseDate}
-                  value={`${formatDate(values.date, 'DD.MM.YYYY dddd', 'cs')}`}
-                  placeholder={`${formatDate(values.date, 'DD.MM.YYYY dddd', 'cs')}`}
+                  value={`${formatDate(values.date, "DD.MM.YYYY dddd", "cs")}`}
+                  placeholder={`${formatDate(
+                    values.date,
+                    "DD.MM.YYYY dddd",
+                    "cs"
+                  )}`}
                   dayPickerProps={{
-                    locale: 'cs',
+                    locale: "cs",
                     localeUtils: MomentLocaleUtils,
                     disabledDays: [
                       { daysOfWeek: [0, 2, 4, 6] },
                       {
-                        before: moment().add(3, 'days').toDate(),
+                        before: moment()
+                          .add(3, "days")
+                          .toDate(),
                       },
                     ],
                     selectedDays: moment(values.date).toDate(),
@@ -880,60 +933,59 @@ const OrderFormLayout = ({
           <Price price={price} plan={plan} program={program} week={week} />
         </div>
 
-
-
-
-
-
         <div className={orderFormStyles.orderFormWrap}>
           <div className={orderFormStyles.sectionBox}>
-            <div className={orderFormStyles.sectionNumber}>
-              2
-            </div>
+            <div className={orderFormStyles.sectionNumber}>2</div>
             <span className={orderFormStyles.sectionTitle}>
-              Osobní informace
+              {t("forms.onlineOrderFormTitle2")}{" "}
             </span>
           </div>
           <div className={styles.inputField}>
-            <label className={cx(styles.label, orderFormStyles.inputFieldLabel)}>
-              Jméno a příjmení*
+            <label
+              className={cx(styles.label, orderFormStyles.inputFieldLabel)}
+            >
+              {t("forms.onlineOrderFormNamesLabel")}
             </label>
             <FastField
               component="input"
               type="text"
               name="name"
               className={orderFormStyles.input}
-              placeholder="Jméno a příjmení*"
+              placeholder={t("forms.onlineOrderFormNamesLabel")}
             />
             {touched.name && errors.name && (
               <span className={styles.error}>{errors.name}</span>
             )}
           </div>
           <div className={styles.inputField}>
-            <label className={cx(styles.label, orderFormStyles.inputFieldLabel)}>
-              Telefon*
+            <label
+              className={cx(styles.label, orderFormStyles.inputFieldLabel)}
+            >
+              {t("forms.onlineOrderFormNumberLabel")}
             </label>
             <FastField
               component="input"
               type="text"
               name="phone"
               className={orderFormStyles.input}
-              placeholder="Telefon*"
+              placeholder={t("forms.onlineOrderFormNumberLabel")}
             />
             {touched.phone && errors.phone && (
               <span className={styles.error}>{errors.phone}</span>
             )}
           </div>
           <div className={styles.inputField}>
-            <label className={cx(styles.label, orderFormStyles.inputFieldLabel)}>
-              Email*
+            <label
+              className={cx(styles.label, orderFormStyles.inputFieldLabel)}
+            >
+              {t("forms.onlineOrderFormEmailLabel")}
             </label>
             <FastField
               component="input"
               type="text"
               name="email"
               className={orderFormStyles.input}
-              placeholder="Email*"
+              placeholder={t("forms.onlineOrderFormEmailLabel")}
             />
             {touched.email && errors.email && (
               <span className={styles.error}>{errors.email}</span>
@@ -944,25 +996,23 @@ const OrderFormLayout = ({
               htmlFor="promo"
               className={cx(styles.label, orderFormStyles.inputFieldLabel)}
             >
-              Promo kód
+              {t("forms.onlineOrderFormPromoCodeLabel")}
             </label>
             <FastField
               component="input"
               type="text"
               name="promo"
               className={orderFormStyles.input}
-              placeholder="Promo kód"
+              placeholder={t("forms.onlineOrderFormPromoCodeLabel")}
             />
             {touched.promo && errors.promo && (
               <span className={styles.error}>{errors.promo}</span>
             )}
           </div>
           <div className={orderFormStyles.sectionBox}>
-            <div className={orderFormStyles.sectionNumber}>
-              3
-            </div>
+            <div className={orderFormStyles.sectionNumber}>3</div>
             <span className={orderFormStyles.sectionTitle}>
-              Doručovací údaje
+              {t("forms.onlineOrderFormTitle3")}
             </span>
           </div>
           <div className={styles.inputField}>
@@ -970,7 +1020,7 @@ const OrderFormLayout = ({
               htmlFor="address"
               className={cx(styles.label, orderFormStyles.inputFieldLabel)}
             >
-              Adresa*
+              {t("forms.onlineOrderFormAddressLabel")}
             </label>
             <FastField
               component="input"
@@ -988,20 +1038,20 @@ const OrderFormLayout = ({
               htmlFor="address"
               className={cx(styles.label, orderFormStyles.inputFieldLabel)}
             >
-              Preferovaný čas doručení
+              {t("forms.onlineOrderFormDeliveryTimeLabel")}
             </label>
             <Select
               options={[
-                { value: '17:00-22:00', label: '17:00-22:00' },
-                { value: '17:00-21:00', label: '17:00-21:00' },
-                { value: '17:00-20:00', label: '17:00-20:00' },
-                { value: '17:00-19:00', label: '17:00-19:00' },
-                { value: '18:00-22:00', label: '18:00-22:00' },
-                { value: '18:00-21:00', label: '18:00-21:00' },
-                { value: '18:00-20:00', label: '18:00-20:00' },
-                { value: '19:00-22:00', label: '19:00-22:00' },
-                { value: '19:00-21:00', label: '19:00-21:00' },
-                { value: '20:00-22:00', label: '20:00-22:00' },
+                { value: "17:00-22:00", label: "17:00-22:00" },
+                { value: "17:00-21:00", label: "17:00-21:00" },
+                { value: "17:00-20:00", label: "17:00-20:00" },
+                { value: "17:00-19:00", label: "17:00-19:00" },
+                { value: "18:00-22:00", label: "18:00-22:00" },
+                { value: "18:00-21:00", label: "18:00-21:00" },
+                { value: "18:00-20:00", label: "18:00-20:00" },
+                { value: "19:00-22:00", label: "19:00-22:00" },
+                { value: "19:00-21:00", label: "19:00-21:00" },
+                { value: "20:00-22:00", label: "20:00-22:00" },
               ]}
               isSearchable={false}
               value={{ value: deliveryTime, label: deliveryTime }}
@@ -1014,10 +1064,6 @@ const OrderFormLayout = ({
           </div>
         </div>
 
-
-
-
-
         <div className={orderFormStyles.orderFormWrap}>
           {/* <div className={orderFormStyles.sectionBox}>
             <div className={orderFormStyles.sectionNumber}>
@@ -1117,14 +1163,19 @@ const OrderFormLayout = ({
             )}
           </div> */}
           <div className={orderFormStyles.sectionBox}>
-            <div className={orderFormStyles.sectionNumber}>
-              4
-            </div>
+            <div className={orderFormStyles.sectionNumber}>4</div>
             <span className={orderFormStyles.sectionTitle}>
-              Shrnutí objednávky
+              {t("forms.onlineOrderFormTitle4")}
             </span>
           </div>
-          <Summary kcal={kcal} plan={plan} program={program} week={week} menu={menu} price={price} />
+          <Summary
+            kcal={kcal}
+            plan={plan}
+            program={program}
+            week={week}
+            menu={menu}
+            price={price}
+          />
           <div className={orderFormStyles.checkTerms}>
             <input
               id="checkTerms"
@@ -1136,7 +1187,12 @@ const OrderFormLayout = ({
                 console.log(e.target.checked)
               }}
             />
-            <label htmlFor="checkTerms">Měl/a jsem možnost přečíst a souhlasím s <a href="/terms" target="_blank"><b>obchodními podmínkámi.</b></a></label>
+            <label htmlFor="checkTerms">
+              {t("forms.mainFormCheckTerms1Label")}{" "}
+              <a href="/terms" target="_blank">
+                {t("forms.mainFormCheckTerms2Label")}
+              </a>
+            </label>
           </div>
 
           <div className={orderFormStyles.checkTerms}>
@@ -1149,9 +1205,11 @@ const OrderFormLayout = ({
                 setCheckTerms2(e.target.checked)
               }}
             />
-            <label htmlFor="checkTerms2">Souhlasím se zpracováním osobních údajů.</label>
+            <label htmlFor="checkTerms2">
+              {t("forms.mainFormCheckTerms3Label")}
+            </label>
           </div>
-          
+
           <div className={orderFormStyles.buttons}>
             <Button
               name="submit"
@@ -1161,7 +1219,7 @@ const OrderFormLayout = ({
               disabled={isSubmitting || !checkTerms || !checkTerms2}
               className={orderFormStyles.submitButton}
             >
-              Objednat
+              {t("forms.onlineOrderFormCTA")}
             </Button>
             <input type="hidden" name="price" value={price} />
           </div>
@@ -1170,20 +1228,6 @@ const OrderFormLayout = ({
             míru.
           </p> */}
         </div>
-
-
-
-
-
-      
-
-
-
-
-
-
-
-
       </Form>
     </div>
   )
@@ -1194,14 +1238,14 @@ const days = {
     5: 10,
     6: 12,
   },
-  "Měsíc": {
+  Měsíc: {
     5: 20,
     6: 24,
   },
   "Dva měsíce": {
     5: 40,
     6: 48,
-  }
+  },
 }
 
 export const OrderForm = withFormik({
@@ -1235,15 +1279,34 @@ export const OrderForm = withFormik({
         .phone()
         .required(),
       promo: Yup.string(),
-      email: Yup.string().email().required(),
-      name: Yup.string().min(4).required(),
-      address: Yup.string().min(9).required(),
+      email: Yup.string()
+        .email()
+        .required(),
+      name: Yup.string()
+        .min(4)
+        .required(),
+      address: Yup.string()
+        .min(9)
+        .required(),
       plan: Yup.string(),
       program: Yup.string(),
       menu: Yup.string(),
     }),
   handleSubmit: async (
-    { phone, promo, plan, program, menu, week, kcal, date, name, email, address, deliveryTime },
+    {
+      phone,
+      promo,
+      plan,
+      program,
+      menu,
+      week,
+      kcal,
+      date,
+      name,
+      email,
+      address,
+      deliveryTime,
+    },
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
@@ -1280,7 +1343,8 @@ export const OrderForm = withFormik({
           "$1"
         ) || ""
 
-      const diet = plan === "Zhubnout" ? "loose" : plan === "Nabírat" ? "gain" : "keep"
+      const diet =
+        plan === "Zhubnout" ? "loose" : plan === "Nabírat" ? "gain" : "keep"
       let data = {
         form_name: "order",
         phone,
@@ -1307,7 +1371,7 @@ export const OrderForm = withFormik({
 
       // await console.log(JSON.stringify(data))
 
-     const req =  await fetch("/api/app/order", {
+      const req = await fetch("/api/app/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -1331,7 +1395,6 @@ export const OrderForm = withFormik({
       } else {
         alert("Something went wrong, please try again!")
       }
-     
     } catch (err) {
       setSubmitting(false)
       setFieldValue("success", false)

@@ -2,12 +2,12 @@ import React from 'react';
 
 import { About } from '../components/about';
 import { Calculator2 } from '../components/calculator2';
-import { Order } from '../components/order-form';
 import { FAQ } from '../components/faq';
 import { FoodCarouselSection } from '../components/food';
 import { Hero } from '../components/hero2';
 import { HomeofficePackages } from '../components/homeoffice-packages';
 import { HowItWork } from '../components/howitwork';
+import { Order } from '../components/order-form';
 import { PreFooter } from '../components/prefooter';
 import { Program } from '../components/program';
 import { Reviews } from '../components/reviews';
@@ -28,7 +28,7 @@ const IndexPage = () => (
     {/* <TryFood id="try-food" /> */}
     <Reviews id="reviews" />
     <HowItWork />
-    <FAQ id="faq" />
+    {/* <FAQ id="faq" /> */}
     <PreFooter />
   </>
 )

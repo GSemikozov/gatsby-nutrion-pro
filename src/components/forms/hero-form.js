@@ -34,7 +34,7 @@ export const HeroFormLayout = ({
           component="input"
           type="text"
           name="title"
-          placeholder="Tvoje jméno"
+          placeholder={t("forms.heroFormNamePlaceholder")}
           className={cx(styles.input, heroFormStyles.input)}
         />
         {touched.name && errors.name && (

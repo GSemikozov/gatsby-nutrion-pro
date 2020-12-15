@@ -91,32 +91,10 @@ export const Hero = () => {
 
   const onMobileMenuOpen = () => {
     hadleShow()
-    window.dataLayer.push({
-      event: "ga.event",
-      eCategory: "banner",
-      eAction: "vice",
-      eLabel: "HP",
-    })
-    trackCustomEvent({
-      category: "banner",
-      action: "vice",
-      label: "HP",
-    })
   }
 
   const onMobileMenuHide = () => {
     hadleShow()
-    window.dataLayer.push({
-      event: "ga.event",
-      eCategory: "banner",
-      eAction: "mene",
-      eLabel: "HP",
-    })
-    trackCustomEvent({
-      category: "banner",
-      action: "mene",
-      label: "HP",
-    })
   }
 
   return (
@@ -307,7 +285,7 @@ export const Hero = () => {
                     fill="white"
                   />
                 </svg>
-                Zjistit více
+                {t("forms.heroFormShowMoreMobileBtn")}
               </Button>
             </div>
             <div
@@ -330,7 +308,13 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    <b>12</b> krabiček pro <br /> <b>10</b> chodů
+                    <Trans i18nKey="forms.hero2Option1part1">
+                      <b>5</b> prémiových
+                    </Trans>
+                    <br />
+                    <Trans i18nKey="forms.hero2Option1part2">
+                      <b>jídel</b> denně
+                    </Trans>
                   </div>
                 </div>
                 <div className={styles.offersListMobileItem}>
@@ -353,7 +337,9 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    Dovoz až ke dveřím <b>zdarma</b>
+                    <Trans i18nKey="forms.hero2Option2part1">
+                      Dovoz až ke dveřím <b>zdarma</b>
+                    </Trans>
                   </div>
                 </div>
                 <div className={styles.offersListMobileItem}>
@@ -391,7 +377,13 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div className={styles.offersListItemBody}>
-                    Sleva <b>30%</b> <br /> Jen <b>350 Kč</b>/den
+                    <Trans i18nKey="forms.hero2Option3part1">
+                      Sleva <b>30%</b>
+                    </Trans>
+                    <br />
+                    <Trans i18nKey="forms.hero2Option3part2">
+                      Jen <b>350 Kč</b>/den
+                    </Trans>
                   </div>
                 </div>
               </div>

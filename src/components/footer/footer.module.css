@@ -54,19 +54,23 @@
   margin-bottom: 50px;
 }
 
-.footerMenu a {
+.footerMenu a,
+.footerMenu button {
   display: inline-block;
   font-weight: 500;
+  font-size: 1rem;
   margin: 0 35px 10px;
   color: var(--color-white);
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* .footerMenu a:first-child {
   margin-left: 0;
 } */
 
-.footerMenu a:hover {
+.footerMenu a:hover,
+.footerMenu button:hover {
   text-decoration: underline;
 }
 
@@ -103,7 +107,8 @@
     margin-top: 0;
   }
 
-  .footerMenu a {
+  .footerMenu a,
+  .footerMenu button {
     display: inline-block;
     font-weight: 500;
     margin: 0 20px 10px;
