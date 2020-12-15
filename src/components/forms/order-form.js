@@ -1027,7 +1027,7 @@ const OrderFormLayout = ({
               type="text"
               name="address"
               className={orderFormStyles.input}
-              placeholder="Adresa*"
+              placeholder={t("forms.onlineOrderFormAddressLabel")}
             />
             {touched.address && errors.address && (
               <span className={styles.error}>{errors.address}</span>
