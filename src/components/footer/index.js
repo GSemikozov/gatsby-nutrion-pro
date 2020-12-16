@@ -8,6 +8,7 @@ import { useLangContext } from '../../utils/lang';
 import { Button } from '../button';
 import { Container } from '../container';
 import { Logo } from '../header/logo';
+import { LocalizedLink } from '../localized-link';
 import styles from './footer.module.css';
 import fb from './icons/facebook.svg';
 import user from './icons/icon-user.svg';
@@ -22,9 +23,9 @@ export const Footer = () => {
       <Container>
         <div className={styles.footerCols}>
           <div className={styles.footerCol}>
-            <Link to="/">
+            <LocalizedLink to="/">
               <Logo />
-            </Link>
+            </LocalizedLink>
             <div className={styles.socials}>
               <a
                 href="https://www.facebook.com/nutritionprocz"

@@ -8,6 +8,7 @@ import Slider from 'react-slick';
 
 import { Button } from '../button';
 import { Container } from '../container';
+import { LocalizedLink } from '../localized-link';
 import { FoodCard } from './food-card';
 import styles from './food-carousel.module.css';
 
@@ -190,9 +191,9 @@ export const FoodCarouselSection = () => {
         <FoodCarousel />
         <div className="text-center">
           <Button type="outline" size="lg" className={styles.outsideButton}>
-            <a href="/ukazka-menu" style={{ padding: "14px 20px" }}>
+            <LocalizedLink to="/ukazka-menu" style={{ padding: "14px 20px" }}>
               {t("general.food.CTA")}
-            </a>
+            </LocalizedLink>
           </Button>
         </div>
       </Container>

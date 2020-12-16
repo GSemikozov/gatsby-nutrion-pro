@@ -56,7 +56,11 @@ export const LanguagePicker = () => {
       {site.siteMetadata.supportedLanguages.map(supportedLang => (
         <a
           aria-label={`Change language to ${supportedLang}`}
-          href={`/${supportedLang}${originalPath}`}
+          href={
+            supportedLang === "cz"
+              ? `${originalPath}`
+              : `/${supportedLang}${originalPath}`
+          }
           key={supportedLang}
           className={cx(styles.langMenuItem, {
             [styles.active]: lang === supportedLang,

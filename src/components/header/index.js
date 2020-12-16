@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import { Container } from '../container';
+import { LocalizedLink } from '../localized-link';
 import styles from './header.module.css';
 import { Logo } from './logo';
 import { MobileMenu } from './mobileMenu';
@@ -25,15 +26,15 @@ export const Header = ({ menuLinks }) => {
   return (
     <header className={styles.header}>
       <Container className={styles.headerInner}>
-        <a
-          href="/"
+        <LocalizedLink
+          to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
           }}
         >
           <Logo />
-        </a>
+        </LocalizedLink>
         <Navbar
           onCloseMobileMenu={toggleMenu}
           menuVisible={menuVisible}

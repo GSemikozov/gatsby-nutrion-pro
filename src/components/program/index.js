@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useLangContext } from '../../utils/lang';
+import { LocalizedLink } from '../localized-link';
 import IconCook from './icons/icon-ui-cook.svg';
 import IconHealthForce from './icons/icon-ui-health-force.svg';
 import IconMeasurement from './icons/icon-ui-measurement.svg';
@@ -160,9 +161,9 @@ export const Program = ({ id = "" }) => {
             <p className={styles.tabsContentText}>
               {t("home.program.program1desc")}
             </p>
-            <Link to="/products/product-1" className={styles.button}>
+            <LocalizedLink to="/products/product-1" className={styles.button}>
               {t("home.program.programCTA")}
-            </Link>
+            </LocalizedLink>
             <p className={styles.afterButtonText}>
               {t("home.program.programCTAdesc")}
             </p>
@@ -183,9 +184,9 @@ export const Program = ({ id = "" }) => {
             <p className={styles.tabsContentText}>
               {t("home.program.program2desc")}
             </p>
-            <Link to="/products/product-2" className={styles.button}>
+            <LocalizedLink to="/products/product-2" className={styles.button}>
               {t("home.program.programCTA")}
-            </Link>
+            </LocalizedLink>
             <p className={styles.afterButtonText}>
               {t("home.program.programCTAdesc")}
             </p>
@@ -206,9 +207,9 @@ export const Program = ({ id = "" }) => {
             <p className={styles.tabsContentText}>
               {t("home.program.program3desc")}
             </p>
-            <Link to="/products/product-3" className={styles.button}>
+            <LocalizedLink to="/products/product-3" className={styles.button}>
               {t("home.program.programCTA")}
-            </Link>
+            </LocalizedLink>
             <p className={styles.afterButtonText}>
               {t("home.program.programCTAdesc")}
             </p>
@@ -229,9 +230,9 @@ export const Program = ({ id = "" }) => {
             <p className={styles.tabsContentText}>
               {t("home.program.program4desc")}
             </p>
-            <Link to="/products/product-4" className={styles.button}>
+            <LocalizedLink to="/products/product-4" className={styles.button}>
               {t("home.program.programCTA")}
-            </Link>
+            </LocalizedLink>
             <p className={styles.afterButtonText}>
               {t("home.program.programCTAdesc")}
             </p>

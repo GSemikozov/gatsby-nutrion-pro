@@ -17,18 +17,19 @@ exports.onCreatePage = async ({
 
   await Promise.all(
     config.siteMetadata.supportedLanguages.map(async lang => {
-      const localizedPath = `/${lang}${page.path}`
-      // lang === "cz" ? `${page.path}` : `/${lang}${page.path}`
+      // const localizedPath = `/${lang}${page.path}`
+      const localizedPath =
+        lang === "cz" ? `${page.path}` : `/${lang}${page.path}`
 
       // create a redirect based on the accept-language header
-      createRedirect({
-        fromPath: originalPath,
-        toPath: localizedPath,
-        Language: lang,
-        isPermanent: false,
-        redirectInBrowser: isEnvDevelopment,
-        statusCode: 301,
-      })
+      // createRedirect({
+      //   fromPath: originalPath,
+      //   toPath: localizedPath,
+      //   Language: lang,
+      //   isPermanent: false,
+      //   redirectInBrowser: isEnvDevelopment,
+      //   statusCode: 301,
+      // })
 
       await createPage({
         ...page,
@@ -44,14 +45,15 @@ exports.onCreatePage = async ({
 
   // Create a fallback redirect if the language is not supported or the
   // Accept-Language header is missing for some reason
-  createRedirect({
-    fromPath: originalPath,
-    toPath: `/${config.siteMetadata.defaultLanguage}${page.path}`,
-    // config.siteMetadata.defaultLanguage === "cz"
-    //   ? `${page.path}`
-    //   : `/${config.siteMetadata.defaultLanguage}${page.path}`,
-    isPermanent: false,
-    redirectInBrowser: isEnvDevelopment,
-    statusCode: 301,
-  })
+  // createRedirect({
+  //   fromPath: originalPath,
+  //   // toPath: `/${config.siteMetadata.defaultLanguage}${page.path}`,
+  //   toPath:
+  //     config.siteMetadata.defaultLanguage === "cz"
+  //       ? `${page.path}`
+  //       : `/${config.siteMetadata.defaultLanguage}${page.path}`,
+  //   isPermanent: false,
+  //   redirectInBrowser: isEnvDevelopment,
+  //   statusCode: 301,
+  // })
 }

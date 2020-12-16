@@ -20,8 +20,8 @@ export const LocalizedLink = ({
   // )
   return (
     <a
-      // href={lang === "cz" ? `${to}` : `/${lang}${to}`}
-      href={`/${lang}${to}`}
+      href={lang === "cz" ? `${to}` : `/${lang}${to}`}
+      // href={`/${lang}${to}`}
       onClick={onClick}
       className={className}
       {...rest}
