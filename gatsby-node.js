@@ -18,6 +18,7 @@ exports.onCreatePage = async ({
   await Promise.all(
     config.siteMetadata.supportedLanguages.map(async lang => {
       const localizedPath = `/${lang}${page.path}`
+      // lang === "cz" ? `${page.path}` : `/${lang}${page.path}`
 
       // create a redirect based on the accept-language header
       createRedirect({
@@ -46,6 +47,9 @@ exports.onCreatePage = async ({
   createRedirect({
     fromPath: originalPath,
     toPath: `/${config.siteMetadata.defaultLanguage}${page.path}`,
+    // config.siteMetadata.defaultLanguage === "cz"
+    //   ? `${page.path}`
+    //   : `/${config.siteMetadata.defaultLanguage}${page.path}`,
     isPermanent: false,
     redirectInBrowser: isEnvDevelopment,
     statusCode: 301,

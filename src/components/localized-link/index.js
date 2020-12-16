@@ -19,7 +19,13 @@ export const LocalizedLink = ({
   //   </GatsbyLink>
   // )
   return (
-    <a href={`/${lang}${to}`} onClick={onClick} className={className} {...rest}>
+    <a
+      // href={lang === "cz" ? `${to}` : `/${lang}${to}`}
+      href={`/${lang}${to}`}
+      onClick={onClick}
+      className={className}
+      {...rest}
+    >
       {children}
     </a>
   )
