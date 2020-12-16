@@ -3,7 +3,7 @@ module.exports = {
     title: `Speciální krabičková dieta. Výživový poradce a šéfkuchař v jednom`,
     description: `Krabičková dieta. Rozvoz po celé Praze zdarma. Konzultace s výživovým poradcem. Diagnostika složení těla inbody.`,
     author: `@nutritionprocz`,
-    siteURL: "https://hardcore-almeida-34ea38.netlify.app/",
+    siteURL: "https://nutritionpro.cz",
     supportedLanguages: ["cz", "en"],
     defaultLanguage: "cz",
     menuLinks: [

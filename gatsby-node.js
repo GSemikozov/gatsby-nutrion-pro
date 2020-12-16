@@ -8,7 +8,7 @@ exports.onCreatePage = async ({
   page,
   actions: { createPage, deletePage, createRedirect },
 }) => {
-  // const isEnvDevelopment = process.env.NODE_ENV === "development"
+  const isEnvDevelopment = process.env.NODE_ENV === "development"
   const originalPath = page.path
 
   // Delete the original page (since we are gonna create localized versions of it) and add a
@@ -26,7 +26,7 @@ exports.onCreatePage = async ({
         toPath: localizedPath,
         Language: lang,
         isPermanent: false,
-        redirectInBrowser: true,
+        redirectInBrowser: isEnvDevelopment,
         statusCode: 301,
       })
 
@@ -51,7 +51,7 @@ exports.onCreatePage = async ({
     //   ? `${page.path}`
     //   : `/${config.siteMetadata.defaultLanguage}${page.path}`,
     isPermanent: false,
-    redirectInBrowser: true,
+    redirectInBrowser: isEnvDevelopment,
     statusCode: 301,
   })
 }
