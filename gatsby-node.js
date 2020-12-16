@@ -26,7 +26,7 @@ exports.onCreatePage = async ({
         toPath: localizedPath,
         Language: lang,
         isPermanent: false,
-        redirectInBrowser: isEnvDevelopment,
+        // redirectInBrowser: isEnvDevelopment,
         statusCode: 301,
       })
 
@@ -51,7 +51,7 @@ exports.onCreatePage = async ({
     //   ? `${page.path}`
     //   : `/${config.siteMetadata.defaultLanguage}${page.path}`,
     isPermanent: false,
-    redirectInBrowser: isEnvDevelopment,
+    // redirectInBrowser: isEnvDevelopment,
     statusCode: 301,
   })
 }
