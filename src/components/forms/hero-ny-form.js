@@ -130,8 +130,10 @@ export const HeroNYForm = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       const data = {
-        form_name: "akce-form",
+        form_name: isEn ? "akce-form_en" : "akce-form",
         title,
         phone,
         utm_source: UTM_SOURCE,

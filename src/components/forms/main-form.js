@@ -690,8 +690,10 @@ export const MainForm = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       let data = {
-        form_name: "main-contact",
+        form_name: isEn ? "main-contact_en" : "main-contact",
         phone,
         promo,
         plan,

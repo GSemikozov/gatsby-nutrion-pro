@@ -96,9 +96,11 @@ export const LandingForm = withFormik({
         "$1"
       ) || ""
 
+    const isEn = document.location.pathname.includes("/en")
+
     try {
       let data = {
-        form_name: "landing",
+        form_name: isEn ? "landing_en" : "landing",
         phone,
         promo,
         referrer: referrer,

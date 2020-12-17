@@ -134,8 +134,10 @@ export const ContactForm2 = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       const data = {
-        form_name: "contact2",
+        form_name: isEn ? "contact2_en" : "contact2",
         phone,
         referrer: referrer,
         roistat: roistat_visit,

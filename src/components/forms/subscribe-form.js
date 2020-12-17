@@ -77,8 +77,10 @@ export const SubscribeForm = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       const data = {
-        form_name: "subscribe",
+        form_name: isEn ? "subscribe_en" : "subscribe",
         email,
         referrer: referrer,
         roistat: roistat_visit,

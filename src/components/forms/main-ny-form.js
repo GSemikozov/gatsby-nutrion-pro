@@ -398,8 +398,12 @@ export const MainFormNY = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       let data = {
-        form_name: "main-contact-new-year-program",
+        form_name: isEn
+          ? "main-contact-new-year-program_en"
+          : "main-contact-new-year-program",
         phone,
         plan,
         program,

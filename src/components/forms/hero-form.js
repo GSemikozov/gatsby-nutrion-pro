@@ -107,8 +107,10 @@ export const HeroForm = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       const data = {
-        form_name: "2days-trial",
+        form_name: isEn ? "2days-trial_en" : "2days-trial",
         title,
         phone,
         utm_source: UTM_SOURCE,

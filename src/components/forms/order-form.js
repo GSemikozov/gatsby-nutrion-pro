@@ -1353,10 +1353,12 @@ export const OrderForm = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       const diet =
         plan === "Zhubnout" ? "loose" : plan === "Nabírat" ? "gain" : "keep"
       let data = {
-        form_name: "order",
+        form_name: isEn ? "order_en" : "order",
         phone,
         promocode: promo,
         diet,
@@ -1386,7 +1388,7 @@ export const OrderForm = withFormik({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
-      // await setPrice("420")
+      // // await setPrice("420")
 
       if (req.ok) {
         await setSubmitting(false)

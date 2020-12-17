@@ -1,3 +1,5 @@
+import 'react-day-picker/lib/style.css';
+
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
@@ -10,18 +12,14 @@ import stylesRadio from '../calculator2/calc.module.css';
 import { Price } from '../voucher-price';
 import styles from './form.module.css';
 import orderFormStyles from './voucher-form.module.css';
-import 'react-day-picker/lib/style.css';
-
-
 
 const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 
-Yup.addMethod(Yup.string, "phone", function () {
+Yup.addMethod(Yup.string, "phone", function() {
   return this.test("phone", "Telefonní číslo musí obsahovat 9 znaků", value =>
     rePhoneNumber.test(value)
   )
 })
-
 
 export const WrappedForm = () => {
   return <VoucherForm />
@@ -43,10 +41,6 @@ const OrderFormLayout = ({
   const [checkTerms, setCheckTerms] = useState(false)
   const [checkTerms2, setCheckTerms2] = useState(false)
 
-
-
-
-
   const onSetProgram = value => {
     setProgram(value)
     trackCustomEvent({
@@ -60,7 +54,6 @@ const OrderFormLayout = ({
     setMenu(value)
   }
 
-
   useEffect(() => {
     const priceValue = getPrice(menu, program)
     setPrice(priceValue)
@@ -68,22 +61,21 @@ const OrderFormLayout = ({
 
   const getPrice = (menu, program) => {
     const price = {
-      '2 chody': {
-        '10 dní': 2500,
-        '20 dní': 4500,
+      "2 chody": {
+        "10 dní": 2500,
+        "20 dní": 4500,
       },
-      '3 chody': {
-        '10 dní': 3500,
-        '20 dní': 6000,
+      "3 chody": {
+        "10 dní": 3500,
+        "20 dní": 6000,
       },
-      '5 chodů': {
-        '10 dní': 4500,
-        '20 dní': 8000,
+      "5 chodů": {
+        "10 dní": 4500,
+        "20 dní": 8000,
       },
     }
     return price[menu][program]
   }
-
 
   return (
     <div className={orderFormStyles.orderFormBox}>
@@ -95,11 +87,13 @@ const OrderFormLayout = ({
         <div>
           <div className={cx(stylesRadio.radioBtns, stylesRadio.MobileCol)}>
             <div className={styles.inputField}>
-              <h6 className={orderFormStyles.inputFieldTitleSmall}>Délka programu</h6>
+              <h6 className={orderFormStyles.inputFieldTitleSmall}>
+                Délka programu
+              </h6>
               <Select
                 options={[
-                  { value: '10 dní', label: '10 dní' },
-                  { value: '20 dní', label: '20 dní' },
+                  { value: "10 dní", label: "10 dní" },
+                  { value: "20 dní", label: "20 dní" },
                   // { value: 'Dva 20 dníe', label: 'Dva 20 dníe' },
                 ]}
                 isSearchable={false}
@@ -112,19 +106,28 @@ const OrderFormLayout = ({
             </div>
           </div>
 
-
           <div className={cx(stylesRadio.radioBtns, stylesRadio.MobileCol)}>
             <div className={styles.inputField}>
-              <h6 className={orderFormStyles.inputFieldTitleSmall}>Počet jídel </h6>
+              <h6 className={orderFormStyles.inputFieldTitleSmall}>
+                Počet jídel{" "}
+              </h6>
               <Select
                 options={[
-                  { value: '5 chodů', label: '5 chodů', disabled: false },
-                  { value: '3 chody', label: '3 chody', disabled: menu3xDisabled },
-                  { value: '2 chody', label: '2 chody', disabled: menu2xDisabled },
+                  { value: "5 chodů", label: "5 chodů", disabled: false },
+                  {
+                    value: "3 chody",
+                    label: "3 chody",
+                    disabled: menu3xDisabled,
+                  },
+                  {
+                    value: "2 chody",
+                    label: "2 chody",
+                    disabled: menu2xDisabled,
+                  },
                 ]}
                 isSearchable={false}
                 value={{ value: menu, label: menu }}
-                isOptionDisabled={(option) => option.disabled}
+                isOptionDisabled={option => option.disabled}
                 onChange={e => {
                   onSetMenu(e.value)
                   setFieldValue("menu", e.value)
@@ -138,7 +141,9 @@ const OrderFormLayout = ({
 
         <div className={orderFormStyles.orderFormWrap}>
           <div className={styles.inputField}>
-            <label className={cx(styles.label, orderFormStyles.inputFieldLabel)}>
+            <label
+              className={cx(styles.label, orderFormStyles.inputFieldLabel)}
+            >
               Jméno a příjmení*
             </label>
             <FastField
@@ -153,7 +158,9 @@ const OrderFormLayout = ({
             )}
           </div>
           <div className={styles.inputField}>
-            <label className={cx(styles.label, orderFormStyles.inputFieldLabel)}>
+            <label
+              className={cx(styles.label, orderFormStyles.inputFieldLabel)}
+            >
               Telefon*
             </label>
             <FastField
@@ -168,7 +175,9 @@ const OrderFormLayout = ({
             )}
           </div>
           <div className={styles.inputField}>
-            <label className={cx(styles.label, orderFormStyles.inputFieldLabel)}>
+            <label
+              className={cx(styles.label, orderFormStyles.inputFieldLabel)}
+            >
               Email*
             </label>
             <FastField
@@ -183,7 +192,6 @@ const OrderFormLayout = ({
             )}
           </div>
 
-
           <div className={orderFormStyles.checkTerms}>
             <input
               id="checkTerms"
@@ -195,7 +203,12 @@ const OrderFormLayout = ({
                 console.log(e.target.checked)
               }}
             />
-            <label htmlFor="checkTerms">Měl/a jsem možnost přečíst a souhlasím s <a href="/terms" target="_blank"><b>obchodními podmínkámi.</b></a></label>
+            <label htmlFor="checkTerms">
+              Měl/a jsem možnost přečíst a souhlasím s{" "}
+              <a href="/terms" target="_blank">
+                <b>obchodními podmínkámi.</b>
+              </a>
+            </label>
           </div>
 
           <div className={orderFormStyles.checkTerms}>
@@ -208,7 +221,9 @@ const OrderFormLayout = ({
                 setCheckTerms2(e.target.checked)
               }}
             />
-            <label htmlFor="checkTerms2">Souhlasím se zpracováním osobních údajů.</label>
+            <label htmlFor="checkTerms2">
+              Souhlasím se zpracováním osobních údajů.
+            </label>
           </div>
 
           <div className={orderFormStyles.buttons}>
@@ -225,7 +240,6 @@ const OrderFormLayout = ({
             <input type="hidden" name="price" value={price} />
           </div>
         </div>
-
       </Form>
     </div>
   )
@@ -258,8 +272,12 @@ export const VoucherForm = withFormik({
         .min(9)
         .phone()
         .required(),
-      email: Yup.string().email().required(),
-      name: Yup.string().min(4).required(),
+      email: Yup.string()
+        .email()
+        .required(),
+      name: Yup.string()
+        .min(4)
+        .required(),
       program: Yup.string(),
       menu: Yup.string(),
     }),
@@ -301,8 +319,10 @@ export const VoucherForm = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       let data = {
-        form_name: "voucher",
+        form_name: isEn ? "voucher_en" : "voucher",
         phone,
         days: days[program],
         mealsPerDay: Number(menu[0]),
@@ -342,7 +362,6 @@ export const VoucherForm = withFormik({
       } else {
         alert("Something went wrong, please try again!")
       }
-
     } catch (err) {
       setSubmitting(false)
       setFieldValue("success", false)

@@ -4,6 +4,7 @@ import React from 'react';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
+import { useLangContext } from '../../utils/lang';
 import { Button } from '../button';
 import contactFormStyles from './contact-form.module.css';
 import styles from './form.module.css';
@@ -123,8 +124,10 @@ export const ContactForm = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       const data = {
-        form_name: "contact",
+        form_name: isEn ? "contact_en" : "contact",
         phone,
         referrer: referrer,
         roistat: roistat_visit,

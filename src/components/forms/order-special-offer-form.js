@@ -104,8 +104,10 @@ export const OrderSpecialOfferForm = withFormik({
           "$1"
         ) || ""
 
+      const isEn = document.location.pathname.includes("/en")
+
       let data = {
-        form_name: "order-special",
+        form_name: isEn ? "order-special_en" : "order-special",
         phone,
         promo,
         referrer: referrer,
