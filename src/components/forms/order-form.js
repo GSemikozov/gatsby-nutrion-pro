@@ -14,6 +14,7 @@ import Select from 'react-select';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
+import { useLangContext } from '../../utils/lang';
 import { Button } from '../button';
 import stylesRadio from '../calculator2/calc.module.css';
 import { Price } from '../order-price';
@@ -343,6 +344,7 @@ const OrderFormLayout = ({
   const [checkTerms, setCheckTerms] = useState(false)
   const [checkTerms2, setCheckTerms2] = useState(false)
 
+  const { lang } = useLangContext()
   const { t } = useTranslation()
 
   const options = [
@@ -475,7 +477,7 @@ const OrderFormLayout = ({
     <div className={orderFormStyles.orderFormBox}>
       <Form
         className={orderFormStyles.orderForm}
-        name="main-contact"
+        name="order-contact"
         method="post"
       >
         <div>
@@ -903,16 +905,24 @@ const OrderFormLayout = ({
                       moment(dateToSystemFormat(day)).toISOString()
                     )
                   }
-                  formatDate={e => formatDate(e, "DD.MM.YYYY dddd", "cs")}
+                  formatDate={e =>
+                    lang === "cz"
+                      ? formatDate(e, "DD.MM.YYYY dddd", "cs")
+                      : formatDate(e, "DD.MM.YYYY dddd", "en")
+                  }
                   parseDate={parseDate}
-                  value={`${formatDate(values.date, "DD.MM.YYYY dddd", "cs")}`}
-                  placeholder={`${formatDate(
-                    values.date,
-                    "DD.MM.YYYY dddd",
-                    "cs"
-                  )}`}
+                  value={`${
+                    lang === "cz"
+                      ? formatDate(values.date, "DD.MM.YYYY dddd", "cs")
+                      : formatDate(values.date, "DD.MM.YYYY dddd", "en")
+                  }`}
+                  placeholder={`${
+                    lang === "cz"
+                      ? formatDate(values.date, "DD.MM.YYYY dddd", "cs")
+                      : formatDate(values.date, "DD.MM.YYYY dddd", "en")
+                  }`}
                   dayPickerProps={{
-                    locale: "cs",
+                    locale: lang === "cz" ? "cs" : "en",
                     localeUtils: MomentLocaleUtils,
                     disabledDays: [
                       { daysOfWeek: [0, 2, 4, 6] },
