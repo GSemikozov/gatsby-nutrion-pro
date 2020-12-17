@@ -76,12 +76,18 @@ export const Footer = () => {
               >
                 {t("menu.Cena")}
               </Button>
-              <a href="/jobs">{t("menu.Kariéra")}</a>
+              {lang !== "en" && (
+                <LocalizedLink to="/jobs">{t("menu.Kariéra")}</LocalizedLink>
+              )}
             </div>
             <p>
-              <a href="/terms" target="_blank" rel="noopener norefferer">
+              <LocalizedLink
+                to="/terms"
+                target="_blank"
+                rel="noopener norefferer"
+              >
                 {t("general.footer.terms1")}
-              </a>{" "}
+              </LocalizedLink>{" "}
               <span className={styles.hideXS}>
                 {t("general.footer.terms2")}
               </span>
@@ -89,9 +95,9 @@ export const Footer = () => {
             <p>© 2020 NUTRITIONPRO</p>
           </div>
           <div className={styles.footerCol}>
-            <a href="/app/login" className={styles.hideXS}>
+            <LocalizedLink to="/app/login" className={styles.hideXS}>
               <img src={user} alt="icon" />
-            </a>
+            </LocalizedLink>
             <p>+420 774 137 352</p>
             <p>
               {t("menu.days")} 10:00 - 12:00 <br /> 13:00 - 18:00

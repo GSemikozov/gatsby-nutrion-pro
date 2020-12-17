@@ -45,7 +45,12 @@ export const Program = ({ id = "" }) => {
               [styles.tabSelected]: activeTab === 1,
             })}
           >
-            <a href="/products/product-1" className={styles.tabLink}>
+            <a
+              href="/products/product-1"
+              className={cx(styles.tabLink, {
+                ["pointer-none"]: lang === "en",
+              })}
+            >
               <img src={IconCook} className={styles.tabImg} alt="icon" />
             </a>
             <h5 className={styles.tabTitle}>
@@ -63,7 +68,12 @@ export const Program = ({ id = "" }) => {
               [styles.tabSelected]: activeTab === 2,
             })}
           >
-            <a href="/products/product-2" className={styles.tabLink}>
+            <a
+              href="/products/product-2"
+              className={cx(styles.tabLink, {
+                ["pointer-none"]: lang === "en",
+              })}
+            >
               <img src={IconHealthForce} className={styles.tabImg} alt="icon" />
             </a>
             <h5 className={styles.tabTitle}>
@@ -81,7 +91,12 @@ export const Program = ({ id = "" }) => {
               [styles.tabSelected]: activeTab === 3,
             })}
           >
-            <a href="/products/product-3" className={styles.tabLink}>
+            <a
+              href="/products/product-3"
+              className={cx(styles.tabLink, {
+                ["pointer-none"]: lang === "en",
+              })}
+            >
               <img src={IconMeasurement} className={styles.tabImg} alt="icon" />
             </a>
             <h5 className={styles.tabTitle}>
@@ -99,7 +114,12 @@ export const Program = ({ id = "" }) => {
               [styles.tabSelected]: activeTab === 4,
             })}
           >
-            <a href="/products/product-4" className={styles.tabLink}>
+            <a
+              href="/products/product-4"
+              className={cx(styles.tabLink, {
+                ["pointer-none"]: lang === "en",
+              })}
+            >
               {/* <img src={IconProgram} className={styles.tabImg} alt="icon" /> */}
               <svg
                 className={styles.tabImg}
@@ -161,9 +181,11 @@ export const Program = ({ id = "" }) => {
             <p className={styles.tabsContentText}>
               {t("home.program.program1desc")}
             </p>
-            <LocalizedLink to="/products/product-1" className={styles.button}>
-              {t("home.program.programCTA")}
-            </LocalizedLink>
+            {lang !== "en" && (
+              <LocalizedLink to="/products/product-1" className={styles.button}>
+                {t("home.program.programCTA")}
+              </LocalizedLink>
+            )}
             <p className={styles.afterButtonText}>
               {t("home.program.programCTAdesc")}
             </p>
@@ -184,9 +206,11 @@ export const Program = ({ id = "" }) => {
             <p className={styles.tabsContentText}>
               {t("home.program.program2desc")}
             </p>
-            <LocalizedLink to="/products/product-2" className={styles.button}>
-              {t("home.program.programCTA")}
-            </LocalizedLink>
+            {lang !== "en" && (
+              <LocalizedLink to="/products/product-2" className={styles.button}>
+                {t("home.program.programCTA")}
+              </LocalizedLink>
+            )}
             <p className={styles.afterButtonText}>
               {t("home.program.programCTAdesc")}
             </p>
@@ -207,9 +231,11 @@ export const Program = ({ id = "" }) => {
             <p className={styles.tabsContentText}>
               {t("home.program.program3desc")}
             </p>
-            <LocalizedLink to="/products/product-3" className={styles.button}>
-              {t("home.program.programCTA")}
-            </LocalizedLink>
+            {lang !== "en" && (
+              <LocalizedLink to="/products/product-3" className={styles.button}>
+                {t("home.program.programCTA")}
+              </LocalizedLink>
+            )}
             <p className={styles.afterButtonText}>
               {t("home.program.programCTAdesc")}
             </p>
@@ -230,9 +256,11 @@ export const Program = ({ id = "" }) => {
             <p className={styles.tabsContentText}>
               {t("home.program.program4desc")}
             </p>
-            <LocalizedLink to="/products/product-4" className={styles.button}>
-              {t("home.program.programCTA")}
-            </LocalizedLink>
+            {lang !== "en" && (
+              <LocalizedLink to="/products/product-4" className={styles.button}>
+                {t("home.program.programCTA")}
+              </LocalizedLink>
+            )}
             <p className={styles.afterButtonText}>
               {t("home.program.programCTAdesc")}
             </p>

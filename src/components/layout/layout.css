@@ -154,3 +154,7 @@ select {
 .hide {
   display: none !important;
 }
+
+.pointer-none {
+  pointer-events: none;
+}
