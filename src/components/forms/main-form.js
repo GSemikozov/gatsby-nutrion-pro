@@ -563,7 +563,7 @@ const MainFormLayout = ({
               type="text"
               name="promo"
               className={styles.input}
-              placeholder="Promo kód"
+              placeholder={t("forms.mainFormPromoCodeLabel")}
             />
             {touched.promo && errors.promo && (
               <span className={styles.error}>{errors.promo}</span>

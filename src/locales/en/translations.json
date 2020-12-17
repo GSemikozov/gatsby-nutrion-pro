@@ -1,8 +1,8 @@
 {
   "general": {
-    "bannerTitle": "<0>Save up</0> with group order <5>to 20%OFF</5>!",
+    "bannerTitle": "<0>Save up</0> with group order <5>to 20% off</5>!",
     "food": {
-      "title": "The MEALS. What to expect?",
+      "title": "The meals. What to expect?",
       "CTA": "Sample menu",
       "cardInfoLabel1": "kcal",
       "cardInfoLabel2": "carbohydrates",
@@ -58,12 +58,12 @@
     "heroFormShowMoreMobileBtn": "Learn more",
     "heroFormNamePlaceholder": "Your name",
     "hero2FormTitle": "Special Offer! 2-Day trial: <1>5-meal menu</1> for <4>great price</4>",
-    "hero2FormCTA": "Order NOW",
+    "hero2FormCTA": "Order now",
     "hero2FormInfo": "By providing my phone number I agree to the terms of Privacy Policy.",
     "hero2Option1part1": "<0>5</0> premium",
-    "hero2Option1part2": "<0>MEALS</0> per day",
-    "hero2Option2part1": "FREE delivery",
-    "hero2Option3part1": "30% OFF",
+    "hero2Option1part2": "<0>meals</0> per day",
+    "hero2Option2part1": "Free delivery",
+    "hero2Option3part1": "30% off",
     "hero2Option3part2": "Just <1>350 Kč</1>/day",
     "onlineOrderFormTitle1": "Choose the program",
     "onlineOrderFormTitle2": "Personal information",
@@ -119,7 +119,7 @@
     "mainFormNumberOfPersonOption3": "3",
     "mainFormNumberOfPersonOption4": "More than 3",
     "mainFormTelLabel": "Contact number",
-    "mainFormPromoCodeLabel": "Promotion CODE",
+    "mainFormPromoCodeLabel": "Promo code",
     "mainFormCheckTerms1Label": "By ticking the box I´ve read and agree to NutritionPro",
     "mainFormCheckTerms2Label": "terms of service.",
     "mainFormCheckTerms3Label": "I agree with the terms of Privacy Policy.",
@@ -150,12 +150,12 @@
       "programCTAdesc": "We are sorry, currently no low-carb, low-fat, vegetarian, vegan or other special dietary requirements options. "
     },
     "order": {
-      "title": "Order NOW",
+      "title": "Order now",
       "tab1Btn": "Call me",
-      "tab2Btn": "Order ONLINE"
+      "tab2Btn": "Online order"
     },
     "howItWorks": {
-      "title": "HOW it works",
+      "title": "How it works",
       "option1": "We start by setting your individual daily intake.",
       "option2": "Our special algorithm customizes your menu.",
       "option3": "We cook the food.",
