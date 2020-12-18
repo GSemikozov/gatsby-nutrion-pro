@@ -131,6 +131,11 @@
       "telLabel": "Telefon",
       "CTA": "Zavolejte mi",
       "info": "Odesláním telefonního čísla souhlasím se zpracováním osobních údajů."
+    },
+    "TY": {
+      "titlePart1": "Vaše žádost byla",
+      "titlePart2": "úspěšně přijata",
+      "linkBack": "Zpět na hlavní stránku"
     }
   },
   "home": {

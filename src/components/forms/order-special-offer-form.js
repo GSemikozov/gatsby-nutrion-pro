@@ -123,10 +123,10 @@ export const OrderSpecialOfferForm = withFormik({
       await setFieldValue("success", true)
       setTimeout(() => {
         resetForm()
-        window.location.href = "/thank-you"
+        window.location.href = isEn ? "/en/thank-you" : "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
-          pageURL: "/thank-you",
+          pageURL: isEn ? "/en/thank-you" : "/thank-you",
           pageType: "Purchase",
         })
       }, 300)

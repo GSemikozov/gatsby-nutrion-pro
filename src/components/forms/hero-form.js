@@ -130,10 +130,10 @@ export const HeroForm = withFormik({
       await setFieldValue("success", true)
       setTimeout(() => {
         resetForm()
-        window.location.href = "/thank-you"
+        window.location.href = isEn ? "/en/thank-you" : "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
-          pageURL: "/thank-you-contact",
+          pageURL: isEn ? "/en/thank-you-contact" : "/thank-you-contact",
           pageType: "Purchase",
         })
       }, 2000)

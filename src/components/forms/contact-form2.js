@@ -151,10 +151,10 @@ export const ContactForm2 = withFormik({
       await setFieldValue("success", true)
       setTimeout(() => {
         resetForm()
-        window.location.href = "/thank-you"
+        window.location.href = isEn ? "/en/thank-you" : "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
-          pageURL: "/thank-you-contact2",
+          pageURL: isEn ? "/en/thank-you-contact2" : "/thank-you-contact2",
           pageType: "Purchase",
         })
       }, 1000)

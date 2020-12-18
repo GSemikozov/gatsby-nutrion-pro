@@ -132,6 +132,11 @@
       "telLabel": "Contact",
       "CTA": "Call me back",
       "info": "By filling this information I agree with the terms of Privacy Policy."
+    },
+    "TY": {
+      "titlePart1": "Thank you!",
+      "titlePart2": "Your request has been submitted.",
+      "linkBack": "Back to the main page"
     }
   },
   "home": {

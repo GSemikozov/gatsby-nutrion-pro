@@ -352,10 +352,10 @@ export const VoucherForm = withFormik({
         await setFieldValue("success", true)
         setTimeout(() => {
           resetForm()
-          window.location.href = "/dekovacka-testdrive"
+          window.location.href = isEn ? "/en/thank-you" : "/dekovacka-testdrive"
           window.dataLayer.push({
             event: "ga.pageview",
-            pageURL: "/dekovacka-testdrive",
+            pageURL: isEn ? "/en/thank-you" : "/dekovacka-testdrive",
             pageType: "Purchase",
           })
         }, 2000)

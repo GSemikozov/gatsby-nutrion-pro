@@ -94,10 +94,10 @@ export const SubscribeForm = withFormik({
       await setFieldValue("success", true)
       setTimeout(() => {
         resetForm()
-        window.location.href = "/thank-you"
+        window.location.href = isEn ? "/en/thank-you" : "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
-          pageURL: "/thank-you-subscribe",
+          pageURL: isEn ? "/en/thank-you-subscribe" : "/thank-you-subscribe",
           pageType: "Purchase",
         })
       }, 2000)

@@ -68,7 +68,12 @@ export const OrderConsultationFormLayout = ({
             console.log(e.target.checked)
           }}
         />
-        <label htmlFor="checkTerms">Měl/a jsem možnost přečíst a souhlasím s <a href="/terms" target="_blank"><b>obchodními podmínkámi.</b></a></label>
+        <label htmlFor="checkTerms">
+          Měl/a jsem možnost přečíst a souhlasím s{" "}
+          <a href="/terms" target="_blank">
+            <b>obchodními podmínkámi.</b>
+          </a>
+        </label>
       </div>
 
       <div className={mainFormStyles.checkTerms}>
@@ -81,7 +86,9 @@ export const OrderConsultationFormLayout = ({
             setCheckTerms2(e.target.checked)
           }}
         />
-        <label htmlFor="checkTerms2">Souhlasím se zpracováním osobních údajů.</label>
+        <label htmlFor="checkTerms2">
+          Souhlasím se zpracováním osobních údajů.
+        </label>
       </div>
       <div className={mainFormStyles.buttons}>
         <Button
@@ -142,6 +149,8 @@ export const OrderConsultationForm = withFormik({
 
       // await console.log("data", data)
 
+      const isEn = document.location.pathname.includes("/en")
+
       await fetch("/api/application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -151,10 +160,10 @@ export const OrderConsultationForm = withFormik({
       await setFieldValue("success", true)
       setTimeout(() => {
         resetForm()
-        window.location.href = "/thank-you"
+        window.location.href = isEn ? "/en/thank-you" : "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
-          pageURL: "/thank-you",
+          pageURL: isEn ? "/en/thank-you" : "/thank-you",
           pageType: "Purchase",
         })
       }, 300)
