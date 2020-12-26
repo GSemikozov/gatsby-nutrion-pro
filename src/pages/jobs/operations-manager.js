@@ -12,9 +12,7 @@ const JobPage = () => {
         <div className={styles.job}>
           <h1 className={styles.textHeader}>Operations Manager</h1>
           <p className={styles.text}>
-            Если ты хочешь быть правой рукой CEO успешного FoodTech стартапа, 
-            управлять молодой международной командой специалистов и принимать 
-            участие в работе с крупными инвесторами, то мы ищем именно тебя! 
+            Если ты хочешь быть правой рукой руководителя успешного FoodTech стартапа, то мы ищем именно тебя!
           </p>
           <p className={styles.text}>
             Наш проект недавно получил второй раунд инвестиций для дальнейшего 
@@ -26,42 +24,40 @@ const JobPage = () => {
           <h3 className={styles.textSubHeader}>Что будет входить в твои обязанности?</h3>
           <ul className={styles.textUl}>
             <li className={styles.newList}>
-              Построение и контроль внутренних процессов компании{" "}
+              Контроль внутренних процессов{" "}
             </li>
             <li className={styles.newList}>
-              Активный менеджмент проектов (координация команды, контроль выполнения задач и сроков){" "}
+              Менеджмент проектов (координация команды, контроль выполнения задач и сроков) {" "}
             </li>
             <li className={styles.newList}>
-              Регулярная отчетность 
+              Ведение отчетности
             </li>
             <li className={styles.newList}>
               Внутренний HR (постановка KPI, работа с мотивацией и культурой компании) 
             </li>
             <li className={styles.newList}>
-              Коммуникация с инвесторами 
+              Административная поддержка команды
             </li>
           </ul>
 
           <h3 className={styles.textSubHeader}>Что мы от тебя ожидаем?</h3>
           <ul className={styles.textUl}>
             <li className={styles.newList}>
-              Опыт работы на подобной позиции (или в области Project management) от 5 лет
+              Опыт работы в командах от 10 человек, в идеале - в больших компаниях
             </li>
-            <li className={styles.newList}>Знание чешского языка на ВЫСОКОМ уровне (грамотная устная и письменная речь) - ОБЯЗАТЕЛЬНОЕ условие!</li>
-            <li className={styles.newList}>Системность, рациональное мышление и высокая самоорганизованность</li>
-            <li className={styles.newList}>Умение выслушать, выстроить отношения с членами команды и сплотить коллектив </li>
-            <li className={styles.newList}>Опыт ведения собственных проектов - будет большим плюсом</li>
-            <li className={styles.newList}>Опыт работы в больших корпорациях - также является плюсом</li>
+            <li className={styles.newList}>Системность, самоорганизованность</li>
+            <li className={styles.newList}>Высокая степень требовательности и ориентация на достижение цели</li>
+            <li className={styles.newList}>Готовность и желание брать на себя ответственность</li>
+            <li className={styles.newList}>Знание чешского языка на высоком уровне (грамотная устная и письменная речь) - ОБЯЗАТЕЛЬНОЕ условие!</li>
           </ul>
           <h3 className={styles.textSubHeader}>Что мы предлагаем?</h3>
           <ul className={styles.textUl}>
             <li className={styles.newList}>Мотивирующий оклад плюс месячные и квартальные бонусы</li>
-            <li className={styles.newList}>Пакет опционов компании (акции)</li>
             <li className={styles.newList}>
               Работа в прогрессивной международной команде 
             </li>
             <li className={styles.newList}>
-              Возможность карьерного роста на позицию СОО
+              Возможность карьерного роста
             </li>
             <li className={styles.newList}>Регулярные оплачиваемые тренинги/обучение</li>
             <li className={styles.newList}>

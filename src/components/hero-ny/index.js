@@ -86,14 +86,14 @@ export const HeroNY = () => {
               <Container>
                 <h1 className={styles.title}>
                   <span className={styles.titlePart1}>
-                    Vánoční
+                    Povánoční
                     <img
                       src={deerIcon}
                       className={styles.titleIcon}
                       alt="deer"
                     />
                   </span>
-                  <span className={styles.titlePart2}>slevová nadílka</span>
+                  <span className={styles.titlePart2}>slevy</span>
                 </h1>
                 <HeroNYForm />
               </Container>
@@ -141,8 +141,8 @@ export const HeroNY = () => {
             <Container>
               <h1 className={styles.titleMobile}>
                 <img src={deerIcon} className={styles.titleIcon} alt="deer" />
-                <span className={styles.titlePart1}>Vánoční</span>
-                <span className={styles.titlePart2}>slevová nadílka</span>
+                <span className={styles.titlePart1}>Povánoční</span>
+                <span className={styles.titlePart2}>slevy</span>
               </h1>
             </Container>
           </div>

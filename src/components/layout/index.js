@@ -14,7 +14,7 @@ import { PreHeader } from '../preheader';
 
 // import { I18nextProvider } from 'react-i18next';
 // import i18next from './i18next';
-const Layout = ({ children, t, i18n }) => (
+const Layout = ({ children, t, i18n, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

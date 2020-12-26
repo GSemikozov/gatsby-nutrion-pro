@@ -57,6 +57,20 @@ export default function HTML(props) {
           `,
         }}
       />
+      <script
+        data-skip-moving="true"
+        dangerouslySetInnerHTML={{
+          __html: `
+                    (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                        (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                        if(w[b]['forms']) return;
+                        var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+                        var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                    })(window,document,'https://nutritionprocz.bitrix24.eu/bitrix/js/crm/form_loader.js','b24form');
+                    b24form({"id":"8","lang":"ru","sec":"51r8oh","type":"inline"});
+                `,
+        }}
+      />
     </html>
   )
 }
