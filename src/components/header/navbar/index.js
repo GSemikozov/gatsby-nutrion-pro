@@ -55,7 +55,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
             key={link.name}
             type="unstyled"
             className={cx(styles.navbarItem, "visible-desktop")}
-            handleClick={() => handleMenuLinkClick(link, undefined, lang)}
+            handleClick={() => handleMenuLinkClick(link)}
           >
             {getLinkTranslation(link.name)}
           </Button>
