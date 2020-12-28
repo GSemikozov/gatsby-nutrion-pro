@@ -54,20 +54,24 @@ export const Footer = () => {
             <div className={cx(styles.footerMenu, styles.hideXS)}>
               <Button
                 type="unstyled"
-                handleClick={() => handleMenuLinkClick({ link: "/#programs" })}
+                handleClick={() =>
+                  handleMenuLinkClick({ link: "/#programs" }, lang)
+                }
               >
                 {t("menu.Programy")}
               </Button>
               <Button
                 type="unstyled"
-                handleClick={() => handleMenuLinkClick({ link: "/#food" })}
+                handleClick={() =>
+                  handleMenuLinkClick({ link: "/#food" }, lang)
+                }
               >
                 {t("menu.Jídelníček")}
               </Button>
               <Button
                 type="unstyled"
                 handleClick={() =>
-                  handleMenuLinkClick({ link: "/#calculator" })
+                  handleMenuLinkClick({ link: "/#calculator" }, lang)
                 }
               >
                 {t("menu.Cena")}
