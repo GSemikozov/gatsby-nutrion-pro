@@ -2,6 +2,7 @@ import { FastField, Form, withFormik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
 
+import { getCookie } from '../../helpers';
 import { Button } from '../button';
 import styles from './form.module.css';
 import subscribeFormStyles from './subscribe-form.module.css';
@@ -54,6 +55,7 @@ export const SubscribeForm = withFormik({
   mapPropsToValues: () => ({
     email: "",
     referrer: "",
+    ga: "",
     success: false,
   }),
   validationSchema: () =>
@@ -71,11 +73,6 @@ export const SubscribeForm = withFormik({
       if (document.referrer !== "") {
         referrer = new URL(document.referrer).hostname
       }
-      let roistat_visit =
-        document.cookie.replace(
-          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
-          "$1"
-        ) || ""
 
       const isEn = document.location.pathname.includes("/en")
 
@@ -83,7 +80,8 @@ export const SubscribeForm = withFormik({
         form_name: isEn ? "subscribe_en" : "subscribe",
         email,
         referrer: referrer,
-        roistat: roistat_visit,
+        roistat: getCookie("roistat_visit"),
+        ga: getCookie("_ga"),
       }
       await fetch("/api/application", {
         method: "POST",

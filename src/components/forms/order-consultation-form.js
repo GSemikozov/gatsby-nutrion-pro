@@ -3,6 +3,7 @@ import { FastField, Form, withFormik } from 'formik';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 
+import { getCookie } from '../../helpers';
 import { Button } from '../button';
 import styles from './form.module.css';
 import mainFormStyles from './main-form.module.css';
@@ -110,6 +111,7 @@ export const OrderConsultationForm = withFormik({
     phone: "+420",
     promo: "",
     referrer: "",
+    ga: "",
     success: false,
   }),
   validationSchema: () =>
@@ -129,18 +131,13 @@ export const OrderConsultationForm = withFormik({
         referrer = new URL(document.referrer).hostname
       }
 
-      let roistat_visit =
-        document.cookie.replace(
-          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
-          "$1"
-        ) || ""
-
       let data = {
         form_name: "order-consultation",
         phone,
         promo,
         referrer: referrer,
-        roistat: roistat_visit,
+        roistat: getCookie("roistat_visit"),
+        ga: getCookie("_ga"),
       }
 
       if (props.leadName !== undefined) {

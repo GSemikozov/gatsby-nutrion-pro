@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
 import * as Yup from 'yup';
 
+import { getCookie } from '../../helpers';
 import { Button } from '../button';
 import stylesRadio from '../calculator2/calc.module.css';
 import { Price } from '../voucher-price';
@@ -264,6 +265,7 @@ export const VoucherForm = withFormik({
     utm_term: "",
     utm_content: "",
     referrer: "",
+    ga: "",
     success: false,
   }),
   validationSchema: () =>
@@ -313,11 +315,6 @@ export const VoucherForm = withFormik({
         referrer = new URL(document.referrer).hostname
       }
       let getPrice = document.querySelector('[name="price"]').value
-      let roistat_visit =
-        document.cookie.replace(
-          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
-          "$1"
-        ) || ""
 
       const isEn = document.location.pathname.includes("/en")
 
@@ -335,7 +332,8 @@ export const VoucherForm = withFormik({
         utm_term: UTM_TERM,
         utm_content: UTM_CONTENT,
         referrer: referrer,
-        roistat: roistat_visit,
+        roistat: getCookie("roistat_visit"),
+        ga: getCookie("_ga"),
       }
 
       // await console.log(JSON.stringify(data))

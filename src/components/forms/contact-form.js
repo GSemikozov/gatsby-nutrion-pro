@@ -4,6 +4,7 @@ import React from 'react';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
+import { getCookie } from '../../helpers';
 import { useLangContext } from '../../utils/lang';
 import { Button } from '../button';
 import contactFormStyles from './contact-form.module.css';
@@ -101,6 +102,7 @@ export const ContactForm = withFormik({
   mapPropsToValues: () => ({
     phone: "+420",
     referrer: "",
+    ga: "",
     success: false,
   }),
   validationSchema: () =>
@@ -118,11 +120,6 @@ export const ContactForm = withFormik({
       if (document.referrer !== "") {
         referrer = new URL(document.referrer).hostname
       }
-      let roistat_visit =
-        document.cookie.replace(
-          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
-          "$1"
-        ) || ""
 
       const isEn = document.location.pathname.includes("/en")
 
@@ -130,7 +127,8 @@ export const ContactForm = withFormik({
         form_name: isEn ? "contact_en" : "contact",
         phone,
         referrer: referrer,
-        roistat: roistat_visit,
+        roistat: getCookie("roistat_visit"),
+        ga: getCookie("_ga"),
       }
       await fetch("/api/application", {
         method: "POST",

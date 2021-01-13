@@ -9,6 +9,7 @@ import Select from 'react-select';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
+import { getCookie } from '../../helpers';
 import { Button } from '../button';
 import stylesRadio from '../calculator2/calc.module.css';
 import { Price } from '../price';
@@ -639,6 +640,7 @@ export const MainForm = withFormik({
     utm_term: "",
     utm_content: "",
     referrer: "",
+    ga: "",
     success: false,
   }),
   validationSchema: () =>
@@ -684,11 +686,6 @@ export const MainForm = withFormik({
         referrer = new URL(document.referrer).hostname
       }
       let getPrice = document.querySelector('[name="price"]').value
-      let roistat_visit =
-        document.cookie.replace(
-          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
-          "$1"
-        ) || ""
 
       const isEn = document.location.pathname.includes("/en")
 
@@ -707,7 +704,8 @@ export const MainForm = withFormik({
         utm_term: UTM_TERM,
         utm_content: UTM_CONTENT,
         referrer: referrer,
-        roistat: roistat_visit,
+        roistat: getCookie("roistat_visit"),
+        ga: getCookie("_ga"),
       }
 
       // await console.log(JSON.stringify(data))
@@ -730,7 +728,7 @@ export const MainForm = withFormik({
           pageURL: isEn ? "/en/thank-you" : "/dekovacka-testdrive",
           pageType: "Purchase",
         })
-      }, 2000)
+      }, 300)
     } catch (err) {
       setSubmitting(false)
       setFieldValue("success", false)

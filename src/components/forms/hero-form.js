@@ -4,6 +4,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 
+import { getCookie } from '../../helpers';
 import { Button } from '../button';
 import styles from './form.module.css';
 import heroFormStyles from './hero-form.module.css';
@@ -73,6 +74,7 @@ export const HeroForm = withFormik({
     title: "",
     phone: "+420",
     referrer: "",
+    ga: "",
     success: false,
   }),
   validationSchema: () =>
@@ -101,11 +103,6 @@ export const HeroForm = withFormik({
       if (document.referrer !== "") {
         referrer = new URL(document.referrer).hostname
       }
-      let roistat_visit =
-        document.cookie.replace(
-          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
-          "$1"
-        ) || ""
 
       const isEn = document.location.pathname.includes("/en")
 
@@ -119,7 +116,8 @@ export const HeroForm = withFormik({
         utm_term: UTM_TERM,
         utm_content: UTM_CONTENT,
         referrer: referrer,
-        roistat: roistat_visit,
+        roistat: getCookie("roistat_visit"),
+        ga: getCookie("_ga"),
       }
       await fetch("/api/application", {
         method: "POST",

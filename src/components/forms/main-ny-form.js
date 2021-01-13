@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 
+import { getCookie } from '../../helpers';
 import { Button } from '../button';
 import stylesRadio from '../calculator2/calc.module.css';
 import { PriceNY } from '../price/price-ny-program';
@@ -350,6 +351,7 @@ export const MainFormNY = withFormik({
     utm_term: "",
     utm_content: "",
     referrer: "",
+    ga: "",
     success: false,
   }),
   validationSchema: () =>
@@ -392,11 +394,6 @@ export const MainFormNY = withFormik({
         referrer = new URL(document.referrer).hostname
       }
       let getPrice = document.querySelector('[name="price"]').value
-      let roistat_visit =
-        document.cookie.replace(
-          /(?:(?:^|.*;\s*)roistat_visit\s*\=\s*([^;]*).*$)|^.*$/,
-          "$1"
-        ) || ""
 
       const isEn = document.location.pathname.includes("/en")
 
@@ -414,7 +411,8 @@ export const MainFormNY = withFormik({
         utm_term: UTM_TERM,
         utm_content: UTM_CONTENT,
         referrer: referrer,
-        roistat: roistat_visit,
+        roistat: getCookie("roistat_visit"),
+        ga: getCookie("_ga"),
       }
 
       // await console.log(JSON.stringify(data))
