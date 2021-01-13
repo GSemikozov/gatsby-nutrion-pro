@@ -832,7 +832,7 @@ const OrderFormLayout = ({
                   isSearchable={false}
                   value={{
                     value: values.week,
-                    label: (values.week = 5
+                    label: (values.week == 5
                       ? t("forms.onlineOrderFormWeekLengthOption1")
                       : t("forms.onlineOrderFormWeekLengthOption2")),
                   }}
