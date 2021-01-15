@@ -1,4 +1,3 @@
-// import cx from 'classnames';
 import 'moment/locale/cs';
 import 'react-day-picker/lib/style.css';
 
@@ -26,6 +25,7 @@ import option1Img from './icons/icon-demo.svg';
 import option2Img from './icons/icon-month.svg';
 import orderFormStyles from './order-form.module.css';
 
+// import cx from 'classnames';
 const rePhoneNumber = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/
 
 Yup.addMethod(Yup.string, "phone", function() {
@@ -832,9 +832,10 @@ const OrderFormLayout = ({
                   isSearchable={false}
                   value={{
                     value: values.week,
-                    label: (values.week == 5
-                      ? t("forms.onlineOrderFormWeekLengthOption1")
-                      : t("forms.onlineOrderFormWeekLengthOption2")),
+                    label:
+                      values.week == 5
+                        ? t("forms.onlineOrderFormWeekLengthOption1")
+                        : t("forms.onlineOrderFormWeekLengthOption2"),
                   }}
                   onChange={e => {
                     onSetWeek(e.value)
@@ -1401,7 +1402,7 @@ export const OrderForm = withFormik({
             pageURL: isEn ? "/en/thank-you" : "/dekovacka-testdrive",
             pageType: "Purchase",
           })
-        }, 2000)
+        }, 300)
       } else {
         alert("Something went wrong, please try again!")
       }

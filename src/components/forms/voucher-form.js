@@ -356,7 +356,7 @@ export const VoucherForm = withFormik({
             pageURL: isEn ? "/en/thank-you" : "/dekovacka-testdrive",
             pageType: "Purchase",
           })
-        }, 2000)
+        }, 300)
       } else {
         alert("Something went wrong, please try again!")
       }

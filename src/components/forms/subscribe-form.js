@@ -98,7 +98,7 @@ export const SubscribeForm = withFormik({
           pageURL: isEn ? "/en/thank-you-subscribe" : "/thank-you-subscribe",
           pageType: "Purchase",
         })
-      }, 2000)
+      }, 300)
     } catch (err) {
       setSubmitting(false)
       setFieldValue("success", false)

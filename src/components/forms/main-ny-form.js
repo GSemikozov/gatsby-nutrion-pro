@@ -435,7 +435,7 @@ export const MainFormNY = withFormik({
           pageURL: isEn ? "/en/thank-you" : "/dekovacka-testdrive",
           pageType: "Purchase",
         })
-      }, 2000)
+      }, 300)
     } catch (err) {
       setSubmitting(false)
       setFieldValue("success", false)

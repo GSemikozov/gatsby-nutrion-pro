@@ -145,7 +145,7 @@ export const ContactForm = withFormik({
           pageURL: isEn ? "/en/thank-you-contact" : "/thank-you-contact",
           pageType: "Purchase",
         })
-      }, 2000)
+      }, 300)
     } catch (err) {
       setSubmitting(false)
       setFieldValue("success", false)
