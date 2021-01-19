@@ -4,7 +4,7 @@ import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 
-import { getCookie } from '../../helpers';
+import { getCookie, getReferrer } from '../../helpers';
 import { Button } from '../button';
 import contactFormStyles from './contact-form.module.css';
 import styles from './form.module.css';
@@ -126,10 +126,7 @@ export const ContactForm2 = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
-      let referrer = ""
-      if (document.referrer !== "") {
-        referrer = new URL(document.referrer).hostname
-      }
+      let referrer = getReferrer()
 
       const isEn = document.location.pathname.includes("/en")
 

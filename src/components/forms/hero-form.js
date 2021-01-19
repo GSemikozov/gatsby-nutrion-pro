@@ -4,7 +4,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 
-import { getCookie } from '../../helpers';
+import { getCookie, getReferrer, getUTM } from '../../helpers';
 import { Button } from '../button';
 import styles from './form.module.css';
 import heroFormStyles from './hero-form.module.css';
@@ -91,18 +91,8 @@ export const HeroForm = withFormik({
     { setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
-      let urlString = document.location.href
-      let url = new URL(urlString)
-      let UTM_SOURCE = url.searchParams.get("utm_source")
-      let UTM_MEDIUM = url.searchParams.get("utm_medium")
-      let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
-      let UTM_TERM = url.searchParams.get("utm_term")
-      let UTM_CONTENT = url.searchParams.get("utm_content")
-
-      let referrer = ""
-      if (document.referrer !== "") {
-        referrer = new URL(document.referrer).hostname
-      }
+      const UTMS = getUTM()
+      let referrer = getReferrer()
 
       const isEn = document.location.pathname.includes("/en")
 
@@ -110,11 +100,11 @@ export const HeroForm = withFormik({
         form_name: isEn ? "2days-trial_en" : "2days-trial",
         title,
         phone,
-        utm_source: UTM_SOURCE,
-        utm_medium: UTM_MEDIUM,
-        utm_campaign: UTM_CAMPAIGN,
-        utm_term: UTM_TERM,
-        utm_content: UTM_CONTENT,
+        utm_source: UTMS.UTM_SOURCE,
+        utm_medium: UTMS.UTM_MEDIUM,
+        utm_campaign: UTMS.UTM_CAMPAIGN,
+        utm_term: UTMS.UTM_TERM,
+        utm_content: UTMS.UTM_CONTENT,
         referrer: referrer,
         roistat: getCookie("roistat_visit"),
         ga: getCookie("_ga"),

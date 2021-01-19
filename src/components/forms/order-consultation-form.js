@@ -3,7 +3,7 @@ import { FastField, Form, withFormik } from 'formik';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 
-import { getCookie } from '../../helpers';
+import { getCookie, getReferrer } from '../../helpers';
 import { Button } from '../button';
 import styles from './form.module.css';
 import mainFormStyles from './main-form.module.css';
@@ -126,10 +126,7 @@ export const OrderConsultationForm = withFormik({
     { props, setSubmitting, resetForm, setFieldValue }
   ) => {
     try {
-      let referrer = ""
-      if (document.referrer !== "") {
-        referrer = new URL(document.referrer).hostname
-      }
+      let referrer = getReferrer()
 
       let data = {
         form_name: "order-consultation",
