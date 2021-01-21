@@ -386,6 +386,7 @@ const OrderFormLayout = ({
   const onSetPlan = value => {
     setPlan(value)
     setKcal(Number(kCalOptions[value][gender][menu][0].value))
+    setFieldValue("kcal", Number(kCalOptions[value][gender][menu][0].value))
     if (value === "Nabírat") {
       setMenu3xDisabled(true)
     } else {
@@ -408,6 +409,7 @@ const OrderFormLayout = ({
   const onSetGender = value => {
     setGender(value)
     setKcal(Number(kCalOptions[plan][value][menu][0].value))
+    setFieldValue("kcal", Number(kCalOptions[plan][value][menu][0].value))
   }
 
   const onSetProgram = value => {
@@ -422,6 +424,7 @@ const OrderFormLayout = ({
   const onSetMenu = value => {
     setMenu(value)
     setKcal(Number(kCalOptions[plan][gender][value][0].value))
+    setFieldValue("kcal", Number(kCalOptions[plan][gender][value][0].value))
     if (value === "2chodové menu") {
       setPlan2Disabled(true)
       setPlan3Disabled(true)
@@ -1357,8 +1360,7 @@ export const OrderForm = withFormik({
         ga: getCookie("_ga"),
       }
 
-      // await console.log(JSON.stringify(data))
-
+      // console.log(JSON.stringify(data))
       const req = await fetch("/api/app/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
