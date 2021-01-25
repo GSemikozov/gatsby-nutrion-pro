@@ -95,12 +95,12 @@ const JobPage = () => {
             Těšíme se na tvoje CV a rádi Tě uvítáme v našem týmu NutritionPro!
           </h3>
           <h3 className={styles.TextSubHeader}>Kontakty:</h3>
-          <a className={styles.jobsEmail} href="mailto:elena@nutritionpro.cz">
-            elena@nutritionpro.cz
+          <a className={styles.jobsEmail} href="mailto:marie@nutritionpro.cz">
+            marie@nutritionpro.cz
           </a>
-          <a className={styles.jobsEmail} href="tel:+420608068463">
+          {/* <a className={styles.jobsEmail} href="tel:+420608068463">
             +420 608 068 463
-          </a>
+          </a> */}
           <br />
           <br />
           <a className={styles.backButton} href="/jobs">

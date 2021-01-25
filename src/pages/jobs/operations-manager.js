@@ -73,7 +73,7 @@ const JobPage = () => {
           </p>
 
           <h3 className={styles.textSubHeader}>
-            Ждем твое резюме с сопроводительным письмом на нашу почту <a className={styles.text} href="mailto:elena@nutritionpro.cz">elena@nutritionpro.cz.</a>
+            Ждем твое резюме с сопроводительным письмом на нашу почту <a className={styles.text} href="mailto:marie@nutritionpro.cz">marie@nutritionpro.cz.</a>
           </h3>
           <br />
           <p className={styles.text}>
