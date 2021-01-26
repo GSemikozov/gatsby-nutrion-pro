@@ -11,7 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {/* <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> */}
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -91,7 +91,7 @@ export default function HTML(props) {
           `,
         }}
       />
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
           if (window.netlifyIdentity) {
@@ -105,7 +105,7 @@ export default function HTML(props) {
           }
           `,
         }}
-      ></script>
+      ></script> */}
     </html>
   )
 }
