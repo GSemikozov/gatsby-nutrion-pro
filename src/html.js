@@ -11,6 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -90,6 +91,21 @@ export default function HTML(props) {
           `,
         }}
       />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+              if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                  document.location.href = "/admin/";
+                });
+              }
+            });
+          }
+          `,
+        }}
+      ></script>
     </html>
   )
 }
