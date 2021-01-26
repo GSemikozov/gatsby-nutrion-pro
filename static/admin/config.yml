@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: gatsby-nutrion-pro
   branch: feature-netlify-cms-integration
 
 media_folder: "images/uploads"
