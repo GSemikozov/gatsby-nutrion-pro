@@ -50,7 +50,7 @@ const ImunitaPage = ({ location }) => {
 
   const { show, RenderModal } = useModal()
 
-  const { siteURL } = useSiteMetadata()
+  const { siteUrl } = useSiteMetadata()
 
   return (
     <main id="root">
@@ -248,7 +248,7 @@ const ImunitaPage = ({ location }) => {
           <div className={section3.share}>
             Pomůžeš i sdílením. Děkujeme!{" "}
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${siteURL}${location.pathname}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${siteUrl}${location.pathname}`}
               // href="https://www.facebook.com/nutritionprocz"
               target="_blank"
               className={section3.shareLink}

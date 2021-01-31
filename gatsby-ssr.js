@@ -1,20 +1,20 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
 import i18n from 'i18next';
 import React from 'react';
 import { I18nextProvider } from 'react-i18next';
 
 import { LangProvider } from './src/utils/lang';
 
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/ssr-apis/
+ */
 // const React = require('react');
 // const config = require('./gatsby-config');
 
 // exports.onRenderBody = ({ pathname, setHeadComponents }) => {
 //   setHeadComponents([
-//     <link rel="canonical" href={`${config.siteMetadata.siteURL}${pathname}`} />,
+//     <link rel="canonical" href={`${config.siteMetadata.siteUrl}${pathname}`} />,
 //   ]);
 // };
 

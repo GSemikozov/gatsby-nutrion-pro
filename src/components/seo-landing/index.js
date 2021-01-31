@@ -1,21 +1,21 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
 import useSiteMetadata from '../../hooks/useSiteMetadata';
 
+/**
+ * SEO component that queries for data with
+ *  Gatsby's useStaticQuery React hook
+ *
+ * See: https://www.gatsbyjs.org/docs/use-static-query/
+ */
 function SEOLanding({ lang, meta }) {
   const metaDescription =
     "Imunita pro tebe, imunita pro ně. S každou objednávkou věnujeme 10 jídel zdravotníkům, kteří potřebují posílit imunitu nejvíce. Pomáhej s námi."
   const metaTitle = "Daruj jídlo zdravotníkům i ty!"
 
-  const { siteURL } = useSiteMetadata()
+  const { siteUrl } = useSiteMetadata()
 
   return (
     <Helmet
@@ -25,7 +25,7 @@ function SEOLanding({ lang, meta }) {
       title={metaTitle}
       titleTemplate={metaTitle}
       description={metaDescription}
-      image={`${siteURL}/images/fb-cover.png`}
+      image={`${siteUrl}/images/fb-cover.png`}
       meta={[
         {
           name: `description`,
@@ -45,7 +45,7 @@ function SEOLanding({ lang, meta }) {
         },
         {
           property: `og:image`,
-          content: `${siteURL}/images/nutritionpro_fb_banner.png`,
+          content: `${siteUrl}/images/nutritionpro_fb_banner.png`,
         },
         {
           property: `og:image:width`,
@@ -61,7 +61,7 @@ function SEOLanding({ lang, meta }) {
         },
         {
           property: `og:url`,
-          content: `${siteURL}/imunita/`,
+          content: `${siteUrl}/imunita/`,
         },
         {
           name: `twitter:card`,

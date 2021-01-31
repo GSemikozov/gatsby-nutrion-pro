@@ -1,18 +1,15 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import PropTypes from 'prop-types';
-import React from 'react';
-import Helmet from 'react-helmet';
-import { useTranslation } from 'react-i18next';
-
-import { useLangContext } from '../utils/lang';
-
 /**
  * SEO component that queries for data with
  *  Gatsby's useStaticQuery React hook
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-function SEO({ description, meta, title }) {
+import { graphql, useStaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import Helmet from 'react-helmet';
+
+function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,16 +18,12 @@ function SEO({ description, meta, title }) {
             title
             description
             author
-            supportedLanguages
-            siteUrl
           }
         }
       }
     `
   )
 
-  const { lang, originalPath } = useLangContext()
-  const host = site.siteMetadata.siteUrl
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -39,7 +32,7 @@ function SEO({ description, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`NutritionPro - ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -73,30 +66,24 @@ function SEO({ description, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
-      link={[
-        {
-          rel: "canonical",
-          href: `${host}/${lang}${originalPath}`,
-        },
-        {
-          rel: "alternate",
-          hrefLang: "x-default",
-          href: `${host}${originalPath}`,
-        },
-        ...site.siteMetadata.supportedLanguages.map(supportedLang => ({
-          rel: "alternate",
-          hrefLang: supportedLang,
-          href: `${host}/${supportedLang}${originalPath}`,
-        })),
-      ]}
+      ]
+        .concat(
+          keywords.length > 0
+            ? {
+                name: `keywords`,
+                content: keywords.join(`, `),
+              }
+            : []
+        )
+        .concat(meta)}
     />
   )
 }
 
 SEO.defaultProps = {
-  lang: `cz`,
+  lang: `en`,
   meta: [],
+  keywords: [],
   description: ``,
 }
 
@@ -104,6 +91,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
+  keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 }
 
