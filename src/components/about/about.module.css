@@ -68,6 +68,8 @@
 }
 
 .aboutOptionImg {
+  max-width: 100px;
+  display: block;
   margin-bottom: 22px;
 }
 
