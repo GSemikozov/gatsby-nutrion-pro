@@ -35,7 +35,16 @@ module.exports = {
     ],
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        enableIdentityWidget: true,
+        publicPath: `cms-admin`,
+        // htmlTitle: `Content Manager`,
+        // htmlFavicon: `path/to/favicon`,
+        // includeRobots: false,
+      },
+    },
     {
       resolve: "gatsby-plugin-local-search",
       options: {
