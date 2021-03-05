@@ -70,7 +70,7 @@
 .aboutOptionImg {
   max-width: 100px;
   display: block;
-  margin-bottom: 22px;
+  margin: 0 auto 22px;
 }
 
 .aboutOptionTitle {

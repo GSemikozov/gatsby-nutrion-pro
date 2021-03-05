@@ -34,6 +34,9 @@ module.exports = {
       },
     ],
   },
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-netlify-cms`,

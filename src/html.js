@@ -37,29 +37,6 @@ export default function HTML(props) {
       <script
         dangerouslySetInnerHTML={{
           __html: `
-          let urlString = document.location.href
-          let url = new URL(urlString)
-          let UTM_SOURCE = url.searchParams.get("utm_source")
-          let UTM_MEDIUM = url.searchParams.get("utm_medium")
-          let UTM_CAMPAIGN = url.searchParams.get("utm_campaign")
-          let UTM_TERM = url.searchParams.get("utm_term")
-          let UTM_CONTENT = url.searchParams.get("utm_content")
-          let UTMS = {
-            source: UTM_SOURCE,
-            medium: UTM_MEDIUM,
-            campaign: UTM_CAMPAIGN,
-            term: UTM_TERM,
-            content: UTM_CONTENT
-          }
-          if (UTM_SOURCE !== null) {
-            localStorage.setItem('UTM', JSON.stringify(UTMS));
-          }
-          `,
-        }}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
           if (document.referrer !== "" && document.referrer !== null) {
             const referrer = new URL(document.referrer).hostname
             localStorage.setItem('referrer', JSON.stringify(referrer));

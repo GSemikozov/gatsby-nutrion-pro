@@ -29,6 +29,7 @@ body {
 }
 
 a {
+  box-shadow: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
