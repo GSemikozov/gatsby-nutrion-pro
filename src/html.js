@@ -34,7 +34,7 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
           let urlString = document.location.href
@@ -66,7 +66,7 @@ export default function HTML(props) {
           }
           `,
         }}
-      />
+      /> */}
     </html>
   )
 }

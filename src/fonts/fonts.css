@@ -2,9 +2,9 @@
 
 @font-face {
   font-family: "Sketch-Block";
-  src: url("Sketch_Block.ttf");
-  src: local("Sketch-Block"), local("Sketch Block"),
-    url("Sketch_Block.ttf") format("truetype");
+  src: url("./Sketch_Block.ttf");
+  src: local("./Sketch-Block"), local("Sketch Block"),
+    url("./Sketch_Block.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
