@@ -1,0 +1,24 @@
+.section {
+    padding: 100px 0 115px 0;
+    background: #f8f8f8;
+}
+
+.sectionList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.sectionListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 253px;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #353643;
+}
