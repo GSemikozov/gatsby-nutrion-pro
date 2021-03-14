@@ -9,6 +9,10 @@
   text-decoration: none;
 }
 
+.langMenuItem.isLight {
+  color: var(--color-black);
+}
+
 .active {
   opacity: 1;
 }

@@ -1,0 +1,10 @@
+.menuOrderInfo {
+  padding: 50px 0;
+  background: #f8f8f8;
+}
+
+@media all and (min-width: 768px) {
+  .menuOrderInfo {
+    padding: 100px 0;
+  }
+}

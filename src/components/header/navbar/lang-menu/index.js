@@ -37,7 +37,7 @@ const LanguageMenu = props => {
 
 export default LanguageMenu
 
-export const LanguagePicker = () => {
+export const LanguagePicker = ({ isLight = false }) => {
   const { lang, originalPath } = useLangContext()
   const { site } = useStaticQuery(
     graphql`
@@ -64,6 +64,7 @@ export const LanguagePicker = () => {
           key={supportedLang}
           className={cx(styles.langMenuItem, {
             [styles.active]: lang === supportedLang,
+            [styles.isLight]: isLight,
           })}
         >
           {supportedLang.toUpperCase()}

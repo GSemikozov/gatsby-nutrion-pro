@@ -1,0 +1,52 @@
+.button {
+  background: #ffffff;
+  box-shadow: 0px 20px 40px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  height: 54px;
+  padding: 20px 30px;
+  display: inline-flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #353643;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.button[disabled] {
+  cursor: default;
+  pointer-events: none;
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: none;
+}
+
+.button.buttomSm {
+  height: 50px;
+  padding: 15px 17px;
+}
+
+.button.noShadow {
+  box-shadow: none;
+}
+
+.button.buttonBlock {
+  width: 100%;
+}
+
+.button.buttonPrimary {
+  background: #3dc383;
+  color: #fcfcfc;
+}
+
+.button.buttonSecondary {
+  background: #ff8f62;
+  color: #fcfcfc;
+}

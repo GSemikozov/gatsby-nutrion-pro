@@ -17,6 +17,10 @@
   cursor: pointer;
 }
 
+.navbarItem.isLight {
+  color: var(--color-black);
+}
+
 .navbarItem > * {
   text-decoration: none;
   white-space: nowrap;
@@ -33,117 +37,4 @@
   margin-left: 24px;
   cursor: pointer;
   /* display: none; */
-}
-
-.contacts {
-  order: 1;
-}
-
-.location {
-  order: 1;
-  overflow: initial;
-  background-color: inherit;
-}
-
-.location {
-  padding: 2px 21px 5px;
-  border-radius: 1px;
-  position: relative;
-  background-color: #373c3f;
-  border-top-left-radius: 8px;
-  margin-left: 20px;
-}
-
-.location .mapMark {
-  position: absolute;
-  left: 0;
-  top: -7px;
-  margin-left: -11px;
-}
-
-.location .angleDown {
-  position: absolute;
-  right: 8px;
-  bottom: 6px;
-}
-
-.profile {
-  order: 3;
-}
-
-.mobileMenuLink {
-  order: 4;
-  width: 28px;
-  text-align: right;
-}
-
-.mobileMenuLink > * {
-  vertical-align: middle;
-}
-
-@media all and (min-width: 768px) {
-  .navbarItem:not(.location) {
-    padding: 2px 3px 5px;
-  }
-
-  .contacts,
-  .location,
-  .profile,
-  .mobileMenuLink {
-    order: unset;
-  }
-
-  .contacts {
-    position: relative;
-  }
-
-  .contacts .phoneNumber {
-    display: inline-block;
-    padding-left: 20px;
-  }
-
-  .contacts .additionalInfo {
-    display: inline-block;
-    position: absolute;
-    font-size: 13px;
-    top: 100%;
-    left: 0;
-    right: 0;
-  }
-
-  .contacts:hover .additionalInfo,
-  .contacts:focus .additionalInfo,
-  .contacts:active .additionalInfo {
-    color: var(--color-white);
-  }
-
-  .contacts .days {
-    color: var(--color-green);
-  }
-
-  .contacts .iconPhone {
-    position: absolute;
-    top: -7px;
-    left: -11px;
-  }
-
-  .profile {
-    position: relative;
-  }
-
-  .profile .iconProfile {
-    margin-top: -7px;
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .desktopText {
-    display: inline-block;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .navbarItem {
-    margin-left: 64px;
-  }
 }
