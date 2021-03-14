@@ -108,8 +108,7 @@ select {
   }
 }
 
-.visible-mobile,
-#mobile-menu-link {
+.visible-mobile {
   display: none;
 }
 
@@ -128,10 +127,6 @@ select {
 
   .visible-mobile {
     display: block !important;
-  }
-
-  #mobile-menu-link {
-    display: block;
   }
 
   .modalContactForm {
@@ -158,4 +153,32 @@ select {
 
 .pointer-none {
   pointer-events: none;
+}
+
+.fancyUnderlineText span {
+  background-repeat: repeat-x;
+  background-position: left 0% bottom 25%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(61, 195, 131, 0.5) 0%,
+    rgba(61, 195, 131, 0.5) 100%
+  );
+  background-size: 100% 5px;
+}
+
+.sectionTitleNew {
+  font-family: "Source Serif Pro", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  margin: 0 0 32px;
+}
+
+@media all and (min-width: 678px) {
+  .sectionTitleNew {
+    font-size: 36px;
+    line-height: 45px;
+    margin: 0 0 50px;
+  }
 }

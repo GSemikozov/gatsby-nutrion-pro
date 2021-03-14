@@ -1,0 +1,91 @@
+.hero {
+  height: 880px;
+}
+
+.heroTitle {
+  font-family: "Source Serif Pro", serif;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.heroInner {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heroCarousel {
+  min-width: 320px;
+  width: 100%;
+  min-height: 320px;
+  position: relative;
+}
+
+.heroCarouselHiddenText {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media all and (min-width: 1024px) {
+  .heroTitle {
+    font-size: 80px;
+    line-height: 100px;
+    text-align: left;
+  }
+
+  .heroInner {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .heroCarouselWrapper {
+    margin-left: 6%;
+    padding-right: 85px;
+  }
+
+  .heroCarousel {
+    min-width: 830px;
+    width: 830px;
+    height: 830px;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.buttons .button {
+  margin: 15px 15px 15px 0;
+  overflow: hidden;
+}
+
+.button .buttonIcon {
+  margin-right: 8px;
+}
+
+@media all and (min-width: 768px) {
+  .buttons {
+    margin-top: 45px;
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+  }
+}
