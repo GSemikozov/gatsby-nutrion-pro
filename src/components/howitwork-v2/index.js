@@ -26,6 +26,9 @@ export const HowItWork = () => {
               <img src={icon1} className={styles.icon} alt="icon" />
             </div>
             <div className={styles.title}>{t("home.howItWorks.option1")}</div>
+            <div className={styles.sectionListNumber}>
+            <span>1</span>
+            </div>
           </div>
 
           <div className={styles.sectionListItem}>
@@ -33,12 +36,18 @@ export const HowItWork = () => {
               <img src={icon2} className={styles.icon} alt="icon" />
             </div>
             <div className={styles.title}>{t("home.howItWorks.option2")}</div>
+            <div className={styles.sectionListNumber}>
+            <span>2</span>
+            </div>
           </div>
           <div className={styles.sectionListItem}>
             <div className={styles.sectionListImg}>
               <img src={icon3} className={styles.icon} alt="icon" />
             </div>
             <div className={styles.title}>{t("home.howItWorks.option3")}</div>
+            <div className={styles.sectionListNumber}>
+            <span>3</span>
+            </div>
           </div>
 
           <div className={styles.sectionListItem}>
@@ -46,12 +55,18 @@ export const HowItWork = () => {
               <img src={icon4} className={styles.icon} alt="icon" />
             </div>
             <div className={styles.title}>{t("home.howItWorks.option4")}</div>
+            <div className={styles.sectionListNumber}>
+            <span>4</span>
+            </div>
           </div>
           <div className={styles.sectionListItem}>
             <div className={styles.sectionListImg}>
               <img src={icon5} className={styles.icon} alt="icon" />
             </div>
             <div className={styles.title}>{t("home.howItWorks.option5")}</div>
+            <div className={styles.sectionListNumber}>
+            <span>5</span>
+            </div>
           </div>
         </div>
       </Container>
