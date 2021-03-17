@@ -1,0 +1,51 @@
+.section {
+    padding: 100px 0 115px 0;
+    background: #f8f8f8;
+}
+
+.sectionList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.sectionListItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 253px;
+  height: 233px;
+  padding: 21px 0 12px 0;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #353643;
+  font-weight: 600;
+}
+
+.sectionListNumber {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: var(--color-white);
+  font-size: 20px;
+  color: #3DC383;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+@media all and (max-width: 1024px) {
+  .section {
+    padding: 50px 0 75px 0;
+  }
+  .sectionList {
+    flex-direction: column;
+    align-items: center;
+  }
+}
