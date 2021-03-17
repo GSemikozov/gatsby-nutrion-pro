@@ -9,7 +9,6 @@ import icon3 from './icons/icon-howItWork3.svg';
 import icon4 from './icons/icon-howItWork4.svg';
 import icon5 from './icons/icon-howItWork5.svg';
 
-
 export const HowItWork = () => {
   const { t } = useTranslation()
   return (
@@ -20,14 +19,13 @@ export const HowItWork = () => {
           Jak to <span>funguje</span>
         </h3>
         <div className={styles.sectionList}>
-          
           <div className={styles.sectionListItem}>
             <div className={styles.sectionListImg}>
               <img src={icon1} className={styles.icon} alt="icon" />
             </div>
             <div className={styles.title}>{t("home.howItWorks.option1")}</div>
             <div className={styles.sectionListNumber}>
-            <span>1</span>
+              <span>1</span>
             </div>
           </div>
 
@@ -37,7 +35,7 @@ export const HowItWork = () => {
             </div>
             <div className={styles.title}>{t("home.howItWorks.option2")}</div>
             <div className={styles.sectionListNumber}>
-            <span>2</span>
+              <span>2</span>
             </div>
           </div>
           <div className={styles.sectionListItem}>
@@ -46,7 +44,7 @@ export const HowItWork = () => {
             </div>
             <div className={styles.title}>{t("home.howItWorks.option3")}</div>
             <div className={styles.sectionListNumber}>
-            <span>3</span>
+              <span>3</span>
             </div>
           </div>
 
@@ -56,7 +54,7 @@ export const HowItWork = () => {
             </div>
             <div className={styles.title}>{t("home.howItWorks.option4")}</div>
             <div className={styles.sectionListNumber}>
-            <span>4</span>
+              <span>4</span>
             </div>
           </div>
           <div className={styles.sectionListItem}>
@@ -65,7 +63,7 @@ export const HowItWork = () => {
             </div>
             <div className={styles.title}>{t("home.howItWorks.option5")}</div>
             <div className={styles.sectionListNumber}>
-            <span>5</span>
+              <span>5</span>
             </div>
           </div>
         </div>

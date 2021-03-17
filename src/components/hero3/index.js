@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Button2 } from '../button2';
 import { Container } from '../container';
+import CarouselPlaceholder from './hero-carousel-placeholder.svg';
 import styles from './hero3.module.css';
 
 export const Hero3 = () => {
@@ -39,6 +40,7 @@ export const Hero3 = () => {
           </div>
           <div className={styles.heroCarouselWrapper}>
             <div className={styles.heroCarousel}>
+              <img src={CarouselPlaceholder} style={{maxWidth: "100%"}} alt="placeholder" />
               <div className={styles.heroCarouselHiddenText}>
                 <strong>carousel</strong>
               </div>
