@@ -1,0 +1,81 @@
+.contactForm {
+  /**/
+  flex-grow: 1;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactForm .contactFormButton {
+  width: 100%;
+}
+
+.contactForm .inputField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  box-shadow: 0px 20px 20px -6px rgba(216, 216, 216, 0.25);
+  border-radius: 40px;
+}
+
+.contactForm .label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.contactForm .label {
+  font-size: 20px;
+  color: var(--color-white);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contactForm .input {
+  height: 45px;
+  padding: 10px 10px 10px 30px;
+  min-width: 237px;
+  border: none;
+  font-size: 16px;
+}
+
+.contactFormButton {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  height: 45px;
+  font-size: 16px;
+}
+
+@media all and (min-width: 1024px) {
+  .contactForm {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .contactForm .contactFormButton {
+    margin-left: 24px;
+    font-size: 20px;
+    height: 54px;
+  }
+
+  .contactForm .inputField {
+    margin-bottom: 0;
+  }
+
+  .contactForm .input {
+    min-width: 337px;
+    font-size: 20px;
+    padding: 16px 17px;
+    height: 54px;
+  }
+}
