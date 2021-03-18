@@ -1,0 +1,36 @@
+.section {
+  padding: 100px 0 100px 0;
+  background: #ffffff;
+}
+
+.sectionList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.sectionListItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 219px;
+  height: 271px;
+  padding: 0px 46px 32px 46px;
+  background: #F8F8F8;
+  border-radius: 80px;
+  margin: 130px 0 0 0;
+  position: relative;
+}
+
+.sectionListImg {
+
+}
+
+.title {
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #353643;
+  font-weight: bold;
+}

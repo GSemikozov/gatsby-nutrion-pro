@@ -166,6 +166,10 @@ select {
   background-size: 100% 10px;
 }
 
+.fancyUnderlineText.fancyUnderlineText--orange span{
+   background-image: linear-gradient( 90deg, #FDE7DE 0%, #FDE7DE 100% ) !important;
+}
+
 .sectionTitleNew {
   font-family: "Source Serif Pro", serif;
   font-style: normal;
