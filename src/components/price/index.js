@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import { FastField } from 'formik';
+import BackgroundImage from 'gatsby-background-image';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -16,7 +17,7 @@ function getDiscountPricePerPortion(price, plan) {
   return ((price - price * (discountPortion / 100)).toFixed() / 5).toFixed()
 }
 
-export const Price = ({ price = 0, oldPrice, plan = null }) => {
+export const Price = ({ price = 0, oldPrice, plan = null, isNew = false }) => {
   const [discountPrice, setDiscountPrice] = useState(null)
   const [discountPortionPrice, setDiscountPortionPrice] = useState(null)
   const { t } = useTranslation()
@@ -29,13 +30,19 @@ export const Price = ({ price = 0, oldPrice, plan = null }) => {
   }, [price, oldPrice, plan])
 
   return (
-    <div className={styles.price}>
+    <div
+      className={styles.price}
+      style={{ backgroundColor: isNew ? "#F8F8F8" : "" }}
+    >
       <div className={styles.priceCol}>
         <h5 className={styles.priceTitle}>{t("forms.priceTitlePart1")}</h5>
         <p className={styles.priceText}>{t("forms.priceTitlePart2")}</p>
       </div>
       <div className={cx(styles.priceCol, styles.priceColRight)}>
-        <div className={styles.priceValue}>
+        <div
+          className={cx(styles.priceValue, { [styles.priceValueNew]: isNew })}
+          style={{ color: isNew ? "#3DC383" : "" }}
+        >
           <span id="price">{price ? price : "420"}</span> Kč
         </div>
         <div style={{ textDecoration: "line-through" }}>

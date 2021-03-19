@@ -12,10 +12,11 @@ export const Button2 = ({
   handleClick,
   disabled = false,
   className,
+  buttonType = "button",
 }) => {
   return (
     <button
-      type="button"
+      type={buttonType}
       className={cx(
         styles.button,
         {

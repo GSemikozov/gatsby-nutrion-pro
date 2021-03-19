@@ -13,7 +13,7 @@ export const Hero3 = () => {
         <div className={styles.heroInner}>
           <div className={styles.heroInfo}>
             <h1 className={styles.heroTitle}>Speciální krabičková dieta</h1>
-            <div class={styles.buttons}>
+            <div className={styles.buttons}>
               <Button2 className={styles.button}>
                 <svg
                   className={styles.buttonIcon}
@@ -26,9 +26,9 @@ export const Hero3 = () => {
                   <path
                     d="m13.5413 15.625h2.0834m-10.41669 6.25v-16.66667c0-.55253.21949-1.08244.61019-1.47314s.92061-.61019 1.47314-.61019h10.41666c.5525 0 1.0824.21949 1.4731.61019s.6102.92061.6102 1.47314v16.66667l-3.125-2.0833-2.0833 2.0833-2.0833-2.0833-2.0834 2.0833-2.08329-2.0833zm4.16666-14.58333h6.25003zm0 4.16663h6.25003z"
                     stroke="#353643"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5625"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5625"
                   />
                 </svg>
                 Spočitat cenu
@@ -40,7 +40,11 @@ export const Hero3 = () => {
           </div>
           <div className={styles.heroCarouselWrapper}>
             <div className={styles.heroCarousel}>
-              <img src={CarouselPlaceholder} style={{maxWidth: "100%"}} alt="placeholder" />
+              <img
+                src={CarouselPlaceholder}
+                style={{ maxWidth: "100%" }}
+                alt="placeholder"
+              />
               <div className={styles.heroCarouselHiddenText}>
                 <strong>carousel</strong>
               </div>

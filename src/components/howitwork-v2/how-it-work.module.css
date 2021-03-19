@@ -14,7 +14,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 253px;
+  width: 20%;
+  max-width: 233px;
   height: 233px;
   padding: 21px 0 12px 0;
 }
