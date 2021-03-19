@@ -54,21 +54,20 @@
 }
 
 .radio.radioBtn label {
-  height: 45px;
+  height: 60px;
   max-width: 100%;
   width: 100%;
-  border: 1px solid #e6f4ea;
-  background-color: #e6f4ea;
-  color: var(--color-green);
-  border-radius: 5px;
-  padding: 3px 8px;
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  color: #353643;
+  border-radius: 20px;
+  padding: 10px 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: 16px;
-  line-height: 19px;
-  white-space: normal;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
 }
 
 .radio.radioBtn.disabled label {
@@ -82,28 +81,19 @@
 }
 
 .radio.radioBtn:not(.withImg) input[type="radio"]:checked + label {
-  background-color: #59b35f;
-  border-color: #59b35f;
+  border-color: #3dc383;
+  background-color: #3dc383;
   color: var(--color-white);
+  font-weight: 600;
   padding-left: 24px;
-}
-
-.radio.radioBtn input[type="radio"]:checked + label:before {
-  content: "";
-  background: url("../forms/icons/icon-check.svg") center no-repeat;
-  background-size: cover;
-  width: 15px;
-  height: 14px;
-  line-height: 19px;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  transform: translate(0, -50%);
 }
 
 .radio.radioBtn.withImg {
   margin-right: 16px;
+}
+
+.radio.radioBtn .img {
+  margin-right: 12px;
 }
 
 .radio.radioBtn.withImg:last-child {
@@ -150,6 +140,111 @@
   max-height: 48px;
   display: block;
   margin: 0 auto 8px;
+}
+
+.radioGroup {
+  padding: 24px 10px;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.radioGroup .radioPanel {
+  background: linear-gradient(90deg, #51d395 0%, #2eb474 100%);
+  border-radius: 20px;
+  padding: 3px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radioGroup .radioPanel label {
+  background-color: transparent;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  height: 27px;
+  border: none;
+}
+
+.radioGroup .radioPanel input[type="radio"]:checked + label {
+  background-color: #fff !important;
+  color: #353643 !important;
+  padding-left: 10px !important;
+}
+
+.radioLines {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.radioLines input[type="radio"] {
+  display: none;
+}
+
+.radioLines label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioLine {
+  width: 25%;
+}
+
+.radioLines label {
+  text-align: center;
+}
+
+.radioLines label .text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 8px;
+}
+
+.radioLines label .line {
+  position: relative;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  border: 4px solid #f8f8f8;
+  box-sizing: content-box;
+}
+
+.radioLines label .line:before,
+.radioLines label .line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 90px;
+  height: 4px;
+  top: 3px;
+  background-color: #f8f8f8;
+}
+
+.radioLines label .line:before {
+  right: calc(100% + 4px);
+}
+
+.radioLines label .line:after {
+  left: calc(100% + 4px);
+}
+
+.radioLines input[type="radio"]:checked + label .line {
+  border-color: #3dc383;
+  background-color: #fff;
 }
 
 .radio label {
@@ -202,7 +297,15 @@
   .radioBtns3 {
     flex-direction: column;
   }
+  .radioBtns2 {
+    flex-direction: column;
+  }
   .radioBtns3 > .radioBtn {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+  .radioBtns2 > .radioBtn {
     flex: 1 0 100%;
     max-width: 100%;
     margin-bottom: 16px;
@@ -218,138 +321,5 @@
     top: auto;
     left: auto;
     transform: none;
-  }
-}
-
-.section {
-  padding: 50px 0;
-  background-color: #f8f8f8;
-  position: relative;
-  overflow: hidden;
-}
-
-.section:before {
-  content: "";
-  width: 300px;
-  height: 900px;
-  display: none;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-  background: url("./images/pattern-left.png") center no-repeat;
-  background-size: cover;
-}
-
-.section:after {
-  content: "";
-  width: 300px;
-  height: 900px;
-  display: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: url("./images/pattern-right.png") center no-repeat;
-  background-size: cover;
-}
-
-.container {
-  position: relative;
-  z-index: 2;
-}
-
-.formTabs {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom: 100%;
-}
-
-.formTab {
-  background-color: #fff;
-  border-radius: 20px 20px 0 0;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 21px;
-  padding: 7px 44px;
-  position: relative;
-  z-index: 1;
-  height: 35px;
-}
-
-.formTab.active,
-.formTab:active,
-.formTab:focus {
-  background-color: #3dc383;
-  color: #fff;
-  z-index: 2;
-}
-
-.formTab:first-child {
-  margin-right: -30px;
-}
-
-.formWrapContainer {
-  position: relative;
-  display: inline-flex;
-  margin: auto;
-  /* Calculator bg */
-  box-shadow: 0px 50px 40px -20px rgba(0, 0, 0, 0.1);
-  background-color: transparent;
-  border-radius: 0px 20px 20px 20px;
-  max-width: 1020px;
-  width: 100%;
-  margin-top: 40px;
-}
-
-.formWrapContainer:before {
-  content: "";
-  width: 300px;
-  height: 310px;
-  display: none;
-  position: absolute;
-  right: 100%;
-  top: 50%;
-  z-index: 1;
-  transform: translate(100px, -50%) rotate(0deg);
-  background: url("./images/dining-napkin.png") center no-repeat;
-  background-size: cover;
-}
-
-.formWrapContainer:after {
-  content: "";
-  width: 328px;
-  height: 406px;
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  z-index: 1;
-  transform: translate(-80px, -50%) rotate(1deg);
-  background: url("./images/food-img-placeholder.png") center no-repeat;
-  background-size: cover;
-}
-
-.formInnerContainer {
-  position: relative;
-  z-index: 2;
-  padding: 10px;
-  background: #ffffff;
-  width: 100%;
-}
-
-@media all and (min-width: 768px) {
-  .section {
-    padding: 100px 0;
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .section:after,
-  .section:before,
-  .formWrapContainer:after,
-  .formWrapContainer:before {
-    display: block;
   }
 }

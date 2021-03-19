@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '../button';
-import styles from '../calculator/calculator.module.css';
+import styles from '../calculator/calculator2.module.css';
 import { Container } from '../container';
-import { MainForm } from '../forms/main-form';
-import { OrderForm } from '../forms/order-form';
+import { MainForm2 } from '../forms/main-form2';
+import { OrderForm2 } from '../forms/order-form2';
 import styles2 from './order-form2.module.css';
 
 export const Order2 = ({ id, className }) => {
@@ -25,19 +25,20 @@ export const Order2 = ({ id, className }) => {
       className={cx(styles2.section, className)}
       id={id && id}
     >
-      <Container className="text-center">
+      <Container className={cx("text-center", styles2.container)}>
         <h3 className={cx("sectionTitle", styles.title, styles2.title)}>
           {t("home.order.title")}
         </h3>
         <div className={styles2.formWrapContainer}>
           <div className={styles2.formInnerContainer}>
-            <div className={cx(styles.typeSelector)}>
+            <div className={cx(styles2.formTabs)}>
               <Button
                 name="submit"
-                type="primary"
-                size="md"
+                type="white"
+                size="sm"
                 className={cx(
-                  form === "calc" ? styles.selectedButton : styles.selectButton
+                  styles2.formTab,
+                  form === "calc" && styles2.active
                 )}
                 handleClick={() => setForm("calc")}
               >
@@ -45,10 +46,11 @@ export const Order2 = ({ id, className }) => {
               </Button>
               <Button
                 name="submit"
-                type="primary"
-                size="md"
+                type="white"
+                size="sm"
                 className={cx(
-                  form === "order" ? styles.selectedButton : styles.selectButton
+                  styles2.formTab,
+                  form === "order" && styles2.active
                 )}
                 handleClick={() => setForm("order")}
               >
@@ -56,8 +58,8 @@ export const Order2 = ({ id, className }) => {
               </Button>
             </div>
 
-            {form === "calc" && <MainForm />}
-            {form === "order" && <OrderForm />}
+            {form === "calc" && <MainForm2 />}
+            {form === "order" && <OrderForm2 />}
           </div>
         </div>
       </Container>
