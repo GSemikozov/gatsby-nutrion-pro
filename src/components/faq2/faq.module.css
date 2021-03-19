@@ -1,16 +1,18 @@
 .section {
-  padding: 34px 0;
+  padding: 50px 0;
+  background-color: #f8f8f8;
 }
 
 .container {
-  padding: 0;
+  /* padding: 0; */
 }
 
 .tabsTop {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 0 24px; */
+  margin: 32px auto 0;
+  max-width: 860px;
 }
 
 .tab {
@@ -18,23 +20,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: transparent;
   box-shadow: none;
   outline: none;
   border: none;
   cursor: pointer;
   margin-bottom: 22px;
+  width: 160px;
+  height: 85px;
+  padding: 13px 13px 20px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  margin-right: 12px;
+}
+
+.tab:last-child {
+  margin-right: 0;
+}
+.tab.active {
+  box-shadow: 0px 20px 30px -6px rgba(134, 134, 134, 0.3);
 }
 
 .tab.active .tabTitle {
-  color: var(--color-green);
+  /* color: var(--color-green); */
 }
 
 .tabTitle {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.2;
-  font-weight: 700;
-  color: #959595;
+  font-weight: 600;
+  color: #353643;
 }
 
 .tabImgWrap {
@@ -42,24 +56,31 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  width: 92px;
+  width: 40px;
   flex-grow: 1;
   margin-bottom: 4px;
 }
 
 .tabImg {
+  max-width: 100%;
 }
 
 .tabsContent {
-  margin-top: 80px;
-  border-top: 1px solid #ccc;
-  counter-reset: item;
+  margin-top: 10px;
 }
 
 .listItem {
-  padding: 17px 24px 0;
-  border-bottom: 1px solid #ccc;
+  padding: 11px 14px 1px;
   position: relative;
+  background: #fdfdfd;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  transition: all 0.3s;
+}
+
+.listItem[opened="true"] {
+  padding-top: 13px;
+  box-shadow: 0px 10px 30px -6px rgba(0, 0, 0, 0.1);
 }
 
 .listTitle {
@@ -67,14 +88,20 @@
   line-height: 1.2;
   font-weight: 500;
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 11px;
   cursor: pointer;
+  padding-left: 26px;
 }
 
 .listTitle:before {
-  content: counter(item) ". ";
-  counter-increment: item;
-  color: var(--color-green);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: url("./icons/faq-icon.svg") center no-repeat;
+  background-size: cover;
 }
 
 .listTitle:hover {
@@ -88,13 +115,13 @@
 .listText {
   font-size: 14px;
   line-height: 1.2;
-  margin-bottom: 17px;
+  margin-bottom: 11px;
   color: #636465;
 }
 
 @media all and (min-width: 1024px) {
   .section {
-    padding: 80px 0;
+    padding: 100px 0;
   }
 
   .container {
@@ -102,14 +129,19 @@
   }
 
   .tabsTop {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* gap: 0 24px; */
     margin-top: 0;
   }
 
+  .tabsContent {
+    margin-top: 60px;
+  }
+
   .tab {
-    flex: 1 0 25%;
-    height: 164px;
+    width: 195px;
+    height: 124px;
+    margin-right: 24px;
     margin-bottom: 0;
   }
 
@@ -118,7 +150,7 @@
   }
 
   .tabTitle {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .tabImgWrap {
@@ -129,24 +161,28 @@
   }
 
   .listItem {
-    padding: 17px 0 0;
+    padding: 11px 38px 1px;
   }
 
   .listTitle > img {
     display: inline-block;
     position: absolute;
-    right: 0;
+    right: -40px;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0, -40%);
   }
 
   .listTitle {
-    font-size: 20px;
-    padding-right: 60px;
+    font-size: 18px;
+    padding-right: 65px;
+  }
+
+  .listTitle:before {
+    top: 4px;
   }
 
   .listText {
-    font-size: 16px;
-    padding-right: 60px;
+    font-size: 18px;
+    padding-right: 65px;
   }
 }
