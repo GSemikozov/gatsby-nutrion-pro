@@ -21,6 +21,12 @@
       "card11Title": "Apple-carrot wafles with creamy sauce",
       "card12Title": "Pumpkin pudding with cream"
     },
+    "food2": {
+      "cardInfoLabel1": "kcal",
+      "cardInfoLabel2": "sach.",
+      "cardInfoLabel3": "bílk.",
+      "cardInfoLabel4": "tuk."
+    },
     "about": {
       "title": "Why NutritionPro?",
       "point1": "Tailored meal plan <1></1> just for your needs",

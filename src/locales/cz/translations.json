@@ -21,6 +21,12 @@
       "card11Title": "Jablečně-mrkvové vafle s krémem",
       "card12Title": "Tykvový nákyp se smetanou"
     },
+    "food2": {
+      "cardInfoLabel1": "kcal",
+      "cardInfoLabel2": "sach.",
+      "cardInfoLabel3": "bílk.",
+      "cardInfoLabel4": "tuk."
+    },
     "about": {
       "title": "Proč NutritionPro?",
       "point1": "Jídelníček na míru <1></1> tvému tělu a cílům",

@@ -21,6 +21,12 @@
   border-radius: 20px;
 }
 
+@media all and (max-width: 767px) {
+  .mainFormWrap {
+    margin-top: 20px;
+  }
+}
+
 .mainFormInfo {
   font-weight: 400;
   font-size: 12px;
