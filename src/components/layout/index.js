@@ -8,7 +8,7 @@ import Helmet from 'react-helmet';
 
 import { withTrans } from '../../i18n/withTrans';
 import { LangProvider } from '../../utils/lang';
-import { Footer } from '../footer';
+import { Footer2 } from '../footer2';
 import { Header } from '../header';
 import { PreHeader } from '../preheader';
 
@@ -44,7 +44,7 @@ const Layout = ({ children, t, i18n, location }) => (
           <Header menuLinks={data.site.siteMetadata.menuLinks} isLight={true} />
           <>
             <main>{children}</main>
-            <Footer />
+            <Footer2 />
           </>
         </div>
       </>
