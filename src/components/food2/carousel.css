@@ -85,7 +85,7 @@
 }
 
 .slick-dots li {
-  margin: 0 16px 0 0 !important;
+  margin: 0 12px 0 0 !important;
 }
 
 .slick-dots li button {
@@ -94,7 +94,7 @@
   background-color: #f3f3f3 !important;
   padding: 0 !important;
   border-radius: 50% !important;
-  margin: 0 !important;
+  margin-right: 0 !important;
 }
 
 .slick-dots li button:before {

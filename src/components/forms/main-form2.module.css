@@ -204,3 +204,10 @@
   font-size: 16px;
   color: #353643;
 }
+
+@media all and (max-width: 767px) {
+  .checkTerms label,
+  .checkTerms label a {
+    font-size: 12px;
+  }
+}

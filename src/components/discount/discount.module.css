@@ -33,6 +33,14 @@
   text-align: center;
 }
 
+@media all and (max-width: 767px) {
+  .discountInfo .title {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 8px 0;
+  }
+}
+
 .discountInfo .text {
   font-size: 18px;
   line-height: 21px;

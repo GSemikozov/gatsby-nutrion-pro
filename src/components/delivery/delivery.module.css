@@ -54,6 +54,23 @@
   padding-left: 32px;
 }
 
+@media all and (max-width: 767px) {
+  .deliveryList {
+    margin: 0 50px;
+  }
+
+  .deliveryList li {
+    font-size: 16px;
+    line-height: 1.15;
+    padding-left: 24px;
+  }
+
+  .deliveryList li:before {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 .deliveryList li:before {
   content: "";
   position: absolute;

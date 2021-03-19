@@ -284,15 +284,19 @@
   }
 
   .formTab {
-    width: calc(50% + 30px);
+    width: 50%;
     padding-left: 30px;
     padding-right: 30px;
     white-space: nowrap;
     font-size: 14px;
   }
 
+  .formTab:first-child {
+    margin-right: 0 !important;
+  }
+
   .formTab:last-child {
-    margin-left: -30px;
+    margin-left: 0;
   }
 }
 

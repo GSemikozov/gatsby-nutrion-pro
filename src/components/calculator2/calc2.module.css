@@ -295,16 +295,16 @@
 
 @media all and (max-width: 767px) {
   .radioBtns3 {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   .radioBtns2 {
     flex-direction: column;
   }
-  .radioBtns3 > .radioBtn {
+  /* .radioBtns3 > .radioBtn {
     flex: 1 0 100%;
     max-width: 100%;
     margin-bottom: 16px;
-  }
+  } */
   .radioBtns2 > .radioBtn {
     flex: 1 0 100%;
     max-width: 100%;
@@ -312,6 +312,18 @@
   }
   .radioBtns3 > .radioBtn:last-child {
     margin-bottom: 0;
+  }
+  .radioBtns3 > .radioBtn label {
+    flex-direction: column;
+    font-size: 14px;
+    padding: 13px 14px 10px !important;
+  }
+  .radioBtns3 > .radioBtn {
+    height: 62px;
+  }
+  .radioBtns3 > .radioBtn label .img {
+    margin-right: 0;
+    max-width: 30px;
   }
   .radio.radioBtn:not(.withImg) input[type="radio"]:checked + label {
     padding-left: initial;
@@ -321,5 +333,9 @@
     top: auto;
     left: auto;
     transform: none;
+  }
+  .radioGroup .radioPanel label,
+  .radioLines label .text {
+    font-size: 14px;
   }
 }
