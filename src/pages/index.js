@@ -7,6 +7,7 @@ import { HowItWork } from '../components/howitwork-v2';
 import { MenuOrderInfo } from '../components/menuOrderInfo';
 import { Order2 } from '../components/order-form2';
 import { Program } from '../components/program-v2/';
+import { Reviews2 } from '../components/reviews2';
 import SEO from '../components/seo';
 
 const IndexPage = () => (
@@ -20,6 +21,7 @@ const IndexPage = () => (
     <HowItWork />
     <FoodCarouselSection2 />
     <DeliverySection />
+    <Reviews2 />
   </>
 )
 

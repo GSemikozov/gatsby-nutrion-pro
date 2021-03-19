@@ -11,7 +11,7 @@
 .deliveryImages {
   display: flex;
   align-items: center;
-  width: calc(100% - 300px);
+  width: calc(100% - 330px);
   position: relative;
   margin-right: 30px;
 }
@@ -112,5 +112,11 @@
 
   .deliveryListWrap {
     align-items: center;
+  }
+}
+
+@media all and (min-width: 1900px) {
+  .deliveryContent {
+    margin-top: 100px;
   }
 }

@@ -26,11 +26,16 @@ export const DeliverySection = () => (
         </div>
         <div className={styles.deliveryListWrap}>
           <div style={{ marginTop: "-50px" }}>
-            <h3 className={styles.deliveryListTitle}>Jak a kdy dovážíme</h3>
+            <h3 className={styles.deliveryListTitle}>
+              Rozvoz až k tobě ke dvěřím
+            </h3>
             <ul className={styles.deliveryList}>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Rozvážíme po celé Praze zcela zadarmo.</li>
+              <li>Vyber si přesný čas doručení (2hodinová časová okna).</li>
+              <li>
+                Možnost změnit místo doručení (Stačí nám napsat v den rozvozu do
+                15 hodin).
+              </li>
             </ul>
           </div>
         </div>
