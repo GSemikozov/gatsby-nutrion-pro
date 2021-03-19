@@ -54,10 +54,10 @@
   transform: scale(1.25);
 }
 
-.reviews-carousel .slick-list {
+/* .reviews-carousel .slick-list {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
-}
+} */
 
 @media all and (max-width: 767px) {
   .slick-arrow.slick-prev,

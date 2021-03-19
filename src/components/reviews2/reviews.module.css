@@ -1,0 +1,83 @@
+.section {
+  padding: 50px 0 100px;
+  background-color: #fdfdfd;
+  position: relative;
+  overflow: hidden;
+}
+
+.section:before {
+  content: "";
+  width: 300px;
+  height: 900px;
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background: url("./images/pattern-left.png") center no-repeat;
+  background-size: cover;
+}
+
+.section:after {
+  content: "";
+  width: 300px;
+  height: 900px;
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: url("./images/pattern-right.png") center no-repeat;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1360px;
+}
+
+.carouselList {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.carouselItem {
+  padding: 0 10px 40px;
+  overflow: hidden;
+}
+
+.carouselItemImg {
+  border-radius: 20px;
+  box-shadow: 0px 24px 40px -8px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+}
+
+/* .slick-slider.reviews-carousel .slick-slide {
+  padding: 0 20px !important;
+} */
+
+@media all and (max-width: 480px) {
+  .carouselItem {
+    padding: 0 24px 40px;
+  }
+
+  .carouselItemImg {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .section {
+    padding: 100px 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .section:after,
+  .section:before,
+  .formWrapContainer:after,
+  .formWrapContainer:before {
+    display: block;
+  }
+}
