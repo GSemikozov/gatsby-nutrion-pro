@@ -7,7 +7,7 @@
 .slick-arrow.slick-prev:hover,
 .slick-arrow.slick-prev:focus,
 .slick-arrow.slick-prev:active {
-  background: var(--color-white) url("./icons/icon-arrow-left.svg") center
+  background: var(--color-white) url("./icons/slider-control-left.svg") center
     no-repeat;
   background-size: auto;
 }
@@ -16,7 +16,7 @@
 .slick-arrow.slick-next:hover,
 .slick-arrow.slick-next:focus,
 .slick-arrow.slick-next:active {
-  background: var(--color-white) url("./icons/icon-arrow-right.svg") center
+  background: var(--color-white) url("./icons/slider-control-right.svg") center
     no-repeat;
 }
 
@@ -63,6 +63,7 @@
   .slick-arrow.slick-prev,
   .slick-arrow.slick-next {
     top: 100px;
+    display: none !important;
   }
 
   .slick-arrow.slick-prev {
@@ -72,6 +73,31 @@
   .slick-arrow.slick-next {
     right: -10px;
   }
+}
+
+.slick-dots {
+  bottom: -60px !important;
+}
+
+.slick-dots li {
+  margin: 0 16px 0 0 !important;
+}
+
+.slick-dots li button {
+  width: 14px !important;
+  height: 14px !important;
+  background-color: #f3f3f3 !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+}
+
+.slick-dots li button:before {
+  display: none !important;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #3dc383 !important;
 }
 
 @media all and (min-width: 768px) {
@@ -89,8 +115,8 @@
   .slick-arrow.slick-prev:hover,
   .slick-arrow.slick-prev:focus,
   .slick-arrow.slick-prev:active {
-    background: var(--color-grey) url("./icons/icon-arrow-left.svg") center
-      no-repeat;
+    background: var(--color-white) url("./icons/slider-control-left.svg") center
+      no-repeat !important;
     background-size: auto;
   }
 
@@ -98,15 +124,15 @@
   .slick-arrow.slick-next:hover,
   .slick-arrow.slick-next:focus,
   .slick-arrow.slick-next:active {
-    background: var(--color-grey) url("./icons/icon-arrow-right.svg") center
-      no-repeat;
+    background: var(--color-white) url("./icons/slider-control-right.svg")
+      center no-repeat !important;
     background-size: auto;
   }
 
   .slick-arrow.slick-prev,
   .slick-arrow.slick-next {
-    width: 70px;
-    height: 70px;
+    width: 123px;
+    height: 123px;
     border-radius: 50%;
   }
 

@@ -278,6 +278,24 @@
   height: 35px;
 }
 
+@media all and (max-width: 767px) {
+  .formTabs {
+    right: 0;
+  }
+
+  .formTab {
+    width: calc(50% + 30px);
+    padding-left: 30px;
+    padding-right: 30px;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .formTab:last-child {
+    margin-left: -30px;
+  }
+}
+
 .formTab.active,
 .formTab:active,
 .formTab:focus {

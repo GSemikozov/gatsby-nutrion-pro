@@ -1,8 +1,57 @@
 .foodCarouselSection {
   position: relative;
   z-index: 0;
-  padding: 48px 0;
+  padding: 50px 20px 100px;
   overflow: hidden;
+}
+
+.foodCarouselControls {
+  display: flex;
+  overflow-x: auto;
+  max-width: 928px;
+  padding: 0 48px 48px;
+  width: 100%;
+  margin: 0 auto 100px;
+  display: none;
+}
+
+.foodCarouselControl {
+  width: 128px;
+  padding: 5px;
+  margin-right: 48px;
+  background: rgba(244, 244, 244, 0.7);
+  border-radius: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.foodCarouselControl:last-child {
+  margin-right: 0;
+}
+
+.foodCarouselControl.active {
+  background: rgba(244, 244, 244, 1);
+  box-shadow: 0px 20px 30px -6px rgba(134, 134, 134, 0.3);
+}
+
+.foodCarouselControl img {
+  margin-bottom: 12px;
+  display: block;
+  max-width: 100%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.foodCarouselControl .text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #353643;
+  margin-bottom: 20px;
 }
 
 .carouselItem {
@@ -14,6 +63,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 10px;
 }
 
 .foodCardList li {
@@ -24,17 +74,22 @@
 }
 
 .foodCardList li .el {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background-color: var(--color-grey-light);
+  background-color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  color: #909394;
+  color: #b7b5b5;
+}
+
+.foodCardList li:first-child .el {
+  background-color: #ffffff;
+  border: 1px solid #3dc383;
 }
 
 .foodCardList li:first-child .el {
@@ -61,7 +116,7 @@
 
 @media all and (min-width: 768px) {
   .foodCarouselSection {
-    padding: 80px 0;
+    padding: 100px 0;
   }
 
   .carouselItem {

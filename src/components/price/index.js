@@ -32,7 +32,10 @@ export const Price = ({ price = 0, oldPrice, plan = null, isNew = false }) => {
   return (
     <div
       className={styles.price}
-      style={{ backgroundColor: isNew ? "#F8F8F8" : "" }}
+      style={{
+        backgroundColor: isNew ? "#F8F8F8" : "",
+        borderRadius: isNew ? "20px" : "",
+      }}
     >
       <div className={styles.priceCol}>
         <h5 className={styles.priceTitle}>{t("forms.priceTitlePart1")}</h5>

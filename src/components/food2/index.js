@@ -2,6 +2,7 @@ import './carousel.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
+import cx from 'classnames';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
@@ -11,6 +12,7 @@ import { Container } from '../container';
 import { LocalizedLink } from '../localized-link';
 import { FoodCard } from './food-card';
 import styles from './food-carousel.module.css';
+import carouselControlImg1 from './images/obed-image.png';
 
 const FoodCardListItem = ({ text, title }) => (
   <li>
@@ -131,19 +133,19 @@ const FoodCarousel = () => {
         <FoodCardList>
           <FoodCardListItem
             text={item.param1}
-            title={t("general.food.cardInfoLabel1")}
+            title={t("general.food2.cardInfoLabel1")}
           />
           <FoodCardListItem
             text={item.param2}
-            title={t("general.food.cardInfoLabel2")}
+            title={t("general.food2.cardInfoLabel2")}
           />
           <FoodCardListItem
             text={item.param3}
-            title={t("general.food.cardInfoLabel3")}
+            title={t("general.food2.cardInfoLabel3")}
           />
           <FoodCardListItem
             text={item.param4}
-            title={t("general.food.cardInfoLabel4")}
+            title={t("general.food2.cardInfoLabel4")}
           />
         </FoodCardList>
       </FoodCard>
@@ -151,33 +153,74 @@ const FoodCarousel = () => {
   ))
 
   const settings = {
+    dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false,
+    // appendDots: dots => {
+    //   return (
+    //     <div>
+    //       <ul>
+    //         {dots.map((item, index) => {
+    //           return <li key={index}>this is {item.props.children}</li>
+    //         })}
+    //       </ul>
+    //     </div>
+    //   )
+    // },
     responsive: [
       {
         breakpoint: 10000,
         settings: {
           slidesToShow: 3,
+          dots: false,
         },
       },
       {
         breakpoint: 900,
         settings: {
           slidesToShow: 2,
+          dots: false,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
+          // dots: true,
         },
       },
     ],
   }
   return (
     slidesData !== null &&
-    slidesData.length > 0 && <Slider {...settings}>{slides}</Slider>
+    slidesData.length > 0 && (
+      <div>
+        <div className={styles.foodCarouselControls}>
+          <div className={cx(styles.foodCarouselControl, styles.active)}>
+            <img src={carouselControlImg1} alt="picture" />
+            <span className={styles.text}>Text</span>
+          </div>
+          <div className={styles.foodCarouselControl}>
+            <img src={carouselControlImg1} alt="picture" />
+            <span className={styles.text}>Text</span>
+          </div>
+          <div className={styles.foodCarouselControl}>
+            <img src={carouselControlImg1} alt="picture" />
+            <span className={styles.text}>Text</span>
+          </div>
+          <div className={styles.foodCarouselControl}>
+            <img src={carouselControlImg1} alt="picture" />
+            <span className={styles.text}>Text</span>
+          </div>
+          <div className={styles.foodCarouselControl}>
+            <img src={carouselControlImg1} alt="picture" />
+            <span className={styles.text}>Text</span>
+          </div>
+        </div>
+        <Slider {...settings}>{slides}</Slider>
+      </div>
+    )
   )
 }
 
@@ -187,15 +230,10 @@ export const FoodCarouselSection2 = () => {
   return (
     <section className={styles.foodCarouselSection} id="food">
       <Container>
-        <h3 className="sectionTitle text-center">{t("general.food.title")}</h3>
+        <h3 className="fancyUnderlineText sectionTitleNew text-center">
+          <span>Jaká jídla</span> tě s námi čekají?
+        </h3>
         <FoodCarousel />
-        <div className="text-center">
-          <Button type="outline" size="lg" className={styles.outsideButton}>
-            <LocalizedLink to="/ukazka-menu" style={{ padding: "14px 20px" }}>
-              {t("general.food.CTA")}
-            </LocalizedLink>
-          </Button>
-        </div>
       </Container>
     </section>
   )
