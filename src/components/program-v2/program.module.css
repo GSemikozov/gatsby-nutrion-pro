@@ -4,9 +4,9 @@
 }
 
 .sectionList {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  justify-items: center;
 }
 
 .sectionListItem {
@@ -24,7 +24,29 @@
 }
 
 .sectionListImg {
+  position: absolute;
+  top: -25%;
+  width: 298px;
+  height: 298px;
+  background-repeat: no-repeat;
+  background-position: center top;  
+}
 
+.sectionListImg1 {
+  background-image: url(./images/Card1.png);  
+}
+
+.sectionListImg2 {
+  background-image: url(./images/Card2.png); 
+  background-position-x: 25px; 
+}
+
+.sectionListImg3 {
+  background-image: url(./images/Card3.png);  
+}
+
+.sectionListImg4 {
+  background-image: url(./images/Card4.png);  
 }
 
 .title {
@@ -33,4 +55,39 @@
   text-align: center;
   color: #353643;
   font-weight: bold;
+}
+
+@media all and (max-width: 1024px) {
+  .section {
+    padding: 50px 14px 50px 14px;
+  }
+
+  .sectionList {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 45px;
+  }
+
+  .sectionListItem {
+    width: 142px;
+    height: 177px;
+    padding: 0 27px 21px 27px;
+    border-radius: 52px;
+    margin: 25px 0 0 0;
+  }
+
+  .sectionListImg {
+    width: 195px;
+    height: 195px;
+    background-size: auto 150px;
+  }
+
+  .sectionListImg2 {
+  background-position-x: 12px; 
+  }
+
+  .title {
+    font-size: 13.1105px;
+    line-height: 16px;
+  }
 }
