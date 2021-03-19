@@ -19,6 +19,11 @@
   white-space: nowrap;
 }
 
+.button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 @media all and (min-width: 768px) {
   .button {
     height: 54px;

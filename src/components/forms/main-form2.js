@@ -484,8 +484,8 @@ const MainFormLayout = ({
                 error={errors.menu}
                 touched={touched.menu}
                 onChange={e => {
-                  onSetMenu(e.value)
-                  setFieldValue("menu", e.value)
+                  onSetMenu(e.target.value)
+                  setFieldValue("menu", e.target.value)
                 }}
                 className={stylesRadio.radioGroup}
               >
