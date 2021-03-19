@@ -1,0 +1,115 @@
+.discount {
+  padding: 50px 0;
+  background-color: #fdfdfd;
+}
+
+.discountInfoWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.middleColumn {
+  max-width: 738px;
+}
+
+.topCol {
+  border-radius: 20px 20px 0 0;
+}
+
+.discountInfo {
+  background: #f8f8f8;
+  padding: 14px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discountInfo .title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 8px;
+  text-align: center;
+}
+
+.discountInfo .text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.image.imageFirst {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0 40px;
+}
+
+.image {
+  display: none;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+.formWrap {
+  padding: 28px 36px;
+  border-radius: 0 0 20px 20px;
+}
+
+.discountAmount {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 16px 0 0;
+  width: 167px;
+  box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.05);
+}
+
+@media all and (min-width: 768px) {
+  .discount {
+    padding: 100px 0;
+  }
+
+  .image.imageFirst {
+    padding: 0;
+  }
+
+  .discountInfoWrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .topCol {
+    border-radius: 20px;
+  }
+
+  .discountInfo {
+    border-radius: 20px;
+  }
+
+  .discountInfo .title {
+    margin: 8px 24px;
+  }
+
+  .twoCols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+
+  .image {
+    display: block;
+  }
+
+  .formWrap {
+    padding: 38px 83px;
+    margin-top: 20px;
+  }
+}

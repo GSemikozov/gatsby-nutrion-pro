@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { DeliverySection } from '../components/delivery';
+import { DiscountSection } from '../components/discount';
+import { FAQ2 } from '../components/faq2';
 import { FoodCarouselSection2 } from '../components/food2';
 import { Hero3 } from '../components/hero3';
 import { HowItWork } from '../components/howitwork-v2';
@@ -18,10 +20,12 @@ const IndexPage = () => (
     <MenuOrderInfo />
     <Program />
     <Order2 />
-    <HowItWork />
     <FoodCarouselSection2 />
     <DeliverySection />
     <Reviews2 />
+    <HowItWork />
+    <DiscountSection />
+    <FAQ2 />
   </>
 )
 
