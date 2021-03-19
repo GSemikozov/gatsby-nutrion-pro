@@ -1,0 +1,120 @@
+.slick-arrow.slick-prev:before,
+.slick-arrow.slick-next:before {
+  display: none;
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-prev:focus,
+.slick-arrow.slick-prev:active {
+  background: var(--color-white) url("./icons/icon-arrow-left.svg") center
+    no-repeat;
+  background-size: auto;
+}
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-next:focus,
+.slick-arrow.slick-next:active {
+  background: var(--color-white) url("./icons/icon-arrow-right.svg") center
+    no-repeat;
+}
+
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover {
+  opacity: 1;
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  width: 24px;
+  height: 77px;
+  z-index: 3;
+}
+
+.slick-arrow.slick-prev {
+  left: 0px;
+}
+
+.slick-arrow.slick-next {
+  right: 0px;
+}
+
+.slick-slider .slick-list {
+  margin: 0 20px;
+  overflow: hidden;
+}
+
+.slick-slider .slick-slide,
+.slick-slide * {
+  outline: none;
+}
+
+.slick-center {
+  transform: scale(1.25);
+}
+
+.reviews-carousel .slick-list {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+@media all and (max-width: 767px) {
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
+    top: 100px;
+  }
+
+  .slick-arrow.slick-prev {
+    left: -10px;
+  }
+
+  .slick-arrow.slick-next {
+    right: -10px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .slick-arrow.slick-prev {
+    left: -16px;
+  }
+
+  .slick-arrow.slick-next {
+    right: -16px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-prev:hover,
+  .slick-arrow.slick-prev:focus,
+  .slick-arrow.slick-prev:active {
+    background: var(--color-grey) url("./icons/icon-arrow-left.svg") center
+      no-repeat;
+    background-size: auto;
+  }
+
+  .slick-arrow.slick-next,
+  .slick-arrow.slick-next:hover,
+  .slick-arrow.slick-next:focus,
+  .slick-arrow.slick-next:active {
+    background: var(--color-grey) url("./icons/icon-arrow-right.svg") center
+      no-repeat;
+    background-size: auto;
+  }
+
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .slick-arrow.slick-prev {
+    left: -40px;
+  }
+
+  .slick-arrow.slick-next {
+    right: -40px;
+  }
+}
