@@ -1,12 +1,19 @@
 import cx from 'classnames';
 import React from 'react';
 
+import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import { Button2 } from '../button2';
 import { Container } from '../container';
 import CarouselPlaceholder from './hero-carousel-placeholder.svg';
 import styles from './hero3.module.css';
 
 export const Hero3 = () => {
+  const scroll = useSmoothScroll()
+
+  const onLinkClick = selector => () => {
+    scroll.animateScroll(document.getElementById(selector))
+  }
+
   return (
     <section className={styles.hero}>
       <Container>
@@ -14,7 +21,10 @@ export const Hero3 = () => {
           <div className={styles.heroInfo}>
             <h1 className={styles.heroTitle}>Speciální krabičková dieta</h1>
             <div className={styles.buttons}>
-              <Button2 className={styles.button}>
+              <Button2
+                className={styles.button}
+                handleClick={onLinkClick("menu")}
+              >
                 <svg
                   className={styles.buttonIcon}
                   fill="none"
@@ -33,7 +43,11 @@ export const Hero3 = () => {
                 </svg>
                 Spočitat cenu
               </Button2>
-              <Button2 className={styles.button} color="primary">
+              <Button2
+                className={styles.button}
+                color="primary"
+                handleClick={onLinkClick("calculator")}
+              >
                 Objednat online
               </Button2>
             </div>

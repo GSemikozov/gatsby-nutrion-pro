@@ -87,6 +87,7 @@
 
 @media all and (min-width: 1024px) {
   .buttons {
+    display: flex;
     margin-top: 45px;
     justify-content: flex-start;
     position: relative;

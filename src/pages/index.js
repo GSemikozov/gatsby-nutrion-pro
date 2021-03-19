@@ -17,9 +17,9 @@ const IndexPage = () => (
     <SEO title="Home" />
     {/* componetns here */}
     <Hero3 />
-    <MenuOrderInfo />
+    <MenuOrderInfo id="menu" />
     <Program />
-    <Order2 />
+    <Order2 id="calculator" />
     <FoodCarouselSection2 />
     <DeliverySection />
     <Reviews2 />
