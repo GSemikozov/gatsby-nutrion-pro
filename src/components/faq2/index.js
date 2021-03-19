@@ -5,10 +5,12 @@ import { useTranslation } from 'react-i18next';
 import { Container } from '../container';
 import styles from './faq.module.css';
 import AngleDownIcon from './icons/angle-down.svg';
-import Img4 from './icons/catering.svg';
-import Img1 from './icons/chef.svg';
-import Img2 from './icons/dining.svg';
-import Img3 from './icons/healthy-food.svg';
+import Img4 from './icons/icon1.svg';
+import Img1 from './icons/icon2.svg';
+import Img2 from './icons/icon3.svg';
+import Img3 from './icons/icon4.svg';
+import lessIcon from './icons/less-info.svg';
+import moreIcon from './icons/more-info.svg';
 import PlusIcon from './icons/plus.svg';
 
 const section0Texts = [
@@ -148,7 +150,10 @@ export const FAQ2 = () => {
   return (
     <section className={styles.section} id="faq">
       <Container className={styles.container}>
-        <h3 className="sectionTitle text-center">{t("home.qa.title")}</h3>
+        <h3 className="fancyUnderlineText sectionTitleNew text-center">
+          {/* {t("home.qa.title")} */}
+          Často kladené <span>otázky</span>
+        </h3>
         <div className={styles.tabsTop}>
           <button
             type="button"
@@ -210,9 +215,9 @@ export const FAQ2 = () => {
               <h4 className={styles.listTitle}>
                 {question}{" "}
                 {openedQuestion === index ? (
-                  <img src={AngleDownIcon} alt="icon" />
+                  <img src={lessIcon} alt="icon" />
                 ) : (
-                  <img src={PlusIcon} alt="icon" />
+                  <img src={moreIcon} alt="icon" />
                 )}
               </h4>
               <p className={styles.listText}>
