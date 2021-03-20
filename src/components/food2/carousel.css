@@ -81,7 +81,11 @@
 }
 
 .slick-dots {
-  bottom: -60px !important;
+  bottom: -76px !important;
+}
+
+.reviews-carousel .slick-dots {
+  bottom: -40px !important;
 }
 
 .slick-dots li {

@@ -127,6 +127,12 @@
     padding-top: 100px;
   }
 
+  .deliveryListTitle {
+    max-width: 250px;
+    margin: 0 auto 30px;
+    font-size: 20px;
+  }
+
   .deliveryListWrap {
     align-items: center;
   }

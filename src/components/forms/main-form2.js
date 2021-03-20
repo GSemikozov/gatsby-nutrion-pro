@@ -845,7 +845,7 @@ const MainFormLayout = ({
             </label>
           </div>
           <p className={mainFormStyles.mainFormInfo}>
-            {t("forms.mainFormCTAdesc")}
+            *{t("forms.mainFormCTAdesc")}
           </p>
           <div className={mainFormStyles.buttons}>
             <Button2

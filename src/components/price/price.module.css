@@ -117,5 +117,7 @@
   .priceTitle,
   .priceText {
     text-align: initial;
+    font-size: 16px;
+    line-height: 19px;
   }
 }

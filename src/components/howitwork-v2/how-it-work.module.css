@@ -20,12 +20,6 @@
   padding: 21px 0 12px 0;
 }
 
-@media all and (max-width: 767px) {
-  .sectionListItem {
-    width: 80%;
-  }
-}
-
 .title {
   font-size: 18px;
   line-height: 21px;
@@ -45,6 +39,24 @@
   justify-content: center;
   align-items: center;
   font-weight: 600;
+}
+
+@media all and (max-width: 767px) {
+  .sectionListItem {
+    width: 80%;
+    height: auto;
+    padding-top: 40px;
+  }
+
+  .sectionListItem:first-child {
+    padding-top: 20px;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 14px 0;
+  }
 }
 
 @media all and (max-width: 1024px) {

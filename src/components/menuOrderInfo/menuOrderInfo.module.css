@@ -136,6 +136,12 @@
   align-items: center;
 }
 
+@media all and (max-width: 480px) {
+  .formWrapper {
+    margin: 0 16px;
+  }
+}
+
 @media all and (min-width: 768px) {
   .menuOrderInfo {
     padding: 100px 0;

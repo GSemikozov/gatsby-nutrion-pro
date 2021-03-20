@@ -26,8 +26,15 @@ export const Order2 = ({ id, className }) => {
       id={id && id}
     >
       <Container className={cx("text-center", styles2.container)}>
-        <h3 className={cx("sectionTitle", styles.title, styles2.title)}>
-          {t("home.order.title")}
+        <h3
+          className={cx(
+            "fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center",
+            styles.title,
+            styles2.title
+          )}
+        >
+          {/* {t("home.order.title")} */}
+          Objednat <span>teď</span>
         </h3>
         <div className={styles2.formWrapContainer}>
           <div className={styles2.formInnerContainer}>

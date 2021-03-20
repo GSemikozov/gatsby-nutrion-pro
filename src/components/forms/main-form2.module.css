@@ -33,12 +33,13 @@
   line-height: 13px;
   flex-grow: 1;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 4px;
   margin-bottom: 20px;
 }
 
 .inputField {
   padding: 0;
+  margin-bottom: 16px;
 }
 
 .inputFieldLabel {
@@ -49,7 +50,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  margin: 0 0 20px;
+  margin: 0 0 8px;
   text-align: center;
 }
 
@@ -88,6 +89,7 @@
   }
   .inputField {
     padding: 0 16px;
+    margin-bottom: 22px;
   }
   .inputFieldLabel {
     display: block;
@@ -101,10 +103,12 @@
     text-align: left;
     font-size: 20px;
     line-height: 24px;
+    margin: 0 0 20px;
   }
   .mainFormInfo {
     font-size: 16px;
     line-height: 19px;
+    margin-top: 8px;
     margin-bottom: 16px;
     text-align: initial;
   }

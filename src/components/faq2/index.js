@@ -161,7 +161,7 @@ export const FAQ2 = () => {
             onClick={() => setOpenedSection(0)}
           >
             <div className={styles.tabImgWrap}>
-              <img src={Img1} className={styles.tabImg} alt="icon" />
+              <img src={Img3} className={styles.tabImg} alt="icon" />
             </div>
 
             <div className={styles.tabTitle}>Jídelníček na míru</div>
@@ -173,7 +173,7 @@ export const FAQ2 = () => {
             onClick={() => setOpenedSection(1)}
           >
             <div className={styles.tabImgWrap}>
-              <img src={Img2} className={styles.tabImg} alt="icon" />
+              <img src={Img4} className={styles.tabImg} alt="icon" />
             </div>
 
             <div className={styles.tabTitle}>Suroviny</div>
@@ -185,7 +185,7 @@ export const FAQ2 = () => {
             onClick={() => setOpenedSection(2)}
           >
             <div className={styles.tabImgWrap}>
-              <img src={Img3} className={styles.tabImg} alt="icon" />
+              <img src={Img1} className={styles.tabImg} alt="icon" />
             </div>
 
             <div className={styles.tabTitle}>Rozvoz a platba</div>
@@ -197,7 +197,7 @@ export const FAQ2 = () => {
             onClick={() => setOpenedSection(3)}
           >
             <div className={styles.tabImgWrap}>
-              <img src={Img4} className={styles.tabImg} alt="icon" />
+              <img src={Img2} className={styles.tabImg} alt="icon" />
             </div>
 
             <div className={styles.tabTitle}>Způsob konzumace</div>

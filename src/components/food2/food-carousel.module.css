@@ -74,15 +74,15 @@
 }
 
 .foodCardList li .el {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #b7b5b5;
 }
@@ -97,7 +97,7 @@
 }
 
 .foodCardList li .title {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
   font-weight: 300;
   text-align: center;
@@ -121,6 +121,16 @@
 
   .carouselItem {
     padding: 0 8px;
+  }
+
+  .foodCardList li .el {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .foodCardList li .title {
+    font-size: 16px;
   }
 }
 
