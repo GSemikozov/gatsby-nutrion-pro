@@ -5,7 +5,6 @@
 
 .deliveryContent {
   display: flex;
-  margin-top: 68px;
 }
 
 .deliveryImages {
@@ -96,10 +95,6 @@
     padding: 50px 0;
   }
 
-  .deliveryImages {
-    padding-top: 60px;
-  }
-
   .deliveryImageCar {
     max-width: 70%;
     margin-bottom: 0;
@@ -119,12 +114,13 @@
 @media all and (max-width: 600px) {
   .deliveryContent {
     flex-direction: column;
-    margin-top: 100px;
   }
 
   .deliveryImages {
     width: 100%;
-    padding-top: 100px;
+    margin-right: 0;
+    margin-top: -50px;
+    margin-bottom: 20px;
   }
 
   .deliveryListTitle {
@@ -138,8 +134,23 @@
   }
 }
 
-@media all and (min-width: 1900px) {
-  .deliveryContent {
-    margin-top: 100px;
+.deliveryImageDesktop {
+  display: none;
+  max-width: 100%;
+}
+
+.deliveryImageMobile {
+  display: block;
+  max-width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .deliveryImageDesktop {
+    display: block;
+    max-width: 100%;
+  }
+
+  .deliveryImageMobile {
+    display: none;
   }
 }

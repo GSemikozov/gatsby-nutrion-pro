@@ -4,8 +4,8 @@ import React from 'react';
 import { Container } from '../container';
 import { ContactFormNew } from '../forms/contact-form-new';
 import styles from './discount.module.css';
-import leftImage from './left-image.png';
-import rightImage from './right-image.png';
+import leftImage from './img_left.svg';
+import rightImage from './img_right.svg';
 
 export const DiscountSection = () => (
   <section className={styles.discount}>

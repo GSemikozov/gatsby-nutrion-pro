@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Container } from '../container';
-import carPicture from './car.png';
 import styles from './delivery.module.css';
-import mapPicture from './map.jpg';
+import mapImgMob from './NP_web_assets/map-mob.svg';
+import mapImg from './NP_web_assets/map.svg';
 
 export const DeliverySection = () => (
   <section className={styles.delivery}>
@@ -11,16 +11,17 @@ export const DeliverySection = () => (
       <h3 className="fancyUnderlineText sectionTitleNew text-center">
         Doprava po Praze <span>zdarma</span>
       </h3>
+      <img src={Map} style={{ display: "block" }} />
       <div className={styles.deliveryContent}>
         <div className={styles.deliveryImages}>
           <img
-            src={carPicture}
-            className={styles.deliveryImageCar}
+            src={mapImg}
+            className={styles.deliveryImageDesktop}
             alt="car picture"
           />
           <img
-            src={mapPicture}
-            className={styles.deliveryImageMap}
+            src={mapImgMob}
+            className={styles.deliveryImageMobile}
             alt="map picture"
           />
         </div>

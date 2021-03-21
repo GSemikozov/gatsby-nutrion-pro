@@ -43,13 +43,13 @@
 }
 
 .carouselItem {
-  padding: 0 10px 40px;
+  padding: 0;
   overflow: hidden;
 }
 
 .carouselItemImg {
-  border-radius: 20px;
-  box-shadow: 0px 24px 40px -8px rgba(0, 0, 0, 0.15);
+  /* border-radius: 20px;
+  box-shadow: 0px 24px 40px -8px rgba(0, 0, 0, 0.15); */
   max-width: 100%;
 }
 
@@ -59,7 +59,7 @@
 
 @media all and (max-width: 480px) {
   .carouselItem {
-    padding: 0 24px 40px;
+    /* padding: 0 12px; */
   }
 
   .carouselItemImg {
