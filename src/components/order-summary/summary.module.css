@@ -139,7 +139,7 @@
 }
 
 .fillField {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   /* background-color: #F8F8F2; */
   padding: 7px;
 }
@@ -153,7 +153,7 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
-
+  justify-self: flex-start;
   color: #909394;
 }
 
@@ -163,5 +163,5 @@
   line-height: 22px;
   float: right;
 
-  color: #1A1E20;
+  color: #1a1e20;
 }

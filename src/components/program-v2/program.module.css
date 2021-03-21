@@ -9,6 +9,10 @@
   justify-items: center;
 }
 
+.sectionList > a {
+  text-decoration: none;
+}
+
 .sectionListItem {
   display: flex;
   flex-direction: column;
@@ -17,7 +21,7 @@
   width: 219px;
   height: 271px;
   padding: 0px 46px 32px 46px;
-  background: #F8F8F8;
+  background: #f8f8f8;
   border-radius: 80px;
   margin: 130px 0 0 0;
   position: relative;
@@ -29,24 +33,25 @@
   width: 298px;
   height: 298px;
   background-repeat: no-repeat;
-  background-position: center top;  
+  background-position: center top;
+  filter: drop-shadow(0px 4px 41px rgba(61, 195, 131, 0.2));
 }
 
 .sectionListImg1 {
-  background-image: url(./images/Card1.png);  
+  background-image: url(./images/Card1.png);
 }
 
 .sectionListImg2 {
-  background-image: url(./images/Card2.png); 
-  background-position-x: 25px; 
+  background-image: url(./images/Card2.png);
+  background-position-x: 25px;
 }
 
 .sectionListImg3 {
-  background-image: url(./images/Card3.png);  
+  background-image: url(./images/Card3.png);
 }
 
 .sectionListImg4 {
-  background-image: url(./images/Card4.png);  
+  background-image: url(./images/Card4.png);
 }
 
 .title {
@@ -55,6 +60,7 @@
   text-align: center;
   color: #353643;
   font-weight: bold;
+  font-family: "Source Serif Pro", sans-serif;
 }
 
 @media all and (max-width: 1024px) {
@@ -83,7 +89,7 @@
   }
 
   .sectionListImg2 {
-  background-position-x: 12px; 
+    background-position-x: 12px;
   }
 
   .title {

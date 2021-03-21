@@ -5,7 +5,7 @@ import styles from './button.module.css';
 
 export const Button = ({
   type = "primary",
-  buttonType = "button",
+  buttonType,
   className,
   handleClick,
   children,
@@ -13,7 +13,7 @@ export const Button = ({
 }) =>
   type === "unstyled" ? (
     <button
-      type={buttonType}
+      type={buttonType || "button"}
       className={cx(className, {
         [styles.unstyled]: type === "unstyled",
       })}

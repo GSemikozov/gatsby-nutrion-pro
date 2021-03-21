@@ -123,7 +123,7 @@ const MainFormLayout = ({
   const [menu2xDisabled, setMenu2xDisabled] = useState(false)
   const [checkTerms, setCheckTerms] = useState(false)
   const [checkTerms2, setCheckTerms2] = useState(false)
-  const [osob, setOsob] = useState("1")
+  const [osob, setOsob] = useState("1 osoba")
   const [oldPrice, setOldPrice] = useState(null)
 
   const onSetPlan = value => {
@@ -295,16 +295,16 @@ const MainFormLayout = ({
       }
     }
 
-    if (osob === "1") {
+    if (osob === "1 osoba") {
       setOldPrice(null)
     }
 
-    if (osob === "2") {
+    if (osob === "2 osoby") {
       setOldPrice(price)
       price = (price - price * (10 / 100)).toFixed()
     }
 
-    if (osob === "3" || osob === "Více než 3") {
+    if (osob === "3 osoby" || osob === ">3") {
       setOldPrice(price)
       price = (price - price * (20 / 100)).toFixed()
     }
@@ -327,13 +327,13 @@ const MainFormLayout = ({
 
   const getPersonSelectLabel = value => {
     switch (value) {
-      case "1":
+      case "1 osoba":
         return t("forms.mainFormNumberOfPersonOption1")
-      case "2":
+      case "2 osoby":
         return t("forms.mainFormNumberOfPersonOption2")
-      case "3":
+      case "3 osoby":
         return t("forms.mainFormNumberOfPersonOption3")
-      case "Více než 3":
+      case ">3":
         return t("forms.mainFormNumberOfPersonOption4")
       default:
         return
@@ -873,7 +873,7 @@ export const MainForm2 = withFormik({
     plan: "Zhubnout",
     program: "2 týdny",
     menu: "5chodové menu",
-    osob: "1",
+    osob: "1 osoba",
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",

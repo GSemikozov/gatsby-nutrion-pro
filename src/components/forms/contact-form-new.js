@@ -47,6 +47,7 @@ export const ContactFormLayout = ({
       </div>
       <Button2
         color="secondary"
+        buttonType="submit"
         disabled={isSubmitting}
         className={contactFormStyles.contactFormButton}
       >
@@ -97,7 +98,9 @@ export const ContactFormNew = withFormik({
         window.location.href = isEn ? "/en/thank-you" : "/thank-you"
         window.dataLayer.push({
           event: "ga.pageview",
-          pageURL: isEn ? "/en/thank-you-contact" : "/thank-you-contact",
+          pageURL: isEn
+            ? "/en/thank-you-contact-new"
+            : "/thank-you-contact-new",
           pageType: "Purchase",
         })
       }, 300)

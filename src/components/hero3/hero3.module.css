@@ -3,6 +3,9 @@
   font-size: 36px;
   line-height: 45px;
   text-align: center;
+  background: linear-gradient(91.97deg, #555661 -2.97%, #353643 94.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heroInner {
@@ -60,11 +63,15 @@
   .hero {
     height: 880px;
   }
+
+  .heroCarousel {
+    min-width: 830px;
+  }
 }
 
 .buttons {
   display: flex;
-  display: none;
+  /* display: none; */
   align-items: center;
   justify-content: center;
   position: fixed;
