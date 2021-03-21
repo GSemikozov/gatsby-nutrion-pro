@@ -1,0 +1,85 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.navbarCol {
+  display: flex;
+  align-items: center;
+}
+
+.navbarCol:first-child {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbarItem {
+  display: inline-flex;
+  margin-left: 44px;
+  font-family: Gilroy, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #353643;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contacts {
+  margin-left: 32px;
+  background: #f8f8f8;
+  border-radius: 40px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.days {
+  color: #3dc383;
+}
+
+.contacts .iconPhone {
+  margin-right: -8px;
+}
+
+.phoneNumber {
+  font-family: Gilroy, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #353643;
+  margin-right: 24px;
+}
+
+.additionalInfo {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 32px;
+}
+
+.navbarItem.isLight {
+  color: var(--color-black);
+}
+
+.navbarItem > * {
+  text-decoration: none;
+  white-space: nowrap;
+  color: inherit;
+  font-size: inherit;
+}
+
+.navbarItem:hover {
+  color: var(--color-green);
+}
+
+.navbarItem.langSwitcher {
+  color: initial;
+  margin-left: 32px;
+  cursor: pointer;
+  align-items: center;
+  /* display: none; */
+}

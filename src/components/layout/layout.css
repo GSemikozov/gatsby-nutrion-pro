@@ -155,6 +155,10 @@ select {
   pointer-events: none;
 }
 
+#mobile-menu-link {
+  margin-left: 32px;
+}
+
 .fancyUnderlineText span {
   background-repeat: repeat-x;
   background-position: left 0% bottom 15%;
@@ -166,8 +170,8 @@ select {
   background-size: 100% 10px;
 }
 
-.fancyUnderlineText.fancyUnderlineText--orange span{
-   background-image: linear-gradient( 90deg, #FDE7DE 0%, #FDE7DE 100% ) !important;
+.fancyUnderlineText.fancyUnderlineText--orange span {
+  background-image: linear-gradient(90deg, #fde7de 0%, #fde7de 100%) !important;
 }
 
 .sectionTitleNew {
