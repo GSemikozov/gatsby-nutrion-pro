@@ -1,6 +1,6 @@
 import { Experiment, Variant } from '@marvelapp/react-ab-test';
 import { graphql, useStaticQuery } from 'gatsby';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, version } from 'react';
 
 import { About } from '../components/about';
 import { DeliverySection } from '../components/delivery';
@@ -81,34 +81,47 @@ const IndexPage = () => {
     `
   )
 
-  // const [pageVersion, setPageVersion] = useState("")
-
-  // useEffect(() => {
-  //   setPageVersion(localStorage.getItem("PUSHTELL-homepage"))
-  // }, [])
+  const [pageVersion, setPageVersion] = useState("")
+  const versions = ["current-version", "new-version"]
 
   useEffect(() => {
-    console.log(
-      "push datalayer pageVersion",
-      localStorage.getItem("PUSHTELL-homepage")
-    )
+    const curVersion = localStorage.getItem("homepage-version")
+    !curVersion
+      ? localStorage.setItem(
+          "homepage-version",
+          versions[getRandomInteger(1, 2)]
+        )
+      : setPageVersion(curVersion)
+  }, [])
+
+  useEffect(() => {
+    console.log("push datalayer pageVersion", pageVersion)
     window.dataLayer &&
       window.dataLayer.push({
         event: "ga.pageview",
-        testovani: localStorage.getItem("PUSHTELL-homepage"),
+        testovani: pageVersion,
       })
-  }, [])
+  }, [pageVersion])
+
+  function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
 
   return (
     <>
-      <Experiment name="homepage">
+      {pageVersion === "current-version" ? (
+        <OldHomepage site={site} />
+      ) : (
+        <NewHomepage site={site} />
+      )}
+      {/* <Experiment name="homepage">
         <Variant name="new-version">
           <NewHomepage site={site} />
         </Variant>
         <Variant name="current-version">
           <OldHomepage site={site} />
         </Variant>
-      </Experiment>
+      </Experiment> */}
     </>
   )
 }
