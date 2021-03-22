@@ -111,7 +111,7 @@ const IndexPage = () => {
 
   return (
     <>
-      {pageVersion === "current-version" ? (
+      {localStorage.getItem("homepage-version") === "current-version" ? (
         <OldHomepage site={site} />
       ) : (
         <NewHomepage site={site} />
