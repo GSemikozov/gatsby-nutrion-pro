@@ -1,6 +1,7 @@
 import { Experiment, Variant } from '@marvelapp/react-ab-test';
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect, useState, version } from 'react';
+import { BounceLoader } from 'react-spinners';
 
 import { About } from '../components/about';
 import { DeliverySection } from '../components/delivery';
@@ -26,6 +27,20 @@ import { Program2 } from '../components/program-v2/';
 import { Reviews } from '../components/reviews';
 import { Reviews2 } from '../components/reviews2';
 import SEO from '../components/seo';
+
+const Loader = () => (
+  <div
+    style={{
+      height: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    <BounceLoader size={100} color="#3DC383" />
+  </div>
+)
 
 const NewHomepage = ({ site }) => (
   <>
@@ -116,7 +131,7 @@ const IndexPage = () => {
       ) : pageVersion === "new-version" ? (
         <NewHomepage site={site} />
       ) : (
-        <div>Loading...</div>
+        <Loader />
       )}
       {/* <Experiment name="homepage">
         <Variant name="new-version">

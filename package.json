@@ -48,6 +48,7 @@
     "react-i18next": "^11.3.5",
     "react-select": "^3.0.8",
     "react-slick": "^0.25.2",
+    "react-spinners": "^0.10.6",
     "react-spring-3d-carousel": "^1.1.5",
     "react-switch": "^5.0.0",
     "react-text-mask": "^5.4.3",
