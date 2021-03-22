@@ -35,7 +35,6 @@ exports.onCreatePage = async ({
       // })
 
       if (page.path === "/") {
-        console.log("---------------special", page.path)
         await createPage({
           ...page,
           // layout: "new.index",
@@ -48,7 +47,6 @@ exports.onCreatePage = async ({
           },
         })
       } else {
-        console.log("---------------general", page.path)
         await createPage({
           ...page,
           path: localizedPath,

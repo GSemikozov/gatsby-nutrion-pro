@@ -133,6 +133,10 @@ select {
     top: 25% !important;
     height: auto !important;
   }
+
+  .wrap_bdf4 {
+    bottom: 100px !important;
+  }
 }
 
 @media all and (min-width: 1024px) {

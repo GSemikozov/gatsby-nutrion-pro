@@ -66,6 +66,11 @@ export const LanguagePicker = ({ isLight = false }) => {
             [styles.active]: lang === supportedLang,
             [styles.isLight]: isLight,
           })}
+          style={{
+            pointerEvents: supportedLang === "en" ? "none" : "",
+            opacity: supportedLang === "en" ? "0.5" : "",
+            cursor: supportedLang === "en" ? "default" : "",
+          }}
         >
           {supportedLang === "cz" ? (
             <svg

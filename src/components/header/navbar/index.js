@@ -41,7 +41,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       </RenderModal>
       <Button
         type="unstyled"
-        className={cx(styles.navbarItem, styles.location)}
+        className={cx(styles.navbarItem, styles.location, "visible-desktop")}
         // handleClick={show}
       >
         <img src={IconMap} className={styles.mapMark} alt="icon" />
@@ -70,7 +70,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       })}
       <a
         href="tel:+420774137352"
-        className={cx(styles.navbarItem, styles.contacts)}
+        className={cx(styles.navbarItem, styles.contacts, "visible-desktop")}
       >
         <img src={IconPhone} className={styles.iconPhone} alt="icon" />
         <span className="visible-desktop">
@@ -94,32 +94,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
         onClick={openMobileMenu()}
         id="mobile-menu-link"
       >
-        {/* <img src={menuVisible ? IconClose : IconMenu} alt="icon" /> */}
-        <svg
-          fill="none"
-          height="40"
-          viewBox="0 0 40 40"
-          width="40"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <clipPath id="a">
-            <path
-              d="m0 0h36.2227v19.0919h-36.2227z"
-              transform="matrix(.70710678 -.70710678 .70710678 .70710678 0 25.6133)"
-            />
-          </clipPath>
-          <g
-            clipPath="url(#a)"
-            stroke="#2c3e50"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.88817"
-          >
-            <path d="m6.93555 21.1079 13.35135-13.35137" />
-            <path d="m18.3799 32.552 13.3514-13.3514" />
-            <path d="m7.88965 31.5984 22.88805-22.88809" />
-          </g>
-        </svg>
+        <img src={menuVisible ? IconClose : IconMenu} alt="icon" />
       </div>
     </div>
   )

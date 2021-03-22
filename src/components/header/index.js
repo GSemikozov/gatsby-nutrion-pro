@@ -49,11 +49,11 @@ export const Header = ({ menuLinks, isLight }) => {
           menuLinks={menuLinks}
           isLight={isLight}
         />
-        {/* <MobileMenu
+        <MobileMenu
           menuVisible={menuVisible}
           menuLinks={menuLinks}
           onCloseMobileMenu={toggleMenu}
-        /> */}
+        />
       </Container>
     </header>
   )
