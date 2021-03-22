@@ -27,6 +27,42 @@ import { Reviews } from '../components/reviews';
 import { Reviews2 } from '../components/reviews2';
 import SEO from '../components/seo';
 
+const NewHomepage = ({ site }) => (
+  <>
+    {site && <Header2 menuLinks={site.siteMetadata.menuLinks} isLight={true} />}
+    <SEO title="Home" />
+    {/* componetns here */}
+    <Hero3 />
+    <MenuOrderInfo id="menu" />
+    <Program2 />
+    <Order2 id="calculator" />
+    <FoodCarouselSection2 />
+    <DeliverySection />
+    <Reviews2 />
+    <HowItWork2 />
+    <DiscountSection />
+    <FAQ2 />
+    <Footer2 />
+  </>
+)
+
+const OldHomepage = ({ site }) => (
+  <>
+    <SEO title="Home" />
+    <Header menuLinks={site.siteMetadata.menuLinks} />
+    <Hero />
+    <Program id="programs" />
+    <Order id="calculator" />
+    <FoodCarouselSection />
+    <About />
+    <Reviews id="reviews" />
+    <HowItWork />
+    <FAQ id="faq" />
+    <PreFooter />
+    <Footer />
+  </>
+)
+
 const IndexPage = () => {
   const { site } = useStaticQuery(
     graphql`
@@ -63,52 +99,14 @@ const IndexPage = () => {
       })
   }, [])
 
-  const NewHomepage = () => (
-    <>
-      {site && (
-        <Header2 menuLinks={site.siteMetadata.menuLinks} isLight={true} />
-      )}
-      <SEO title="Home" />
-      {/* componetns here */}
-      <Hero3 />
-      <MenuOrderInfo id="menu" />
-      <Program2 />
-      <Order2 id="calculator" />
-      <FoodCarouselSection2 />
-      <DeliverySection />
-      <Reviews2 />
-      <HowItWork2 />
-      <DiscountSection />
-      <FAQ2 />
-      <Footer2 />
-    </>
-  )
-
-  const OldHomepage = () => (
-    <>
-      <SEO title="Home" />
-      <Header menuLinks={site.siteMetadata.menuLinks} />
-      <Hero />
-      <Program id="programs" />
-      <Order id="calculator" />
-      <FoodCarouselSection />
-      <About />
-      <Reviews id="reviews" />
-      <HowItWork />
-      <FAQ id="faq" />
-      <PreFooter />
-      <Footer />
-    </>
-  )
-
   return (
     <>
       <Experiment name="homepage">
         <Variant name="new-version">
-          <NewHomepage />
+          <NewHomepage site={site} />
         </Variant>
         <Variant name="current-version">
-          <OldHomepage />
+          <OldHomepage site={site} />
         </Variant>
       </Experiment>
     </>
