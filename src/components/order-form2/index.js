@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '../button';
@@ -9,9 +9,13 @@ import { MainForm2 } from '../forms/main-form2';
 import { OrderForm2 } from '../forms/order-form2';
 import styles2 from './order-form2.module.css';
 
-export const Order2 = ({ id, className }) => {
-  const [form, setForm] = useState("calc")
+export const Order2 = ({ id, className, activeTab = "calc" }) => {
+  const [form, setForm] = useState(activeTab)
   const { t } = useTranslation()
+
+  useEffect(() => {
+    setForm(activeTab)
+  }, [activeTab])
 
   return (
     <section

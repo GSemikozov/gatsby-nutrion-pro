@@ -9,7 +9,7 @@ import rightImage from './img_right.svg';
 
 export const DiscountSection = () => (
   <section className={styles.discount}>
-    <Container>
+    <Container isWide={true}>
       <h3 className="fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center">
         Společná objednávka se <span>slevou až 20%</span>
       </h3>

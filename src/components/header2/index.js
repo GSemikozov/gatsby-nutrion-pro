@@ -31,7 +31,7 @@ export const Header2 = ({ menuLinks, isLight }) => {
         [styles.headerLight]: isLight,
       })}
     >
-      <Container className={styles.headerInner}>
+      <Container isWide={true} className={styles.headerInner}>
         <LocalizedLink
           to="/"
           style={{

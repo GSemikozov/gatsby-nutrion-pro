@@ -20,6 +20,7 @@
 .orderFormWrap {
   display: flex;
   flex-direction: column;
+  text-align: initial;
 }
 
 .orderFormInfo {

@@ -83,7 +83,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
           <span className="visible-desktop">
             <span className={styles.phoneNumber}>+420 774 137 352</span>
           </span>
-          <svg
+          {/* <svg
             className={styles.iconPhone}
             width="27"
             height="27"
@@ -92,6 +92,22 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle cx="13.5" cy="13.5" r="13.5" fill="#3DC383" />
+          </svg> */}
+          <svg
+            className={styles.iconPhone}
+            width="34"
+            height="35"
+            viewBox="0 0 34 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.08333 6.27979H12.75L15.5833 13.3631L12.0417 15.4881C13.5589 18.5645 16.0487 21.0543 19.125 22.5715L21.25 19.0298L28.3333 21.8631V27.5298C28.3333 28.2812 28.0348 29.0019 27.5035 29.5333C26.9721 30.0646 26.2514 30.3631 25.5 30.3631C19.974 30.0273 14.7619 27.6807 10.8472 23.7659C6.93246 19.8512 4.58582 14.6392 4.25 9.11312C4.25 8.36167 4.54851 7.641 5.07986 7.10965C5.61122 6.5783 6.33189 6.27979 7.08333 6.27979"
+              stroke="#3DC383"
+              strokeWidth="2.125"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </a>
         <div className={cx(styles.navbarItem, styles.langSwitcher)}>

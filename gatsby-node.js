@@ -34,15 +34,31 @@ exports.onCreatePage = async ({
       //   statusCode: 301,
       // })
 
-      await createPage({
-        ...page,
-        path: localizedPath,
-        context: {
-          ...page.context,
-          originalPath,
-          lang,
-        },
-      })
+      if (page.path === "/") {
+        console.log("---------------special", page.path)
+        await createPage({
+          ...page,
+          // layout: "new.index",
+          path: localizedPath,
+          context: {
+            ...page.context,
+            layout: "special",
+            originalPath,
+            lang,
+          },
+        })
+      } else {
+        console.log("---------------general", page.path)
+        await createPage({
+          ...page,
+          path: localizedPath,
+          context: {
+            ...page.context,
+            originalPath,
+            lang,
+          },
+        })
+      }
     })
   )
 

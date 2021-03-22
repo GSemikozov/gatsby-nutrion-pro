@@ -159,6 +159,12 @@ select {
   margin-left: 32px;
 }
 
+@media all and (min-width: 1280px) {
+  #mobile-menu-link {
+    display: none;
+  }
+}
+
 .fancyUnderlineText span {
   background-repeat: repeat-x;
   background-position: left 0% bottom 15%;

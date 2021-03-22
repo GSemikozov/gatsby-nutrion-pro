@@ -100,9 +100,9 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 2px;
-  width: 16px;
-  height: 16px;
+  top: 0;
+  width: 24px;
+  height: 24px;
   background: url("./icons/faq-icon.svg") center no-repeat;
   background-size: cover;
 }
@@ -181,7 +181,7 @@
   }
 
   .listTitle:before {
-    top: 4px;
+    top: -1px;
   }
 
   .listText {

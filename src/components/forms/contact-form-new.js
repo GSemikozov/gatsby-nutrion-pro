@@ -78,6 +78,7 @@ export const ContactFormNew = withFormik({
       let referrer = getReferrer()
 
       const isEn = document.location.pathname.includes("/en")
+      const testovani = localStorage.getItem("PUSHTELL-homepage")
 
       const data = {
         form_name: isEn ? "contact-new_en" : "contact-new",
@@ -85,6 +86,7 @@ export const ContactFormNew = withFormik({
         referrer: referrer,
         roistat: getCookie("roistat_visit"),
         ga: getCookie("_ga"),
+        testovani: testovani,
       }
       await fetch("/api/application", {
         method: "POST",
@@ -102,6 +104,7 @@ export const ContactFormNew = withFormik({
             ? "/en/thank-you-contact-new"
             : "/thank-you-contact-new",
           pageType: "Purchase",
+          testovani: testovani,
         })
       }, 300)
     } catch (err) {

@@ -149,7 +149,7 @@ export const FAQ2 = () => {
 
   return (
     <section className={styles.section} id="faq">
-      <Container className={styles.container}>
+      <Container isWide={true} className={styles.container}>
         <h3 className="fancyUnderlineText sectionTitleNew text-center">
           {/* {t("home.qa.title")} */}
           Často kladené <span>otázky</span>

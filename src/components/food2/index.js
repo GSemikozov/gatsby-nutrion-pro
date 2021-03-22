@@ -229,7 +229,7 @@ export const FoodCarouselSection2 = () => {
 
   return (
     <section className={styles.foodCarouselSection} id="food">
-      <Container>
+      <Container isWide={true}>
         <h3 className="fancyUnderlineText sectionTitleNew text-center">
           <span>Jaká jídla</span> tě s námi čekají?
         </h3>
