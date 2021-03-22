@@ -24,7 +24,7 @@ export const Hero3 = () => {
               <Button2
                 color="primary"
                 className={styles.button}
-                handleClick={onLinkClick("menu")}
+                handleClick={onLinkClick("calculator")}
               >
                 <svg
                   className={styles.buttonIcon}

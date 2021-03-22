@@ -96,6 +96,8 @@ export const HeroForm = withFormik({
 
       const isEn = document.location.pathname.includes("/en")
 
+      const testovani = localStorage.getItem("PUSHTELL-homepage")
+
       const data = {
         form_name: isEn ? "2days-trial_en" : "2days-trial",
         title,
@@ -108,6 +110,7 @@ export const HeroForm = withFormik({
         referrer: referrer,
         roistat: getCookie("roistat_visit"),
         ga: getCookie("_ga"),
+        testovani: testovani,
       }
       await fetch("/api/application", {
         method: "POST",
@@ -123,6 +126,7 @@ export const HeroForm = withFormik({
           event: "ga.pageview",
           pageURL: isEn ? "/en/thank-you-contact" : "/thank-you-contact",
           pageType: "Purchase",
+          testovani: testovani,
         })
       }, 300)
     } catch (err) {

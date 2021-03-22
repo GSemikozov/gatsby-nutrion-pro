@@ -9,7 +9,7 @@ import icon3 from './icons/icon-howItWork3.svg';
 import icon4 from './icons/icon-howItWork4.svg';
 import icon5 from './icons/icon-howItWork5.svg';
 
-export const HowItWork = () => {
+export const HowItWork2 = () => {
   const { t } = useTranslation()
   return (
     <div className={styles.section}>

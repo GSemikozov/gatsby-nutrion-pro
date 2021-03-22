@@ -912,6 +912,7 @@ export const MainForm2 = withFormik({
       let getPrice = document.querySelector('[name="price"]').value
 
       const isEn = document.location.pathname.includes("/en")
+      const testovani = localStorage.getItem("PUSHTELL-homepage")
 
       let data = {
         form_name: isEn ? "main-contact-new_en" : "main-contact-new",
@@ -930,6 +931,7 @@ export const MainForm2 = withFormik({
         referrer: referrer,
         roistat: getCookie("roistat_visit"),
         ga: getCookie("_ga"),
+        testovani: testovani,
       }
 
       // await console.log(JSON.stringify(data))
@@ -951,6 +953,7 @@ export const MainForm2 = withFormik({
           event: "ga.pageview",
           pageURL: isEn ? "/en/thank-you" : "/dekovacka-testdrive",
           pageType: "Purchase",
+          testovani: testovani,
         })
       }, 300)
     } catch (err) {

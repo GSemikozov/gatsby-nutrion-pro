@@ -1332,6 +1332,7 @@ export const OrderForm = withFormik({
       let getPrice = document.querySelector('[name="price"]').value
 
       const isEn = document.location.pathname.includes("/en")
+      const testovani = localStorage.getItem("PUSHTELL-homepage")
 
       const diet =
         plan === "Zhubnout" ? "loose" : plan === "Nabírat" ? "gain" : "keep"
@@ -1358,6 +1359,7 @@ export const OrderForm = withFormik({
         referrer: referrer,
         roistat: getCookie("roistat_visit"),
         ga: getCookie("_ga"),
+        testovani: testovani,
       }
 
       // console.log(JSON.stringify(data))
@@ -1380,6 +1382,7 @@ export const OrderForm = withFormik({
             event: "ga.pageview",
             pageURL: isEn ? "/en/thank-you" : "/dekovacka-testdrive",
             pageType: "Purchase",
+            testovani: testovani,
           })
         }, 300)
       } else {

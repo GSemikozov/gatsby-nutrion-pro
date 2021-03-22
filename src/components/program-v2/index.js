@@ -5,7 +5,7 @@ import { Container } from '../container';
 import { LocalizedLink } from '../localized-link';
 import styles from './program.module.css';
 
-export const Program = () => {
+export const Program2 = () => {
   return (
     <div className={styles.section}>
       <Container isWide={true}>
