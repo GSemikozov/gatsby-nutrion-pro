@@ -13,7 +13,7 @@ export const HowItWork = () => {
   const { t } = useTranslation()
   return (
     <div className={styles.section}>
-      <Container>
+      <Container isWide={true}>
         <h3 className="fancyUnderlineText sectionTitleNew text-center">
           {/*t("home.howItWorks.title")*/}
           Jak to <span>funguje</span>
