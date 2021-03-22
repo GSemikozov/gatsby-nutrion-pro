@@ -21,7 +21,7 @@ export const Footer2 = () => {
   const { lang } = useLangContext()
   return (
     <footer className={styles.footer}>
-      <Container>
+      <Container isWide={true}>
         <div className={styles.footerCols}>
           <div className={styles.footerCol}>
             <LocalizedLink to="/">

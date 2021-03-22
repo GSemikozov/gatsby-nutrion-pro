@@ -7,7 +7,7 @@ import mapImg from './NP_web_assets/map.svg';
 
 export const DeliverySection = () => (
   <section className={styles.delivery}>
-    <Container>
+    <Container isWide={true}>
       <h3 className="fancyUnderlineText sectionTitleNew text-center">
         Doprava po Praze <span>zdarma</span>
       </h3>

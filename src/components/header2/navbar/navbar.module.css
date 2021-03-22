@@ -42,8 +42,10 @@
   color: #3dc383;
 }
 
-.contacts .iconPhone {
-  margin-right: -8px;
+.iconPhone {
+  margin-top: -2px;
+  /* margin-right: -8px; */
+  width: 27px;
 }
 
 .phoneNumber {

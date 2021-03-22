@@ -56,7 +56,7 @@ export const Reviews2 = ({ id = "" }) => {
   const { t } = useTranslation()
   return (
     <section className={styles.section} id={id}>
-      <Container className={styles.container}>
+      <Container isWide={true} className={styles.container}>
         <h3 className="fancyUnderlineText sectionTitleNew text-center">
           {/* {t("general.reviews.title")} */}
           Co <span>o nás říkají</span> naši zákazníci?

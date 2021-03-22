@@ -10,7 +10,7 @@ import styles from './menuOrderInfo.module.css';
 export const MenuOrderInfo = ({ id }) => {
   return (
     <section className={styles.menuOrderInfo} id={id && id}>
-      <Container>
+      <Container isWide={true}>
         <h3 className={"fancyUnderlineText sectionTitleNew text-center"}>
           <span>Dvoudenní zkouška</span> 5chodového menu
         </h3>

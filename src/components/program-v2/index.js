@@ -8,7 +8,7 @@ import styles from './program.module.css';
 export const Program = () => {
   return (
     <div className={styles.section}>
-      <Container>
+      <Container isWide={true}>
         <h3 className="fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center">
           <span>Vyber si</span> svůj program
         </h3>

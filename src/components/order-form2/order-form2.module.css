@@ -376,7 +376,12 @@
 
 @media all and (min-width: 1024px) {
   .section:after,
-  .section:before,
+  .section:before {
+    display: block;
+  }
+}
+
+@media all and (min-width: 1440px) {
   .formWrapContainer:after,
   .formWrapContainer:before {
     display: block;

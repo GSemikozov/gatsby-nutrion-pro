@@ -16,7 +16,7 @@ export const Hero3 = () => {
 
   return (
     <section className={styles.hero}>
-      <Container>
+      <Container isWide={true}>
         <div className={styles.heroInner}>
           <div className={styles.heroInfo}>
             <h1 className={styles.heroTitle}>Speciální krabičková dieta</h1>
