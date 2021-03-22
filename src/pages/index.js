@@ -86,12 +86,14 @@ const IndexPage = () => {
 
   useEffect(() => {
     const curVersion = localStorage.getItem("homepage-version")
-    !curVersion
-      ? localStorage.setItem(
-          "homepage-version",
-          versions[getRandomInteger(1, 2)]
-        )
-      : setPageVersion(curVersion)
+    const randomIndex = getRandomInteger(1, 10) > 5 ? 1 : 0
+    const randomVersion = versions[randomIndex]
+    if (!curVersion || curVersion === undefined) {
+      localStorage.setItem("homepage-version", randomVersion)
+      setPageVersion(randomVersion)
+    } else {
+      setPageVersion(curVersion)
+    }
   }, [])
 
   useEffect(() => {
