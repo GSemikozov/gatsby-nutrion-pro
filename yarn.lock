@@ -7066,6 +7066,14 @@ gatsby-plugin-netlify-cms@^4.3.7:
     netlify-identity-widget "^1.9.1"
     webpack "^4.46.0"
 
+gatsby-plugin-nprogress@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-3.1.0.tgz#f318dacdf3bd36eef5b2dda490103d467729834f"
+  integrity sha512-CbYFaY5atPsZJJ/sDty1vn19ebxLJ+RPg3SEFFYM/KH6LZtMIMWxnARRb10NpeiBUOj8AfkmqOAv+eOSxZGs4w==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    nprogress "^0.2.0"
+
 gatsby-plugin-offline@^3.0.41:
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.10.2.tgz#f17605ba567434908cc5ff33e702e26bf4a610fc"
@@ -11398,6 +11406,11 @@ npmlog@^4.0.1, npmlog@^4.1.2:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
