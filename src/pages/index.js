@@ -62,47 +62,40 @@ const IndexPage = () => {
 
   return (
     <>
-      {pageVersion && (
-        <>
-          <Experiment name="homepage">
-            <Variant name="new-version">
-              {site && (
-                <Header2
-                  menuLinks={site.siteMetadata.menuLinks}
-                  isLight={true}
-                />
-              )}
-              <SEO title="Home" />
-              {/* componetns here */}
-              <Hero3 />
-              <MenuOrderInfo id="menu" />
-              <Program2 />
-              <Order2 id="calculator" />
-              <FoodCarouselSection2 />
-              <DeliverySection />
-              <Reviews2 />
-              <HowItWork2 />
-              <DiscountSection />
-              <FAQ2 />
-              <Footer2 />
-            </Variant>
-            <Variant name="current-version">
-              <SEO title="Home" />
-              <Header menuLinks={site.siteMetadata.menuLinks} />
-              <Hero />
-              <Program id="programs" />
-              <Order id="calculator" />
-              <FoodCarouselSection />
-              <About />
-              <Reviews id="reviews" />
-              <HowItWork />
-              <FAQ id="faq" />
-              <PreFooter />
-              <Footer />
-            </Variant>
-          </Experiment>
-        </>
-      )}
+      <Experiment name="homepage">
+        <Variant name="new-version">
+          {site && (
+            <Header2 menuLinks={site.siteMetadata.menuLinks} isLight={true} />
+          )}
+          <SEO title="Home" />
+          {/* componetns here */}
+          <Hero3 />
+          <MenuOrderInfo id="menu" />
+          <Program2 />
+          <Order2 id="calculator" />
+          <FoodCarouselSection2 />
+          <DeliverySection />
+          <Reviews2 />
+          <HowItWork2 />
+          <DiscountSection />
+          <FAQ2 />
+          <Footer2 />
+        </Variant>
+        <Variant name="current-version">
+          <SEO title="Home" />
+          <Header menuLinks={site.siteMetadata.menuLinks} />
+          <Hero />
+          <Program id="programs" />
+          <Order id="calculator" />
+          <FoodCarouselSection />
+          <About />
+          <Reviews id="reviews" />
+          <HowItWork />
+          <FAQ id="faq" />
+          <PreFooter />
+          <Footer />
+        </Variant>
+      </Experiment>
     </>
   )
 }
