@@ -113,8 +113,10 @@ const IndexPage = () => {
     <>
       {pageVersion === "current-version" ? (
         <OldHomepage site={site} />
-      ) : (
+      ) : pageVersion === "new-version" ? (
         <NewHomepage site={site} />
+      ) : (
+        <div>Loading...</div>
       )}
       {/* <Experiment name="homepage">
         <Variant name="new-version">
