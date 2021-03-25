@@ -28,7 +28,7 @@ export const ContactFormLayout = ({
 }) => {
   return (
     <Form
-      name="contact-new"
+      name="2days-trial"
       method="post"
       className={cx(contactFormStyles.contactForm)}
     >

@@ -479,11 +479,7 @@ const OrderFormLayout = ({
 
   return (
     <div className={orderFormStyles.orderFormBox}>
-      <Form
-        className={orderFormStyles.orderForm}
-        name="order-contact-new"
-        method="post"
-      >
+      <Form className={orderFormStyles.orderForm} name="order" method="post">
         <div>
           {/* <div className={cx(styles.inputField, orderFormStyles.inputField)}>
             <h5 className={orderFormStyles.inputFieldTitle}>Tvoje pohlaví </h5>

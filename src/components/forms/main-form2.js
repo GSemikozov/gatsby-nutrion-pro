@@ -346,7 +346,7 @@ const MainFormLayout = ({
     <div className={mainFormStyles.mainFormBox}>
       <Form
         className={mainFormStyles.mainForm}
-        name="main-contact-new"
+        name="zavolejte-mi"
         method="post"
       >
         <div>
