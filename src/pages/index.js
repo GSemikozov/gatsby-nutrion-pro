@@ -1,6 +1,6 @@
 import { Experiment, Variant } from '@marvelapp/react-ab-test';
 import { graphql, useStaticQuery } from 'gatsby';
-import React, { useEffect, useState, version } from 'react';
+import React, { useEffect, useReducer, useState, version } from 'react';
 import { BounceLoader } from 'react-spinners';
 
 import { About } from '../components/about';
@@ -27,6 +27,7 @@ import { Program2 } from '../components/program-v2/';
 import { Reviews } from '../components/reviews';
 import { Reviews2 } from '../components/reviews2';
 import SEO from '../components/seo';
+import { HomepageTabsProvider, homepageTabsReducer, initialState } from '../contexts/HomepageTabsContext';
 
 const Loader = () => (
   <div
@@ -42,24 +43,33 @@ const Loader = () => (
   </div>
 )
 
-const NewHomepage = ({ site }) => (
-  <>
-    {site && <Header2 menuLinks={site.siteMetadata.menuLinks} isLight={true} />}
-    <SEO title="Home" />
-    {/* componetns here */}
-    <Hero3 />
-    <MenuOrderInfo id="menu" />
-    <Program2 id="programs" />
-    <Order2 id="calculator" />
-    <FoodCarouselSection2 />
-    <DeliverySection />
-    <Reviews2 />
-    <HowItWork2 />
-    <DiscountSection />
-    <FAQ2 />
-    <Footer2 />
-  </>
-)
+const NewHomepage = ({ site }) => {
+  const [state, dispatch] = useReducer(homepageTabsReducer, initialState)
+
+  return (
+    <HomepageTabsProvider
+      value={{ activeTab: state.activeTab, dispatchAction: dispatch }}
+    >
+      {site && (
+        <Header2 menuLinks={site.siteMetadata.menuLinks} isLight={true} />
+      )}
+      <SEO title="Home" />
+      {/* componetns here */}
+      <Hero3 />
+      <MenuOrderInfo id="menu" />
+      <Program2 id="programs" />
+      <div id="calculator2" />
+      <Order2 id="calculator" />
+      <FoodCarouselSection2 />
+      <DeliverySection />
+      <Reviews2 />
+      <HowItWork2 />
+      <DiscountSection />
+      <FAQ2 />
+      <Footer2 />
+    </HomepageTabsProvider>
+  )
+}
 
 const OldHomepage = ({ site }) => (
   <>

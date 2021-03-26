@@ -1,7 +1,8 @@
 import cx from 'classnames';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
 import { Button } from '../button';
 import styles from '../calculator/calculator2.module.css';
 import { Container } from '../container';
@@ -9,7 +10,8 @@ import { MainForm2 } from '../forms/main-form2';
 import { OrderForm2 } from '../forms/order-form2';
 import styles2 from './order-form2.module.css';
 
-export const Order2 = ({ id, className, activeTab = "calc" }) => {
+export const Order2 = ({ id, className }) => {
+  const { activeTab, dispatchAtchion } = useHomepageTabsContext()
   const [form, setForm] = useState(activeTab)
   const { t } = useTranslation()
 

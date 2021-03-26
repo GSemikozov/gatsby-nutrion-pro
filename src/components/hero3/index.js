@@ -1,6 +1,7 @@
 import cx from 'classnames';
-import React from 'react';
+import React, { useCallback, useContext, useEffect } from 'react';
 
+import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import { Button2 } from '../button2';
 import { Container } from '../container';
@@ -9,10 +10,23 @@ import styles from './hero3.module.css';
 
 export const Hero3 = () => {
   const scroll = useSmoothScroll()
+  const { activeTab, dispatchAction } = useHomepageTabsContext()
 
-  const onLinkClick = selector => () => {
-    scroll.animateScroll(document.getElementById(selector))
-  }
+  const openCalcForm = useCallback(
+    selector => {
+      dispatchAction({ type: "OPEN_TAB1" })
+      scroll.animateScroll(document.getElementById(selector))
+    },
+    [dispatchAction]
+  )
+
+  const openOrderForm = useCallback(
+    selector => {
+      dispatchAction({ type: "OPEN_TAB2" })
+      scroll.animateScroll(document.getElementById(selector))
+    },
+    [dispatchAction]
+  )
 
   return (
     <section className={styles.hero}>
@@ -24,7 +38,7 @@ export const Hero3 = () => {
               <Button2
                 color="primary"
                 className={styles.button}
-                handleClick={onLinkClick("calculator")}
+                handleClick={() => openCalcForm("calculator2")}
               >
                 <svg
                   className={styles.buttonIcon}
@@ -47,7 +61,7 @@ export const Hero3 = () => {
               <Button2
                 className={styles.button}
                 color="secondary"
-                handleClick={onLinkClick("calculator")}
+                handleClick={() => openOrderForm("calculator")}
               >
                 Objednat online
               </Button2>
