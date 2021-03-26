@@ -49,7 +49,7 @@ const NewHomepage = ({ site }) => (
     {/* componetns here */}
     <Hero3 />
     <MenuOrderInfo id="menu" />
-    <Program2 />
+    <Program2 id="programs" />
     <Order2 id="calculator" />
     <FoodCarouselSection2 />
     <DeliverySection />

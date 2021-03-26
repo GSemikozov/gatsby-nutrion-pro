@@ -5,9 +5,9 @@ import { Container } from '../container';
 import { LocalizedLink } from '../localized-link';
 import styles from './program.module.css';
 
-export const Program2 = () => {
+export const Program2 = ({ id }) => {
   return (
-    <div className={styles.section}>
+    <div className={styles.section} id={id && id}>
       <Container isWide={true}>
         <h3 className="fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center">
           <span>Vyber si</span> svůj program

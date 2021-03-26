@@ -92,6 +92,7 @@
   display: inline-flex;
   justify-content: center;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .phoneIcon {
