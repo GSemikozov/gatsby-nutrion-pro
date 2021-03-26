@@ -12,21 +12,15 @@ export const Hero3 = () => {
   const scroll = useSmoothScroll()
   const { activeTab, dispatchAction } = useHomepageTabsContext()
 
-  const openCalcForm = useCallback(
-    selector => {
-      dispatchAction({ type: "OPEN_TAB1" })
-      scroll.animateScroll(document.getElementById(selector))
-    },
-    [dispatchAction]
-  )
+  const openCalcForm = selector => {
+    dispatchAction({ type: "OPEN_TAB1" })
+    scroll.animateScroll(document.getElementById(selector))
+  }
 
-  const openOrderForm = useCallback(
-    selector => {
-      dispatchAction({ type: "OPEN_TAB2" })
-      scroll.animateScroll(document.getElementById(selector))
-    },
-    [dispatchAction]
-  )
+  const openOrderForm = selector => {
+    dispatchAction({ type: "OPEN_TAB2" })
+    scroll.animateScroll(document.getElementById(selector))
+  }
 
   return (
     <section className={styles.hero}>
@@ -38,7 +32,9 @@ export const Hero3 = () => {
               <Button2
                 color="primary"
                 className={styles.button}
-                handleClick={() => openCalcForm("calculator2")}
+                handleClick={e => {
+                  openCalcForm("calculator2")
+                }}
               >
                 <svg
                   className={styles.buttonIcon}
