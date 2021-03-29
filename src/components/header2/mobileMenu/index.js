@@ -32,7 +32,8 @@ export const MobileMenu = ({
 
   const scroll = useSmoothScroll()
 
-  const isHomepage = window.location.pathname === "/"
+  const isHomepage =
+    typeof window !== "undefined" && window.location.pathname === "/"
 
   const openCalcForm = selector => {
     dispatchAction({ type: "OPEN_TAB1" })

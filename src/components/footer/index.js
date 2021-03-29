@@ -18,7 +18,8 @@ import vk from './icons/vk.svg';
 export const Footer = () => {
   const { t } = useTranslation()
   const { lang } = useLangContext()
-  const isHomepage = window.location.pathname === "/"
+  const isHomepage =
+    typeof window !== "undefined" && window.location.pathname === "/"
 
   return (
     <footer className={styles.footer}>
