@@ -5,8 +5,8 @@
   top: 82px;
   left: 0;
   background: #fff;
-  z-index: 3;
-  padding: 0 20px 115px;
+  z-index: 100;
+  padding: 0 20px;
   display: none;
 }
 
@@ -75,6 +75,7 @@
   font-size: 20px;
   line-height: 24px;
   text-align: center;
+  flex-grow: 1;
 }
 
 .textGreen {
@@ -109,4 +110,24 @@
   justify-content: center;
   align-items: center;
   overflow-y: auto;
+}
+
+.buttons {
+  display: flex;
+  /* display: none; */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 0;
+  z-index: 99;
+}
+
+.buttons .button {
+  margin: 15px 15px 15px 0;
+  overflow: hidden;
+}
+
+.button .buttonIcon {
+  margin-right: 8px;
 }
