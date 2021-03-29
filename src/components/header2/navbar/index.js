@@ -29,6 +29,47 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
     return t(`menu.${name}`)
   }
 
+  const isHomepage = window.location.pathname === "/"
+
+  const HomepageMenu = () => {
+    return menuLinks.map((link, i) => {
+      return link.link.startsWith("/#") ? (
+        <Button
+          key={link.name}
+          type="unstyled"
+          className={cx(styles.navbarItem, "visible-desktop")}
+          handleClick={() => handleMenuLinkClick(link, lang)}
+        >
+          {getLinkTranslation(link.name)}
+        </Button>
+      ) : (
+        <LocalizedLink
+          key={link.name}
+          to={link.link}
+          className={cx(styles.navbarItem, "visible-desktop")}
+        >
+          {getLinkTranslation(link.name)}
+        </LocalizedLink>
+      )
+    })
+  }
+
+  const InnerPageMenu = () => {
+    return menuLinks.map((link, i) => {
+      return (
+        !link.link.startsWith("/#") && (
+          <LocalizedLink
+            key={link.name}
+            to={link.link}
+            className={cx(styles.navbarItem, "visible-desktop")}
+          >
+            {getLinkTranslation(link.name)}
+          </LocalizedLink>
+        )
+      )
+    })
+  }
+
   return (
     <div className={styles.navbar}>
       {/* <a href="tel:+1234567890" className={styles.navbarItem}>
@@ -49,26 +90,7 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
         </svg>
       </a> */}
       <div className={styles.navbarCol}>
-        {menuLinks.map(link => {
-          return link.link.startsWith("/#") ? (
-            <Button
-              key={link.name}
-              type="unstyled"
-              className={cx(styles.navbarItem, "visible-desktop")}
-              handleClick={() => handleMenuLinkClick(link, lang)}
-            >
-              {getLinkTranslation(link.name)}
-            </Button>
-          ) : (
-            <LocalizedLink
-              key={link.name}
-              to={link.link}
-              className={cx(styles.navbarItem, "visible-desktop")}
-            >
-              {getLinkTranslation(link.name)}
-            </LocalizedLink>
-          )
-        })}
+        {isHomepage ? <HomepageMenu /> : <InnerPageMenu />}
       </div>
       <div className={styles.navbarCol}>
         <span className={cx(styles.additionalInfo, "visible-desktop")}>

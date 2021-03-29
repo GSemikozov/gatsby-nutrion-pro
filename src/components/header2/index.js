@@ -2,6 +2,7 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
+import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
 import { Container } from '../container';
 import { LocalizedLink } from '../localized-link';
 import styles from './header.module.css';
@@ -12,6 +13,7 @@ import { Navbar } from './navbar';
 
 export const Header2 = ({ menuLinks, isLight }) => {
   const [menuVisible, setMenuVisible] = useState(false)
+  const { activeTab, dispatchAction } = useHomepageTabsContext()
 
   const toggleMenu = () => {
     if (menuVisible) {
@@ -53,6 +55,7 @@ export const Header2 = ({ menuLinks, isLight }) => {
           menuVisible={menuVisible}
           menuLinks={menuLinks}
           onCloseMobileMenu={toggleMenu}
+          dispatchAction={dispatchAction}
         />
       </Container>
     </header>

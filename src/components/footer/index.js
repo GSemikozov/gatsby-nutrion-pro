@@ -18,6 +18,8 @@ import vk from './icons/vk.svg';
 export const Footer = () => {
   const { t } = useTranslation()
   const { lang } = useLangContext()
+  const isHomepage = window.location.pathname === "/"
+
   return (
     <footer className={styles.footer}>
       <Container>
@@ -52,30 +54,34 @@ export const Footer = () => {
           </div>
           <div className={styles.footerCol}>
             <div className={cx(styles.footerMenu, styles.hideXS)}>
-              <Button
-                type="unstyled"
-                handleClick={() =>
-                  handleMenuLinkClick({ link: "/#programs" }, lang)
-                }
-              >
-                {t("menu.Programy")}
-              </Button>
-              <Button
-                type="unstyled"
-                handleClick={() =>
-                  handleMenuLinkClick({ link: "/#food" }, lang)
-                }
-              >
-                {t("menu.Jídelníček")}
-              </Button>
-              <Button
-                type="unstyled"
-                handleClick={() =>
-                  handleMenuLinkClick({ link: "/#calculator" }, lang)
-                }
-              >
-                {t("menu.Cena")}
-              </Button>
+              {isHomepage && (
+                <>
+                  <Button
+                    type="unstyled"
+                    handleClick={() =>
+                      handleMenuLinkClick({ link: "/#programs" }, lang)
+                    }
+                  >
+                    {t("menu.Programy")}
+                  </Button>
+                  <Button
+                    type="unstyled"
+                    handleClick={() =>
+                      handleMenuLinkClick({ link: "/#food" }, lang)
+                    }
+                  >
+                    {t("menu.Jídelníček")}
+                  </Button>
+                  <Button
+                    type="unstyled"
+                    handleClick={() =>
+                      handleMenuLinkClick({ link: "/#calculator" }, lang)
+                    }
+                  >
+                    {t("menu.Cena")}
+                  </Button>
+                </>
+              )}
               {lang !== "en" && (
                 <LocalizedLink to="/jobs">{t("menu.Kariéra")}</LocalizedLink>
               )}
@@ -95,9 +101,6 @@ export const Footer = () => {
             <p>© 2020 NUTRITIONPRO</p>
           </div>
           <div className={styles.footerCol}>
-            <LocalizedLink to="/app/login" className={styles.hideXS}>
-              <img src={user} alt="icon" />
-            </LocalizedLink>
             <p>+420 774 137 352</p>
             <p>
               {t("menu.days")} 10:00 - 12:00 <br /> 13:00 - 18:00

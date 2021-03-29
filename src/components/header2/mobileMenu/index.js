@@ -2,7 +2,6 @@ import cx from 'classnames';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useHomepageTabsContext } from '../../../contexts/HomepageTabsContext';
 import { handleMenuLinkClick } from '../../../helpers';
 import { useSmoothScroll } from '../../../hooks/useSmoothScroll';
 import { useLangContext } from '../../../utils/lang';
@@ -19,7 +18,12 @@ import styles from './mobile-menu.module.css';
 // import IconPhone from '../icons/icon-phone.svg';
 // import { ContactForm } from "./contactForm"
 
-export const MobileMenu = ({ menuVisible, menuLinks, onCloseMobileMenu }) => {
+export const MobileMenu = ({
+  menuVisible,
+  menuLinks,
+  onCloseMobileMenu,
+  dispatchAction,
+}) => {
   const { lang } = useLangContext()
   const { t } = useTranslation()
   const getLinkTranslation = name => {
@@ -27,7 +31,8 @@ export const MobileMenu = ({ menuVisible, menuLinks, onCloseMobileMenu }) => {
   }
 
   const scroll = useSmoothScroll()
-  const { activeTab, dispatchAction } = useHomepageTabsContext()
+
+  const isHomepage = window.location.pathname === "/"
 
   const openCalcForm = selector => {
     dispatchAction({ type: "OPEN_TAB1" })
@@ -39,36 +44,59 @@ export const MobileMenu = ({ menuVisible, menuLinks, onCloseMobileMenu }) => {
     scroll.animateScroll(document.getElementById(selector))
   }
 
+  const HomepageMenu = () => {
+    return menuLinks.map((link, i) => {
+      return link.link.startsWith("/#") ? (
+        <Button
+          key={link.name}
+          type="unstyled"
+          className={styles.menuItem}
+          handleClick={() => {
+            onCloseMobileMenu()
+            handleMenuLinkClick(link, undefined, lang)
+          }}
+        >
+          {getLinkTranslation(link.name)}
+        </Button>
+      ) : (
+        <LocalizedLink
+          key={link.name}
+          to={link.link}
+          className={styles.menuItem}
+          onClick={() => {
+            onCloseMobileMenu()
+          }}
+        >
+          {getLinkTranslation(link.name)}
+        </LocalizedLink>
+      )
+    })
+  }
+
+  const InnerPageMenu = () => {
+    return menuLinks.map((link, i) => {
+      return (
+        !link.link.startsWith("/#") && (
+          <LocalizedLink
+            key={link.name}
+            to={link.link}
+            className={styles.menuItem}
+            onClick={() => {
+              onCloseMobileMenu()
+            }}
+          >
+            {getLinkTranslation(link.name)}
+          </LocalizedLink>
+        )
+      )
+    })
+  }
+
   return (
     <div className={cx(styles.wrapper, { [styles.visible]: menuVisible })}>
       <div className={styles.content}>
         <div className={styles.menuItems}>
-          {menuLinks.map((link, i) => {
-            return link.link.startsWith("/#") ? (
-              <Button
-                key={link.name}
-                type="unstyled"
-                className={styles.menuItem}
-                handleClick={() => {
-                  onCloseMobileMenu()
-                  handleMenuLinkClick(link, undefined, lang)
-                }}
-              >
-                {getLinkTranslation(link.name)}
-              </Button>
-            ) : (
-              <LocalizedLink
-                key={link.name}
-                to={link.link}
-                className={styles.menuItem}
-                onClick={() => {
-                  onCloseMobileMenu()
-                }}
-              >
-                {getLinkTranslation(link.name)}
-              </LocalizedLink>
-            )
-          })}
+          {isHomepage ? <HomepageMenu /> : <InnerPageMenu />}
         </div>
         <div className={styles.info}>
           <div>
@@ -94,44 +122,46 @@ export const MobileMenu = ({ menuVisible, menuLinks, onCloseMobileMenu }) => {
             </svg>
           </a>
         </div>
-        <div className={styles.buttons}>
-          <Button2
-            color="primary"
-            className={styles.button}
-            handleClick={e => {
-              onCloseMobileMenu()
-              openCalcForm("calculator2")
-            }}
-          >
-            <svg
-              className={styles.buttonIcon}
-              fill="none"
-              height="25"
-              viewBox="0 0 25 25"
-              width="25"
-              xmlns="http://www.w3.org/2000/svg"
+        {isHomepage && (
+          <div className={styles.buttons}>
+            <Button2
+              color="primary"
+              className={styles.button}
+              handleClick={e => {
+                onCloseMobileMenu()
+                openCalcForm("calculator2")
+              }}
             >
-              <path
-                d="m13.5413 15.625h2.0834m-10.41669 6.25v-16.66667c0-.55253.21949-1.08244.61019-1.47314s.92061-.61019 1.47314-.61019h10.41666c.5525 0 1.0824.21949 1.4731.61019s.6102.92061.6102 1.47314v16.66667l-3.125-2.0833-2.0833 2.0833-2.0833-2.0833-2.0834 2.0833-2.08329-2.0833zm4.16666-14.58333h6.25003zm0 4.16663h6.25003z"
-                stroke="#fff"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5625"
-              />
-            </svg>
-            Spočitat cenu
-          </Button2>
-          <Button2
-            className={styles.button}
-            color="secondary"
-            handleClick={() => {
-              onCloseMobileMenu()
-              openOrderForm("calculator")
-            }}
-          >
-            Objednat online
-          </Button2>
-        </div>
+              <svg
+                className={styles.buttonIcon}
+                fill="none"
+                height="25"
+                viewBox="0 0 25 25"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m13.5413 15.625h2.0834m-10.41669 6.25v-16.66667c0-.55253.21949-1.08244.61019-1.47314s.92061-.61019 1.47314-.61019h10.41666c.5525 0 1.0824.21949 1.4731.61019s.6102.92061.6102 1.47314v16.66667l-3.125-2.0833-2.0833 2.0833-2.0833-2.0833-2.0834 2.0833-2.08329-2.0833zm4.16666-14.58333h6.25003zm0 4.16663h6.25003z"
+                  stroke="#fff"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5625"
+                />
+              </svg>
+              Spočitat cenu
+            </Button2>
+            <Button2
+              className={styles.button}
+              color="secondary"
+              handleClick={() => {
+                onCloseMobileMenu()
+                openOrderForm("calculator")
+              }}
+            >
+              Objednat online
+            </Button2>
+          </div>
+        )}
       </div>
     </div>
   )
