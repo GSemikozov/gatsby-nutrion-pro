@@ -1,3 +1,4 @@
+import { window } from 'browser-monads';
 import cx from 'classnames';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -23,8 +24,7 @@ export const MobileMenu = ({ menuVisible, menuLinks, onCloseMobileMenu }) => {
     return t(`menu.${name}`)
   }
 
-  const isHomepage =
-    typeof window !== "undefined" && window.location.pathname === "/"
+  const isHomepage = window.location.pathname === "/"
 
   const HomepageMenu = () => {
     return menuLinks.map((link, i) => {

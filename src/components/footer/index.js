@@ -1,3 +1,4 @@
+import { window } from 'browser-monads';
 import cx from 'classnames';
 import { Link } from 'gatsby';
 import React from 'react';
@@ -18,8 +19,7 @@ import vk from './icons/vk.svg';
 export const Footer = () => {
   const { t } = useTranslation()
   const { lang } = useLangContext()
-  const isHomepage =
-    typeof window !== "undefined" && window.location.pathname === "/"
+  const isHomepage = window.location.pathname === "/"
 
   return (
     <footer className={styles.footer}>
