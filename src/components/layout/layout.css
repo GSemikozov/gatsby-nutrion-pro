@@ -134,7 +134,7 @@ select {
     height: auto !important;
   }
 
-  .wrap_bdf4 {
+  jdiv [class^="wrap"] {
     bottom: 100px !important;
   }
 }
