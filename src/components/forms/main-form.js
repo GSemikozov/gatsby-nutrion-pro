@@ -182,21 +182,21 @@ const MainFormLayout = ({
       switch (plan) {
         case "Zhubnout":
           if (menu === "5chodové menu") {
-            price = 440
+            price = 450
           }
           if (menu === "3chodové menu") {
-            price = 360
+            price = 370
           }
           if (menu === "2chodové menu") {
-            price = 280
+            price = 285
           }
           break
         case "Udržovat":
           if (menu === "5chodové menu") {
-            price = 460
+            price = 470
           }
           if (menu === "3chodové menu") {
-            price = 370
+            price = 380
           }
           if (menu === "2chodové menu") {
             price = 420
@@ -204,10 +204,10 @@ const MainFormLayout = ({
           break
         case "Nabírat":
           if (menu === "5chodové menu") {
-            price = 480
+            price = 490
           }
           if (menu === "3chodové menu") {
-            price = 380
+            price = 400
           }
           if (menu === "2chodové menu") {
             price = 420
@@ -220,21 +220,21 @@ const MainFormLayout = ({
       switch (plan) {
         case "Zhubnout":
           if (menu === "5chodové menu") {
-            price = 420
+            price = 430
           }
           if (menu === "3chodové menu") {
-            price = 350
+            price = 360
           }
           if (menu === "2chodové menu") {
-            price = 270
+            price = 275
           }
           break
         case "Udržovat":
           if (menu === "5chodové menu") {
-            price = 440
+            price = 450
           }
           if (menu === "3chodové menu") {
-            price = 360
+            price = 370
           }
           if (menu === "2chodové menu") {
             price = 420
@@ -242,10 +242,10 @@ const MainFormLayout = ({
           break
         case "Nabírat":
           if (menu === "5chodové menu") {
-            price = 460
+            price = 470
           }
           if (menu === "3chodové menu") {
-            price = 370
+            price = 390
           }
           if (menu === "2chodové menu") {
             price = 420
@@ -258,10 +258,10 @@ const MainFormLayout = ({
       switch (plan) {
         case "Zhubnout":
           if (menu === "5chodové menu") {
-            price = 395
+            price = 415
           }
           if (menu === "3chodové menu") {
-            price = 330
+            price = 340
           }
           if (menu === "2chodové menu") {
             price = 260
@@ -269,10 +269,10 @@ const MainFormLayout = ({
           break
         case "Udržovat":
           if (menu === "5chodové menu") {
-            price = 415
+            price = 435
           }
           if (menu === "3chodové menu") {
-            price = 340
+            price = 350
           }
           if (menu === "2chodové menu") {
             price = 420
@@ -280,10 +280,10 @@ const MainFormLayout = ({
           break
         case "Nabírat":
           if (menu === "5chodové menu") {
-            price = 435
+            price = 455
           }
           if (menu === "3chodové menu") {
-            price = 350
+            price = 370
           }
           if (menu === "2chodové menu") {
             price = 420
