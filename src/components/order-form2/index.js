@@ -12,12 +12,12 @@ import styles2 from './order-form2.module.css';
 
 export const Order2 = ({ id, className }) => {
   const { activeTab, dispatchAtchion } = useHomepageTabsContext()
-  const [form, setForm] = useState(activeTab)
+  const [form, setForm] = useState("order")
   const { t } = useTranslation()
 
-  useEffect(() => {
-    setForm(activeTab)
-  }, [activeTab])
+  // useEffect(() => {
+  //   setForm(activeTab)
+  // }, [activeTab])
 
   return (
     <section

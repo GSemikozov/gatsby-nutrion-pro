@@ -73,6 +73,10 @@ body main {
   text-align: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -199,4 +203,9 @@ select {
     line-height: 45px;
     margin: 0 0 50px;
   }
+}
+
+.DayPickerInput-Overlay {
+  bottom: calc(100% + 40px);
+  top: auto;
 }
