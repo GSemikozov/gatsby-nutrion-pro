@@ -19,7 +19,7 @@ import { Button } from '../button';
 import { Button2 } from '../button2';
 import stylesRadio from '../calculator2/calc2.module.css';
 import { Price2 } from '../order-price2';
-import { Summary } from '../order-summary';
+import { Summary2 } from '../order-summary2';
 import styles from './form.module.css';
 import option3Img from './icons/icon-2months.svg';
 import option1Img from './icons/icon-demo.svg';
@@ -344,8 +344,6 @@ const OrderFormLayout = ({
   const [kcal, setKcal] = useState(1600)
   const [price, setPrice] = useState("420")
   const [kcalDisabled, setKcalDisabled] = useState(false)
-  const [plan2disabled, setPlan2Disabled] = useState(true)
-  const [plan3disabled, setPlan3Disabled] = useState(true)
   const [menu2xDisabled, setMenu2xDisabled] = useState(true)
   const [menu3xDisabled, setMenu3xDisabled] = useState(true)
   const [checkTerms, setCheckTerms] = useState(false)
@@ -377,12 +375,12 @@ const OrderFormLayout = ({
     {
       value: "Udržovat",
       label: t("forms.onlineOrderFormGoalMaintenance"),
-      disabled: plan2disabled,
+      disabled: false,
     },
     {
       value: "Nabírat",
       label: t("forms.onlineOrderFormGoalGain"),
-      disabled: plan3disabled,
+      disabled: false,
     },
   ]
 
@@ -444,16 +442,8 @@ const OrderFormLayout = ({
     setKcal(Number(kCalOptions[plan][gender][value][0].value))
     setFieldValue("kcal", Number(kCalOptions[plan][gender][value][0].value))
     if (value === "2chodové menu") {
-      setPlan2Disabled(true)
-      setPlan3Disabled(true)
       setKcalDisabled(true)
-    } else if (value === "3chodové menu") {
-      setPlan2Disabled(false)
-      setPlan3Disabled(true)
-      setKcalDisabled(false)
     } else {
-      setPlan2Disabled(false)
-      setPlan3Disabled(false)
       setKcalDisabled(false)
     }
     trackCustomEvent({
@@ -536,7 +526,7 @@ const OrderFormLayout = ({
                 [orderFormStyles.done]: step && step !== 1,
               })}
             >
-              Volba programu
+              <span>Volba programu</span>
             </div>
             <div
               className={cx(orderFormStyles.orderFormProgressDivider, {
@@ -545,13 +535,17 @@ const OrderFormLayout = ({
               })}
             >
               <span
-                className={orderFormStyles.orderFormProgressDividerItem}
+                className={cx(orderFormStyles.orderFormProgressDividerItem, {
+                  [orderFormStyles.xsHidden]: step === 2,
+                })}
               ></span>
               <span
                 className={orderFormStyles.orderFormProgressDividerItem}
               ></span>
               <span
-                className={orderFormStyles.orderFormProgressDividerItem}
+                className={cx(orderFormStyles.orderFormProgressDividerItem, {
+                  [orderFormStyles.xsHidden]: step === 2,
+                })}
               ></span>
             </div>
             <div
@@ -560,7 +554,7 @@ const OrderFormLayout = ({
                 [orderFormStyles.done]: step && step !== 1 && step !== 2,
               })}
             >
-              Specifikace objednávky
+              <span>Specifikace objednávky</span>
             </div>
             <div
               className={cx(orderFormStyles.orderFormProgressDivider, {
@@ -569,13 +563,17 @@ const OrderFormLayout = ({
               })}
             >
               <span
-                className={orderFormStyles.orderFormProgressDividerItem}
+                className={cx(orderFormStyles.orderFormProgressDividerItem, {
+                  [orderFormStyles.xsHidden]: step === 2,
+                })}
               ></span>
               <span
                 className={orderFormStyles.orderFormProgressDividerItem}
               ></span>
               <span
-                className={orderFormStyles.orderFormProgressDividerItem}
+                className={cx(orderFormStyles.orderFormProgressDividerItem, {
+                  [orderFormStyles.xsHidden]: step === 2,
+                })}
               ></span>
             </div>
             <div
@@ -585,7 +583,7 @@ const OrderFormLayout = ({
                   step && step !== 1 && step !== 2 && step !== 3,
               })}
             >
-              Shrnutí
+              <span>Shrnutí</span>
             </div>
           </div>
           <div className={orderFormStyles.steps}>
@@ -603,7 +601,7 @@ const OrderFormLayout = ({
                 >
                   {t("forms.mainFormGoalLabel")}
                 </h5>
-                <div>
+                <div className={cx(orderFormStyles.celItems)}>
                   <div
                     className={cx(
                       stylesRadio.radio,
@@ -636,10 +634,7 @@ const OrderFormLayout = ({
                     className={cx(
                       stylesRadio.radio,
                       stylesRadio.radioBtn,
-                      orderFormStyles.radioBtn,
-                      {
-                        [stylesRadio.disabled]: plan2disabled,
-                      }
+                      orderFormStyles.radioBtn
                     )}
                   >
                     <input
@@ -647,7 +642,6 @@ const OrderFormLayout = ({
                       type="radio"
                       name="plan"
                       value="Udržovat"
-                      disabled={plan2disabled}
                       checked={values.plan === "Udržovat"}
                       onChange={e => {
                         onSetPlan(e.target.value)
@@ -667,10 +661,7 @@ const OrderFormLayout = ({
                     className={cx(
                       stylesRadio.radio,
                       stylesRadio.radioBtn,
-                      orderFormStyles.radioBtn,
-                      {
-                        [stylesRadio.disabled]: plan3disabled,
-                      }
+                      orderFormStyles.radioBtn
                     )}
                   >
                     <input
@@ -678,7 +669,6 @@ const OrderFormLayout = ({
                       type="radio"
                       name="plan"
                       value="Nabírat"
-                      disabled={plan3disabled}
                       checked={values.plan === "Nabírat"}
                       onChange={e => {
                         onSetPlan(e.target.value)
@@ -1031,7 +1021,7 @@ const OrderFormLayout = ({
                   </div>
                   <div className={orderFormStyles.deliveryTimeStepperInput}>
                     <input
-                      onInput={handleInputChange}
+                      onChange={handleInputChange}
                       type="range"
                       min="0"
                       value={currentStepIndex}
@@ -1220,7 +1210,7 @@ const OrderFormLayout = ({
               })}
             >
               <div className={orderFormStyles.step3summary}>
-                <Summary
+                <Summary2
                   kcal={kcal}
                   plan={plan}
                   program={program}

@@ -147,6 +147,39 @@
   white-space: normal;
 }
 
+@media all and (max-width: 1080px) {
+  .radioBtn label {
+    background-color: #f8f8f8 !important;
+    border-color: #f8f8f8 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    height: 62px !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    padding: 5px !important;
+  }
+
+  .radioBtn label img {
+    margin-right: 0 !important;
+    margin-bottom: 4px;
+    max-width: 24px;
+  }
+
+  .radioBtn input[type="radio"]:checked + label {
+    background-color: #3dc383 !important;
+    border-color: #3dc383 !important;
+  }
+
+  .radioBtn {
+    margin-bottom: 0 !important;
+  }
+
+  .radioBtn + .radioBtn {
+    margin-left: 9px !important;
+  }
+}
+
 .checkTerms input {
   /* height: 26px; */
   font-size: 36px;
@@ -211,13 +244,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 8px 24px;
-}
-
-@media all and (max-width: 1080px) {
-  .orderFormProgress {
-    flex-direction: column;
-  }
+  margin: 0 0 24px;
 }
 
 .orderFormProgressItem {
@@ -230,6 +257,10 @@
   padding: 8px 12px 8px 8px;
   border-radius: 40px;
   background-color: transparent;
+}
+
+.orderFormProgressItem span {
+  margin-left: 8px;
 }
 
 .orderFormProgressItem:before {
@@ -246,7 +277,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
 }
 
 .orderFormProgressItem.active {
@@ -291,6 +321,34 @@
 
 .orderFormProgressDividerItem + .orderFormProgressDividerItem {
   margin-left: 13px;
+}
+
+@media all and (max-width: 1080px) {
+  .orderFormProgressItem {
+    padding: 2px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .orderFormProgressItem:not(.active) span {
+    display: none;
+  }
+
+  .orderFormProgressItem:before {
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .orderFormProgressDividerItem {
+    width: 6px;
+    height: 6px;
+  }
+
+  .orderFormProgressDividerItem + .orderFormProgressDividerItem {
+    margin-left: 4px !important;
+  }
 }
 
 .step1 {
@@ -342,9 +400,22 @@
 }
 
 @media all and (max-width: 1080px) {
+  .cel {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .celItems {
+    display: flex;
+  }
+}
+
+@media all and (max-width: 576px) {
   .kal {
     grid-template-columns: 1fr;
     row-gap: 16px;
+    background: transparent;
+    padding: 0;
   }
 }
 
@@ -404,6 +475,23 @@
   border-color: #3dc383 !important;
 }
 
+@media all and (max-width: 576px) {
+  .radioLines input[type="radio"] + label .line:before,
+  .radioLines input[type="radio"] + label .line:after {
+    background-color: #f3f3f1 !important;
+    width: 75px;
+  }
+
+  .radioLines input[type="radio"] + label .line {
+    background-color: #f3f3f1 !important;
+    border-color: #f3f3f1 !important;
+  }
+
+  .radioLines input[type="radio"]:checked + label .line {
+    background-color: #fff !important;
+  }
+}
+
 .step2 {
   display: grid;
   grid-template-columns: 264px 264px 371px;
@@ -426,6 +514,18 @@
       "contact"
       "btnStep2";
     gap: 16px 12px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .step2 {
+    grid-template-areas:
+      "week"
+      "gender"
+      "contact"
+      "deliveryTime"
+      "btnStep2";
+    gap: 12px;
   }
 }
 
@@ -459,6 +559,13 @@
   padding-left: 12px;
   margin-bottom: 12px;
   display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .step2InputTitle {
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .step2InputWrap {
@@ -501,6 +608,28 @@
   }
 }
 
+@media all and (max-width: 767px) {
+  .step2contact {
+    gap: 0;
+    padding: 16px 12px 8px;
+  }
+  .step2InputWrap {
+    padding: 14px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .step2radioBtn {
+    margin-bottom: 0 !important;
+  }
+  .step2radioBtn label {
+    height: 34px !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    padding: 10px !important;
+  }
+}
+
 .input {
   height: 44px;
   width: 100%;
@@ -516,6 +645,13 @@
   transition: 0.2s all;
 }
 
+@media all and (max-width: 767px) {
+  .input {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 .input::placeholder {
   color: #bcc7d1;
 }
@@ -525,6 +661,7 @@
   background-color: #f8f8f8;
   padding: 24px 13px;
   margin-bottom: 24px;
+  max-width: 345px;
 }
 
 .deliveryTimeStepper input,
@@ -534,7 +671,7 @@
 
 .deliveryTimeStepper input[type="range"] {
   width: 100%;
-  margin: 0px 0;
+  margin: 0;
   background-color: transparent;
   -webkit-appearance: none;
 }
@@ -551,7 +688,9 @@
 }
 .deliveryTimeStepper input[type="range"]::-webkit-slider-thumb {
   margin-top: 0px;
-  width: 124px;
+  min-width: 90px;
+  max-width: 124px;
+  width: 38%;
   height: 14px;
   background: #3dc383;
   border: 0;
@@ -569,7 +708,9 @@
   border-radius: 8px;
 }
 .deliveryTimeStepper input[type="range"]::-moz-range-thumb {
-  width: 124px;
+  min-width: 90px;
+  max-width: 124px;
+  width: 38%;
   height: 14px;
   background: #3dc383;
   border: 0;
@@ -594,7 +735,9 @@
   border: 0;
 }
 .deliveryTimeStepper input[type="range"]::-ms-thumb {
-  width: 124px;
+  min-width: 90px;
+  max-width: 124px;
+  width: 38%;
   height: 14px;
   background: #3dc383;
   border: 0;
@@ -683,6 +826,19 @@
   .deliveryTimeStepper input[type="range"]::-ms-thumb,
   .deliveryTimeStepper input[type="range"]::-moz-range-thumb {
     width: 100px !important;
+  }
+
+  .deliveryTimeStepperLine {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .deliveryTimeStepperResult {
+    justify-content: center;
+  }
+
+  .deliveryTimeStepper {
+    margin-bottom: 16px;
   }
 }
 
@@ -784,4 +940,17 @@
 .steps {
   display: flex;
   flex-direction: column;
+}
+
+@media all and (max-width: 767px) {
+  .xsHidden {
+    display: none;
+  }
+
+  .step3finalPrice {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

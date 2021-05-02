@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
 import { Button } from '../button';
+import { Button2 } from '../button2';
 import styles from '../calculator/calculator2.module.css';
 import { Container } from '../container';
 import { MainForm2 } from '../forms/main-form2';
@@ -12,7 +13,7 @@ import styles2 from './order-form2.module.css';
 
 export const Order2 = ({ id, className }) => {
   const { activeTab, dispatchAtchion } = useHomepageTabsContext()
-  const [form, setForm] = useState("order")
+  const [form, setForm] = useState("calc")
   const { t } = useTranslation()
 
   // useEffect(() => {
@@ -60,6 +61,32 @@ export const Order2 = ({ id, className }) => {
               <Button
                 name="submit"
                 type="white"
+                size="sm"
+                className={cx(
+                  styles2.formTab,
+                  form === "order" && styles2.active
+                )}
+                handleClick={() => setForm("order")}
+              >
+                {t("home.order.tab2Btn")}
+              </Button>
+            </div>
+            <div className={cx(styles2.formTabs, styles2.xs)}>
+              <Button2
+                name="submit"
+                color="primary"
+                size="sm"
+                className={cx(
+                  styles2.formTab,
+                  form === "calc" && styles2.active
+                )}
+                handleClick={() => setForm("calc")}
+              >
+                {t("home.order.tab1Btn")}
+              </Button2>
+              <Button
+                name="submit"
+                type="primary"
                 size="sm"
                 className={cx(
                   styles2.formTab,
