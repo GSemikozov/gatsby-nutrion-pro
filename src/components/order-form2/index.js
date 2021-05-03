@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import React, { useContext, useEffect, useReducer, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 
 import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
@@ -16,9 +17,9 @@ export const Order2 = ({ id, className }) => {
   const [form, setForm] = useState("calc")
   const { t } = useTranslation()
 
-  // useEffect(() => {
-  //   setForm(activeTab)
-  // }, [activeTab])
+  useEffect(() => {
+    setForm(activeTab)
+  }, [activeTab])
 
   return (
     <section
@@ -33,16 +34,18 @@ export const Order2 = ({ id, className }) => {
       id={id && id}
     >
       <Container className={cx("text-center", styles2.container)}>
-        <h3
-          className={cx(
-            "fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center",
-            styles.title,
-            styles2.title
-          )}
-        >
-          {/* {t("home.order.title")} */}
-          Objednat <span>teď</span>
-        </h3>
+        <Fade triggerOnce={true}>
+          <h3
+            className={cx(
+              "fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center",
+              styles.title,
+              styles2.title
+            )}
+          >
+            {/* {t("home.order.title")} */}
+            Objednat <span>teď</span>
+          </h3>
+        </Fade>
         <div className={styles2.formWrapContainer}>
           <div className={styles2.formInnerContainer}>
             <div className={cx(styles2.formTabs)}>

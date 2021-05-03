@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
@@ -57,11 +58,13 @@ export const Reviews2 = ({ id = "" }) => {
   return (
     <section className={styles.section} id={id}>
       <Container isWide={true} className={styles.container}>
-        <h3 className="fancyUnderlineText sectionTitleNew text-center">
-          {/* {t("general.reviews.title")} */}
-          Co <span>o nás říkají</span> naši zákazníci?
-        </h3>
-        <ReviewsCarousel />
+        <Fade cascade triggerOnce={true}>
+          <h3 className="fancyUnderlineText sectionTitleNew text-center">
+            {/* {t("general.reviews.title")} */}
+            Co <span>o nás říkají</span> naši zákazníci?
+          </h3>
+          <ReviewsCarousel />
+        </Fade>
       </Container>
     </section>
   )

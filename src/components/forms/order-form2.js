@@ -358,6 +358,10 @@ const OrderFormLayout = ({
     setStep(prev => prev - 1)
   }
 
+  const gotoStep = step => {
+    setStep(step)
+  }
+
   const { lang } = useLangContext()
   const { t } = useTranslation()
 
@@ -525,6 +529,7 @@ const OrderFormLayout = ({
                 [orderFormStyles.active]: step === 1,
                 [orderFormStyles.done]: step && step !== 1,
               })}
+              onClick={() => gotoStep(1)}
             >
               <span>Volba programu</span>
             </div>
@@ -553,6 +558,7 @@ const OrderFormLayout = ({
                 [orderFormStyles.active]: step === 2,
                 [orderFormStyles.done]: step && step !== 1 && step !== 2,
               })}
+              onClick={() => gotoStep(2)}
             >
               <span>Specifikace objednávky</span>
             </div>
@@ -582,6 +588,7 @@ const OrderFormLayout = ({
                 [orderFormStyles.done]:
                   step && step !== 1 && step !== 2 && step !== 3,
               })}
+              onClick={() => gotoStep(3)}
             >
               <span>Shrnutí</span>
             </div>
@@ -1295,8 +1302,23 @@ const OrderFormLayout = ({
                     buttonType="submit"
                     isBlock={true}
                     className="text-center justify-center"
-                    disabled={isSubmitting || !checkTerms || !checkTerms2}
-                    handleClick={() => console.log("click submit!")}
+                    disabled={
+                      isSubmitting ||
+                      !checkTerms ||
+                      !checkTerms2 ||
+                      !values.email ||
+                      !values.name ||
+                      !values.phone ||
+                      !values.address
+                    }
+                    handleClick={() =>
+                      console.log(
+                        "click submit!",
+                        !!values.email,
+                        errors,
+                        Object.keys(errors).length > 0
+                      )
+                    }
                   >
                     {t("forms.onlineOrderFormCTA")}
                   </Button2>

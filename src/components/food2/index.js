@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css';
 
 import cx from 'classnames';
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
@@ -230,10 +231,12 @@ export const FoodCarouselSection2 = () => {
   return (
     <section className={styles.foodCarouselSection} id="food">
       <Container isWide={true}>
-        <h3 className="fancyUnderlineText sectionTitleNew text-center">
-          <span>Jaká jídla</span> tě s námi čekají?
-        </h3>
-        <FoodCarousel />
+        <Fade cascade triggerOnce={true}>
+          <h3 className="fancyUnderlineText sectionTitleNew text-center">
+            <span>Jaká jídla</span> tě s námi čekají?
+          </h3>
+          <FoodCarousel />
+        </Fade>
       </Container>
     </section>
   )

@@ -65,7 +65,8 @@
   },
   "devDependencies": {
     "gatsby-plugin-anchor-links": "^1.2.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "react-awesome-reveal": "^3.7.1"
   },
   "keywords": [
     "gatsby"

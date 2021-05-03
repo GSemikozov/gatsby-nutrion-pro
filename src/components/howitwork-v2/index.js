@@ -1,4 +1,5 @@
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { Trans, useTranslation } from 'react-i18next';
 
 import { Container } from '../container';
@@ -14,59 +15,61 @@ export const HowItWork2 = () => {
   return (
     <div className={styles.section}>
       <Container isWide={true}>
-        <h3 className="fancyUnderlineText sectionTitleNew text-center">
-          {/*t("home.howItWorks.title")*/}
-          Jak to <span>funguje</span>
-        </h3>
-        <div className={styles.sectionList}>
-          <div className={styles.sectionListItem}>
-            <div className={styles.sectionListImg}>
-              <img src={icon1} className={styles.icon} alt="icon" />
+        <Fade cascade triggerOnce={true}>
+          <h3 className="fancyUnderlineText sectionTitleNew text-center">
+            {/*t("home.howItWorks.title")*/}
+            Jak to <span>funguje</span>
+          </h3>
+          <div className={styles.sectionList}>
+            <div className={styles.sectionListItem}>
+              <div className={styles.sectionListImg}>
+                <img src={icon1} className={styles.icon} alt="icon" />
+              </div>
+              <div className={styles.title}>{t("home.howItWorks.option1")}</div>
+              <div className={styles.sectionListNumber}>
+                <span>1</span>
+              </div>
             </div>
-            <div className={styles.title}>{t("home.howItWorks.option1")}</div>
-            <div className={styles.sectionListNumber}>
-              <span>1</span>
-            </div>
-          </div>
 
-          <div className={styles.sectionListItem}>
-            <div className={styles.sectionListImg}>
-              <img src={icon2} className={styles.icon} alt="icon" />
+            <div className={styles.sectionListItem}>
+              <div className={styles.sectionListImg}>
+                <img src={icon2} className={styles.icon} alt="icon" />
+              </div>
+              <div className={styles.title}>{t("home.howItWorks.option2")}</div>
+              <div className={styles.sectionListNumber}>
+                <span>2</span>
+              </div>
             </div>
-            <div className={styles.title}>{t("home.howItWorks.option2")}</div>
-            <div className={styles.sectionListNumber}>
-              <span>2</span>
+            <div className={styles.sectionListItem}>
+              <div className={styles.sectionListImg}>
+                <img src={icon3} className={styles.icon} alt="icon" />
+              </div>
+              <div className={styles.title}>{t("home.howItWorks.option3")}</div>
+              <div className={styles.sectionListNumber}>
+                <span>3</span>
+              </div>
             </div>
-          </div>
-          <div className={styles.sectionListItem}>
-            <div className={styles.sectionListImg}>
-              <img src={icon3} className={styles.icon} alt="icon" />
-            </div>
-            <div className={styles.title}>{t("home.howItWorks.option3")}</div>
-            <div className={styles.sectionListNumber}>
-              <span>3</span>
-            </div>
-          </div>
 
-          <div className={styles.sectionListItem}>
-            <div className={styles.sectionListImg}>
-              <img src={icon4} className={styles.icon} alt="icon" />
+            <div className={styles.sectionListItem}>
+              <div className={styles.sectionListImg}>
+                <img src={icon4} className={styles.icon} alt="icon" />
+              </div>
+              <div className={styles.title}>{t("home.howItWorks.option4")}</div>
+              <div className={styles.sectionListNumber}>
+                <span>4</span>
+              </div>
             </div>
-            <div className={styles.title}>{t("home.howItWorks.option4")}</div>
-            <div className={styles.sectionListNumber}>
-              <span>4</span>
+            <div className={styles.sectionListItem}>
+              <div className={styles.sectionListImg}>
+                <img src={icon5} className={styles.icon} alt="icon" />
+              </div>
+              <div className={styles.title}>{t("home.howItWorks.option5")}</div>
+              <div className={styles.sectionListNumber}>
+                <span>5</span>
+              </div>
             </div>
           </div>
-          <div className={styles.sectionListItem}>
-            <div className={styles.sectionListImg}>
-              <img src={icon5} className={styles.icon} alt="icon" />
-            </div>
-            <div className={styles.title}>{t("home.howItWorks.option5")}</div>
-            <div className={styles.sectionListNumber}>
-              <span>5</span>
-            </div>
-          </div>
-        </div>
+        </Fade>
       </Container>
     </div>
   )
