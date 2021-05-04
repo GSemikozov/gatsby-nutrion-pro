@@ -24,7 +24,7 @@ export const Hero3 = () => {
   }
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} style={{ height: "880px" }}>
       <Container isWide={true}>
         <div className={styles.heroInner}>
           <div className={styles.heroInfo}>

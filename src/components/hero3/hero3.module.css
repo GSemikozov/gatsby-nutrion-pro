@@ -59,6 +59,12 @@
   }
 }
 
+@media all and (max-width: 1919px) {
+  .hero {
+    height: auto !important;
+  }
+}
+
 @media all and (min-width: 1920px) {
   .hero {
     height: 880px;
