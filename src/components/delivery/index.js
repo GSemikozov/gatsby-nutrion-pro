@@ -1,6 +1,7 @@
 import React from 'react';
 import { Fade, Slide } from 'react-awesome-reveal';
 
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Container } from '../container';
 import styles from './delivery.module.css';
 import mapImgMob from './NP_web_assets/map-mob.svg';
@@ -9,15 +10,11 @@ import mapImg from './NP_web_assets/map.svg';
 export const DeliverySection = () => (
   <section className={styles.delivery}>
     <Container isWide={true}>
-      <Fade cascade triggerOnce={true}>
+      <AnimatedWrapper>
         <h3 className="fancyUnderlineText sectionTitleNew text-center">
           Doprava po Praze <span>zdarma</span>
         </h3>
-      </Fade>
-      <Slide direction="right">
         <img src={Map} style={{ display: "block" }} />
-      </Slide>
-      <Fade cascade triggerOnce={true}>
         <div className={styles.deliveryContent}>
           <div className={styles.deliveryImages}>
             <img
@@ -47,7 +44,7 @@ export const DeliverySection = () => (
             </div>
           </div>
         </div>
-      </Fade>
+      </AnimatedWrapper>
     </Container>
   </section>
 )

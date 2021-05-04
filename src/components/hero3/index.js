@@ -5,6 +5,7 @@ import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import { Button2 } from '../button2';
 import { Container } from '../container';
+import { HeroSvgCarousel } from '../hero-svg-carousel';
 import CarouselPlaceholder from './hero-carousel-placeholder.svg';
 import styles from './hero3.module.css';
 
@@ -70,6 +71,7 @@ export const Hero3 = () => {
                 style={{ maxWidth: "100%" }}
                 alt="placeholder"
               />
+              {/* <HeroSvgCarousel /> */}
               <div className={styles.heroCarouselHiddenText}>
                 <strong>carousel</strong>
               </div>

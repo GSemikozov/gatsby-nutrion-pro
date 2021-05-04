@@ -455,8 +455,13 @@ const OrderFormLayout = ({
   }
 
   useEffect(() => {
+    console.log("calc menu", menu)
+    console.log("calc program", program)
+    console.log("calc plan", plan)
+    console.log("calc kcal", kcal)
     const priceValue = getPrice(menu, program, plan, kcal)
     setPrice(priceValue)
+    console.log("priceValue", priceValue)
   }, [menu, plan, program, week, kcal])
 
   const getPrice = (menu, program, plan, kcal) => {

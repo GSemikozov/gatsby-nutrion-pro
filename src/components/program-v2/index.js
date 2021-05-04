@@ -2,6 +2,7 @@ import cx from 'classnames';
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Container } from '../container';
 import { LocalizedLink } from '../localized-link';
 import styles from './program.module.css';
@@ -10,7 +11,7 @@ export const Program2 = ({ id }) => {
   return (
     <div className={styles.section} id={id && id}>
       <Container isWide={true}>
-        <Fade cascade triggerOnce={true}>
+        <AnimatedWrapper>
           <h3 className="fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center">
             <span>Vyber si</span> svůj program
           </h3>
@@ -59,7 +60,7 @@ export const Program2 = ({ id }) => {
               </div>
             </LocalizedLink>
           </div>
-        </Fade>
+        </AnimatedWrapper>
       </Container>
     </div>
   )

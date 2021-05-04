@@ -1,8 +1,8 @@
 import cx from 'classnames';
 import React, { useState } from 'react';
-import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Container } from '../container';
 import styles from './faq.module.css';
 import AngleDownIcon from './icons/angle-down.svg';
@@ -151,13 +151,13 @@ export const FAQ2 = () => {
   return (
     <section className={styles.section} id="faq">
       <Container isWide={true} className={styles.container}>
-        <Fade triggerOnce={true}>
+        <AnimatedWrapper>
           <h3 className="fancyUnderlineText sectionTitleNew text-center">
             {/* {t("home.qa.title")} */}
             Často kladené <span>otázky</span>
           </h3>
-        </Fade>
-        <Fade triggerOnce={true}>
+        </AnimatedWrapper>
+        <AnimatedWrapper>
           <div className={styles.tabsTop}>
             <button
               type="button"
@@ -238,7 +238,7 @@ export const FAQ2 = () => {
               </div>
             ))}
           </div>
-        </Fade>
+        </AnimatedWrapper>
       </Container>
     </section>
   )

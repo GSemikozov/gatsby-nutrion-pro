@@ -2,6 +2,7 @@ import cx from 'classnames';
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Container } from '../container';
 import { ContactFormNew } from '../forms/contact-form-new';
 import day1stack from './1den-boxes.png';
@@ -12,7 +13,7 @@ export const MenuOrderInfo = ({ id }) => {
   return (
     <section className={styles.menuOrderInfo} id={id && id}>
       <Container isWide={true}>
-        <Fade cascade triggerOnce={true}>
+        <AnimatedWrapper>
           <h3 className={"fancyUnderlineText sectionTitleNew text-center"}>
             <span>Dvoudenní zkouška</span> 5chodového menu
           </h3>
@@ -59,7 +60,7 @@ export const MenuOrderInfo = ({ id }) => {
               <ContactFormNew themeLight={true} horizontal={true} />
             </div>
           </div>
-        </Fade>
+        </AnimatedWrapper>
       </Container>
     </section>
   )

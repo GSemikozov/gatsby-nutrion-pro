@@ -1,9 +1,9 @@
 import cx from 'classnames';
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Container } from '../container';
 import img1 from './images/review1.svg';
 import img2 from './images/review2.svg';
@@ -58,13 +58,13 @@ export const Reviews2 = ({ id = "" }) => {
   return (
     <section className={styles.section} id={id}>
       <Container isWide={true} className={styles.container}>
-        <Fade cascade triggerOnce={true}>
+        <AnimatedWrapper>
           <h3 className="fancyUnderlineText sectionTitleNew text-center">
             {/* {t("general.reviews.title")} */}
             Co <span>o nás říkají</span> naši zákazníci?
           </h3>
           <ReviewsCarousel />
-        </Fade>
+        </AnimatedWrapper>
       </Container>
     </section>
   )

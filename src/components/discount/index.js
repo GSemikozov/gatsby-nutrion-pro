@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
 
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Container } from '../container';
 import { ContactFormNew } from '../forms/contact-form-new';
 import styles from './discount.module.css';
@@ -11,7 +11,7 @@ import rightImage from './img_right.svg';
 export const DiscountSection = () => (
   <section className={styles.discount}>
     <Container isWide={true}>
-      <Fade cascade triggerOnce={true}>
+      <AnimatedWrapper>
         <h3 className="fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center">
           Společná objednávka se <span>slevou až 20%</span>
         </h3>
@@ -168,7 +168,7 @@ export const DiscountSection = () => (
             <img src={rightImage} alt="illustration" />
           </div>
         </div>
-      </Fade>
+      </AnimatedWrapper>
     </Container>
   </section>
 )

@@ -472,6 +472,7 @@ const OrderFormLayout = ({
     console.log("calc plan first", plan)
     console.log("calc kcal first", kcal)
     const priceValue = getPrice(menu, program, plan, kcal)
+    console.log("priceValue", priceValue)
     setPrice(priceValue)
   }, [menu, plan, program, week, kcal])
 

@@ -4,6 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 
 import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Button } from '../button';
 import { Button2 } from '../button2';
 import styles from '../calculator/calculator2.module.css';
@@ -34,7 +35,7 @@ export const Order2 = ({ id, className }) => {
       id={id && id}
     >
       <Container className={cx("text-center", styles2.container)}>
-        <Fade triggerOnce={true}>
+        <AnimatedWrapper>
           <h3
             className={cx(
               "fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center",
@@ -45,7 +46,7 @@ export const Order2 = ({ id, className }) => {
             {/* {t("home.order.title")} */}
             Objednat <span>teď</span>
           </h3>
-        </Fade>
+        </AnimatedWrapper>
         <div className={styles2.formWrapContainer}>
           <div className={styles2.formInnerContainer}>
             <div className={cx(styles2.formTabs)}>

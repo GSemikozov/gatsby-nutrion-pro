@@ -4,10 +4,10 @@ import 'slick-carousel/slick/slick.css';
 
 import cx from 'classnames';
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Button } from '../button';
 import { Container } from '../container';
 import { LocalizedLink } from '../localized-link';
@@ -231,12 +231,12 @@ export const FoodCarouselSection2 = () => {
   return (
     <section className={styles.foodCarouselSection} id="food">
       <Container isWide={true}>
-        <Fade cascade triggerOnce={true}>
+        <AnimatedWrapper>
           <h3 className="fancyUnderlineText sectionTitleNew text-center">
             <span>Jaká jídla</span> tě s námi čekají?
           </h3>
           <FoodCarousel />
-        </Fade>
+        </AnimatedWrapper>
       </Container>
     </section>
   )

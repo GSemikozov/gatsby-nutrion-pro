@@ -18,6 +18,7 @@ import { Hero } from '../components/hero2';
 import { Hero3 } from '../components/hero3';
 import { HowItWork } from '../components/howitwork';
 import { HowItWork2 } from '../components/howitwork-v2';
+import { Loader } from '../components/loader';
 import { MenuOrderInfo } from '../components/menuOrderInfo';
 import { Order } from '../components/order-form';
 import { Order2 } from '../components/order-form2';
@@ -29,19 +30,19 @@ import { Reviews2 } from '../components/reviews2';
 import SEO from '../components/seo';
 import { HomepageTabsProvider, homepageTabsReducer, initialState } from '../contexts/HomepageTabsContext';
 
-const Loader = () => (
-  <div
-    style={{
-      height: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-    }}
-  >
-    <BounceLoader size={100} color="#3DC383" />
-  </div>
-)
+// const Loader = () => (
+//   <div
+//     style={{
+//       height: "100vh",
+//       display: "flex",
+//       flexDirection: "column",
+//       alignItems: "center",
+//       justifyContent: "center",
+//     }}
+//   >
+//     <BounceLoader size={100} color="#3DC383" />
+//   </div>
+// )
 
 const NewHomepage = ({ site }) => {
   const [state, dispatch] = useReducer(homepageTabsReducer, initialState)

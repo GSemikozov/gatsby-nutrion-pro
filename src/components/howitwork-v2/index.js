@@ -1,7 +1,7 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
 import { Trans, useTranslation } from 'react-i18next';
 
+import { AnimatedWrapper } from '../animated-wrapper';
 import { Container } from '../container';
 import styles from './how-it-work.module.css';
 import icon1 from './icons/icon-howItWork1.svg';
@@ -15,7 +15,7 @@ export const HowItWork2 = () => {
   return (
     <div className={styles.section}>
       <Container isWide={true}>
-        <Fade cascade triggerOnce={true}>
+        <AnimatedWrapper>
           <h3 className="fancyUnderlineText sectionTitleNew text-center">
             {/*t("home.howItWorks.title")*/}
             Jak to <span>funguje</span>
@@ -69,7 +69,7 @@ export const HowItWork2 = () => {
               </div>
             </div>
           </div>
-        </Fade>
+        </AnimatedWrapper>
       </Container>
     </div>
   )
