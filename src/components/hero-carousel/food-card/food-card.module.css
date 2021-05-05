@@ -1,0 +1,99 @@
+.foodCard {
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foodCardTop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: -6px;
+  max-width: 316px;
+  width: 100%;
+}
+
+.foodCardImg {
+  max-width: 100%;
+}
+
+.foodCardBody {
+  padding: 26px 0 22px;
+  flex-grow: 1;
+  background: #f8f8f8;
+  border-radius: 0 0 50px 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  width: 100%;
+  border: none;
+}
+
+.foodCardTitle {
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  flex-grow: 1;
+}
+
+@media all and (min-width: 600px) and (max-width: 767px) {
+  .foodCard {
+    margin: 0 8px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .foodCard {
+    height: calc(245px + 160px);
+  }
+
+  .foodCardBody {
+    border-top: none;
+    padding: 30px 4px 24px;
+  }
+
+  .foodCardBody {
+    border-radius: 0 0 60px 60px;
+    padding: 26px 0 8px;
+  }
+
+  .foodCardTitle {
+    font-size: 18px;
+  }
+}
+
+/* @media all and (min-width: 768px) {
+  .foodCard {
+    height: calc(245px + 220px);
+  }
+}
+
+@media all and (min-width: 992px) {
+  .foodCard {
+    height: calc(245px + 190px);
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .foodCard {
+    height: calc(245px + 180px);
+  }
+
+  .foodCardBody {
+    padding: 30px 16px 10px;
+  }
+} */
+
+@media all and (min-width: 1400px) {
+  .foodCard {
+    height: calc(245px + 185px);
+  }
+}

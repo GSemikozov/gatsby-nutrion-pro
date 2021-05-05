@@ -1,0 +1,141 @@
+.foodCarouselSection {
+  position: relative;
+  z-index: 0;
+  padding: 50px 20px 100px;
+  overflow: hidden;
+}
+
+.foodCarouselControls {
+  display: flex;
+  overflow-x: auto;
+  max-width: 928px;
+  padding: 0 48px 48px;
+  width: 100%;
+  margin: 0 auto 100px;
+  display: none;
+}
+
+.foodCarouselControl {
+  width: 128px;
+  padding: 5px;
+  margin-right: 48px;
+  background: rgba(244, 244, 244, 0.7);
+  border-radius: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.foodCarouselControl:last-child {
+  margin-right: 0;
+}
+
+.foodCarouselControl.active {
+  background: rgba(244, 244, 244, 1);
+  box-shadow: 0px 20px 30px -6px rgba(134, 134, 134, 0.3);
+}
+
+.foodCarouselControl img {
+  margin-bottom: 12px;
+  display: block;
+  max-width: 100%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.foodCarouselControl .text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #353643;
+  margin-bottom: 20px;
+}
+
+.carouselItem {
+  padding: 0;
+  outline: none;
+}
+
+.foodCardList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.foodCardList li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 25%;
+}
+
+.foodCardList li .el {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #b7b5b5;
+}
+
+.foodCardList li:first-child .el {
+  background-color: #ffffff;
+  border: 1px solid #3dc383;
+}
+
+.foodCardList li:first-child .el {
+  color: var(--color-green);
+}
+
+.foodCardList li .title {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 300;
+  text-align: center;
+}
+
+.outsideButton {
+  padding: 0 !important;
+  width: 300px;
+  margin-top: 90px;
+}
+
+.outsideButton > a {
+  width: 100%;
+  display: inline-block;
+}
+
+@media all and (min-width: 768px) {
+  .foodCarouselSection {
+    padding: 100px 0;
+  }
+
+  .carouselItem {
+    padding: 0 8px;
+  }
+
+  .foodCardList li .el {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .foodCardList li .title {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .carouselItem {
+    padding: 0 27px;
+  }
+}

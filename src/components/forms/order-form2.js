@@ -467,10 +467,10 @@ const OrderFormLayout = ({
   }
 
   useEffect(() => {
-    console.log("calc menu first", menu)
-    console.log("calc programfirst", program)
-    console.log("calc plan first", plan)
-    console.log("calc kcal first", kcal)
+    console.log("calc menu", menu)
+    console.log("calc program", program)
+    console.log("calc plan", plan)
+    console.log("calc kcal", kcal)
     const priceValue = getPrice(menu, program, plan, kcal)
     console.log("priceValue", priceValue)
     setPrice(priceValue)
@@ -794,57 +794,40 @@ const OrderFormLayout = ({
                     orderFormStyles.radioLines
                   )}
                 >
-                  <div className={cx(stylesRadio.radioLine)}>
-                    <input
-                      id="kcal1"
-                      type="radio"
-                      name="kcal"
-                      value="1600"
-                      checked={values.kcal === 1600 || values.kcal < 1600}
-                      onChange={e => {
-                        onSetKcal(+e.target.value)
-                        setFieldValue("kcal", +e.target.value)
-                      }}
-                    />
+                  {kCalOptions[plan][gender][menu].map((item, idx) => {
+                    return (
+                      <div className={cx(stylesRadio.radioLine)}>
+                        <input
+                          id={`kcal${idx}`}
+                          type="radio"
+                          name="kcal"
+                          value={item.value}
+                          checked={values.kcal === item.value}
+                          onChange={e => {
+                            onSetKcal(+e.target.value)
+                            setFieldValue("kcal", +e.target.value)
+                          }}
+                        />
 
-                    <label htmlFor="kcal1">
-                      <span
-                        className={cx(stylesRadio.text, orderFormStyles.text)}
-                      >
-                        1600 kCal
-                      </span>
-                      <span
-                        className={cx(stylesRadio.line, orderFormStyles.line)}
-                      ></span>
-                    </label>
-                  </div>
-                  <div className={cx(stylesRadio.radioLine)}>
-                    <input
-                      id="kcal2"
-                      type="radio"
-                      name="kcal"
-                      value="1800"
-                      checked={values.kcal === 1800 || values.kcal > 1800}
-                      disabled={kcalDisabled}
-                      onChange={e => {
-                        onSetKcal(+e.target.value)
-                        setFieldValue("kcal", +e.target.value)
-                      }}
-                    />
-
-                    <label htmlFor="kcal2">
-                      <span
-                        className={cx(stylesRadio.text, orderFormStyles.text, {
-                          [orderFormStyles.disabled]: kcalDisabled,
-                        })}
-                      >
-                        1800 kCal
-                      </span>
-                      <span
-                        className={cx(stylesRadio.line, orderFormStyles.line)}
-                      ></span>
-                    </label>
-                  </div>
+                        <label htmlFor={`kcal${idx}`}>
+                          <span
+                            className={cx(
+                              stylesRadio.text,
+                              orderFormStyles.text
+                            )}
+                          >
+                            {item.label}
+                          </span>
+                          <span
+                            className={cx(
+                              stylesRadio.line,
+                              orderFormStyles.line
+                            )}
+                          ></span>
+                        </label>
+                      </div>
+                    )
+                  })}
                 </div>
                 {/* <div className={cx(stylesRadio.radio, stylesRadio.radioBtn)}>
                 <Select
