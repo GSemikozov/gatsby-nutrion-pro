@@ -28,6 +28,7 @@
   width: 100%;
   min-height: 320px;
   position: relative;
+  margin: 40px 0;
 }
 
 .heroCarouselHiddenText {
@@ -40,6 +41,16 @@
   opacity: 0;
 }
 
+@media all and (max-width: 767px) {
+  .heroCarouselWrapper {
+    margin: auto;
+  }
+  .heroCarousel {
+    max-width: 343px;
+    max-height: 343px;
+  }
+}
+
 @media all and (min-width: 1024px) {
   .heroTitle {
     font-size: 80px;
@@ -47,15 +58,9 @@
     text-align: left;
   }
 
-  .heroInner {
-    display: flex;
-    flex-direction: row;
-  }
-
   .heroCarouselWrapper {
     /* flex-basis: 100%; */
     /* padding-right: 85px; */
-    margin-top: 40px;
   }
 
   .heroCarousel {
@@ -64,15 +69,22 @@
   }
 }
 
-@media all and (max-width: 1079px) {
+@media all and (min-width: 1280px) {
+  .heroCarousel {
+    margin: 0;
+  }
+  .heroInner {
+    display: flex;
+    flex-direction: row;
+  }
   .hero {
-    height: auto !important;
+    height: 880px;
   }
 }
 
-@media all and (min-width: 1080px) {
+@media all and (max-width: 1279px) {
   .hero {
-    height: 880px;
+    height: auto !important;
   }
 }
 

@@ -9,10 +9,36 @@
   width: 100%;
 }
 
+.maskMobile {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+@media all and (max-width: 1024px) {
+  .mask {
+    display: none;
+  }
+
+  .maskMobile {
+    display: block;
+  }
+}
+
 .carouselDots {
   top: 0;
   right: -20px;
   transform: rotate(90deg);
+}
+
+@media all and (max-width: 767px) {
+  .carouselDots {
+    top: 100%;
+    right: 0;
+    transform: none;
+  }
 }
 
 .carouselDots li:nth-child(2n) {

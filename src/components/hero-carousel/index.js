@@ -10,6 +10,7 @@ import Slider from 'react-slick';
 import { FoodCard } from './food-card';
 import styles from './food-carousel.module.css';
 import carouselControlImg1 from './images/obed-image.png';
+import maskMobile from './mask-mob.svg';
 import mask from './mask.svg';
 
 export const HeroCarousel = () => {
@@ -78,7 +79,7 @@ export const HeroCarousel = () => {
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 5000,
     cssEase: "linear",
     fade: true,
@@ -101,6 +102,7 @@ export const HeroCarousel = () => {
     slidesData.length > 0 && (
       <div className={styles.carouselWrapper}>
         <img src={mask} className={styles.mask} alt="mask" />
+        <img src={maskMobile} className={styles.maskMobile} alt="mask" />
         <Slider {...settings}>{slides}</Slider>
       </div>
     )

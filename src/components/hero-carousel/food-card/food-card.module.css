@@ -82,6 +82,45 @@
   text-align: center;
 }
 
+@media all and (max-width: 767px) {
+  .foodCard {
+    margin: 0 8px;
+  }
+
+  .foodCardList li {
+    font-size: 13px;
+    position: relative;
+  }
+
+  .foodCardList li + li {
+    margin-top: 15px;
+  }
+
+  .foodCardList li:first-child {
+    left: -8px;
+    top: 2px;
+  }
+
+  .foodCardList li:nth-child(2) {
+    top: 4px;
+    left: -3px;
+  }
+
+  .foodCardList li:nth-child(3) {
+    top: 8px;
+    left: -5px;
+  }
+
+  .foodCardList li:nth-child(4) {
+    top: 12px;
+    left: -8px;
+  }
+
+  .foodCardList li .title {
+    font-size: 12px;
+  }
+}
+
 @media all and (min-width: 600px) and (max-width: 767px) {
   .foodCard {
     margin: 0 8px;
