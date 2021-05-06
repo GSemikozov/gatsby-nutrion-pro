@@ -1,3 +1,7 @@
+.hero {
+  overflow: hidden;
+}
+
 .heroTitle {
   font-family: "Source Serif Pro", serif;
   font-size: 36px;
@@ -49,7 +53,7 @@
   }
 
   .heroCarouselWrapper {
-    margin-left: 6%;
+    flex-basis: 100%;
     /* padding-right: 85px; */
   }
 
@@ -59,15 +63,25 @@
   }
 }
 
-@media all and (max-width: 1919px) {
+@media all and (max-width: 1079px) {
   .hero {
     height: auto !important;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  .hero {
+    height: 880px;
   }
 }
 
 @media all and (min-width: 1920px) {
   .hero {
     height: 880px;
+  }
+
+  .heroCarouselWrapper {
+    margin-left: 6%;
   }
 
   .heroCarousel {

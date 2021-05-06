@@ -1,3 +1,24 @@
+.carouselWrapper {
+  position: relative;
+}
+
+.mask {
+  position: absolute;
+  z-index: 1;
+  left: 25px;
+  top: -5px;
+}
+
+.carouselDots {
+  top: 0;
+  right: -150px;
+  transform: rotate(90deg);
+}
+
+.carouselDots li:nth-child(2n) {
+  margin-left: -32px !important;
+}
+
 .foodCarouselSection {
   position: relative;
   z-index: 0;
@@ -59,50 +80,6 @@
   outline: none;
 }
 
-.foodCardList {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 10px;
-}
-
-.foodCardList li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1 0 25%;
-}
-
-.foodCardList li .el {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 600;
-  color: #b7b5b5;
-}
-
-.foodCardList li:first-child .el {
-  background-color: #ffffff;
-  border: 1px solid #3dc383;
-}
-
-.foodCardList li:first-child .el {
-  color: var(--color-green);
-}
-
-.foodCardList li .title {
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 300;
-  text-align: center;
-}
-
 .outsideButton {
   padding: 0 !important;
   width: 300px;
@@ -121,16 +98,6 @@
 
   .carouselItem {
     padding: 0 8px;
-  }
-
-  .foodCardList li .el {
-    width: 48px;
-    height: 48px;
-    font-size: 18px;
-  }
-
-  .foodCardList li .title {
-    font-size: 16px;
   }
 }
 

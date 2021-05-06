@@ -67,13 +67,13 @@ export const Hero3 = () => {
           </div>
           <div className={styles.heroCarouselWrapper}>
             <div className={styles.heroCarousel}>
-              <img
+              {/* <img
                 src={CarouselPlaceholder}
                 style={{ maxWidth: "100%" }}
                 alt="placeholder"
-              />
+              /> */}
               {/* <HeroSvgCarousel /> */}
-              {/* <HeroCarousel /> */}
+              <HeroCarousel />
               <div className={styles.heroCarouselHiddenText}>
                 <strong>carousel</strong>
               </div>
