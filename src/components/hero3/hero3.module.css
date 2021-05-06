@@ -53,8 +53,9 @@
   }
 
   .heroCarouselWrapper {
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
     /* padding-right: 85px; */
+    margin-top: 40px;
   }
 
   .heroCarousel {

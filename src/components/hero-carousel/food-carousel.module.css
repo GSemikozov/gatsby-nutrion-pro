@@ -5,13 +5,13 @@
 .mask {
   position: absolute;
   z-index: 1;
-  left: 25px;
-  top: -5px;
+  height: 100%;
+  width: 100%;
 }
 
 .carouselDots {
   top: 0;
-  right: -150px;
+  right: -20px;
   transform: rotate(90deg);
 }
 
@@ -94,15 +94,5 @@
 @media all and (min-width: 768px) {
   .foodCarouselSection {
     padding: 100px 0;
-  }
-
-  .carouselItem {
-    padding: 0 8px;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .carouselItem {
-    padding: 0 27px;
   }
 }

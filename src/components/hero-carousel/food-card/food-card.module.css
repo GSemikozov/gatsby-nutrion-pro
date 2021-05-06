@@ -18,7 +18,7 @@
 
 .foodCardBody {
   position: absolute;
-  left: 0;
+  left: 20px;
   top: 50%;
   transform: translate(0, -50%);
 }
@@ -55,7 +55,7 @@
 }
 
 .foodCardList li + li {
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 .foodCardList li .title {
