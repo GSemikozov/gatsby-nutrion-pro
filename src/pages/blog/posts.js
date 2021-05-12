@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { BlogPostsCard } from '../../components/blog/card';
+import imgPlaceholder from '../../components/blog/card/blog-1-placeholder.jpg';
+import { CategoriesFilterPanel } from '../../components/blog/categories-filter-panel';
 import { Breadcrumbs, BreadcrumbsItem } from '../../components/breadcrumbs';
 import { Container } from '../../components/container';
-import { BlogPostsCard } from './card';
-import imgPlaceholder from './card/blog-1-placeholder.jpg';
-import { CategoriesFilterPanel } from './categories-filter-panel';
 import styles from './posts-grid.module.css';
 
 const Posts = () => (

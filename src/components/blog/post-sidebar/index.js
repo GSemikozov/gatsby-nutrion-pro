@@ -1,6 +1,6 @@
 import React from 'react';
 
-import imgPlaceholder from '../card/blog-1-placeholder.jpg';
+import imgPlaceholder from '../../../components/blog/card/blog-1-placeholder.jpg';
 import styles from './post-sidebar.module.css';
 
 export const PostSidebar = () => (

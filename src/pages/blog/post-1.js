@@ -1,11 +1,11 @@
 import React from 'react';
 
+import { CategoriesFilterPanel } from '../../components/blog/categories-filter-panel';
+import { Hero } from '../../components/blog/hero';
+import { PostSidebar } from '../../components/blog/post-sidebar';
 import { Breadcrumbs, BreadcrumbsItem } from '../../components/breadcrumbs';
 import { Container } from '../../components/container';
-import { CategoriesFilterPanel } from './categories-filter-panel';
-import { Hero } from './hero';
 import styles from './post-grid.module.css';
-import { PostSidebar } from './post-sidebar';
 import img1 from './post1-img1.png';
 import img2 from './post1-img2.png';
 
