@@ -27,66 +27,36 @@ export const MobileMenu = ({ menuVisible, menuLinks, onCloseMobileMenu }) => {
   const isHomepage = window.location.pathname === "/"
 
   const HomepageMenu = () => {
-    return menuLinks.map((link, i) => {
-      return link.link.startsWith("/#") ? (
-        <Button
-          key={link.name}
-          type="unstyled"
-          className={styles.menuItem}
-          handleClick={() => {
-            onCloseMobileMenu()
-            handleMenuLinkClick(link, undefined, lang)
-          }}
-        >
-          <img
-            src={
-              i === 0
-                ? IconClipboard
-                : i === 1
-                ? IconCalculator
-                : i === 2
-                ? IconMenu
-                : i === 3
-                ? IconConsultation
-                : null
-            }
-            alt="icon"
-          />
-          {getLinkTranslation(link.name)}
-        </Button>
-      ) : (
-        <LocalizedLink
-          key={link.name}
-          to={link.link}
-          className={styles.menuItem}
-          onClick={() => {
-            onCloseMobileMenu()
-          }}
-        >
-          <img
-            src={
-              i === 0
-                ? IconClipboard
-                : i === 1
-                ? IconCalculator
-                : i === 2
-                ? IconMenu
-                : i === 3
-                ? IconConsultation
-                : null
-            }
-            alt="icon"
-          />
-          {getLinkTranslation(link.name)}
-        </LocalizedLink>
-      )
-    })
-  }
-
-  const InnerPageMenu = () => {
-    return menuLinks.map((link, i) => {
-      return (
-        !link.link.startsWith("/#") && (
+    return (
+      menuLinks &&
+      menuLinks.map((link, i) => {
+        return link.link.startsWith("/#") ? (
+          <Button
+            key={link.name}
+            type="unstyled"
+            className={styles.menuItem}
+            handleClick={() => {
+              onCloseMobileMenu()
+              handleMenuLinkClick(link, undefined, lang)
+            }}
+          >
+            <img
+              src={
+                i === 0
+                  ? IconClipboard
+                  : i === 1
+                  ? IconCalculator
+                  : i === 2
+                  ? IconMenu
+                  : i === 3
+                  ? IconConsultation
+                  : null
+              }
+              alt="icon"
+            />
+            {getLinkTranslation(link.name)}
+          </Button>
+        ) : (
           <LocalizedLink
             key={link.name}
             to={link.link}
@@ -112,8 +82,45 @@ export const MobileMenu = ({ menuVisible, menuLinks, onCloseMobileMenu }) => {
             {getLinkTranslation(link.name)}
           </LocalizedLink>
         )
-      )
-    })
+      })
+    )
+  }
+
+  const InnerPageMenu = () => {
+    return menuLinks ? (
+      menuLinks.map((link, i) => {
+        return (
+          !link.link.startsWith("/#") && (
+            <LocalizedLink
+              key={link.name}
+              to={link.link}
+              className={styles.menuItem}
+              onClick={() => {
+                onCloseMobileMenu()
+              }}
+            >
+              <img
+                src={
+                  i === 0
+                    ? IconClipboard
+                    : i === 1
+                    ? IconCalculator
+                    : i === 2
+                    ? IconMenu
+                    : i === 3
+                    ? IconConsultation
+                    : null
+                }
+                alt="icon"
+              />
+              {getLinkTranslation(link.name)}
+            </LocalizedLink>
+          )
+        )
+      })
+    ) : (
+      <div />
+    )
   }
 
   return (

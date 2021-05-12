@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
 import { Container } from '../container';
@@ -13,7 +13,7 @@ import { Navbar } from './navbar';
 
 export const Header2 = ({ menuLinks, isLight }) => {
   const [menuVisible, setMenuVisible] = useState(false)
-  const { activeTab, dispatchAction } = useHomepageTabsContext()
+  // const { activeTab, dispatchAction } = useHomepageTabsContext()
 
   const toggleMenu = () => {
     if (menuVisible) {
@@ -26,6 +26,10 @@ export const Header2 = ({ menuLinks, isLight }) => {
       document.body.style.overflow = "hidden"
     }
   }
+
+  useEffect(() => {
+    console.log("menuLinks in new header", menuLinks)
+  }, [])
 
   return (
     <header
@@ -51,12 +55,12 @@ export const Header2 = ({ menuLinks, isLight }) => {
           menuLinks={menuLinks}
           isLight={isLight}
         />
-        <MobileMenu
+        {/* <MobileMenu
           menuVisible={menuVisible}
           menuLinks={menuLinks}
           onCloseMobileMenu={toggleMenu}
           dispatchAction={dispatchAction}
-        />
+        /> */}
       </Container>
     </header>
   )

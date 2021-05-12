@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Container } from '../container';
 import { LocalizedLink } from '../localized-link';
@@ -24,6 +24,10 @@ export const Header = ({ menuLinks, isLight }) => {
       document.body.style.overflow = "hidden"
     }
   }
+
+  useEffect(() => {
+    console.log("menuLinks in old header", menuLinks)
+  }, [])
 
   return (
     <header

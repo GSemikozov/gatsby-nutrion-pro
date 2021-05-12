@@ -1,0 +1,13 @@
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 27px;
+  margin-bottom: 64px;
+}
+
+@media all and (max-width: 767px) {
+  .postsGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
+}

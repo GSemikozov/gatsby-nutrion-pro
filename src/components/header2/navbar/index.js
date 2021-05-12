@@ -1,6 +1,6 @@
 import { window } from 'browser-monads';
 import cx from 'classnames';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { handleMenuLinkClick } from '../../../helpers';
@@ -18,6 +18,8 @@ import styles from './navbar.module.css';
 export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
   const { lang } = useLangContext()
 
+  const [menu, setMenu] = useState(menuLinks)
+
   const openMobileMenu = () => () => {
     props.onCloseMobileMenu()
   }
@@ -32,33 +34,24 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
 
   const isHomepage = window.location.pathname === "/"
 
-  const HomepageMenu = () => {
-    return menuLinks.map((link, i) => {
-      return link.link.startsWith("/#") ? (
-        <Button
-          key={link.name}
-          type="unstyled"
-          className={cx(styles.navbarItem, "visible-desktop")}
-          handleClick={() => handleMenuLinkClick(link, lang)}
-        >
-          {getLinkTranslation(link.name)}
-        </Button>
-      ) : (
-        <LocalizedLink
-          key={link.name}
-          to={link.link}
-          className={cx(styles.navbarItem, "visible-desktop")}
-        >
-          {getLinkTranslation(link.name)}
-        </LocalizedLink>
-      )
-    })
-  }
+  useEffect(() => {
+    setMenu(menuLinks)
+  }, [menuLinks])
 
-  const InnerPageMenu = () => {
-    return menuLinks.map((link, i) => {
-      return (
-        !link.link.startsWith("/#") && (
+  const HomepageMenu = () => {
+    return (
+      menuLinks &&
+      menuLinks.map((link, i) => {
+        return link.link.startsWith("/#") ? (
+          <Button
+            key={link.name}
+            type="unstyled"
+            className={cx(styles.navbarItem, "visible-desktop")}
+            handleClick={() => handleMenuLinkClick(link, lang)}
+          >
+            {getLinkTranslation(link.name)}
+          </Button>
+        ) : (
           <LocalizedLink
             key={link.name}
             to={link.link}
@@ -67,8 +60,28 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
             {getLinkTranslation(link.name)}
           </LocalizedLink>
         )
-      )
-    })
+      })
+    )
+  }
+
+  const InnerPageMenu = () => {
+    return menu ? (
+      menu.map((link, i) => {
+        return (
+          !link.link.startsWith("/#") && (
+            <LocalizedLink
+              key={link.name}
+              to={link.link}
+              className={cx(styles.navbarItem, "visible-desktop")}
+            >
+              {getLinkTranslation(link.name)}
+            </LocalizedLink>
+          )
+        )
+      })
+    ) : (
+      <div />
+    )
   }
 
   return (

@@ -38,34 +38,21 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
   const isHomepage = window.location.pathname === "/"
 
   const HomepageMenu = () => {
-    return menuLinks.map((link, i) => {
-      return link.link.startsWith("/#") ? (
-        <Button
-          key={link.name}
-          type="unstyled"
-          className={cx(styles.navbarItem, "visible-desktop")}
-          handleClick={() => {
-            handleMenuLinkClick(link, undefined, lang)
-          }}
-        >
-          {getLinkTranslation(link.name)}
-        </Button>
-      ) : (
-        <LocalizedLink
-          key={link.name}
-          to={link.link}
-          className={cx(styles.navbarItem, "visible-desktop")}
-        >
-          {getLinkTranslation(link.name)}
-        </LocalizedLink>
-      )
-    })
-  }
-
-  const InnerPageMenu = () => {
-    return menuLinks.map((link, i) => {
-      return (
-        !link.link.startsWith("/#") && (
+    return (
+      menuLinks &&
+      menuLinks.map((link, i) => {
+        return link.link.startsWith("/#") ? (
+          <Button
+            key={link.name}
+            type="unstyled"
+            className={cx(styles.navbarItem, "visible-desktop")}
+            handleClick={() => {
+              handleMenuLinkClick(link, undefined, lang)
+            }}
+          >
+            {getLinkTranslation(link.name)}
+          </Button>
+        ) : (
           <LocalizedLink
             key={link.name}
             to={link.link}
@@ -74,8 +61,28 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
             {getLinkTranslation(link.name)}
           </LocalizedLink>
         )
-      )
-    })
+      })
+    )
+  }
+
+  const InnerPageMenu = () => {
+    return menuLinks ? (
+      menuLinks.map((link, i) => {
+        return (
+          !link.link.startsWith("/#") && (
+            <LocalizedLink
+              key={link.name}
+              to={link.link}
+              className={cx(styles.navbarItem, "visible-desktop")}
+            >
+              {getLinkTranslation(link.name)}
+            </LocalizedLink>
+          )
+        )
+      })
+    ) : (
+      <div />
+    )
   }
 
   return (

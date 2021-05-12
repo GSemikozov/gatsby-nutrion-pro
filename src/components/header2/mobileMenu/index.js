@@ -1,6 +1,6 @@
 import { window } from 'browser-monads';
 import cx from 'classnames';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { handleMenuLinkClick } from '../../../helpers';
@@ -31,6 +31,8 @@ export const MobileMenu = ({
     return t(`menu.${name}`)
   }
 
+  const [menu, setMenu] = useState(menuLinks)
+
   const scroll = useSmoothScroll()
 
   const isHomepage = window.location.pathname === "/"
@@ -45,39 +47,27 @@ export const MobileMenu = ({
     scroll.animateScroll(document.getElementById(selector))
   }
 
-  const HomepageMenu = () => {
-    return menuLinks.map((link, i) => {
-      return link.link.startsWith("/#") ? (
-        <Button
-          key={link.name}
-          type="unstyled"
-          className={styles.menuItem}
-          handleClick={() => {
-            onCloseMobileMenu()
-            handleMenuLinkClick(link, undefined, lang)
-          }}
-        >
-          {getLinkTranslation(link.name)}
-        </Button>
-      ) : (
-        <LocalizedLink
-          key={link.name}
-          to={link.link}
-          className={styles.menuItem}
-          onClick={() => {
-            onCloseMobileMenu()
-          }}
-        >
-          {getLinkTranslation(link.name)}
-        </LocalizedLink>
-      )
-    })
-  }
+  useEffect(() => {
+    setMenu(menuLinks)
+  }, [menuLinks])
 
-  const InnerPageMenu = () => {
-    return menuLinks.map((link, i) => {
-      return (
-        !link.link.startsWith("/#") && (
+  const HomepageMenu = () => {
+    return (
+      menuLinks &&
+      menuLinks.map((link, i) => {
+        return link.link.startsWith("/#") ? (
+          <Button
+            key={link.name}
+            type="unstyled"
+            className={styles.menuItem}
+            handleClick={() => {
+              onCloseMobileMenu()
+              handleMenuLinkClick(link, undefined, lang)
+            }}
+          >
+            {getLinkTranslation(link.name)}
+          </Button>
+        ) : (
           <LocalizedLink
             key={link.name}
             to={link.link}
@@ -89,8 +79,31 @@ export const MobileMenu = ({
             {getLinkTranslation(link.name)}
           </LocalizedLink>
         )
-      )
-    })
+      })
+    )
+  }
+
+  const InnerPageMenu = () => {
+    return menu ? (
+      menu.map((link, i) => {
+        return (
+          !link.link.startsWith("/#") && (
+            <LocalizedLink
+              key={link.name}
+              to={link.link}
+              className={styles.menuItem}
+              onClick={() => {
+                onCloseMobileMenu()
+              }}
+            >
+              {getLinkTranslation(link.name)}
+            </LocalizedLink>
+          )
+        )
+      })
+    ) : (
+      <div />
+    )
   }
 
   return (

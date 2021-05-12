@@ -51,9 +51,6 @@ const NewHomepage = ({ site }) => {
     <HomepageTabsProvider
       value={{ activeTab: state.activeTab, dispatchAction: dispatch }}
     >
-      {site && (
-        <Header2 menuLinks={site.siteMetadata.menuLinks} isLight={true} />
-      )}
       <SEO title="Home" />
       {/* componetns here */}
       <Hero3 />
@@ -67,7 +64,6 @@ const NewHomepage = ({ site }) => {
       <HowItWork2 />
       <DiscountSection />
       <FAQ2 />
-      <Footer2 />
     </HomepageTabsProvider>
   )
 }
@@ -75,7 +71,7 @@ const NewHomepage = ({ site }) => {
 const OldHomepage = ({ site }) => (
   <>
     <SEO title="Home" />
-    <Header menuLinks={site.siteMetadata.menuLinks} />
+    {site && <Header menuLinks={site.siteMetadata.menuLinks} />}
     <Hero />
     <Program id="programs" />
     <Order id="calculator" />
@@ -107,51 +103,45 @@ const IndexPage = () => {
     `
   )
 
-  const [pageVersion, setPageVersion] = useState("")
-  const versions = ["current-version", "new-version"]
+  /* AB-test to display specific design version */
+  // const [pageVersion, setPageVersion] = useState("")
+  // const versions = ["current-version", "new-version"]
 
-  useEffect(() => {
-    const curVersion = localStorage.getItem("homepage-version")
-    const randomIndex = getRandomInteger(1, 10) > 5 ? 1 : 0
-    const randomVersion = versions[randomIndex]
-    if (!curVersion || curVersion === undefined) {
-      localStorage.setItem("homepage-version", randomVersion)
-      setPageVersion(randomVersion)
-    } else {
-      setPageVersion(curVersion)
-    }
-  }, [])
+  // useEffect(() => {
+  //   const curVersion = localStorage.getItem("homepage-version")
+  //   const randomIndex = getRandomInteger(1, 10) > 5 ? 1 : 0
+  //   const randomVersion = versions[randomIndex]
+  //   if (!curVersion || curVersion === undefined) {
+  //     localStorage.setItem("homepage-version", randomVersion)
+  //     setPageVersion(randomVersion)
+  //   } else {
+  //     setPageVersion(curVersion)
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    console.log("push datalayer pageVersion", pageVersion)
-    window.dataLayer &&
-      window.dataLayer.push({
-        event: "ga.pageview",
-        testovani: pageVersion,
-      })
-  }, [pageVersion])
+  // useEffect(() => {
+  //   console.log("push datalayer pageVersion", pageVersion)
+  //   window.dataLayer &&
+  //     window.dataLayer.push({
+  //       event: "ga.pageview",
+  //       testovani: pageVersion,
+  //     })
+  // }, [pageVersion])
 
-  function getRandomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-  }
+  // function getRandomInteger(min, max) {
+  //   return Math.floor(Math.random() * (max - min + 1)) + min
+  // }
 
   return (
     <>
-      {pageVersion === "current-version" ? (
+      {/* {pageVersion === "current-version" ? (
         <OldHomepage site={site} />
       ) : pageVersion === "new-version" ? (
         <NewHomepage site={site} />
       ) : (
         <Loader />
-      )}
-      {/* <Experiment name="homepage">
-        <Variant name="new-version">
-          <NewHomepage site={site} />
-        </Variant>
-        <Variant name="current-version">
-          <OldHomepage site={site} />
-        </Variant>
-      </Experiment> */}
+      )} */}
+      {site ? <NewHomepage site={site} /> : <Loader />}
     </>
   )
 }

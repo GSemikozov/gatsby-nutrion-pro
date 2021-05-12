@@ -8,8 +8,8 @@ import Helmet from 'react-helmet';
 
 import { withTrans } from '../../i18n/withTrans';
 import { LangProvider } from '../../utils/lang';
-import { Footer } from '../footer';
-import { Header } from '../header';
+import { Footer2 } from '../footer2';
+import { Header2 } from '../header2';
 import { PreHeader } from '../preheader';
 
 // import { I18nextProvider } from 'react-i18next';
@@ -42,12 +42,17 @@ const Layout = ({ children, t, i18n, location, pageContext }) => {
           </Helmet>
           <div className="wrapper" id="root">
             {/* <PreHeader /> */}
-            {pageContext.layout !== "special" && (
-              <Header menuLinks={data.site.siteMetadata.menuLinks} />
-            )}
+            {/* {pageContext.layout !== "special" && ( */}
+            <Header2
+              menuLinks={data.site.siteMetadata.menuLinks}
+              isLight={true}
+            />
+            {/* )} */}
             <>
               <main>{children}</main>
-              {pageContext.layout !== "special" && <Footer />}
+              {/* {pageContext.layout !== "special" && ( */}
+              <Footer2 />
+              {/* )} */}
             </>
           </div>
         </>

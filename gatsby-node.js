@@ -34,7 +34,7 @@ exports.onCreatePage = async ({
       //   statusCode: 301,
       // })
 
-      if (page.path === "/") {
+      if (page.path === "/" || page.path.includes("blog")) {
         await createPage({
           ...page,
           // layout: "new.index",

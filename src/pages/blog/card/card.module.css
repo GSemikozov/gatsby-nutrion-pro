@@ -1,0 +1,107 @@
+.card {
+  background: #ffffff;
+  box-shadow: 0px 20px 40px -10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cardTop {
+  position: relative;
+}
+
+.cardImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardTopBtns {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardShareLink {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardCategory {
+  height: 38px;
+  padding: 11px 16px;
+  background: #ffffff;
+  box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3dc383;
+  display: inline-flex;
+}
+
+.cardBody {
+  text-align: center;
+  background: #ffffff;
+  padding: 12px 40px 16px;
+  border-radius: 0 0 20px 20px;
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.cardDate {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #d5dbe1;
+  margin-bottom: 10px;
+}
+
+@media all and (max-width: 767px) {
+  .cardShareLink {
+    height: 26px;
+    width: 26px;
+    padding: 4px;
+  }
+
+  .cardCategory {
+    height: 26px;
+    padding: 7px 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .cardBody {
+    text-align: center;
+    background: #ffffff;
+    padding: 18px 22px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .cardDate {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
