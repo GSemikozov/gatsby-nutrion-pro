@@ -1,7 +1,6 @@
 import cx from 'classnames';
 import React from 'react';
 
-import { Button2 } from '../../../components/button2';
 import styles from './categories-filter-panel.module.css';
 
 const FilterBtn = ({ text, isActive }) => (
@@ -47,7 +46,7 @@ export const CategoriesFilterPanel = () => {
     <div className={styles.filterPanel}>
       <nav>
         <b>Kategorie:</b>
-        <FilterBtn text="Všechno" />
+        <FilterBtn text="Všechno" isActive={true} />
         <FilterBtn text="Recepty" />
         <FilterBtn text="Výzkum" />
         <FilterBtn text="Tipy" />

@@ -25,6 +25,8 @@
   position: relative;
   margin: 0 8px;
   vertical-align: middle;
+  height: 16px;
+  display: inline-flex;
 }
 
 .breadcrumbsItem:hover {

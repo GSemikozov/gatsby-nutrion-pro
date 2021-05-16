@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 416px;
   gap: 52px;
+  padding-bottom: 50px;
 }
 
 .postTitle {
@@ -15,6 +16,7 @@
   margin: 0 0 56px;
 }
 
+.postText,
 .postText p {
   font-size: 18px;
   line-height: 29px;
@@ -55,6 +57,7 @@
   .postGrid {
     grid-template-columns: 1fr;
     gap: 0;
+    padding-bottom: 0;
   }
 
   .postText {

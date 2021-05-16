@@ -17,9 +17,22 @@ export const PostSidebar = () => (
         </div>
         <div className={styles.postSidebarCardBody}>
           <div className={styles.postSidebarCardTitle}>
-            RECEPTY: INSPIRACE Z PROGRAMU PRO ZDRAVÍ
+            Chia semínka. Super potravina nebo hype?
           </div>
-          <div className={styles.postSidebarCardDate}>20.04.21</div>
+          <div className={styles.postSidebarCardDate}>20.05.21</div>
+        </div>
+      </a>
+      <a href="#" className={styles.postSidebarCard}>
+        <div>
+          <img
+            src={imgPlaceholder}
+            className={styles.postSidebarCardImg}
+            alt="img"
+          />
+        </div>
+        <div className={styles.postSidebarCardBody}>
+          <div className={styles.postSidebarCardTitle}>Detox. Ano nebo ne?</div>
+          <div className={styles.postSidebarCardDate}>20.05.21</div>
         </div>
       </a>
       <a href="#" className={styles.postSidebarCard}>
@@ -32,22 +45,8 @@ export const PostSidebar = () => (
         </div>
         <div className={styles.postSidebarCardBody}>
           <div className={styles.postSidebarCardTitle}>
-            RECEPTY: INSPIRACE Z PROGRAMU PRO ZDRAVÍ
-          </div>
-          <div className={styles.postSidebarCardDate}>20.04.21</div>
-        </div>
-      </a>
-      <a href="#" className={styles.postSidebarCard}>
-        <div>
-          <img
-            src={imgPlaceholder}
-            className={styles.postSidebarCardImg}
-            alt="img"
-          />
-        </div>
-        <div className={styles.postSidebarCardBody}>
-          <div className={styles.postSidebarCardTitle}>
-            RECEPTY: INSPIRACE Z PROGRAMU PRO ZDRAVÍ
+            S vodou je spojeno hodně mýtů. Co je vhodné pít, kdy a v jakém
+            množství?
           </div>
           <div className={styles.postSidebarCardDate}>20.04.21</div>
         </div>

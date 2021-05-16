@@ -33,6 +33,10 @@ module.exports = {
         section: null,
       },
     ],
+    shareData: {
+      title: "share",
+      tags: ["tag", "tag2"],
+    },
   },
   flags: {
     DEV_SSR: false,

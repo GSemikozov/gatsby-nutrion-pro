@@ -17,73 +17,264 @@ const Post1 = () => {
           <BreadcrumbsItem link="/">Domu</BreadcrumbsItem>
           <BreadcrumbsItem link="/blog/posts">Blog</BreadcrumbsItem>
           <BreadcrumbsItem link="/blog/post-1">
-            INSPIRACE Z PROGRAMU PRO ZDRAVÍ
+            Chia semínka. Super potravina nebo hype?
           </BreadcrumbsItem>
         </Breadcrumbs>
       </Container>
       <Container>
         <div className={styles.postGrid}>
           <div>
-            <Hero />
+            <Hero
+              title="Chia semínka. Super potravina nebo hype?"
+              date="20.05.21"
+            />
             <div>
               <p className={styles.postText}>
-                Že jste vyzkoušeli již různé diety, ale žádná se vám
-                neosvědčila? Rádi bychom vám ukázali a namotivovali vás, že to
-                prostě jde a i pořádného „pivního“ pupíku se lze zbavit, a ještě
-                se přitom můžete pořádně najíst. Máme pro vás důkaz místo slibů,
-                a tím je proměna Petra, který se podělil o svou zkušenost s
-                bojem.
+                Věděli jste, chia semínka se používala jako měna a vládci Mayů a
+                Aztéků je přijímali od poražených kmenů jako oběť? A dělo se to
+                už před pěti tisíci lety ve starověkém Mexiku. I teď na
+                internetu najdete jen pozitivní informace. Žádná negativa či
+                kontraindikace zatím nejsou známa.
               </p>
-              <img src={img1} className={styles.postImg} alt="img1" />
+              {/* <img src={img1} className={styles.postImg} alt="img1" /> */}
+              <h5 className={styles.postTitle}>Co je na tom pravdy?</h5>
+              <p className={styles.postText}>
+                Chia semínka jsou přímo nabitá zdraví prospěšnými látkami.
+                Obsahují více draslíku než banány, více vápníku než mléko a
+                navíc jako luštěniny spoustu rostlinných bílkovin. Semínka jsou
+                bohatá na vitamíny, vlákninu a zdravé, nenasycené omega 3 mastné
+                kyseliny. , které pomáhají udržet vaše srdce v kondici.
+              </p>
+              <p className={styles.postText}>Na 100 g produktu: 486 kcal</p>
+              <p className={styles.postText}>
+                Bílkoviny, g: 16,5
+                <br />
+                Tuk, g: 30,7
+                <br />
+                Sacharidy, g: 7,72
+                <br />
+                Vláknina, g: 34,4
+              </p>
+              <p className={styles.postText}>
+                Co dál? Chia semínka zasytí a jsou tak super zdravou součástí
+                svačinky nebo snídaně. Díky chytré přeměně na želé po namočení
+                se skvěle hodí na přípravu domácí marmelády. Přidat je můžete do
+                jogurtu nebo do vody. A je i z nich moc výborný pudink s
+                rostlinným mlékem a ovocem.
+              </p>
+              {/* <img src={img2} className={styles.postImg} alt="img2" /> */}
+              <h5 className={styles.postTitle}>Rovnováha je důležitá.</h5>
+              <p className={styles.postText}>
+                Všeho moc škodí. Mějte na paměti, že denní norma jsou maximálně
+                2 lžíce, což je zhruba 15-20 g. I když vám někteří odborníci na
+                výživu budou tvrdit opak, vězte, že ve velkém množství si chia
+                semínka zle pohrají s krevním tlakem a srdeční frekvencí. Tak si
+                je dopřejte v rozumném množství.
+              </p>
+              <h5 className={styles.postTitle}>Chia jako superpotravina?</h5>
+              <p className={styles.postText}>
+                O superpotravinách už jste asi slyšeli. Jde o některé druhy
+                ovoce, zeleniny, ořechů a semínek, slibujících zázračný přínos
+                pro naše zdraví. Ve srovnání s jinými potravinami je to velké
+                množství vitamínů, minerálních látek a antioxidantů. Říká se
+                taky, že si poradí s vysokým krevním tlakem, cukrovkou,
+                srdečními chorobami a dokonce i s rakovinou.
+              </p>
+              <h5 className={styles.postTitle}>Superpotraviny = super síla?</h5>
+              <p className={styles.postText}>
+                Záleží, co si pod superlativem představujete. Standardní seznam
+                superpotravin zahrnuje bobule (zejména borůvky), tučné ryby,
+                špenát, ořechy (jako vlašské ořechy), olivový olej, zeleninu
+                (brokolice, růžičková kapusta) a luštěniny. V průběhu let se
+                přidala další jídla a koření jako kurkuma, skořice a taky
+                avokádo nebo právě chia semínka.
+              </p>
               <h5 className={styles.postTitle}>
-                Boj s nadváhou vede mnoho z nás. Patříte také mezi ty, pro které
-                představuje vlastní hmotnost nepřítele číslo jedna?
+                Jsou ale superpotraviny vážně lepší než ty obvyklé?
               </h5>
               <p className={styles.postText}>
-                Pojďme si Petra krátce představit. Petr je mladý 33letý muž,
-                který pracuje jako referent nákupu a výroby v potravinářské
-                firmě. V práci se jak nasedí, tak ujde kolem 10 000 kroků za
-                den. Na svém začátku v boji s kily trpěl vysokým krevním tlakem,
-                na který bral léky a bolavým kolenem. Jeho startovací hmotnost
-                ukazovala celých 126,6 kg při výšce 176 cm.
+                Ano i ne. Žádná kritéria pro označení superpotraviny totiž
+                neexistují, a tak si je většinou určuje marketing. To ale nutně
+                neznamená, že jsou superpotraviny špatně. Hodně z nich je
+                opravdu zdraví prospěšných.{" "}
+                <strong>
+                  Bez zdravé a vyvážené stravy, pitného režimu a dostatečné
+                  fyzické aktivity vám ale k zázraku nepomohou.
+                </strong>
               </p>
               <h5 className={styles.postTitle}>
-                Kamutový salát s kuřecím masem sypaný sýrem
+                Chia semínka. Super potravina nebo hype?
               </h5>
+              <p className={styles.postText}>
+                Věděli jste, chia semínka se používala jako měna nebo oběť
+                vládcům aztéckých kmenů ve starověkém Mexiku. I teď na internetu
+                najdete jen samá pozitiva, nic špatného se neprokázalo.
+              </p>
+              <h5 className={styles.postTitle}>Co je na tom pravdy?</h5>
               <ul className={styles.postList}>
                 <li>
-                  Kuřecí prso necháme vcelku, okořeníme směsí soli, pepře,
-                  adžiky a celerové nati. Upečeme s trochou oleje v troubě a
-                  poté nakrájíme na plátky.
+                  Chia semínka jsou přímo nabitá zdraví prospěšnými látkami.
                 </li>
                 <li>
-                  Kamut uvaříme dle návodu. Cibulku nakrájíme nadrobno,
-                  orestujeme s kapkou oleje na pánvi, přidáme na proužky
-                  nakrájené papriky, kukuřici a poloviny cherry rajčátek.
-                  Restujeme jen chvíli, aby zelenina zůstala na skus. Dochutíme
-                  solí a pepřem.
+                  Překypují draslíkem, vápníkem a velkou spoustou rostlinných
+                  bílkovin.
                 </li>
                 <li>
-                  Na závěr promícháme kamut se zeleninou a petrželkou nasekanou
-                  nadrobno. Na kamut vrstvíme kuřecí maso a posypeme parmazánem.
+                  Semínka mají vitamíny, vlákninu a zdravé omega tuky pro srdce
+                  v kondici.
                 </li>
+                <li>Na 100 g produktu: 486 kcal</li>
               </ul>
-              <img src={img2} className={styles.postImg} alt="img2" />
+              <p className={styles.postText}>
+                Bílkoviny, g: 16,5
+                <br />
+                Tuk, g: 30,7 <br />
+                Sacharidy, g: 7,72
+                <br />
+                Vláknina, g: 34,4
+              </p>
+              <h5 className={styles.postTitle}>Proč a jak si je dát?</h5>
+              <ul className={styles.postList}>
+                <li>Chia semínka jsou sytou součástí svačinky nebo snídaně.</li>
+                <li>
+                  V tekutině se přemění na želé, super tip na domácí marmeládu.
+                </li>
+                <li>Přidat je můžete do jogurtu nebo do vody.</li>
+                <li>Chia pudink s rostlinným mlékem a ovocem. </li>
+              </ul>
+
+              <h5 className={styles.postTitle}>Jezte je s rozumem.</h5>
+              <p className={styles.postText}>
+                Denní norma jsou maximálně 2 lžíce/15 - 20 g. A vězte, že ve
+                velkém množství si chia semínka zle pohrají s krevním tlakem a
+                srdeční frekvencí. Tak na to myslete.
+              </p>
+
+              <h5 className={styles.postTitle}>Chia jako superpotravina?</h5>
+              <p className={styles.postText}>
+                O superpotravinách už jste asi slyšeli. Jde o některé druhy
+                ovoce, zeleniny, ořechů a semínek, slibující zázraky pro naše
+                zdraví - spousta vitamínů, minerálů a antioxidantů. Údajně si
+                poradí i s vysokým krevním tlakem, cukrovkou, srdečními
+                chorobami a rakovinou.
+              </p>
+
+              <h5 className={styles.postTitle}>Superpotraviny = super síla?</h5>
+              <p className={styles.postText}>
+                Záleží, co si pod superlativem představujete. Klasicky sem patří
+                třeba:
+              </p>
+              <ul className={styles.postList}>
+                <li>bobule (zejména borůvky)</li>
+                <li>tučné ryby, špenát, ořechy (vlašáky)</li>
+                <li>olivový olej a luštěniny</li>
+                <li>zelenina (brokolice, růžičková kapusta) </li>
+                <li>koření jako kurkuma či skořice</li>
+                <li>avokádo nebo právě chia semínka.</li>
+              </ul>
+
               <h5 className={styles.postTitle}>
-                Sýrové rolky s dýňovým semínkem
+                Jsou ale superpotraviny vážně lepší než ty obvyklé?
               </h5>
+              <p className={styles.postText}>
+                <b>Ano i ne</b>. Žádná kritéria pro označení superpotraviny
+                totiž neexistují, a tak si je většinou určuje marketing.
+                Superpotraviny nejsou špatně, ale{" "}
+                <strong>
+                  bez zdravé a vyvážené stravy, pitného režimu a dostatku pohybu
+                  vám k zázraku nepomohou.
+                </strong>
+              </p>
+
+              <h5 className={styles.postTitle}>
+                Chia semínka. Super potravina nebo hype?
+              </h5>
+              <p className={styles.postText}>
+                Věděli jste, chia semínka se používala jako měna nebo oběť
+                vládcům aztéckých kmenů ve starověkém Mexiku. I teď na internetu
+                najdete jen samá pozitiva, nic špatného se neprokázalo.
+              </p>
+
+              <h5 className={styles.postTitle}>Co je na tom pravdy?</h5>
               <ul className={styles.postList}>
                 <li>
-                  Dýňová semínka opražíme nasucho na pánvi, necháme vychladnout
-                  a nadrtíme na malé kousky.
+                  Chia semínka jsou přímo nabitá zdraví prospěšnými látkami.
                 </li>
                 <li>
-                  Tvaroh s žervé důkladně promícháme do hladka, ochutíme solí,
-                  pepřem a nasekanou pažitkou. Krém namažeme na plátek sýru,
-                  posypeme semínky a zabalíme do ruličky. Podáváme se zeleninou
-                  a křehkým chlebem.
+                  Překypují draslíkem, vápníkem a velkou spoustou rostlinných
+                  bílkovin.
+                </li>
+                <li>
+                  Semínka mají vitamíny, vlákninu a zdravé omega tuky pro srdce
+                  v kondici.
+                </li>
+                <li>Na 100 g produktu: 486 kcal</li>
+              </ul>
+
+              <p className={styles.postText}>
+                Bílkoviny, g: 16,5
+                <br />
+                Tuk, g: 30,7 <br />
+                Sacharidy, g: 7,72
+                <br />
+                Vláknina, g: 34,4
+              </p>
+
+              <h5 className={styles.postTitle}>Proč a jak si je dát?</h5>
+              <ul className={styles.postList}>
+                <li>Chia semínka jsou sytou součástí svačinky nebo snídaně.</li>
+                <li>
+                  V tekutině se přemění na želé - tip na domácí marmeládu.
+                </li>
+                <li>Přidejte si je do jogurtu/vody.</li>
+                <li>Chia pudink s rostlinným mlékem a ovocem.</li>
+              </ul>
+
+              <h5 className={styles.postTitle}>Jezte je s rozumem.</h5>
+              <ul className={styles.postList}>
+                <li>Denní norma jsou maximálně 2 lžíce/15 - 20 g.</li>
+                <li>
+                  Ve větším množství si zle pohrají s krevním tlakem a srdeční
+                  frekvencí.
                 </li>
               </ul>
+
+              <h5 className={styles.postTitle}>Chia jako superpotravina?</h5>
+              <p className={styles.postText}>
+                O superpotravinách už jste asi slyšeli. Jde o některé druhy
+                ovoce, zeleniny, ořechů a semínek, slibující zázračné zdraví -
+                spousta vitamínů, minerálů a antioxidantů. Údajně si poradí i s
+                vysokým krevním tlakem, cukrovkou, srdečními chorobami a
+                rakovinou.
+              </p>
+
+              <h5 className={styles.postTitle}>Superpotraviny = super síla?</h5>
+              <p className={styles.postText}>
+                Záleží, co si pod superlativem představujete. Klasicky sem patří
+                třeba:
+              </p>
+              <ul className={styles.postList}>
+                <li>bobule (borůvky)</li>
+                <li>tučné ryby, špenát, ořechy (vlašáky)</li>
+                <li>olivový olej a luštěniny</li>
+                <li>zelenina (brokolice, kapusta)</li>
+                <li>koření jako kurkuma či skořice</li>
+                <li>avokádo nebo právě chia semínka.</li>
+              </ul>
+
+              <h5 className={styles.postTitle}>
+                Jsou ale superpotraviny vážně lepší než ty obvyklé?
+              </h5>
+              <p className={styles.postText}>
+                <b>Ano i ne</b>. Žádná kritéria pro označení superpotraviny
+                neexistují, a tak si je většinou určuje marketing.
+                Superpotraviny nejsou špatně, ale{" "}
+                <strong>
+                  bez vyvážené stravy, pitného režimu a dostatku pohybu k
+                  zázraku nepomohou
+                </strong>
+                .
+              </p>
             </div>
           </div>
           <PostSidebar />

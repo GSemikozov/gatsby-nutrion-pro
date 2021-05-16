@@ -21,20 +21,23 @@ const Posts = () => (
       <BlogPostsCard
         img={imgPlaceholder}
         date="20.04.21"
-        title="RECEPTY: INSPIRACE Z PROGRAMU PRO ZDRAVÍ"
-        category="RECEPTY"
+        title="Chia semínka. Super potravina nebo hype?"
+        category="Všechno"
+        link="/blog/post-1"
       />
       <BlogPostsCard
         img={imgPlaceholder}
-        date="20.04.21"
-        title="RECEPTY: INSPIRACE Z PROGRAMU PRO ZDRAVÍ"
-        category="RECEPTY"
+        date="20.05.21"
+        title="Detox. Ano nebo ne?"
+        category="Všechno"
+        link="/blog/post-2"
       />
       <BlogPostsCard
         img={imgPlaceholder}
-        date="20.04.21"
-        title="RECEPTY: INSPIRACE Z PROGRAMU PRO ZDRAVÍ"
-        category="RECEPTY"
+        date="20.05.21"
+        title="S vodou je spojeno hodně mýtů. Co je vhodné  pít, kdy a v jakém množství?"
+        category="Všechno"
+        link="/blog/post-3"
       />
     </div>
   </Container>
