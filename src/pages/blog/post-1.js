@@ -11,7 +11,7 @@ import img2 from './post1-img2.png';
 
 const Post1 = () => {
   return (
-    <>
+    <div className={styles.wrapper}>
       <Container>
         <Breadcrumbs style={{ margin: "24px 0" }}>
           <BreadcrumbsItem link="/">Domu</BreadcrumbsItem>
@@ -280,7 +280,7 @@ const Post1 = () => {
           <PostSidebar />
         </div>
       </Container>
-    </>
+    </div>
   )
 }
 

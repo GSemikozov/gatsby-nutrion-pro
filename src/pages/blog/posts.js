@@ -8,7 +8,7 @@ import { Container } from '../../components/container';
 import styles from './posts-grid.module.css';
 
 const Posts = () => (
-  <Container>
+  <Container className={styles.wrapper}>
     <Breadcrumbs>
       <BreadcrumbsItem link="/">Domu</BreadcrumbsItem>
       <BreadcrumbsItem link="/blog/posts">Blog</BreadcrumbsItem>
