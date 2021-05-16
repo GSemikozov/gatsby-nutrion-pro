@@ -49,33 +49,7 @@ export const Order2 = ({ id, className }) => {
         </AnimatedWrapper>
         <div className={styles2.formWrapContainer}>
           <div className={styles2.formInnerContainer}>
-            <div className={cx(styles2.formTabs)}>
-              <Button
-                name="submit"
-                type="white"
-                size="sm"
-                className={cx(
-                  styles2.formTab,
-                  form === "calc" && styles2.active
-                )}
-                handleClick={() => setForm("calc")}
-              >
-                {t("home.order.tab1Btn")}
-              </Button>
-              <Button
-                name="submit"
-                type="white"
-                size="sm"
-                className={cx(
-                  styles2.formTab,
-                  form === "order" && styles2.active
-                )}
-                handleClick={() => setForm("order")}
-              >
-                {t("home.order.tab2Btn")}
-              </Button>
-            </div>
-            <div className={cx(styles2.formTabs, styles2.xs)}>
+            <div className={styles2.formTabs}>
               <Button2
                 name="submit"
                 color="primary"
