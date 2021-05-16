@@ -5,10 +5,9 @@
       attributeName="transform"
       attributeType="XML"
       type="rotate"
-      from="0 207 207"
+      from="180 207 207"
       to="360 207 207"
-      dur="12s"
-      repeatCount="indefinite"
+      dur="6s"
       id="rotate"
     />
     <path d="M215.533 403.713C324.223 398.829 408.375 306.759 403.491 198.068C398.606 89.3778 306.536 5.2263 197.845 10.1106C89.1549 14.9949 5.00344 107.065 9.88771 215.756C14.772 324.446 106.842 408.598 215.533 403.713Z" stroke="url(#paint0_linear)" stroke-width="2"/>

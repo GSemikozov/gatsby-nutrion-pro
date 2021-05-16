@@ -37,8 +37,8 @@ export const DeliverySection = () => (
                 <li>Rozvážíme po celé Praze zcela zadarmo.</li>
                 <li>Vyber si přesný čas doručení (2hodinová časová okna).</li>
                 <li>
-                  Možnost změnit místo doručení (Stačí nám napsat v den rozvozu
-                  do 15 hodin).
+                  Možnost změnit místo doručení (Stačí nám napsat pracovní den
+                  před rozvozem).
                 </li>
               </ul>
             </div>

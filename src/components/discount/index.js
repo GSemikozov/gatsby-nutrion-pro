@@ -13,7 +13,7 @@ export const DiscountSection = () => (
     <Container isWide={true}>
       <AnimatedWrapper>
         <h3 className="fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center">
-          Společná objednávka se <span>slevou až 20%</span>
+          <span>Získejte slevu až 20%</span> na první objednávku
         </h3>
         <div className={styles.discountInfoWrap}>
           <div className={cx(styles.image, styles.imageFirst)}>
@@ -78,7 +78,7 @@ export const DiscountSection = () => (
                   />
                 </svg>
                 <span className={styles.text}>
-                  Objednávku pro <b>2</b> máte se slevou
+                  První objednávku pro <b>2</b> máte se slevou
                 </span>
                 <span
                   className={styles.discountAmount}
@@ -146,7 +146,7 @@ export const DiscountSection = () => (
                   />
                 </svg>
                 <span className={styles.text}>
-                  Objednávku pro <b>3+</b> máte se slevou
+                  První objednávku pro <b>3+</b> máte se slevou
                 </span>
                 <span
                   className={styles.discountAmount}
