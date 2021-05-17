@@ -154,6 +154,17 @@
   },
   "home": {
     "title": "CZ",
+    "hero": {
+      "title": "Speciální krabičková dieta",
+      "cta-1": "Objednat online",
+      "cta-2": "Spočítat cenu"
+    },
+    "menu": {
+      "title": "<0>Dvoudenní zkouška</0> 5chodového menu",
+      "day1": "den",
+      "day2": "den",
+      "price": "Super cena"
+    },
     "program": {
       "title": "Vyber si svůj program",
       "program1title": "Hubnoucí program",
@@ -166,6 +177,14 @@
       "program4desc": "Vyvážené jídlo do kanceláře, po kterém ti práce půjde od ruky.",
       "programCTA": "Více o programu",
       "programCTAdesc": "V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat, vegetarián, vegan či speciálních zdravotních diet."
+    },
+    "program2": {
+      "title": "<0>Vyber si</0> svůj program",
+      "program1title": "Hubnoucí program",
+      "program2title": "Nabírací program",
+      "program3title": "Udržovací program",
+      "program4title": "Office Pack",
+      "programDesc": "V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat, vegetarián, vegan či speciálních zdravotních diet."
     },
     "order": {
       "title": "Objednat teď",

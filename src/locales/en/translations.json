@@ -155,6 +155,17 @@
   },
   "home": {
     "title": "EN",
+    "hero": {
+      "title": "A special box diet ",
+      "cta-1": "Order online",
+      "cta-2": "Calculate the price"
+    },
+    "menu": {
+      "title": "<0>2 day trial</0> of 5 meal menu",
+      "day1": "day",
+      "day2": "day",
+      "price": "Super price"
+    },
     "program": {
       "title": "Choose your diet plan",
       "program1title": "Weight Loss Plan",
@@ -167,6 +178,14 @@
       "program4desc": "Healthy & balanced office food that does not slow you down. ",
       "programCTA": "Learn more",
       "programCTAdesc": "We are sorry, currently no low-carb, low-fat, vegetarian, vegan or other special dietary requirements options. "
+    },
+    "program2": {
+      "title": "<0>Choose</0> your program",
+      "program1title": "Weight loss program",
+      "program2title": "Gain program",
+      "program3title": "Maintain program",
+      "program4title": "Office pack",
+      "programDesc": "Unfortunately, we currently do not offer the option of low-carb, low-fat, vegetarian, vegan or special health diets."
     },
     "order": {
       "title": "Order now",

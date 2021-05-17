@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import React, { useCallback, useContext, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
@@ -13,6 +14,7 @@ import styles from './hero3.module.css';
 export const Hero3 = () => {
   const scroll = useSmoothScroll()
   const { activeTab, dispatchAction } = useHomepageTabsContext()
+  const { t } = useTranslation()
 
   const openCalcForm = selector => {
     dispatchAction({ type: "OPEN_TAB1" })
@@ -29,7 +31,7 @@ export const Hero3 = () => {
       <Container isWide={true}>
         <div className={styles.heroInner}>
           <div className={styles.heroInfo}>
-            <h1 className={styles.heroTitle}>Speciální krabičková dieta</h1>
+            <h1 className={styles.heroTitle}>{t("home.hero.title")}</h1>
             <div className={styles.buttons}>
               <Button2
                 color="primary"
@@ -54,14 +56,14 @@ export const Hero3 = () => {
                     strokeWidth="1.5625"
                   />
                 </svg>
-                Spočitat cenu
+                {t("home.hero.cta-1")}
               </Button2>
               <Button2
                 className={styles.button}
                 color="secondary"
                 handleClick={() => openOrderForm("calculator")}
               >
-                Objednat online
+                {t("home.hero.cta-2")}
               </Button2>
             </div>
           </div>
