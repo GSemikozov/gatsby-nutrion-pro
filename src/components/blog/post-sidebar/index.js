@@ -7,7 +7,7 @@ export const PostSidebar = () => (
   <div className={styles.postSidebar}>
     <div className={styles.postSidebarTitle}>Top 5 članků</div>
     <div>
-      <a href="#" className={styles.postSidebarCard}>
+      <a href="/blog/post-1" className={styles.postSidebarCard}>
         <div>
           <img
             src={imgPlaceholder}
@@ -22,7 +22,7 @@ export const PostSidebar = () => (
           <div className={styles.postSidebarCardDate}>20.05.21</div>
         </div>
       </a>
-      <a href="#" className={styles.postSidebarCard}>
+      <a href="/blog/post-2" className={styles.postSidebarCard}>
         <div>
           <img
             src={imgPlaceholder}
@@ -35,7 +35,7 @@ export const PostSidebar = () => (
           <div className={styles.postSidebarCardDate}>20.05.21</div>
         </div>
       </a>
-      <a href="#" className={styles.postSidebarCard}>
+      <a href="/blog/post-3" className={styles.postSidebarCard}>
         <div>
           <img
             src={imgPlaceholder}

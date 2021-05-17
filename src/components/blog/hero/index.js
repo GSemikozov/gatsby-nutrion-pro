@@ -127,7 +127,7 @@ export const Hero = ({ title, date }) => {
           )}
         </nav>
         <span className={styles.divider} />
-        <span className={styles.publishDate}>2{date}</span>
+        <span className={styles.publishDate}>{date}</span>
       </div>
     </div>
   )
