@@ -21,7 +21,7 @@ export const Hero = ({ title, date }) => {
   )
   //For the social share buttons
   const shareTitle = `Read ${site.siteMetadata.shareData.title} `
-  const url = window && window.location.href
+  const url = typeof window !== `undefined` && window.location.href
   const twitterHandle = "_MsLinda"
   const tags = site.siteMetadata.shareData.tags
 
