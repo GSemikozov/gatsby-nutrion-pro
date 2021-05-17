@@ -25,18 +25,18 @@ export const Hero = ({ title, date }) => {
   const twitterHandle = "_MsLinda"
   const tags = site.siteMetadata.shareData.tags
 
-  useEffect(() => {
-    console.log("------ shareTitle", shareTitle)
-    console.log("------ url", url)
-    console.log("------ tags", tags)
-  }, [shareTitle, url, tags, site])
+  // useEffect(() => {
+  //   console.log("------ shareTitle", shareTitle)
+  //   console.log("------ url", url)
+  //   console.log("------ tags", tags)
+  // }, [shareTitle, url, tags, site])
 
   return (
     <div className={styles.hero}>
       <h2 className={styles.heroTitle}>{title}</h2>
       <div className={styles.bottomPanel}>
         <nav className={styles.socialLinks}>
-          <a href="#" className={styles.socialLink}>
+          {/* <a href="#" className={styles.socialLink}>
             <svg
               width="22"
               height="22"
@@ -80,7 +80,7 @@ export const Hero = ({ title, date }) => {
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </a> */}
           {site && (
             <FacebookShareButton className={styles.socialLink} url={url}>
               <svg
