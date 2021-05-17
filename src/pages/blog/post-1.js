@@ -5,9 +5,8 @@ import { Hero } from '../../components/blog/hero';
 import { PostSidebar } from '../../components/blog/post-sidebar';
 import { Breadcrumbs, BreadcrumbsItem } from '../../components/breadcrumbs';
 import { Container } from '../../components/container';
+import img1 from './post-1.jpg';
 import styles from './post-grid.module.css';
-import img1 from './post1-img1.png';
-import img2 from './post1-img2.png';
 
 const Post1 = () => {
   return (
@@ -36,7 +35,7 @@ const Post1 = () => {
                 internetu najdete jen pozitivní informace. Žádná negativa či
                 kontraindikace zatím nejsou známa.
               </p>
-              {/* <img src={img1} className={styles.postImg} alt="img1" /> */}
+              <img src={img1} className={styles.postImg} alt="img1" />
               <h5 className={styles.postTitle}>Co je na tom pravdy?</h5>
               <p className={styles.postText}>
                 Chia semínka jsou přímo nabitá zdraví prospěšnými látkami.

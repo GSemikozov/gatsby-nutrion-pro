@@ -16,7 +16,7 @@ const Posts = () => (
     <h3 className="fancyUnderlineText sectionTitleNew text-center">
       Poslední <span>Články</span>
     </h3>
-    <CategoriesFilterPanel />
+    {/* <CategoriesFilterPanel /> */}
     <div className={styles.postsGrid}>
       <BlogPostsCard
         img={imgPlaceholder}

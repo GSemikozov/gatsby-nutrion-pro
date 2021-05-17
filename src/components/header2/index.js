@@ -13,7 +13,7 @@ import { Navbar } from './navbar';
 
 export const Header2 = ({ menuLinks, isLight }) => {
   const [menuVisible, setMenuVisible] = useState(false)
-  // const { activeTab, dispatchAction } = useHomepageTabsContext()
+  const { activeTab, dispatchAction } = useHomepageTabsContext()
 
   const toggleMenu = () => {
     if (menuVisible) {
@@ -55,12 +55,12 @@ export const Header2 = ({ menuLinks, isLight }) => {
           menuLinks={menuLinks}
           isLight={isLight}
         />
-        {/* <MobileMenu
+        <MobileMenu
           menuVisible={menuVisible}
           menuLinks={menuLinks}
           onCloseMobileMenu={toggleMenu}
           dispatchAction={dispatchAction}
-        /> */}
+        />
       </Container>
     </header>
   )

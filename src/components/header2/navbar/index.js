@@ -1,5 +1,6 @@
 import { window } from 'browser-monads';
 import cx from 'classnames';
+import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -105,6 +106,12 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       </a> */}
       <div className={styles.navbarCol}>
         {isHomepage ? <HomepageMenu /> : <InnerPageMenu />}
+        <Link
+          to="/blog/posts"
+          className={cx(styles.navbarItem, "visible-desktop")}
+        >
+          Blog
+        </Link>
       </div>
       <div className={styles.navbarCol}>
         <span className={cx(styles.additionalInfo, "visible-desktop")}>

@@ -5,9 +5,8 @@ import { Hero } from '../../components/blog/hero';
 import { PostSidebar } from '../../components/blog/post-sidebar';
 import { Breadcrumbs, BreadcrumbsItem } from '../../components/breadcrumbs';
 import { Container } from '../../components/container';
+import img1 from './post-3.jpg';
 import styles from './post-grid.module.css';
-import img1 from './post1-img1.png';
-import img2 from './post1-img2.png';
 
 const Post3 = () => {
   return (
@@ -36,6 +35,12 @@ const Post3 = () => {
                 živin, pomáhá odstranit z těla všechny odpadní látky, a zároveň
                 je prostředím pro chemické procesy metabolismu.
               </p>
+              <img
+                src={img1}
+                className={styles.postImg}
+                style={{ marginBottom: "40px" }}
+                alt="img1"
+              />
               <p className={styles.postText}>
                 Nejvyšší podíl vody na tělesné hmotnosti je u novorozenců, a to
                 75–80 %. V průběhu života neustále klesá a u dospělého člověka

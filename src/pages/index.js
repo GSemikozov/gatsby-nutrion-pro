@@ -28,7 +28,8 @@ import { Program2 } from '../components/program-v2/';
 import { Reviews } from '../components/reviews';
 import { Reviews2 } from '../components/reviews2';
 import SEO from '../components/seo';
-import { HomepageTabsProvider, homepageTabsReducer, initialState } from '../contexts/HomepageTabsContext';
+
+// import { HomepageTabsProvider, homepageTabsReducer, initialState } from '../contexts/HomepageTabsContext';
 
 // const Loader = () => (
 //   <div
@@ -45,12 +46,13 @@ import { HomepageTabsProvider, homepageTabsReducer, initialState } from '../cont
 // )
 
 const NewHomepage = ({ site }) => {
-  const [state, dispatch] = useReducer(homepageTabsReducer, initialState)
+  // const [state, dispatch] = useReducer(homepageTabsReducer, initialState)
 
   return (
-    <HomepageTabsProvider
-      value={{ activeTab: state.activeTab, dispatchAction: dispatch }}
-    >
+    // <HomepageTabsProvider
+    //   value={{ activeTab: state.activeTab, dispatchAction: dispatch }}
+    // >
+    <>
       <SEO title="Home" />
       {/* componetns here */}
       <Hero3 />
@@ -64,7 +66,8 @@ const NewHomepage = ({ site }) => {
       <HowItWork2 />
       <DiscountSection />
       <FAQ2 />
-    </HomepageTabsProvider>
+    </>
+    // </HomepageTabsProvider>
   )
 }
 

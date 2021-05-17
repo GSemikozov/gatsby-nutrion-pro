@@ -5,9 +5,8 @@ import { Hero } from '../../components/blog/hero';
 import { PostSidebar } from '../../components/blog/post-sidebar';
 import { Breadcrumbs, BreadcrumbsItem } from '../../components/breadcrumbs';
 import { Container } from '../../components/container';
+import img1 from './post-2.jpg';
 import styles from './post-grid.module.css';
-import img1 from './post1-img1.png';
-import img2 from './post1-img2.png';
 
 const Post2 = () => {
   return (
@@ -36,6 +35,12 @@ const Post2 = () => {
                 procesy praktikovaly jen u lidí s těžkou otravou alkoholem nebo
                 například drogami na jednotkách intenzivní péče.
               </p>
+              <img
+                src={img1}
+                className={styles.postImg}
+                style={{ marginBottom: "40px" }}
+                alt="img1"
+              />
               <p className={styles.postText}>
                 Poté se ale myšlenka očištění těla poněkud zpopularizovala.V
                 dnešní době je detox něčím, co je podle některých nutričních

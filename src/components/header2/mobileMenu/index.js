@@ -1,5 +1,6 @@
 import { window } from 'browser-monads';
 import cx from 'classnames';
+import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -111,6 +112,9 @@ export const MobileMenu = ({
       <div className={styles.content}>
         <div className={styles.menuItems}>
           {isHomepage ? <HomepageMenu /> : <InnerPageMenu />}
+          <Link to="/blog/posts" className={styles.menuItem}>
+            Blog
+          </Link>
         </div>
         <div className={styles.info}>
           <div>
