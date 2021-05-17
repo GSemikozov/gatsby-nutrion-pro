@@ -18,7 +18,9 @@ export const HowItWork2 = () => {
         <AnimatedWrapper>
           <h3 className="fancyUnderlineText sectionTitleNew text-center">
             {/*t("home.howItWorks.title")*/}
-            Jak to <span>funguje</span>
+            <Trans i18nKey="home.howItWorks.title2">
+              Jak to <span>funguje</span>
+            </Trans>
           </h3>
           <div className={styles.sectionList}>
             <div className={styles.sectionListItem}>

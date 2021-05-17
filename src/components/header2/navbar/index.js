@@ -106,12 +106,12 @@ export const Navbar = ({ menuVisible, menuLinks, location, ...props }) => {
       </a> */}
       <div className={styles.navbarCol}>
         {isHomepage ? <HomepageMenu /> : <InnerPageMenu />}
-        <Link
-          to="/blog/posts"
+        <a
+          href="/blog/posts"
           className={cx(styles.navbarItem, "visible-desktop")}
         >
           Blog
-        </Link>
+        </a>
       </div>
       <div className={styles.navbarCol}>
         <span className={cx(styles.additionalInfo, "visible-desktop")}>

@@ -1,10 +1,12 @@
 import React from 'react';
 
 import { BlogPostsCard } from '../../components/blog/card';
-import imgPlaceholder from '../../components/blog/card/blog-1-placeholder.jpg';
 import { CategoriesFilterPanel } from '../../components/blog/categories-filter-panel';
 import { Breadcrumbs, BreadcrumbsItem } from '../../components/breadcrumbs';
 import { Container } from '../../components/container';
+import img1 from './post-1.jpg';
+import img2 from './post-2.jpg';
+import img3 from './post-3.jpg';
 import styles from './posts-grid.module.css';
 
 const Posts = () => (
@@ -19,21 +21,21 @@ const Posts = () => (
     {/* <CategoriesFilterPanel /> */}
     <div className={styles.postsGrid}>
       <BlogPostsCard
-        img={imgPlaceholder}
+        img={img1}
         date="20.04.21"
         title="Chia semínka. Super potravina nebo hype?"
         category="Všechno"
         link="/blog/post-1"
       />
       <BlogPostsCard
-        img={imgPlaceholder}
+        img={img2}
         date="20.05.21"
         title="Detox. Ano nebo ne?"
         category="Všechno"
         link="/blog/post-2"
       />
       <BlogPostsCard
-        img={imgPlaceholder}
+        img={img3}
         date="20.05.21"
         title="S vodou je spojeno hodně mýtů. Co je vhodné  pít, kdy a v jakém množství?"
         category="Všechno"

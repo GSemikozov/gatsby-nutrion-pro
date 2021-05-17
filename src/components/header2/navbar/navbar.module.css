@@ -13,7 +13,7 @@
 
 .navbarCol:first-child {
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .navbarItem {

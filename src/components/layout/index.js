@@ -38,7 +38,6 @@ const Layout = ({ children, t, i18n, location, pageContext }) => {
   )
 
   useEffect(() => {
-    console.log("------ site", site)
     setTimeout(() => {
       setIsLoading(prev => !prev)
     }, 1000)

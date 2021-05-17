@@ -537,7 +537,9 @@ const MainFormLayout = ({
                 />
 
                 <label htmlFor="osob1">
-                  <span className={stylesRadio.text}>1 osoba</span>
+                  <span className={stylesRadio.text}>
+                    {t("forms.mainForm2NumberOfPersonOption1")}
+                  </span>
                   <span className={stylesRadio.line}></span>
                 </label>
               </div>
@@ -555,7 +557,9 @@ const MainFormLayout = ({
                 />
 
                 <label htmlFor="osob2">
-                  <span className={stylesRadio.text}>2 osoby</span>
+                  <span className={stylesRadio.text}>
+                    {t("forms.mainForm2NumberOfPersonOption2")}
+                  </span>
                   <span className={stylesRadio.line}></span>
                 </label>
               </div>
@@ -573,7 +577,9 @@ const MainFormLayout = ({
                 />
 
                 <label htmlFor="osob3">
-                  <span className={stylesRadio.text}>3 osoby</span>
+                  <span className={stylesRadio.text}>
+                    {t("forms.mainForm2NumberOfPersonOption3")}
+                  </span>
                   <span className={stylesRadio.line}></span>
                 </label>
               </div>
@@ -590,7 +596,9 @@ const MainFormLayout = ({
                   }}
                 />
                 <label htmlFor="osob4">
-                  <span className={stylesRadio.text}>{">3"}</span>
+                  <span className={stylesRadio.text}>
+                    {t("forms.mainForm2NumberOfPersonOption4")}
+                  </span>
                   <span className={stylesRadio.line}></span>
                 </label>
               </div>

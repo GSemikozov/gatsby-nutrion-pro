@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 
 import cx from 'classnames';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
 import { AnimatedWrapper } from '../animated-wrapper';
@@ -233,7 +233,9 @@ export const FoodCarouselSection2 = () => {
       <Container isWide={true}>
         <AnimatedWrapper>
           <h3 className="fancyUnderlineText sectionTitleNew text-center">
-            <span>Jaká jídla</span> tě s námi čekají?
+            <Trans i18nKey="home.food.title">
+              <span>Jaká jídla</span> tě s námi čekají?
+            </Trans>
           </h3>
           <FoodCarousel />
         </AnimatedWrapper>

@@ -27,7 +27,7 @@ export const Program2 = ({ id }) => {
                   className={cx(styles.sectionListImg, styles.sectionListImg1)}
                 ></div>
                 <div className={styles.title}>
-                  <span>{t("home.program.program1title")}</span>
+                  <span>{t("home.program2.program1title")}</span>
                 </div>
               </div>
             </LocalizedLink>
@@ -38,7 +38,7 @@ export const Program2 = ({ id }) => {
                   className={cx(styles.sectionListImg, styles.sectionListImg2)}
                 ></div>
                 <div className={styles.title}>
-                  <span>{t("home.program.program2title")}</span>
+                  <span>{t("home.program2.program2title")}</span>
                 </div>
               </div>
             </LocalizedLink>
@@ -49,7 +49,7 @@ export const Program2 = ({ id }) => {
                   className={cx(styles.sectionListImg, styles.sectionListImg3)}
                 ></div>
                 <div className={styles.title}>
-                  <span>{t("home.program.program3title")}</span>
+                  <span>{t("home.program2.program3title")}</span>
                 </div>
               </div>
             </LocalizedLink>
@@ -60,12 +60,20 @@ export const Program2 = ({ id }) => {
                   className={cx(styles.sectionListImg, styles.sectionListImg4)}
                 ></div>
                 <div className={styles.title}>
-                  <span>{t("home.program.program4title")}</span>
+                  <span>{t("home.program2.program4title")}</span>
                 </div>
               </div>
             </LocalizedLink>
           </div>
-          <p>{t("home.program.programDesc")}</p>
+          <p
+            style={{
+              fontSize: "18px",
+              margin: "40px 0 0",
+              textAlign: "center",
+            }}
+          >
+            {t("home.program2.programDesc")}
+          </p>
         </AnimatedWrapper>
       </Container>
     </div>

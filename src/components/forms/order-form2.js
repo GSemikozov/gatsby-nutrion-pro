@@ -532,7 +532,7 @@ const OrderFormLayout = ({
               })}
               onClick={() => gotoStep(1)}
             >
-              <span>Volba programu</span>
+              <span>{t("home.order.step1title")}</span>
             </div>
             <div
               className={cx(orderFormStyles.orderFormProgressDivider, {
@@ -561,7 +561,7 @@ const OrderFormLayout = ({
               })}
               onClick={() => gotoStep(2)}
             >
-              <span>Specifikace objednávky</span>
+              <span>{t("home.order.step2title")}</span>
             </div>
             <div
               className={cx(orderFormStyles.orderFormProgressDivider, {
@@ -591,7 +591,7 @@ const OrderFormLayout = ({
               })}
               onClick={() => gotoStep(3)}
             >
-              <span>Shrnutí</span>
+              <span>{t("home.order.step3title")}</span>
             </div>
           </div>
           <div className={orderFormStyles.steps}>
@@ -786,7 +786,7 @@ const OrderFormLayout = ({
                     orderFormStyles.kalTitle
                   )}
                 >
-                  Počet kCal
+                  {t("home.order.kalLabel")}
                 </h5>
                 <div
                   className={cx(
@@ -858,7 +858,7 @@ const OrderFormLayout = ({
                   className="text-center justify-center"
                   handleClick={gotoNextStep}
                 >
-                  Pokračovat
+                  {t("home.order.ctaNext")}
                 </Button2>
               </div>
             </div>
@@ -937,7 +937,7 @@ const OrderFormLayout = ({
                     orderFormStyles.step2InputTitle
                   )}
                 >
-                  Délka týdne
+                  {t("home.order.weekLabel")}
                 </h5>
                 <div
                   className={cx(
@@ -964,7 +964,7 @@ const OrderFormLayout = ({
                       }}
                     />
 
-                    <label htmlFor="week1">5 dni</label>
+                    <label htmlFor="week1">{t("home.order.week5")}</label>
                   </div>
                   <div
                     className={cx(
@@ -984,7 +984,7 @@ const OrderFormLayout = ({
                         setFieldValue("week", +e.target.value)
                       }}
                     />
-                    <label htmlFor="week2">6 dni</label>
+                    <label htmlFor="week2">{t("home.order.week5")}</label>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 import { useHomepageTabsContext } from '../../contexts/HomepageTabsContext';
 import { AnimatedWrapper } from '../animated-wrapper';
@@ -43,8 +43,9 @@ export const Order2 = ({ id, className }) => {
               styles2.title
             )}
           >
-            {/* {t("home.order.title")} */}
-            Objednat <span>teď</span>
+            <Trans i18nKey="home.order.title">
+              Objednat <span>teď</span>
+            </Trans>
           </h3>
         </AnimatedWrapper>
         <div className={styles2.formWrapContainer}>

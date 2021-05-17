@@ -1,6 +1,8 @@
 import React from 'react';
 
-import imgPlaceholder from '../../../components/blog/card/blog-1-placeholder.jpg';
+import img1 from '../../../pages/blog/post-1.jpg';
+import img2 from '../../../pages/blog/post-2.jpg';
+import img3 from '../../../pages/blog/post-3.jpg';
 import styles from './post-sidebar.module.css';
 
 export const PostSidebar = () => (
@@ -9,11 +11,7 @@ export const PostSidebar = () => (
     <div>
       <a href="/blog/post-1" className={styles.postSidebarCard}>
         <div>
-          <img
-            src={imgPlaceholder}
-            className={styles.postSidebarCardImg}
-            alt="img"
-          />
+          <img src={img1} className={styles.postSidebarCardImg} alt="img" />
         </div>
         <div className={styles.postSidebarCardBody}>
           <div className={styles.postSidebarCardTitle}>
@@ -24,11 +22,7 @@ export const PostSidebar = () => (
       </a>
       <a href="/blog/post-2" className={styles.postSidebarCard}>
         <div>
-          <img
-            src={imgPlaceholder}
-            className={styles.postSidebarCardImg}
-            alt="img"
-          />
+          <img src={img2} className={styles.postSidebarCardImg} alt="img" />
         </div>
         <div className={styles.postSidebarCardBody}>
           <div className={styles.postSidebarCardTitle}>Detox. Ano nebo ne?</div>
@@ -37,11 +31,7 @@ export const PostSidebar = () => (
       </a>
       <a href="/blog/post-3" className={styles.postSidebarCard}>
         <div>
-          <img
-            src={imgPlaceholder}
-            className={styles.postSidebarCardImg}
-            alt="img"
-          />
+          <img src={img3} className={styles.postSidebarCardImg} alt="img" />
         </div>
         <div className={styles.postSidebarCardBody}>
           <div className={styles.postSidebarCardTitle}>

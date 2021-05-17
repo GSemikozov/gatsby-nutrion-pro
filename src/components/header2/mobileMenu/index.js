@@ -112,9 +112,9 @@ export const MobileMenu = ({
       <div className={styles.content}>
         <div className={styles.menuItems}>
           {isHomepage ? <HomepageMenu /> : <InnerPageMenu />}
-          <Link to="/blog/posts" className={styles.menuItem}>
+          <a href="/blog/posts" className={styles.menuItem}>
             Blog
-          </Link>
+          </a>
         </div>
         <div className={styles.info}>
           <div>

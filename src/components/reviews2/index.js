@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
 import { AnimatedWrapper } from '../animated-wrapper';
@@ -60,8 +60,9 @@ export const Reviews2 = ({ id = "" }) => {
       <Container isWide={true} className={styles.container}>
         <AnimatedWrapper>
           <h3 className="fancyUnderlineText sectionTitleNew text-center">
-            {/* {t("general.reviews.title")} */}
-            Co <span>o nás říkají</span> naši zákazníci?
+            <Trans i18nKey="home.reviews.title">
+              Co <span>o nás říkají</span> naši zákazníci?
+            </Trans>
           </h3>
           <ReviewsCarousel />
         </AnimatedWrapper>

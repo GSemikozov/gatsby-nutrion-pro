@@ -187,20 +187,86 @@
       "programDesc": "V tuto chvíli bohužel nenabízíme možnost low-carb, low-fat, vegetarián, vegan či speciálních zdravotních diet."
     },
     "order": {
-      "title": "Objednat teď",
+      "title": "Objednat <1>teď</1>",
       "tab1Btn": "Zavolejte mi",
-      "tab2Btn": "Objednat online"
+      "tab2Btn": "Objednat online",
+      "step1title": "Volba programu",
+      "step2title": "Specifikace objednávky",
+      "step3title": "Shrnutí",
+      "ctaNext": "Pokračovat",
+      "kalLabel": "Počet kcal",
+      "weekLabel": "Délka týdne",
+      "week5": "5 dni",
+      "week6": "6 dni"
+    },
+    "food": {
+      "title": "<0>Jaká jídla</0> tě s námi čekají?"
     },
     "howItWorks": {
       "title": "Jak to funguje",
+      "title2": "Jak to <1>funguje</1>",
       "option1": "Nastavíme tvůj denní příjem podle tvých cílů",
       "option2": "Speciální algoritmus sestaví jídelníček na míru",
       "option3": "Jídlo uvaříme",
       "option4": "Dovezeme po celé Praze zdarma",
       "option5": "Následně dohlédneme na to, abys svého cíle dosáhl"
     },
+    "delivery": {
+      "title": "Doprava po Praze <1>zdarma</1>",
+      "listTitle": "Rozvoz až k tobě ke dvěřím",
+      "listOption1": "Rozvážíme po celé Praze zcela zadarmo.",
+      "listOption2": "Vyber si přesný čas doručení (2hodinová časová okna)",
+      "listOption3": "Možnost změnit místo doručení (Stačí nám napsat v den rozvozu do 15 hodin)."
+    },
+    "reviews": {
+      "title": "Co <1>o nás říkají</1> naši zákazníci?"
+    },
+    "discount": {
+      "title": "Společná objednávka se <1>slevou až 20%</1>",
+      "desc": "Objednejte si svůj NutritionPro program společně s kamarády či rodinou a získejte ho za výhodnější cenu",
+      "option1": "První objednávku pro <1>2</1> máte se slevou",
+      "option2": "První objednávku pro <1>3+</1> máte se slevou"
+    },
     "qa": {
-      "title": "Často kladené Otázky"
+      "title": "Často kladené <1>Otázky</1>",
+      "tab1title": "Jídelníček na míru",
+      "tab1option1question": "V čem jste jiní než ostatní krabičkové diety?",
+      "tab1option1answer": "Věříme v individuální přístup. Každý z nás je originál a každý z nás potřebuje jiný kalorický příjem, pokud chce dosáhnout svého cíle zdravou cestou. Jinak bude vypadat menu pro 50kg ženu, která chce zhubnout a jinak pro 90kg muže, který chce nabrat svalovou hmotu. Jídelníček je proto přizpůsoben na míru tělu a cílům, což obyčejná krabičková dieta nebere v potaz.",
+      "tab1option2question": "Kdo sestavuje jídelníček?",
+      "tab1option2answer": "Jídelníček je sestavován naším speciálním algoritmem na základě potřeb tvého těla a tvých cílů. Náš certifikovaný poradce pro výživu Jiří Kaloč pak zodpovídá za složení samotných jídel i za tvé výsledky.",
+      "tab1option3question": "Jak vypadá jídelníček?",
+      "tab1option3answer": "Jsme zastánci vyvážené stravy. Jídla jsou tak velmi pestrá a chutná. Jídelníček je sestavován z 300 různých jídel, která se pravidelně střídají. Zároveň naši databázi neustále aktualizujeme a zařazujeme nová a zajímavá jídla. Prostě se ti u nás žádné jídlo nepřejí.",
+      "tab2title": "Suroviny",
+      "tab2option1question": "Jaké používáte suroviny?",
+      "tab2option1answer": "Kvalitní a čerstvé suroviny jsou pro zdravé stravování základem, proto používáme výhradně prémiové suroviny od českých dodavatelů.",
+      "tab2option2question": "Jsou vaše jídla čerstvá?",
+      "tab2option2answer": "Ano, suroviny kupujeme v den přípravy. Jídlo se následně šokově zchladí (z 90 °C na 2 °C za méně než hodinu) a hermeticky balí. To zajišťuje maximální čerstvost.",
+      "tab2option3question": "Kdy jídlo připravujete?",
+      "tab2option3answer": "Příprava jídel probíhá v den rozvozu. To znamená, že v neděli připravujeme na pondělí a úterý, v úterý na středu a čtvrtek, ve čtvrtek na pátek a sobotu.",
+      "tab2option4question": "Máte dezerty?",
+      "tab2option4answer": "Ano, jsou výborné. A navíc přesně na gram spočítané tak, aby zapadly do tvého osobního jídelníčku.",
+      "tab3title": "Rozvoz a platba",
+      "tab3option1question": "Rozvážíte i do okrajových částí Prahy?",
+      "tab3option1answer": "Ano, pro upřesnění a bližší info nás neváhej kontaktovat na klientské lince.",
+      "tab3option2question": "Kdy jídlo doručujete?",
+      "tab3option2answer": "Jídlo rozvážíme obden, a to v úterý, čtvrtek a neděli. Vždy mezi 17. a 22. hodinou. Čas můžeš upřesnit v rámci dvouhodinových oken.",
+      "tab3option3question": "Co když potřebuji změnit doručovací údaje?",
+      "tab3option3answer": "Jsme flexibilní, nemusíš se tedy bát změn v tvých plánech. Čas či místo doručení můžeš změnit i v ten samý den do 15. hodiny.",
+      "tab3option4question": "Jak dlouho dopředu musím nahlásit vynechání dovozu?",
+      "tab3option4answer": "Vynechání dovozu je možné nahlásit pouze v pracovní době zákaznické podpory, tj. Pondělí–Pátek od 10:00 do 18:00, nejpozději však 3 celé pracovní dny přede dnem doručení. Nepočítá se však samotný den doručení, tj. den doručení minus 3 celé pracovní dny. Děje se tak z důvodu, že pro každé vaření nakupujeme čerstvé suroviny pro přesný počet zákazníků.",
+      "tab3option5question": "Můžu zrušit pouze jeden den?",
+      "tab3option5answer": "V případě, že se tvoje objednávka vztahuje na dva dny, můžeš zrušit pouze celou dvoudenní objednávku. Zrušit pouze jeden den v tomto případě není možné.",
+      "tab3option6question": "Jak stanovujete cenu?",
+      "tab3option6answer": "Cena je stanovena individuálně podle stravovacího plánu na míru a je odvozena podle potřeby denního kalorického příjmu pro daného člověka a podle jeho cíle. Cena pak bude odlišná v případě ženy, která chce zhubnout, a muže, který chce nabrat svalovou hmotu. Současná průměrná cena se však pohybuje kolem 480,- Kč za pětichodové denní menu.",
+      "tab3option7question": "Jak probíhá platba?",
+      "tab3option7answer": "Po realizaci objednávky ti bude vystavena faktura a odeslána k proplacení na tvůj e-mail.",
+      "tab4title": "Způsob konzumace",
+      "tab4option1question": "Musí se jídlo ohřívat?",
+      "tab4option1answer": "Některá jídla jsou určena ke konzumaci za studena, jiná jsou zase určena k ohřevu. Můžeš je konzumovat i neohřáté, ale pro lepší chuť doporučujeme jejich ohřátí..",
+      "tab4option2question": "Jak ohřívat jídlo?",
+      "tab4option2answer": "Pokud použiješ ohřev v mikrovlnné troubě, doporučujeme do folie propíchnout dírky. Potřebný čas ohřevu se liší podle druhu jídla a velikosti porce. Pro rovnoměrné prohřátí jídla doporučujeme použít střední výkon (6000–7000 W) a delší čas.",
+      "tab4option3question": "Jak skladovat jídlo?",
+      "tab4option3answer": "Jídlo doporučujeme skladovat v lednici, ale není problém si ho vzít i do práce nebo na cesty. Jídlo vydrží několik hodin mimo lednici, a to bez jakékoliv změny chuti či kvality."
     }
   }
 }

@@ -112,7 +112,7 @@
     "mainFormGoalOption2": "Maintenance",
     "mainFormGoalOption3": "Weight gain",
     "mainFormProgramLabel": "Choose the length of your program",
-    "mainFormProgramLabel2": "Délka programu",
+    "mainFormProgramLabel2": "Your program lenght",
     "mainFormProgramOption1": "2 weeks",
     "mainFormProgramOption2": "Month",
     "mainFormProgramOption3": "2 months",
@@ -128,9 +128,9 @@
     "mainFormNumberOfPersonOption2": "2",
     "mainFormNumberOfPersonOption3": "3",
     "mainFormNumberOfPersonOption4": "More than 3",
-    "mainForm2NumberOfPersonOption1": "1 osoba",
-    "mainForm2NumberOfPersonOption2": "2 osoby",
-    "mainForm2NumberOfPersonOption3": "3 osoby",
+    "mainForm2NumberOfPersonOption1": "1 person",
+    "mainForm2NumberOfPersonOption2": "2 persons",
+    "mainForm2NumberOfPersonOption3": "3 persons",
     "mainForm2NumberOfPersonOption4": ">3",
     "mainFormTelLabel": "Contact number",
     "mainFormPromoCodeLabel": "Promo code",
@@ -188,20 +188,86 @@
       "programDesc": "Unfortunately, we currently do not offer the option of low-carb, low-fat, vegetarian, vegan or special health diets."
     },
     "order": {
-      "title": "Order now",
+      "title": "Order <1>now</1>",
       "tab1Btn": "Call me",
-      "tab2Btn": "Online order"
+      "tab2Btn": "Online order",
+      "step1title": "Choose program",
+      "step2title": "Order specification",
+      "step3title": "Summary",
+      "ctaNext": "Continue",
+      "kalLabel": "Kcal",
+      "weekLabel": "The length of the week",
+      "week5": "5 days",
+      "week6": "6 days"
+    },
+    "food": {
+      "title": "<0>The meals</0>. What to expect?"
     },
     "howItWorks": {
       "title": "How it works",
+      "title2": "How it <1>works</1>",
       "option1": "We start by setting your individual daily intake.",
       "option2": "Our special algorithm customizes your menu.",
       "option3": "We cook the food.",
       "option4": "Free deliveries within Prague.",
       "option5": "We make sure you reach your goals on time."
     },
+    "delivery": {
+      "title": "Delivery in Prague for <1>free</1>",
+      "listTitle": "Delivery right to your door",
+      "listOption1": "We deliver throughout Prague and its surroundings for free.",
+      "listOption2": "Choose the exact delivery time (2-hour time windows)",
+      "listOption3": "Possibility to change the place of delivery (Just let us know one workday before the delivery and we will bring your food to a new address.)"
+    },
+    "reviews": {
+      "title": "What our <1>clients say</1> about us?"
+    },
+    "discount": {
+      "title": "<1>Save up to 20%</1> off with the first group order!",
+      "desc": "Start your NutritionPro meal plan with a friend or family and enjoy our tasty meals at discounted price.",
+      "option1": "<1>2</1> person Discount Special Offer",
+      "option2": "<1>3+</1> person DiscountSpecial Offer"
+    },
     "qa": {
-      "title": "FAQ´s"
+      "title": "FAQ´s",
+      "tab1title": "Tailor made menu",
+      "tab1option1question": "How do you differ from other box diets?",
+      "tab1option1answer": "We believe in an individual approach. Each of us is special and each of us needs a different calorie intake if we want to achieve our goal in a healthy way. The menu will look different for a 50kg woman who wants to lose weight and different for a 90kg man who wants to gain muscle mass. The menu is therefore tailored to your body and goals, which is not taken into account by the ordinary box diet.",
+      "tab1option2question": "Who makes the menu?",
+      "tab1option2answer": "The menu is compiled by our special algorithm based on the needs of your body and your goals. Our certified nutrition consultant Jiří Kaloč is responsible for the composition of the meals themselves and for your results.",
+      "tab1option3question": "What does the menu look like?",
+      "tab1option3answer": "We are in favor of a balanced diet. The meals are so very varied and tasty. The menu consists of 300 different meals, which are regularly rotated. At the same time, we constantly update our database and include new and interesting dishes. With us you don't get tired of the same food.",
+      "tab2title": "Ingredients",
+      "tab2option1question": "What ingredinet do you use?",
+      "tab2option1answer": "High quality and fresh ingredients are the basis for healthy eating, so we use only premium ingredients from Czech suppliers.",
+      "tab2option2question": "Are your meals fresh?",
+      "tab2option2answer": "Yes, we buy raw materials on the day of cooking. The food is then quenched (from 90°C to 2°C in less than an hour) and hermetically packaged. This ensures maximum freshness.",
+      "tab2option3question": "When do you prepare food?",
+      "tab2option3answer": "Meals are prepared on the day of delivery. This means that on Sundays we prepare for Monday and Tuesday, Tuesday for Wednesday and Thursday, Thursday for Friday and Saturday.",
+      "tab2option4question": "Do you have desserts?",
+      "tab2option4answer": "Yes, they are delicious. Plus, exactly per gram calculated to fit your personal diet.",
+      "tab3title": "Delivery and payment",
+      "tab3option1question": "Do you deliver to the outskirts of Prague?",
+      "tab3option1answer": "Yes, please do not hesitate to contact us via client line for more details. ",
+      "tab3option2question": "When do you deliver food?",
+      "tab3option2answer": "We deliver food every other day - on Tuesdays, Thursdays and Sundays. Always between 5pm and 10pm. You can specify time within two-hour windows.",
+      "tab3option3question": "What if I need to change my shipping information?",
+      "tab3option3answer": "We're flexible, so don't worry about changing your plans. You can change the time or place of delivery until 3 pm on the same day.",
+      "tab3option4question": "How long in advance do I have to report a skipped delivery?",
+      "tab3option4answer": "The skipped delivery can only be reported during Customer Support business hours, ie Monday – Friday from 10:00 to 18:00, but no later than 3 full business days prior to delivery. However, the delivery day itself is not counted, ie delivery day minus 3 full business days. This is because for every cooking we buy fresh ingredients for a precise number of customers. ",
+      "tab3option5question": "Can I cancel only one day?",
+      "tab3option5answer": "If your order covers two days, you can only cancel your entire two-day order. Canceling only one day in this case is not possible.",
+      "tab3option6question": "How do you set the price?",
+      "tab3option6answer": "The price is set individually according to the tailor-made diet plan and is derived according to the daily caloric intake for the person and his / her goal. The price will then be different for a woman who wants to lose weight and a man who wants to gain muscle. However, the current average price is around CZK 480 for a five-course daily menu.",
+      "tab3option7question": "How does payment go?",
+      "tab3option7answer": "After placing your order, you will be receive an invoice which is sent to your e-mail for payment",
+      "tab4title": "Method of consumption",
+      "tab4option1question": "Does the food needs to be heated?",
+      "tab4option1answer": "Some meals are intended for cold consumption, others are intended for heating. You can also consume them unheated, but for better taste we recommend warming them up. ",
+      "tab4option2question": "How to heat food?",
+      "tab4option2answer": "If you use microwave heating, we recommend piercing holes in the foil. The required cooking time varies according to the type of food and the size of the portion. We recommend using medium power (6000-7000 W) and longer time so the food is heated evenly.",
+      "tab4option3question": "How to store food?",
+      "tab4option3answer": "We recommend storing food in the refrigerator, but it is not a problem to take it to work or on the road. The food will last several hours outside the refrigerator without any change in taste or quality."
     }
   }
 }
