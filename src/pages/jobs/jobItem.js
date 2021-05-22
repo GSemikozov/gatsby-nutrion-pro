@@ -30,7 +30,7 @@ const renderJobs = () => [
     key="2"
     title="Sales manager"
     description="Do našeho mladého týmu hledáme šikovného/ou kolegu/yni na pozici Obchodní zástupce."
-    date="18.06.2020"
+    date="18.05.2021"
     color="#EAEFF7"
     link="/jobs/sales"
   />,
@@ -38,7 +38,7 @@ const renderJobs = () => [
     key="3"
     title="Vedoucí výroby"
     description="Do našeho týmu hledáme šikovného/ou kolegu/yni na pozici Vedoucí výroby."
-    date="27.08.2020"
+    date="17.05.2021"
     color="#F7F4FD"
     link="/jobs/production-manager"
   />,
@@ -46,7 +46,7 @@ const renderJobs = () => [
     key="1"
     title="Marketing manager"
     description="Do našeho rychle rostoucího týmu hledáme kolegu na pozici Marketing manager."
-    date="16.09.2020"
+    date="20.05.2021"
     color="#FDF9F4"
     link="/jobs/marketing-manager"
   />,
@@ -54,7 +54,7 @@ const renderJobs = () => [
     key="4"
     title="Operations Manager"
     description="В нашу команду ищем коллегу на позицию Operations Manager."
-    date="10.12.2020"
+    date="21.05.2021"
     color="#E3F0FA"
     link="/jobs/operations-manager"
   />,
@@ -65,13 +65,7 @@ const renderJobs = () => [
   //   color="#E3F0FA"
   //   link=""
   // />,
-  <Job
-    title=""
-    description=""
-    date=""
-    color="#FFF"
-    link=""
-  />,
+  <Job title="" description="" date="" color="#FFF" link="" />,
 ]
 
 const Jobs = () => {
