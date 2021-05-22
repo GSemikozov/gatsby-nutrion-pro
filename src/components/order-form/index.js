@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 import { Button } from '../button';
 import styles from '../calculator/calculator.module.css';
@@ -27,7 +27,9 @@ export const Order = ({ id, className }) => {
     >
       <Container>
         <h3 className={cx("sectionTitle", styles.title, styles2.title)}>
-          {t("home.order.title")}
+          <Trans i18nKey="home.order.title">
+            Objednat <span>teď</span>
+          </Trans>
         </h3>
         <div className={cx(styles.typeSelector)}>
           <Button

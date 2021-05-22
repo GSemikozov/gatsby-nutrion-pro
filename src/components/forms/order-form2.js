@@ -984,7 +984,7 @@ const OrderFormLayout = ({
                         setFieldValue("week", +e.target.value)
                       }}
                     />
-                    <label htmlFor="week2">{t("home.order.week5")}</label>
+                    <label htmlFor="week2">{t("home.order.week6")}</label>
                   </div>
                 </div>
               </div>
@@ -1190,7 +1190,7 @@ const OrderFormLayout = ({
                   }
                   handleClick={gotoNextStep}
                 >
-                  Pokračovat
+                  {t("home.order.ctaNext")}
                 </Button2>
               </div>
             </div>
@@ -1212,7 +1212,7 @@ const OrderFormLayout = ({
               </div>
               <div className={orderFormStyles.step3form}>
                 <div className={orderFormStyles.step3finalPrice}>
-                  <h5>Celkem</h5>
+                  <h5>{t("forms.onlineOrderFormSummaryTotalLabel")}</h5>
                   <div className={orderFormStyles.step3finalPriceNumber}>
                     {price
                       ? price * days[program][week]

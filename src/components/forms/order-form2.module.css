@@ -354,7 +354,7 @@
 
 .step1 {
   display: grid;
-  grid-template-columns: 235px 320px 300px;
+  grid-template-columns: 235px 320px 340px;
   grid-template-rows: 126px 126px 78px;
   grid-template-areas:
     "cel program price"
