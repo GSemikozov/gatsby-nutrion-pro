@@ -15,7 +15,7 @@ const customAnimation = keyframes`
 `
 
 export const AnimatedWrapper = ({ children }) => (
-  // <Reveal keyframes={customAnimation} triggerOnce={true} cascade={true}>
-  <>{children}</>
+  <Reveal keyframes={customAnimation} triggerOnce={true} cascade={true}>
+    {children}
+  </Reveal>
 )
-// </Reveal>
