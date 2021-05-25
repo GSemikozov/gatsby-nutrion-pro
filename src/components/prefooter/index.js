@@ -30,7 +30,7 @@ export const PreFooter = () => {
                 themeLight
                 label
                 btnType="white"
-                btnText="Zavolejte mi"
+                btnText={t("forms.contactForm2.CTA")}
               />
             </div>
           </Container>
@@ -51,7 +51,11 @@ export const PreFooter = () => {
           </Container>
         </div>
         <Container className={styles.formWrapXS}>
-          <ContactForm2 label btnType="primary" btnText="Zavolejte mi" />
+          <ContactForm2
+            label
+            btnType="primary"
+            btnText={t("forms.contactForm2.CTA")}
+          />
         </Container>
       </MobileView>
     </>

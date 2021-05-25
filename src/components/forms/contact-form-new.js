@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import { FastField, Form, withFormik } from 'formik';
 import React from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import MaskedInput from 'react-text-mask';
 import * as Yup from 'yup';
 
@@ -26,6 +27,7 @@ export const ContactFormLayout = ({
   btnType = "secondary",
   btnText = "Objednat",
 }) => {
+  const { t } = useTranslation()
   return (
     <Form
       name="2days-trial"
@@ -51,7 +53,7 @@ export const ContactFormLayout = ({
         disabled={isSubmitting}
         className={contactFormStyles.contactFormButton}
       >
-        {btnText}
+        {t("forms.contactForm2.CTA") || btnText}
       </Button2>
     </Form>
   )
