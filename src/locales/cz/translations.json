@@ -216,13 +216,13 @@
       "listTitle": "Rozvoz až k tobě ke dvěřím",
       "listOption1": "Rozvážíme po celé Praze zcela zadarmo.",
       "listOption2": "Vyber si přesný čas doručení (2hodinová časová okna)",
-      "listOption3": "Možnost změnit místo doručení (Stačí nám napsat v den rozvozu do 15 hodin)."
+      "listOption3": "Možnost změnit místo doručení (Stačí nám napsat pracovní den před rozvozem)."
     },
     "reviews": {
       "title": "Co <1>o nás říkají</1> naši zákazníci?"
     },
     "discount": {
-      "title": "Společná objednávka se <1>slevou až 20%</1>",
+      "title": "Získejte <1>slevu až 20%</1> na první objednávku",
       "desc": "Objednejte si svůj NutritionPro program společně s kamarády či rodinou a získejte ho za výhodnější cenu",
       "option1": "První objednávku pro <1>2</1> máte se slevou",
       "option2": "První objednávku pro <1>3+</1> máte se slevou"

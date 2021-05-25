@@ -18,7 +18,7 @@ export const DiscountSection = () => {
         <AnimatedWrapper>
           <h3 className="fancyUnderlineText fancyUnderlineText--orange sectionTitleNew text-center">
             <Trans i18nKey="home.discount.title">
-              Společná objednávka se <span>slevou až 20%</span>
+              Získejte <span>slevu až 20%</span> na první objednávku
             </Trans>
           </h3>
           <div className={styles.discountInfoWrap}>
