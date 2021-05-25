@@ -56,14 +56,14 @@ export const Hero3 = () => {
                     strokeWidth="1.5625"
                   />
                 </svg>
-                {t("home.hero.cta-1")}
+                {t("home.hero.cta-2")}
               </Button2>
               <Button2
                 className={styles.button}
                 color="secondary"
                 handleClick={() => openOrderForm("calculator")}
               >
-                {t("home.hero.cta-2")}
+                {t("home.hero.cta-1")}
               </Button2>
             </div>
           </div>
