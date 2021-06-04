@@ -52,11 +52,11 @@ const renderJobs = () => [
   />,
   <Job
     key="4"
-    title="Operations Manager"
-    description="В нашу команду ищем коллегу на позицию Operations Manager."
-    date="21.05.2021"
+    title="Event Manager"
+    description="Do našeho mladého týmu hledáme šikovného/ou kolegu/yni na pozici Event Manager."
+    date="01.06.2021"
     color="#E3F0FA"
-    link="/jobs/operations-manager"
+    link="/jobs/event-manager"
   />,
   // <Job
   //   title="NUTRIČNÍ SPECIALISTA"
