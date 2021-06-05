@@ -52,6 +52,14 @@
   position: absolute;
 }
 
+.postListNumber li {
+  list-style-type: decimal;
+}
+
+.postListNumber li:before {
+  display: none;
+}
+
 .postImg {
   max-width: 100%;
   border-radius: 40px;

@@ -41,6 +41,13 @@ const Posts = () => (
         category="Všechno"
         link="/blog/post-3"
       />
+      <BlogPostsCard
+        img={img3}
+        date="31.05.21"
+        title="Krabičkování. Proč je krabičková dieta snadné řešení."
+        category="Všechno"
+        link="/blog/post-4"
+      />
     </div>
   </Container>
 )

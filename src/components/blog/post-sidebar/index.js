@@ -3,6 +3,7 @@ import React from 'react';
 import img1 from '../../../pages/blog/post-1.jpg';
 import img2 from '../../../pages/blog/post-2.jpg';
 import img3 from '../../../pages/blog/post-3.jpg';
+import img4 from '../../../pages/blog/post-4.jpg';
 import styles from './post-sidebar.module.css';
 
 export const PostSidebar = () => (
@@ -39,6 +40,17 @@ export const PostSidebar = () => (
             množství?
           </div>
           <div className={styles.postSidebarCardDate}>20.04.21</div>
+        </div>
+      </a>
+      <a href="/blog/post-4" className={styles.postSidebarCard}>
+        <div>
+          <img src={img4} className={styles.postSidebarCardImg} alt="img" />
+        </div>
+        <div className={styles.postSidebarCardBody}>
+          <div className={styles.postSidebarCardTitle}>
+            Krabičkování. Proč je krabičková dieta snadné řešení.
+          </div>
+          <div className={styles.postSidebarCardDate}>31.04.21</div>
         </div>
       </a>
     </div>
