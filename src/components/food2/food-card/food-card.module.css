@@ -1,7 +1,7 @@
 .foodCard {
   border-radius: 6px;
   overflow: hidden;
-  background-color: var(--color-white);
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
