@@ -7,6 +7,7 @@ import { Container } from '../../components/container';
 import img1 from './post-1.jpg';
 import img2 from './post-2.jpg';
 import img3 from './post-3.jpg';
+import img4 from './post-4.jpg';
 import styles from './posts-grid.module.css';
 
 const Posts = () => (
@@ -42,7 +43,7 @@ const Posts = () => (
         link="/blog/post-3"
       />
       <BlogPostsCard
-        img={img3}
+        img={img4}
         date="31.05.21"
         title="Krabičkování. Proč je krabičková dieta snadné řešení."
         category="Všechno"
