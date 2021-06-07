@@ -13,6 +13,7 @@ export const Button2 = ({
   disabled = false,
   className,
   buttonType = "button",
+  ...rest
 }) => {
   return (
     <button
@@ -30,6 +31,7 @@ export const Button2 = ({
       )}
       onClick={handleClick}
       disabled={disabled}
+      {...rest}
     >
       {children}
     </button>

@@ -1,7 +1,8 @@
 import cx from 'classnames';
 import React from 'react';
 
-import { Button } from '../../components/button';
+import { Breadcrumbs, BreadcrumbsItem } from '../../components/breadcrumbs';
+import { Button2 } from '../../components/button2';
 import { Container } from '../../components/container';
 import { OrderConsultationForm } from '../../components/forms/order-consultation-form';
 import { useModal } from '../../components/modal';
@@ -22,88 +23,99 @@ const MenuPage = () => {
   return (
     <>
       <SEO title="Vzorové menu" />
-      <Container>
-        <h1 className={cx("text-center", styles.title)}>Vzorové menu</h1>
+      <Container isWide={true}>
+        <Breadcrumbs style={{ margin: "24px 0" }}>
+          <BreadcrumbsItem link="/">Domu</BreadcrumbsItem>
+          <BreadcrumbsItem link="/ukazka-menu">Vzorové menu</BreadcrumbsItem>
+        </Breadcrumbs>
+      </Container>
+      <Container isWide="true">
+        <h3
+          class={cx(
+            "fancyUnderlineText sectionTitleNew text-center",
+            styles.title
+          )}
+        >
+          Vzorové <span>menu</span>
+        </h3>
         <div className={styles.menuGrid}>
           <section>
-            <h3 className={styles.menuTitle}>
-              <span>Pondělí</span>
-            </h3>
             <table className={styles.menuTable}>
+              <thead>
+                <tr>
+                  <th>Pondělí</th>
+                  <th>
+                    <span className={cx(styles.active, styles.orange)}></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Omeletové proužky s ančovičkami
-                  </td>
+                  <td>Omeletové proužky s ančovičkami</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Rolky s limetkovým tvarohem a ovocem
-                  </td>
+                  <td>Rolky s limetkovým tvarohem a ovocem</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
                     <div>
-                      <img src={dishIcon} alt="dish-icon" />
                       Salát z červené řepy se sýrem a sladko-kyselou zálivkou
                     </div>
-                    <div>
-                      <img src={dishIcon} alt="dish-icon" />
-                      Kuřecí nudličky s bulgurem.
-                    </div>
+                    <div>Kuřecí nudličky s bulgurem.</div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Ragú z mořských plodů
-                  </td>
+                  <td>Ragú z mořských plodů</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Frikasé z krůty a pohanka se zeleninou
-                  </td>
+                  <td>Frikasé z krůty a pohanka se zeleninou</td>
                 </tr>
               </tbody>
             </table>
           </section>
           <section>
-            <h3 className={styles.menuTitle}>
-              <span>Úterý</span>
-            </h3>
             <table className={styles.menuTable}>
+              <thead>
+                <tr>
+                  <th>Úterý</th>
+                  <th>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span className={cx(styles.active, styles.green)}></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Volské oko se zeleninovou směsí
-                  </td>
+                  <td>Volské oko se zeleninovou směsí</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Ovoce v agarovém želé
-                  </td>
+                  <td>Ovoce v agarovém želé</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
+                    <div>Ananasový salát s červenou řepou</div>
                     <div>
-                      <img src={dishIcon} alt="dish-icon" />
-                      Ananasový salát s červenou řepou
-                    </div>
-                    <div>
-                      <img src={dishIcon} alt="dish-icon" />
                       Yakitori z kuřete а perlotto se zeleninou a lanýžovým
                       máslem
                     </div>
@@ -111,150 +123,151 @@ const MenuPage = () => {
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Kokosové palačinky s krevetami a sýrem stracciatella
-                  </td>
+                  <td>Kokosové palačinky s krevetami a sýrem stracciatella</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Cuketové špagety s kuřecím masem a pestem
-                  </td>
+                  <td>Cuketové špagety s kuřecím masem a pestem</td>
                 </tr>
               </tbody>
             </table>
           </section>
           <section>
-            <h3 className={styles.menuTitle}>
-              <span>Středa</span>
-            </h3>
             <table className={styles.menuTable}>
+              <thead>
+                <tr>
+                  <th>Středa</th>
+                  <th>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.greenBlur)}
+                    ></span>
+                    <span className={cx(styles.active, styles.orange)}></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Palačinky se sýrem a rajčaty
-                  </td>
+                  <td>Palačinky se sýrem a rajčaty</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Grilované ananasy s borůvkami
-                  </td>
+                  <td>Grilované ananasy s borůvkami</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
+                    <div>Řecký salát</div>
                     <div>
-                      <img src={dishIcon} alt="dish-icon" />
-                      Řecký salát
-                    </div>
-                    <div>
-                      <img src={dishIcon} alt="dish-icon" />
                       Králičí stehno v houbové omáčce a pečenými brambory
                     </div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Salát Nicoise s tuňákem a fazolemi
-                  </td>
+                  <td>Salát Nicoise s tuňákem a fazolemi</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Zapečený losos gorbuša se zeleninou v páře
-                  </td>
+                  <td>Zapečený losos gorbuša se zeleninou v páře</td>
                 </tr>
               </tbody>
             </table>
           </section>
           <section>
-            <h3 className={styles.menuTitle}>
-              <span>Čtvrtek</span>
-            </h3>
             <table className={styles.menuTable}>
+              <thead>
+                <tr>
+                  <th>Čtvrtek</th>
+                  <th>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.greenBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span className={cx(styles.active, styles.green)}></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Omeleta s avokádem, rajčaty a sýrem
-                  </td>
+                  <td>Omeleta s avokádem, rajčaty a sýrem</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Těstovinový salát
-                  </td>
+                  <td>Těstovinový salát</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
-                    <div>
-                      <img src={dishIcon} alt="dish-icon" />
-                      Salát s mandlovým sýrem a rajčaty
-                    </div>
-                    <div>
-                      <img src={dishIcon} alt="dish-icon" />
-                      Jehněčí dušené karé s kořením
-                    </div>
+                    <div>Salát s mandlovým sýrem a rajčaty</div>
+                    <div>Jehněčí dušené karé s kořením</div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Salát z mořských plodů
-                  </td>
+                  <td>Salát z mořských plodů</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Lenivý brizol s houbovou omáčkou
-                  </td>
+                  <td>Lenivý brizol s houbovou omáčkou</td>
                 </tr>
               </tbody>
             </table>
           </section>
           <section>
-            <h3 className={styles.menuTitle}>
-              <span>Pátek</span>
-            </h3>
             <table className={styles.menuTable}>
+              <thead>
+                <tr>
+                  <th>Pátek</th>
+                  <th>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.greenBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.greenBlur)}
+                    ></span>
+                    <span className={cx(styles.active, styles.orange)}></span>
+                    <span></span>
+                    <span></span>
+                  </th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Tvarohové lívanečky se smetanou
-                  </td>
+                  <td>Tvarohové lívanečky se smetanou</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Hruška s ořechy a čokoládou
-                  </td>
+                  <td>Hruška s ořechy a čokoládou</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
+                    <div>Pečená řepa s fenyklem a pomeranči</div>
                     <div>
-                      <img src={dishIcon} alt="dish-icon" />
-                      Pečená řepa s fenyklem a pomeranči
-                    </div>
-                    <div>
-                      <img src={dishIcon} alt="dish-icon" />
                       Kuřecí šašlik na napichovátce s pečenými bramborovými
                       plátky
                     </div>
@@ -262,15 +275,11 @@ const MenuPage = () => {
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Rolka s krabem
-                  </td>
+                  <td>Rolka s krabem</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
                   <td>
-                    <img src={dishIcon} alt="dish-icon" />
                     Kuřecí karbanátek s tvarohem a bazalkou a zeleninou v
                     marinádě
                   </td>
@@ -279,60 +288,68 @@ const MenuPage = () => {
             </table>
           </section>
           <section>
-            <h3 className={styles.menuTitle}>
-              <span>Sobota</span>
-            </h3>
             <table className={styles.menuTable}>
+              <thead>
+                <tr>
+                  <th>Sobota</th>
+                  <th>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.greenBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.greenBlur)}
+                    ></span>
+                    <span
+                      className={cx(styles.active, styles.orangeBlur)}
+                    ></span>
+                    <span className={cx(styles.active, styles.green)}></span>
+                    <span></span>
+                  </th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Palačinky špenátovo-zázvorové z amarantové mouky
-                  </td>
+                  <td>Palačinky špenátovo-zázvorové z amarantové mouky</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Tvarohový dezert s avokádem
-                  </td>
+                  <td>Tvarohový dezert s avokádem</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
-                    <div>
-                      <img src={dishIcon} alt="dish-icon" />
-                      Salát se zelím, okurkami a ředkvičkami
-                    </div>
-                    <div>
-                      <img src={dishIcon} alt="dish-icon" />
-                      Bulgureto
-                    </div>
+                    <div>Salát se zelím, okurkami a ředkvičkami</div>
+                    <div>Bulgureto</div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Toast s domácí šunkou
-                  </td>
+                  <td>Toast s domácí šunkou</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>
-                    <img src={dishIcon} alt="dish-icon" />
-                    Steak z lososa s pečenou zeleninou
-                  </td>
+                  <td>Steak z lososa s pečenou zeleninou</td>
                 </tr>
               </tbody>
             </table>
           </section>
         </div>
-        <div className="text-center" style={{ marginBottom: "40px" }}>
-          <Button type="primary" size="lg" handleClick={show}>
+        <div className="text-center" style={{ marginBottom: "120px" }}>
+          <Button2
+            color="primary"
+            size="lg"
+            handleClick={show}
+            style={{ minWidth: "247px", justifyContent: "center" }}
+          >
             Mám zájem
-          </Button>
+          </Button2>
           <RenderModal className="modalForm">
             <ModalForm />
           </RenderModal>
