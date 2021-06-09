@@ -99,7 +99,7 @@ export const Footer = () => {
                 {t("general.footer.terms2")}
               </span>
             </p>
-            <p>© 2020 NUTRITIONPRO</p>
+            <p>© 2021 NUTRITIONPRO</p>
           </div>
           <div className={styles.footerCol}>
             <p>+420 774 137 352</p>
