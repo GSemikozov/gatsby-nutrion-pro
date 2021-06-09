@@ -170,7 +170,7 @@ export const Footer2 = () => {
             <span>{t("general.footer.terms2")}</span>
           </p>
           <p className="text-center">
-            <span>© 2020 NUTRITIONPRO</span>
+            <span>© 2021 NUTRITIONPRO</span>
           </p>
         </div>
       </Container>
