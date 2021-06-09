@@ -123,7 +123,7 @@ export const Footer2 = () => {
               </span>
             </p>
             <p>
-              <span>© 2020 NUTRITIONPRO</span>
+              <span>© 2021 NUTRITIONPRO</span>
             </p>
           </div>
           <div className={cx(styles.footerCol, styles.contacts)}>
