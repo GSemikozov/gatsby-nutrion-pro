@@ -3,12 +3,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 import cx from 'classnames';
+import { Link } from 'gatsby';
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
 import { AnimatedWrapper } from '../animated-wrapper';
 import { Button } from '../button';
+import { Button2 } from '../button2';
 import { Container } from '../container';
 import { LocalizedLink } from '../localized-link';
 import { FoodCard } from './food-card';
@@ -238,6 +240,13 @@ export const FoodCarouselSection2 = () => {
             </Trans>
           </h3>
           <FoodCarousel />
+          <div className="text-center" style={{ marginTop: "80px" }}>
+            <a href="/ukazka-menu" style={{ textDecoration: "none" }}>
+              <Button2 color="secondary" size="lg">
+                Vzorove menu
+              </Button2>
+            </a>
+          </div>
         </AnimatedWrapper>
       </Container>
     </section>
