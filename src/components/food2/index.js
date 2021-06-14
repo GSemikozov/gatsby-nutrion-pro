@@ -8,6 +8,7 @@ import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
+import { useLangContext } from '../../utils/lang';
 import { AnimatedWrapper } from '../animated-wrapper';
 import { Button } from '../button';
 import { Button2 } from '../button2';
@@ -229,6 +230,7 @@ const FoodCarousel = () => {
 
 export const FoodCarouselSection2 = () => {
   const { t } = useTranslation()
+  const { lang } = useLangContext()
 
   return (
     <section className={styles.foodCarouselSection} id="food">
@@ -240,12 +242,26 @@ export const FoodCarouselSection2 = () => {
             </Trans>
           </h3>
           <FoodCarousel />
-          <div className="text-center" style={{ marginTop: "80px" }}>
-            <a href="/ukazka-menu" style={{ textDecoration: "none" }}>
-              <Button2 color="secondary" size="lg">
-                Vzorove menu
-              </Button2>
-            </a>
+          <div
+            className={cx("text-center", { ["hide"]: lang !== "cz" })}
+            style={{ marginTop: "40px" }}
+          >
+            <Button2
+              color="secondary"
+              size="lg"
+              className={styles.outsideButton}
+            >
+              <LocalizedLink
+                to="/ukazka-menu"
+                style={{
+                  padding: "14px 20px",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                {t("general.food.CTA")}
+              </LocalizedLink>
+            </Button2>
           </div>
         </AnimatedWrapper>
       </Container>
