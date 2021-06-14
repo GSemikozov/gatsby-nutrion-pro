@@ -142,6 +142,7 @@
 .deliveryImageMobile {
   display: block;
   max-width: 100%;
+  margin-top: 40px;
 }
 
 @media all and (min-width: 768px) {
