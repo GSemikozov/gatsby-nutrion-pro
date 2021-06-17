@@ -58,28 +58,28 @@ const MenuPage = () => {
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>Omeletové proužky s ančovičkami</td>
+                  <td>Tvarohové lívanečky s ovocnou omáčkou</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Rolky s limetkovým tvarohem a ovocem</td>
+                  <td>Ovocný salát s domácí arašídovou omáčkou</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
-                    <div>
-                      Salát z červené řepy se sýrem a sladko-kyselou zálivkou
-                    </div>
-                    <div>Kuřecí nudličky s bulgurem.</div>
+                    <div>Kuřecí frikasé s bramborovou kaší</div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Ragú z mořských plodů</td>
+                  <td>
+                    Quesadilla se strouhaným sýrem cheddar, krůtí šunkou,
+                    rajčaty a BBQ omáčkou
+                  </td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>Frikasé z krůty a pohanka se zeleninou</td>
+                  <td>Hovězí maso provence a pečená zelenina po římsku</td>
                 </tr>
               </tbody>
             </table>
@@ -105,29 +105,29 @@ const MenuPage = () => {
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>Volské oko se zeleninovou směsí</td>
+                  <td>Krůtí šunka se sýrem, cottage a žitný chléb, zelenina</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Ovoce v agarovém želé</td>
+                  <td>Ovocný salát s karobovým sirupem a kešu oříšky</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
-                    <div>Ananasový salát s červenou řepou</div>
                     <div>
-                      Yakitori z kuřete а perlotto se zeleninou a lanýžovým
-                      máslem
+                      Karbanátky z červené čočky, bramborovo-batátové puré
                     </div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Kokosové palačinky s krevetami a sýrem stracciatella</td>
+                  <td>Palačinky s lososem a sýrem</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>Cuketové špagety s kuřecím masem a pestem</td>
+                  <td>
+                    Kuřecí medajlonky s omáčkou ze sušených rajčat, ratatouille
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -155,28 +155,25 @@ const MenuPage = () => {
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>Palačinky se sýrem a rajčaty</td>
+                  <td>Čokoládová granola s nizkotučným řeckým jogurtem</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Grilované ananasy s borůvkami</td>
+                  <td>Cuketové bramboráčky se sýrem a mandlovou moukou</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
-                    <div>Řecký salát</div>
-                    <div>
-                      Králičí stehno v houbové omáčce a pečenými brambory
-                    </div>
+                    <div>Krůtí maso na mexický způsob s rýží</div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Salát Nicoise s tuňákem a fazolemi</td>
+                  <td>Řecké Tzatziky s pita chlebem</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>Zapečený losos gorbuša se zeleninou v páře</td>
+                  <td>Treska s omáčkou Aioli a gratinovaný květák se sýrem</td>
                 </tr>
               </tbody>
             </table>
@@ -206,26 +203,31 @@ const MenuPage = () => {
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>Omeleta s avokádem, rajčaty a sýrem</td>
-                </tr>
-                <tr>
-                  <td>Svačina</td>
-                  <td>Těstovinový salát</td>
-                </tr>
-                <tr>
-                  <td>Oběd</td>
                   <td>
-                    <div>Salát s mandlovým sýrem a rajčaty</div>
-                    <div>Jehněčí dušené karé s kořením</div>
+                    Ovesná kaše s kokosovým mlékem, borůvkami a tmavou čokoládou
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Salát z mořských plodů</td>
+                  <td>Ovesné banánové cookies s čokoládou</td>
+                </tr>
+                <tr>
+                  <td>Oběd</td>
+                  <td>
+                    <div>
+                      Hovězí kýta dušená s kořením a bylinkovými bramborami
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Svačina</td>
+                  <td>Snack Caprese</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>Lenivý brizol s houbovou omáčkou</td>
+                  <td>
+                    Kuřecí ragú s grilovanou zeleninou, a rajčatový bulgur
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -257,31 +259,30 @@ const MenuPage = () => {
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>Tvarohové lívanečky se smetanou</td>
+                  <td>Omeleta se špenátem a krůtí šunkou</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Hruška s ořechy a čokoládou</td>
+                  <td>Vanilkový dezert s granolou</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
-                    <div>Pečená řepa s fenyklem a pomeranči</div>
                     <div>
-                      Kuřecí šašlik na napichovátce s pečenými bramborovými
-                      plátky
+                      Kuřecí řízek v italském stylu s pohankovými nudlemi s
+                      omáčkou teriyaki
                     </div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Rolka s krabem</td>
+                  <td>Domácí hummus s grilovanou karotkou</td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
                   <td>
-                    Kuřecí karbanátek s tvarohem a bazalkou a zeleninou v
-                    marinádě
+                    Mahi-Mahi na limetách s bazalkou na máslové kukuřici s
+                    karotkou, pečené bramborové plátky
                   </td>
                 </tr>
               </tbody>
@@ -316,26 +317,27 @@ const MenuPage = () => {
               <tbody>
                 <tr>
                   <td>Snídaně</td>
-                  <td>Palačinky špenátovo-zázvorové z amarantové mouky</td>
+                  <td>Palačinky se sýrem a rajčaty</td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Tvarohový dezert s avokádem</td>
+                  <td>Grilovaný ananas s borůvkami</td>
                 </tr>
                 <tr>
                   <td>Oběd</td>
                   <td>
-                    <div>Salát se zelím, okurkami a ředkvičkami</div>
-                    <div>Bulgureto</div>
+                    <div>Řecká musaka</div>
                   </td>
                 </tr>
                 <tr>
                   <td>Svačina</td>
-                  <td>Toast s domácí šunkou</td>
+                  <td>
+                    Tabouleh z kuskusu, zeleniny, bylinek a balkánským sýrem
+                  </td>
                 </tr>
                 <tr>
                   <td>Večeře</td>
-                  <td>Steak z lososa s pečenou zeleninou</td>
+                  <td>Roastbeef s pečenými batáty a brokolicí</td>
                 </tr>
               </tbody>
             </table>
