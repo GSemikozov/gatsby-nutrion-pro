@@ -337,7 +337,7 @@ const OrderFormLayout = ({
 }) => {
   const [plan, setPlan] = useState("Zhubnout")
   const [program, setProgram] = useState("2 týdny")
-  const [menu, setMenu] = useState("2chodové menu")
+  const [menu, setMenu] = useState("5chodové menu")
   const [week, setWeek] = useState(5)
   const [gender, setGender] = useState("female")
   const [deliveryTime, setDeliveryTime] = useState("17:00-19:00")
@@ -466,16 +466,6 @@ const OrderFormLayout = ({
     })
   }
 
-  useEffect(() => {
-    console.log("calc menu", menu)
-    console.log("calc program", program)
-    console.log("calc plan", plan)
-    console.log("calc kcal", kcal)
-    const priceValue = getPrice(menu, program, plan, kcal)
-    console.log("priceValue", priceValue)
-    setPrice(priceValue)
-  }, [menu, plan, program, week, kcal])
-
   const getPrice = (menu, program, plan, kcal) => {
     let price = null
     const kcalRange = energyRange(kcal)
@@ -519,6 +509,16 @@ const OrderFormLayout = ({
         return ""
     }
   }
+
+  useEffect(() => {
+    console.log("calc menu", menu)
+    console.log("calc program", program)
+    console.log("calc plan", plan)
+    console.log("calc kcal", kcal)
+    const priceValue = getPrice(menu, program, plan, kcal)
+    console.log("priceValue", priceValue)
+    setPrice(priceValue)
+  }, [menu, plan, program, week, kcal])
 
   return (
     <div className={orderFormStyles.orderFormBox}>
@@ -1341,7 +1341,7 @@ export const OrderForm2 = withFormik({
     promo: "",
     plan: "Zhubnout",
     program: "2 týdny",
-    menu: "2chodové menu",
+    menu: "5chodové menu",
     week: 5,
     kcal: 1600,
     date: getStartDate(),
