@@ -14,40 +14,40 @@ export const DeliverySection = () => {
   return (
     <section className={styles.delivery}>
       <Container isWide={true}>
-        <AnimatedWrapper>
-          <h3 className="fancyUnderlineText sectionTitleNew text-center">
-            <Trans i18nKey="home.delivery.title">
-              Doprava po Praze <span>zdarma</span>
-            </Trans>
-          </h3>
-          <img src={Map} style={{ display: "block" }} />
-          <div className={styles.deliveryContent}>
-            <div className={styles.deliveryImages}>
-              <img
-                src={mapImg}
-                className={styles.deliveryImageDesktop}
-                alt="car picture"
-              />
-              <img
-                src={mapImgMob}
-                className={styles.deliveryImageMobile}
-                alt="map picture"
-              />
-            </div>
-            <div className={styles.deliveryListWrap}>
-              <div style={{ marginTop: "-50px" }}>
-                <h3 className={styles.deliveryListTitle}>
-                  {t("home.delivery.listTitle")}
-                </h3>
-                <ul className={styles.deliveryList}>
-                  <li>{t("home.delivery.listOption1")}</li>
-                  <li>{t("home.delivery.listOption2")}</li>
-                  <li>{t("home.delivery.listOption3")}</li>
-                </ul>
-              </div>
+        {/* <AnimatedWrapper> */}
+        <h3 className="fancyUnderlineText sectionTitleNew text-center">
+          <Trans i18nKey="home.delivery.title">
+            Doprava po Praze <span>zdarma</span>
+          </Trans>
+        </h3>
+        <img src={Map} style={{ display: "block" }} />
+        <div className={styles.deliveryContent}>
+          <div className={styles.deliveryImages}>
+            <img
+              src={mapImg}
+              className={styles.deliveryImageDesktop}
+              alt="car picture"
+            />
+            <img
+              src={mapImgMob}
+              className={styles.deliveryImageMobile}
+              alt="map picture"
+            />
+          </div>
+          <div className={styles.deliveryListWrap}>
+            <div style={{ marginTop: "-50px" }}>
+              <h3 className={styles.deliveryListTitle}>
+                {t("home.delivery.listTitle")}
+              </h3>
+              <ul className={styles.deliveryList}>
+                <li>{t("home.delivery.listOption1")}</li>
+                <li>{t("home.delivery.listOption2")}</li>
+                <li>{t("home.delivery.listOption3")}</li>
+              </ul>
             </div>
           </div>
-        </AnimatedWrapper>
+        </div>
+        {/* </AnimatedWrapper> */}
       </Container>
     </section>
   )

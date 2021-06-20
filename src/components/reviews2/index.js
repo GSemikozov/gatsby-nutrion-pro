@@ -58,14 +58,14 @@ export const Reviews2 = ({ id = "" }) => {
   return (
     <section className={styles.section} id={id}>
       <Container isWide={true} className={styles.container}>
-        <AnimatedWrapper>
-          <h3 className="fancyUnderlineText sectionTitleNew text-center">
-            <Trans i18nKey="home.reviews.title">
-              Co <span>o nás říkají</span> naši zákazníci?
-            </Trans>
-          </h3>
-          <ReviewsCarousel />
-        </AnimatedWrapper>
+        {/* <AnimatedWrapper> */}
+        <h3 className="fancyUnderlineText sectionTitleNew text-center">
+          <Trans i18nKey="home.reviews.title">
+            Co <span>o nás říkají</span> naši zákazníci?
+          </Trans>
+        </h3>
+        <ReviewsCarousel />
+        {/* </AnimatedWrapper> */}
       </Container>
     </section>
   )

@@ -235,35 +235,31 @@ export const FoodCarouselSection2 = () => {
   return (
     <section className={styles.foodCarouselSection} id="food">
       <Container isWide={true}>
-        <AnimatedWrapper>
-          <h3 className="fancyUnderlineText sectionTitleNew text-center">
-            <Trans i18nKey="home.food.title">
-              <span>Jaká jídla</span> tě s námi čekají?
-            </Trans>
-          </h3>
-          <FoodCarousel />
-          <div
-            className={cx("text-center", { ["hide"]: lang !== "cz" })}
-            style={{ marginTop: "40px" }}
-          >
-            <Button2
-              color="secondary"
-              size="lg"
-              className={styles.outsideButton}
+        {/* <AnimatedWrapper> */}
+        <h3 className="fancyUnderlineText sectionTitleNew text-center">
+          <Trans i18nKey="home.food.title">
+            <span>Jaká jídla</span> tě s námi čekají?
+          </Trans>
+        </h3>
+        <FoodCarousel />
+        <div
+          className={cx("text-center", { ["hide"]: lang !== "cz" })}
+          style={{ marginTop: "40px" }}
+        >
+          <Button2 color="secondary" size="lg" className={styles.outsideButton}>
+            <LocalizedLink
+              to="/ukazka-menu"
+              style={{
+                padding: "14px 20px",
+                color: "inherit",
+                textDecoration: "none",
+              }}
             >
-              <LocalizedLink
-                to="/ukazka-menu"
-                style={{
-                  padding: "14px 20px",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                {t("general.food.CTA")}
-              </LocalizedLink>
-            </Button2>
-          </div>
-        </AnimatedWrapper>
+              {t("general.food.CTA")}
+            </LocalizedLink>
+          </Button2>
+        </div>
+        {/* </AnimatedWrapper> */}
       </Container>
     </section>
   )

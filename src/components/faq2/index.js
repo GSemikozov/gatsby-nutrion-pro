@@ -135,96 +135,96 @@ export const FAQ2 = () => {
   return (
     <section className={styles.section} id="faq">
       <Container isWide={true} className={styles.container}>
-        <AnimatedWrapper>
-          <h3 className="fancyUnderlineText sectionTitleNew text-center">
-            {/* {t("home.qa.title")} */}
-            <Trans i18nKey="home.qa.title">
-              Často kladené <span>otázky</span>
-            </Trans>
-          </h3>
-        </AnimatedWrapper>
-        <AnimatedWrapper>
-          <div className={styles.tabsTop}>
-            <button
-              type="button"
-              className={cx(styles.tab, {
-                [styles.active]: openedSection === 0,
-              })}
-              onClick={() => setOpenedSection(0)}
+        {/* <AnimatedWrapper> */}
+        <h3 className="fancyUnderlineText sectionTitleNew text-center">
+          {/* {t("home.qa.title")} */}
+          <Trans i18nKey="home.qa.title">
+            Často kladené <span>otázky</span>
+          </Trans>
+        </h3>
+        {/* </AnimatedWrapper> */}
+        {/* <AnimatedWrapper> */}
+        <div className={styles.tabsTop}>
+          <button
+            type="button"
+            className={cx(styles.tab, {
+              [styles.active]: openedSection === 0,
+            })}
+            onClick={() => setOpenedSection(0)}
+          >
+            <div className={styles.tabImgWrap}>
+              <img src={Img3} className={styles.tabImg} alt="icon" />
+            </div>
+
+            <div className={styles.tabTitle}>{t("home.qa.tab1title")}</div>
+          </button>
+
+          <button
+            type="button"
+            className={cx(styles.tab, {
+              [styles.active]: openedSection === 1,
+            })}
+            onClick={() => setOpenedSection(1)}
+          >
+            <div className={styles.tabImgWrap}>
+              <img src={Img4} className={styles.tabImg} alt="icon" />
+            </div>
+
+            <div className={styles.tabTitle}>{t("home.qa.tab2title")}</div>
+          </button>
+
+          <button
+            type="button"
+            className={cx(styles.tab, {
+              [styles.active]: openedSection === 2,
+            })}
+            onClick={() => setOpenedSection(2)}
+          >
+            <div className={styles.tabImgWrap}>
+              <img src={Img1} className={styles.tabImg} alt="icon" />
+            </div>
+
+            <div className={styles.tabTitle}>{t("home.qa.tab3title")}</div>
+          </button>
+
+          <button
+            type="button"
+            className={cx(styles.tab, {
+              [styles.active]: openedSection === 3,
+            })}
+            onClick={() => setOpenedSection(3)}
+          >
+            <div className={styles.tabImgWrap}>
+              <img src={Img2} className={styles.tabImg} alt="icon" />
+            </div>
+
+            <div className={styles.tabTitle}>{t("home.qa.tab4title")}</div>
+          </button>
+        </div>
+
+        <div className={styles.tabsContent}>
+          {texts.map(({ question, answer }, index) => (
+            <div
+              className={styles.listItem}
+              key={index}
+              onClick={() => setOpenedQuestion(index)}
+              opened={(openedQuestion === index).toString()}
             >
-              <div className={styles.tabImgWrap}>
-                <img src={Img3} className={styles.tabImg} alt="icon" />
-              </div>
-
-              <div className={styles.tabTitle}>{t("home.qa.tab1title")}</div>
-            </button>
-
-            <button
-              type="button"
-              className={cx(styles.tab, {
-                [styles.active]: openedSection === 1,
-              })}
-              onClick={() => setOpenedSection(1)}
-            >
-              <div className={styles.tabImgWrap}>
-                <img src={Img4} className={styles.tabImg} alt="icon" />
-              </div>
-
-              <div className={styles.tabTitle}>{t("home.qa.tab2title")}</div>
-            </button>
-
-            <button
-              type="button"
-              className={cx(styles.tab, {
-                [styles.active]: openedSection === 2,
-              })}
-              onClick={() => setOpenedSection(2)}
-            >
-              <div className={styles.tabImgWrap}>
-                <img src={Img1} className={styles.tabImg} alt="icon" />
-              </div>
-
-              <div className={styles.tabTitle}>{t("home.qa.tab3title")}</div>
-            </button>
-
-            <button
-              type="button"
-              className={cx(styles.tab, {
-                [styles.active]: openedSection === 3,
-              })}
-              onClick={() => setOpenedSection(3)}
-            >
-              <div className={styles.tabImgWrap}>
-                <img src={Img2} className={styles.tabImg} alt="icon" />
-              </div>
-
-              <div className={styles.tabTitle}>{t("home.qa.tab4title")}</div>
-            </button>
-          </div>
-
-          <div className={styles.tabsContent}>
-            {texts.map(({ question, answer }, index) => (
-              <div
-                className={styles.listItem}
-                key={index}
-                onClick={() => setOpenedQuestion(index)}
-                opened={(openedQuestion === index).toString()}
-              >
-                <h4 className={styles.listTitle}>
-                  {question}{" "}
-                  {openedQuestion === index ? (
-                    <img src={lessIcon} alt="icon" />
-                  ) : (
-                    <img src={moreIcon} alt="icon" />
-                  )}
-                </h4>
-                <p className={styles.listText}>
-                  {openedQuestion === index ? answer : null}
-                </p>
-              </div>
-            ))}
-          </div>
-        </AnimatedWrapper>
+              <h4 className={styles.listTitle}>
+                {question}{" "}
+                {openedQuestion === index ? (
+                  <img src={lessIcon} alt="icon" />
+                ) : (
+                  <img src={moreIcon} alt="icon" />
+                )}
+              </h4>
+              <p className={styles.listText}>
+                {openedQuestion === index ? answer : null}
+              </p>
+            </div>
+          ))}
+        </div>
+        {/* </AnimatedWrapper> */}
       </Container>
     </section>
   )
