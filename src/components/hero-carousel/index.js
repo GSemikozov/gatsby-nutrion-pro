@@ -49,22 +49,22 @@ export const HeroCarousel = () => {
       param3: "9g",
       param4: "11g",
     },
-    {
-      img: "/images/F5-min.jpg",
-      title: t("general.food.card5Title"),
-      param1: "147",
-      param2: "16g",
-      param3: "12g",
-      param4: "5g",
-    },
-    {
-      img: "/images/F6-min.jpg",
-      title: t("general.food.card6Title"),
-      param1: "234",
-      param2: "23g",
-      param3: "25g",
-      param4: "6g",
-    },
+    // {
+    //   img: "/images/F5-min.jpg",
+    //   title: t("general.food.card5Title"),
+    //   param1: "147",
+    //   param2: "16g",
+    //   param3: "12g",
+    //   param4: "5g",
+    // },
+    // {
+    //   img: "/images/F6-min.jpg",
+    //   title: t("general.food.card6Title"),
+    //   param1: "234",
+    //   param2: "23g",
+    //   param3: "25g",
+    //   param4: "6g",
+    // },
   ]
 
   const slides = slidesData.map(item => (
