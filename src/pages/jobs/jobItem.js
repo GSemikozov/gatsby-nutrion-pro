@@ -36,8 +36,8 @@ const renderJobs = () => [
   />,
   <Job
     key="3"
-    title="Vedoucí výroby"
-    description="Do našeho týmu hledáme šikovného/ou kolegu/yni na pozici Vedoucí výroby."
+    title="Výrobní ředitel"
+    description="Hledáme ředitele výroby ve společnosti NutritionPro"
     date="17.05.2021"
     color="#F7F4FD"
     link="/jobs/production-manager"
