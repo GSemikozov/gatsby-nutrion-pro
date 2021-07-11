@@ -46,10 +46,10 @@ export const CategoriesFilterPanel = () => {
     <div className={styles.filterPanel}>
       <nav>
         <b>Kategorie:</b>
-        <FilterBtn text="Všechno" isActive={true} />
-        <FilterBtn text="Recepty" />
-        <FilterBtn text="Výzkum" />
-        <FilterBtn text="Tipy" />
+        <FilterBtn text="Hubnoucí program" isActive={true} />
+        <FilterBtn text="Nabírací program" />
+        <FilterBtn text="Udržovací program" />
+        <FilterBtn text="Office pack" />
       </nav>
     </div>
   )
