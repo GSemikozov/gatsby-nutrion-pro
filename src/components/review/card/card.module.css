@@ -34,6 +34,7 @@
   font-size: 16px;
   line-height: 19px;
   color: #d5dbe1;
+  display: none;
 }
 
 .cardBody {
